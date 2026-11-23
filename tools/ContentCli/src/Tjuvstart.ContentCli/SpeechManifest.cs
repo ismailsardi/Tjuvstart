@@ -11,7 +11,7 @@ public sealed record SpeechEntry(string Key, string Text);
 /// <summary>
 /// Lists everything the app can read aloud: each sentence of a lesson text, the message of each
 /// listening item, and each word card (as labelled, with its article) with its example. The
-/// audio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.
+/// audio build turns every entry into <c>audio/audio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.lt;voiceaudio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.gt;-audio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.lt;keyaudio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.gt;.mp3</c>.
 /// </summary>
 public static partial class SpeechManifest
 {
