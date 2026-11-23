@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-calling-in-sick",
+  "level": "A2",
+  "title": "Syk i dag",
+  "summary": "Read a sick-day message and the manager's reply, then write your own short message when you can't come to work.",
+  "text": "Ahmed skriver til sjefen klokka 07.15: «Hei Lars! Jeg har feber og vondt i halsen, så jeg kommer ikke på jobb i dag. Jeg har bestilt time hos legen klokka ti. Kan Nina ta møtet med kunden? Hilsen Ahmed» Lars svarer klokka 07.40: «Hei Ahmed, takk for beskjed. God bedring! Nina tar møtet. Husk å sende meg en sykmelding hvis du er syk mer enn tre dager.»",
+  "items": [
+    {
+      "id": "a2-sick-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvorfor kommer ikke Ahmed på jobb?",
+      "options": ["Han er syk", "Han er på ferie", "Han har et møte"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hva er galt med Ahmed?",
+      "options": ["Han har feber og vondt i halsen", "Han har vondt i ryggen", "Han er bare trøtt"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Når skal Ahmed til legen?",
+      "options": ["Klokka 10.00", "Klokka 07.15", "Klokka 07.40"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvem tar møtet med kunden?",
+      "options": ["Nina", "Lars", "Ahmed"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Lars skriver «God bedring!». Hva betyr det?",
+      "options": [
+        "Han håper Ahmed blir frisk snart",
+        "Han er sint på Ahmed",
+        "Han vil ha et nytt møte"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-06",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1150,
+      "prompt": "Når må Ahmed sende en sykmelding?",
+      "options": ["Hvis han er syk mer enn tre dager", "I dag", "Etter legetimen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 950,
+      "prompt": "Jeg har ___ i hodet.",
+      "answers": ["vondt"]
+    },
+    {
+      "id": "a2-sick-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1100,
+      "prompt": "Jeg har bestilt ___ hos legen klokka ni.",
+      "answers": ["time", "en time"]
+    },
+    {
+      "id": "a2-sick-09",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1150,
+      "prompt": "Takk for ___! God bedring.",
+      "answers": ["beskjed", "beskjeden"]
+    },
+    {
+      "id": "a2-sick-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1050,
+      "prompt": "Jeg er syk, ___ jeg blir hjemme i dag.",
+      "answers": ["så"]
+    },
+    {
+      "id": "a2-sick-11",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["kommer", "jeg", "I morgen", "tilbake"],
+      "answer": "I morgen kommer jeg tilbake"
+    },
+    {
+      "id": "a2-sick-12",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg kommer ikke på jobb", "fordi", "er", "jeg", "syk"],
+      "answer": "Jeg kommer ikke på jobb fordi jeg er syk"
+    }
+  ]
+}

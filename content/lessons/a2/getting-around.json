@@ -1,0 +1,140 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-getting-around",
+  "level": "A2",
+  "title": "Med trikk og buss",
+  "summary": "Read a notice about a tram closure, find out what to take instead and how often it goes, and write about your commute.",
+  "text": "Viktig informasjon: Fra mandag 3. mars til fredag 14. mars går ikke trikken mellom Jernbanetorget og Storo, fordi vi arbeider på sporet. Ta buss 31T i stedet. Bussen går hvert tiende minutt fra klokka seks om morgenen til midnatt. Billetten din gjelder også på bussen. Har du spørsmål? Spør sjåføren.",
+  "items": [
+    {
+      "id": "a2-trip-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hvorfor går ikke trikken?",
+      "options": ["De arbeider på sporet", "Sjåføren er syk", "Det er helg"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvor lenge går ikke trikken?",
+      "options": ["I to uker", "I to dager", "I én måned"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 900,
+      "prompt": "Hva skal du ta i stedet?",
+      "options": ["Buss 31T", "T-banen", "Taxi"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor ofte går bussen?",
+      "options": ["Hvert tiende minutt", "Hver time", "Hvert minutt"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Trenger du en ny billett til bussen?",
+      "options": ["Nei, billetten gjelder", "Ja, du må kjøpe en ny", "Ja, men bare om kvelden"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-06",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1150,
+      "prompt": "En kollega skriver: «Jeg står fast i trafikken. Begynn møtet uten meg!» Hva gjør du?",
+      "options": ["Starter møtet", "Venter på kollegaen", "Ringer etter en taxi"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 900,
+      "prompt": "Jeg tar ___ til jobben hver dag.",
+      "hint": "Den går på skinner gjennom byen.",
+      "answers": ["trikken", "trikk"]
+    },
+    {
+      "id": "a2-trip-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 950,
+      "prompt": "Unnskyld, ___ går neste buss til Storo?",
+      "answers": ["når"]
+    },
+    {
+      "id": "a2-trip-09",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1050,
+      "prompt": "Jeg kommer ti minutter for ___, fordi trikken ikke går.",
+      "answers": ["sent"]
+    },
+    {
+      "id": "a2-trip-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 900,
+      "prompt": "Jeg bor på Storo, ___ jeg jobber i sentrum.",
+      "answers": ["men", "og"]
+    },
+    {
+      "id": "a2-trip-11",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["tar", "jeg", "Om morgenen", "bussen"],
+      "answer": "Om morgenen tar jeg bussen"
+    },
+    {
+      "id": "a2-trip-12",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg tar bussen", "fordi", "går", "trikken", "ikke"],
+      "answer": "Jeg tar bussen fordi trikken ikke går"
+    }
+  ]
+}

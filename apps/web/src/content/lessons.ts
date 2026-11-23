@@ -6,8 +6,12 @@ const modules = import.meta.glob<Lesson>('../../../../content/lessons/**/*.json'
   import: 'default',
 });
 
+const meanDifficulty = (lesson: Lesson) =>
+  lesson.items.reduce((sum, item) => sum + item.difficulty, 0) / lesson.items.length;
+
+/** Ordered by level, then from easiest to hardest, so the list reads as a suggested path. */
 export const lessons: readonly Lesson[] = Object.values(modules).sort(
-  (a, b) => a.level.localeCompare(b.level) || a.title.localeCompare(b.title, 'nb'),
+  (a, b) => a.level.localeCompare(b.level) || meanDifficulty(a) - meanDifficulty(b),
 );
 
 export function getLesson(id: string): Lesson | undefined {
