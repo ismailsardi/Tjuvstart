@@ -88,7 +88,7 @@ For context, Norwegian citizenship requires a pass at B1 or higher in the oral t
 ### 7.3 How the level is estimated
 
 1. **Tagging.** Every item carries a CEFR level, a skill, descriptor IDs and a difficulty rating.
-2. **Placement.** A five-minute check asks six questions per skill. Each question is picked near the current estimate (50% expected success, so every answer says as much as possible) and moves the rating with a larger step than normal practice. The result is saved as the starting estimate.
+2. **Placement.** A five-minute check asks five questions per skill that has exercises (reading, listening and writing today). Each question is picked near the current estimate (50% expected success, so every answer says as much as possible) and moves the rating with a larger step than normal practice. The result is saved as the starting estimate.
 3. **Continuous estimate.** Each answer updates a per-skill Elo-style rating: a correct answer on a hard item raises the rating more than one on an easy item (see [ADR 0003](adr/0003-elo-rating-before-irt.md)).
 4. **Item selection.** The next item is chosen so the expected success rate is about 80%.
 5. **Open answers.** With AI enabled, writing and speaking are scored against a CEFR-based rubric and the score feeds into the same rating. Without AI, learners self-assess against a model answer and a checklist, and the level for that skill is marked as self-assessed.
@@ -160,13 +160,22 @@ Shadowing trains pronunciation and listening together. The learner goes through 
 3. record themselves and play back their own version, or play the model and their version one after the other to compare;
 4. judge it: _sounded close_ moves on, _try again_ stays on the sentence.
 
-The text can be hidden to practise by ear. Recordings stay in the page's memory and are never stored or uploaded; only the learner's verdict is saved, so the profile can show how many sentences they have said out loud. Speaking is not rated from these self-judgements: an estimate for speaking needs scored answers (with AI, step 7), and listening gets its own exercises in step 4.
+The text can be hidden to practise by ear. Recordings stay in the page's memory and are never stored or uploaded; only the learner's verdict is saved, so the profile can show how many sentences they have said out loud. Speaking is not rated from these self-judgements: an estimate for speaking needs scored answers (with AI, step 7).
 
 ### 10.4 First weeks in Norway
 
 A guided track follows the situations a newcomer meets first, in the order they usually come: the first workday, the tax card (_skattekort_), BankID, renting a flat, booking the doctor (_fastlege_) and small talk at lunch. Each scenario is an ordinary lesson with a text, exercises and word cards, so it feeds the level estimate, the error memory and the word review like any other lesson.
 
 Today shows the track as numbered steps with the learner's progress, and suggests the next scenario as the next lesson. The Lessons tab shows the track first and the other lessons below it. Tracks live in `content/tracks.json` and the content CLI checks that every lesson they list exists. Facts in the scenarios (who issues ID numbers, the 50% tax without a tax card, the 113 and 116 117 numbers) are kept general and checked against public sources, since the texts teach real procedures.
+
+### 10.5 Listening and dictation
+
+Every lesson has listening exercises next to its reading and writing ones:
+
+- **Listening questions:** a short voicemail, announcement or remark from the lesson's situation, with a question about it. The text is not shown until the learner has answered; then the transcript appears, so they can connect what they heard with the words.
+- **Dictation:** the learner hears one sentence and types it. Case and punctuation do not count. After a wrong answer the sentence is shown with the missed or misspelled words marked.
+
+Audio starts a little slower than natural speech (85%) and speeds up as the learner shows they can follow it: three right listening answers in a row move one step up, a wrong answer moves one step down, between 75% and 130%. A _slower_ replay is always there. Listening answers update the listening rating like any other skill, so the level check now covers reading, listening and writing (five questions each), and a listening practice session on Today mixes listening items from all lessons.
 
 ## 11. Features and priorities
 
