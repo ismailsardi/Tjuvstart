@@ -63,6 +63,16 @@ export interface ShadowingAttempt {
   at: number;
 }
 
+/**
+ * The learner's own API key for the optional AI features. It is kept in a table of its own,
+ * apart from the profile, so it never travels with progress if sync is added later.
+ */
+export interface AiSettings {
+  id: 'ai';
+  apiKey: string;
+  model: string;
+}
+
 export const GUEST_ID = 'guest';
 
 export class TjuvstartDb extends Dexie {
@@ -72,6 +82,7 @@ export class TjuvstartDb extends Dexie {
   reviews!: EntityTable<Review, 'id'>;
   completions!: EntityTable<Completion, 'lessonId'>;
   shadowing!: EntityTable<ShadowingAttempt, 'id'>;
+  aiSettings!: EntityTable<AiSettings, 'id'>;
 
   constructor(name = 'tjuvstart') {
     super(name);
@@ -86,6 +97,9 @@ export class TjuvstartDb extends Dexie {
     });
     this.version(3).stores({
       shadowing: '++id, lessonId, at',
+    });
+    this.version(4).stores({
+      aiSettings: 'id',
     });
   }
 }

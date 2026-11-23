@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { getLesson } from './content/lessons';
 import { learnerPacks } from './content/packs';
@@ -19,6 +20,17 @@ import { I18nProvider } from './i18n/I18nProvider';
 import { useI18n } from './i18n/useI18n';
 import { uiLanguageFor } from './i18n/strings';
 import { homeHref, useHashRoute } from './routing/useHashRoute';
+
+// The optional AI features load on first use, so learners who never add a key never download
+// the SDK or the schema library.
+const AiHub = lazy(() => import('./components/AiHub').then((m) => ({ default: m.AiHub })));
+const AiReading = lazy(() =>
+  import('./components/AiReading').then((m) => ({ default: m.AiReading })),
+);
+const RolePlay = lazy(() => import('./components/RolePlay').then((m) => ({ default: m.RolePlay })));
+const WritingTaskView = lazy(() =>
+  import('./components/WritingTaskView').then((m) => ({ default: m.WritingTaskView })),
+);
 
 export function App() {
   const route = useHashRoute();
@@ -73,6 +85,8 @@ function Page({
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
   if (route.name === 'daily') return <DailySession packs={packs} />;
+  if (route.name.startsWith('ai'))
+    return <Suspense fallback={null}>{aiPage(route, packs)}</Suspense>;
   if (route.name === 'listening')
     return <Practice key="listening" packs={packs} skill="listening" />;
   if (route.name !== 'lesson' && route.name !== 'shadow') return <Home packs={packs} />;
@@ -88,4 +102,11 @@ function Page({
   }
   if (route.name === 'shadow') return <Shadowing key={lesson.id} lesson={lesson} />;
   return <LessonPlayer key={lesson.id} lesson={lesson} packs={packs} />;
+}
+
+function aiPage(route: ReturnType<typeof useHashRoute>, packs: ReturnType<typeof learnerPacks>) {
+  if (route.name === 'ai-roleplay') return <RolePlay key={route.id} scenarioId={route.id} />;
+  if (route.name === 'ai-writing') return <WritingTaskView key={route.id} taskId={route.id} />;
+  if (route.name === 'ai-reading') return <AiReading packs={packs} />;
+  return <AiHub />;
 }

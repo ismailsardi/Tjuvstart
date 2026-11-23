@@ -1191,3 +1191,112 @@ button.link {
 .can-do-practising .can-do-mark {
   color: var(--accent);
 }
+
+/* AI practice */
+
+.ai-settings {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: start;
+}
+
+.ai-settings label,
+.writing-task label {
+  display: grid;
+  gap: 0.25rem;
+  width: 100%;
+  font-weight: 600;
+}
+
+.ai-settings input,
+.ai-settings select,
+.writing-task textarea,
+.chat-input input {
+  width: 100%;
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.error {
+  color: var(--bad);
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.chat {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.bubble p {
+  margin: 0;
+}
+
+.bubble.learner {
+  justify-self: end;
+  background: var(--accent-soft);
+}
+
+.bubble .correction {
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--border);
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rubric {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rubric li {
+  display: grid;
+  grid-template-columns: 7rem 1fr 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rubric meter {
+  width: 100%;
+}
+
+.corrections {
+  padding-left: 1.1rem;
+}
+
+.corrections del {
+  color: var(--bad);
+}
+
+.corrections ins {
+  color: var(--good);
+  text-decoration: none;
+  font-weight: 600;
+}

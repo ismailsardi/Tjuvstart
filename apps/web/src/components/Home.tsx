@@ -8,6 +8,7 @@ import { dailyProgress, dueCards, getProfile, mistakeMemory } from '../data/prog
 import { useI18n } from '../i18n/useI18n';
 import {
   DUE_DECK,
+  aiHref,
   dailyHref,
   deckHref,
   lessonsHref,
@@ -123,6 +124,14 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         </p>
         <a className="button" href={listeningHref}>
           {t('start')}
+        </a>
+      </section>
+
+      <section className="panel" aria-labelledby="ai-heading">
+        <h2 id="ai-heading">{t('aiTitle')}</h2>
+        <p className="muted">{t('aiIntro')}</p>
+        <a className="button secondary" href={aiHref}>
+          {t('aiTitle')}
         </a>
       </section>
 

@@ -30,9 +30,20 @@ interface Props {
   practice?: boolean;
   /** Called at the end instead of showing the end screen, as in the daily session. */
   onFinish?: (score: number) => void;
+  /**
+   * For generated content that is not part of the course: answers do not change the ratings,
+   * nothing is marked completed, and there is no shadowing link.
+   */
+  ephemeral?: boolean;
 }
 
-export function LessonPlayer({ lesson, packs = [], practice = false, onFinish }: Props) {
+export function LessonPlayer({
+  lesson,
+  packs = [],
+  practice = false,
+  onFinish,
+  ephemeral = false,
+}: Props) {
   const { t } = useI18n();
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
@@ -56,12 +67,12 @@ export function LessonPlayer({ lesson, packs = [], practice = false, onFinish }:
   }, [finished, onFinish, score]);
 
   useEffect(() => {
-    if (!finished || saved.current || practice) return;
+    if (!finished || saved.current || practice || ephemeral) return;
     saved.current = true;
     // Words from the lesson text at the lesson's level go to the learner's word cards.
     const cards = cardsInText(lesson.text ?? '').filter((id) => cardLevel(id) === lesson.level);
     void completeLesson(lesson.id, score, lesson.items.length, cards).then(setNewCards);
-  }, [finished, lesson, score, practice]);
+  }, [finished, lesson, score, practice, ephemeral]);
 
   if (!item) {
     if (onFinish) return null;
@@ -102,6 +113,7 @@ export function LessonPlayer({ lesson, packs = [], practice = false, onFinish }:
       given: response.kind === 'text' ? response.value : undefined,
     });
     if (correct) setScore((s) => s + 1);
+    if (ephemeral) return;
     await recordAnswer(
       item,
       practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id,
@@ -129,6 +141,7 @@ export function LessonPlayer({ lesson, packs = [], practice = false, onFinish }:
           segments={segments}
           lessonId={practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id}
           document={textLesson?.document}
+          canShadow={!ephemeral}
           level={textLesson?.level ?? lesson.level}
         />
       )}
@@ -210,6 +223,7 @@ function ReadingText({
   lessonId,
   document,
   level,
+  canShadow,
 }: {
   text: string;
   segments: Segment[];
@@ -217,6 +231,7 @@ function ReadingText({
   /** Set when the text is a simplified real-world document: a letter, an ad or a notice. */
   document?: LessonDocument;
   level: string;
+  canShadow: boolean;
 }) {
   const { t } = useI18n();
   const unique = (kind: 'cognate' | 'false-friend') => [
@@ -244,7 +259,7 @@ function ReadingText({
     <>
       <div className="text-tools">
         <SpeakButton text={sentences(text)} label={t('listenText')} />
-        <a href={shadowHref(lessonId)}>{t('shadowText')}</a>
+        {canShadow && <a href={shadowHref(lessonId)}>{t('shadowText')}</a>}
       </div>
       {document ? (
         <figure className={`doc doc-${document.kind}`} data-testid="document">
