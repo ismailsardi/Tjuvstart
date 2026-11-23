@@ -119,13 +119,39 @@ At onboarding the learner selects their native language and any other languages 
 
 Packs are drafted during development, reviewed by a teacher familiar with each language, and shipped as JSON, so they add no runtime cost.
 
-## 10. Features and priorities
+## 10. Word cards and lesson progress
+
+### 10.1 Word cards
+
+The Words menu holds one card per word the learner needs for each level. A card shows:
+
+- the Norwegian word with its article or infinitive marker (_en jobb_, _å jobbe_) and an example sentence from a work or everyday situation;
+- the meaning in the learner's language;
+- a short memory hook in the learner's language where one helps: a cognate, a false-friend warning, a picture to imagine or a word-building tip;
+- audio, once build-time TTS is in place.
+
+Cards are grouped by CEFR level and topic. The learner can browse them, and cards they have studied enter spaced repetition: a short daily review brings each card back just before it is likely to be forgotten. Words met in a lesson are added to the learner's deck when the lesson is finished.
+
+The target is full coverage of the vocabulary each level needs. Two checks in the content CLI keep this measurable:
+
+- every word in a lesson text should have a card (names and other listed exceptions aside), and the coverage report lists the words that do not;
+- every card needs a meaning in every native-language pack, so a card is never shown half-empty.
+
+The level word lists will come from an openly licensed frequency source, checked against the adult immigrant curriculum ([ADR 0006](adr/0006-vocabulary-sourcing.md)).
+
+### 10.2 Lesson progress
+
+A lesson is marked as completed when the learner reaches its end. The lesson list shows completed lessons with the best score, and the learner can redo any lesson.
+
+## 11. Features and priorities
 
 | Feature                      | Description                                                                                             | Release |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------- | ------- |
 | Placement and level estimate | Per-skill placement check and continuous rating                                                         | MVP     |
 | Lesson player                | Short lessons: explanation, examples, then exercises (gap fill, multiple choice, word order, dictation) | MVP     |
-| Spaced repetition            | Flashcards for vocabulary and sentence patterns, scheduled with FSRS                                    | MVP     |
+| Word cards                   | Cards per level with meaning, example and memory hook in the learner's language                         | MVP     |
+| Spaced repetition            | Daily review of studied cards, SM-2-style first, FSRS later ([ADR 0005](adr/0005-sm2-before-fsrs.md))   | MVP     |
+| Lesson progress              | Completed lessons and best scores shown in the lesson list                                              | MVP     |
 | Reading and listening        | Graded texts and audio with comprehension questions                                                     | MVP     |
 | Native-language packs        | English and French                                                                                      | MVP     |
 | Coverage view                | Proven and weak descriptors per skill                                                                   | MVP     |
@@ -137,7 +163,7 @@ Packs are drafted during development, reviewed by a teacher familiar with each l
 | Sync API                     | ASP.NET Core API for account sync                                                                       | v2      |
 | Dialect listening            | The same sentences recorded in several regional dialects                                                | v3      |
 
-## 11. Architecture
+## 12. Architecture
 
 ```
 ┌──────────────────────┐   build   ┌──────────────────────────┐
@@ -166,7 +192,7 @@ Packs are drafted during development, reviewed by a teacher familiar with each l
 | AI (optional)   | Browser calls the provider directly with the learner's own key; on-device speech-to-text                                           |
 | CI/CD           | GitHub Actions; GitHub Pages for hosting                                                                                           |
 
-## 12. Cost model
+## 13. Cost model
 
 The app must not incur running costs ([ADR 0002](adr/0002-local-first-zero-cost.md)).
 
@@ -178,14 +204,14 @@ The app must not incur running costs ([ADR 0002](adr/0002-local-first-zero-cost.
 | AI scoring | Learner's own API key, off by default    | Most learners will use self-assessment for writing and speaking |
 | Sync       | Free tiers                               | Usage limits and inactivity pauses; local export as a fallback  |
 
-## 13. Privacy and security
+## 14. Privacy and security
 
 - Guest mode by default. No account is needed to learn.
 - Progress stays on the device unless the learner signs in to sync.
 - A learner's API key is stored only on their device and sent only to the provider they chose.
 - No analytics or tracking beyond what is needed to run the app.
 
-## 14. Milestones
+## 15. Milestones
 
 | Milestone                | Scope                                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -196,7 +222,7 @@ The app must not incur running costs ([ADR 0002](adr/0002-local-first-zero-cost.
 | M5 Writing feedback      | Rubric scoring with the learner's key, evaluation set and results                                                              |
 | M6 Release               | Coverage view, README with demo, public release                                                                                |
 
-## 15. Risks and open questions
+## 16. Risks and open questions
 
 | Risk                                 | Mitigation                                                                                               |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------- |
@@ -204,13 +230,15 @@ The app must not incur running costs ([ADR 0002](adr/0002-local-first-zero-cost.
 | Content quality and volume           | Small, reviewed content set per level before expanding                                                   |
 | Free tiers change or are withdrawn   | Local-first design; sync is optional and replaceable                                                     |
 | Native-language notes contain errors | Review each pack with a teacher of that language before release                                          |
+| Word list licence restricts reuse    | Use only sources whose licence allows redistribution; record the source and licence in the repository    |
 
 Open questions:
 
 - Which open-source TTS voice gives the best bokmål quality at build time.
 - How long the placement check can be before learners drop off.
+- Which openly licensed frequency list to build the level word lists from.
 
-## 16. References
+## 17. References
 
 1. [CEFR global scale](https://www.unibz.it/assets/Documents/Languages/unibz-languages-CEFR-Global-scale-EN.pdf), Council of Europe (copy hosted by unibz).
 2. CEFR Companion Volume (Council of Europe, 2020), illustrative descriptor scales.
