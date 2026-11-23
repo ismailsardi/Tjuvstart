@@ -151,7 +151,7 @@ A lesson is marked as completed when the learner reaches its end. The lesson lis
 
 ### 10.3 Audio and shadowing
 
-Every lesson sentence and every word card has audio ([ADR 0007](adr/0007-piper-audio-at-build-time.md)). Lesson texts have a button that reads the whole text, and word cards read the word on the front and the example on the back.
+Every lesson sentence and every word card has audio, recorded once at build time with a neural Norwegian voice ([ADR 0007](adr/0007-piper-audio-at-build-time.md), [ADR 0009](adr/0009-neural-voice-for-audio.md)). Lesson texts have a button that reads the whole text, and word cards read the word on the front and the example on the back.
 
 Shadowing trains pronunciation and listening together. The learner goes through a lesson text one sentence at a time:
 
@@ -241,16 +241,16 @@ Every request carries the estimated level, the interface language for explanatio
           └──────────────────┘       └────────────────────┘      └────────────────────┘
 ```
 
-| Component       | Technology                                                                                                                             |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Web app         | React 19, TypeScript, Vite, `vite-plugin-pwa`                                                                                          |
-| Level engine    | TypeScript package (`packages/engine`), runs entirely in the browser                                                                   |
-| Local storage   | IndexedDB                                                                                                                              |
-| Content tooling | .NET 10 console app (`tools/ContentCli`): validation and coverage checks in CI                                                         |
-| Audio           | Recorded at build time with Piper (CC0 Norwegian voice), browser voice as fallback ([ADR 0007](adr/0007-piper-audio-at-build-time.md)) |
-| Sync            | Supabase free tier first; ASP.NET Core API on a free hosting tier later ([ADR 0004](adr/0004-dotnet-content-cli-then-sync-api.md))     |
-| AI (optional)   | Browser calls the provider directly with the learner's own key; on-device speech-to-text                                               |
-| CI/CD           | GitHub Actions; GitHub Pages for hosting                                                                                               |
+| Component       | Technology                                                                                                                                            |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web app         | React 19, TypeScript, Vite, `vite-plugin-pwa`                                                                                                         |
+| Level engine    | TypeScript package (`packages/engine`), runs entirely in the browser                                                                                  |
+| Local storage   | IndexedDB                                                                                                                                             |
+| Content tooling | .NET 10 console app (`tools/ContentCli`): validation and coverage checks in CI                                                                        |
+| Audio           | Recorded at build time with Azure neural voice `nb-NO-PernilleNeural` (free tier), Piper as fallback ([ADR 0009](adr/0009-neural-voice-for-audio.md)) |
+| Sync            | Supabase free tier first; ASP.NET Core API on a free hosting tier later ([ADR 0004](adr/0004-dotnet-content-cli-then-sync-api.md))                    |
+| AI (optional)   | Browser calls the provider directly with the learner's own key; on-device speech-to-text                                                              |
+| CI/CD           | GitHub Actions; GitHub Pages for hosting                                                                                                              |
 
 ## 13. Cost model
 

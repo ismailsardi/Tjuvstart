@@ -1,6 +1,6 @@
 # 0007. Piper audio at build time, browser voice as fallback
 
-- Status: Accepted
+- Status: Accepted; voice superseded by [ADR 0009](0009-neural-voice-for-audio.md)
 - Date: 2026-11-23
 
 ## Context

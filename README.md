@@ -22,7 +22,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk.
 - **Ten minutes a day:** one daily session of word cards and targeted exercises, a streak that forgives a missed day, and CEFR can-do statements that tick off as the learner proves them.
 - **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are, plus a word deck for the learner's line of work.
-- **Audio and shadowing:** every sentence and word card is recorded at build time with an open-source Norwegian voice (Piper); learners listen, record themselves and compare, all in the browser.
+- **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen, record themselves and compare, all in the browser.
 - **Optional AI practice:** role-play, Norskprøven-style writing feedback and fresh reading texts, called straight from the browser with the learner's own Anthropic key and structured outputs.
 - **Native-language aware:** cognates, false friends and grammar contrasts for English, French and Arabic speakers.
 - **Zero running cost:** a local-first PWA on GitHub Pages; AI features are optional and use the learner's own key.
@@ -34,7 +34,7 @@ apps/web/          React + TypeScript PWA (Vite)
 packages/engine/   Level rating and item selection, pure TypeScript
 content/           Lessons and items as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
-tools/audio/       Build-time audio with Piper TTS
+tools/audio/       Build-time audio (Azure neural voice, Piper fallback)
 docs/              Specification and architecture decision records
 ```
 
