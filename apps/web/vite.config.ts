@@ -33,9 +33,10 @@ export default defineConfig({
             },
           },
           {
+            // File names change with the voice, so a stale list would point to missing files.
             urlPattern: ({ url }) => url.pathname.endsWith('/audio/index.json'),
-            handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'audio-index' },
+            handler: 'NetworkFirst',
+            options: { cacheName: 'audio-index', networkTimeoutSeconds: 3 },
           },
         ],
       },

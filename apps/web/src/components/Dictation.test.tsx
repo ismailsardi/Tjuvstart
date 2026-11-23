@@ -9,6 +9,7 @@ const speech = vi.hoisted(() => ({ speak: vi.fn(async () => true) }));
 vi.mock('../audio/speech', async (original) => ({
   ...(await original<typeof import('../audio/speech')>()),
   speak: speech.speak,
+  canPlay: vi.fn(async () => true),
   stopSpeaking: vi.fn(),
 }));
 

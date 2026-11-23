@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { audioUrlFor, normalize, resetAudioIndex, sentences } from './speech';
+import { audioUrlFor, canPlay, normalize, resetAudioIndex, sentences } from './speech';
 
 afterEach(() => {
   resetAudioIndex();
@@ -41,5 +41,23 @@ describe('audioUrlFor', () => {
       vi.fn(async () => new Response('', { status: 404 })),
     );
     expect(await audioUrlFor('Jeg har en jobb.')).toBeUndefined();
+  });
+});
+
+describe('canPlay', () => {
+  it('is true only when every text was recorded, on a device without a Norwegian voice', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => new Response(JSON.stringify({ 'Hei.': 'v-a1', 'Takk.': 'v-b2' }))),
+    );
+    expect(await canPlay(['Hei.', ' Takk. '])).toBe(true);
+    expect(await canPlay(['Hei.', 'En ny tekst fra KI.'])).toBe(false);
+  });
+
+  it('asks the network for a fresh list', async () => {
+    const fetch = vi.fn(async () => new Response('{}'));
+    vi.stubGlobal('fetch', fetch);
+    await audioUrlFor('Hei.');
+    expect(fetch).toHaveBeenCalledWith('/audio/index.json', { cache: 'no-cache' });
   });
 });
