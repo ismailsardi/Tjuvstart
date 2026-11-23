@@ -185,6 +185,14 @@ Today shows only the track in progress, so the first-weeks track comes first and
 
 _My job_ adds a deck of twelve A2 words for the learner's line of work: IT, health and care, construction, or hotels and restaurants. The learner picks a field once on the Words tab, which then shows that deck at the top and hides the others; the choice is saved in the profile and can be changed on Words or from Me. Job decks use the optional `field` property of the deck schema.
 
+### 10.7 Daily session, streak and can-do statements
+
+**Ten minutes a day.** Today offers one session that takes about ten minutes: up to ten due word cards, then eight exercises picked the same way as a practice session (weak skills and recurring mistakes first). A learner with no cards due goes straight to the exercises.
+
+**A forgiving streak.** A day counts once the learner has done eight things: answers, card reviews or shadowed sentences, wherever they did them. Missing one day does not break the streak; missing two in a row does. Only days with practice are counted, so a rest day keeps the streak without growing it. When yesterday was missed, Today says so once, without guilt, so the learner knows today matters. Days are counted in the learner's own time zone. The rule lives in the engine (`currentStreak`) and the counts come from the attempts, reviews and shadowing tables, so no new storage is needed.
+
+**Can-do statements.** Every exercise is already tagged with CEFR descriptors. Me lists the descriptors that some exercise checks, grouped by level and skill, written in the first person in the learner's language ("I can find what I need in notices, timetables, menus and ads"). A statement is ticked once the learner has answered at least three different exercises for it and at least 80% of their latest answers are right; only the latest answer to each exercise counts. The end of the daily session shows any statement it just ticked. Speaking descriptors stay out of the list until there are exercises that check speaking. Packs hold the statements under `canDo`, and the content CLI rejects statements for unknown descriptors.
+
 ## 11. Features and priorities
 
 | Feature                      | Description                                                                                             | Release |
