@@ -10,4 +10,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="9.7.0" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-first-day-at-work",
+  "level": "A2",
+  "title": "Første dag på jobben",
+  "summary": "Read about Sara's first day at a new job and practise the words and sentences you need at work.",
+  "text": "Hei! Jeg heter Sara, og jeg er ny her. I dag er det min første dag på jobben. Jeg skal jobbe som utvikler. Sjefen min heter Lars. Han viser meg kontoret og presenterer meg for kollegene. Vi spiser lunsj klokka halv tolv. Etter lunsj har vi et møte om et nytt prosjekt.",
+  "items": [
+    {
+      "id": "a2-fdw-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 900,
+      "prompt": "Hva skal Sara jobbe som?",
+      "options": ["Utvikler", "Lærer", "Sjef"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hvem er Lars?",
+      "options": ["En ny kollega", "Sjefen til Sara", "En kunde"],
+      "answer": 1
+    },
+    {
+      "id": "a2-fdw-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Når spiser de lunsj?",
+      "hint": "«Halv tolv» betyr en halv time før tolv.",
+      "options": ["Klokka 11.30", "Klokka 12.30", "Klokka 11.00"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hva skjer etter lunsj?",
+      "options": ["De har et møte", "Sara går hjem", "De spiser middag"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Lars skriver: «Møtet starter klokka ett i stedet for klokka tolv.» Når starter møtet?",
+      "options": ["Klokka 13.00", "Klokka 12.00", "Klokka 11.00"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-06",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 900,
+      "prompt": "Hvem jobber du sammen med?",
+      "options": ["En kollega", "En lege", "En nabo"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-07",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hva sier du når du går hjem fra jobben?",
+      "options": ["Ha det, vi ses i morgen!", "God morgen!", "Velkommen!"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 850,
+      "prompt": "Jeg ___ Sara.",
+      "answers": ["heter"]
+    },
+    {
+      "id": "a2-fdw-09",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 900,
+      "prompt": "Jeg ___ i Oslo.",
+      "hint": "Hvor har du hjemmet ditt?",
+      "answers": ["bor"]
+    },
+    {
+      "id": "a2-fdw-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 950,
+      "prompt": "Hun ___ som utvikler.",
+      "answers": ["jobber", "arbeider"]
+    },
+    {
+      "id": "a2-fdw-11",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1050,
+      "prompt": "Kan du vise ___ kontoret?",
+      "hint": "Personlig pronomen: jeg → ?",
+      "answers": ["meg"]
+    },
+    {
+      "id": "a2-fdw-12",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1100,
+      "prompt": "Hei Lars, jeg er syk i dag og kommer ikke på ___.",
+      "answers": ["jobb", "jobben", "kontoret"]
+    },
+    {
+      "id": "a2-fdw-13",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["er", "min første dag", "I dag", "det"],
+      "answer": "I dag er det min første dag"
+    },
+    {
+      "id": "a2-fdw-14",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["har", "vi", "Etter lunsj", "et møte"],
+      "answer": "Etter lunsj har vi et møte"
+    },
+    {
+      "id": "a2-fdw-15",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["fordi", "Jeg liker jobben", "er", "kollegene", "hyggelige"],
+      "answer": "Jeg liker jobben fordi kollegene er hyggelige"
+    }
+  ]
+}

@@ -53,4 +53,7 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - run: dotnet test tools/ContentCli/ContentCli.slnx
-      - run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
+      - name: Validate content
+        run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
+      - name: Coverage report
+        run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage content --summary "$GITHUB_STEP_SUMMARY"

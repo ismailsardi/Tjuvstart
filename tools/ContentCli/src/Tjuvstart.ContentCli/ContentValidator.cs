@@ -1,79 +1,63 @@
-using System.Text.Json;
-
 namespace Tjuvstart.ContentCli;
 
-public sealed record ValidationIssue(string File, string Message);
-
 /// <summary>
-/// Checks the content folder: every JSON file must parse, and item ids must be unique
-/// across all files. Schema checks and descriptor coverage build on this in later milestones.
+/// Cross-file checks on loaded content: unique ids, known descriptor references, and items
+/// whose skill and level agree with the descriptors they claim to cover.
 /// </summary>
 public static class ContentValidator
 {
-    public static IReadOnlyList<ValidationIssue> Validate(string contentRoot)
+    public static IReadOnlyList<ValidationIssue> Validate(ContentSet content)
     {
-        if (!Directory.Exists(contentRoot))
+        var issues = new List<ValidationIssue>(content.Issues);
+
+        var descriptors = new Dictionary<string, Descriptor>(StringComparer.Ordinal);
+        foreach (var descriptor in content.Descriptors)
         {
-            return [new ValidationIssue(contentRoot, "Content folder not found.")];
+            if (!descriptors.TryAdd(descriptor.Id, descriptor))
+            {
+                issues.Add(new ValidationIssue(ContentLoader.DescriptorsFile, $"Duplicate descriptor id '{descriptor.Id}'."));
+            }
+            else if (!descriptor.Id.StartsWith(descriptor.Level + "-", StringComparison.Ordinal))
+            {
+                issues.Add(new ValidationIssue(ContentLoader.DescriptorsFile, $"Descriptor '{descriptor.Id}' does not match its level {descriptor.Level}."));
+            }
         }
 
-        var issues = new List<ValidationIssue>();
-        var seenIds = new Dictionary<string, string>(StringComparer.Ordinal);
+        var lessonIds = new Dictionary<string, string>(StringComparer.Ordinal);
+        var itemIds = new Dictionary<string, string>(StringComparer.Ordinal);
 
-        var files = Directory
-            .EnumerateFiles(contentRoot, "*.json", SearchOption.AllDirectories)
-            .Order(StringComparer.Ordinal);
-
-        foreach (var path in files)
+        foreach (var lesson in content.Lessons)
         {
-            var relative = Path.GetRelativePath(contentRoot, path);
-            JsonDocument document;
-            try
+            if (!lessonIds.TryAdd(lesson.Id, lesson.File))
             {
-                document = JsonDocument.Parse(File.ReadAllText(path));
-            }
-            catch (JsonException ex)
-            {
-                issues.Add(new ValidationIssue(relative, $"Invalid JSON: {ex.Message}"));
-                continue;
+                issues.Add(new ValidationIssue(lesson.File, $"Duplicate lesson id '{lesson.Id}' (first defined in {lessonIds[lesson.Id]})."));
             }
 
-            using (document)
+            foreach (var item in lesson.Items)
             {
-                foreach (var id in ItemIds(document.RootElement))
+                if (!itemIds.TryAdd(item.Id, lesson.File))
                 {
-                    if (seenIds.TryGetValue(id, out var firstFile))
+                    issues.Add(new ValidationIssue(lesson.File, $"Duplicate item id '{item.Id}' (first defined in {itemIds[item.Id]})."));
+                }
+
+                foreach (var reference in item.Descriptors)
+                {
+                    if (!descriptors.TryGetValue(reference, out var descriptor))
                     {
-                        issues.Add(new ValidationIssue(relative, $"Duplicate item id '{id}' (first defined in {firstFile})."));
+                        issues.Add(new ValidationIssue(lesson.File, $"Item '{item.Id}' references unknown descriptor '{reference}'."));
                     }
-                    else
+                    else if (descriptor.Skill != item.Skill)
                     {
-                        seenIds[id] = relative;
+                        issues.Add(new ValidationIssue(lesson.File, $"Item '{item.Id}' is a {item.Skill} item but descriptor '{reference}' is {descriptor.Skill}."));
+                    }
+                    else if (descriptor.Level != item.Level)
+                    {
+                        issues.Add(new ValidationIssue(lesson.File, $"Item '{item.Id}' is level {item.Level} but descriptor '{reference}' is {descriptor.Level}."));
                     }
                 }
             }
         }
 
         return issues;
-    }
-
-    private static IEnumerable<string> ItemIds(JsonElement root)
-    {
-        if (root.ValueKind != JsonValueKind.Object
-            || !root.TryGetProperty("items", out var items)
-            || items.ValueKind != JsonValueKind.Array)
-        {
-            yield break;
-        }
-
-        foreach (var item in items.EnumerateArray())
-        {
-            if (item.ValueKind == JsonValueKind.Object
-                && item.TryGetProperty("id", out var id)
-                && id.ValueKind == JsonValueKind.String)
-            {
-                yield return id.GetString()!;
-            }
-        }
     }
 }

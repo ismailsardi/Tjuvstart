@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/lesson.schema.json",
+  "title": "Lesson",
+  "type": "object",
+  "required": ["id", "level", "title", "summary", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "$ref": "#/$defs/slug" },
+    "level": { "$ref": "#/$defs/level" },
+    "title": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string", "minLength": 1 },
+    "text": {
+      "description": "Optional reading text shown above the exercises.",
+      "type": "string",
+      "minLength": 1
+    },
+    "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/item" } }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "level": { "enum": ["A1", "A2", "B1", "B2"] },
+    "item": {
+      "type": "object",
+      "required": ["id", "type", "skill", "level", "descriptors", "difficulty", "prompt"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "type": { "enum": ["multiple-choice", "gap-fill", "word-order"] },
+        "skill": { "enum": ["reading", "listening", "writing", "speaking"] },
+        "level": { "$ref": "#/$defs/level" },
+        "descriptors": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "difficulty": {
+          "description": "Item difficulty on the engine's rating scale.",
+          "type": "integer",
+          "minimum": 400,
+          "maximum": 2000
+        },
+        "prompt": { "type": "string", "minLength": 1 },
+        "hint": { "type": "string" }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "type": { "const": "multiple-choice" },
+            "options": {
+              "type": "array",
+              "minItems": 2,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "answer": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["options", "answer"]
+        },
+        {
+          "properties": {
+            "type": { "const": "gap-fill" },
+            "answers": {
+              "description": "All accepted answers.",
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "required": ["answers"]
+        },
+        {
+          "properties": {
+            "type": { "const": "word-order" },
+            "tokens": {
+              "type": "array",
+              "minItems": 2,
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "answer": { "type": "string", "minLength": 1 }
+          },
+          "required": ["tokens", "answer"]
+        }
+      ]
+    }
+  }
+}
