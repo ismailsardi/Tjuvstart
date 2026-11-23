@@ -193,6 +193,16 @@ _My job_ adds a deck of twelve A2 words for the learner's line of work: IT, heal
 
 **Can-do statements.** Every exercise is already tagged with CEFR descriptors. Me lists the descriptors that some exercise checks, grouped by level and skill, written in the first person in the learner's language ("I can find what I need in notices, timetables, menus and ads"). A statement is ticked once the learner has answered at least three different exercises for it and at least 80% of their latest answers are right; only the latest answer to each exercise counts. The end of the daily session shows any statement it just ticked. Speaking descriptors stay out of the list until there are exercises that check speaking. Packs hold the statements under `canDo`, and the content CLI rejects statements for unknown descriptors.
 
+### 10.8 AI practice with the learner's own key
+
+AI practice is optional and off until the learner adds an Anthropic API key on Me ([ADR 0008](adr/0008-ai-with-the-learners-own-key.md)). It has three parts:
+
+- **Role-play.** A typed conversation in a situation from the first weeks: the first workday, calling the GP office, a flat viewing, returning something in a shop. The partner stays in role, keeps replies to a few sentences at the learner's level, and under each learner message shows a corrected sentence with a one-line reason when something important was wrong.
+- **Writing feedback.** Four Norskprøven-style tasks at A2 and B1 (an email to the boss when sick, a note to the housing board, a text about your job, a reply to a Finn.no ad). The learner gets a CEFR level, a 1 to 5 score for task, structure, vocabulary and grammar, up to six corrections with explanations in their language, and their text rewritten one level up.
+- **New reading texts.** A short text on a chosen topic, written at the learner's reading level, with four multiple-choice questions. It plays in the normal lesson player but changes no ratings and marks nothing completed.
+
+Every request carries the estimated level, the interface language for explanations, the learner's line of work and their recurring grammar mistakes, and asks for JSON that matches a schema. AI scores are feedback only and do not move the ratings until they have been compared with human raters.
+
 ## 11. Features and priorities
 
 | Feature                      | Description                                                                                             | Release |
@@ -205,10 +215,10 @@ _My job_ adds a deck of twelve A2 words for the learner's line of work: IT, heal
 | Reading and listening        | Graded texts and audio with comprehension questions                                                     | MVP     |
 | Native-language packs        | English and French                                                                                      | MVP     |
 | Coverage view                | Proven and weak descriptors per skill                                                                   | MVP     |
-| Writing feedback             | Rubric-based scoring with the learner's own API key; self-assessment otherwise                          | MVP     |
+| Writing feedback             | Rubric-based feedback with the learner's own API key (step 7); self-assessment otherwise                | MVP     |
 | Arabic pack                  | Including a right-to-left interface                                                                     | v2      |
 | Speaking practice            | Recording, on-device speech-to-text, rubric feedback                                                    | v2      |
-| Conversation practice        | Role-play of work-life scenarios with an AI partner                                                     | v2      |
+| Conversation practice        | Typed role-play of work-life scenarios with an AI partner (step 7); spoken role-play in v2              | MVP     |
 | Practice exam                | Timed, Norskprøven-style, across all four parts                                                         | v2      |
 | Sync API                     | ASP.NET Core API for account sync                                                                       | v2      |
 | Dialect listening            | The same sentences recorded in several regional dialects                                                | v3      |
