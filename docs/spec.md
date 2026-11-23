@@ -162,6 +162,12 @@ Shadowing trains pronunciation and listening together. The learner goes through 
 
 The text can be hidden to practise by ear. Recordings stay in the page's memory and are never stored or uploaded; only the learner's verdict is saved, so the profile can show how many sentences they have said out loud. Speaking is not rated from these self-judgements: an estimate for speaking needs scored answers (with AI, step 7), and listening gets its own exercises in step 4.
 
+### 10.4 First weeks in Norway
+
+A guided track follows the situations a newcomer meets first, in the order they usually come: the first workday, the tax card (_skattekort_), BankID, renting a flat, booking the doctor (_fastlege_) and small talk at lunch. Each scenario is an ordinary lesson with a text, exercises and word cards, so it feeds the level estimate, the error memory and the word review like any other lesson.
+
+Today shows the track as numbered steps with the learner's progress, and suggests the next scenario as the next lesson. The Lessons tab shows the track first and the other lessons below it. Tracks live in `content/tracks.json` and the content CLI checks that every lesson they list exists. Facts in the scenarios (who issues ID numbers, the 50% tax without a tax card, the 113 and 116 117 numbers) are kept general and checked against public sources, since the texts teach real procedures.
+
 ## 11. Features and priorities
 
 | Feature                      | Description                                                                                             | Release |
