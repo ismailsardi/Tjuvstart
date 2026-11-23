@@ -21,9 +21,13 @@ export function sentences(text: string): string[] {
 type AudioIndex = Record<string, string>;
 let indexPromise: Promise<AudioIndex> | undefined;
 
-/** The map from text to audio file, written by the audio build. Empty when there is none. */
+/**
+ * The map from text to audio file, written by the audio build. Empty when there is none.
+ * File names change when the voice changes, so the list is always asked from the network first
+ * (the service worker falls back to its copy offline).
+ */
 export function loadAudioIndex(): Promise<AudioIndex> {
-  indexPromise ??= fetch(`${import.meta.env.BASE_URL}audio/index.json`)
+  indexPromise ??= fetch(`${import.meta.env.BASE_URL}audio/index.json`, { cache: 'no-cache' })
     .then((response) => (response.ok ? (response.json() as Promise<AudioIndex>) : {}))
     .catch(() => ({}));
   return indexPromise;
@@ -76,9 +80,30 @@ export function speak(text: string, { rate = 1 }: SpeakOptions = {}): Promise<bo
 
 async function play(text: string, rate: number): Promise<boolean> {
   const url = await audioUrlFor(text);
-  if (url) return playFile(url, rate);
-  if ('speechSynthesis' in window && norwegianVoice()) return speakWithBrowser(text, rate);
+  if (url) {
+    if (await playFile(url, rate)) return true;
+    // The list may be out of date (for example right after a new voice was deployed):
+    // fetch it again and retry once with the new file.
+    resetAudioIndex();
+    const fresh = await audioUrlFor(text);
+    if (fresh && fresh !== url && (await playFile(fresh, rate))) return true;
+  }
+  if (hasBrowserVoice()) return speakWithBrowser(text, rate);
   return false;
+}
+
+function hasBrowserVoice(): boolean {
+  return 'speechSynthesis' in window && norwegianVoice() !== undefined;
+}
+
+/**
+ * Whether every text can be played: it was recorded, or the device has a Norwegian voice.
+ * Buttons for text that cannot be played are not shown, so learners never hit a dead end.
+ */
+export async function canPlay(texts: readonly string[]): Promise<boolean> {
+  if (hasBrowserVoice()) return true;
+  const index = await loadAudioIndex();
+  return texts.every((text) => normalize(text) in index);
 }
 
 /** Plays the learner's own recording, stopping anything else that is playing. */
