@@ -39,7 +39,8 @@ public sealed record LanguagePack(
     IReadOnlyList<string> ItemNoteIds,
     IReadOnlyList<string> LessonRefs,
     IReadOnlyList<string>? WordIds = null,
-    IReadOnlyList<string>? TrackRefs = null);
+    IReadOnlyList<string>? TrackRefs = null,
+    IReadOnlyList<string>? CanDoRefs = null);
 
 /// <summary>A guided path through lessons, in order.</summary>
 public sealed record Track(string Id, string Title, IReadOnlyList<string> Lessons);

@@ -111,6 +111,14 @@
         "minLength": 1
       }
     },
+    "canDo": {
+      "description": "Can-do statements in the learner's language, written in the first person, keyed by descriptor id.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "words": {
       "description": "Word card meanings and memory hooks in the learner's language, keyed by card id. Every card needs an entry.",
       "type": "object",

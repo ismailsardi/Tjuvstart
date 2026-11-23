@@ -112,7 +112,8 @@ public static class ContentLoader
                         raw.ItemNotes?.Keys.ToList() ?? [],
                         lessonRefs,
                         raw.Words?.Keys.ToList() ?? [],
-                        raw.TrackSummaries?.Keys.ToList() ?? []));
+                        raw.TrackSummaries?.Keys.ToList() ?? [],
+                        raw.CanDo?.Keys.ToList() ?? []));
                 }
             }
         }
@@ -301,6 +302,7 @@ public static class ContentLoader
         Dictionary<string, string>? ItemNotes,
         Dictionary<string, string>? LessonSummaries,
         Dictionary<string, string>? TrackSummaries,
+        Dictionary<string, string>? CanDo,
         Dictionary<string, JsonElement>? Words);
 
     private sealed record CardFile(

@@ -25,6 +25,8 @@ export interface LanguagePack {
   itemNotes?: Record<string, string>;
   lessonSummaries?: Record<string, string>;
   trackSummaries?: Record<string, string>;
+  /** First-person can-do statements, keyed by descriptor id. */
+  canDo?: Record<string, string>;
   /** Word card meanings and memory hooks, keyed by card id. */
   words?: Record<string, { meaning: string; hook?: string }>;
 }

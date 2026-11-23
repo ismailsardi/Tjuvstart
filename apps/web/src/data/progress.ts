@@ -1,5 +1,9 @@
 import {
+  DAILY_GOAL,
+  DAY_MS,
   DEFAULT_LISTENING_SPEED,
+  canDoStatus,
+  currentStreak,
   DEFAULT_RATING,
   MIN_ANSWERS_FOR_ESTIMATE,
   mistakeScores,
@@ -8,7 +12,9 @@ import {
   review,
   updateListeningSpeed,
   updateRating,
+  type CanDoStatus,
   type Grade,
+  type Streak,
 } from '@tjuvstart/engine';
 import { getItem } from '../content/lessons';
 import type { JobField } from '../content/vocab';
@@ -220,4 +226,57 @@ export async function recordShadowing(
 export async function shadowedSentences(db: TjuvstartDb = defaultDb): Promise<number> {
   const attempts = await db.shadowing.toArray();
   return new Set(attempts.filter((a) => a.verdict === 'close').map((a) => a.text)).size;
+}
+
+/** The day a moment falls on, in the learner's time zone, as a whole number of days. */
+export function dayNumber(at: number): number {
+  return Math.floor((at - new Date(at).getTimezoneOffset() * 60_000) / DAY_MS);
+}
+
+export interface DailyProgress {
+  /** Answers, card reviews and shadowed sentences done today. */
+  today: number;
+  goal: number;
+  streak: Streak;
+}
+
+/** Today's activity toward the daily goal, and the forgiving streak (see the engine). */
+export async function dailyProgress(
+  now = Date.now(),
+  db: TjuvstartDb = defaultDb,
+): Promise<DailyProgress> {
+  const [attempts, reviews, shadowing] = await Promise.all([
+    db.attempts.toArray(),
+    db.reviews.toArray(),
+    db.shadowing.toArray(),
+  ]);
+  const perDay = new Map<number, number>();
+  for (const { at } of [...attempts, ...reviews, ...shadowing]) {
+    const day = dayNumber(at);
+    perDay.set(day, (perDay.get(day) ?? 0) + 1);
+  }
+  const today = dayNumber(now);
+  const activeDays = [...perDay].filter(([, n]) => n >= DAILY_GOAL).map(([day]) => day);
+  return {
+    today: perDay.get(today) ?? 0,
+    goal: DAILY_GOAL,
+    streak: currentStreak(activeDays, today),
+  };
+}
+
+/** Where the learner stands on each CEFR descriptor, from their latest answer to each item. */
+export async function canDoProgress(
+  db: TjuvstartDb = defaultDb,
+): Promise<Map<string, CanDoStatus>> {
+  const attempts = await db.attempts.orderBy('at').toArray();
+  const latest = new Map<string, boolean>();
+  for (const attempt of attempts) latest.set(attempt.itemId, attempt.correct);
+
+  const byDescriptor = new Map<string, boolean[]>();
+  for (const [itemId, correct] of latest) {
+    for (const id of getItem(itemId)?.descriptors ?? []) {
+      byDescriptor.set(id, [...(byDescriptor.get(id) ?? []), correct]);
+    }
+  }
+  return new Map([...byDescriptor].map(([id, answers]) => [id, canDoStatus(answers)]));
 }

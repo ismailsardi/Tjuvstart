@@ -301,6 +301,26 @@
     "a2-dug-05": "A dugnad is unpaid shared work for the building, the school or the sports club. People expect neighbours to join.",
     "a2-job-03": "«Fast stilling» is a permanent job; «midlertidig» is temporary."
   },
+  "canDo": {
+    "A2-R-01": "I can read short, simple texts about everyday life and work.",
+    "A2-R-02": "I can find what I need in notices, timetables, menus and ads.",
+    "A2-R-03": "I can understand short messages and simple instructions at work.",
+    "A2-L-01": "I can follow everyday words and phrases about me and my work when people speak slowly.",
+    "A2-L-02": "I can get the main point of short messages and announcements.",
+    "A2-W-01": "I can write short notes and messages about what I need.",
+    "A2-W-02": "I can write simple sentences about myself and my work, joined with og, men and fordi.",
+    "A2-S-01": "I can introduce myself and answer simple questions about my work and background.",
+    "A2-S-02": "I can greet, thank, apologise and invite in short conversations.",
+    "A2-S-03": "I can ask for and give directions and practical information.",
+    "B1-R-01": "I can understand clear factual texts on topics I know.",
+    "B1-R-02": "I can understand what people describe in letters and messages: events, feelings, wishes.",
+    "B1-L-01": "I can follow the main points of clear speech at work and in daily life.",
+    "B1-L-02": "I can follow the main points of the news on familiar topics when it is spoken clearly.",
+    "B1-W-01": "I can write a short, connected text on a familiar topic.",
+    "B1-W-02": "I can write emails and messages about my experiences.",
+    "B1-S-01": "I can handle most everyday and work situations, like appointments and services.",
+    "B1-S-02": "I can give reasons for my opinions and plans."
+  },
   "words": {
     "jeg": {
       "meaning": "I"

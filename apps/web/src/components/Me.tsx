@@ -1,16 +1,29 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { LanguagePack } from '../content/packs';
-import { getProfile, mistakeMemory, shadowedSentences } from '../data/progress';
+import { trackedDescriptors } from '../content/descriptors';
+import {
+  canDoProgress,
+  dailyProgress,
+  getProfile,
+  mistakeMemory,
+  shadowedSentences,
+} from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
+import { CanDoList } from './CanDoList';
 import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
+import { StreakLine } from './StreakLine';
 
 export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
   const memory = useLiveQuery(() => mistakeMemory());
   const shadowed = useLiveQuery(() => shadowedSentences()) ?? 0;
+  const progress = useLiveQuery(() => dailyProgress());
+  const canDo = useLiveQuery(() => canDoProgress());
+  // Only statements that some exercise checks, grouped by level.
+  const levels = [...new Set(trackedDescriptors.map((d) => d.level))];
   const languageNames =
     packs.length > 0 ? packs.map((pack) => pack.nativeName).join(', ') : t('otherLanguage');
   return (
@@ -24,6 +37,31 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         </p>
         <a href={placementHref}>{t('redoPlacement')}</a>
       </section>
+      {progress && (
+        <section className="panel">
+          <StreakLine progress={progress} />
+          <p className="muted small">{t('streakRule')}</p>
+        </section>
+      )}
+      {canDo && (
+        <section className="panel" aria-labelledby="me-can-do">
+          <h2 id="me-can-do">{t('canDoTitle')}</h2>
+          <p className="muted small">{t('canDoIntro')}</p>
+          {levels.map((level) => {
+            const list = trackedDescriptors.filter((d) => d.level === level);
+            const done = list.filter((d) => canDo.get(d.id) === 'can-do').length;
+            return (
+              <details key={level} open={level === levels[0]}>
+                <summary>
+                  <span className="badge">{level}</span>{' '}
+                  {t('canDoCount', { n: done, total: list.length })}
+                </summary>
+                <CanDoList descriptors={list} status={canDo} packs={packs} />
+              </details>
+            );
+          })}
+        </section>
+      )}
       <section className="panel" aria-labelledby="me-mistakes">
         <h2 id="me-mistakes">{t('recurringMistakes')}</h2>
         <MistakeList focus={memory?.recurring ?? []} />

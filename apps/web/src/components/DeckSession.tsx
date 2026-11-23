@@ -26,13 +26,21 @@ async function buildSession(deckId: string, now: number): Promise<Session> {
   return { queue: [...fresh, ...dueHere], fresh: new Set(fresh) };
 }
 
-/** A swipe session over one deck. Swiping right means "know it", left means "again". */
+/**
+ * A swipe session over one deck. Swiping right means "know it", left means "again".
+ * Inside the daily session it takes at most `limit` cards and hands over to `onFinish`
+ * instead of showing its own end screen.
+ */
 export function DeckSession({
   deckId,
   packs = [],
+  limit,
+  onFinish,
 }: {
   deckId: string;
   packs?: readonly LanguagePack[];
+  limit?: number;
+  onFinish?: () => void;
 }) {
   const { t } = useI18n();
   const [session, setSession] = useState<Session | null>(null);
@@ -42,8 +50,10 @@ export function DeckSession({
   const [tally, setTally] = useState({ known: 0, again: 0 });
 
   useEffect(() => {
-    void buildSession(deckId, Date.now()).then(setSession);
-  }, [deckId]);
+    void buildSession(deckId, Date.now()).then((built) =>
+      setSession(limit === undefined ? built : { ...built, queue: built.queue.slice(0, limit) }),
+    );
+  }, [deckId, limit]);
 
   const cardId = session?.queue[index];
   const card = cardId ? getCard(cardId) : undefined;
@@ -84,7 +94,12 @@ export function DeckSession({
     return () => window.clearTimeout(timer);
   }, [leaving, answer]);
 
-  if (!session) return null;
+  const finished = session !== null && !card;
+  useEffect(() => {
+    if (finished) onFinish?.();
+  }, [finished, onFinish]);
+
+  if (!session || (finished && onFinish)) return null;
 
   const title = deckId === DUE_DECK ? t('dueDeck') : getDeck(deckId)?.title;
   const total = session.queue.length;

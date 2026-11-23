@@ -17,9 +17,13 @@ export const PRACTICE_SIZE = 8;
 export function Practice({
   packs = [],
   skill,
+  size = PRACTICE_SIZE,
+  onFinish,
 }: {
   packs?: readonly LanguagePack[];
   skill?: Skill;
+  size?: number;
+  onFinish?: (score: number) => void;
 }) {
   const { t } = useI18n();
   const [session, setSession] = useState<Lesson | null>(null);
@@ -29,11 +33,13 @@ export function Practice({
       const [profile, memory] = await Promise.all([getProfile(), mistakeMemory()]);
       const pool = skill ? allItems.filter((item) => item.skill === skill) : allItems;
       const items = buildSession(pool, profile.ratings, {
-        size: PRACTICE_SIZE,
+        size,
         recurring: memory.recurring,
         missed: memory.missed,
         exclude: memory.recentlyCorrect,
       });
+      // Inside the daily session there is simply nothing to add; move on.
+      if (items.length === 0 && onFinish) return onFinish(0);
       setSession({
         id: skill ? `practice-${skill}` : 'practice',
         level: 'A2',
@@ -54,5 +60,5 @@ export function Practice({
       </p>
     );
   }
-  return <LessonPlayer lesson={session} packs={packs} practice />;
+  return <LessonPlayer lesson={session} packs={packs} practice onFinish={onFinish} />;
 }

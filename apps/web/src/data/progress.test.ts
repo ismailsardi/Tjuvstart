@@ -7,6 +7,9 @@ import { TjuvstartDb } from './db';
 import { DAY_MS } from '@tjuvstart/engine';
 import {
   addCards,
+  canDoProgress,
+  dailyProgress,
+  dayNumber,
   completeLesson,
   dueCards,
   getProfile,
@@ -179,5 +182,45 @@ describe('listening speed', () => {
     expect((await getProfile(db)).listening).toEqual({ rate: 1, streak: 0 });
     await recordAnswer(listening, 'lesson', false, db);
     expect((await getProfile(db)).listening?.rate).toBe(0.85);
+  });
+});
+
+describe('dailyProgress', () => {
+  it('counts today and keeps the streak through one missed day', async () => {
+    db = new TjuvstartDb('test-daily');
+    const now = new Date(2026, 10, 23, 12).getTime();
+    const add = (daysAgo: number, n: number) =>
+      db.attempts.bulkAdd(
+        Array.from({ length: n }, (_, i) => ({
+          lessonId: 'l',
+          itemId: `i${i}`,
+          skill: 'reading' as const,
+          correct: true,
+          ratingAfter: 1000,
+          at: now - daysAgo * DAY_MS,
+        })),
+      );
+    await add(3, 8);
+    await add(1, 8); // two days ago was missed
+    await add(0, 3);
+
+    const progress = await dailyProgress(now, db);
+    expect(progress.today).toBe(3);
+    expect(progress.streak).toEqual({ days: 2, doneToday: false, atRisk: false });
+    expect(dayNumber(now) - dayNumber(now - DAY_MS)).toBe(1);
+  });
+});
+
+describe('canDoProgress', () => {
+  it('uses the latest answer to each item for each descriptor', async () => {
+    db = new TjuvstartDb('test-can-do');
+    // Three reading items that all check A2-R-03.
+    const items = ['a2-doc-01', 'a2-doc-02', 'a2-doc-04'].map((id) => getItem(id)!);
+    for (const it of items) await recordAnswer(it, 'l', true, db);
+    expect((await canDoProgress(db)).get('A2-R-03')).toBe('can-do');
+
+    await recordAnswer(items[0]!, 'l', false, db);
+    expect((await canDoProgress(db)).get('A2-R-03')).toBe('practising');
+    expect((await canDoProgress(db)).get('A2-W-01')).toBeUndefined();
   });
 });
