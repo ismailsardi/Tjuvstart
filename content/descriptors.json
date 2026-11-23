@@ -1,0 +1,114 @@
+{
+  "$schema": "./schema/descriptors.schema.json",
+  "source": "Can-do statements paraphrased from the illustrative descriptor scales in the CEFR Companion Volume (Council of Europe, 2020). Wording is our own and is to be checked against the source before content production scales up.",
+  "descriptors": [
+    {
+      "id": "A2-R-01",
+      "level": "A2",
+      "skill": "reading",
+      "text": "Can understand short, simple texts on familiar topics that use high-frequency everyday and work-related words."
+    },
+    {
+      "id": "A2-R-02",
+      "level": "A2",
+      "skill": "reading",
+      "text": "Can find specific, predictable information in simple everyday material such as notices, timetables and menus."
+    },
+    {
+      "id": "A2-R-03",
+      "level": "A2",
+      "skill": "reading",
+      "text": "Can understand short, simple personal messages and work instructions."
+    },
+    {
+      "id": "A2-L-01",
+      "level": "A2",
+      "skill": "listening",
+      "text": "Can understand phrases and common words about personal and work topics when speech is clear and slow."
+    },
+    {
+      "id": "A2-L-02",
+      "level": "A2",
+      "skill": "listening",
+      "text": "Can catch the main point of short, clear messages and announcements."
+    },
+    {
+      "id": "A2-W-01",
+      "level": "A2",
+      "skill": "writing",
+      "text": "Can write short, simple notes and messages about immediate needs."
+    },
+    {
+      "id": "A2-W-02",
+      "level": "A2",
+      "skill": "writing",
+      "text": "Can write simple sentences about themselves, their work and surroundings, linked with words like og, men and fordi."
+    },
+    {
+      "id": "A2-S-01",
+      "level": "A2",
+      "skill": "speaking",
+      "text": "Can introduce themselves and others, and answer simple questions about work and background."
+    },
+    {
+      "id": "A2-S-02",
+      "level": "A2",
+      "skill": "speaking",
+      "text": "Can handle short social exchanges such as greetings, thanks, apologies and invitations."
+    },
+    {
+      "id": "A2-S-03",
+      "level": "A2",
+      "skill": "speaking",
+      "text": "Can ask for and give simple directions and practical information."
+    },
+    {
+      "id": "B1-R-01",
+      "level": "B1",
+      "skill": "reading",
+      "text": "Can understand straightforward factual texts on familiar subjects with a satisfactory level of comprehension."
+    },
+    {
+      "id": "B1-R-02",
+      "level": "B1",
+      "skill": "reading",
+      "text": "Can understand the description of events, feelings and wishes in personal letters and messages."
+    },
+    {
+      "id": "B1-L-01",
+      "level": "B1",
+      "skill": "listening",
+      "text": "Can understand the main points of clear standard speech on familiar matters met at work, school and in leisure."
+    },
+    {
+      "id": "B1-L-02",
+      "level": "B1",
+      "skill": "listening",
+      "text": "Can follow the main points of radio or TV news on familiar topics when delivered relatively slowly and clearly."
+    },
+    {
+      "id": "B1-W-01",
+      "level": "B1",
+      "skill": "writing",
+      "text": "Can write simple connected text on familiar topics, linking shorter elements into a sequence."
+    },
+    {
+      "id": "B1-W-02",
+      "level": "B1",
+      "skill": "writing",
+      "text": "Can write personal messages and emails describing experiences and impressions."
+    },
+    {
+      "id": "B1-S-01",
+      "level": "B1",
+      "skill": "speaking",
+      "text": "Can deal with most situations likely to arise in everyday life and at work, such as appointments and service encounters."
+    },
+    {
+      "id": "B1-S-02",
+      "level": "B1",
+      "skill": "speaking",
+      "text": "Can give reasons and explanations for opinions and plans."
+    }
+  ]
+}
