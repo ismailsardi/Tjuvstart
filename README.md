@@ -20,6 +20,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 - **Built around CEFR and Norskprøven:** every lesson and task maps to CEFR descriptors, and CI checks coverage.
 - **Swipeable word cards:** a card for every word in the lessons, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk.
+- **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are, plus a word deck for the learner's line of work.
 - **Audio and shadowing:** every sentence and word card is recorded at build time with an open-source Norwegian voice (Piper); learners listen, record themselves and compare, all in the browser.
 - **Native-language aware:** cognates, false friends and grammar contrasts for English, French and Arabic speakers.
 - **Zero running cost:** a local-first PWA on GitHub Pages; AI features are optional and use the learner's own key.
