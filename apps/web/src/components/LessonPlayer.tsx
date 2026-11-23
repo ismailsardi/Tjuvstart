@@ -1,32 +1,55 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { correctAnswer, isCorrect, type Response } from '../content/answers';
+import {
+  annotate,
+  contrastsFor,
+  firstNote,
+  type LanguagePack,
+  type Segment,
+} from '../content/packs';
 import type { Lesson } from '../content/types';
 import { recordAnswer } from '../data/progress';
+import { useI18n } from '../i18n/useI18n';
 import { homeHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
 
 type Feedback = { correct: boolean; answer: string } | null;
 
-export function LessonPlayer({ lesson }: { lesson: Lesson }) {
+interface Props {
+  lesson: Lesson;
+  /** The learner's language packs, native language first. */
+  packs?: readonly LanguagePack[];
+}
+
+export function LessonPlayer({ lesson, packs = [] }: Props) {
+  const { t } = useI18n();
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [score, setScore] = useState(0);
+
+  const segments = useMemo(
+    () => (lesson.text ? annotate(lesson.text, packs) : []),
+    [lesson.text, packs],
+  );
+  const contrasts = useMemo(() => contrastsFor(lesson.id, packs), [lesson.id, packs]);
 
   const item = lesson.items[index];
 
   if (!item) {
     return (
       <section aria-labelledby="done-heading">
-        <h1 id="done-heading">Ferdig!</h1>
-        <p>
-          You got {score} of {lesson.items.length} right. Your level estimate has been updated.
-        </p>
+        <h1 id="done-heading" lang="nb">
+          Ferdig!
+        </h1>
+        <p>{t('doneBody', { score, total: lesson.items.length })}</p>
         <a className="button" href={homeHref}>
-          Back to home
+          {t('backHome')}
         </a>
       </section>
     );
   }
+
+  const note = firstNote(packs, (pack) => pack.itemNotes?.[item.id]);
 
   async function submit(response: Response) {
     if (!item || feedback) return;
@@ -44,19 +67,29 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
   return (
     <article aria-labelledby="lesson-heading">
       <a href={homeHref} className="muted">
-        ← Home
+        {t('home')}
       </a>
-      <h1 id="lesson-heading">{lesson.title}</h1>
-      {lesson.text && (
-        <p className="reading-text" lang="nb">
-          {lesson.text}
-        </p>
-      )}
+      <h1 id="lesson-heading" lang="nb">
+        {lesson.title}
+      </h1>
+      {lesson.text && <ReadingText segments={segments} />}
 
-      <progress value={index} max={lesson.items.length} aria-label="Lesson progress" />
-      <p className="muted">
-        Question {index + 1} of {lesson.items.length}
-      </p>
+      {contrasts.map((contrast) => (
+        <details
+          key={contrast.id}
+          className="tip"
+          lang={contrast.language}
+          dir={contrast.direction}
+        >
+          <summary>
+            {t('tip')}: {contrast.title}
+          </summary>
+          <p>{contrast.body}</p>
+        </details>
+      ))}
+
+      <progress value={index} max={lesson.items.length} aria-label={t('progress')} />
+      <p className="muted">{t('question', { n: index + 1, total: lesson.items.length })}</p>
 
       <h2 className="prompt" lang="nb">
         {item.prompt}
@@ -73,18 +106,83 @@ export function LessonPlayer({ lesson }: { lesson: Lesson }) {
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
           <p>
             {feedback.correct ? (
-              'Correct!'
+              t('correct')
             ) : (
               <>
-                Not quite. The answer is <strong lang="nb">{feedback.answer}</strong>.
+                {t('notQuite')} <strong lang="nb">{feedback.answer}</strong>.
               </>
             )}
           </p>
+          {note && (
+            <p className="note" lang={note.pack.language} dir={note.pack.direction}>
+              {note.text}
+            </p>
+          )}
           <button type="button" onClick={next} autoFocus>
-            Continue
+            {t('continue')}
           </button>
         </div>
       )}
     </article>
+  );
+}
+
+/** The lesson text with familiar words and look-alikes marked, followed by short glossaries. */
+function ReadingText({ segments }: { segments: Segment[] }) {
+  const { t } = useI18n();
+  const unique = (kind: 'cognate' | 'false-friend') => [
+    ...new Map(
+      segments.flatMap((s) => (s.word?.kind === kind ? [[s.word.nb, s.word] as const] : [])),
+    ).values(),
+  ];
+  const cognates = unique('cognate');
+  const falseFriends = unique('false-friend');
+
+  return (
+    <>
+      <p className="reading-text" lang="nb">
+        {segments.map((segment, i) =>
+          segment.word ? (
+            <mark key={i} className={segment.word.kind}>
+              {segment.text}
+            </mark>
+          ) : (
+            segment.text
+          ),
+        )}
+      </p>
+      {cognates.length > 0 && (
+        <section className="glossary" aria-label={t('knownWords')}>
+          <h2>{t('knownWords')}</h2>
+          <ul>
+            {cognates.map((word) => (
+              <li key={word.nb}>
+                <mark className="cognate" lang="nb">
+                  {word.nb}
+                </mark>{' '}
+                <span lang={word.language}>{word.meaning}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {falseFriends.length > 0 && (
+        <section className="glossary" aria-label={t('falseFriends')}>
+          <h2>{t('falseFriends')}</h2>
+          <ul>
+            {falseFriends.map((word) => (
+              <li key={word.nb}>
+                <mark className="false-friend" lang="nb">
+                  {word.nb}
+                </mark>{' '}
+                <span lang={word.language}>
+                  {t('looksLike', { word: word.looksLike ?? '' })} «{word.meaning}»
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </>
   );
 }

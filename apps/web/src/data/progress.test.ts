@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { DEFAULT_RATING } from '@tjuvstart/engine';
 import type { GapFillItem } from '../content/types';
 import { TjuvstartDb } from './db';
-import { getProfile, recordAnswer } from './progress';
+import { getProfile, recordAnswer, saveLanguages } from './progress';
 
 const item: GapFillItem = {
   id: 'g',
@@ -44,5 +44,16 @@ describe('recordAnswer', () => {
   it('lowers the rating after a wrong answer', async () => {
     db = new TjuvstartDb('test-wrong');
     expect(await recordAnswer(item, 'lesson', false, db)).toBeLessThan(DEFAULT_RATING);
+  });
+});
+
+describe('saveLanguages', () => {
+  it('stores the native language and drops it from the known languages', async () => {
+    db = new TjuvstartDb('test-languages');
+    await saveLanguages('fr', ['en', 'fr'], db);
+    const profile = await getProfile(db);
+    expect(profile.nativeLanguage).toBe('fr');
+    expect(profile.knownLanguages).toEqual(['en']);
+    expect(profile.answers.reading).toBe(0);
   });
 });

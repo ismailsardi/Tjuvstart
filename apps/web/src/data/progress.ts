@@ -41,3 +41,19 @@ export async function recordAnswer(
     return ratingAfter;
   });
 }
+
+/** Saves the learner's native and known languages, creating the guest profile if needed. */
+export async function saveLanguages(
+  nativeLanguage: string,
+  knownLanguages: readonly string[],
+  db: TjuvstartDb = defaultDb,
+): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    await db.profiles.put({
+      ...profile,
+      nativeLanguage,
+      knownLanguages: knownLanguages.filter((code) => code !== nativeLanguage),
+    });
+  });
+}

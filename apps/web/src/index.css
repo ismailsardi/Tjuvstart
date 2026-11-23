@@ -207,3 +207,79 @@ progress {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+.onboarding fieldset {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.onboarding legend {
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+.choice {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+
+mark.cognate {
+  background: color-mix(in srgb, #2e9e5b 22%, transparent);
+  color: inherit;
+  border-radius: 0.2rem;
+}
+
+mark.false-friend {
+  background: color-mix(in srgb, #d98b1a 28%, transparent);
+  color: inherit;
+  border-radius: 0.2rem;
+  text-decoration: underline wavy color-mix(in srgb, #d98b1a 80%, transparent);
+}
+
+.glossary h2 {
+  font-size: 1rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.glossary ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.tip {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.tip summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.note {
+  font-size: 0.95rem;
+}
+
+.update-banner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.update-banner button {
+  background: var(--bg);
+  color: var(--accent);
+  padding: 0.4rem 1rem;
+}

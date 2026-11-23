@@ -1,7 +1,9 @@
 import { expect, test } from '@playwright/test';
+import { chooseLanguages } from './helpers';
 
 test('sample lesson works offline and updates the level estimate', async ({ page, context }) => {
   await page.goto('./');
+  await chooseLanguages(page, 'English');
   // Wait until the service worker controls the page, so the app shell is precached.
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
