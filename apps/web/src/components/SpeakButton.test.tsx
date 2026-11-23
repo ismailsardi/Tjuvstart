@@ -38,4 +38,13 @@ describe('SpeakButton', () => {
     await vi.waitFor(() => expect(speech.canPlay).toHaveBeenCalledWith(['Hei.', 'Ny tekst.']));
     await vi.waitFor(() => expect(screen.queryByRole('button')).toBeNull());
   });
+
+  it('always shows the button when the audio is the exercise itself', async () => {
+    speech.canPlay.mockClear();
+    render(<SpeakButton text="Ny tekst." label="Play" essential />);
+    expect(screen.getByRole('button', { name: 'Play' })).toBeTruthy();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(screen.getByRole('button', { name: 'Play' })).toBeTruthy();
+    expect(speech.canPlay).not.toHaveBeenCalled();
+  });
 });

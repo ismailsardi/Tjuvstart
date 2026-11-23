@@ -1,4 +1,33 @@
+import { readFileSync, readdirSync } from 'node:fs';
 import { expect, type Page } from '@playwright/test';
+
+const silence = readFileSync(new URL('./fixtures/silence.mp3', import.meta.url));
+const lessonsDir = new URL('../../../content/lessons/', import.meta.url);
+
+/**
+ * Stands in for the audio build, which only runs in the audio job and on deploy: every
+ * listening text in the content gets a silent clip. Returns the clips played, in order.
+ */
+export async function stubAudio(page: Page): Promise<string[]> {
+  const index: Record<string, string> = {};
+  for (const level of readdirSync(lessonsDir)) {
+    for (const file of readdirSync(new URL(`${level}/`, lessonsDir))) {
+      const lesson = JSON.parse(readFileSync(new URL(`${level}/${file}`, lessonsDir), 'utf8')) as {
+        items: { id: string; audio?: string }[];
+      };
+      for (const item of lesson.items) {
+        if (item.audio) index[item.audio.replace(/\s+/g, ' ').trim()] = item.id;
+      }
+    }
+  }
+  const played: string[] = [];
+  await page.route('**/audio/index.json', (route) => route.fulfill({ json: index }));
+  await page.route('**/audio/*.mp3', (route) => {
+    played.push(new URL(route.request().url()).pathname.split('/').pop()!);
+    return route.fulfill({ body: silence, contentType: 'audio/mpeg' });
+  });
+  return played;
+}
 
 /** Completes the first-run language question. */
 export async function chooseLanguages(page: Page, native: string, known: string[] = []) {
