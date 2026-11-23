@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "job-it",
+  "title": "IT og utvikling",
+  "field": "it",
+  "cards": [
+    {
+      "id": "programvare",
+      "nb": "programvare",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["programvare", "programvaren"],
+      "example": "Vi lager programvare for sykehus."
+    },
+    {
+      "id": "system",
+      "nb": "system",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["system", "systemet", "systemer"],
+      "example": "Systemet er nede."
+    },
+    {
+      "id": "server",
+      "nb": "server",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["server", "serveren", "servere"],
+      "example": "Serveren står i skyen."
+    },
+    {
+      "id": "database",
+      "nb": "database",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["database", "databasen", "databaser"],
+      "example": "Dataene ligger i en database."
+    },
+    {
+      "id": "feil",
+      "nb": "feil",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["feil", "feilen"],
+      "example": "Jeg har funnet en feil i koden."
+    },
+    {
+      "id": "oppgave",
+      "nb": "oppgave",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["oppgave", "oppgaven", "oppgaver"],
+      "example": "Hvilken oppgave jobber du med?"
+    },
+    {
+      "id": "losning",
+      "nb": "løsning",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["løsning", "løsningen", "løsninger"],
+      "example": "Vi trenger en enkel løsning."
+    },
+    {
+      "id": "bruker",
+      "nb": "bruker",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bruker", "brukeren", "brukere"],
+      "example": "Brukerne liker den nye appen."
+    },
+    {
+      "id": "nettverk",
+      "nb": "nettverk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["nettverk", "nettverket"],
+      "example": "Nettverket er tregt i dag."
+    },
+    {
+      "id": "sikkerhet",
+      "nb": "sikkerhet",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sikkerhet", "sikkerheten"],
+      "example": "Sikkerhet er viktig for oss."
+    },
+    {
+      "id": "oppdatering",
+      "nb": "oppdatering",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["oppdatering", "oppdateringen", "oppdateringer"],
+      "example": "Vi kjører en oppdatering i kveld."
+    },
+    {
+      "id": "skjerm",
+      "nb": "skjerm",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skjerm", "skjermen", "skjermer"],
+      "example": "Kan du dele skjermen?"
+    }
+  ]
+}
