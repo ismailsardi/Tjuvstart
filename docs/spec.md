@@ -18,7 +18,7 @@ Adults who move to Norway for work usually need to reach B1 or B2 quickly, both 
 
 - Generic courses move at a fixed pace, whatever the learner already knows.
 - Gamified apps rarely go beyond A2 and give little practice in writing and speaking.
-- Courses are written for one source language, or for none, and ignore what a French or Arabic speaker already brings.
+- Courses are written for one source language, or for none, and ignore what the learner's own language already brings, such as the many words English and French share with Norwegian.
 - Learners have no reliable way to tell how close they are to B2 before they sit the official test.
 
 ## 3. Goals and non-goals
@@ -41,7 +41,7 @@ Adults who move to Norway for work usually need to reach B1 or B2 quickly, both 
 
 **Primary:** adults relocating to Norway for work (Oslo first), with advanced A1 or A2 Norwegian, studying alone in short daily sessions.
 
-**First supported native languages:** English, French, Arabic.
+**Supported native languages:** English and French. Other learners get the English interface ([ADR 0010](adr/0010-english-and-french-packs-only.md)).
 
 ## 5. Success metrics
 
@@ -216,7 +216,6 @@ Every request carries the estimated level, the interface language for explanatio
 | Native-language packs        | English and French                                                                                      | MVP     |
 | Coverage view                | Proven and weak descriptors per skill                                                                   | MVP     |
 | Writing feedback             | Rubric-based feedback with the learner's own API key (step 7); self-assessment otherwise                | MVP     |
-| Arabic pack                  | Including a right-to-left interface                                                                     | v2      |
 | Speaking practice            | Recording, on-device speech-to-text, rubric feedback                                                    | v2      |
 | Conversation practice        | Typed role-play of work-life scenarios with an AI partner (step 7); spoken role-play in v2              | MVP     |
 | Practice exam                | Timed, Norskprøven-style, across all four parts                                                         | v2      |

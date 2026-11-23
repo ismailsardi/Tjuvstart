@@ -12,7 +12,7 @@ describe('uiLanguageFor', () => {
   it('uses French for French speakers and English otherwise', () => {
     expect(uiLanguageFor('fr')).toBe('fr');
     expect(uiLanguageFor('en')).toBe('en');
-    expect(uiLanguageFor('ar')).toBe('en');
+    expect(uiLanguageFor('de')).toBe('en');
     expect(uiLanguageFor(undefined)).toBe('en');
   });
 });
