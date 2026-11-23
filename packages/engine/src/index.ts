@@ -4,3 +4,5 @@ export { pickNextItem } from './picker';
 export type { Item, PickOptions } from './picker';
 export { LEVELS, LEVEL_BASE, MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel } from './levels';
 export type { Level } from './levels';
+export { DAY_MS, isDue, newCardState, review } from './srs';
+export type { CardState, Grade } from './srs';
