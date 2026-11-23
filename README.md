@@ -6,12 +6,19 @@ An installable web app that helps adults moving to Norway learn Norwegian (bokm√
 
 _Tjuvstart_ is Norwegian for a false start: getting going before the starting signal.
 
-> Status: early development (Milestone 1). See the [product specification](docs/spec.md).
+> Status: early development. Try it at [ismailsardi.github.io/Tjuvstart](https://ismailsardi.github.io/Tjuvstart/), and see the [product specification](docs/spec.md).
+
+<p>
+  <img src="docs/screenshots/today.png" alt="Today screen with the word review and the next lesson" width="250">
+  <img src="docs/screenshots/word-card.png" alt="A flipped word card with its meaning and an example sentence" width="250">
+  <img src="docs/screenshots/decks.png" alt="Word decks by level with learning progress" width="250">
+</p>
 
 ## Highlights
 
 - **Adaptive by design:** an Elo-style rating per skill picks each next item at about an 80% expected success rate.
 - **Built around CEFR and Norskpr√∏ven:** every lesson and task maps to CEFR descriptors, and CI checks coverage.
+- **Swipeable word cards:** a card for every word in the lessons, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
 - **Native-language aware:** cognates, false friends and grammar contrasts for English, French and Arabic speakers.
 - **Zero running cost:** a local-first PWA on GitHub Pages; AI features are optional and use the learner's own key.
 
