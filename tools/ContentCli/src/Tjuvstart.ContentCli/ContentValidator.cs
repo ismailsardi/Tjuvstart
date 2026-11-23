@@ -110,6 +110,11 @@ public static class ContentValidator
             {
                 issues.Add(new ValidationIssue(pack.File, $"Summary for unknown track '{trackId}'."));
             }
+
+            foreach (var id in (pack.CanDoRefs ?? []).Where(id => content.Descriptors.All(d => d.Id != id)))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Can-do statement for unknown descriptor '{id}'."));
+            }
         }
 
         var trackIds = new HashSet<string>(StringComparer.Ordinal);

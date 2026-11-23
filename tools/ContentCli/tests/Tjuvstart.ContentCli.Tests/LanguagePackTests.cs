@@ -66,4 +66,14 @@ public sealed class LanguagePackTests : IDisposable
 
         Assert.Contains(Validate(), i => i.Message.StartsWith("Schema:"));
     }
+
+    [Fact]
+    public void Rejects_can_do_statements_for_unknown_descriptors()
+    {
+        WritePack("en", "en", """, "canDo": { "A2-W-01": "I can write a note.", "Z9-X-01": "?" }""");
+
+        var issues = Validate();
+        Assert.Contains(issues, i => i.Message == "Can-do statement for unknown descriptor 'Z9-X-01'.");
+        Assert.DoesNotContain(issues, i => i.Message.Contains("'A2-W-01'"));
+    }
 }

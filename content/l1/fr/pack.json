@@ -327,6 +327,26 @@
     "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues.",
     "real-texts": "De vrais types de documents, simplifiés à votre niveau : une lettre de NAV, une petite annonce, une offre d’emploi et un avis de la coopérative."
   },
+  "canDo": {
+    "A2-R-01": "Je peux lire des textes courts et simples sur la vie quotidienne et le travail.",
+    "A2-R-02": "Je peux trouver ce que je cherche dans un avis, un horaire, un menu ou une annonce.",
+    "A2-R-03": "Je peux comprendre des messages courts et des consignes simples au travail.",
+    "A2-L-01": "Je peux suivre des mots et expressions courants sur moi et mon travail quand on parle lentement.",
+    "A2-L-02": "Je peux saisir l’essentiel de messages et d’annonces courts.",
+    "A2-W-01": "Je peux écrire des notes et des messages courts sur ce dont j’ai besoin.",
+    "A2-W-02": "Je peux écrire des phrases simples sur moi et mon travail, reliées par og, men et fordi.",
+    "A2-S-01": "Je peux me présenter et répondre à des questions simples sur mon travail et mon parcours.",
+    "A2-S-02": "Je peux saluer, remercier, m’excuser et inviter dans de courtes conversations.",
+    "A2-S-03": "Je peux demander et donner un chemin ou une information pratique.",
+    "B1-R-01": "Je peux comprendre des textes factuels clairs sur des sujets que je connais.",
+    "B1-R-02": "Je peux comprendre ce que les gens racontent dans des lettres et des messages : événements, sentiments, souhaits.",
+    "B1-L-01": "Je peux suivre l’essentiel d’un discours clair au travail et dans la vie courante.",
+    "B1-L-02": "Je peux suivre l’essentiel des informations sur des sujets connus quand on parle clairement.",
+    "B1-W-01": "Je peux écrire un texte court et suivi sur un sujet familier.",
+    "B1-W-02": "Je peux écrire des e-mails et des messages sur ce que j’ai vécu.",
+    "B1-S-01": "Je peux me débrouiller dans la plupart des situations de la vie courante et du travail, comme un rendez-vous ou un service.",
+    "B1-S-02": "Je peux justifier mes opinions et mes projets."
+  },
   "words": {
     "jeg": {
       "meaning": "je"
