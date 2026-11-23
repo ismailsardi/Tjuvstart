@@ -8,6 +8,8 @@ const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
   base,
+  // Lessons live in /content at the repository root and are imported at build time.
+  server: { fs: { allow: ['../..'] } },
   plugins: [
     react(),
     VitePWA({

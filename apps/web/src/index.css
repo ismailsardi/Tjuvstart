@@ -69,3 +69,141 @@ button {
 button:disabled {
   opacity: 0.6;
 }
+
+a {
+  color: var(--accent);
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+.lessons {
+  list-style: none;
+  padding: 0;
+}
+
+.lessons a {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.badge {
+  justify-self: start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.reading-text {
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+progress {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.prompt {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.options,
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.option,
+.token {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.option {
+  flex: 1 1 100%;
+  text-align: left;
+}
+
+.option.chosen {
+  border-color: var(--accent);
+  border-width: 2px;
+  opacity: 1;
+}
+
+.token.picked {
+  border-color: var(--accent);
+}
+
+.sentence {
+  min-height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.answer-row {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.answer-row input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.feedback.good {
+  background: color-mix(in srgb, #2e7d32 15%, transparent);
+}
+
+.feedback.bad {
+  background: color-mix(in srgb, #c62828 15%, transparent);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
