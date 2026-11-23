@@ -9,6 +9,13 @@ describe('parseRoute', () => {
     });
   });
 
+  it('parses shadowing routes', () => {
+    expect(parseRoute('#/shadow/a2-first-day-at-work')).toEqual({
+      name: 'shadow',
+      lessonId: 'a2-first-day-at-work',
+    });
+  });
+
   it('parses tab and deck routes', () => {
     expect(parseRoute('#/words')).toEqual({ name: 'words' });
     expect(parseRoute('#/words/a2-work')).toEqual({ name: 'deck', deckId: 'a2-work' });

@@ -10,7 +10,13 @@ import {
 } from '@tjuvstart/engine';
 import { getItem } from '../content/lessons';
 import { SKILLS, type Item, type Skill } from '../content/types';
-import { db as defaultDb, GUEST_ID, type Profile, type TjuvstartDb } from './db';
+import {
+  db as defaultDb,
+  GUEST_ID,
+  type Profile,
+  type ShadowingAttempt,
+  type TjuvstartDb,
+} from './db';
 
 function perSkill(value: number): Record<Skill, number> {
   return Object.fromEntries(SKILLS.map((skill) => [skill, value])) as Record<Skill, number>;
@@ -181,4 +187,21 @@ export async function mistakeMemory(
       newestFirst.filter((a) => a.correct && now - a.at < DAY).map((a) => a.itemId),
     ),
   };
+}
+
+/** Saves the learner's verdict on one shadowed sentence. Recordings themselves are never stored. */
+export async function recordShadowing(
+  lessonId: string,
+  text: string,
+  verdict: ShadowingAttempt['verdict'],
+  now = Date.now(),
+  db: TjuvstartDb = defaultDb,
+): Promise<void> {
+  await db.shadowing.add({ lessonId, text, verdict, at: now });
+}
+
+/** How many different sentences the learner has said aloud and judged close to the model. */
+export async function shadowedSentences(db: TjuvstartDb = defaultDb): Promise<number> {
+  const attempts = await db.shadowing.toArray();
+  return new Set(attempts.filter((a) => a.verdict === 'close').map((a) => a.text)).size;
 }

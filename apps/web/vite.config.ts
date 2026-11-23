@@ -15,6 +15,29 @@ export default defineConfig({
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['icon.svg'],
+      workbox: {
+        // Audio is fetched the first time a sentence is played and then kept for offline use,
+        // so installing the app does not download every recording up front.
+        globIgnores: ['audio/**'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.includes('/audio/') && url.pathname.endsWith('.mp3'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'audio',
+              expiration: { maxEntries: 2000 },
+              rangeRequests: true,
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.endsWith('/audio/index.json'),
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'audio-index' },
+          },
+        ],
+      },
       manifest: {
         name: 'Tjuvstart',
         short_name: 'Tjuvstart',

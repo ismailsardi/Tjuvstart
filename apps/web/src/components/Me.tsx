@@ -1,6 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { LanguagePack } from '../content/packs';
-import { getProfile, mistakeMemory } from '../data/progress';
+import { getProfile, mistakeMemory, shadowedSentences } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { languagesHref, placementHref } from '../routing/useHashRoute';
 import { MistakeList } from './MistakeList';
@@ -10,6 +10,7 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
   const memory = useLiveQuery(() => mistakeMemory());
+  const shadowed = useLiveQuery(() => shadowedSentences()) ?? 0;
   const languageNames =
     packs.length > 0 ? packs.map((pack) => pack.nativeName).join(', ') : t('otherLanguage');
   return (
@@ -18,6 +19,9 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
       <section className="panel" aria-labelledby="me-level">
         <h2 id="me-level">{t('yourLevel')}</h2>
         <SkillLevels profile={profile} />
+        <p className="muted small" data-testid="shadowed">
+          {t('shadowedCount', { n: shadowed })}
+        </p>
         <a href={placementHref}>{t('redoPlacement')}</a>
       </section>
       <section className="panel" aria-labelledby="me-mistakes">

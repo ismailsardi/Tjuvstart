@@ -107,6 +107,30 @@ const en = {
   progress: 'Lesson progress',
   updateAvailable: 'A new version of Tjuvstart is available.',
   reload: 'Update',
+  listen: 'Listen',
+  listenSlow: 'Slower',
+  listenText: 'Listen to the text',
+  stopListening: 'Stop',
+  noVoice: 'No Norwegian voice is available on this device yet.',
+  shadowText: 'Shadow this text',
+  shadowTitle: 'Shadowing',
+  shadowIntro:
+    'Listen to a sentence, then say it out loud with the same rhythm and melody. Record yourself and compare.',
+  sentenceOf: 'Sentence {n} of {total}',
+  hideText: 'Hide the text',
+  record: 'Record',
+  stopRecording: 'Stop recording',
+  playMine: 'Play mine',
+  compare: 'Compare',
+  soundedClose: 'Sounded close',
+  tryAgain: 'Try again',
+  nextSentence: 'Next sentence',
+  micUnavailable: 'Recording is not available in this browser. Listen, then repeat out loud.',
+  micDenied: 'The microphone is blocked. You can still listen and repeat out loud.',
+  recordingPrivacy: 'Recordings stay on this device and are gone when you leave the page.',
+  shadowDoneBody: 'You said {n} of {total} sentences out loud.',
+  backToLesson: 'Back to the lesson',
+  shadowedCount: 'Sentences said out loud: {n}',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -221,6 +245,32 @@ const fr: Record<StringKey, string> = {
   progress: 'Progression de la leçon',
   updateAvailable: 'Une nouvelle version de Tjuvstart est disponible.',
   reload: 'Mettre à jour',
+  listen: 'Écouter',
+  listenSlow: 'Plus lent',
+  listenText: 'Écouter le texte',
+  stopListening: 'Arrêter',
+  noVoice: 'Aucune voix norvégienne n’est encore disponible sur cet appareil.',
+  shadowText: 'Répéter ce texte à voix haute',
+  shadowTitle: 'Shadowing',
+  shadowIntro:
+    'Écoutez une phrase, puis répétez-la à voix haute avec le même rythme et la même mélodie. Enregistrez-vous et comparez.',
+  sentenceOf: 'Phrase {n} sur {total}',
+  hideText: 'Masquer le texte',
+  record: 'Enregistrer',
+  stopRecording: 'Arrêter l’enregistrement',
+  playMine: 'Écouter ma version',
+  compare: 'Comparer',
+  soundedClose: 'Ça ressemblait',
+  tryAgain: 'Réessayer',
+  nextSentence: 'Phrase suivante',
+  micUnavailable:
+    'L’enregistrement n’est pas disponible dans ce navigateur. Écoutez, puis répétez à voix haute.',
+  micDenied: 'Le micro est bloqué. Vous pouvez quand même écouter et répéter à voix haute.',
+  recordingPrivacy:
+    'Les enregistrements restent sur cet appareil et disparaissent quand vous quittez la page.',
+  shadowDoneBody: 'Vous avez dit {n} phrases sur {total} à voix haute.',
+  backToLesson: 'Retour à la leçon',
+  shadowedCount: 'Phrases dites à voix haute : {n}',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr };
