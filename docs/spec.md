@@ -88,11 +88,17 @@ For context, Norwegian citizenship requires a pass at B1 or higher in the oral t
 ### 7.3 How the level is estimated
 
 1. **Tagging.** Every item carries a CEFR level, a skill, descriptor IDs and a difficulty rating.
-2. **Placement.** A short placement check per skill sets a starting estimate.
+2. **Placement.** A five-minute check asks six questions per skill. Each question is picked near the current estimate (50% expected success, so every answer says as much as possible) and moves the rating with a larger step than normal practice. The result is saved as the starting estimate.
 3. **Continuous estimate.** Each answer updates a per-skill Elo-style rating: a correct answer on a hard item raises the rating more than one on an easy item (see [ADR 0003](adr/0003-elo-rating-before-irt.md)).
 4. **Item selection.** The next item is chosen so the expected success rate is about 80%.
 5. **Open answers.** With AI enabled, writing and speaking are scored against a CEFR-based rubric and the score feeds into the same rating. Without AI, learners self-assess against a model answer and a checklist, and the level for that skill is marked as self-assessed.
 6. **Recalibration.** A periodic short practice exam checks the estimate against exam-style tasks.
+
+### 7.4 Error memory and practice sessions
+
+Exercises are tagged with the grammar points they test (V2 word order, noun gender, the place of _ikke_, and so on). Every wrong answer adds 2 to that point's score and every right answer takes 1 away, never below 0. A point with a score of 2 or more counts as a recurring mistake: it shows on the Today and Me pages, and it keeps coming back until enough right answers bring the score down again.
+
+A practice session has eight exercises. Up to half target recurring mistakes, starting with the exercises the learner got wrong last time. The rest comes from the weakest skill, at the usual 80% target. Exercises answered correctly in the last 24 hours are left out.
 
 ## 8. Curriculum scope
 
@@ -221,6 +227,20 @@ The app must not incur running costs ([ADR 0002](adr/0002-local-first-zero-cost.
 | M4 Native-language packs | English and French packs, onboarding                                                                                           |
 | M5 Writing feedback      | Rubric scoring with the learner's key, evaluation set and results                                                              |
 | M6 Release               | Coverage view, README with demo, public release                                                                                |
+
+### 15.1 Roadmap
+
+After the first milestones, features are built in this order, one pull request each:
+
+| Step | Feature                     | Scope                                                                                                                                        |
+| ---- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Adaptive engine             | Five-minute placement check, practice sessions built from weak skills, and an error memory that recycles repeated mistakes (V2, en/ei/et, …) |
+| 2    | Shadowing and audio         | Build-time TTS audio for texts and cards (Piper), then hear, record and compare in the browser; fills the listening gap                      |
+| 3    | First weeks in Norway       | Scenario track: BankID, tax card, renting, the doctor, the first workday, small talk at lunch                                                |
+| 4    | Listening and dictation     | Listening at increasing speed, and dictation exercises                                                                                       |
+| 5    | Real-world texts            | Authentic-style texts simplified to level (a NAV letter, a Finn.no ad), and a "my job" vocabulary mode                                       |
+| 6    | Daily habit                 | Ten-minute daily sessions, "can do" progress statements and a forgiving streak                                                               |
+| 7    | Optional AI (learner's key) | Role-play conversations, Norskprøven-style essay feedback and generated practice texts                                                       |
 
 ## 16. Risks and open questions
 
