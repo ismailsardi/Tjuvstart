@@ -86,7 +86,7 @@ describe('LessonPlayer with language packs', () => {
       screen.getByRole('heading', { name: 'Mots que vous connaissez probablement' }),
     ).toBeTruthy();
     expect(screen.getAllByText(/Astuce/, { selector: 'summary' }).length).toBe(3);
-    expect(screen.getByText('Question 1 sur 15')).toBeTruthy();
+    expect(screen.getByText(`Question 1 sur ${real.items.length}`)).toBeTruthy();
 
     await user.click(screen.getByRole('button', { name: 'Utvikler' }));
     expect(await screen.findByText('Correct !')).toBeTruthy();

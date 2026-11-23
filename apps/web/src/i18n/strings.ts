@@ -33,11 +33,11 @@ const en = {
   looksLike: 'looks like «{word}», but means',
   placementTitle: 'Find your level',
   placementCard:
-    'A five-minute check of your reading and writing, so lessons start at the right level.',
+    'A five-minute check of your reading, listening and writing, so lessons start at the right level.',
   placementIntro:
     'You will get {n} short questions. They adapt as you go: right answers make the next one harder. Do not worry about mistakes, they help the estimate.',
   placementDone: 'Your starting level',
-  placementNote: 'Listening and speaking are estimated once audio exercises arrive.',
+  placementNote: 'Speaking is estimated once speaking exercises arrive.',
   redoPlacement: 'Redo the level check',
   practiceTitle: 'Practise your weak spots',
   practiceCard: 'A short mixed session from your weakest skill and the mistakes you keep making.',
@@ -135,6 +135,12 @@ const en = {
   trackStep: 'Step {n}',
   moreLessons: 'More lessons',
   trackDone: 'You have done every scenario. Nice work!',
+  playAudio: 'Play',
+  listeningSpeed: 'Speed {percent}%',
+  whatYouHear: 'What you hear',
+  dictationFeedback: 'Words you missed are marked:',
+  listeningTitle: 'Listening practice',
+  listeningCard: 'Short messages and dictation. The audio gets faster as you get answers right.',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -172,12 +178,11 @@ const fr: Record<StringKey, string> = {
   looksLike: 'ressemble à « {word} », mais veut dire',
   placementTitle: 'Trouver votre niveau',
   placementCard:
-    'Un test de cinq minutes en lecture et en écriture, pour que les leçons commencent au bon niveau.',
+    'Un test de cinq minutes en lecture, compréhension orale et écriture, pour que les leçons commencent au bon niveau.',
   placementIntro:
     'Vous aurez {n} questions courtes. Elles s’adaptent : une bonne réponse rend la suivante plus difficile. Les erreurs ne sont pas graves, elles aident l’estimation.',
   placementDone: 'Votre niveau de départ',
-  placementNote:
-    'La compréhension orale et l’expression orale seront évaluées quand les exercices audio arriveront.',
+  placementNote: 'L’expression orale sera évaluée quand les exercices oraux arriveront.',
   redoPlacement: 'Refaire le test de niveau',
   practiceTitle: 'Travailler vos points faibles',
   practiceCard:
@@ -279,6 +284,12 @@ const fr: Record<StringKey, string> = {
   trackStep: 'Étape {n}',
   moreLessons: 'Autres leçons',
   trackDone: 'Vous avez fait toutes les situations. Bravo !',
+  playAudio: 'Écouter',
+  listeningSpeed: 'Vitesse {percent} %',
+  whatYouHear: 'Ce que vous entendez',
+  dictationFeedback: 'Les mots manqués sont marqués :',
+  listeningTitle: 'Compréhension orale',
+  listeningCard: 'Des messages courts et des dictées. L’audio accélère quand vous répondez juste.',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr };

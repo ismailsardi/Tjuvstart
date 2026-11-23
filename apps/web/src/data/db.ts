@@ -1,5 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
-import type { CardState, Grade } from '@tjuvstart/engine';
+import type { CardState, Grade, ListeningSpeed } from '@tjuvstart/engine';
 import type { Skill } from '../content/types';
 
 export interface Profile {
@@ -14,6 +14,8 @@ export interface Profile {
   knownLanguages?: string[];
   /** When the placement check was last completed. */
   placedAt?: number;
+  /** Playback speed for listening exercises; it rises as the learner follows faster speech. */
+  listening?: ListeningSpeed;
   createdAt: number;
 }
 

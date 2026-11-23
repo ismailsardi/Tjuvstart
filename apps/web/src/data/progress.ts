@@ -1,10 +1,12 @@
 import {
+  DEFAULT_LISTENING_SPEED,
   DEFAULT_RATING,
   MIN_ANSWERS_FOR_ESTIMATE,
   mistakeScores,
   newCardState,
   recurringMistakes,
   review,
+  updateListeningSpeed,
   updateRating,
   type Grade,
 } from '@tjuvstart/engine';
@@ -45,6 +47,12 @@ export async function recordAnswer(
       ratings: { ...profile.ratings, [item.skill]: ratingAfter },
       answers: { ...profile.answers, [item.skill]: profile.answers[item.skill] + 1 },
     };
+    if (item.skill === 'listening') {
+      updated.listening = updateListeningSpeed(
+        profile.listening ?? DEFAULT_LISTENING_SPEED,
+        correct,
+      );
+    }
     await db.profiles.put(updated);
     await db.attempts.add({
       lessonId,
