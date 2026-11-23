@@ -212,5 +212,412 @@
     "a2-renting-a-flat": "Lisez une annonce de location, trouvez le loyer, la date et l'heure de visite, puis écrivez un court message au propriétaire.",
     "a2-getting-around": "Lisez un avis sur des travaux de tram, trouvez ce qu'il faut prendre à la place, et parlez de votre trajet.",
     "a2-calling-in-sick": "Lisez un message d'arrêt maladie et la réponse du chef, puis écrivez votre propre message quand vous ne pouvez pas venir."
+  },
+  "words": {
+    "jeg": {
+      "meaning": "je"
+    },
+    "meg": {
+      "meaning": "me, moi",
+      "hook": "jeg → meg, comme je → moi."
+    },
+    "du": {
+      "meaning": "tu, vous (une personne)",
+      "hook": "On dit « du » à presque tout le monde, même au chef. Le vouvoiement n'existe presque plus."
+    },
+    "han": {
+      "meaning": "il"
+    },
+    "vi": {
+      "meaning": "nous"
+    },
+    "det": {
+      "meaning": "il, ce, cela",
+      "hook": "« Det er » veut dire « c'est » et aussi « il y a »."
+    },
+    "min": {
+      "meaning": "mon, ma, mes",
+      "hook": "Le possessif se met en général après le nom : « sjefen min » (le chef mon)."
+    },
+    "din": {
+      "meaning": "ton, ta, tes"
+    },
+    "en": {
+      "meaning": "un, une"
+    },
+    "et": {
+      "meaning": "un, une (noms neutres)",
+      "hook": "Apprenez chaque nom avec son article : et møte, en jobb."
+    },
+    "ett": {
+      "meaning": "un, une (avec les noms neutres)"
+    },
+    "vaere": {
+      "meaning": "être",
+      "hook": "« Er » ne change jamais : jeg er, du er, vi er."
+    },
+    "ha": {
+      "meaning": "avoir"
+    },
+    "kunne": {
+      "meaning": "pouvoir, savoir"
+    },
+    "skulle": {
+      "meaning": "aller (futur proche), devoir",
+      "hook": "« Jeg skal » sert à parler de ses projets, comme « je vais »."
+    },
+    "a": {
+      "meaning": "(marque de l'infinitif)",
+      "hook": "« Å » se met devant l'infinitif, comme « to » en anglais."
+    },
+    "og": {
+      "meaning": "et"
+    },
+    "i": {
+      "meaning": "dans, à, en"
+    },
+    "pa": {
+      "meaning": "sur, à, en",
+      "hook": "Les quartiers prennent « på » : på Tøyen, på Storo."
+    },
+    "til": {
+      "meaning": "à, vers, jusqu'à"
+    },
+    "fra": {
+      "meaning": "de, depuis, à partir de"
+    },
+    "med": {
+      "meaning": "avec"
+    },
+    "for": {
+      "meaning": "pour ; trop (devant un adjectif)"
+    },
+    "om": {
+      "meaning": "sur, au sujet de ; dans (temps)"
+    },
+    "hos": {
+      "meaning": "chez",
+      "hook": "« Hos » = « chez » : hos legen, chez le médecin."
+    },
+    "etter": {
+      "meaning": "après"
+    },
+    "mellom": {
+      "meaning": "entre"
+    },
+    "som": {
+      "meaning": "comme ; qui, que"
+    },
+    "sa": {
+      "meaning": "donc, alors"
+    },
+    "hvis": {
+      "meaning": "si"
+    },
+    "fordi": {
+      "meaning": "parce que",
+      "hook": "Après « fordi », « ikke » se place devant le verbe."
+    },
+    "enn": {
+      "meaning": "que (comparaison)"
+    },
+    "ogsa": {
+      "meaning": "aussi"
+    },
+    "ikke": {
+      "meaning": "ne… pas"
+    },
+    "ingen": {
+      "meaning": "aucun, personne, pas de"
+    },
+    "her": {
+      "meaning": "ici"
+    },
+    "hver": {
+      "meaning": "chaque",
+      "hook": "« Hvert tiende minutt » = toutes les dix minutes."
+    },
+    "mer": {
+      "meaning": "plus"
+    },
+    "hei": {
+      "meaning": "salut, bonjour"
+    },
+    "takk": {
+      "meaning": "merci",
+      "hook": "On dit souvent « takk » : takk for maten (merci pour le repas), takk for i dag."
+    },
+    "god": {
+      "meaning": "bon"
+    },
+    "ny": {
+      "meaning": "nouveau, neuf"
+    },
+    "forste": {
+      "meaning": "premier"
+    },
+    "viktig": {
+      "meaning": "important"
+    },
+    "dag": {
+      "meaning": "jour",
+      "hook": "« I dag » = aujourd'hui."
+    },
+    "morgen": {
+      "meaning": "matin",
+      "hook": "« I morgen » = demain ; « om morgenen » = le matin."
+    },
+    "maned": {
+      "meaning": "mois"
+    },
+    "klokke": {
+      "meaning": "horloge, montre ; heure",
+      "hook": "« Klokka ti » = à dix heures."
+    },
+    "halv": {
+      "meaning": "demi",
+      "hook": "« Halv tolv » = 11 h 30 : à mi-chemin vers midi."
+    },
+    "tre": {
+      "meaning": "trois"
+    },
+    "seks": {
+      "meaning": "six"
+    },
+    "ti": {
+      "meaning": "dix"
+    },
+    "tolv": {
+      "meaning": "douze"
+    },
+    "tredje": {
+      "meaning": "troisième"
+    },
+    "tiende": {
+      "meaning": "dixième"
+    },
+    "minutt": {
+      "meaning": "minute"
+    },
+    "mandag": {
+      "meaning": "lundi",
+      "hook": "Les jours s'écrivent en minuscule, comme en français."
+    },
+    "fredag": {
+      "meaning": "vendredi"
+    },
+    "sondag": {
+      "meaning": "dimanche"
+    },
+    "februar": {
+      "meaning": "février"
+    },
+    "mars": {
+      "meaning": "mars"
+    },
+    "krone": {
+      "meaning": "couronne (monnaie norvégienne)"
+    },
+    "sporsmal": {
+      "meaning": "question"
+    },
+    "sms": {
+      "meaning": "SMS, texto"
+    },
+    "hete": {
+      "meaning": "s'appeler",
+      "hook": "« Jeg heter… » = je m'appelle…"
+    },
+    "spise": {
+      "meaning": "manger"
+    },
+    "vise": {
+      "meaning": "montrer"
+    },
+    "komme": {
+      "meaning": "venir"
+    },
+    "ga": {
+      "meaning": "aller, marcher ; circuler",
+      "hook": "Les bus et les trams « går » : ils circulent."
+    },
+    "ta": {
+      "meaning": "prendre"
+    },
+    "sporre": {
+      "meaning": "demander"
+    },
+    "skrive": {
+      "meaning": "écrire"
+    },
+    "svare": {
+      "meaning": "répondre"
+    },
+    "sende": {
+      "meaning": "envoyer"
+    },
+    "huske": {
+      "meaning": "se souvenir, ne pas oublier",
+      "hook": "« Husk ! » = n'oubliez pas !"
+    },
+    "sted": {
+      "meaning": "lieu ; « i stedet » = à la place",
+      "hook": "« I stedet » = à la place."
+    },
+    "jobb": {
+      "meaning": "travail, boulot"
+    },
+    "jobbe": {
+      "meaning": "travailler"
+    },
+    "arbeide": {
+      "meaning": "travailler (plus soutenu que « jobbe »)"
+    },
+    "kollega": {
+      "meaning": "collègue"
+    },
+    "kontor": {
+      "meaning": "bureau"
+    },
+    "kunde": {
+      "meaning": "client"
+    },
+    "lunsj": {
+      "meaning": "déjeuner",
+      "hook": "Les Norvégiens déjeunent tôt, souvent vers 11 h 30, et vite."
+    },
+    "mote": {
+      "meaning": "réunion"
+    },
+    "prosjekt": {
+      "meaning": "projet"
+    },
+    "presentere": {
+      "meaning": "présenter"
+    },
+    "sjef": {
+      "meaning": "chef, patron"
+    },
+    "utvikler": {
+      "meaning": "développeur, développeuse"
+    },
+    "beskjed": {
+      "meaning": "message, information",
+      "hook": "« Takk for beskjed » = merci de m'avoir prévenu."
+    },
+    "hilsen": {
+      "meaning": "salutation ; « Hilsen » = cordialement"
+    },
+    "midnatt": {
+      "meaning": "minuit"
+    },
+    "leie": {
+      "meaning": "louer ; « til leie » = à louer"
+    },
+    "leilighet": {
+      "meaning": "appartement"
+    },
+    "toromsleilighet": {
+      "meaning": "deux-pièces (T2)",
+      "hook": "to (deux) + rom (pièce) + leilighet : un deux-pièces."
+    },
+    "stue": {
+      "meaning": "salon, séjour"
+    },
+    "kjokken": {
+      "meaning": "cuisine"
+    },
+    "soverom": {
+      "meaning": "chambre",
+      "hook": "sove (dormir) + rom (pièce)."
+    },
+    "bad": {
+      "meaning": "salle de bain"
+    },
+    "etasje": {
+      "meaning": "étage"
+    },
+    "kvadratmeter": {
+      "meaning": "mètre carré"
+    },
+    "husleie": {
+      "meaning": "loyer",
+      "hook": "hus (maison) + leie (location)."
+    },
+    "depositum": {
+      "meaning": "dépôt de garantie, caution"
+    },
+    "strom": {
+      "meaning": "électricité ; courant",
+      "hook": "« Strøm » est aussi un courant : l'électricité qui coule."
+    },
+    "inkludert": {
+      "meaning": "inclus, compris"
+    },
+    "ledig": {
+      "meaning": "libre, disponible"
+    },
+    "husdyr": {
+      "meaning": "animal de compagnie",
+      "hook": "hus (maison) + dyr (animal)."
+    },
+    "visning": {
+      "meaning": "visite (d'un logement)",
+      "hook": "Vient de « vise », montrer."
+    },
+    "lys": {
+      "meaning": "clair, lumineux"
+    },
+    "buss": {
+      "meaning": "bus"
+    },
+    "trikk": {
+      "meaning": "tram, tramway"
+    },
+    "spor": {
+      "meaning": "voie, rails"
+    },
+    "sjafor": {
+      "meaning": "chauffeur"
+    },
+    "billett": {
+      "meaning": "billet"
+    },
+    "gjelde": {
+      "meaning": "être valable ; concerner"
+    },
+    "informasjon": {
+      "meaning": "information"
+    },
+    "syk": {
+      "meaning": "malade"
+    },
+    "feber": {
+      "meaning": "fièvre"
+    },
+    "hals": {
+      "meaning": "gorge, cou"
+    },
+    "vondt": {
+      "meaning": "mal ; « ha vondt i » = avoir mal à",
+      "hook": "« Jeg har vondt i… » + partie du corps, comme « j'ai mal à… »."
+    },
+    "lege": {
+      "meaning": "médecin"
+    },
+    "time": {
+      "meaning": "rendez-vous ; heure"
+    },
+    "bestille": {
+      "meaning": "réserver, commander"
+    },
+    "bedring": {
+      "meaning": "guérison, amélioration",
+      "hook": "« God bedring ! » = bon rétablissement !"
+    },
+    "sykmelding": {
+      "meaning": "arrêt maladie (du médecin)",
+      "hook": "syk (malade) + melding (message)."
+    }
   }
 }

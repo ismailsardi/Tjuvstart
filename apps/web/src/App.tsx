@@ -4,6 +4,8 @@ import { learnerPacks } from './content/packs';
 import { Home } from './components/Home';
 import { LessonPlayer } from './components/LessonPlayer';
 import { Onboarding } from './components/Onboarding';
+import { Review } from './components/Review';
+import { Words } from './components/Words';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
 import { I18nProvider } from './i18n/I18nProvider';
@@ -52,6 +54,8 @@ function Page({
   packs: ReturnType<typeof learnerPacks>;
 }) {
   const { t } = useI18n();
+  if (route.name === 'words') return <Words packs={packs} />;
+  if (route.name === 'review') return <Review packs={packs} />;
   if (route.name !== 'lesson') return <Home packs={packs} />;
 
   const lesson = getLesson(route.lessonId);

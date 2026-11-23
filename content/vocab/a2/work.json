@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "work",
+  "title": "Jobben",
+  "cards": [
+    {
+      "id": "jobb",
+      "nb": "jobb",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["jobb", "jobben", "jobber", "jobbene"],
+      "example": "Jeg har en ny jobb."
+    },
+    {
+      "id": "jobbe",
+      "nb": "jobbe",
+      "pos": "verb",
+      "forms": ["jobbe", "jobber", "jobbet"],
+      "example": "Jeg skal jobbe som utvikler."
+    },
+    {
+      "id": "arbeide",
+      "nb": "arbeide",
+      "pos": "verb",
+      "forms": ["arbeide", "arbeider", "arbeidet"],
+      "example": "Vi arbeider på sporet."
+    },
+    {
+      "id": "kollega",
+      "nb": "kollega",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"],
+      "example": "Kollegene mine er hyggelige."
+    },
+    {
+      "id": "kontor",
+      "nb": "kontor",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kontor", "kontoret", "kontorer"],
+      "example": "Han viser meg kontoret."
+    },
+    {
+      "id": "kunde",
+      "nb": "kunde",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kunde", "kunden", "kunder"],
+      "example": "Nina tar møtet med kunden."
+    },
+    {
+      "id": "lunsj",
+      "nb": "lunsj",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lunsj", "lunsjen"],
+      "example": "Vi spiser lunsj klokka halv tolv."
+    },
+    {
+      "id": "mote",
+      "nb": "møte",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["møte", "møtet", "møter"],
+      "example": "Etter lunsj har vi et møte."
+    },
+    {
+      "id": "prosjekt",
+      "nb": "prosjekt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["prosjekt", "prosjektet", "prosjekter"],
+      "example": "Vi starter et nytt prosjekt."
+    },
+    {
+      "id": "presentere",
+      "nb": "presentere",
+      "pos": "verb",
+      "forms": ["presentere", "presenterer", "presenterte"],
+      "example": "Han presenterer meg for kollegene."
+    },
+    {
+      "id": "sjef",
+      "nb": "sjef",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sjef", "sjefen", "sjefer"],
+      "example": "Sjefen min heter Lars."
+    },
+    {
+      "id": "utvikler",
+      "nb": "utvikler",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["utvikler", "utvikleren", "utviklere"],
+      "example": "Sara jobber som utvikler."
+    },
+    {
+      "id": "beskjed",
+      "nb": "beskjed",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["beskjed", "beskjeden"],
+      "example": "Takk for beskjed!"
+    },
+    {
+      "id": "hilsen",
+      "nb": "hilsen",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hilsen", "hilsener"],
+      "example": "Hilsen Ahmed"
+    },
+    {
+      "id": "midnatt",
+      "nb": "midnatt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["midnatt"],
+      "example": "Bussen går til midnatt."
+    }
+  ]
+}

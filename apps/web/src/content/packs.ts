@@ -24,6 +24,8 @@ export interface LanguagePack {
   contrasts: Contrast[];
   itemNotes?: Record<string, string>;
   lessonSummaries?: Record<string, string>;
+  /** Word card meanings and memory hooks, keyed by card id. */
+  words?: Record<string, { meaning: string; hook?: string }>;
 }
 
 const modules = import.meta.glob<LanguagePack>('../../../../content/l1/*/pack.json', {

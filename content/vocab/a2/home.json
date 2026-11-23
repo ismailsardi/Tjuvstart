@@ -1,0 +1,140 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "home",
+  "title": "Å bo",
+  "cards": [
+    {
+      "id": "leie",
+      "nb": "leie",
+      "pos": "verb",
+      "forms": ["leie", "leier", "leide"],
+      "example": "Til leie: lys leilighet."
+    },
+    {
+      "id": "leilighet",
+      "nb": "leilighet",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["leilighet", "leiligheten", "leiligheter"],
+      "example": "Leiligheten har ett soverom."
+    },
+    {
+      "id": "toromsleilighet",
+      "nb": "toromsleilighet",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["toromsleilighet"],
+      "example": "Vi leier en toromsleilighet."
+    },
+    {
+      "id": "stue",
+      "nb": "stue",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["stue", "stua", "stuen"],
+      "example": "Stua er stor og lys."
+    },
+    {
+      "id": "kjokken",
+      "nb": "kjøkken",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kjøkken", "kjøkkenet"],
+      "example": "Stue med kjøkken."
+    },
+    {
+      "id": "soverom",
+      "nb": "soverom",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["soverom", "soverommet"],
+      "example": "Leiligheten har ett soverom."
+    },
+    {
+      "id": "bad",
+      "nb": "bad",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bad", "badet"],
+      "example": "Badet er nytt."
+    },
+    {
+      "id": "etasje",
+      "nb": "etasje",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["etasje", "etasjen", "etasjer"],
+      "example": "Jeg bor i tredje etasje."
+    },
+    {
+      "id": "kvadratmeter",
+      "nb": "kvadratmeter",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kvadratmeter"],
+      "example": "Leiligheten er på 45 kvadratmeter."
+    },
+    {
+      "id": "husleie",
+      "nb": "husleie",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["husleie", "husleia", "husleien"],
+      "example": "Husleien er 14 500 kroner."
+    },
+    {
+      "id": "depositum",
+      "nb": "depositum",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["depositum", "depositumet"],
+      "example": "Depositum: tre måneders husleie."
+    },
+    {
+      "id": "strom",
+      "nb": "strøm",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["strøm", "strømmen"],
+      "example": "Strøm er ikke inkludert."
+    },
+    {
+      "id": "inkludert",
+      "nb": "inkludert",
+      "pos": "adjective",
+      "forms": ["inkludert"],
+      "example": "Er strøm inkludert?"
+    },
+    {
+      "id": "ledig",
+      "nb": "ledig",
+      "pos": "adjective",
+      "forms": ["ledig", "ledige"],
+      "example": "Leiligheten er ledig fra februar."
+    },
+    {
+      "id": "husdyr",
+      "nb": "husdyr",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["husdyr"],
+      "example": "Ingen husdyr."
+    },
+    {
+      "id": "visning",
+      "nb": "visning",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["visning", "visningen"],
+      "example": "Visning søndag klokka 14."
+    },
+    {
+      "id": "lys",
+      "nb": "lys",
+      "pos": "adjective",
+      "forms": ["lys", "lyst", "lyse"],
+      "example": "En lys leilighet."
+    }
+  ]
+}

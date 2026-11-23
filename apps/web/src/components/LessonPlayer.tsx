@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { correctAnswer, isCorrect, type Response } from '../content/answers';
 import {
   annotate,
@@ -8,9 +8,10 @@ import {
   type Segment,
 } from '../content/packs';
 import type { Lesson } from '../content/types';
-import { recordAnswer } from '../data/progress';
+import { cardLevel, cardsInText } from '../content/vocab';
+import { completeLesson, recordAnswer } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { homeHref } from '../routing/useHashRoute';
+import { homeHref, wordsHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
 
 type Feedback = { correct: boolean; answer: string } | null;
@@ -34,6 +35,17 @@ export function LessonPlayer({ lesson, packs = [] }: Props) {
   const contrasts = useMemo(() => contrastsFor(lesson.id, packs), [lesson.id, packs]);
 
   const item = lesson.items[index];
+  const finished = !item;
+  const [newCards, setNewCards] = useState(0);
+  const saved = useRef(false);
+
+  useEffect(() => {
+    if (!finished || saved.current) return;
+    saved.current = true;
+    // Words from the lesson text at the lesson's level go to the learner's word cards.
+    const cards = cardsInText(lesson.text ?? '').filter((id) => cardLevel(id) === lesson.level);
+    void completeLesson(lesson.id, score, lesson.items.length, cards).then(setNewCards);
+  }, [finished, lesson, score]);
 
   if (!item) {
     return (
@@ -42,6 +54,12 @@ export function LessonPlayer({ lesson, packs = [] }: Props) {
           Ferdig!
         </h1>
         <p>{t('doneBody', { score, total: lesson.items.length })}</p>
+        {newCards > 0 && (
+          <p>
+            {newCards === 1 ? t('newCard') : t('newCards', { n: newCards })}{' '}
+            <a href={wordsHref}>{t('wordCards')}</a>
+          </p>
+        )}
         <a className="button" href={homeHref}>
           {t('backHome')}
         </a>

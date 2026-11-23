@@ -15,6 +15,8 @@ public static class ContentLoader
     public const string SchemaFolder = "schema";
     public const string PacksFolder = "l1";
     public const string PackFileName = "pack.json";
+    public const string VocabFolder = "vocab";
+    public const string IgnoreFileName = "ignore.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
 
@@ -30,6 +32,7 @@ public static class ContentLoader
         var descriptorSchema = LoadSchema(contentRoot, "descriptors.schema.json", issues);
         var lessonSchema = LoadSchema(contentRoot, "lesson.schema.json", issues);
         var packSchema = LoadSchema(contentRoot, "l1-pack.schema.json", issues);
+        var deckSchema = LoadSchema(contentRoot, "vocab-deck.schema.json", issues);
 
         var descriptors = new List<Descriptor>();
         var descriptorsPath = Path.Combine(contentRoot, DescriptorsFile);
@@ -68,7 +71,7 @@ public static class ContentLoader
                     var items = raw.Items
                         .Select(i => new LessonItem(i.Id, i.Skill, i.Level, i.Descriptors))
                         .ToList();
-                    lessons.Add(new Lesson(raw.Id, raw.Level, raw.Title, relative, items));
+                    lessons.Add(new Lesson(raw.Id, raw.Level, raw.Title, relative, items, raw.Text));
                     CheckItemAnswers(relative, lessonDoc.RootElement, issues);
                 }
             }
@@ -105,12 +108,67 @@ public static class ContentLoader
                         Relative(contentRoot, path),
                         forms,
                         raw.ItemNotes?.Keys.ToList() ?? [],
-                        lessonRefs));
+                        lessonRefs,
+                        raw.Words?.Keys.ToList() ?? []));
                 }
             }
         }
 
-        return new ContentSet(descriptors, lessons, packs, issues);
+        var (cards, ignored) = LoadVocabulary(contentRoot, deckSchema, issues);
+
+        return new ContentSet(descriptors, lessons, packs, issues) { Cards = cards, IgnoredWords = ignored };
+    }
+
+    /// <summary>Loads decks from <c>vocab/&lt;level&gt;/*.json</c> and the optional ignore list.</summary>
+    private static (List<Card> Cards, HashSet<string> Ignored) LoadVocabulary(
+        string contentRoot, JsonSchema? deckSchema, List<ValidationIssue> issues)
+    {
+        var cards = new List<Card>();
+        var ignored = new HashSet<string>(StringComparer.Ordinal);
+        var vocabRoot = Path.Combine(contentRoot, VocabFolder);
+        if (!Directory.Exists(vocabRoot))
+        {
+            return (cards, ignored);
+        }
+
+        var deckFiles = Directory.EnumerateDirectories(vocabRoot)
+            .SelectMany(folder => Directory.EnumerateFiles(folder, "*.json"))
+            .Order(StringComparer.Ordinal);
+        foreach (var path in deckFiles)
+        {
+            if (ReadChecked(contentRoot, path, deckSchema, issues) is not { } deckDoc)
+            {
+                continue;
+            }
+
+            using (deckDoc)
+            {
+                var deck = deckDoc.RootElement.Deserialize<DeckFile>(JsonOptions)!;
+                var relative = Relative(contentRoot, path);
+                var folder = Path.GetFileName(Path.GetDirectoryName(path))!;
+                if (!string.Equals(folder, deck.Level, StringComparison.OrdinalIgnoreCase))
+                {
+                    issues.Add(new ValidationIssue(relative, $"Deck level {deck.Level} does not match folder '{folder}'."));
+                }
+                cards.AddRange(deck.Cards.Select(c => new Card(c.Id, deck.Level, c.Nb, c.Forms, relative)));
+            }
+        }
+
+        var ignorePath = Path.Combine(vocabRoot, IgnoreFileName);
+        if (File.Exists(ignorePath))
+        {
+            try
+            {
+                var file = JsonSerializer.Deserialize<IgnoreFile>(File.ReadAllText(ignorePath), JsonOptions);
+                ignored.UnionWith(file?.Words ?? []);
+            }
+            catch (JsonException ex)
+            {
+                issues.Add(new ValidationIssue(Relative(contentRoot, ignorePath), $"Invalid JSON: {ex.Message}"));
+            }
+        }
+
+        return (cards, ignored);
     }
 
     private static JsonSchema? LoadSchema(string contentRoot, string fileName, List<ValidationIssue> issues)
@@ -209,7 +267,7 @@ public static class ContentLoader
 
     private sealed record ItemFile(string Id, string Skill, string Level, List<string> Descriptors);
 
-    private sealed record LessonFile(string Id, string Level, string Title, List<ItemFile> Items);
+    private sealed record LessonFile(string Id, string Level, string Title, List<ItemFile> Items, string? Text);
 
     private sealed record WordFile(List<string> Forms);
 
@@ -221,5 +279,12 @@ public static class ContentLoader
         List<WordFile> FalseFriends,
         List<ContrastFile> Contrasts,
         Dictionary<string, string>? ItemNotes,
-        Dictionary<string, string>? LessonSummaries);
+        Dictionary<string, string>? LessonSummaries,
+        Dictionary<string, JsonElement>? Words);
+
+    private sealed record CardFile(string Id, string Nb, List<string> Forms);
+
+    private sealed record DeckFile(string Level, List<CardFile> Cards);
+
+    private sealed record IgnoreFile(List<string> Words);
 }

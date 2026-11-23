@@ -1,7 +1,8 @@
 import 'fake-indexeddb/auto';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import { db } from '../data/db';
 import { getLesson } from '../content/lessons';
 import { learnerPacks } from '../content/packs';
 import type { Lesson } from '../content/types';
@@ -13,6 +14,7 @@ const lesson: Lesson = {
   level: 'A2',
   title: 'Test',
   summary: 'Test lesson',
+  text: 'Jeg har en jobb.',
   items: [
     {
       id: 't-1',
@@ -56,6 +58,14 @@ describe('LessonPlayer', () => {
     await user.click(screen.getByRole('button', { name: 'Continue' }));
 
     expect(screen.getByText(/You got 1 of 2 right/)).toBeTruthy();
+
+    // Finishing marks the lesson as completed and adds its A2 words to the word cards.
+    await vi.waitFor(async () =>
+      expect(await db.completions.get('test-lesson')).toMatchObject({ bestScore: 1, total: 2 }),
+    );
+    expect(await db.cards.get('jobb')).toBeTruthy();
+    expect(await db.cards.get('jeg')).toBeUndefined();
+    expect(await screen.findByText(/1 new word was added/)).toBeTruthy();
   });
 });
 

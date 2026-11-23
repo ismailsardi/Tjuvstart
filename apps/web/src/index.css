@@ -283,3 +283,147 @@ mark.false-friend {
   color: var(--accent);
   padding: 0.4rem 1rem;
 }
+
+.words-link {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.75rem;
+  text-decoration: none;
+}
+
+.done {
+  color: #2e7d4f;
+  font-size: 0.9rem;
+}
+
+.review-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.deck {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
+
+.deck summary {
+  cursor: pointer;
+}
+
+.card-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.75rem;
+}
+
+.card-grid li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.card-face {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-face:focus-visible {
+  outline: 2px solid var(--accent);
+  border-radius: 0.75rem;
+}
+
+.word-card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-height: 4.5rem;
+  background: var(--bg);
+}
+
+.word-card.revealed {
+  border-color: var(--accent);
+}
+
+.word-card .word {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.word-card .back p {
+  margin: 0.4rem 0 0;
+}
+
+.word-card .meaning {
+  font-weight: 600;
+}
+
+.word-card .tag {
+  font-size: 0.85rem;
+  display: inline-block;
+  padding: 0 0.4rem;
+  border-radius: 0.25rem;
+}
+
+.word-card .tag.cognate {
+  background: color-mix(in srgb, #2e9e5b 22%, transparent);
+}
+
+.word-card .tag.false-friend {
+  background: color-mix(in srgb, #d98b1a 28%, transparent);
+}
+
+.word-card .hook,
+.word-card .example {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.word-card .example {
+  font-style: italic;
+}
+
+article .word-card {
+  margin: 1rem 0;
+  padding: 1.5rem;
+}
+
+article .word-card .word {
+  font-size: 2rem;
+}
+
+.grades {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.grades button {
+  padding: 0.75rem 0.25rem;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.small {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+}
