@@ -5,9 +5,6 @@ import { I18nProvider } from '../i18n/I18nProvider';
 import { useI18n } from '../i18n/useI18n';
 import { uiLanguageFor } from '../i18n/strings';
 
-/** Languages with a pack in progress. They are listed so learners know they are planned. */
-const UPCOMING = [{ language: 'ar', name: 'Arabic', nativeName: 'العربية' }] as const;
-
 interface Props {
   nativeLanguage?: string;
   knownLanguages?: readonly string[];
@@ -60,12 +57,6 @@ function OnboardingForm({
               onChange={() => setNative(pack.language)}
             />
             <span lang={pack.language}>{pack.nativeName}</span>
-          </label>
-        ))}
-        {UPCOMING.map((language) => (
-          <label key={language.language} className="choice muted">
-            <input type="radio" name="native" value={language.language} disabled />
-            <span lang={language.language}>{language.nativeName}</span> ({t('comingSoon')})
           </label>
         ))}
         <label className="choice">

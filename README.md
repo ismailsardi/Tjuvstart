@@ -30,7 +30,6 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 ## Planned
 
 - B1 and B2 lessons, and a licensed frequency list to measure word coverage per level.
-- An Arabic pack with a right-to-left layout.
 - Sign-in and sync across devices through a small ASP.NET Core API on a free tier.
 - Speech recognition for speaking practice.
 - Calibrated item difficulty (item response theory) and an FSRS scheduler, fitted to the answer and review logs the app already keeps.

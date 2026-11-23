@@ -12,7 +12,11 @@ describe('Onboarding', () => {
     render(<Onboarding onDone={onDone} />);
 
     expect(screen.getByRole('button', { name: 'Continue' })).toHaveProperty('disabled', true);
-    expect(screen.getByRole('radio', { name: /العربية/ })).toHaveProperty('disabled', true);
+    expect(screen.getAllByRole('radio').map((radio) => radio.getAttribute('value'))).toEqual([
+      'en',
+      'fr',
+      'other',
+    ]);
 
     await user.click(screen.getByRole('radio', { name: 'Français' }));
     expect(screen.getByText('Quelle est votre langue maternelle ?')).toBeTruthy();
