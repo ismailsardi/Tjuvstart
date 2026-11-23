@@ -9,13 +9,25 @@ interface Props {
   /** Playback speed; 1 is normal. */
   rate?: number;
   className?: string;
+  /**
+   * The audio is the exercise itself, as in a listening item: always show the button, and say
+   * so if the audio fails to load, rather than leaving the learner with nothing to press.
+   */
+  essential?: boolean;
 }
 
 /**
  * Reads Norwegian text aloud; pressing it again stops. Text with no recording, on a device
- * with no Norwegian voice (such as a newly generated AI text), gets no button at all.
+ * with no Norwegian voice (such as a newly generated AI text), gets no button at all, unless the
+ * audio is essential.
  */
-export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Props) {
+export function SpeakButton({
+  text,
+  label,
+  rate = 1,
+  className = 'speak',
+  essential = false,
+}: Props) {
   const { t } = useI18n();
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -25,6 +37,7 @@ export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Prop
   useEffect(() => () => stopSpeaking(), []);
 
   useEffect(() => {
+    if (essential) return;
     let live = true;
     const check = () => void canPlay(key.split('\n')).then((ok) => live && setAvailable(ok));
     check();
@@ -35,7 +48,7 @@ export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Prop
       live = false;
       synth?.removeEventListener?.('voiceschanged', check);
     };
-  }, [key]);
+  }, [key, essential]);
 
   if (available === false) return null;
 
