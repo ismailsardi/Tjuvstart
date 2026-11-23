@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Tjuvstart.ContentCli/Tjuvstart.ContentCli.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tjuvstart.ContentCli.Tests/Tjuvstart.ContentCli.Tests.csproj" />
+  </Folder>
+</Solution>
