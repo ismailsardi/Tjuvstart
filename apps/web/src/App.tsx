@@ -3,17 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { getLesson } from './content/lessons';
 import { learnerPacks } from './content/packs';
 import { Home } from './components/Home';
-import { LessonPlayer } from './components/LessonPlayer';
-import { Onboarding } from './components/Onboarding';
-import { DailySession } from './components/DailySession';
-import { DeckSession } from './components/DeckSession';
-import { LessonList } from './components/LessonList';
-import { Me } from './components/Me';
 import { NavBar } from './components/NavBar';
-import { Placement } from './components/Placement';
-import { Practice } from './components/Practice';
-import { Shadowing } from './components/Shadowing';
-import { Words } from './components/Words';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
 import { I18nProvider } from './i18n/I18nProvider';
@@ -21,8 +11,33 @@ import { useI18n } from './i18n/useI18n';
 import { uiLanguageFor } from './i18n/strings';
 import { homeHref, useHashRoute } from './routing/useHashRoute';
 
-// The optional AI features load on first use, so learners who never add a key never download
-// the SDK or the schema library.
+// Every screen except Today loads on first visit, so the first paint only needs Today. The
+// service worker precaches these chunks, so they still open offline. The AI screens are never
+// precached: learners who don't add a key never download the SDK or the schema library.
+const Onboarding = lazy(() =>
+  import('./components/Onboarding').then((m) => ({ default: m.Onboarding })),
+);
+const LessonPlayer = lazy(() =>
+  import('./components/LessonPlayer').then((m) => ({ default: m.LessonPlayer })),
+);
+const LessonList = lazy(() =>
+  import('./components/LessonList').then((m) => ({ default: m.LessonList })),
+);
+const DailySession = lazy(() =>
+  import('./components/DailySession').then((m) => ({ default: m.DailySession })),
+);
+const DeckSession = lazy(() =>
+  import('./components/DeckSession').then((m) => ({ default: m.DeckSession })),
+);
+const Words = lazy(() => import('./components/Words').then((m) => ({ default: m.Words })));
+const Me = lazy(() => import('./components/Me').then((m) => ({ default: m.Me })));
+const Placement = lazy(() =>
+  import('./components/Placement').then((m) => ({ default: m.Placement })),
+);
+const Practice = lazy(() => import('./components/Practice').then((m) => ({ default: m.Practice })));
+const Shadowing = lazy(() =>
+  import('./components/Shadowing').then((m) => ({ default: m.Shadowing })),
+);
 const AiHub = lazy(() => import('./components/AiHub').then((m) => ({ default: m.AiHub })));
 const AiReading = lazy(() =>
   import('./components/AiReading').then((m) => ({ default: m.AiReading })),
@@ -52,18 +67,20 @@ export function App() {
           route.name,
         ) && <NavBar route={route} />}
       <main className="shell" lang={language}>
-        {needsOnboarding ? (
-          <Onboarding
-            key={route.name}
-            nativeLanguage={profile.nativeLanguage}
-            knownLanguages={profile.knownLanguages}
-            onDone={() => {
-              window.location.hash = homeHref;
-            }}
-          />
-        ) : (
-          <Page route={route} packs={packs} />
-        )}
+        <Suspense fallback={null}>
+          {needsOnboarding ? (
+            <Onboarding
+              key={route.name}
+              nativeLanguage={profile.nativeLanguage}
+              knownLanguages={profile.knownLanguages}
+              onDone={() => {
+                window.location.hash = homeHref;
+              }}
+            />
+          ) : (
+            <Page route={route} packs={packs} />
+          )}
+        </Suspense>
       </main>
     </I18nProvider>
   );
@@ -85,8 +102,7 @@ function Page({
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
   if (route.name === 'daily') return <DailySession packs={packs} />;
-  if (route.name.startsWith('ai'))
-    return <Suspense fallback={null}>{aiPage(route, packs)}</Suspense>;
+  if (route.name.startsWith('ai')) return aiPage(route, packs);
   if (route.name === 'listening')
     return <Practice key="listening" packs={packs} skill="listening" />;
   if (route.name !== 'lesson' && route.name !== 'shadow') return <Home packs={packs} />;

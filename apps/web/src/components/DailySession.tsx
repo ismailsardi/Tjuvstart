@@ -3,6 +3,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import type { CanDoStatus } from '@tjuvstart/engine';
 import { trackedDescriptors } from '../content/descriptors';
 import type { LanguagePack } from '../content/packs';
+import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
 import { canDoProgress, dailyProgress } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { DUE_DECK, homeHref } from '../routing/useHashRoute';
@@ -10,11 +11,6 @@ import { CanDoList } from './CanDoList';
 import { DeckSession } from './DeckSession';
 import { Practice } from './Practice';
 import { StreakLine } from './StreakLine';
-
-/** Word cards in the daily session: about ten seconds each. */
-export const DAILY_CARDS = 10;
-/** Exercises in the daily session: well under a minute each. */
-export const DAILY_ITEMS = 8;
 
 type Stage = 'cards' | 'practice' | 'done';
 

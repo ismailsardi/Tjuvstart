@@ -10,6 +10,22 @@ export default defineConfig({
   base,
   // Lessons live in /content at the repository root and are imported at build time.
   server: { fs: { allow: ['../..'] } },
+  build: {
+    rolldownOptions: {
+      output: {
+        // React and Dexie change far less often than the app, so they get a chunk of their own
+        // that stays cached across releases.
+        advancedChunks: {
+          groups: [
+            {
+              name: 'vendor',
+              test: /node_modules[\\/](react|react-dom|scheduler|dexie|dexie-react-hooks)[\\/]/,
+            },
+          ],
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({
