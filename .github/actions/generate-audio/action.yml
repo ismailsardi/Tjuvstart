@@ -1,12 +1,27 @@
 name: Generate audio
 description: >
-  Lists every text the app reads aloud, then records the missing ones with Piper into
-  apps/web/public/audio. Voice and audio are cached, so only new or changed texts are recorded.
+  Lists every text the app reads aloud, then records the missing ones into
+  apps/web/public/audio. Uses the Azure neural voice when a key is given and the open-source
+  Piper voice otherwise. Audio is cached per voice, so only new or changed texts are recorded.
 
 inputs:
-  voice:
-    description: Piper voice name
+  azure-key:
+    description: Azure AI Speech key. Leave empty to record with Piper.
+    default: ''
+  azure-region:
+    description: Azure region of the Speech resource, e.g. westeurope
+    default: ''
+  azure-voice:
+    description: Azure neural voice
+    default: nb-NO-PernilleNeural
+  piper-voice:
+    description: Piper voice name, used without an Azure key
     default: no_NO-talesyntese-medium
+
+outputs:
+  voice:
+    description: The voice the audio was recorded with
+    value: ${{ steps.engine.outputs.voice }}
 
 runs:
   using: composite
@@ -18,33 +33,61 @@ runs:
       with:
         python-version: '3.12'
 
+    - name: Choose voice
+      id: engine
+      shell: bash
+      env:
+        AZURE_SPEECH_KEY: ${{ inputs.azure-key }}
+      run: |
+        if [ -n "$AZURE_SPEECH_KEY" ]; then
+          echo "engine=azure" >> "$GITHUB_OUTPUT"
+          echo "voice=${{ inputs.azure-voice }}" >> "$GITHUB_OUTPUT"
+        else
+          echo "::warning::No Azure Speech key: recording with the Piper fallback voice."
+          echo "engine=piper" >> "$GITHUB_OUTPUT"
+          echo "voice=${{ inputs.piper-voice }}" >> "$GITHUB_OUTPUT"
+        fi
+
     - name: List texts
       shell: bash
       run: |
         mkdir -p .voices
         dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- speech content --out .voices/speech.json
 
-    - name: Restore voice
+    - name: Restore Piper voice
+      if: steps.engine.outputs.engine == 'piper'
       uses: actions/cache@v4
       with:
-        path: .voices/${{ inputs.voice }}.onnx*
-        key: piper-voice-${{ inputs.voice }}
+        path: .voices/${{ inputs.piper-voice }}.onnx*
+        key: piper-voice-${{ inputs.piper-voice }}
 
     - name: Restore audio
       uses: actions/cache@v4
       with:
         path: apps/web/public/audio
-        key: audio-${{ inputs.voice }}-${{ hashFiles('.voices/speech.json', 'tools/audio/generate_audio.py') }}
-        restore-keys: audio-${{ inputs.voice }}-
+        key: audio-${{ steps.engine.outputs.voice }}-${{ hashFiles('.voices/speech.json', 'tools/audio/generate_audio.py') }}
+        restore-keys: audio-${{ steps.engine.outputs.voice }}-
 
-    - name: Record missing audio
+    - name: Record missing audio (Azure)
+      if: steps.engine.outputs.engine == 'azure'
       shell: bash
       env:
-        VOICE: ${{ inputs.voice }}
+        AZURE_SPEECH_KEY: ${{ inputs.azure-key }}
+        AZURE_SPEECH_REGION: ${{ inputs.azure-region }}
+      run: |
+        python tools/audio/generate_audio.py --engine azure --voice "${{ inputs.azure-voice }}" \
+          --speech .voices/speech.json --out apps/web/public/audio
+
+    - name: Record missing audio (Piper)
+      if: steps.engine.outputs.engine == 'piper'
+      shell: bash
+      env:
+        VOICE: ${{ inputs.piper-voice }}
       run: |
         command -v ffmpeg >/dev/null || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
         python -m pip install --quiet -r tools/audio/requirements.txt
         if [ ! -f ".voices/$VOICE.onnx" ]; then
           python -m piper.download_voices "$VOICE" --download-dir .voices
         fi
-        python tools/audio/generate_audio.py --speech .voices/speech.json --voice ".voices/$VOICE.onnx" --out apps/web/public/audio
+        python tools/audio/generate_audio.py --engine piper --voice ".voices/$VOICE.onnx" \
+          --speech .voices/speech.json --out apps/web/public/audio

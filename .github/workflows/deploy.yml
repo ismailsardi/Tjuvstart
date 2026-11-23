@@ -26,6 +26,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - uses: ./.github/actions/generate-audio
+        with:
+          azure-key: ${{ secrets.AZURE_SPEECH_KEY }}
+          azure-region: ${{ vars.AZURE_SPEECH_REGION }}
       - run: pnpm build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
