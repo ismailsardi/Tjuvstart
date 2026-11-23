@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-nav-letter",
+  "level": "A2",
+  "title": "Brev fra NAV",
+  "summary": "Read a simplified letter from NAV about the employment form you send every two weeks: when it is due and what happens if you forget.",
+  "document": {
+    "kind": "letter",
+    "from": "NAV"
+  },
+  "text": "Hei Ahmed,\nDu er registrert som arbeidssøker hos NAV. Du må sende meldekort hver fjortende dag. Det gjør du på nav.no.\nNeste meldekort må vi ha senest fredag 14. mars. Hvis du ikke sender meldekortet, kan utbetalingen din stoppe.\nHar du spørsmål? Skriv til oss på nav.no, eller ring oss på 55 55 33 33.\nMed vennlig hilsen\nNAV",
+  "items": [
+    {
+      "id": "a2-nav-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvem har skrevet brevet?",
+      "options": ["NAV", "Banken", "Legen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-nav-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Hvor ofte må Ahmed sende meldekort?",
+      "options": ["Hver fjortende dag", "Hver dag", "En gang i året"],
+      "answer": 0
+    },
+    {
+      "id": "a2-nav-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1050,
+      "prompt": "Når må NAV ha det neste meldekortet?",
+      "options": ["Senest fredag 14. mars", "Etter fredag 14. mars", "Mandag 14. mars"],
+      "answer": 0
+    },
+    {
+      "id": "a2-nav-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1150,
+      "prompt": "Hva kan skje hvis Ahmed ikke sender meldekortet?",
+      "options": ["Utbetalingen kan stoppe", "Han får mer penger", "Ingenting"],
+      "answer": 0
+    },
+    {
+      "id": "a2-nav-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hvordan kan Ahmed kontakte NAV?",
+      "options": ["Skrive på nav.no eller ringe", "Bare sende et brev", "Bare komme på kontoret"],
+      "answer": 0
+    },
+    {
+      "id": "a2-nav-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 1100,
+      "prompt": "Hvis du ikke ___ meldekortet, kan utbetalingen stoppe.",
+      "hint": "sende",
+      "answers": ["sender"]
+    },
+    {
+      "id": "a2-nav-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Med vennlig ___",
+      "answers": ["hilsen"]
+    },
+    {
+      "id": "a2-nav-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["subordinate-clause", "ikke-placement"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "hint": "I en leddsetning står «ikke» foran verbet.",
+      "tokens": ["ikke", "sender", "Hvis", "du", "meldekortet"],
+      "answer": "Hvis du ikke sender meldekortet"
+    }
+  ]
+}

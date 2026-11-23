@@ -13,6 +13,12 @@
         "a2-doctor",
         "a2-lunch-small-talk"
       ]
+    },
+    {
+      "id": "real-texts",
+      "title": "Ekte tekster",
+      "summary": "Real kinds of documents, simplified to your level: a letter from NAV, a second-hand ad, a job ad and a notice from the housing association.",
+      "lessons": ["a2-nav-letter", "a2-finn-ad", "a2-job-ad", "a2-dugnad"]
     }
   ]
 }

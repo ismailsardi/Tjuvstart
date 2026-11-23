@@ -139,6 +139,46 @@
       "nb": "ski",
       "forms": ["ski"],
       "meaning": "ski"
+    },
+    {
+      "nb": "stoppe",
+      "forms": ["stoppe", "stopper"],
+      "meaning": "to stop"
+    },
+    {
+      "nb": "fleksibel",
+      "forms": ["fleksibel", "fleksibelt", "fleksible"],
+      "meaning": "flexible"
+    },
+    {
+      "nb": "team",
+      "forms": ["team", "teamet"],
+      "meaning": "team"
+    },
+    {
+      "nb": "firma",
+      "forms": ["firma", "firmaet"],
+      "meaning": "firm, company"
+    },
+    {
+      "nb": "registrere",
+      "forms": ["registrere", "registrert"],
+      "meaning": "to register"
+    },
+    {
+      "nb": "interessert",
+      "forms": ["interessert"],
+      "meaning": "interested"
+    },
+    {
+      "nb": "pris",
+      "forms": ["pris", "prisen"],
+      "meaning": "price"
+    },
+    {
+      "nb": "kaffe",
+      "forms": ["kaffe"],
+      "meaning": "coffee"
     }
   ],
   "falseFriends": [
@@ -204,7 +244,11 @@
         "a2-bankid",
         "a2-tax-card",
         "a2-doctor",
-        "a2-lunch-small-talk"
+        "a2-lunch-small-talk",
+        "a2-nav-letter",
+        "a2-finn-ad",
+        "a2-job-ad",
+        "a2-dugnad"
       ]
     },
     {
@@ -217,7 +261,7 @@
       "id": "ikke-in-subclause",
       "title": "«Ikke» before the verb after «fordi»",
       "body": "In a main clause «ikke» comes after the verb: «Trikken går ikke». After «fordi», «at» or «hvis» it moves in front of the verb: «…fordi trikken ikke går».",
-      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card"]
+      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card", "a2-nav-letter"]
     },
     {
       "id": "room-count",
@@ -251,7 +295,11 @@
     "a2-tax-04": "Without a tax card, the employer must take 50% tax. Order the tax card before your first payday.",
     "a2-doc-03": "«Halv to» is half an hour before two: 13.30.",
     "a2-doc-05": "113 is for medical emergencies. 116 117 (legevakt) is for urgent help when your fastlege is closed.",
-    "a2-lunch-04": "Kantina is the workplace canteen. Many Norwegians bring a matpakke instead."
+    "a2-lunch-04": "Kantina is the workplace canteen. Many Norwegians bring a matpakke instead.",
+    "a2-nav-02": "«Hver fjortende dag» means every 14 days, so every two weeks.",
+    "a2-finn-05": "«Førstemann til mølla» means first come, first served: whoever comes first gets it.",
+    "a2-dug-05": "A dugnad is unpaid shared work for the building, the school or the sports club. People expect neighbours to join.",
+    "a2-job-03": "«Fast stilling» is a permanent job; «midlertidig» is temporary."
   },
   "words": {
     "jeg": {
@@ -934,6 +982,359 @@
     },
     "ekte": {
       "meaning": "real, genuine"
+    },
+    "april": {
+      "meaning": "April"
+    },
+    "at": {
+      "meaning": "that"
+    },
+    "engelsk": {
+      "meaning": "English"
+    },
+    "etterpa": {
+      "meaning": "afterwards"
+    },
+    "gammel": {
+      "meaning": "old",
+      "hook": "Age: «Jeg er 30 år gammel»."
+    },
+    "kaffe": {
+      "meaning": "coffee"
+    },
+    "kake": {
+      "meaning": "cake"
+    },
+    "like": {
+      "meaning": "to like"
+    },
+    "liten": {
+      "meaning": "small, little",
+      "hook": "liten (en), lita (ei), lite (et), små (plural)."
+    },
+    "snakke": {
+      "meaning": "to speak, talk"
+    },
+    "ved": {
+      "meaning": "by, at, next to"
+    },
+    "var-season": {
+      "meaning": "spring (season)",
+      "hook": "Same spelling as «vår» (our): context tells them apart."
+    },
+    "var-ours": {
+      "meaning": "our"
+    },
+    "ar": {
+      "meaning": "year"
+    },
+    "onske": {
+      "meaning": "to wish, want"
+    },
+    "pris": {
+      "meaning": "price"
+    },
+    "melding": {
+      "meaning": "message"
+    },
+    "kjaer": {
+      "meaning": "dear",
+      "hook": "«Kjære …» opens a friendly letter."
+    },
+    "i-fjor": {
+      "meaning": "last year"
+    },
+    "arbeidssoker": {
+      "meaning": "jobseeker",
+      "hook": "arbeid (work) + søker (seeker)."
+    },
+    "meldekort": {
+      "meaning": "employment status form (sent to NAV every two weeks)"
+    },
+    "utbetaling": {
+      "meaning": "payment, payout"
+    },
+    "registrere": {
+      "meaning": "to register"
+    },
+    "senest": {
+      "meaning": "at the latest"
+    },
+    "stoppe": {
+      "meaning": "to stop"
+    },
+    "fjortende": {
+      "meaning": "fourteenth; hver fjortende dag = every two weeks",
+      "hook": "hver fjortende dag = every 14 days."
+    },
+    "til-salgs": {
+      "meaning": "for sale"
+    },
+    "brukt": {
+      "meaning": "used, second-hand"
+    },
+    "sykkel": {
+      "meaning": "bicycle"
+    },
+    "gir": {
+      "meaning": "gear"
+    },
+    "fungere": {
+      "meaning": "to work, function"
+    },
+    "bremse": {
+      "meaning": "brake"
+    },
+    "hente": {
+      "meaning": "to fetch, pick up",
+      "hook": "«kan hentes» = can be picked up (-s makes it passive)."
+    },
+    "interessert": {
+      "meaning": "interested"
+    },
+    "forstemann": {
+      "meaning": "first come, first served",
+      "hook": "Literally: first man to the mill."
+    },
+    "stilling": {
+      "meaning": "position, job",
+      "hook": "fast stilling = permanent position."
+    },
+    "soke": {
+      "meaning": "to look for; to apply",
+      "hook": "søke på en jobb = apply for a job."
+    },
+    "soknad": {
+      "meaning": "application"
+    },
+    "soknadsfrist": {
+      "meaning": "application deadline",
+      "hook": "søknad (application) + frist (deadline)."
+    },
+    "tilby": {
+      "meaning": "to offer"
+    },
+    "fast": {
+      "meaning": "fixed, permanent"
+    },
+    "fleksibel": {
+      "meaning": "flexible"
+    },
+    "arbeidstid": {
+      "meaning": "working hours"
+    },
+    "hjemmekontor": {
+      "meaning": "working from home, home office",
+      "hook": "hjemme (at home) + kontor (office)."
+    },
+    "erfaring": {
+      "meaning": "experience"
+    },
+    "firma": {
+      "meaning": "company, firm"
+    },
+    "team": {
+      "meaning": "team"
+    },
+    "dugnad": {
+      "meaning": "shared voluntary work day",
+      "hook": "Neighbours or parents work together for free, then share food."
+    },
+    "borettslag": {
+      "meaning": "housing cooperative"
+    },
+    "styre": {
+      "meaning": "board (of an association)"
+    },
+    "nabo": {
+      "meaning": "neighbour"
+    },
+    "inngang": {
+      "meaning": "entrance"
+    },
+    "motes": {
+      "meaning": "to meet (each other)",
+      "hook": "møte + s = meet each other."
+    },
+    "rydde": {
+      "meaning": "to tidy, clear up"
+    },
+    "soppel": {
+      "meaning": "rubbish, trash"
+    },
+    "male": {
+      "meaning": "to paint"
+    },
+    "gjerde": {
+      "meaning": "fence"
+    },
+    "plante": {
+      "meaning": "to plant"
+    },
+    "blomst": {
+      "meaning": "flower"
+    },
+    "hanske": {
+      "meaning": "glove"
+    },
+    "grille": {
+      "meaning": "to grill, barbecue"
+    },
+    "polse": {
+      "meaning": "sausage, hot dog"
+    },
+    "programvare": {
+      "meaning": "software"
+    },
+    "system": {
+      "meaning": "system"
+    },
+    "server": {
+      "meaning": "server"
+    },
+    "database": {
+      "meaning": "database"
+    },
+    "feil": {
+      "meaning": "error, bug",
+      "hook": "«Det er feil» also means «that’s wrong»."
+    },
+    "oppgave": {
+      "meaning": "task"
+    },
+    "losning": {
+      "meaning": "solution"
+    },
+    "bruker": {
+      "meaning": "user"
+    },
+    "nettverk": {
+      "meaning": "network"
+    },
+    "sikkerhet": {
+      "meaning": "security, safety"
+    },
+    "oppdatering": {
+      "meaning": "update"
+    },
+    "skjerm": {
+      "meaning": "screen"
+    },
+    "pasient": {
+      "meaning": "patient"
+    },
+    "sykepleier": {
+      "meaning": "nurse",
+      "hook": "syk (ill) + pleier (carer)."
+    },
+    "sykehus": {
+      "meaning": "hospital",
+      "hook": "syk (ill) + hus (house)."
+    },
+    "vakt": {
+      "meaning": "shift (on duty)"
+    },
+    "resept": {
+      "meaning": "prescription",
+      "hook": "Not a recipe (that is «oppskrift»)."
+    },
+    "blodtrykk": {
+      "meaning": "blood pressure"
+    },
+    "smerte": {
+      "meaning": "pain"
+    },
+    "undersoke": {
+      "meaning": "to examine"
+    },
+    "journal": {
+      "meaning": "patient record",
+      "hook": "Not a newspaper: a patient’s record."
+    },
+    "avdeling": {
+      "meaning": "ward, department"
+    },
+    "pleie": {
+      "meaning": "to care for, nurse"
+    },
+    "vaksine": {
+      "meaning": "vaccine"
+    },
+    "byggeplass": {
+      "meaning": "building site"
+    },
+    "verktoy": {
+      "meaning": "tool, tools"
+    },
+    "hjelm": {
+      "meaning": "helmet"
+    },
+    "stige": {
+      "meaning": "ladder"
+    },
+    "tegning": {
+      "meaning": "drawing, plan"
+    },
+    "maale": {
+      "meaning": "to measure"
+    },
+    "bore": {
+      "meaning": "to drill"
+    },
+    "betong": {
+      "meaning": "concrete"
+    },
+    "tak": {
+      "meaning": "roof, ceiling"
+    },
+    "vegg": {
+      "meaning": "wall"
+    },
+    "gulv": {
+      "meaning": "floor"
+    },
+    "elektriker": {
+      "meaning": "electrician"
+    },
+    "gjest": {
+      "meaning": "guest"
+    },
+    "bestilling": {
+      "meaning": "order, booking"
+    },
+    "servitor": {
+      "meaning": "waiter, waitress"
+    },
+    "kokk": {
+      "meaning": "chef, cook"
+    },
+    "meny": {
+      "meaning": "menu"
+    },
+    "regning": {
+      "meaning": "bill"
+    },
+    "bord": {
+      "meaning": "table"
+    },
+    "allergi": {
+      "meaning": "allergy"
+    },
+    "oppvask": {
+      "meaning": "washing-up, dishes"
+    },
+    "kasse": {
+      "meaning": "till, checkout"
+    },
+    "skift": {
+      "meaning": "shift"
+    },
+    "reservere": {
+      "meaning": "to reserve, book"
+    },
+    "vennlig": {
+      "meaning": "friendly, kind",
+      "hook": "«Med vennlig hilsen» = kind regards, at the end of a letter."
     }
   }
 }

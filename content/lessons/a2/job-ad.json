@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-job-ad",
+  "level": "A2",
+  "title": "Ledig stilling",
+  "summary": "Read a job ad for a developer: what the company offers, what they want from you, and the application deadline.",
+  "document": {
+    "kind": "job-ad",
+    "from": "Kari Hansen"
+  },
+  "text": "Vi søker en utvikler\nVi er et lite IT-firma i Oslo, og vi trenger en ny kollega i teamet vårt.\nVi tilbyr fast stilling, fleksibel arbeidstid og hjemmekontor to dager i uka.\nVi ønsker at du har erfaring med C# eller JavaScript. Du snakker norsk eller engelsk, og du liker å jobbe i team.\nSøknadsfrist: 1. april. Send CV og søknad til Kari Hansen.",
+  "items": [
+    {
+      "id": "a2-job-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hva slags jobb er det?",
+      "options": ["Utvikler", "Lege", "Sjåfør"],
+      "answer": 0
+    },
+    {
+      "id": "a2-job-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hvor mange dager i uka kan du jobbe hjemme?",
+      "options": ["To", "Fem", "Ingen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-job-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hva slags stilling er det?",
+      "options": ["Fast stilling", "Sommerjobb", "Deltid i tre måneder"],
+      "answer": 0
+    },
+    {
+      "id": "a2-job-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1100,
+      "prompt": "Hvilke språk må du snakke?",
+      "options": ["Norsk eller engelsk", "Bare norsk", "Norsk og fransk"],
+      "answer": 0
+    },
+    {
+      "id": "a2-job-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når er søknadsfristen?",
+      "options": ["1. april", "1. mars", "14. april"],
+      "answer": 0
+    },
+    {
+      "id": "a2-job-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1100,
+      "prompt": "Jeg har ___ med JavaScript.",
+      "hint": "experience",
+      "answers": ["erfaring"]
+    },
+    {
+      "id": "a2-job-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 1050,
+      "prompt": "Vi ___ en utvikler.",
+      "hint": "søke",
+      "answers": ["søker"]
+    },
+    {
+      "id": "a2-job-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["liker", "Jeg", "å jobbe", "i team"],
+      "answer": "Jeg liker å jobbe i team"
+    }
+  ]
+}

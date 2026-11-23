@@ -159,6 +159,41 @@
       "nb": "pass",
       "forms": ["pass", "passet"],
       "meaning": "passeport"
+    },
+    {
+      "nb": "fleksibel",
+      "forms": ["fleksibel", "fleksibelt", "fleksible"],
+      "meaning": "flexible"
+    },
+    {
+      "nb": "interessert",
+      "forms": ["interessert"],
+      "meaning": "intéressé"
+    },
+    {
+      "nb": "registrere",
+      "forms": ["registrere", "registrert"],
+      "meaning": "enregistrer"
+    },
+    {
+      "nb": "pris",
+      "forms": ["pris", "prisen"],
+      "meaning": "prix"
+    },
+    {
+      "nb": "firma",
+      "forms": ["firma", "firmaet"],
+      "meaning": "firme, entreprise"
+    },
+    {
+      "nb": "plante",
+      "forms": ["plante"],
+      "meaning": "planter"
+    },
+    {
+      "nb": "kaffe",
+      "forms": ["kaffe"],
+      "meaning": "café"
     }
   ],
   "falseFriends": [
@@ -206,7 +241,11 @@
         "a2-bankid",
         "a2-tax-card",
         "a2-doctor",
-        "a2-lunch-small-talk"
+        "a2-lunch-small-talk",
+        "a2-nav-letter",
+        "a2-finn-ad",
+        "a2-job-ad",
+        "a2-dugnad"
       ]
     },
     {
@@ -230,7 +269,7 @@
       "id": "ikke-in-subclause",
       "title": "« Ikke » avant le verbe après « fordi »",
       "body": "Dans une phrase principale, « ikke » (ne… pas) vient après le verbe : « Trikken går ikke ». Après « fordi », « at » ou « hvis », il passe devant le verbe : « …fordi trikken ikke går ».",
-      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card"]
+      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card", "a2-nav-letter"]
     },
     {
       "id": "room-count",
@@ -264,7 +303,11 @@
     "a2-tax-04": "Sans carte d’imposition, l’employeur doit prélever 50 % d’impôt. Commandez-la avant votre premier salaire.",
     "a2-doc-03": "« Halv to » veut dire une demi-heure avant deux heures : 13 h 30. Attention, en français « deux heures et demie » c’est l’inverse !",
     "a2-doc-05": "Le 113 est pour les urgences médicales. Le 116 117 (legevakt) est pour l’aide urgente quand le médecin traitant est fermé.",
-    "a2-lunch-04": "La kantina est la cantine de l’entreprise. Beaucoup de Norvégiens apportent plutôt une matpakke."
+    "a2-lunch-04": "La kantina est la cantine de l’entreprise. Beaucoup de Norvégiens apportent plutôt une matpakke.",
+    "a2-nav-02": "« Hver fjortende dag » veut dire tous les 14 jours, donc toutes les deux semaines.",
+    "a2-finn-05": "« Førstemann til mølla » = premier arrivé, premier servi.",
+    "a2-dug-05": "La dugnad est un travail collectif non payé pour l’immeuble, l’école ou le club. On attend des voisins qu’ils viennent.",
+    "a2-job-03": "« Fast stilling » est un poste permanent (CDI) ; « midlertidig » veut dire temporaire."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail.",
@@ -274,10 +317,15 @@
     "a2-bankid": "Découvrez ce qu’il faut pour obtenir BankID : un numéro d’identité de l’administration fiscale, votre passeport et un compte bancaire.",
     "a2-tax-card": "Lisez un e-mail des RH sur la carte d’imposition : où la commander, qui l’envoie, et ce qui se passe sans elle.",
     "a2-doctor": "Suivez un appel pour prendre rendez-vous chez le médecin, et apprenez quels numéros appeler le soir, le week-end et en urgence.",
-    "a2-lunch-small-talk": "Une pause déjeuner au bureau : le week-end, la météo et la fameuse matpakke norvégienne."
+    "a2-lunch-small-talk": "Une pause déjeuner au bureau : le week-end, la météo et la fameuse matpakke norvégienne.",
+    "a2-nav-letter": "Lisez une lettre simplifiée de NAV sur la déclaration à envoyer tous les quinze jours : la date limite et ce qui arrive si vous oubliez.",
+    "a2-finn-ad": "Lisez une petite annonce comme sur Finn.no : l’objet, le prix, où le récupérer et comment répondre.",
+    "a2-job-ad": "Lisez une offre d’emploi de développeur : ce que l’entreprise propose, ce qu’elle attend de vous et la date limite.",
+    "a2-dugnad": "Lisez un avis de la coopérative d’habitation sur une dugnad, la journée norvégienne de travail bénévole collectif."
   },
   "trackSummaries": {
-    "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues."
+    "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues.",
+    "real-texts": "De vrais types de documents, simplifiés à votre niveau : une lettre de NAV, une petite annonce, une offre d’emploi et un avis de la coopérative."
   },
   "words": {
     "jeg": {
@@ -954,6 +1002,359 @@
     },
     "ekte": {
       "meaning": "vrai, authentique"
+    },
+    "april": {
+      "meaning": "avril"
+    },
+    "at": {
+      "meaning": "que"
+    },
+    "engelsk": {
+      "meaning": "anglais"
+    },
+    "etterpa": {
+      "meaning": "après, ensuite"
+    },
+    "gammel": {
+      "meaning": "vieux",
+      "hook": "L’âge : « Jeg er 30 år gammel » (j’ai 30 ans)."
+    },
+    "kaffe": {
+      "meaning": "café"
+    },
+    "kake": {
+      "meaning": "gâteau"
+    },
+    "like": {
+      "meaning": "aimer, apprécier"
+    },
+    "liten": {
+      "meaning": "petit",
+      "hook": "liten (en), lita (ei), lite (et), små (pluriel)."
+    },
+    "snakke": {
+      "meaning": "parler"
+    },
+    "ved": {
+      "meaning": "près de, à côté de"
+    },
+    "var-season": {
+      "meaning": "printemps",
+      "hook": "Même orthographe que « vår » (notre) : le contexte fait la différence."
+    },
+    "var-ours": {
+      "meaning": "notre, nos"
+    },
+    "ar": {
+      "meaning": "an, année"
+    },
+    "onske": {
+      "meaning": "souhaiter"
+    },
+    "pris": {
+      "meaning": "prix"
+    },
+    "melding": {
+      "meaning": "message"
+    },
+    "kjaer": {
+      "meaning": "cher, chère",
+      "hook": "« Kjære … » ouvre une lettre amicale."
+    },
+    "i-fjor": {
+      "meaning": "l’année dernière"
+    },
+    "arbeidssoker": {
+      "meaning": "demandeur d’emploi",
+      "hook": "arbeid (travail) + søker (chercheur)."
+    },
+    "meldekort": {
+      "meaning": "déclaration à NAV (tous les quinze jours)"
+    },
+    "utbetaling": {
+      "meaning": "versement, paiement"
+    },
+    "registrere": {
+      "meaning": "enregistrer, inscrire"
+    },
+    "senest": {
+      "meaning": "au plus tard"
+    },
+    "stoppe": {
+      "meaning": "arrêter, s’arrêter"
+    },
+    "fjortende": {
+      "meaning": "quatorzième ; hver fjortende dag = tous les quinze jours",
+      "hook": "hver fjortende dag = tous les 14 jours (en français, « quinze jours »)."
+    },
+    "til-salgs": {
+      "meaning": "à vendre"
+    },
+    "brukt": {
+      "meaning": "d’occasion"
+    },
+    "sykkel": {
+      "meaning": "vélo"
+    },
+    "gir": {
+      "meaning": "vitesse (vélo)"
+    },
+    "fungere": {
+      "meaning": "fonctionner"
+    },
+    "bremse": {
+      "meaning": "frein"
+    },
+    "hente": {
+      "meaning": "aller chercher, récupérer",
+      "hook": "« kan hentes » = peut être récupéré (le -s donne le passif)."
+    },
+    "interessert": {
+      "meaning": "intéressé"
+    },
+    "forstemann": {
+      "meaning": "premier arrivé, premier servi",
+      "hook": "Littéralement : le premier au moulin."
+    },
+    "stilling": {
+      "meaning": "poste, emploi",
+      "hook": "fast stilling = CDI (poste permanent)."
+    },
+    "soke": {
+      "meaning": "chercher ; postuler",
+      "hook": "søke på en jobb = postuler à un emploi."
+    },
+    "soknad": {
+      "meaning": "candidature, lettre de motivation"
+    },
+    "soknadsfrist": {
+      "meaning": "date limite de candidature",
+      "hook": "søknad (candidature) + frist (délai)."
+    },
+    "tilby": {
+      "meaning": "offrir, proposer"
+    },
+    "fast": {
+      "meaning": "fixe, permanent"
+    },
+    "fleksibel": {
+      "meaning": "flexible"
+    },
+    "arbeidstid": {
+      "meaning": "horaires de travail"
+    },
+    "hjemmekontor": {
+      "meaning": "télétravail",
+      "hook": "hjemme (à la maison) + kontor (bureau)."
+    },
+    "erfaring": {
+      "meaning": "expérience"
+    },
+    "firma": {
+      "meaning": "entreprise"
+    },
+    "team": {
+      "meaning": "équipe"
+    },
+    "dugnad": {
+      "meaning": "journée de travail bénévole collectif",
+      "hook": "Voisins ou parents travaillent ensemble gratuitement, puis partagent un repas."
+    },
+    "borettslag": {
+      "meaning": "coopérative d’habitation"
+    },
+    "styre": {
+      "meaning": "conseil d’administration"
+    },
+    "nabo": {
+      "meaning": "voisin"
+    },
+    "inngang": {
+      "meaning": "entrée"
+    },
+    "motes": {
+      "meaning": "se retrouver",
+      "hook": "møte + s = se retrouver (l’un l’autre)."
+    },
+    "rydde": {
+      "meaning": "ranger, nettoyer"
+    },
+    "soppel": {
+      "meaning": "déchets, ordures"
+    },
+    "male": {
+      "meaning": "peindre"
+    },
+    "gjerde": {
+      "meaning": "clôture"
+    },
+    "plante": {
+      "meaning": "planter"
+    },
+    "blomst": {
+      "meaning": "fleur"
+    },
+    "hanske": {
+      "meaning": "gant"
+    },
+    "grille": {
+      "meaning": "faire un barbecue, griller"
+    },
+    "polse": {
+      "meaning": "saucisse"
+    },
+    "programvare": {
+      "meaning": "logiciel"
+    },
+    "system": {
+      "meaning": "système"
+    },
+    "server": {
+      "meaning": "serveur"
+    },
+    "database": {
+      "meaning": "base de données"
+    },
+    "feil": {
+      "meaning": "erreur, bug",
+      "hook": "« Det er feil » veut aussi dire « c’est faux »."
+    },
+    "oppgave": {
+      "meaning": "tâche"
+    },
+    "losning": {
+      "meaning": "solution"
+    },
+    "bruker": {
+      "meaning": "utilisateur"
+    },
+    "nettverk": {
+      "meaning": "réseau"
+    },
+    "sikkerhet": {
+      "meaning": "sécurité"
+    },
+    "oppdatering": {
+      "meaning": "mise à jour"
+    },
+    "skjerm": {
+      "meaning": "écran"
+    },
+    "pasient": {
+      "meaning": "patient"
+    },
+    "sykepleier": {
+      "meaning": "infirmier, infirmière",
+      "hook": "syk (malade) + pleier (soignant)."
+    },
+    "sykehus": {
+      "meaning": "hôpital",
+      "hook": "syk (malade) + hus (maison)."
+    },
+    "vakt": {
+      "meaning": "garde, service"
+    },
+    "resept": {
+      "meaning": "ordonnance",
+      "hook": "Pas une recette (c’est « oppskrift »)."
+    },
+    "blodtrykk": {
+      "meaning": "tension artérielle"
+    },
+    "smerte": {
+      "meaning": "douleur"
+    },
+    "undersoke": {
+      "meaning": "examiner"
+    },
+    "journal": {
+      "meaning": "dossier médical",
+      "hook": "Pas un journal : le dossier du patient."
+    },
+    "avdeling": {
+      "meaning": "service (hôpital)"
+    },
+    "pleie": {
+      "meaning": "soigner"
+    },
+    "vaksine": {
+      "meaning": "vaccin"
+    },
+    "byggeplass": {
+      "meaning": "chantier"
+    },
+    "verktoy": {
+      "meaning": "outil, outils"
+    },
+    "hjelm": {
+      "meaning": "casque"
+    },
+    "stige": {
+      "meaning": "échelle"
+    },
+    "tegning": {
+      "meaning": "plan, dessin"
+    },
+    "maale": {
+      "meaning": "mesurer"
+    },
+    "bore": {
+      "meaning": "percer"
+    },
+    "betong": {
+      "meaning": "béton"
+    },
+    "tak": {
+      "meaning": "toit, plafond"
+    },
+    "vegg": {
+      "meaning": "mur, paroi"
+    },
+    "gulv": {
+      "meaning": "sol, plancher"
+    },
+    "elektriker": {
+      "meaning": "électricien"
+    },
+    "gjest": {
+      "meaning": "client, invité"
+    },
+    "bestilling": {
+      "meaning": "commande, réservation"
+    },
+    "servitor": {
+      "meaning": "serveur, serveuse"
+    },
+    "kokk": {
+      "meaning": "cuisinier"
+    },
+    "meny": {
+      "meaning": "menu, carte"
+    },
+    "regning": {
+      "meaning": "addition, facture"
+    },
+    "bord": {
+      "meaning": "table"
+    },
+    "allergi": {
+      "meaning": "allergie"
+    },
+    "oppvask": {
+      "meaning": "vaisselle"
+    },
+    "kasse": {
+      "meaning": "caisse"
+    },
+    "skift": {
+      "meaning": "service, poste"
+    },
+    "reservere": {
+      "meaning": "réserver"
+    },
+    "vennlig": {
+      "meaning": "aimable, gentil",
+      "hook": "« Med vennlig hilsen » = cordialement, à la fin d’une lettre."
     }
   }
 }
