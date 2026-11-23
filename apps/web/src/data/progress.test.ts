@@ -1,6 +1,7 @@
 import 'fake-indexeddb/auto';
 import { afterEach, describe, expect, it } from 'vitest';
-import { DEFAULT_RATING } from '@tjuvstart/engine';
+import { DEFAULT_RATING, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
+import { getItem } from '../content/lessons';
 import type { GapFillItem } from '../content/types';
 import { TjuvstartDb } from './db';
 import { DAY_MS } from '@tjuvstart/engine';
@@ -9,9 +10,11 @@ import {
   completeLesson,
   dueCards,
   getProfile,
+  mistakeMemory,
   recordAnswer,
   reviewCard,
   saveLanguages,
+  savePlacement,
 } from './progress';
 
 const item: GapFillItem = {
@@ -97,5 +100,45 @@ describe('completeLesson', () => {
       lastCompletedAt: 2000,
     });
     expect(await db.cards.count()).toBe(1);
+  });
+});
+
+describe('savePlacement', () => {
+  it('sets ratings, counts them as estimates and stamps the date', async () => {
+    db = new TjuvstartDb('test-placement');
+    await recordAnswer(item, 'lesson', true, db);
+    await savePlacement({ reading: 1210, writing: 990 }, 1234, db);
+    const profile = await getProfile(db);
+    expect(profile.ratings.reading).toBe(1210);
+    expect(profile.ratings.writing).toBe(990);
+    expect(profile.answers.reading).toBe(MIN_ANSWERS_FOR_ESTIMATE);
+    expect(profile.answers.listening).toBe(0);
+    expect(profile.placedAt).toBe(1234);
+  });
+});
+
+describe('mistakeMemory', () => {
+  const v2 = getItem('a2-sick-11')!;
+  const phrase = getItem('a2-sick-08')!;
+
+  it('flags a focus point missed twice and lists missed items newest first', async () => {
+    db = new TjuvstartDb('test-mistakes');
+    await recordAnswer(v2, 'calling-in-sick', false, db);
+    await recordAnswer(phrase, 'calling-in-sick', false, db);
+    await recordAnswer(v2, 'calling-in-sick', false, db);
+    const memory = await mistakeMemory(Date.now(), db);
+    expect(memory.recurring[0]).toBe('v2-word-order');
+    expect(memory.missed).toEqual(['a2-sick-11', 'a2-sick-08']);
+  });
+
+  it('lets correct answers clear a mistake', async () => {
+    db = new TjuvstartDb('test-recovery');
+    await recordAnswer(v2, 'calling-in-sick', false, db);
+    await recordAnswer(v2, 'calling-in-sick', true, db);
+    await recordAnswer(v2, 'calling-in-sick', true, db);
+    const memory = await mistakeMemory(Date.now(), db);
+    expect(memory.recurring).toEqual([]);
+    expect(memory.missed).toEqual([]);
+    expect(memory.recentlyCorrect.has('a2-sick-11')).toBe(true);
   });
 });

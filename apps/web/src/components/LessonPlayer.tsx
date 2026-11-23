@@ -8,6 +8,7 @@ import {
   type Segment,
 } from '../content/packs';
 import type { Lesson } from '../content/types';
+import { lessonIdForItem, readingTextFor } from '../content/lessons';
 import { cardLevel, cardsInText } from '../content/vocab';
 import { completeLesson, recordAnswer } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
@@ -20,32 +21,38 @@ interface Props {
   lesson: Lesson;
   /** The learner's language packs, native language first. */
   packs?: readonly LanguagePack[];
+  /**
+   * A practice session mixes items from several lessons: each reading item shows its own
+   * lesson's text, answers are recorded against that lesson, and nothing is marked completed.
+   */
+  practice?: boolean;
 }
 
-export function LessonPlayer({ lesson, packs = [] }: Props) {
+export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
   const { t } = useI18n();
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [score, setScore] = useState(0);
 
-  const segments = useMemo(
-    () => (lesson.text ? annotate(lesson.text, packs) : []),
-    [lesson.text, packs],
-  );
-  const contrasts = useMemo(() => contrastsFor(lesson.id, packs), [lesson.id, packs]);
-
   const item = lesson.items[index];
+  const text = practice ? (item ? readingTextFor(item) : undefined) : lesson.text;
+  const segments = useMemo(() => (text ? annotate(text, packs) : []), [text, packs]);
+  const contrasts = useMemo(
+    () => (practice ? [] : contrastsFor(lesson.id, packs)),
+    [practice, lesson.id, packs],
+  );
+
   const finished = !item;
   const [newCards, setNewCards] = useState(0);
   const saved = useRef(false);
 
   useEffect(() => {
-    if (!finished || saved.current) return;
+    if (!finished || saved.current || practice) return;
     saved.current = true;
     // Words from the lesson text at the lesson's level go to the learner's word cards.
     const cards = cardsInText(lesson.text ?? '').filter((id) => cardLevel(id) === lesson.level);
     void completeLesson(lesson.id, score, lesson.items.length, cards).then(setNewCards);
-  }, [finished, lesson, score]);
+  }, [finished, lesson, score, practice]);
 
   if (!item) {
     return (
@@ -74,7 +81,11 @@ export function LessonPlayer({ lesson, packs = [] }: Props) {
     const correct = isCorrect(item, response);
     setFeedback({ correct, answer: correctAnswer(item) });
     if (correct) setScore((s) => s + 1);
-    await recordAnswer(item, lesson.id, correct);
+    await recordAnswer(
+      item,
+      practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id,
+      correct,
+    );
   }
 
   function next() {
@@ -90,7 +101,7 @@ export function LessonPlayer({ lesson, packs = [] }: Props) {
       <h1 id="lesson-heading" lang="nb">
         {lesson.title}
       </h1>
-      {lesson.text && <ReadingText segments={segments} />}
+      {text && <ReadingText key={text} segments={segments} />}
 
       {contrasts.map((contrast) => (
         <details

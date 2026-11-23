@@ -27,6 +27,16 @@ public sealed class ContentValidatorTests : IDisposable
     }
 
     [Fact]
+    public void Unknown_focus_points_are_rejected()
+    {
+        _content.WriteDescriptors(("A2-W-01", "writing"));
+        var item = ContentFixture.Gap("item-1").Replace("\"difficulty\"", "\"focus\": [\"made-up\"], \"difficulty\"");
+        _content.WriteLesson("lesson-a", item);
+
+        Assert.Contains(Validate(), i => i.Message.StartsWith("Schema:"));
+    }
+
+    [Fact]
     public void Missing_folder_is_reported()
     {
         var issue = Assert.Single(ContentValidator.Validate(ContentLoader.Load(Path.Combine(_content.Root, "nope"))));

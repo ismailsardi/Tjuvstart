@@ -8,6 +8,8 @@ import { DeckSession } from './components/DeckSession';
 import { LessonList } from './components/LessonList';
 import { Me } from './components/Me';
 import { NavBar } from './components/NavBar';
+import { Placement } from './components/Placement';
+import { Practice } from './components/Practice';
 import { Words } from './components/Words';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
@@ -31,7 +33,7 @@ export function App() {
   return (
     <I18nProvider language={language}>
       <UpdatePrompt />
-      {!needsOnboarding && route.name !== 'lesson' && route.name !== 'deck' && (
+      {!needsOnboarding && !['lesson', 'deck', 'placement', 'practice'].includes(route.name) && (
         <NavBar route={route} />
       )}
       <main className="shell" lang={language}>
@@ -65,6 +67,8 @@ function Page({
   if (route.name === 'deck')
     return <DeckSession key={route.deckId} deckId={route.deckId} packs={packs} />;
   if (route.name === 'me') return <Me packs={packs} />;
+  if (route.name === 'placement') return <Placement />;
+  if (route.name === 'practice') return <Practice packs={packs} />;
   if (route.name !== 'lesson') return <Home packs={packs} />;
 
   const lesson = getLesson(route.lessonId);

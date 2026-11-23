@@ -1,4 +1,4 @@
-import type { Lesson } from './types';
+import type { Item, Lesson } from './types';
 
 // Lessons are bundled at build time, so they are precached by the service worker and work offline.
 const modules = import.meta.glob<Lesson>('../../../../content/lessons/**/*.json', {
@@ -16,4 +16,27 @@ export const lessons: readonly Lesson[] = Object.values(modules).sort(
 
 export function getLesson(id: string): Lesson | undefined {
   return lessons.find((lesson) => lesson.id === id);
+}
+
+/** Every item across all lessons, for placement and practice sessions. */
+export const allItems: readonly Item[] = lessons.flatMap((lesson) => lesson.items);
+
+const lessonOfItem = new Map(
+  lessons.flatMap((lesson) => lesson.items.map((item) => [item.id, lesson.id] as const)),
+);
+const itemsById = new Map(allItems.map((item) => [item.id, item]));
+
+export function lessonIdForItem(itemId: string): string | undefined {
+  return lessonOfItem.get(itemId);
+}
+
+export function getItem(itemId: string): Item | undefined {
+  return itemsById.get(itemId);
+}
+
+/** The text a reading item asks about, taken from the lesson it belongs to. */
+export function readingTextFor(item: Item): string | undefined {
+  if (item.skill !== 'reading') return undefined;
+  const lessonId = lessonOfItem.get(item.id);
+  return lessonId ? getLesson(lessonId)?.text : undefined;
 }

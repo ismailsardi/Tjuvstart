@@ -6,3 +6,9 @@ export { LEVELS, LEVEL_BASE, MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel } from './l
 export type { Level } from './levels';
 export { DAY_MS, isDue, newCardState, review } from './srs';
 export type { CardState, Grade } from './srs';
+export { RECURRING_THRESHOLD, mistakeScores, recurringMistakes } from './mistakes';
+export type { TaggedAnswer } from './mistakes';
+export { buildSession } from './session';
+export type { SessionItem, SessionOptions } from './session';
+export { PLACEMENT_K, nextPlacementItem, recordPlacementAnswer, startPlacement } from './placement';
+export type { PlacementState } from './placement';

@@ -1,13 +1,15 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { LanguagePack } from '../content/packs';
-import { getProfile } from '../data/progress';
+import { getProfile, mistakeMemory } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { languagesHref } from '../routing/useHashRoute';
+import { languagesHref, placementHref } from '../routing/useHashRoute';
+import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
 
 export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
+  const memory = useLiveQuery(() => mistakeMemory());
   const languageNames =
     packs.length > 0 ? packs.map((pack) => pack.nativeName).join(', ') : t('otherLanguage');
   return (
@@ -16,6 +18,11 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
       <section className="panel" aria-labelledby="me-level">
         <h2 id="me-level">{t('yourLevel')}</h2>
         <SkillLevels profile={profile} />
+        <a href={placementHref}>{t('redoPlacement')}</a>
+      </section>
+      <section className="panel" aria-labelledby="me-mistakes">
+        <h2 id="me-mistakes">{t('recurringMistakes')}</h2>
+        <MistakeList focus={memory?.recurring ?? []} />
       </section>
       <section className="panel" aria-label={t('languages', { languages: '' })}>
         <p data-testid="languages">

@@ -1,4 +1,14 @@
-import { DEFAULT_RATING, newCardState, review, updateRating, type Grade } from '@tjuvstart/engine';
+import {
+  DEFAULT_RATING,
+  MIN_ANSWERS_FOR_ESTIMATE,
+  mistakeScores,
+  newCardState,
+  recurringMistakes,
+  review,
+  updateRating,
+  type Grade,
+} from '@tjuvstart/engine';
+import { getItem } from '../content/lessons';
 import { SKILLS, type Item, type Skill } from '../content/types';
 import { db as defaultDb, GUEST_ID, type Profile, type TjuvstartDb } from './db';
 
@@ -117,4 +127,58 @@ export async function completeLesson(
     lastCompletedAt: now,
   });
   return addCards(cardIds, now, db);
+}
+
+/** Saves placement results: ratings replace the old ones and count as enough for an estimate. */
+export async function savePlacement(
+  ratings: Partial<Record<Skill, number>>,
+  now = Date.now(),
+  db: TjuvstartDb = defaultDb,
+): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    const updated: Profile = {
+      ...profile,
+      ratings: { ...profile.ratings },
+      answers: { ...profile.answers },
+      placedAt: now,
+    };
+    for (const [skill, rating] of Object.entries(ratings) as [Skill, number][]) {
+      updated.ratings[skill] = rating;
+      updated.answers[skill] = Math.max(profile.answers[skill], MIN_ANSWERS_FOR_ESTIMATE);
+    }
+    await db.profiles.put(updated);
+  });
+}
+
+export interface MistakeMemory {
+  /** Focus points the learner keeps getting wrong, worst first. */
+  recurring: string[];
+  /** Items whose latest answer was wrong, most recent first. */
+  missed: string[];
+  /** Items answered correctly in the last day, left out of practice. */
+  recentlyCorrect: Set<string>;
+}
+
+const DAY = 24 * 60 * 60 * 1000;
+
+/** Reads the answer history and works out recurring mistakes and items worth retrying. */
+export async function mistakeMemory(
+  now = Date.now(),
+  db: TjuvstartDb = defaultDb,
+): Promise<MistakeMemory> {
+  const attempts = await db.attempts.orderBy('at').toArray();
+  const scores = mistakeScores(
+    attempts.map((a) => ({ focus: getItem(a.itemId)?.focus ?? [], correct: a.correct })),
+  );
+  const latest = new Map<string, (typeof attempts)[number]>();
+  for (const attempt of attempts) latest.set(attempt.itemId, attempt);
+  const newestFirst = [...latest.values()].sort((a, b) => b.at - a.at);
+  return {
+    recurring: recurringMistakes(scores),
+    missed: newestFirst.filter((a) => !a.correct).map((a) => a.itemId),
+    recentlyCorrect: new Set(
+      newestFirst.filter((a) => a.correct && now - a.at < DAY).map((a) => a.itemId),
+    ),
+  };
 }
