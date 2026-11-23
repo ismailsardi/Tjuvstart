@@ -1,0 +1,554 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "basics",
+  "title": "Småord og hverdagsord",
+  "cards": [
+    {
+      "id": "jeg",
+      "nb": "jeg",
+      "pos": "pronoun",
+      "forms": ["jeg"],
+      "example": "Jeg heter Sara."
+    },
+    {
+      "id": "meg",
+      "nb": "meg",
+      "pos": "pronoun",
+      "forms": ["meg"],
+      "example": "Kan du hjelpe meg?"
+    },
+    {
+      "id": "du",
+      "nb": "du",
+      "pos": "pronoun",
+      "forms": ["du"],
+      "example": "Hvor bor du?"
+    },
+    {
+      "id": "han",
+      "nb": "han",
+      "pos": "pronoun",
+      "forms": ["han"],
+      "example": "Han heter Lars."
+    },
+    {
+      "id": "vi",
+      "nb": "vi",
+      "pos": "pronoun",
+      "forms": ["vi"],
+      "example": "Vi spiser lunsj nå."
+    },
+    {
+      "id": "det",
+      "nb": "det",
+      "pos": "pronoun",
+      "forms": ["det"],
+      "example": "Det er mandag i dag."
+    },
+    {
+      "id": "min",
+      "nb": "min",
+      "pos": "determiner",
+      "forms": ["min", "mitt", "mine"],
+      "example": "Sjefen min heter Lars."
+    },
+    {
+      "id": "din",
+      "nb": "din",
+      "pos": "determiner",
+      "forms": ["din", "ditt", "dine"],
+      "example": "Billetten din gjelder."
+    },
+    {
+      "id": "en",
+      "nb": "en",
+      "pos": "determiner",
+      "forms": ["en"],
+      "example": "Jeg har en jobb."
+    },
+    {
+      "id": "et",
+      "nb": "et",
+      "pos": "determiner",
+      "forms": ["et"],
+      "example": "Vi har et møte."
+    },
+    {
+      "id": "ett",
+      "nb": "ett",
+      "pos": "number",
+      "forms": ["ett"],
+      "example": "Leiligheten har ett soverom."
+    },
+    {
+      "id": "vaere",
+      "nb": "være",
+      "pos": "verb",
+      "forms": ["være", "er", "var", "vært"],
+      "example": "Jeg er ny her."
+    },
+    {
+      "id": "ha",
+      "nb": "ha",
+      "pos": "verb",
+      "forms": ["ha", "har", "hadde", "hatt"],
+      "example": "Vi har et møte."
+    },
+    {
+      "id": "kunne",
+      "nb": "kunne",
+      "pos": "verb",
+      "forms": ["kunne", "kan"],
+      "example": "Kan du ta møtet?"
+    },
+    {
+      "id": "skulle",
+      "nb": "skulle",
+      "pos": "verb",
+      "forms": ["skulle", "skal"],
+      "example": "Jeg skal jobbe i Oslo."
+    },
+    {
+      "id": "a",
+      "nb": "å",
+      "pos": "preposition",
+      "forms": ["å"],
+      "example": "Husk å sende meldingen."
+    },
+    {
+      "id": "og",
+      "nb": "og",
+      "pos": "conjunction",
+      "forms": ["og"],
+      "example": "Jeg bor og jobber i Oslo."
+    },
+    {
+      "id": "i",
+      "nb": "i",
+      "pos": "preposition",
+      "forms": ["i"],
+      "example": "Jeg bor i Oslo."
+    },
+    {
+      "id": "pa",
+      "nb": "på",
+      "pos": "preposition",
+      "forms": ["på"],
+      "example": "Leiligheten er på Tøyen."
+    },
+    {
+      "id": "til",
+      "nb": "til",
+      "pos": "preposition",
+      "forms": ["til"],
+      "example": "Jeg går til jobben."
+    },
+    {
+      "id": "fra",
+      "nb": "fra",
+      "pos": "preposition",
+      "forms": ["fra"],
+      "example": "Ledig fra 1. februar."
+    },
+    {
+      "id": "med",
+      "nb": "med",
+      "pos": "preposition",
+      "forms": ["med"],
+      "example": "Stue med kjøkken."
+    },
+    {
+      "id": "for",
+      "nb": "for",
+      "pos": "preposition",
+      "forms": ["for"],
+      "example": "Han presenterer meg for kollegene."
+    },
+    {
+      "id": "om",
+      "nb": "om",
+      "pos": "preposition",
+      "forms": ["om"],
+      "example": "Vi har et møte om prosjektet."
+    },
+    {
+      "id": "hos",
+      "nb": "hos",
+      "pos": "preposition",
+      "forms": ["hos"],
+      "example": "Jeg har time hos legen."
+    },
+    {
+      "id": "etter",
+      "nb": "etter",
+      "pos": "preposition",
+      "forms": ["etter"],
+      "example": "Etter lunsj har vi et møte."
+    },
+    {
+      "id": "mellom",
+      "nb": "mellom",
+      "pos": "preposition",
+      "forms": ["mellom"],
+      "example": "Trikken går mellom sentrum og Storo."
+    },
+    {
+      "id": "som",
+      "nb": "som",
+      "pos": "conjunction",
+      "forms": ["som"],
+      "example": "Jeg jobber som utvikler."
+    },
+    {
+      "id": "sa",
+      "nb": "så",
+      "pos": "adverb",
+      "forms": ["så"],
+      "example": "Jeg er syk, så jeg blir hjemme."
+    },
+    {
+      "id": "hvis",
+      "nb": "hvis",
+      "pos": "conjunction",
+      "forms": ["hvis"],
+      "example": "Send en SMS hvis du har spørsmål."
+    },
+    {
+      "id": "fordi",
+      "nb": "fordi",
+      "pos": "conjunction",
+      "forms": ["fordi"],
+      "example": "Jeg tar bussen fordi trikken ikke går."
+    },
+    {
+      "id": "enn",
+      "nb": "enn",
+      "pos": "conjunction",
+      "forms": ["enn"],
+      "example": "Mer enn tre dager."
+    },
+    {
+      "id": "ogsa",
+      "nb": "også",
+      "pos": "adverb",
+      "forms": ["også"],
+      "example": "Billetten gjelder også på bussen."
+    },
+    {
+      "id": "ikke",
+      "nb": "ikke",
+      "pos": "adverb",
+      "forms": ["ikke"],
+      "example": "Trikken går ikke."
+    },
+    {
+      "id": "ingen",
+      "nb": "ingen",
+      "pos": "determiner",
+      "forms": ["ingen"],
+      "example": "Ingen husdyr."
+    },
+    {
+      "id": "her",
+      "nb": "her",
+      "pos": "adverb",
+      "forms": ["her"],
+      "example": "Jeg er ny her."
+    },
+    {
+      "id": "hver",
+      "nb": "hver",
+      "pos": "determiner",
+      "forms": ["hver", "hvert"],
+      "example": "Bussen går hvert tiende minutt."
+    },
+    {
+      "id": "mer",
+      "nb": "mer",
+      "pos": "adverb",
+      "forms": ["mer"],
+      "example": "Jeg vil lære mer norsk."
+    },
+    {
+      "id": "hei",
+      "nb": "hei",
+      "pos": "interjection",
+      "forms": ["hei"],
+      "example": "Hei! Jeg heter Sara."
+    },
+    {
+      "id": "takk",
+      "nb": "takk",
+      "pos": "interjection",
+      "forms": ["takk"],
+      "example": "Takk for beskjed!"
+    },
+    {
+      "id": "god",
+      "nb": "god",
+      "pos": "adjective",
+      "forms": ["god", "godt", "gode"],
+      "example": "God morgen!"
+    },
+    {
+      "id": "ny",
+      "nb": "ny",
+      "pos": "adjective",
+      "forms": ["ny", "nytt", "nye"],
+      "example": "Et nytt prosjekt."
+    },
+    {
+      "id": "forste",
+      "nb": "første",
+      "pos": "number",
+      "forms": ["første"],
+      "example": "Min første dag på jobben."
+    },
+    {
+      "id": "viktig",
+      "nb": "viktig",
+      "pos": "adjective",
+      "forms": ["viktig", "viktige"],
+      "example": "Viktig informasjon!"
+    },
+    {
+      "id": "dag",
+      "nb": "dag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["dag", "dagen", "dager", "dagene"],
+      "example": "I dag er det mandag."
+    },
+    {
+      "id": "morgen",
+      "nb": "morgen",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["morgen", "morgenen"],
+      "example": "Om morgenen tar jeg bussen."
+    },
+    {
+      "id": "maned",
+      "nb": "måned",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["måned", "måneden", "måneder", "måneders"],
+      "example": "Husleien er 14 500 kroner i måneden."
+    },
+    {
+      "id": "klokke",
+      "nb": "klokke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["klokke", "klokka", "klokken"],
+      "example": "Vi spiser lunsj klokka elleve."
+    },
+    {
+      "id": "halv",
+      "nb": "halv",
+      "pos": "adjective",
+      "forms": ["halv", "halvt", "halve"],
+      "example": "Klokka er halv tolv."
+    },
+    {
+      "id": "tre",
+      "nb": "tre",
+      "pos": "number",
+      "forms": ["tre"],
+      "example": "Tre måneders husleie."
+    },
+    {
+      "id": "seks",
+      "nb": "seks",
+      "pos": "number",
+      "forms": ["seks"],
+      "example": "Bussen går fra klokka seks."
+    },
+    {
+      "id": "ti",
+      "nb": "ti",
+      "pos": "number",
+      "forms": ["ti"],
+      "example": "Jeg har time klokka ti."
+    },
+    {
+      "id": "tolv",
+      "nb": "tolv",
+      "pos": "number",
+      "forms": ["tolv"],
+      "example": "Møtet starter klokka tolv."
+    },
+    {
+      "id": "tredje",
+      "nb": "tredje",
+      "pos": "number",
+      "forms": ["tredje"],
+      "example": "Leiligheten er i tredje etasje."
+    },
+    {
+      "id": "tiende",
+      "nb": "tiende",
+      "pos": "number",
+      "forms": ["tiende"],
+      "example": "Bussen går hvert tiende minutt."
+    },
+    {
+      "id": "minutt",
+      "nb": "minutt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["minutt", "minuttet", "minutter"],
+      "example": "Bussen kommer om fem minutter."
+    },
+    {
+      "id": "mandag",
+      "nb": "mandag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mandag"],
+      "example": "På mandag begynner jeg i ny jobb."
+    },
+    {
+      "id": "fredag",
+      "nb": "fredag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fredag"],
+      "example": "Vi spiser pizza på fredag."
+    },
+    {
+      "id": "sondag",
+      "nb": "søndag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["søndag"],
+      "example": "Visningen er på søndag."
+    },
+    {
+      "id": "februar",
+      "nb": "februar",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["februar"],
+      "example": "Ledig fra 1. februar."
+    },
+    {
+      "id": "mars",
+      "nb": "mars",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mars"],
+      "example": "Fra 3. mars går ikke trikken."
+    },
+    {
+      "id": "krone",
+      "nb": "krone",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["krone", "krona", "kronen", "kroner"],
+      "example": "Billetten koster 45 kroner."
+    },
+    {
+      "id": "sporsmal",
+      "nb": "spørsmål",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["spørsmål", "spørsmålet"],
+      "example": "Har du spørsmål?"
+    },
+    {
+      "id": "sms",
+      "nb": "sms",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sms"],
+      "example": "Send meg en SMS."
+    },
+    {
+      "id": "hete",
+      "nb": "hete",
+      "pos": "verb",
+      "forms": ["hete", "heter", "het"],
+      "example": "Jeg heter Ahmed."
+    },
+    {
+      "id": "spise",
+      "nb": "spise",
+      "pos": "verb",
+      "forms": ["spise", "spiser", "spiste"],
+      "example": "Vi spiser lunsj sammen."
+    },
+    {
+      "id": "vise",
+      "nb": "vise",
+      "pos": "verb",
+      "forms": ["vise", "viser", "viste"],
+      "example": "Han viser meg kontoret."
+    },
+    {
+      "id": "komme",
+      "nb": "komme",
+      "pos": "verb",
+      "forms": ["komme", "kommer", "kom"],
+      "example": "Jeg kommer ikke på jobb i dag."
+    },
+    {
+      "id": "ga",
+      "nb": "gå",
+      "pos": "verb",
+      "forms": ["gå", "går", "gikk"],
+      "example": "Bussen går hvert tiende minutt."
+    },
+    {
+      "id": "ta",
+      "nb": "ta",
+      "pos": "verb",
+      "forms": ["ta", "tar", "tok"],
+      "example": "Ta buss 31T i stedet."
+    },
+    {
+      "id": "sporre",
+      "nb": "spørre",
+      "pos": "verb",
+      "forms": ["spørre", "spør", "spurte"],
+      "example": "Spør sjåføren."
+    },
+    {
+      "id": "skrive",
+      "nb": "skrive",
+      "pos": "verb",
+      "forms": ["skrive", "skriver", "skrev"],
+      "example": "Ahmed skriver til sjefen."
+    },
+    {
+      "id": "svare",
+      "nb": "svare",
+      "pos": "verb",
+      "forms": ["svare", "svarer", "svarte"],
+      "example": "Lars svarer med en gang."
+    },
+    {
+      "id": "sende",
+      "nb": "sende",
+      "pos": "verb",
+      "forms": ["sende", "send", "sender", "sendte"],
+      "example": "Send en SMS til Kari."
+    },
+    {
+      "id": "huske",
+      "nb": "huske",
+      "pos": "verb",
+      "forms": ["huske", "husk", "husker", "husket"],
+      "example": "Husk å sende sykmeldingen."
+    },
+    {
+      "id": "sted",
+      "nb": "sted",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["sted", "stedet", "steder"],
+      "example": "Ta bussen i stedet."
+    }
+  ]
+}

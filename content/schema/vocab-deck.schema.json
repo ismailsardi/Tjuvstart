@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/vocab-deck.schema.json",
+  "title": "Word card deck",
+  "description": "Word cards for one CEFR level and topic. Meanings and memory hooks live in the native-language packs, keyed by card id.",
+  "type": "object",
+  "required": ["level", "topic", "title", "cards"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "level": { "enum": ["A1", "A2", "B1", "B2"] },
+    "topic": { "$ref": "#/$defs/slug" },
+    "title": { "description": "Deck title in Norwegian.", "type": "string", "minLength": 1 },
+    "cards": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/card" } }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "card": {
+      "type": "object",
+      "required": ["id", "nb", "pos", "forms", "example"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "nb": { "description": "Dictionary form.", "type": "string", "minLength": 1 },
+        "pos": {
+          "enum": [
+            "noun",
+            "verb",
+            "adjective",
+            "adverb",
+            "pronoun",
+            "determiner",
+            "preposition",
+            "conjunction",
+            "number",
+            "interjection",
+            "phrase"
+          ]
+        },
+        "gender": {
+          "description": "Article for nouns: en (masculine), ei (feminine) or et (neuter).",
+          "enum": ["en", "ei", "et"]
+        },
+        "forms": {
+          "description": "Every form to recognise in texts, lower case.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[a-zæøå]+$" }
+        },
+        "example": { "description": "A short example sentence.", "type": "string", "minLength": 1 }
+      },
+      "if": { "properties": { "pos": { "const": "noun" } } },
+      "then": { "required": ["gender"] }
+    }
+  }
+}

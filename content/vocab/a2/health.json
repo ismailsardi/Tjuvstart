@@ -1,0 +1,77 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "health",
+  "title": "Helse",
+  "cards": [
+    {
+      "id": "syk",
+      "nb": "syk",
+      "pos": "adjective",
+      "forms": ["syk", "sykt", "syke"],
+      "example": "Jeg er syk i dag."
+    },
+    {
+      "id": "feber",
+      "nb": "feber",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["feber", "feberen"],
+      "example": "Jeg har feber."
+    },
+    {
+      "id": "hals",
+      "nb": "hals",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hals", "halsen"],
+      "example": "Jeg har vondt i halsen."
+    },
+    {
+      "id": "vondt",
+      "nb": "vondt",
+      "pos": "adjective",
+      "forms": ["vondt"],
+      "example": "Jeg har vondt i hodet."
+    },
+    {
+      "id": "lege",
+      "nb": "lege",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lege", "legen", "leger"],
+      "example": "Jeg har time hos legen."
+    },
+    {
+      "id": "time",
+      "nb": "time",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["time", "timen", "timer"],
+      "example": "Jeg har bestilt time hos legen."
+    },
+    {
+      "id": "bestille",
+      "nb": "bestille",
+      "pos": "verb",
+      "forms": ["bestille", "bestiller", "bestilte", "bestilt"],
+      "example": "Jeg har bestilt time."
+    },
+    {
+      "id": "bedring",
+      "nb": "bedring",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["bedring"],
+      "example": "God bedring!"
+    },
+    {
+      "id": "sykmelding",
+      "nb": "sykmelding",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sykmelding", "sykmeldingen"],
+      "example": "Send meg sykmeldingen."
+    }
+  ]
+}

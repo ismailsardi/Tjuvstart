@@ -6,7 +6,11 @@ public sealed record Descriptor(string Id, string Level, string Skill, string Te
 
 public sealed record LessonItem(string Id, string Skill, string Level, IReadOnlyList<string> Descriptors);
 
-public sealed record Lesson(string Id, string Level, string Title, string File, IReadOnlyList<LessonItem> Items);
+public sealed record Lesson(
+    string Id, string Level, string Title, string File, IReadOnlyList<LessonItem> Items, string? Text = null);
+
+/// <summary>A word card. Meanings live in the language packs, keyed by <see cref="Id"/>.</summary>
+public sealed record Card(string Id, string Level, string Nb, IReadOnlyList<string> Forms, string File);
 
 /// <summary>A native-language pack, reduced to what cross-file checks need.</summary>
 public sealed record LanguagePack(
@@ -15,11 +19,18 @@ public sealed record LanguagePack(
     string File,
     IReadOnlyList<string> Forms,
     IReadOnlyList<string> ItemNoteIds,
-    IReadOnlyList<string> LessonRefs);
+    IReadOnlyList<string> LessonRefs,
+    IReadOnlyList<string>? WordIds = null);
 
 /// <summary>Everything loaded from a content folder, plus the problems found while loading it.</summary>
 public sealed record ContentSet(
     IReadOnlyList<Descriptor> Descriptors,
     IReadOnlyList<Lesson> Lessons,
     IReadOnlyList<LanguagePack> Packs,
-    IReadOnlyList<ValidationIssue> Issues);
+    IReadOnlyList<ValidationIssue> Issues)
+{
+    public IReadOnlyList<Card> Cards { get; init; } = [];
+
+    /// <summary>Lesson-text words that need no card, such as names.</summary>
+    public IReadOnlySet<string> IgnoredWords { get; init; } = new HashSet<string>();
+}

@@ -1,12 +1,13 @@
 # Content
 
-Lessons, native-language packs and the CEFR descriptor map, stored as JSON so they can be reviewed in pull requests and bundled into the app at build time.
+Lessons, word cards, native-language packs and the CEFR descriptor map, stored as JSON so they can be reviewed in pull requests and bundled into the app at build time.
 
 ```
 descriptors.json        CEFR can-do statements with stable IDs, e.g. A2-R-01
 lessons/<level>/*.json  one file per lesson
 l1/<language>/pack.json native-language pack, folder named by ISO 639-1 code
-schema/                 JSON Schemas for all three file types
+vocab/<level>/*.json    word card decks (see vocab/README.md)
+schema/                 JSON Schemas for each file type
 ```
 
 ## Items
@@ -31,6 +32,7 @@ A pack helps speakers of one language: it never changes the Norwegian content, o
 | `falseFriends`    | Words that look familiar but mean something else (`looksLike` names the trap). Highlighted in amber.    |
 | `contrasts`       | Grammar notes on where Norwegian differs, shown as tips on the lessons listed in `lessons`.             |
 | `itemNotes`       | A short explanation shown after answering the item, keyed by item ID.                                   |
+| `words`           | Meaning and optional memory hook for each word card, keyed by card id.                                  |
 | `lessonSummaries` | The lesson summary in the learner's language.                                                           |
 
 `forms` lists every inflected form to match in texts, in lower case. When a learner knows several languages, their native pack wins, then the others in the order they picked them. Text in a pack is written in that language, so the French pack is written in French.
@@ -42,4 +44,4 @@ dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate conte
 dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage content
 ```
 
-`validate` checks JSON Schema conformance, unique IDs, descriptor references and answer keys, and that packs only reference lessons and items that exist. `coverage` lists how many lessons and items cover each descriptor; CI publishes it in the job summary. `--enforce A2` makes gaps at a level fail the build, which will be switched on once A2 content is complete.
+`validate` checks JSON Schema conformance, unique IDs, descriptor references and answer keys, that packs only reference lessons and items that exist, and that every word card has a meaning in every pack. `coverage` lists how many lessons and items cover each descriptor, and which lesson words have no word card yet; CI publishes it in the job summary. `--enforce A2` makes gaps at a level fail the build, which will be switched on once A2 content is complete.

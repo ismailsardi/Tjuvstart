@@ -34,7 +34,7 @@ switch (command)
             Console.Error.WriteLine($"{issue.File}: {issue.Message}");
         }
         Console.WriteLine(issues.Count == 0
-            ? $"Content is valid: {Plural(content.Descriptors.Count, "descriptor")}, {Plural(content.Lessons.Count, "lesson")}, {Plural(content.Lessons.Sum(l => l.Items.Count), "item")}, {Plural(content.Packs.Count, "language pack")}."
+            ? $"Content is valid: {Plural(content.Descriptors.Count, "descriptor")}, {Plural(content.Lessons.Count, "lesson")}, {Plural(content.Lessons.Sum(l => l.Items.Count), "item")}, {Plural(content.Cards.Count, "word card")}, {Plural(content.Packs.Count, "language pack")}."
             : $"Found {issues.Count} problem(s).");
         return issues.Count == 0 ? 0 : 1;
 
@@ -46,7 +46,7 @@ switch (command)
         }
 
         var report = CoverageReport.Build(content);
-        var markdown = report.ToMarkdown();
+        var markdown = report.ToMarkdown() + VocabularyCoverage.ToMarkdown(VocabularyCoverage.Build(content));
         Console.WriteLine(markdown);
         if (options.SummaryFile is { } summaryFile)
         {

@@ -198,5 +198,415 @@
     "a2-sick-08": "«Time» here means an appointment. «En time» can also mean an hour.",
     "a2-sick-10": "«Så» here means so, as a result: «Jeg er syk, så jeg blir hjemme».",
     "a2-sick-11": "«I morgen» comes first, so the verb «kommer» moves before «jeg»."
+  },
+  "words": {
+    "jeg": {
+      "meaning": "I"
+    },
+    "meg": {
+      "meaning": "me",
+      "hook": "jeg → meg, like I → me."
+    },
+    "du": {
+      "meaning": "you (one person)",
+      "hook": "Norwegians say «du» to almost everyone, even the boss."
+    },
+    "han": {
+      "meaning": "he"
+    },
+    "vi": {
+      "meaning": "we"
+    },
+    "det": {
+      "meaning": "it, that, there",
+      "hook": "«Det er» covers «it is» and «there is»."
+    },
+    "min": {
+      "meaning": "my",
+      "hook": "The possessive usually comes after the noun: «sjefen min»."
+    },
+    "din": {
+      "meaning": "your (one person)"
+    },
+    "en": {
+      "meaning": "a, an; one"
+    },
+    "et": {
+      "meaning": "a, an (neuter nouns)",
+      "hook": "Learn each noun with its article: et møte, en jobb."
+    },
+    "ett": {
+      "meaning": "one (with neuter nouns)"
+    },
+    "vaere": {
+      "meaning": "to be",
+      "hook": "«Er» is the same for everyone: jeg er, du er, vi er."
+    },
+    "ha": {
+      "meaning": "to have"
+    },
+    "kunne": {
+      "meaning": "can, to be able to"
+    },
+    "skulle": {
+      "meaning": "will, shall, be going to",
+      "hook": "«Jeg skal» is the everyday way to talk about plans."
+    },
+    "a": {
+      "meaning": "to (before a verb)",
+      "hook": "«Å» marks the infinitive, like «to» in «to work»."
+    },
+    "og": {
+      "meaning": "and"
+    },
+    "i": {
+      "meaning": "in"
+    },
+    "pa": {
+      "meaning": "on, at, in",
+      "hook": "Areas of a city take «på»: på Tøyen, på Storo."
+    },
+    "til": {
+      "meaning": "to, until"
+    },
+    "fra": {
+      "meaning": "from"
+    },
+    "med": {
+      "meaning": "with"
+    },
+    "for": {
+      "meaning": "for; too (before an adjective)"
+    },
+    "om": {
+      "meaning": "about; in (time)"
+    },
+    "hos": {
+      "meaning": "at (someone's place)",
+      "hook": "«Hos» works exactly like French «chez»."
+    },
+    "etter": {
+      "meaning": "after"
+    },
+    "mellom": {
+      "meaning": "between"
+    },
+    "som": {
+      "meaning": "as; who, that"
+    },
+    "sa": {
+      "meaning": "so, then"
+    },
+    "hvis": {
+      "meaning": "if"
+    },
+    "fordi": {
+      "meaning": "because",
+      "hook": "After «fordi», «ikke» comes before the verb."
+    },
+    "enn": {
+      "meaning": "than"
+    },
+    "ogsa": {
+      "meaning": "also, too"
+    },
+    "ikke": {
+      "meaning": "not"
+    },
+    "ingen": {
+      "meaning": "no, none, nobody"
+    },
+    "her": {
+      "meaning": "here"
+    },
+    "hver": {
+      "meaning": "every, each",
+      "hook": "«Hvert tiende minutt» = every ten minutes."
+    },
+    "mer": {
+      "meaning": "more"
+    },
+    "hei": {
+      "meaning": "hi, hello"
+    },
+    "takk": {
+      "meaning": "thanks",
+      "hook": "Norwegians say «takk» a lot: takk for maten, takk for i dag."
+    },
+    "god": {
+      "meaning": "good"
+    },
+    "ny": {
+      "meaning": "new"
+    },
+    "forste": {
+      "meaning": "first"
+    },
+    "viktig": {
+      "meaning": "important"
+    },
+    "dag": {
+      "meaning": "day",
+      "hook": "«I dag» = today."
+    },
+    "morgen": {
+      "meaning": "morning",
+      "hook": "«I morgen» means tomorrow, «om morgenen» in the morning."
+    },
+    "maned": {
+      "meaning": "month"
+    },
+    "klokke": {
+      "meaning": "clock, watch; o'clock",
+      "hook": "«Klokka ti» = at ten o'clock."
+    },
+    "halv": {
+      "meaning": "half",
+      "hook": "«Halv tolv» is 11:30: half way to twelve."
+    },
+    "tre": {
+      "meaning": "three"
+    },
+    "seks": {
+      "meaning": "six"
+    },
+    "ti": {
+      "meaning": "ten"
+    },
+    "tolv": {
+      "meaning": "twelve"
+    },
+    "tredje": {
+      "meaning": "third"
+    },
+    "tiende": {
+      "meaning": "tenth"
+    },
+    "minutt": {
+      "meaning": "minute"
+    },
+    "mandag": {
+      "meaning": "Monday",
+      "hook": "Days are written with a small letter."
+    },
+    "fredag": {
+      "meaning": "Friday"
+    },
+    "sondag": {
+      "meaning": "Sunday"
+    },
+    "februar": {
+      "meaning": "February"
+    },
+    "mars": {
+      "meaning": "March"
+    },
+    "krone": {
+      "meaning": "krone (Norwegian money)"
+    },
+    "sporsmal": {
+      "meaning": "question"
+    },
+    "sms": {
+      "meaning": "text message"
+    },
+    "hete": {
+      "meaning": "to be called",
+      "hook": "«Jeg heter…» is how you say your name."
+    },
+    "spise": {
+      "meaning": "to eat"
+    },
+    "vise": {
+      "meaning": "to show"
+    },
+    "komme": {
+      "meaning": "to come"
+    },
+    "ga": {
+      "meaning": "to go, walk; to run (buses)",
+      "hook": "Buses and trams «går»: they go, they run."
+    },
+    "ta": {
+      "meaning": "to take"
+    },
+    "sporre": {
+      "meaning": "to ask"
+    },
+    "skrive": {
+      "meaning": "to write"
+    },
+    "svare": {
+      "meaning": "to answer"
+    },
+    "sende": {
+      "meaning": "to send"
+    },
+    "huske": {
+      "meaning": "to remember",
+      "hook": "«Husk!» = don't forget!"
+    },
+    "sted": {
+      "meaning": "place; «i stedet» = instead",
+      "hook": "«I stedet» = in (its) place, instead."
+    },
+    "jobb": {
+      "meaning": "job, work"
+    },
+    "jobbe": {
+      "meaning": "to work"
+    },
+    "arbeide": {
+      "meaning": "to work (more formal than «jobbe»)"
+    },
+    "kollega": {
+      "meaning": "colleague"
+    },
+    "kontor": {
+      "meaning": "office"
+    },
+    "kunde": {
+      "meaning": "customer, client"
+    },
+    "lunsj": {
+      "meaning": "lunch",
+      "hook": "Norwegians eat lunch early, often around 11:30."
+    },
+    "mote": {
+      "meaning": "meeting"
+    },
+    "prosjekt": {
+      "meaning": "project"
+    },
+    "presentere": {
+      "meaning": "to present, introduce"
+    },
+    "sjef": {
+      "meaning": "boss, manager",
+      "hook": "Not a cook! A cook is «en kokk»."
+    },
+    "utvikler": {
+      "meaning": "developer"
+    },
+    "beskjed": {
+      "meaning": "message, notice",
+      "hook": "«Takk for beskjed» = thanks for letting me know."
+    },
+    "hilsen": {
+      "meaning": "greeting; «Hilsen» = regards (at the end of a message)"
+    },
+    "midnatt": {
+      "meaning": "midnight"
+    },
+    "leie": {
+      "meaning": "to rent; «til leie» = for rent"
+    },
+    "leilighet": {
+      "meaning": "flat, apartment"
+    },
+    "toromsleilighet": {
+      "meaning": "two-room flat (living room and one bedroom)",
+      "hook": "to + rom + leilighet: two-room flat."
+    },
+    "stue": {
+      "meaning": "living room"
+    },
+    "kjokken": {
+      "meaning": "kitchen"
+    },
+    "soverom": {
+      "meaning": "bedroom",
+      "hook": "sove (sleep) + rom (room)."
+    },
+    "bad": {
+      "meaning": "bathroom, bath",
+      "hook": "Not «bad»! «Badet» is the bathroom."
+    },
+    "etasje": {
+      "meaning": "floor, storey"
+    },
+    "kvadratmeter": {
+      "meaning": "square metre"
+    },
+    "husleie": {
+      "meaning": "rent",
+      "hook": "hus (house) + leie (rent)."
+    },
+    "depositum": {
+      "meaning": "deposit"
+    },
+    "strom": {
+      "meaning": "electricity; current",
+      "hook": "«Strøm» is also a stream: electricity flows."
+    },
+    "inkludert": {
+      "meaning": "included"
+    },
+    "ledig": {
+      "meaning": "available, free"
+    },
+    "husdyr": {
+      "meaning": "pet",
+      "hook": "hus (house) + dyr (animal)."
+    },
+    "visning": {
+      "meaning": "viewing (of a flat)",
+      "hook": "From «vise», to show."
+    },
+    "lys": {
+      "meaning": "bright, light"
+    },
+    "buss": {
+      "meaning": "bus"
+    },
+    "trikk": {
+      "meaning": "tram"
+    },
+    "spor": {
+      "meaning": "track, rails"
+    },
+    "sjafor": {
+      "meaning": "driver"
+    },
+    "billett": {
+      "meaning": "ticket"
+    },
+    "gjelde": {
+      "meaning": "to be valid; to apply"
+    },
+    "informasjon": {
+      "meaning": "information"
+    },
+    "syk": {
+      "meaning": "ill, sick"
+    },
+    "feber": {
+      "meaning": "fever"
+    },
+    "hals": {
+      "meaning": "throat, neck"
+    },
+    "vondt": {
+      "meaning": "pain; «ha vondt i» = to have a pain in",
+      "hook": "«Jeg har vondt i…» + body part."
+    },
+    "lege": {
+      "meaning": "doctor"
+    },
+    "time": {
+      "meaning": "appointment; hour",
+      "hook": "Not «time»! «En time» is an hour or an appointment."
+    },
+    "bestille": {
+      "meaning": "to book, order"
+    },
+    "bedring": {
+      "meaning": "recovery, improvement",
+      "hook": "«God bedring!» = get well soon."
+    },
+    "sykmelding": {
+      "meaning": "doctor's sick note",
+      "hook": "syk (sick) + melding (message)."
+    }
   }
 }

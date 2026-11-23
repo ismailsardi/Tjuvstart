@@ -2,7 +2,8 @@ namespace Tjuvstart.ContentCli;
 
 /// <summary>
 /// Cross-file checks on loaded content: unique ids, known descriptor references, items whose
-/// skill and level agree with their descriptors, and language packs that point at real items.
+/// skill and level agree with their descriptors, language packs that point at real items,
+/// and word cards that have a meaning in every pack.
 /// </summary>
 public static class ContentValidator
 {
@@ -58,8 +59,33 @@ public static class ContentValidator
             }
         }
 
+        var cardIds = new Dictionary<string, string>(StringComparer.Ordinal);
+        foreach (var card in content.Cards)
+        {
+            if (!cardIds.TryAdd(card.Id, card.File))
+            {
+                issues.Add(new ValidationIssue(card.File, $"Duplicate card id '{card.Id}' (first defined in {cardIds[card.Id]})."));
+            }
+
+            foreach (var form in card.Forms.GroupBy(f => f).Where(g => g.Count() > 1).Select(g => g.Key))
+            {
+                issues.Add(new ValidationIssue(card.File, $"Card '{card.Id}' lists form '{form}' more than once."));
+            }
+        }
+
         foreach (var pack in content.Packs)
         {
+            var words = new HashSet<string>(pack.WordIds ?? [], StringComparer.Ordinal);
+            foreach (var cardId in cardIds.Keys.Where(id => !words.Contains(id)))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"No meaning for card '{cardId}'."));
+            }
+
+            foreach (var wordId in words.Where(id => !cardIds.ContainsKey(id)))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Meaning for unknown card '{wordId}'."));
+            }
+
             if (pack.Language != pack.Folder)
             {
                 issues.Add(new ValidationIssue(pack.File, $"Language '{pack.Language}' does not match folder '{pack.Folder}'."));

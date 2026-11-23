@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "transport",
+  "title": "Transport",
+  "cards": [
+    {
+      "id": "buss",
+      "nb": "buss",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["buss", "bussen", "busser"],
+      "example": "Jeg tar bussen til jobben."
+    },
+    {
+      "id": "trikk",
+      "nb": "trikk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["trikk", "trikken", "trikker"],
+      "example": "Trikken går ikke i dag."
+    },
+    {
+      "id": "spor",
+      "nb": "spor",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["spor", "sporet"],
+      "example": "De arbeider på sporet."
+    },
+    {
+      "id": "sjafor",
+      "nb": "sjåfør",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sjåfør", "sjåføren", "sjåfører"],
+      "example": "Spør sjåføren."
+    },
+    {
+      "id": "billett",
+      "nb": "billett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["billett", "billetten", "billetter"],
+      "example": "Billetten din gjelder også på bussen."
+    },
+    {
+      "id": "gjelde",
+      "nb": "gjelde",
+      "pos": "verb",
+      "forms": ["gjelde", "gjelder", "gjaldt"],
+      "example": "Billetten gjelder i en time."
+    },
+    {
+      "id": "informasjon",
+      "nb": "informasjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["informasjon", "informasjonen"],
+      "example": "Viktig informasjon!"
+    }
+  ]
+}
