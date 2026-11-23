@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Response } from '../content/answers';
+import { useI18n } from '../i18n/useI18n';
 import type { GapFillItem, Item, MultipleChoiceItem, WordOrderItem } from '../content/types';
 
 interface Props<T extends Item> {
@@ -20,9 +21,10 @@ export function ItemView({ item, ...rest }: Props<Item>) {
 }
 
 function MultipleChoice({ item, disabled, onSubmit }: Props<MultipleChoiceItem>) {
+  const { t } = useI18n();
   const [chosen, setChosen] = useState<number | null>(null);
   return (
-    <div className="options" role="group" aria-label="Answer options">
+    <div className="options" role="group" aria-label={t('answerOptions')}>
       {item.options.map((option, index) => (
         <button
           key={option}
@@ -43,6 +45,7 @@ function MultipleChoice({ item, disabled, onSubmit }: Props<MultipleChoiceItem>)
 }
 
 function GapFill({ item, disabled, onSubmit }: Props<GapFillItem>) {
+  const { t } = useI18n();
   const [value, setValue] = useState('');
   return (
     <form
@@ -53,7 +56,7 @@ function GapFill({ item, disabled, onSubmit }: Props<GapFillItem>) {
       }}
     >
       <label className="visually-hidden" htmlFor={`gap-${item.id}`}>
-        Missing word
+        {t('missingWord')}
       </label>
       <input
         id={`gap-${item.id}`}
@@ -66,13 +69,14 @@ function GapFill({ item, disabled, onSubmit }: Props<GapFillItem>) {
         lang="nb"
       />
       <button type="submit" disabled={disabled || !value.trim()}>
-        Check
+        {t('check')}
       </button>
     </form>
   );
 }
 
 function WordOrder({ item, disabled, onSubmit }: Props<WordOrderItem>) {
+  const { t } = useI18n();
   // Positions into item.tokens, in the order the learner picked them.
   const [picked, setPicked] = useState<number[]>([]);
   const remaining = item.tokens.map((_, index) => index).filter((index) => !picked.includes(index));
@@ -81,7 +85,7 @@ function WordOrder({ item, disabled, onSubmit }: Props<WordOrderItem>) {
     <div className="word-order">
       <p className="sentence" aria-live="polite" data-testid="sentence">
         {picked.length === 0 ? (
-          <span className="muted">Tap the words in the right order.</span>
+          <span className="muted">{t('tapWords')}</span>
         ) : (
           picked.map((index) => (
             <button
@@ -96,7 +100,7 @@ function WordOrder({ item, disabled, onSubmit }: Props<WordOrderItem>) {
           ))
         )}
       </p>
-      <div className="tokens" role="group" aria-label="Words">
+      <div className="tokens" role="group" aria-label={t('words')}>
         {remaining.map((index) => (
           <button
             key={index}
@@ -116,7 +120,7 @@ function WordOrder({ item, disabled, onSubmit }: Props<WordOrderItem>) {
           onSubmit({ kind: 'text', value: picked.map((index) => item.tokens[index]).join(' ') })
         }
       >
-        Check
+        {t('check')}
       </button>
     </div>
   );

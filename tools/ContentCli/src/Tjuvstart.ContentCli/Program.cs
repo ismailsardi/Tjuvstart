@@ -34,7 +34,7 @@ switch (command)
             Console.Error.WriteLine($"{issue.File}: {issue.Message}");
         }
         Console.WriteLine(issues.Count == 0
-            ? $"Content is valid: {Plural(content.Descriptors.Count, "descriptor")}, {Plural(content.Lessons.Count, "lesson")}, {Plural(content.Lessons.Sum(l => l.Items.Count), "item")}."
+            ? $"Content is valid: {Plural(content.Descriptors.Count, "descriptor")}, {Plural(content.Lessons.Count, "lesson")}, {Plural(content.Lessons.Sum(l => l.Items.Count), "item")}, {Plural(content.Packs.Count, "language pack")}."
             : $"Found {issues.Count} problem(s).");
         return issues.Count == 0 ? 0 : 1;
 

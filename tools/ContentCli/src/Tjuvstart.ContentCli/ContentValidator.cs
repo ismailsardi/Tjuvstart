@@ -1,8 +1,8 @@
 namespace Tjuvstart.ContentCli;
 
 /// <summary>
-/// Cross-file checks on loaded content: unique ids, known descriptor references, and items
-/// whose skill and level agree with the descriptors they claim to cover.
+/// Cross-file checks on loaded content: unique ids, known descriptor references, items whose
+/// skill and level agree with their descriptors, and language packs that point at real items.
 /// </summary>
 public static class ContentValidator
 {
@@ -55,6 +55,29 @@ public static class ContentValidator
                         issues.Add(new ValidationIssue(lesson.File, $"Item '{item.Id}' is level {item.Level} but descriptor '{reference}' is {descriptor.Level}."));
                     }
                 }
+            }
+        }
+
+        foreach (var pack in content.Packs)
+        {
+            if (pack.Language != pack.Folder)
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Language '{pack.Language}' does not match folder '{pack.Folder}'."));
+            }
+
+            foreach (var form in pack.Forms.GroupBy(f => f).Where(g => g.Count() > 1).Select(g => g.Key))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Word form '{form}' is listed more than once."));
+            }
+
+            foreach (var itemId in pack.ItemNoteIds.Where(id => !itemIds.ContainsKey(id)))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Note for unknown item '{itemId}'."));
+            }
+
+            foreach (var lessonId in pack.LessonRefs.Where(id => !lessonIds.ContainsKey(id)).Distinct())
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Reference to unknown lesson '{lessonId}'."));
             }
         }
 

@@ -7,6 +7,10 @@ export interface Profile {
   ratings: Record<Skill, number>;
   /** Number of answered items per skill. */
   answers: Record<Skill, number>;
+  /** ISO 639-1 code, or 'other' when Tjuvstart has no pack for it yet. Unset until onboarding. */
+  nativeLanguage?: string;
+  /** Other languages the learner knows well, used for extra cognate hints. */
+  knownLanguages?: string[];
   createdAt: number;
 }
 

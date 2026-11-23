@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/l1-pack.schema.json",
+  "title": "Native-language pack",
+  "description": "What a learner's native language brings to Norwegian: words they likely know, look-alikes to watch, grammar contrasts and notes in their language.",
+  "type": "object",
+  "required": [
+    "language",
+    "name",
+    "nativeName",
+    "direction",
+    "cognates",
+    "falseFriends",
+    "contrasts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "language": { "type": "string", "pattern": "^[a-z]{2}$" },
+    "name": { "type": "string", "minLength": 1 },
+    "nativeName": { "type": "string", "minLength": 1 },
+    "direction": { "enum": ["ltr", "rtl"] },
+    "cognates": {
+      "description": "Norwegian words the learner probably recognises.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/word" }
+    },
+    "falseFriends": {
+      "description": "Norwegian words that look like a word in the learner's language but mean something else.",
+      "type": "array",
+      "items": {
+        "allOf": [{ "$ref": "#/$defs/word" }],
+        "required": ["looksLike"],
+        "properties": { "looksLike": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "contrasts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "body", "lessons"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "title": { "type": "string", "minLength": 1 },
+          "body": { "type": "string", "minLength": 1 },
+          "lessons": {
+            "description": "Lesson ids where this contrast is shown as a tip.",
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "itemNotes": {
+      "description": "Explanations in the learner's language, keyed by item id.",
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "lessonSummaries": {
+      "description": "Lesson summaries in the learner's language, keyed by lesson id.",
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "word": {
+      "type": "object",
+      "required": ["nb", "forms", "meaning"],
+      "properties": {
+        "nb": { "type": "string", "minLength": 1 },
+        "forms": {
+          "description": "Inflected forms to recognise in texts, lower case.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[a-zæøå]+$" }
+        },
+        "meaning": { "type": "string", "minLength": 1 },
+        "looksLike": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

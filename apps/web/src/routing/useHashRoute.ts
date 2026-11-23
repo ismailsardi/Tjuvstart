@@ -1,9 +1,10 @@
 import { useSyncExternalStore } from 'react';
 
-export type Route = { name: 'home' } | { name: 'lesson'; lessonId: string };
+export type Route = { name: 'home' } | { name: 'languages' } | { name: 'lesson'; lessonId: string };
 
-/** Hash routes work on GitHub Pages without server rewrites: #/ and #/lesson/<id>. */
+/** Hash routes work on GitHub Pages without server rewrites: #/, #/languages and #/lesson/<id>. */
 export function parseRoute(hash: string): Route {
+  if (hash === '#/languages') return { name: 'languages' };
   const match = /^#\/lesson\/([a-z0-9-]+)$/.exec(hash);
   return match?.[1] ? { name: 'lesson', lessonId: match[1] } : { name: 'home' };
 }
@@ -20,3 +21,4 @@ export function useHashRoute(): Route {
 
 export const lessonHref = (lessonId: string) => `#/lesson/${lessonId}`;
 export const homeHref = '#/';
+export const languagesHref = '#/languages';
