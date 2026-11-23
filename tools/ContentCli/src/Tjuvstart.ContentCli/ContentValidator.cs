@@ -105,6 +105,25 @@ public static class ContentValidator
             {
                 issues.Add(new ValidationIssue(pack.File, $"Reference to unknown lesson '{lessonId}'."));
             }
+
+            foreach (var trackId in (pack.TrackRefs ?? []).Where(id => content.Tracks.All(t => t.Id != id)))
+            {
+                issues.Add(new ValidationIssue(pack.File, $"Summary for unknown track '{trackId}'."));
+            }
+        }
+
+        var trackIds = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var track in content.Tracks)
+        {
+            if (!trackIds.Add(track.Id))
+            {
+                issues.Add(new ValidationIssue(ContentLoader.TracksFile, $"Duplicate track id '{track.Id}'."));
+            }
+
+            foreach (var lessonId in track.Lessons.Where(id => !lessonIds.ContainsKey(id)))
+            {
+                issues.Add(new ValidationIssue(ContentLoader.TracksFile, $"Track '{track.Id}' lists unknown lesson '{lessonId}'."));
+            }
         }
 
         return issues;
