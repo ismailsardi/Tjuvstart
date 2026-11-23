@@ -34,6 +34,7 @@
       "skill": "reading",
       "level": "A2",
       "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
       "difficulty": 950,
       "prompt": "Når skal Ahmed til legen?",
       "options": ["Klokka 10.00", "Klokka 07.15", "Klokka 07.40"],
@@ -56,6 +57,7 @@
       "skill": "reading",
       "level": "A2",
       "descriptors": ["A2-R-03"],
+      "focus": ["fixed-expressions"],
       "difficulty": 1050,
       "prompt": "Lars skriver «God bedring!». Hva betyr det?",
       "options": [
@@ -82,6 +84,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
       "difficulty": 950,
       "prompt": "Jeg har ___ i hodet.",
       "answers": ["vondt"]
@@ -92,6 +95,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
       "difficulty": 1100,
       "prompt": "Jeg har bestilt ___ hos legen klokka ni.",
       "answers": ["time", "en time"]
@@ -102,6 +106,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
       "difficulty": 1150,
       "prompt": "Takk for ___! God bedring.",
       "answers": ["beskjed", "beskjeden"]
@@ -112,6 +117,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-02"],
+      "focus": ["conjunctions"],
       "difficulty": 1050,
       "prompt": "Jeg er syk, ___ jeg blir hjemme i dag.",
       "answers": ["så"]
@@ -122,6 +128,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
       "difficulty": 1100,
       "prompt": "Lag en setning.",
       "hint": "Verbet står på plass nummer to.",
@@ -134,6 +141,7 @@
       "skill": "writing",
       "level": "A2",
       "descriptors": ["A2-W-02"],
+      "focus": ["subordinate-clause", "ikke-placement"],
       "difficulty": 1150,
       "prompt": "Lag en setning.",
       "tokens": ["Jeg kommer ikke på jobb", "fordi", "er", "jeg", "syk"],
