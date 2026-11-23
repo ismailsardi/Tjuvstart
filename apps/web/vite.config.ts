@@ -1,10 +1,42 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // GitHub Pages serves the app from /<repo>/, so CI sets BASE_PATH.
 const base = process.env.BASE_PATH ?? '/';
+
+/**
+ * The learner's API key lives in the browser, so the page only talks to itself and to the
+ * Anthropic API. If a script were ever injected, it could not send the key anywhere else.
+ * Added to the built page only: the dev server relies on inline scripts for hot reload.
+ */
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "script-src 'self'",
+  "style-src 'self'",
+  "img-src 'self' data:",
+  // Learners' own recordings play from blob: URLs.
+  "media-src 'self' blob:",
+  "connect-src 'self' https://api.anthropic.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ');
+
+function contentSecurityPolicy(): Plugin {
+  return {
+    name: 'content-security-policy',
+    apply: 'build',
+    transformIndexHtml: () => [
+      {
+        tag: 'meta',
+        attrs: { 'http-equiv': 'Content-Security-Policy', content: CONTENT_SECURITY_POLICY },
+        injectTo: 'head-prepend',
+      },
+    ],
+  };
+}
 
 export default defineConfig({
   base,
@@ -27,6 +59,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    contentSecurityPolicy(),
     react(),
     VitePWA({
       registerType: 'prompt',
