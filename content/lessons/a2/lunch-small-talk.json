@@ -120,6 +120,52 @@
       "prompt": "– Vi gikk på ski. – Så ___!",
       "hint": "how nice",
       "answers": ["fint"]
+    },
+    {
+      "id": "a2-lunch-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hvordan blir været på lørdag?",
+      "audio": "Skal vi gå på tur i helgen? Det blir sol på lørdag.",
+      "options": ["Det blir sol", "Det blir regn", "Det blir snø"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Hvor spiser hun i morgen?",
+      "audio": "Jeg har matpakke i dag, men i morgen spiser jeg i kantina.",
+      "options": ["I kantina", "Hjemme", "På hytta"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["question-words"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Hva gjorde du i helgen?"
+    },
+    {
+      "id": "a2-lunch-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Vi var på hytta."
     }
   ]
 }

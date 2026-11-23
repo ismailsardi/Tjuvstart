@@ -146,6 +146,52 @@
       "prompt": "Lag en setning.",
       "tokens": ["Jeg kommer ikke på jobb", "fordi", "er", "jeg", "syk"],
       "answer": "Jeg kommer ikke på jobb fordi jeg er syk"
+    },
+    {
+      "id": "a2-sick-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hva gjør Nina i dag?",
+      "audio": "Hei, det er Nina. Jeg tar møtet med kunden i dag. God bedring!",
+      "options": ["Hun tar møtet med kunden", "Hun er syk", "Hun går til legen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når er den nye timen?",
+      "audio": "Hei, dette er legekontoret. Timen din er flyttet til fredag klokka ti.",
+      "options": ["Fredag klokka ti", "Torsdag klokka ti", "Fredag klokka to"],
+      "answer": 0
+    },
+    {
+      "id": "a2-sick-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har feber og vondt i halsen."
+    },
+    {
+      "id": "a2-sick-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["ikke-placement"],
+      "difficulty": 1050,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg kommer ikke på jobb i dag."
     }
   ]
 }

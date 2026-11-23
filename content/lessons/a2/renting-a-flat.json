@@ -143,6 +143,52 @@
       "prompt": "Lag en setning.",
       "tokens": ["Jeg tar ikke leiligheten", "fordi", "er", "den", "for dyr"],
       "answer": "Jeg tar ikke leiligheten fordi den er for dyr"
+    },
+    {
+      "id": "a2-flat-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når er visningen?",
+      "audio": "Hei, dette er Anne. Visningen er på søndag klokka to. Leiligheten er i tredje etasje.",
+      "options": ["Søndag klokka to", "Lørdag klokka to", "Søndag klokka tolv"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1100,
+      "prompt": "Er strøm inkludert?",
+      "audio": "Husleien er tolv tusen kroner i måneden, og strøm er inkludert.",
+      "options": ["Ja", "Nei", "Det sier hun ikke"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Leiligheten har to soverom."
+    },
+    {
+      "id": "a2-flat-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["ikke-placement"],
+      "difficulty": 1050,
+      "prompt": "Skriv det du hører.",
+      "audio": "Strøm er ikke inkludert."
     }
   ]
 }

@@ -124,6 +124,52 @@
       "prompt": "Det blir ___ i helgen.",
       "hint": "dårlig, ___, verst",
       "answers": ["verre"]
+    },
+    {
+      "id": "a2-doc-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når er legekontoret åpent?",
+      "audio": "Velkommen til legekontoret. Vi har åpent fra åtte til fire. Er det akutt, ring 113.",
+      "options": ["Fra åtte til fire", "Fra ni til fire", "Fra åtte til to"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1050,
+      "prompt": "Hvordan er prøvesvarene?",
+      "audio": "Hei Omar, dette er legen. Prøvesvarene dine er fine. Ha en fin dag!",
+      "options": ["Fine", "Dårlige", "De er ikke klare"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil gjerne bestille en time."
+    },
+    {
+      "id": "a2-doc-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har vondt i ryggen."
     }
   ]
 }

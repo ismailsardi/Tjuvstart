@@ -180,6 +180,51 @@
       "prompt": "Lag en setning.",
       "tokens": ["fordi", "Jeg liker jobben", "er", "kollegene", "hyggelige"],
       "answer": "Jeg liker jobben fordi kollegene er hyggelige"
+    },
+    {
+      "id": "a2-fdw-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når begynner møtet?",
+      "audio": "Hei, det er Lars. Møtet i morgen begynner klokka ni, ikke klokka ti. Vi sees!",
+      "options": ["Klokka ni", "Klokka ti", "Klokka halv ti"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor er kantina?",
+      "audio": "Velkommen til kontoret! Kantina er i andre etasje, og lunsj er fra elleve til ett.",
+      "options": ["I andre etasje", "I første etasje", "I tredje etasje"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 900,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg jobber som utvikler."
+    },
+    {
+      "id": "a2-fdw-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Sjefen min heter Lars."
     }
   ]
 }
