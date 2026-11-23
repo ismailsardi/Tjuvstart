@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ismailsardi/Tjuvstart/actions/workflows/ci.yml/badge.svg)](https://github.com/ismailsardi/Tjuvstart/actions/workflows/ci.yml)
 
-An installable web app that helps adults moving to Norway learn Norwegian (bokmål) from A1/A2 to CEFR level B2. It estimates your level in each skill as you practise, adapts every exercise to that level, and uses your native language to decide what to teach and how to explain it.
+An installable web app that helps people moving to Norway learn Norwegian (bokmål) from A1/A2 to CEFR level B2. It estimates your level in each skill as you practise, adapts every exercise to that level, and uses your native language to decide what to teach and how to explain it.
 
 _Tjuvstart_ is Norwegian for a false start: getting going before the starting signal.
 
