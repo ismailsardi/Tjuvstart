@@ -9,7 +9,11 @@ test('first visit asks for languages, then shows skills, lessons and the manifes
   await chooseLanguages(page, 'English');
 
   await expect(page.getByTestId('skill-reading')).toContainText('Not assessed yet');
-  await expect(page.getByRole('link', { name: /Første dag på jobben/ })).toBeVisible();
+  await expect(
+    page
+      .getByRole('region', { name: /^(Next lesson|Prochaine leçon)$/ })
+      .getByRole('link', { name: /Første dag på jobben/ }),
+  ).toBeVisible();
   await expect(page.locator('link[rel="manifest"]')).toHaveCount(1);
 
   // The choice is stored, so a returning learner goes straight to the home page.

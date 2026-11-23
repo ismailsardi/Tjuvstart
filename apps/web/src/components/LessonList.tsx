@@ -1,10 +1,12 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { lessons } from '../content/lessons';
+import { trackedLessonIds, tracks } from '../content/tracks';
 import { firstNote, type LanguagePack } from '../content/packs';
 import type { Lesson } from '../content/types';
 import { db } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
 import { lessonHref } from '../routing/useHashRoute';
+import { TrackPath } from './TrackPath';
 
 export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly LanguagePack[] }) {
   const { t } = useI18n();
@@ -30,18 +32,23 @@ export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly 
   );
 }
 
-/** Every lesson, grouped by level, with completed ones marked. */
+/** Guided tracks first, then the other lessons grouped by level, with completed ones marked. */
 export function LessonList({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
-  const levels = [...new Set(lessons.map((lesson) => lesson.level))];
+  const others = lessons.filter((lesson) => !trackedLessonIds.has(lesson.id));
+  const levels = [...new Set(others.map((lesson) => lesson.level))];
   return (
     <>
       <h1>{t('lessons')}</h1>
+      {tracks.map((track) => (
+        <TrackPath key={track.id} track={track} packs={packs} />
+      ))}
+      {others.length > 0 && <h2>{t('moreLessons')}</h2>}
       {levels.map((level) => (
         <section key={level} aria-label={level}>
-          <h2>{level}</h2>
+          <h3>{level}</h3>
           <ul className="lessons">
-            {lessons
+            {others
               .filter((lesson) => lesson.level === level)
               .map((lesson) => (
                 <li key={lesson.id}>

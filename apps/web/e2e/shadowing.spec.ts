@@ -30,7 +30,10 @@ test('a learner can listen, record and shadow a lesson sentence by sentence', as
 
   await page.goto('./');
   await chooseLanguages(page, 'English');
-  await page.getByRole('link', { name: /Første dag på jobben/ }).click();
+  await page
+    .getByRole('region', { name: /^(Next lesson|Prochaine leçon)$/ })
+    .getByRole('link', { name: /Første dag på jobben/ })
+    .click();
   await page.getByRole('link', { name: 'Shadow this text' }).click();
 
   await expect(page.getByRole('heading', { name: /Shadowing/ })).toBeVisible();

@@ -131,6 +131,10 @@ const en = {
   shadowDoneBody: 'You said {n} of {total} sentences out loud.',
   backToLesson: 'Back to the lesson',
   shadowedCount: 'Sentences said out loud: {n}',
+  trackProgress: '{done} of {total} done',
+  trackStep: 'Step {n}',
+  moreLessons: 'More lessons',
+  trackDone: 'You have done every scenario. Nice work!',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -271,6 +275,10 @@ const fr: Record<StringKey, string> = {
   shadowDoneBody: 'Vous avez dit {n} phrases sur {total} à voix haute.',
   backToLesson: 'Retour à la leçon',
   shadowedCount: 'Phrases dites à voix haute : {n}',
+  trackProgress: '{done} sur {total} terminées',
+  trackStep: 'Étape {n}',
+  moreLessons: 'Autres leçons',
+  trackDone: 'Vous avez fait toutes les situations. Bravo !',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr };

@@ -9,7 +9,10 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
 
   await expect(page.getByRole('heading', { name: 'Votre niveau', exact: true })).toBeVisible();
 
-  await page.getByRole('link', { name: /Første dag på jobben/ }).click();
+  await page
+    .getByRole('region', { name: /^(Next lesson|Prochaine leçon)$/ })
+    .getByRole('link', { name: /Første dag på jobben/ })
+    .click();
   await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();
   await expect(
     page.getByRole('heading', { name: 'Mots que vous connaissez probablement' }),

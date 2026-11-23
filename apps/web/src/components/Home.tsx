@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { lessons } from '../content/lessons';
+import { nextInTrack, tracks } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
 import { db } from '../data/db';
 import { dueCards, getProfile, mistakeMemory } from '../data/progress';
@@ -15,6 +16,7 @@ import {
 import { MistakeList } from './MistakeList';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
+import { TrackPath } from './TrackPath';
 
 /** Today: the word review, the next lesson and the level estimate. */
 export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
@@ -32,7 +34,11 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     profile !== undefined &&
     profile.placedAt === undefined &&
     Object.values(profile.answers).every((n) => n === 0);
-  const next = completed ? lessons.find((lesson) => !completed.has(lesson.id)) : undefined;
+  // The first-weeks track comes first; after that, the easiest lesson not done yet.
+  const next = completed
+    ? (tracks.map((track) => nextInTrack(track, completed)).find(Boolean) ??
+      lessons.find((lesson) => !completed.has(lesson.id)))
+    : undefined;
 
   return (
     <>
@@ -60,6 +66,10 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           {due > 0 ? t('start') : t('navWords')}
         </a>
       </section>
+
+      {tracks.map((track) => (
+        <TrackPath key={track.id} track={track} packs={packs} />
+      ))}
 
       <section aria-labelledby="next-heading">
         <div className="section-head">
