@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { speak, speakAll, stopSpeaking } from '../audio/speech';
+import { canPlay, speak, speakAll, stopSpeaking } from '../audio/speech';
 import { useI18n } from '../i18n/useI18n';
 
 interface Props {
@@ -11,13 +11,33 @@ interface Props {
   className?: string;
 }
 
-/** Reads Norwegian text aloud; pressing it again stops. */
+/**
+ * Reads Norwegian text aloud; pressing it again stops. Text with no recording, on a device
+ * with no Norwegian voice (such as a newly generated AI text), gets no button at all.
+ */
 export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Props) {
   const { t } = useI18n();
   const [playing, setPlaying] = useState(false);
-  const [unavailable, setUnavailable] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [available, setAvailable] = useState<boolean | null>(null);
+  const key = Array.isArray(text) ? text.join('\n') : text;
 
   useEffect(() => () => stopSpeaking(), []);
+
+  useEffect(() => {
+    let live = true;
+    const check = () => void canPlay(key.split('\n')).then((ok) => live && setAvailable(ok));
+    check();
+    // Browsers load their voices late; check again when they arrive.
+    const synth = 'speechSynthesis' in window ? window.speechSynthesis : undefined;
+    synth?.addEventListener?.('voiceschanged', check);
+    return () => {
+      live = false;
+      synth?.removeEventListener?.('voiceschanged', check);
+    };
+  }, [key]);
+
+  if (available === false) return null;
 
   async function toggle() {
     if (playing) {
@@ -27,7 +47,7 @@ export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Prop
     setPlaying(true);
     const ok = Array.isArray(text) ? await speakAll(text, { rate }) : await speak(text, { rate });
     setPlaying(false);
-    setUnavailable(!ok);
+    setFailed(!ok);
   }
 
   return (
@@ -41,9 +61,9 @@ export function SpeakButton({ text, label, rate = 1, className = 'speak' }: Prop
         <span aria-hidden="true">{playing ? '■' : '▶'}</span>{' '}
         {playing ? t('stopListening') : (label ?? t('listen'))}
       </button>
-      {unavailable && (
+      {failed && (
         <span className="muted small" role="status">
-          {t('noVoice')}
+          {t('audioFailed')}
         </span>
       )}
     </>

@@ -111,7 +111,7 @@ const en = {
   listenSlow: 'Slower',
   listenText: 'Listen to the text',
   stopListening: 'Stop',
-  noVoice: 'No Norwegian voice is available on this device yet.',
+  audioFailed: 'The audio could not be loaded. Check your connection and try again.',
   shadowText: 'Shadow this text',
   shadowTitle: 'Shadowing',
   shadowIntro:
@@ -341,7 +341,7 @@ const fr: Record<StringKey, string> = {
   listenSlow: 'Plus lent',
   listenText: 'Écouter le texte',
   stopListening: 'Arrêter',
-  noVoice: 'Aucune voix norvégienne n’est encore disponible sur cet appareil.',
+  audioFailed: 'Impossible de charger l’audio. Vérifiez votre connexion et réessayez.',
   shadowText: 'Répéter ce texte à voix haute',
   shadowTitle: 'Shadowing',
   shadowIntro:
