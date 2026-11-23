@@ -8,7 +8,6 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
   await chooseLanguages(page, 'Français', ['English']);
 
   await expect(page.getByRole('heading', { name: 'Votre niveau' })).toBeVisible();
-  await expect(page.getByTestId('languages')).toContainText('Français, English');
 
   await page.getByRole('link', { name: /Første dag på jobben/ }).click();
   await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();
@@ -23,6 +22,8 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
 
   // Languages can be changed later from the home page.
   await page.getByRole('link', { name: '← Accueil' }).click();
+  await page.getByRole('navigation').getByRole('link', { name: 'Moi' }).click();
+  await expect(page.getByTestId('languages')).toContainText('Français, English');
   await page.getByRole('link', { name: 'Modifier' }).click();
   await chooseLanguages(page, 'English');
   await expect(page.getByRole('heading', { name: 'Your level' })).toBeVisible();

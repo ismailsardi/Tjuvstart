@@ -1,97 +1,55 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
-import { firstNote, type LanguagePack } from '../content/packs';
-import { SKILLS, type Skill } from '../content/types';
+import type { LanguagePack } from '../content/packs';
 import { db } from '../data/db';
 import { dueCards, getProfile } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { languagesHref, lessonHref, wordsHref } from '../routing/useHashRoute';
+import { DUE_DECK, deckHref, lessonsHref, wordsHref } from '../routing/useHashRoute';
+import { LessonCard } from './LessonList';
+import { SkillLevels } from './SkillLevels';
 
-// Skill names stay in Norwegian: learners meet them again in the exam and in class.
-const SKILL_NAMES: Record<Skill, string> = {
-  reading: 'Lesing',
-  listening: 'Lytting',
-  writing: 'Skriving',
-  speaking: 'Muntlig',
-};
-
+/** Today: the word review, the next lesson and the level estimate. */
 export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
-  const completions = useLiveQuery(() => db.completions.toArray());
+  const completed = useLiveQuery(
+    async () => new Set(await db.completions.toCollection().primaryKeys()),
+  );
   const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
-  const languageNames =
-    packs.length > 0 ? packs.map((pack) => pack.nativeName).join(', ') : t('otherLanguage');
+  const next = completed ? lessons.find((lesson) => !completed.has(lesson.id)) : undefined;
 
   return (
     <>
-      <header>
-        <h1>Tjuvstart</h1>
-        <p className="muted">{t('tagline')}</p>
-        <p className="muted" data-testid="languages">
-          {t('languages', { languages: languageNames })} · <a href={languagesHref}>{t('change')}</a>
-        </p>
+      <header className="page-header">
+        <h1>{t('hello')}</h1>
+        <p className="muted">{t('todayIntro')}</p>
       </header>
 
-      <section aria-labelledby="level-heading">
-        <h2 id="level-heading">{t('yourLevel')}</h2>
-        <ul className="skills">
-          {SKILLS.map((skill) => {
-            const answers = profile?.answers[skill] ?? 0;
-            const rating = profile?.ratings[skill];
-            const assessed = rating !== undefined && answers >= MIN_ANSWERS_FOR_ESTIMATE;
-            return (
-              <li key={skill} data-testid={`skill-${skill}`}>
-                <span lang="nb">{SKILL_NAMES[skill]}</span>
-                <span className={assessed ? undefined : 'muted'}>
-                  {assessed
-                    ? t('estimated', { level: ratingToLevel(rating) })
-                    : t('notAssessed', { answers, min: MIN_ANSWERS_FOR_ESTIMATE })}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+      <section className="panel review-panel" aria-labelledby="review-heading">
+        <div>
+          <h2 id="review-heading">{t('wordReview')}</h2>
+          <p className="muted">{due > 0 ? t('dueCount', { n: due }) : t('nothingDue')}</p>
+        </div>
+        <a className="button" href={due > 0 ? deckHref(DUE_DECK) : wordsHref}>
+          {due > 0 ? t('start') : t('navWords')}
+        </a>
       </section>
 
-      <a className="words-link" href={wordsHref}>
-        <strong>{t('wordCards')}</strong>
-        <span className="muted">{due > 0 ? t('dueCount', { n: due }) : t('nothingDue')}</span>
-      </a>
+      <section aria-labelledby="next-heading">
+        <div className="section-head">
+          <h2 id="next-heading">{t('nextLesson')}</h2>
+          <a href={lessonsHref}>{t('seeAllLessons')}</a>
+        </div>
+        {next ? (
+          <LessonCard lesson={next} packs={packs} />
+        ) : (
+          completed && <p className="muted">{t('allLessonsDone')}</p>
+        )}
+      </section>
 
-      <section aria-labelledby="lessons-heading">
-        <h2 id="lessons-heading">{t('lessons')}</h2>
-        <ul className="lessons">
-          {lessons.map((lesson) => {
-            const summary = firstNote(packs, (pack) => pack.lessonSummaries?.[lesson.id]);
-            const done = completions?.find((c) => c.lessonId === lesson.id);
-            return (
-              <li key={lesson.id} className={done ? 'completed' : undefined}>
-                <a href={lessonHref(lesson.id)}>
-                  <span className="badge">{lesson.level}</span>
-                  <strong lang="nb">{lesson.title}</strong>
-                  {summary ? (
-                    <span
-                      className="muted"
-                      lang={summary.pack.language}
-                      dir={summary.pack.direction}
-                    >
-                      {summary.text}
-                    </span>
-                  ) : (
-                    <span className="muted">{lesson.summary}</span>
-                  )}
-                  {done && (
-                    <span className="done" data-testid={`completed-${lesson.id}`}>
-                      ✓ {t('completed', { score: done.bestScore, total: done.total })}
-                    </span>
-                  )}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+      <section className="panel" aria-labelledby="level-heading">
+        <h2 id="level-heading">{t('yourLevel')}</h2>
+        <SkillLevels profile={profile} />
       </section>
     </>
   );

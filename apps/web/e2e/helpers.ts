@@ -7,5 +7,5 @@ export async function chooseLanguages(page: Page, native: string, known: string[
     await page.getByRole('checkbox', { name: language }).check();
   }
   await page.getByRole('button', { name: /Continue|Continuer/ }).click();
-  await expect(page.getByRole('heading', { name: 'Tjuvstart' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }

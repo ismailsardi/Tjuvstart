@@ -14,5 +14,7 @@ test('first visit asks for languages, then shows skills, lessons and the manifes
 
   // The choice is stored, so a returning learner goes straight to the home page.
   await page.reload();
+  await expect(page.getByRole('heading', { name: 'Hei!' })).toBeVisible();
+  await page.getByRole('navigation').getByRole('link', { name: 'Me' }).click();
   await expect(page.getByTestId('languages')).toContainText('English');
 });
