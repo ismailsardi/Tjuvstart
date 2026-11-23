@@ -2,7 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import type { LanguagePack } from '../content/packs';
 import { getProfile, mistakeMemory, shadowedSentences } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { languagesHref, placementHref } from '../routing/useHashRoute';
+import { languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
 import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
 
@@ -31,6 +31,10 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
       <section className="panel" aria-label={t('languages', { languages: '' })}>
         <p data-testid="languages">
           {t('languages', { languages: languageNames })} · <a href={languagesHref}>{t('change')}</a>
+        </p>
+        <p data-testid="job-field">
+          {t('myJob')}: {profile?.jobField ? t(`field_${profile.jobField}`) : '–'} ·{' '}
+          <a href={wordsHref}>{t('change')}</a>
         </p>
       </section>
     </>

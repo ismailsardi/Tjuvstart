@@ -36,7 +36,11 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     profile !== undefined &&
     profile.placedAt === undefined &&
     Object.values(profile.answers).every((n) => n === 0);
-  // The first-weeks track comes first; after that, the easiest lesson not done yet.
+  // Only the track in progress is shown; the others wait on the lessons page.
+  const currentTrack = completed
+    ? tracks.find((track) => nextInTrack(track, completed))
+    : undefined;
+  // Tracks come first, in order; after that, the easiest lesson not done yet.
   const next = completed
     ? (tracks.map((track) => nextInTrack(track, completed)).find(Boolean) ??
       lessons.find((lesson) => !completed.has(lesson.id)))
@@ -69,9 +73,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         </a>
       </section>
 
-      {tracks.map((track) => (
-        <TrackPath key={track.id} track={track} packs={packs} />
-      ))}
+      {currentTrack && <TrackPath track={currentTrack} packs={packs} />}
 
       <section aria-labelledby="next-heading">
         <div className="section-head">

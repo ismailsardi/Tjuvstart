@@ -11,6 +11,7 @@ import {
   type Grade,
 } from '@tjuvstart/engine';
 import { getItem } from '../content/lessons';
+import type { JobField } from '../content/vocab';
 import { SKILLS, type Item, type Skill } from '../content/types';
 import {
   db as defaultDb,
@@ -79,6 +80,13 @@ export async function saveLanguages(
       nativeLanguage,
       knownLanguages: knownLanguages.filter((code) => code !== nativeLanguage),
     });
+  });
+}
+
+/** Saves the learner's line of work, which picks their "my job" deck. */
+export async function saveJobField(field: JobField, db: TjuvstartDb = defaultDb): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    await db.profiles.put({ ...(await getProfile(db)), jobField: field });
   });
 }
 

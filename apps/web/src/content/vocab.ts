@@ -24,10 +24,15 @@ export interface Card {
   example: string;
 }
 
+export const JOB_FIELDS = ['it', 'health', 'construction', 'hospitality'] as const;
+export type JobField = (typeof JOB_FIELDS)[number];
+
 export interface Deck {
   level: Level;
   topic: string;
   title: string;
+  /** Set on a "my job" deck: the line of work it is for. */
+  field?: JobField;
   cards: Card[];
 }
 
@@ -53,6 +58,11 @@ export function cardLevel(id: string): Level | undefined {
 /** Route-friendly deck id, e.g. "a2-work". */
 export function deckId(deck: Deck): string {
   return `${deck.level.toLowerCase()}-${deck.topic}`;
+}
+
+/** The "my job" deck for a line of work. */
+export function jobDeck(field: JobField): Deck | undefined {
+  return decks.find((deck) => deck.field === field);
 }
 
 export function getDeck(id: string): Deck | undefined {

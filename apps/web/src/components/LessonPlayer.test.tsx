@@ -96,3 +96,16 @@ describe('LessonPlayer with language packs', () => {
     expect(await screen.findByText(/veut dire la même chose/)).toBeTruthy();
   });
 });
+
+describe('LessonPlayer with a real-world text', () => {
+  it('shows the text as a document with where it comes from', () => {
+    const real = getLesson('a2-nav-letter');
+    if (!real?.document) throw new Error('NAV letter missing');
+    render(<LessonPlayer lesson={real} />);
+    const doc = screen.getByTestId('document');
+    expect(doc.className).toContain('doc-letter');
+    expect(doc.textContent).toContain('Real-world text, simplified to A2');
+    expect(doc.textContent).toContain('Letter');
+    expect(doc.textContent).toContain(`From: ${real.document.from ?? ''}`);
+  });
+});

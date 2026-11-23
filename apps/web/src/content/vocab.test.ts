@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cardLabel, cardsInText, decks, getCard } from './vocab';
+import { JOB_FIELDS, cardLabel, cardsInText, decks, getCard, jobDeck } from './vocab';
 
 describe('word cards', () => {
   it('loads decks with unique card ids', () => {
@@ -22,5 +22,14 @@ describe('word cards', () => {
       'ny',
       'prosjekt',
     ]);
+  });
+
+  it('has one A2 deck for each line of work', () => {
+    for (const field of JOB_FIELDS) {
+      const deck = jobDeck(field);
+      expect(deck?.level).toBe('A2');
+      expect(deck?.cards.length).toBeGreaterThanOrEqual(10);
+    }
+    expect(decks.filter((deck) => deck.field).length).toBe(JOB_FIELDS.length);
   });
 });

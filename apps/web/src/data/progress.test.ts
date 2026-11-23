@@ -13,6 +13,7 @@ import {
   mistakeMemory,
   recordAnswer,
   reviewCard,
+  saveJobField,
   saveLanguages,
   recordShadowing,
   savePlacement,
@@ -69,6 +70,17 @@ describe('saveLanguages', () => {
     expect(profile.nativeLanguage).toBe('fr');
     expect(profile.knownLanguages).toEqual(['en']);
     expect(profile.answers.reading).toBe(0);
+  });
+});
+
+describe('saveJobField', () => {
+  it('keeps the rest of the profile', async () => {
+    db = new TjuvstartDb('test-job');
+    await saveLanguages('fr', ['en'], db);
+    await saveJobField('health', db);
+    const profile = await getProfile(db);
+    expect(profile.jobField).toBe('health');
+    expect(profile.nativeLanguage).toBe('fr');
   });
 });
 
