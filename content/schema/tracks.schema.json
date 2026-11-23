@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/tracks.schema.json",
+  "title": "Tracks",
+  "description": "Guided paths through lessons, such as the situations of the first weeks in Norway.",
+  "type": "object",
+  "required": ["tracks"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "summary", "lessons"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "title": { "description": "Track title in Norwegian.", "type": "string", "minLength": 1 },
+          "summary": {
+            "description": "Summary in English. Other languages go in the packs.",
+            "type": "string",
+            "minLength": 1
+          },
+          "lessons": {
+            "description": "Lesson ids in the order the learner meets them.",
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

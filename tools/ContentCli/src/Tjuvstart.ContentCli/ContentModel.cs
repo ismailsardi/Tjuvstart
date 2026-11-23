@@ -37,7 +37,11 @@ public sealed record LanguagePack(
     IReadOnlyList<string> Forms,
     IReadOnlyList<string> ItemNoteIds,
     IReadOnlyList<string> LessonRefs,
-    IReadOnlyList<string>? WordIds = null);
+    IReadOnlyList<string>? WordIds = null,
+    IReadOnlyList<string>? TrackRefs = null);
+
+/// <summary>A guided path through lessons, in order.</summary>
+public sealed record Track(string Id, string Title, IReadOnlyList<string> Lessons);
 
 /// <summary>Everything loaded from a content folder, plus the problems found while loading it.</summary>
 public sealed record ContentSet(
@@ -47,6 +51,8 @@ public sealed record ContentSet(
     IReadOnlyList<ValidationIssue> Issues)
 {
     public IReadOnlyList<Card> Cards { get; init; } = [];
+
+    public IReadOnlyList<Track> Tracks { get; init; } = [];
 
     /// <summary>Lesson-text words that need no card, such as names.</summary>
     public IReadOnlySet<string> IgnoredWords { get; init; } = new HashSet<string>();

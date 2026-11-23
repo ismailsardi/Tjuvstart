@@ -17,6 +17,7 @@ public static class ContentLoader
     public const string PackFileName = "pack.json";
     public const string VocabFolder = "vocab";
     public const string IgnoreFileName = "ignore.json";
+    public const string TracksFile = "tracks.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
 
@@ -33,6 +34,7 @@ public static class ContentLoader
         var lessonSchema = LoadSchema(contentRoot, "lesson.schema.json", issues);
         var packSchema = LoadSchema(contentRoot, "l1-pack.schema.json", issues);
         var deckSchema = LoadSchema(contentRoot, "vocab-deck.schema.json", issues);
+        var tracksSchema = LoadSchema(contentRoot, "tracks.schema.json", issues);
 
         var descriptors = new List<Descriptor>();
         var descriptorsPath = Path.Combine(contentRoot, DescriptorsFile);
@@ -109,14 +111,32 @@ public static class ContentLoader
                         forms,
                         raw.ItemNotes?.Keys.ToList() ?? [],
                         lessonRefs,
-                        raw.Words?.Keys.ToList() ?? []));
+                        raw.Words?.Keys.ToList() ?? [],
+                        raw.TrackSummaries?.Keys.ToList() ?? []));
                 }
             }
         }
 
         var (cards, ignored) = LoadVocabulary(contentRoot, deckSchema, issues);
 
-        return new ContentSet(descriptors, lessons, packs, issues) { Cards = cards, IgnoredWords = ignored };
+        // Tracks are optional: a content folder without tracks.json simply has none.
+        var tracks = new List<Track>();
+        var tracksPath = Path.Combine(contentRoot, TracksFile);
+        if (File.Exists(tracksPath) && ReadChecked(contentRoot, tracksPath, tracksSchema, issues) is { } tracksDoc)
+        {
+            using (tracksDoc)
+            {
+                var file = tracksDoc.RootElement.Deserialize<TracksFileModel>(JsonOptions)!;
+                tracks.AddRange(file.Tracks.Select(t => new Track(t.Id, t.Title, t.Lessons)));
+            }
+        }
+
+        return new ContentSet(descriptors, lessons, packs, issues)
+        {
+            Cards = cards,
+            IgnoredWords = ignored,
+            Tracks = tracks,
+        };
     }
 
     /// <summary>Loads decks from <c>vocab/&lt;level&gt;/*.json</c> and the optional ignore list.</summary>
@@ -280,6 +300,7 @@ public static class ContentLoader
         List<ContrastFile> Contrasts,
         Dictionary<string, string>? ItemNotes,
         Dictionary<string, string>? LessonSummaries,
+        Dictionary<string, string>? TrackSummaries,
         Dictionary<string, JsonElement>? Words);
 
     private sealed record CardFile(
@@ -288,4 +309,8 @@ public static class ContentLoader
     private sealed record DeckFile(string Level, List<CardFile> Cards);
 
     private sealed record IgnoreFile(List<string> Words);
+
+    private sealed record TrackFile(string Id, string Title, List<string> Lessons);
+
+    private sealed record TracksFileModel(List<TrackFile> Tracks);
 }

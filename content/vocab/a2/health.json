@@ -72,6 +72,67 @@
       "gender": "en",
       "forms": ["sykmelding", "sykmeldingen"],
       "example": "Send meg sykmeldingen."
+    },
+    {
+      "id": "fastlege",
+      "nb": "fastlege",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fastlege", "fastlegen", "fastleger"],
+      "example": "Alle kan ha en fastlege."
+    },
+    {
+      "id": "legekontor",
+      "nb": "legekontor",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["legekontor", "legekontoret"],
+      "example": "Omar ringer legekontoret."
+    },
+    {
+      "id": "legevakt",
+      "nb": "legevakt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["legevakt", "legevakten", "legevakta"],
+      "example": "Ring legevakten på 116 117."
+    },
+    {
+      "id": "akutt",
+      "nb": "akutt",
+      "pos": "adjective",
+      "forms": ["akutt", "akutte"],
+      "example": "Hvis det er akutt, ringer du 113."
+    },
+    {
+      "id": "medisin",
+      "nb": "medisin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["medisin", "medisinen", "medisiner", "medisinene"],
+      "example": "Hvilke medisiner tar du?"
+    },
+    {
+      "id": "rygg",
+      "nb": "rygg",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["rygg", "ryggen", "rygger"],
+      "example": "Jeg har vondt i ryggen."
+    },
+    {
+      "id": "verre",
+      "nb": "verre",
+      "pos": "adjective",
+      "forms": ["verre"],
+      "example": "Ring hvis det blir verre."
+    },
+    {
+      "id": "gjerne",
+      "nb": "gjerne",
+      "pos": "adverb",
+      "forms": ["gjerne"],
+      "example": "Jeg vil gjerne bestille en time."
     }
   ]
 }

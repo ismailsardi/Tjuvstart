@@ -1,0 +1,70 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "free-time",
+  "title": "Fritid",
+  "cards": [
+    {
+      "id": "helg",
+      "nb": "helg",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["helg", "helgen", "helga", "helger"],
+      "example": "Hva gjorde du i helgen?"
+    },
+    {
+      "id": "hytte",
+      "nb": "hytte",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["hytte", "hytta", "hytten", "hytter"],
+      "example": "Vi var på hytta med familien."
+    },
+    {
+      "id": "ski",
+      "nb": "ski",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ski", "skiene"],
+      "example": "Vi gikk på ski hele lørdagen."
+    },
+    {
+      "id": "regne",
+      "nb": "regne",
+      "pos": "verb",
+      "forms": ["regne", "regner", "regnet"],
+      "example": "Det regnet hele tiden."
+    },
+    {
+      "id": "matpakke",
+      "nb": "matpakke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["matpakke", "matpakka", "matpakken", "matpakker"],
+      "example": "Har du matpakke i dag?"
+    },
+    {
+      "id": "kantine",
+      "nb": "kantine",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kantine", "kantina", "kantinen"],
+      "example": "Jeg kjøper mat i kantina."
+    },
+    {
+      "id": "nordmann",
+      "nb": "nordmann",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nordmann", "nordmannen", "nordmenn", "nordmennene"],
+      "example": "Hun snakker som en ekte nordmann."
+    },
+    {
+      "id": "ekte",
+      "nb": "ekte",
+      "pos": "adjective",
+      "forms": ["ekte"],
+      "example": "Det er en ekte norsk matpakke."
+    }
+  ]
+}

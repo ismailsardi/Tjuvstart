@@ -1,0 +1,18 @@
+{
+  "$schema": "schema/tracks.schema.json",
+  "tracks": [
+    {
+      "id": "first-weeks",
+      "title": "De første ukene i Norge",
+      "summary": "The situations of your first weeks: the first workday, the tax card, BankID, renting, the doctor and lunch with colleagues.",
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-tax-card",
+        "a2-bankid",
+        "a2-renting-a-flat",
+        "a2-doctor",
+        "a2-lunch-small-talk"
+      ]
+    }
+  ]
+}

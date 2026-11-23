@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-bankid",
+  "level": "A2",
+  "title": "Å få BankID",
+  "summary": "Find out what you need to get BankID: an ID number from the tax office, your passport and a bank account.",
+  "text": "Mange ting i Norge krever BankID, for eksempel nettbanken, Helsenorge og Skatteetaten. Først trenger du et norsk ID-nummer: et fødselsnummer eller et D-nummer. Det får du hos Skatteetaten. Ta med passet ditt. Så kan du åpne en konto i en bank. Banken sjekker passet ditt, og etter noen dager kan du bestille BankID. Da kan du logge inn med en kode på mobilen.",
+  "items": [
+    {
+      "id": "a2-bid-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hva trenger du før du kan få BankID?",
+      "options": ["Et norsk ID-nummer", "En bil", "En leilighet"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Hvor får du et D-nummer?",
+      "options": ["Hos Skatteetaten", "Hos legen", "På jobben"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hva må du ta med?",
+      "options": ["Passet ditt", "Billetten din", "Husleien"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1050,
+      "prompt": "Hva kan du bruke BankID til?",
+      "options": ["Nettbanken og Helsenorge", "Å lage mat", "Å ta trikken"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når kan du bestille BankID?",
+      "options": ["Etter noen dager", "Med en gang", "Om et år"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 950,
+      "prompt": "Banken ___ passet ditt.",
+      "hint": "sjekke",
+      "answers": ["sjekker"]
+    },
+    {
+      "id": "a2-bid-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["definite-form"],
+      "difficulty": 1100,
+      "prompt": "Jeg har glemt ___ mitt.",
+      "hint": "et pass, ___ (bestemt form)",
+      "answers": ["passet"]
+    },
+    {
+      "id": "a2-bid-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["kan", "du", "Etter noen dager", "bestille BankID"],
+      "answer": "Etter noen dager kan du bestille BankID"
+    },
+    {
+      "id": "a2-bid-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 900,
+      "prompt": "Lag en setning.",
+      "tokens": ["trenger", "et D-nummer", "Jeg"],
+      "answer": "Jeg trenger et D-nummer"
+    },
+    {
+      "id": "a2-bid-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1050,
+      "prompt": "Kan jeg ___ inn med BankID?",
+      "answers": ["logge"]
+    }
+  ]
+}
