@@ -150,7 +150,7 @@ public static class ContentLoader
                 {
                     issues.Add(new ValidationIssue(relative, $"Deck level {deck.Level} does not match folder '{folder}'."));
                 }
-                cards.AddRange(deck.Cards.Select(c => new Card(c.Id, deck.Level, c.Nb, c.Forms, relative)));
+                cards.AddRange(deck.Cards.Select(c => new Card(c.Id, deck.Level, c.Nb, c.Forms, relative, c.Example, c.Pos, c.Gender)));
             }
         }
 
@@ -282,7 +282,8 @@ public static class ContentLoader
         Dictionary<string, string>? LessonSummaries,
         Dictionary<string, JsonElement>? Words);
 
-    private sealed record CardFile(string Id, string Nb, List<string> Forms);
+    private sealed record CardFile(
+        string Id, string Nb, List<string> Forms, string? Example, string? Pos, string? Gender);
 
     private sealed record DeckFile(string Level, List<CardFile> Cards);
 

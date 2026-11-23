@@ -10,7 +10,24 @@ public sealed record Lesson(
     string Id, string Level, string Title, string File, IReadOnlyList<LessonItem> Items, string? Text = null);
 
 /// <summary>A word card. Meanings live in the language packs, keyed by <see cref="Id"/>.</summary>
-public sealed record Card(string Id, string Level, string Nb, IReadOnlyList<string> Forms, string File);
+public sealed record Card(
+    string Id,
+    string Level,
+    string Nb,
+    IReadOnlyList<string> Forms,
+    string File,
+    string? Example = null,
+    string? Pos = null,
+    string? Gender = null)
+{
+    /// <summary>The word as the card shows it: "en jobb", "å jobbe". Same rule as the web app.</summary>
+    public string Label => Pos switch
+    {
+        "noun" when Gender is not null => $"{Gender} {Nb}",
+        "verb" => $"å {Nb}",
+        _ => Nb,
+    };
+}
 
 /// <summary>A native-language pack, reduced to what cross-file checks need.</summary>
 public sealed record LanguagePack(
