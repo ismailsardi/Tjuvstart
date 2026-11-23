@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ismailsardi/Tjuvstart/actions/workflows/ci.yml/badge.svg)](https://github.com/ismailsardi/Tjuvstart/actions/workflows/ci.yml)
 
-An installable web app that helps people moving to Norway learn Norwegian (bokmål) from A1/A2 to CEFR level B2. It estimates your level in each skill as you practise, adapts every exercise to that level, and uses your native language to decide what to teach and how to explain it.
+An installable web app that helps people moving to Norway learn Norwegian (bokmål), starting from A1/A2, with CEFR level B2 as the goal. It estimates your level in each skill as you practise, adapts every exercise to that level, and uses your native language to decide what to teach and how to explain it.
 
 _Tjuvstart_ is Norwegian for a false start: getting going before the starting signal.
 
@@ -14,25 +14,33 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
   <img src="docs/screenshots/decks.png" alt="Word decks by level with learning progress" width="250">
 </p>
 
-## Highlights
+## What works today
 
+- **12 A2 lessons, 155 exercises:** reading, listening, gap-fill, word order and dictation, each tagged with a CEFR level, a difficulty and the grammar points it practises.
 - **Adaptive by design:** a five-minute level check, an Elo-style rating per skill, and practice sessions built from the learner's weak skills and recurring mistakes.
-- **Built around CEFR and Norskprøven:** every lesson and task maps to CEFR descriptors, and CI checks coverage.
-- **Swipeable word cards:** a card for every word in the lessons, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk.
+- **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are.
+- **317 swipeable word cards:** A1 and A2 decks, plus decks for four lines of work, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
 - **Ten minutes a day:** one daily session of word cards and targeted exercises, a streak that forgives a missed day, and CEFR can-do statements that tick off as the learner proves them.
-- **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are, plus a word deck for the learner's line of work.
-- **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen, record themselves and compare, all in the browser.
-- **Optional AI practice:** role-play, Norskprøven-style writing feedback and fresh reading texts, called straight from the browser with the learner's own Anthropic key and structured outputs.
-- **Native-language aware:** cognates, false friends and grammar contrasts for English, French and Arabic speakers.
-- **Zero running cost:** a local-first PWA on GitHub Pages; AI features are optional and use the learner's own key.
+- **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen at an adaptive speed, record themselves and compare.
+- **Native-language packs for English and French:** interface, tips, cognates, false friends and grammar contrasts in the learner's language.
+- **Optional AI practice:** role-play, writing feedback and fresh reading texts, called straight from the browser with the learner's own Anthropic key and structured outputs.
+- **Zero running cost:** a local-first PWA on GitHub Pages. Progress stays in the browser (IndexedDB) and the app works offline.
+
+## Planned
+
+- B1 and B2 lessons, and a licensed frequency list to measure word coverage per level.
+- An Arabic pack with a right-to-left layout.
+- Sign-in and sync across devices through a small ASP.NET Core API on a free tier.
+- Speech recognition for speaking practice.
+- Calibrated item difficulty (item response theory) and an FSRS scheduler, fitted to the answer and review logs the app already keeps.
 
 ## Repository layout
 
 ```
 apps/web/          React + TypeScript PWA (Vite)
 packages/engine/   Level rating and item selection, pure TypeScript
-content/           Lessons and items as JSON
+content/           Lessons, word decks, tracks and language packs as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
 tools/audio/       Build-time audio (Azure neural voice, Piper fallback)
 docs/              Specification and architecture decision records
@@ -59,6 +67,7 @@ Audio is optional for local development: without it, the app uses the browser's 
 
 - [Product specification](docs/spec.md)
 - [Architecture decision records](docs/adr/)
+- [Contributing](CONTRIBUTING.md)
 
 ## License
 

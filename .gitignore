@@ -15,3 +15,4 @@ obj/
 apps/web/public/audio/
 .voices/
 __pycache__/
+*.py[cod]
