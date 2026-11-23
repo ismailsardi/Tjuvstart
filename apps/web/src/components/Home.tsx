@@ -3,6 +3,7 @@ import { DEFAULT_LISTENING_RATE } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
 import { nextInTrack, tracks } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
+import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
 import { db } from '../data/db';
 import { dailyProgress, dueCards, getProfile, mistakeMemory } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
@@ -17,7 +18,6 @@ import {
   practiceHref,
   wordsHref,
 } from '../routing/useHashRoute';
-import { DAILY_CARDS, DAILY_ITEMS } from './DailySession';
 import { MistakeList } from './MistakeList';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
