@@ -1,5 +1,5 @@
 import 'fake-indexeddb/auto';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_RATING, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
 import { getItem } from '../content/lessons';
 import type { GapFillItem } from '../content/types';
@@ -117,6 +117,14 @@ describe('completeLesson', () => {
       lastCompletedAt: 2000,
     });
     expect(await db.cards.count()).toBe(1);
+  });
+
+  it('saves nothing when the words cannot be added', async () => {
+    db = new TjuvstartDb('test-completion-atomic');
+    vi.spyOn(db.cards, 'bulkAdd').mockRejectedValueOnce(new Error('disk full'));
+
+    await expect(completeLesson('lesson', 8, 12, ['jobb'], 1000, db)).rejects.toThrow('disk full');
+    expect(await db.completions.get('lesson')).toBeUndefined();
   });
 });
 

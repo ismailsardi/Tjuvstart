@@ -146,15 +146,18 @@ export async function completeLesson(
   now = Date.now(),
   db: TjuvstartDb = defaultDb,
 ): Promise<number> {
-  const previous = await db.completions.get(lessonId);
-  await db.completions.put({
-    lessonId,
-    total,
-    bestScore: Math.max(score, previous?.bestScore ?? 0),
-    firstCompletedAt: previous?.firstCompletedAt ?? now,
-    lastCompletedAt: now,
+  // One transaction, so a lesson is never marked done without its words, or the other way round.
+  return db.transaction('rw', db.completions, db.cards, async () => {
+    const previous = await db.completions.get(lessonId);
+    await db.completions.put({
+      lessonId,
+      total,
+      bestScore: Math.max(score, previous?.bestScore ?? 0),
+      firstCompletedAt: previous?.firstCompletedAt ?? now,
+      lastCompletedAt: now,
+    });
+    return addCards(cardIds, now, db);
   });
-  return addCards(cardIds, now, db);
 }
 
 /** Saves placement results: ratings replace the old ones and count as enough for an estimate. */
