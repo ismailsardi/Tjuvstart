@@ -143,6 +143,51 @@
       "prompt": "Lag en setning.",
       "tokens": ["Jeg tar bussen", "fordi", "går", "trikken", "ikke"],
       "answer": "Jeg tar bussen fordi trikken ikke går"
+    },
+    {
+      "id": "a2-trip-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hva kan du bytte til?",
+      "audio": "Neste stopp: Jernbanetorget. Her kan du bytte til buss 31.",
+      "options": ["Buss 31", "Trikk 13", "Toget"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor mye er trikken forsinket?",
+      "audio": "Trikken er dessverre ti minutter forsinket.",
+      "options": ["Ti minutter", "To minutter", "En time"],
+      "answer": 0
+    },
+    {
+      "id": "a2-trip-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1050,
+      "prompt": "Skriv det du hører.",
+      "audio": "Bussen går hvert tiende minutt."
+    },
+    {
+      "id": "a2-trip-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Billetten gjelder også på bussen."
     }
   ]
 }

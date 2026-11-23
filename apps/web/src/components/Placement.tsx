@@ -14,9 +14,10 @@ import { useI18n } from '../i18n/useI18n';
 import { homeHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
 
-/** Skills that have items today. Listening and speaking join once audio exercises exist. */
+/** Skills that have items today. Speaking joins once speaking exercises exist. */
 const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[];
-export const ITEMS_PER_SKILL = 6;
+// Five per skill keeps the check to about five minutes with three skills.
+export const ITEMS_PER_SKILL = 5;
 
 /** The five-minute placement check: adaptive questions, then a starting level per skill. */
 export function Placement() {

@@ -1,4 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks';
+import { DEFAULT_LISTENING_RATE } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
 import { nextInTrack, tracks } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
@@ -10,6 +11,7 @@ import {
   deckHref,
   lessonsHref,
   placementHref,
+  listeningHref,
   practiceHref,
   wordsHref,
 } from '../routing/useHashRoute';
@@ -93,6 +95,19 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           </a>
         </section>
       )}
+
+      <section className="panel" aria-labelledby="listening-heading">
+        <h2 id="listening-heading">{t('listeningTitle')}</h2>
+        <p className="muted">{t('listeningCard')}</p>
+        <p className="small" data-testid="home-listening-speed">
+          {t('listeningSpeed', {
+            percent: Math.round((profile?.listening?.rate ?? DEFAULT_LISTENING_RATE) * 100),
+          })}
+        </p>
+        <a className="button" href={listeningHref}>
+          {t('start')}
+        </a>
+      </section>
 
       <section className="panel" aria-labelledby="level-heading">
         <h2 id="level-heading">{t('yourLevel')}</h2>

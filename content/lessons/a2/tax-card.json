@@ -123,6 +123,51 @@
       "prompt": "___ til oss!",
       "hint": "welcome",
       "answers": ["Velkommen"]
+    },
+    {
+      "id": "a2-tax-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hva har HR fått?",
+      "audio": "Hei Maria, det er Kari fra HR. Vi har fått skattekortet ditt. Alt er i orden!",
+      "options": ["Skattekortet", "Passet", "BankID"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1050,
+      "prompt": "Når kommer lønnen?",
+      "audio": "Husk at lønnen kommer den tjuende hver måned.",
+      "options": ["Den tjuende", "Den tiende", "Den første"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har bestilt skattekort."
+    },
+    {
+      "id": "a2-tax-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Lønnen kommer i morgen."
     }
   ]
 }

@@ -35,9 +35,9 @@ export function App() {
     <I18nProvider language={language}>
       <UpdatePrompt />
       {!needsOnboarding &&
-        !['lesson', 'shadow', 'deck', 'placement', 'practice'].includes(route.name) && (
-          <NavBar route={route} />
-        )}
+        !['lesson', 'shadow', 'deck', 'placement', 'practice', 'listening'].includes(
+          route.name,
+        ) && <NavBar route={route} />}
       <main className="shell" lang={language}>
         {needsOnboarding ? (
           <Onboarding
@@ -71,6 +71,8 @@ function Page({
   if (route.name === 'me') return <Me packs={packs} />;
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
+  if (route.name === 'listening')
+    return <Practice key="listening" packs={packs} skill="listening" />;
   if (route.name !== 'lesson' && route.name !== 'shadow') return <Home packs={packs} />;
 
   const lesson = getLesson(route.lessonId);

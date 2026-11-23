@@ -52,7 +52,7 @@
           "$ref": "#/$defs/slug"
         },
         "type": {
-          "enum": ["multiple-choice", "gap-fill", "word-order"]
+          "enum": ["multiple-choice", "gap-fill", "word-order", "dictation"]
         },
         "skill": {
           "enum": ["reading", "listening", "writing", "speaking"]
@@ -79,6 +79,11 @@
         },
         "hint": {
           "type": "string"
+        },
+        "audio": {
+          "description": "Norwegian text the learner hears instead of reads. Listening items need it; the audio build records it.",
+          "type": "string",
+          "minLength": 1
         },
         "focus": {
           "description": "Grammar or usage points the item practises. The app tracks repeated mistakes per point and recycles them.",
@@ -146,8 +151,28 @@
             }
           },
           "required": ["tokens", "answer"]
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "dictation"
+            }
+          },
+          "required": ["audio"],
+          "description": "The learner writes down what they hear; the answer is the audio text."
         }
-      ]
+      ],
+      "if": {
+        "properties": {
+          "skill": {
+            "const": "listening"
+          }
+        },
+        "required": ["skill"]
+      },
+      "then": {
+        "required": ["audio"]
+      }
     },
     "focus": {
       "enum": [

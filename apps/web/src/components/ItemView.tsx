@@ -1,7 +1,14 @@
 import { useState } from 'react';
 import type { Response } from '../content/answers';
 import { useI18n } from '../i18n/useI18n';
-import type { GapFillItem, Item, MultipleChoiceItem, WordOrderItem } from '../content/types';
+import type {
+  DictationItem,
+  GapFillItem,
+  Item,
+  MultipleChoiceItem,
+  WordOrderItem,
+} from '../content/types';
+import { AudioPrompt } from './AudioPrompt';
 
 interface Props<T extends Item> {
   item: T;
@@ -9,7 +16,16 @@ interface Props<T extends Item> {
   onSubmit: (response: Response) => void;
 }
 
-export function ItemView({ item, ...rest }: Props<Item>) {
+export function ItemView(props: Props<Item>) {
+  return (
+    <>
+      {props.item.audio && <AudioPrompt key={props.item.id} text={props.item.audio} />}
+      <Answer {...props} />
+    </>
+  );
+}
+
+function Answer({ item, ...rest }: Props<Item>) {
   switch (item.type) {
     case 'multiple-choice':
       return <MultipleChoice key={item.id} item={item} {...rest} />;
@@ -17,7 +33,48 @@ export function ItemView({ item, ...rest }: Props<Item>) {
       return <GapFill key={item.id} item={item} {...rest} />;
     case 'word-order':
       return <WordOrder key={item.id} item={item} {...rest} />;
+    case 'dictation':
+      return <Dictation key={item.id} item={item} {...rest} />;
   }
+}
+
+function Dictation({ item, disabled, onSubmit }: Props<DictationItem>) {
+  const { t } = useI18n();
+  const [value, setValue] = useState('');
+  return (
+    <form
+      className="dictation"
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (value.trim()) onSubmit({ kind: 'text', value });
+      }}
+    >
+      <label className="visually-hidden" htmlFor={`dictation-${item.id}`}>
+        {t('whatYouHear')}
+      </label>
+      <textarea
+        id={`dictation-${item.id}`}
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+        onKeyDown={(event) => {
+          // Enter checks the answer; a dictation is one line.
+          if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            event.currentTarget.form?.requestSubmit();
+          }
+        }}
+        disabled={disabled}
+        rows={2}
+        autoComplete="off"
+        autoCapitalize="sentences"
+        spellCheck={false}
+        lang="nb"
+      />
+      <button type="submit" disabled={disabled || !value.trim()}>
+        {t('check')}
+      </button>
+    </form>
+  );
 }
 
 function MultipleChoice({ item, disabled, onSubmit }: Props<MultipleChoiceItem>) {

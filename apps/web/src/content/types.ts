@@ -31,6 +31,8 @@ interface ItemBase {
   difficulty: number;
   prompt: string;
   hint?: string;
+  /** Norwegian text the learner hears instead of reads. Every listening item has one. */
+  audio?: string;
 }
 
 export interface MultipleChoiceItem extends ItemBase {
@@ -50,7 +52,13 @@ export interface WordOrderItem extends ItemBase {
   answer: string;
 }
 
-export type Item = MultipleChoiceItem | GapFillItem | WordOrderItem;
+/** The learner writes down what they hear. The answer is the audio text. */
+export interface DictationItem extends ItemBase {
+  type: 'dictation';
+  audio: string;
+}
+
+export type Item = MultipleChoiceItem | GapFillItem | WordOrderItem | DictationItem;
 
 export interface Lesson {
   id: string;

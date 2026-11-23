@@ -1026,3 +1026,44 @@ button.speak[aria-pressed='true'] {
 .track-steps .next a {
   font-weight: 600;
 }
+
+/* Listening exercises */
+
+.audio-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.dictation {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.dictation textarea {
+  font: inherit;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+}
+
+.dictation button {
+  justify-self: start;
+}
+
+mark.missed {
+  background: color-mix(in srgb, var(--bad) 18%, transparent);
+  color: inherit;
+  text-decoration: underline wavy var(--bad);
+  text-underline-offset: 3px;
+}
+
+.transcript {
+  font-style: italic;
+}

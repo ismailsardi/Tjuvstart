@@ -12,3 +12,11 @@ export { buildSession } from './session';
 export type { SessionItem, SessionOptions } from './session';
 export { PLACEMENT_K, nextPlacementItem, recordPlacementAnswer, startPlacement } from './placement';
 export type { PlacementState } from './placement';
+export {
+  CORRECT_IN_A_ROW_TO_SPEED_UP,
+  DEFAULT_LISTENING_RATE,
+  DEFAULT_LISTENING_SPEED,
+  LISTENING_RATES,
+  updateListeningSpeed,
+} from './listening';
+export type { ListeningSpeed } from './listening';

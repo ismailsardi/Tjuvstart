@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { correctAnswer, isCorrect, type Response } from '../content/answers';
+import { correctAnswer, dictationWords, isCorrect, type Response } from '../content/answers';
 import {
   annotate,
   contrastsFor,
@@ -17,7 +17,7 @@ import { sentences } from '../audio/speech';
 import { SpeakButton } from './SpeakButton';
 import { ItemView } from './ItemView';
 
-type Feedback = { correct: boolean; answer: string } | null;
+type Feedback = { correct: boolean; answer: string; given?: string } | null;
 
 interface Props {
   lesson: Lesson;
@@ -88,7 +88,11 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
   async function submit(response: Response) {
     if (!item || feedback) return;
     const correct = isCorrect(item, response);
-    setFeedback({ correct, answer: correctAnswer(item) });
+    setFeedback({
+      correct,
+      answer: correctAnswer(item),
+      given: response.kind === 'text' ? response.value : undefined,
+    });
     if (correct) setScore((s) => s + 1);
     await recordAnswer(
       item,
@@ -154,10 +158,27 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
               t('correct')
             ) : (
               <>
-                {t('notQuite')} <strong lang="nb">{feedback.answer}</strong>.
+                {t('notQuite')} <strong lang="nb">{feedback.answer}</strong>
+                {/[.!?]$/.test(feedback.answer) ? '' : '.'}
               </>
             )}
           </p>
+          {item.type === 'dictation' && !feedback.correct && (
+            <p className="dictation-diff">
+              <span className="small">{t('dictationFeedback')}</span>{' '}
+              <span lang="nb">
+                {dictationWords(item.audio, feedback.given ?? '').map((w, i) => (
+                  <span key={i}>{w.ok ? w.word : <mark className="missed">{w.word}</mark>} </span>
+                ))}
+              </span>
+            </p>
+          )}
+          {item.audio && item.type !== 'dictation' && (
+            // After answering, the transcript helps connect sounds to words.
+            <p className="transcript" lang="nb" data-testid="transcript">
+              «{item.audio}»
+            </p>
+          )}
           {note && (
             <p className="note" lang={note.pack.language} dir={note.pack.direction}>
               {note.text}

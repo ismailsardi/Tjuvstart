@@ -14,7 +14,7 @@ export async function chooseLanguages(page: Page, native: string, known: string[
 export async function answerAnything(page: Page) {
   const options = page.getByRole('group', { name: /^(Answer options|Réponses possibles)$/ });
   const words = page.getByRole('group', { name: /^(Words|Mots)$/ });
-  const gap = page.getByLabel(/^(Missing word|Mot manquant)$/);
+  const gap = page.getByLabel(/^(Missing word|Mot manquant|What you hear|Ce que vous entendez)$/);
   await expect(options.or(words).or(gap)).toBeVisible();
 
   if (await options.isVisible()) {

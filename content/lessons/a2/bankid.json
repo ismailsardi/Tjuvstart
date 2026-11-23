@@ -120,6 +120,51 @@
       "difficulty": 1050,
       "prompt": "Kan jeg ___ inn med BankID?",
       "answers": ["logge"]
+    },
+    {
+      "id": "a2-bid-l1",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1050,
+      "prompt": "Hva kan du gjøre nå?",
+      "audio": "Hei, dette er banken. Kontoen din er klar. Nå kan du bestille BankID.",
+      "options": ["Bestille BankID", "Hente passet", "Ringe Skatteetaten"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-l2",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 950,
+      "prompt": "Hva må du ta med?",
+      "audio": "Husk å ta med passet når du kommer til banken på mandag.",
+      "options": ["Passet", "Skattekortet", "Mobilen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-bid-d1",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg trenger et D-nummer."
+    },
+    {
+      "id": "a2-bid-d2",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil åpne en konto."
     }
   ]
 }

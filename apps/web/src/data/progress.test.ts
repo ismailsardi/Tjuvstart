@@ -155,3 +155,17 @@ describe('shadowing', () => {
     expect(await shadowedSentences(db)).toBe(1);
   });
 });
+
+describe('listening speed', () => {
+  const listening: GapFillItem = { ...item, id: 'l', skill: 'listening' };
+
+  it('speeds up after three right listening answers and ignores other skills', async () => {
+    db = new TjuvstartDb('test-listening');
+    await recordAnswer(item, 'lesson', true, db);
+    expect((await getProfile(db)).listening).toBeUndefined();
+    for (let i = 0; i < 3; i++) await recordAnswer(listening, 'lesson', true, db);
+    expect((await getProfile(db)).listening).toEqual({ rate: 1, streak: 0 });
+    await recordAnswer(listening, 'lesson', false, db);
+    expect((await getProfile(db)).listening?.rate).toBe(0.85);
+  });
+});

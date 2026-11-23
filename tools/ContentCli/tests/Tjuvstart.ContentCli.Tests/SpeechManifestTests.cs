@@ -26,12 +26,14 @@ public sealed class SpeechManifestTests : IDisposable
     }
 
     [Fact]
-    public void Lists_lesson_sentences_cards_and_examples_once_each()
+    public void Lists_lesson_sentences_listening_messages_cards_and_examples_once_each()
     {
         _content.WriteDescriptors(("A2-W-01", "writing"));
         _content.Write(Path.Combine(ContentLoader.LessonsFolder, "lesson-a.json"), $$"""
             { "id": "lesson-a", "level": "A2", "title": "T", "summary": "S",
-              "text": "Jeg har en jobb. Jeg har en jobb.", "items": [ {{ContentFixture.Gap("item-1")}} ] }
+              "text": "Jeg har en jobb. Jeg har en jobb.", "items": [ {{ContentFixture.Gap("item-1")}},
+                { "id": "item-2", "type": "dictation", "skill": "listening", "level": "A2", "descriptors": ["A2-W-01"],
+                  "difficulty": 1000, "prompt": "Skriv det du hører.", "audio": "Hei. Jeg heter Sara." } ] }
             """);
         _content.Write(Path.Combine(ContentLoader.VocabFolder, "a2", "work.json"), """
             { "level": "A2", "topic": "work", "title": "Jobben", "cards": [
@@ -40,6 +42,6 @@ public sealed class SpeechManifestTests : IDisposable
 
         var texts = SpeechManifest.Build(ContentLoader.Load(_content.Root)).Select(e => e.Text).Order();
 
-        Assert.Equal(["en jobb", "Jeg har en jobb."], texts);
+        Assert.Equal(["en jobb", "Hei. Jeg heter Sara.", "Jeg har en jobb."], texts);
     }
 }

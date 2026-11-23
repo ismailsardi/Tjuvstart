@@ -9,9 +9,9 @@ namespace Tjuvstart.ContentCli;
 public sealed record SpeechEntry(string Key, string Text);
 
 /// <summary>
-/// Lists everything the app can read aloud: each sentence of a lesson text, and each word card
-/// (as labelled, with its article) with its example. The audio build turns every entry into
-/// <c>audio/&lt;key&gt;.mp3</c>.
+/// Lists everything the app can read aloud: each sentence of a lesson text, the message of each
+/// listening item, and each word card (as labelled, with its article) with its example. The
+/// audio build turns every entry into <c>audio/&lt;key&gt;.mp3</c>.
 /// </summary>
 public static partial class SpeechManifest
 {
@@ -19,6 +19,8 @@ public static partial class SpeechManifest
     {
         var texts = content.Lessons
             .SelectMany(lesson => Sentences(lesson.Text ?? ""))
+            // Listening items play their whole message in one go, so they are not split.
+            .Concat(content.Lessons.SelectMany(lesson => lesson.Items).Select(item => item.Audio ?? ""))
             .Concat(content.Cards.SelectMany(card => new[] { card.Label, card.Example ?? "" }));
 
         return texts
