@@ -1,0 +1,139 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-renting-a-flat",
+  "level": "A2",
+  "title": "En leilighet i Oslo",
+  "summary": "Read a flat-to-let ad, find the rent, the date and the viewing time, and write a short message to the landlord.",
+  "text": "Til leie på Tøyen: lys toromsleilighet på 45 kvadratmeter i tredje etasje. Leiligheten har stue med kjøkken, ett soverom og bad. Husleien er 14 500 kroner i måneden. Strøm er ikke inkludert. Depositum: tre måneders husleie. Ledig fra 1. februar. Ingen husdyr. Visning søndag klokka 14–15. Send en SMS til Kari hvis du har spørsmål.",
+  "items": [
+    {
+      "id": "a2-flat-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor mange soverom har leiligheten?",
+      "options": ["Ett", "To", "Tre"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva koster leiligheten i måneden?",
+      "options": ["14 500 kroner, uten strøm", "14 500 kroner, med strøm", "45 000 kroner"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Når kan du flytte inn?",
+      "options": ["Fra 1. februar", "På søndag", "Om tre måneder"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Kan du ha katt i leiligheten?",
+      "options": ["Nei", "Ja", "Bare i helgene"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Når kan du se leiligheten?",
+      "options": ["Søndag mellom 14 og 15", "Hver dag klokka 14", "1. februar"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-06",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1100,
+      "prompt": "Kari skriver: «Visningen er flyttet til lørdag, samme tid.» Når er visningen nå?",
+      "options": ["Lørdag klokka 14–15", "Søndag klokka 14–15", "Lørdag klokka 15–16"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flat-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 850,
+      "prompt": "Hei Kari! Jeg ___ interessert i leiligheten på Tøyen.",
+      "answers": ["er"]
+    },
+    {
+      "id": "a2-flat-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 950,
+      "prompt": "Kan jeg ___ på visning på søndag?",
+      "answers": ["komme", "gå"]
+    },
+    {
+      "id": "a2-flat-09",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Jeg ___ en leilighet med to soverom.",
+      "answers": ["trenger", "søker", "ønsker", "vil ha"]
+    },
+    {
+      "id": "a2-flat-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 850,
+      "prompt": "Leiligheten er lys ___ fin.",
+      "answers": ["og"]
+    },
+    {
+      "id": "a2-flat-11",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["vil", "jeg", "Neste måned", "flytte"],
+      "answer": "Neste måned vil jeg flytte"
+    },
+    {
+      "id": "a2-flat-12",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg tar ikke leiligheten", "fordi", "er", "den", "for dyr"],
+      "answer": "Jeg tar ikke leiligheten fordi den er for dyr"
+    }
+  ]
+}

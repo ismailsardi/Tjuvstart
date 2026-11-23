@@ -5,24 +5,96 @@
   "nativeName": "English",
   "direction": "ltr",
   "cognates": [
-    { "nb": "dag", "forms": ["dag", "dagen", "dager"], "meaning": "day" },
-    { "nb": "ny", "forms": ["ny", "nytt", "nye"], "meaning": "new" },
-    { "nb": "første", "forms": ["første"], "meaning": "first" },
-    { "nb": "jobb", "forms": ["jobb", "jobben", "jobbe", "jobber"], "meaning": "job, to work" },
-    { "nb": "møte", "forms": ["møte", "møtet"], "meaning": "meeting" },
+    {
+      "nb": "dag",
+      "forms": ["dag", "dagen", "dager"],
+      "meaning": "day"
+    },
+    {
+      "nb": "ny",
+      "forms": ["ny", "nytt", "nye"],
+      "meaning": "new"
+    },
+    {
+      "nb": "første",
+      "forms": ["første"],
+      "meaning": "first"
+    },
+    {
+      "nb": "jobb",
+      "forms": ["jobb", "jobben", "jobbe", "jobber"],
+      "meaning": "job, to work"
+    },
+    {
+      "nb": "møte",
+      "forms": ["møte", "møtet"],
+      "meaning": "meeting"
+    },
     {
       "nb": "kollega",
       "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"],
       "meaning": "colleague"
     },
-    { "nb": "prosjekt", "forms": ["prosjekt", "prosjektet"], "meaning": "project" },
+    {
+      "nb": "prosjekt",
+      "forms": ["prosjekt", "prosjektet"],
+      "meaning": "project"
+    },
     {
       "nb": "presentere",
       "forms": ["presentere", "presenterer"],
       "meaning": "to present, to introduce"
     },
-    { "nb": "lunsj", "forms": ["lunsj", "lunsjen"], "meaning": "lunch" },
-    { "nb": "klokka", "forms": ["klokka", "klokke", "klokken"], "meaning": "clock, o'clock" }
+    {
+      "nb": "lunsj",
+      "forms": ["lunsj", "lunsjen"],
+      "meaning": "lunch"
+    },
+    {
+      "nb": "klokka",
+      "forms": ["klokka", "klokke", "klokken"],
+      "meaning": "clock, o'clock"
+    },
+    {
+      "nb": "buss",
+      "forms": ["buss", "bussen", "busser"],
+      "meaning": "bus"
+    },
+    {
+      "nb": "minutt",
+      "forms": ["minutt", "minuttet", "minutter"],
+      "meaning": "minute"
+    },
+    {
+      "nb": "feber",
+      "forms": ["feber", "feberen"],
+      "meaning": "fever"
+    },
+    {
+      "nb": "trafikk",
+      "forms": ["trafikk", "trafikken"],
+      "meaning": "traffic"
+    },
+    {
+      "nb": "kjøkken",
+      "forms": ["kjøkken", "kjøkkenet"],
+      "meaning": "kitchen"
+    },
+    {
+      "nb": "informasjon",
+      "forms": ["informasjon", "informasjonen"],
+      "meaning": "information"
+    },
+    {
+      "nb": "kvadratmeter",
+      "forms": ["kvadratmeter"],
+      "meaning": "square metre"
+    },
+    {
+      "nb": "inkludert",
+      "forms": ["inkludert"],
+      "meaning": "included"
+    }
   ],
   "falseFriends": [
     {
@@ -54,6 +126,24 @@
       "forms": ["rar", "rart", "rare"],
       "looksLike": "rare",
       "meaning": "strange, odd"
+    },
+    {
+      "nb": "bad",
+      "forms": ["bad", "badet"],
+      "meaning": "bathroom, bath",
+      "looksLike": "bad"
+    },
+    {
+      "nb": "time",
+      "forms": ["time", "timen", "timer"],
+      "meaning": "hour; appointment («time» is «tid»)",
+      "looksLike": "time"
+    },
+    {
+      "nb": "fast",
+      "forms": ["fast"],
+      "meaning": "stuck, fixed («står fast» = is stuck)",
+      "looksLike": "fast"
     }
   ],
   "contrasts": [
@@ -61,13 +151,30 @@
       "id": "verb-second",
       "title": "The verb comes second",
       "body": "In a Norwegian main clause the verb is always the second element. If you start with a time or place, the subject moves after the verb: «I dag er det min første dag», not «I dag det er…».",
-      "lessons": ["a2-first-day-at-work"]
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-renting-a-flat",
+        "a2-getting-around",
+        "a2-calling-in-sick"
+      ]
     },
     {
       "id": "half-past",
       "title": "«Halv tolv» is 11:30",
       "body": "Norwegian counts half an hour towards the next hour. «Halv tolv» means 11:30, not 12:30 as British «half twelve» would.",
       "lessons": ["a2-first-day-at-work"]
+    },
+    {
+      "id": "ikke-in-subclause",
+      "title": "«Ikke» before the verb after «fordi»",
+      "body": "In a main clause «ikke» comes after the verb: «Trikken går ikke». After «fordi», «at» or «hvis» it moves in front of the verb: «…fordi trikken ikke går».",
+      "lessons": ["a2-getting-around", "a2-calling-in-sick"]
+    },
+    {
+      "id": "room-count",
+      "title": "«Toroms» counts all rooms",
+      "body": "Flat ads count the living room too. A «toromsleilighet» has two rooms: a living room and one bedroom. A «treroms» has two bedrooms.",
+      "lessons": ["a2-renting-a-flat"]
     }
   ],
   "itemNotes": {
@@ -76,6 +183,20 @@
     "a2-fdw-11": "After the verb, use the object pronoun: jeg (I) → meg (me).",
     "a2-fdw-13": "The sentence starts with «I dag», so the verb «er» comes next, then the subject «det».",
     "a2-fdw-14": "Same rule: «Etter lunsj» + verb «har» + subject «vi».",
-    "a2-fdw-15": "After «fordi» (because) the order is subject, then verb: «kollegene er»."
+    "a2-fdw-15": "After «fordi» (because) the order is subject, then verb: «kollegene er».",
+    "a2-flat-01": "«Toroms» means two rooms in total: the living room and one bedroom.",
+    "a2-flat-02": "«Strøm er ikke inkludert»: electricity is not included, so you pay it on top.",
+    "a2-flat-04": "«Ingen husdyr» means no pets.",
+    "a2-flat-11": "The sentence starts with «Neste måned», so the verb «vil» comes next, then «jeg».",
+    "a2-flat-12": "After «fordi» the order is subject, then verb: «den er».",
+    "a2-trip-02": "From Monday 3 March to Friday 14 March is two working weeks.",
+    "a2-trip-06": "«Står fast» means is stuck, not standing fast.",
+    "a2-trip-09": "«Komme for sent» means to be late.",
+    "a2-trip-12": "After «fordi», «ikke» goes before the verb: «trikken ikke går».",
+    "a2-sick-05": "«God bedring!» is what you say to someone who is ill: get well soon.",
+    "a2-sick-06": "In Norway you can usually report yourself sick for a few days. After that you need a note from a doctor, a «sykmelding».",
+    "a2-sick-08": "«Time» here means an appointment. «En time» can also mean an hour.",
+    "a2-sick-10": "«Så» here means so, as a result: «Jeg er syk, så jeg blir hjemme».",
+    "a2-sick-11": "«I morgen» comes first, so the verb «kommer» moves before «jeg»."
   }
 }

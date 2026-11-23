@@ -10,15 +10,106 @@
       "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"],
       "meaning": "collègue"
     },
-    { "nb": "prosjekt", "forms": ["prosjekt", "prosjektet"], "meaning": "projet" },
-    { "nb": "presentere", "forms": ["presentere", "presenterer"], "meaning": "présenter" },
-    { "nb": "sjef", "forms": ["sjef", "sjefen", "sjefer"], "meaning": "chef, patron" },
-    { "nb": "byrå", "forms": ["byrå", "byrået"], "meaning": "bureau, agence" },
-    { "nb": "restaurant", "forms": ["restaurant", "restauranten"], "meaning": "restaurant" },
-    { "nb": "sjokolade", "forms": ["sjokolade", "sjokoladen"], "meaning": "chocolat" },
-    { "nb": "telefon", "forms": ["telefon", "telefonen"], "meaning": "téléphone" },
-    { "nb": "familie", "forms": ["familie", "familien"], "meaning": "famille" },
-    { "nb": "lunsj", "forms": ["lunsj", "lunsjen"], "meaning": "déjeuner (le « lunch »)" }
+    {
+      "nb": "prosjekt",
+      "forms": ["prosjekt", "prosjektet"],
+      "meaning": "projet"
+    },
+    {
+      "nb": "presentere",
+      "forms": ["presentere", "presenterer"],
+      "meaning": "présenter"
+    },
+    {
+      "nb": "sjef",
+      "forms": ["sjef", "sjefen", "sjefer"],
+      "meaning": "chef, patron"
+    },
+    {
+      "nb": "byrå",
+      "forms": ["byrå", "byrået"],
+      "meaning": "bureau, agence"
+    },
+    {
+      "nb": "restaurant",
+      "forms": ["restaurant", "restauranten"],
+      "meaning": "restaurant"
+    },
+    {
+      "nb": "sjokolade",
+      "forms": ["sjokolade", "sjokoladen"],
+      "meaning": "chocolat"
+    },
+    {
+      "nb": "telefon",
+      "forms": ["telefon", "telefonen"],
+      "meaning": "téléphone"
+    },
+    {
+      "nb": "familie",
+      "forms": ["familie", "familien"],
+      "meaning": "famille"
+    },
+    {
+      "nb": "lunsj",
+      "forms": ["lunsj", "lunsjen"],
+      "meaning": "déjeuner (le « lunch »)"
+    },
+    {
+      "nb": "buss",
+      "forms": ["buss", "bussen", "busser"],
+      "meaning": "bus"
+    },
+    {
+      "nb": "minutt",
+      "forms": ["minutt", "minuttet", "minutter"],
+      "meaning": "minute"
+    },
+    {
+      "nb": "billett",
+      "forms": ["billett", "billetten", "billetter"],
+      "meaning": "billet, ticket"
+    },
+    {
+      "nb": "trafikk",
+      "forms": ["trafikk", "trafikken"],
+      "meaning": "trafic, circulation"
+    },
+    {
+      "nb": "feber",
+      "forms": ["feber", "feberen"],
+      "meaning": "fièvre"
+    },
+    {
+      "nb": "sjåfør",
+      "forms": ["sjåfør", "sjåføren"],
+      "meaning": "chauffeur"
+    },
+    {
+      "nb": "informasjon",
+      "forms": ["informasjon", "informasjonen"],
+      "meaning": "information"
+    },
+    {
+      "nb": "depositum",
+      "forms": ["depositum", "depositumet"],
+      "meaning": "dépôt de garantie, caution"
+    },
+    {
+      "nb": "kvadratmeter",
+      "forms": ["kvadratmeter"],
+      "meaning": "mètre carré"
+    },
+    {
+      "nb": "inkludert",
+      "forms": ["inkludert"],
+      "meaning": "inclus"
+    },
+    {
+      "nb": "etasje",
+      "forms": ["etasje", "etasjen", "etasjer"],
+      "meaning": "étage"
+    }
   ],
   "falseFriends": [
     {
@@ -33,15 +124,36 @@
       "looksLike": "fin",
       "meaning": "beau, joli, bien"
     },
-    { "nb": "bil", "forms": ["bil", "bilen", "biler"], "looksLike": "bile", "meaning": "voiture" },
-    { "nb": "far", "forms": ["far", "faren"], "looksLike": "phare", "meaning": "père" }
+    {
+      "nb": "bil",
+      "forms": ["bil", "bilen", "biler"],
+      "looksLike": "bile",
+      "meaning": "voiture"
+    },
+    {
+      "nb": "far",
+      "forms": ["far", "faren"],
+      "looksLike": "phare",
+      "meaning": "père"
+    },
+    {
+      "nb": "sent",
+      "forms": ["sent"],
+      "meaning": "tard, en retard («komme for sent» = être en retard)",
+      "looksLike": "sent (du verbe sentir)"
+    }
   ],
   "contrasts": [
     {
       "id": "verb-second",
       "title": "Le verbe en deuxième position",
       "body": "Dans une phrase principale, le verbe est toujours le deuxième élément. Si la phrase commence par un complément de temps ou de lieu, le sujet passe après le verbe : « I dag er det min første dag ». En français, on garde le sujet avant le verbe.",
-      "lessons": ["a2-first-day-at-work"]
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-renting-a-flat",
+        "a2-getting-around",
+        "a2-calling-in-sick"
+      ]
     },
     {
       "id": "half-past",
@@ -53,7 +165,24 @@
       "id": "definite-suffix",
       "title": "L'article défini se colle à la fin du mot",
       "body": "« Une réunion » se dit « et møte », mais « la réunion » se dit « møtet ». De même : en jobb → jobben, en kollega → kollegaen.",
-      "lessons": ["a2-first-day-at-work"]
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-renting-a-flat",
+        "a2-getting-around",
+        "a2-calling-in-sick"
+      ]
+    },
+    {
+      "id": "ikke-in-subclause",
+      "title": "« Ikke » avant le verbe après « fordi »",
+      "body": "Dans une phrase principale, « ikke » (ne… pas) vient après le verbe : « Trikken går ikke ». Après « fordi », « at » ou « hvis », il passe devant le verbe : « …fordi trikken ikke går ».",
+      "lessons": ["a2-getting-around", "a2-calling-in-sick"]
+    },
+    {
+      "id": "room-count",
+      "title": "« Toroms » compte toutes les pièces",
+      "body": "Comme le « T2 » en France, une « toromsleilighet » a deux pièces : un séjour et une chambre. Une « treroms » a deux chambres.",
+      "lessons": ["a2-renting-a-flat"]
     }
   ],
   "itemNotes": {
@@ -62,9 +191,26 @@
     "a2-fdw-11": "Après le verbe, on utilise le pronom complément : jeg (je) → meg (me, moi).",
     "a2-fdw-13": "La phrase commence par « I dag », donc le verbe « er » vient ensuite, puis le sujet « det ».",
     "a2-fdw-14": "Même règle : « Etter lunsj » + verbe « har » + sujet « vi ».",
-    "a2-fdw-15": "Après « fordi » (parce que), l'ordre est normal : sujet puis verbe, « kollegene er »."
+    "a2-fdw-15": "Après « fordi » (parce que), l'ordre est normal : sujet puis verbe, « kollegene er ».",
+    "a2-flat-01": "« Toroms » veut dire deux pièces au total, comme un T2 : le séjour et une chambre.",
+    "a2-flat-02": "« Strøm er ikke inkludert » : l'électricité n'est pas comprise, elle s'ajoute au loyer.",
+    "a2-flat-04": "« Ingen husdyr » veut dire : pas d'animaux.",
+    "a2-flat-11": "La phrase commence par « Neste måned », donc le verbe « vil » vient ensuite, puis « jeg ».",
+    "a2-flat-12": "Après « fordi », l'ordre est normal : sujet puis verbe, « den er ».",
+    "a2-trip-02": "Du lundi 3 mars au vendredi 14 mars, cela fait deux semaines de travail.",
+    "a2-trip-06": "« Står fast » veut dire être bloqué.",
+    "a2-trip-09": "« Komme for sent » veut dire arriver en retard. Rien à voir avec le verbe sentir.",
+    "a2-trip-12": "Après « fordi », « ikke » se place devant le verbe : « trikken ikke går ».",
+    "a2-sick-05": "« God bedring ! » se dit à une personne malade : bon rétablissement.",
+    "a2-sick-06": "En Norvège, on peut se déclarer malade soi-même pendant quelques jours. Au-delà, il faut un arrêt du médecin, la « sykmelding ».",
+    "a2-sick-08": "« Time » veut dire ici un rendez-vous. « En time » peut aussi vouloir dire une heure.",
+    "a2-sick-10": "« Så » veut dire ici donc : « Jeg er syk, så jeg blir hjemme ».",
+    "a2-sick-11": "« I morgen » vient en premier, donc le verbe « kommer » passe devant « jeg »."
   },
   "lessonSummaries": {
-    "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail."
+    "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail.",
+    "a2-renting-a-flat": "Lisez une annonce de location, trouvez le loyer, la date et l'heure de visite, puis écrivez un court message au propriétaire.",
+    "a2-getting-around": "Lisez un avis sur des travaux de tram, trouvez ce qu'il faut prendre à la place, et parlez de votre trajet.",
+    "a2-calling-in-sick": "Lisez un message d'arrêt maladie et la réponse du chef, puis écrivez votre propre message quand vous ne pouvez pas venir."
   }
 }
