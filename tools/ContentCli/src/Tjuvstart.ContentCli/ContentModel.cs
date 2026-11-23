@@ -4,7 +4,8 @@ public sealed record ValidationIssue(string File, string Message);
 
 public sealed record Descriptor(string Id, string Level, string Skill, string Text);
 
-public sealed record LessonItem(string Id, string Skill, string Level, IReadOnlyList<string> Descriptors);
+public sealed record LessonItem(
+    string Id, string Skill, string Level, IReadOnlyList<string> Descriptors, string? Audio = null);
 
 public sealed record Lesson(
     string Id, string Level, string Title, string File, IReadOnlyList<LessonItem> Items, string? Text = null);

@@ -115,4 +115,19 @@ public sealed class ContentValidatorTests : IDisposable
         var issue = Assert.Single(Validate());
         Assert.Contains("must use exactly the given tokens", issue.Message);
     }
+
+    [Fact]
+    public void Listening_items_need_audio()
+    {
+        _content.WriteDescriptors(("A2-L-01", "listening"));
+        _content.Write(Path.Combine(ContentLoader.LessonsFolder, "listening.json"), """
+            { "id": "listening", "level": "A2", "title": "T", "summary": "S", "items": [
+              { "id": "l-1", "type": "multiple-choice", "skill": "listening", "level": "A2", "descriptors": ["A2-L-01"],
+                "difficulty": 1000, "prompt": "Hva sier hun?", "options": ["Ja", "Nei"], "answer": 0 } ] }
+            """);
+
+        var issues = ContentValidator.Validate(ContentLoader.Load(_content.Root));
+
+        Assert.Contains(issues, i => i.File.EndsWith("listening.json") && i.Message.Contains("audio"));
+    }
 }
