@@ -10,18 +10,51 @@
     { "nb": "første", "forms": ["første"], "meaning": "first" },
     { "nb": "jobb", "forms": ["jobb", "jobben", "jobbe", "jobber"], "meaning": "job, to work" },
     { "nb": "møte", "forms": ["møte", "møtet"], "meaning": "meeting" },
-    { "nb": "kollega", "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"], "meaning": "colleague" },
+    {
+      "nb": "kollega",
+      "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"],
+      "meaning": "colleague"
+    },
     { "nb": "prosjekt", "forms": ["prosjekt", "prosjektet"], "meaning": "project" },
-    { "nb": "presentere", "forms": ["presentere", "presenterer"], "meaning": "to present, to introduce" },
+    {
+      "nb": "presentere",
+      "forms": ["presentere", "presenterer"],
+      "meaning": "to present, to introduce"
+    },
     { "nb": "lunsj", "forms": ["lunsj", "lunsjen"], "meaning": "lunch" },
     { "nb": "klokka", "forms": ["klokka", "klokke", "klokken"], "meaning": "clock, o'clock" }
   ],
   "falseFriends": [
-    { "nb": "sjef", "forms": ["sjef", "sjefen", "sjefer"], "looksLike": "chef", "meaning": "boss, manager (not a cook)" },
-    { "nb": "gift", "forms": ["gift"], "looksLike": "gift", "meaning": "married (a present is «en gave»)" },
-    { "nb": "sensibel", "forms": ["sensibel", "sensible"], "looksLike": "sensible", "meaning": "sensitive" },
-    { "nb": "eventuelt", "forms": ["eventuelt", "eventuell"], "looksLike": "eventually", "meaning": "possibly, if needed" },
-    { "nb": "rar", "forms": ["rar", "rart", "rare"], "looksLike": "rare", "meaning": "strange, odd" }
+    {
+      "nb": "sjef",
+      "forms": ["sjef", "sjefen", "sjefer"],
+      "looksLike": "chef",
+      "meaning": "boss, manager (not a cook)"
+    },
+    {
+      "nb": "gift",
+      "forms": ["gift"],
+      "looksLike": "gift",
+      "meaning": "married (a present is «en gave»)"
+    },
+    {
+      "nb": "sensibel",
+      "forms": ["sensibel", "sensible"],
+      "looksLike": "sensible",
+      "meaning": "sensitive"
+    },
+    {
+      "nb": "eventuelt",
+      "forms": ["eventuelt", "eventuell"],
+      "looksLike": "eventually",
+      "meaning": "possibly, if needed"
+    },
+    {
+      "nb": "rar",
+      "forms": ["rar", "rart", "rare"],
+      "looksLike": "rare",
+      "meaning": "strange, odd"
+    }
   ],
   "contrasts": [
     {

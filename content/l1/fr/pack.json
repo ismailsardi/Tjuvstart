@@ -5,7 +5,11 @@
   "nativeName": "Français",
   "direction": "ltr",
   "cognates": [
-    { "nb": "kollega", "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"], "meaning": "collègue" },
+    {
+      "nb": "kollega",
+      "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"],
+      "meaning": "collègue"
+    },
     { "nb": "prosjekt", "forms": ["prosjekt", "prosjektet"], "meaning": "projet" },
     { "nb": "presentere", "forms": ["presentere", "presenterer"], "meaning": "présenter" },
     { "nb": "sjef", "forms": ["sjef", "sjefen", "sjefer"], "meaning": "chef, patron" },
@@ -17,8 +21,18 @@
     { "nb": "lunsj", "forms": ["lunsj", "lunsjen"], "meaning": "déjeuner (le « lunch »)" }
   ],
   "falseFriends": [
-    { "nb": "rar", "forms": ["rar", "rart", "rare"], "looksLike": "rare", "meaning": "bizarre, étrange" },
-    { "nb": "fin", "forms": ["fin", "fint", "fine"], "looksLike": "fin", "meaning": "beau, joli, bien" },
+    {
+      "nb": "rar",
+      "forms": ["rar", "rart", "rare"],
+      "looksLike": "rare",
+      "meaning": "bizarre, étrange"
+    },
+    {
+      "nb": "fin",
+      "forms": ["fin", "fint", "fine"],
+      "looksLike": "fin",
+      "meaning": "beau, joli, bien"
+    },
     { "nb": "bil", "forms": ["bil", "bilen", "biler"], "looksLike": "bile", "meaning": "voiture" },
     { "nb": "far", "forms": ["far", "faren"], "looksLike": "phare", "meaning": "père" }
   ],

@@ -4,7 +4,15 @@
   "title": "Native-language pack",
   "description": "What a learner's native language brings to Norwegian: words they likely know, look-alikes to watch, grammar contrasts and notes in their language.",
   "type": "object",
-  "required": ["language", "name", "nativeName", "direction", "cognates", "falseFriends", "contrasts"],
+  "required": [
+    "language",
+    "name",
+    "nativeName",
+    "direction",
+    "cognates",
+    "falseFriends",
+    "contrasts"
+  ],
   "additionalProperties": false,
   "properties": {
     "$schema": { "type": "string" },
