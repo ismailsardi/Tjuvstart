@@ -18,7 +18,8 @@ export default defineConfig({
       workbox: {
         // Audio is fetched the first time a sentence is played and then kept for offline use,
         // so installing the app does not download every recording up front.
-        globIgnores: ['audio/**'],
+        // The AI SDK is only useful online, so it is fetched on first use instead of at install.
+        globIgnores: ['audio/**', 'assets/sdk-*.js'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>

@@ -9,7 +9,8 @@ import {
   shadowedSentences,
 } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
+import { aiHref, languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
+import { AiSettingsForm } from './AiSettingsForm';
 import { CanDoList } from './CanDoList';
 import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
@@ -73,6 +74,13 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <p data-testid="job-field">
           {t('myJob')}: {profile?.jobField ? t(`field_${profile.jobField}`) : '–'} ·{' '}
           <a href={wordsHref}>{t('change')}</a>
+        </p>
+      </section>
+      <section className="panel" aria-labelledby="me-ai">
+        <h2 id="me-ai">{t('aiKeyTitle')}</h2>
+        <AiSettingsForm />
+        <p>
+          <a href={aiHref}>{t('aiTitle')}</a>
         </p>
       </section>
     </>
