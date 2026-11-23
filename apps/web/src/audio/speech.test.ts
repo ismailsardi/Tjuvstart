@@ -1,5 +1,13 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { audioUrlFor, canPlay, normalize, resetAudioIndex, sentences } from './speech';
+import {
+  audioUrlFor,
+  canPlay,
+  normalize,
+  resetAudioIndex,
+  sentences,
+  speak,
+  stopSpeaking,
+} from './speech';
 
 afterEach(() => {
   resetAudioIndex();
@@ -59,5 +67,51 @@ describe('canPlay', () => {
     vi.stubGlobal('fetch', fetch);
     await audioUrlFor('Hei.');
     expect(fetch).toHaveBeenCalledWith('/audio/index.json', { cache: 'no-cache' });
+  });
+});
+
+describe('speak', () => {
+  it('does not start a clip that was stopped while the clip list was loading', async () => {
+    let respond: (response: Response) => void = () => {};
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => new Promise<Response>((resolve) => (respond = resolve))),
+    );
+    const audio = vi.fn();
+    vi.stubGlobal('Audio', audio);
+
+    const playing = speak('Hei.');
+    stopSpeaking();
+    respond(new Response(JSON.stringify({ 'Hei.': 'v-a1' })));
+
+    expect(await playing).toBe(true);
+    expect(audio).not.toHaveBeenCalled();
+  });
+
+  it('plays only the latest of two quick requests', async () => {
+    let respond: (response: Response) => void = () => {};
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => new Promise<Response>((resolve) => (respond = resolve))),
+    );
+    const played: string[] = [];
+    vi.stubGlobal(
+      'Audio',
+      vi.fn(function (this: Record<string, unknown>, url: string) {
+        played.push(url);
+        this.pause = vi.fn();
+        this.play = () => {
+          queueMicrotask(() => (this.onended as () => void)());
+          return Promise.resolve();
+        };
+      }),
+    );
+
+    const first = speak('Hei.');
+    const second = speak('Takk.');
+    respond(new Response(JSON.stringify({ 'Hei.': 'v-a1', 'Takk.': 'v-b2' })));
+
+    await Promise.all([first, second]);
+    expect(played).toEqual(['/audio/v-b2.mp3']);
   });
 });

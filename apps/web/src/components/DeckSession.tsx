@@ -81,6 +81,8 @@ export function DeckSession({
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (!card || leaving) return;
+      // Alt+Left is the browser's Back, and other combinations belong to the browser too.
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
       if (event.key === 'ArrowRight') setLeaving('right');
       if (event.key === 'ArrowLeft') setLeaving('left');
     }

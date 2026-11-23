@@ -75,18 +75,28 @@ export function canSpeak(): boolean {
  */
 export function speak(text: string, { rate = 1 }: SpeakOptions = {}): Promise<boolean> {
   stopSpeaking();
-  return play(text, rate);
+  return play(text, rate, generation);
 }
 
-async function play(text: string, rate: number): Promise<boolean> {
+/**
+ * Plays one text for the playback started at `mine`. Loading the clip list takes a network
+ * round trip, so after every wait it checks that nothing stopped or replaced this playback;
+ * otherwise a Stop pressed while loading would be ignored, and two clips could overlap.
+ */
+async function play(text: string, rate: number, mine: number): Promise<boolean> {
+  const cancelled = () => generation !== mine;
   const url = await audioUrlFor(text);
+  if (cancelled()) return true;
   if (url) {
     if (await playFile(url, rate)) return true;
+    if (cancelled()) return true;
     // The list may be out of date (for example right after a new voice was deployed):
     // fetch it again and retry once with the new file.
     resetAudioIndex();
     const fresh = await audioUrlFor(text);
+    if (cancelled()) return true;
     if (fresh && fresh !== url && (await playFile(fresh, rate))) return true;
+    if (cancelled()) return true;
   }
   if (hasBrowserVoice()) return speakWithBrowser(text, rate);
   return false;
@@ -160,7 +170,7 @@ export async function speakAll(texts: string[], { rate = 1 }: SpeakOptions = {})
   const mine = generation;
   for (const text of texts) {
     if (generation !== mine) return true;
-    if (!(await play(text, rate))) return false;
+    if (!(await play(text, rate, mine))) return false;
   }
   return true;
 }
