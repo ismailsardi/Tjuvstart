@@ -1,0 +1,50 @@
+name: Generate audio
+description: >
+  Lists every text the app reads aloud, then records the missing ones with Piper into
+  apps/web/public/audio. Voice and audio are cached, so only new or changed texts are recorded.
+
+inputs:
+  voice:
+    description: Piper voice name
+    default: no_NO-talesyntese-medium
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: '10.0.x'
+    - uses: actions/setup-python@v6
+      with:
+        python-version: '3.12'
+
+    - name: List texts
+      shell: bash
+      run: |
+        mkdir -p .voices
+        dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- speech content --out .voices/speech.json
+
+    - name: Restore voice
+      uses: actions/cache@v4
+      with:
+        path: .voices/${{ inputs.voice }}.onnx*
+        key: piper-voice-${{ inputs.voice }}
+
+    - name: Restore audio
+      uses: actions/cache@v4
+      with:
+        path: apps/web/public/audio
+        key: audio-${{ inputs.voice }}-${{ hashFiles('.voices/speech.json', 'tools/audio/generate_audio.py') }}
+        restore-keys: audio-${{ inputs.voice }}-
+
+    - name: Record missing audio
+      shell: bash
+      env:
+        VOICE: ${{ inputs.voice }}
+      run: |
+        command -v ffmpeg >/dev/null || { sudo apt-get update -q && sudo apt-get install -y -q ffmpeg; }
+        python -m pip install --quiet -r tools/audio/requirements.txt
+        if [ ! -f ".voices/$VOICE.onnx" ]; then
+          python -m piper.download_voices "$VOICE" --download-dir .voices
+        fi
+        python tools/audio/generate_audio.py --speech .voices/speech.json --voice ".voices/$VOICE.onnx" --out apps/web/public/audio

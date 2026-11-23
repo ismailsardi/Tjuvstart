@@ -55,5 +55,20 @@ jobs:
       - run: dotnet test tools/ContentCli/ContentCli.slnx
       - name: Validate content
         run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
+      - name: Python tests (audio build)
+        run: python3 -m unittest discover -s tools/audio
       - name: Coverage report
         run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage content --summary "$GITHUB_STEP_SUMMARY"
+
+  audio:
+    name: Audio (Piper)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/generate-audio
+      - name: Check every text has audio
+        run: |
+          texts=$(python3 -c "import json; print(len(json.load(open('.voices/speech.json'))))")
+          files=$(ls apps/web/public/audio/*.mp3 | wc -l)
+          echo "$texts texts, $files audio files"
+          test "$texts" -eq "$files"
