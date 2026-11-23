@@ -1,7 +1,7 @@
 /**
- * Plays Norwegian text aloud. Texts recorded at build time with Piper (tools/audio) play from
- * audio/<key>.mp3; anything else, such as a lesson added since the last audio build, falls back
- * to the browser's own Norwegian voice when there is one.
+ * Plays Norwegian text aloud. Texts recorded at build time (tools/audio, see ADR 0009) play from
+ * audio/<voice>-<key>.mp3; anything else, such as a lesson added since the last audio build,
+ * falls back to the browser's own Norwegian voice when there is one.
  */
 
 /** Same rule as the content CLI: split after . ! ? … (not after a digit, so "3. mars" stays). */
@@ -63,10 +63,6 @@ function norwegianVoice(): SpeechSynthesisVoice | undefined {
   return (
     voices.find((v) => /^nb\b/i.test(v.lang)) ?? voices.find((v) => /^(no|nn)\b/i.test(v.lang))
   );
-}
-
-export function canSpeak(): boolean {
-  return typeof Audio !== 'undefined' || 'speechSynthesis' in window;
 }
 
 /**

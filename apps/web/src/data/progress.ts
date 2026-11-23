@@ -2,6 +2,7 @@ import {
   DAILY_GOAL,
   DAY_MS,
   DEFAULT_LISTENING_SPEED,
+  isDue,
   canDoStatus,
   currentStreak,
   DEFAULT_RATING,
@@ -131,7 +132,7 @@ export async function reviewCard(
  */
 export async function dueCards(now = Date.now(), db: TjuvstartDb = defaultDb) {
   const cards = await db.cards.orderBy('due').toArray();
-  return cards.filter((card) => card.due <= now);
+  return cards.filter((card) => isDue(card, now));
 }
 
 /**
@@ -191,8 +192,6 @@ export interface MistakeMemory {
   recentlyCorrect: Set<string>;
 }
 
-const DAY = 24 * 60 * 60 * 1000;
-
 /** Reads the answer history and works out recurring mistakes and items worth retrying. */
 export async function mistakeMemory(
   now = Date.now(),
@@ -209,7 +208,7 @@ export async function mistakeMemory(
     recurring: recurringMistakes(scores),
     missed: newestFirst.filter((a) => !a.correct).map((a) => a.itemId),
     recentlyCorrect: new Set(
-      newestFirst.filter((a) => a.correct && now - a.at < DAY).map((a) => a.itemId),
+      newestFirst.filter((a) => a.correct && now - a.at < DAY_MS).map((a) => a.itemId),
     ),
   };
 }
