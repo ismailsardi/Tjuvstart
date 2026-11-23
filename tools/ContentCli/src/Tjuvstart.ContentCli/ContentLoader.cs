@@ -13,6 +13,8 @@ public static class ContentLoader
     public const string DescriptorsFile = "descriptors.json";
     public const string LessonsFolder = "lessons";
     public const string SchemaFolder = "schema";
+    public const string PacksFolder = "l1";
+    public const string PackFileName = "pack.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
 
@@ -22,11 +24,12 @@ public static class ContentLoader
         contentRoot = Path.GetFullPath(contentRoot);
         if (!Directory.Exists(contentRoot))
         {
-            return new ContentSet([], [], [new ValidationIssue(contentRoot, "Content folder not found.")]);
+            return new ContentSet([], [], [], [new ValidationIssue(contentRoot, "Content folder not found.")]);
         }
 
         var descriptorSchema = LoadSchema(contentRoot, "descriptors.schema.json", issues);
         var lessonSchema = LoadSchema(contentRoot, "lesson.schema.json", issues);
+        var packSchema = LoadSchema(contentRoot, "l1-pack.schema.json", issues);
 
         var descriptors = new List<Descriptor>();
         var descriptorsPath = Path.Combine(contentRoot, DescriptorsFile);
@@ -71,7 +74,43 @@ public static class ContentLoader
             }
         }
 
-        return new ContentSet(descriptors, lessons, issues);
+        var packs = new List<LanguagePack>();
+        var packsRoot = Path.Combine(contentRoot, PacksFolder);
+        if (Directory.Exists(packsRoot))
+        {
+            foreach (var folder in Directory.EnumerateDirectories(packsRoot).Order(StringComparer.Ordinal))
+            {
+                var path = Path.Combine(folder, PackFileName);
+                if (!File.Exists(path))
+                {
+                    issues.Add(new ValidationIssue(Relative(contentRoot, folder), $"Missing {PackFileName}."));
+                    continue;
+                }
+
+                if (ReadChecked(contentRoot, path, packSchema, issues) is not { } packDoc)
+                {
+                    continue;
+                }
+
+                using (packDoc)
+                {
+                    var raw = packDoc.RootElement.Deserialize<PackFile>(JsonOptions)!;
+                    var forms = raw.Cognates.Concat(raw.FalseFriends).SelectMany(w => w.Forms).ToList();
+                    var lessonRefs = raw.Contrasts.SelectMany(c => c.Lessons)
+                        .Concat(raw.LessonSummaries?.Keys ?? Enumerable.Empty<string>())
+                        .ToList();
+                    packs.Add(new LanguagePack(
+                        raw.Language,
+                        Path.GetFileName(folder),
+                        Relative(contentRoot, path),
+                        forms,
+                        raw.ItemNotes?.Keys.ToList() ?? [],
+                        lessonRefs));
+                }
+            }
+        }
+
+        return new ContentSet(descriptors, lessons, packs, issues);
     }
 
     private static JsonSchema? LoadSchema(string contentRoot, string fileName, List<ValidationIssue> issues)
@@ -171,4 +210,16 @@ public static class ContentLoader
     private sealed record ItemFile(string Id, string Skill, string Level, List<string> Descriptors);
 
     private sealed record LessonFile(string Id, string Level, string Title, List<ItemFile> Items);
+
+    private sealed record WordFile(List<string> Forms);
+
+    private sealed record ContrastFile(List<string> Lessons);
+
+    private sealed record PackFile(
+        string Language,
+        List<WordFile> Cognates,
+        List<WordFile> FalseFriends,
+        List<ContrastFile> Contrasts,
+        Dictionary<string, string>? ItemNotes,
+        Dictionary<string, string>? LessonSummaries);
 }

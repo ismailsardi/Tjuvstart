@@ -1,0 +1,48 @@
+{
+  "$schema": "../../schema/l1-pack.schema.json",
+  "language": "en",
+  "name": "English",
+  "nativeName": "English",
+  "direction": "ltr",
+  "cognates": [
+    { "nb": "dag", "forms": ["dag", "dagen", "dager"], "meaning": "day" },
+    { "nb": "ny", "forms": ["ny", "nytt", "nye"], "meaning": "new" },
+    { "nb": "første", "forms": ["første"], "meaning": "first" },
+    { "nb": "jobb", "forms": ["jobb", "jobben", "jobbe", "jobber"], "meaning": "job, to work" },
+    { "nb": "møte", "forms": ["møte", "møtet"], "meaning": "meeting" },
+    { "nb": "kollega", "forms": ["kollega", "kollegaen", "kollegaer", "kollegene"], "meaning": "colleague" },
+    { "nb": "prosjekt", "forms": ["prosjekt", "prosjektet"], "meaning": "project" },
+    { "nb": "presentere", "forms": ["presentere", "presenterer"], "meaning": "to present, to introduce" },
+    { "nb": "lunsj", "forms": ["lunsj", "lunsjen"], "meaning": "lunch" },
+    { "nb": "klokka", "forms": ["klokka", "klokke", "klokken"], "meaning": "clock, o'clock" }
+  ],
+  "falseFriends": [
+    { "nb": "sjef", "forms": ["sjef", "sjefen", "sjefer"], "looksLike": "chef", "meaning": "boss, manager (not a cook)" },
+    { "nb": "gift", "forms": ["gift"], "looksLike": "gift", "meaning": "married (a present is «en gave»)" },
+    { "nb": "sensibel", "forms": ["sensibel", "sensible"], "looksLike": "sensible", "meaning": "sensitive" },
+    { "nb": "eventuelt", "forms": ["eventuelt", "eventuell"], "looksLike": "eventually", "meaning": "possibly, if needed" },
+    { "nb": "rar", "forms": ["rar", "rart", "rare"], "looksLike": "rare", "meaning": "strange, odd" }
+  ],
+  "contrasts": [
+    {
+      "id": "verb-second",
+      "title": "The verb comes second",
+      "body": "In a Norwegian main clause the verb is always the second element. If you start with a time or place, the subject moves after the verb: «I dag er det min første dag», not «I dag det er…».",
+      "lessons": ["a2-first-day-at-work"]
+    },
+    {
+      "id": "half-past",
+      "title": "«Halv tolv» is 11:30",
+      "body": "Norwegian counts half an hour towards the next hour. «Halv tolv» means 11:30, not 12:30 as British «half twelve» would.",
+      "lessons": ["a2-first-day-at-work"]
+    }
+  ],
+  "itemNotes": {
+    "a2-fdw-02": "«Sjef» looks like «chef», but it means boss.",
+    "a2-fdw-03": "«Halv tolv» is half an hour before twelve: 11:30.",
+    "a2-fdw-11": "After the verb, use the object pronoun: jeg (I) → meg (me).",
+    "a2-fdw-13": "The sentence starts with «I dag», so the verb «er» comes next, then the subject «det».",
+    "a2-fdw-14": "Same rule: «Etter lunsj» + verb «har» + subject «vi».",
+    "a2-fdw-15": "After «fordi» (because) the order is subject, then verb: «kollegene er»."
+  }
+}
