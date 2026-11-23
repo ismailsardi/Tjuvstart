@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import type { LanguagePack } from '../content/packs';
-import { getCard, getDeck } from '../content/vocab';
+import { cardLabel, getCard, getDeck } from '../content/vocab';
 import { db } from '../data/db';
 import { addCards, dueCards, reviewCard } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { DUE_DECK, wordsHref } from '../routing/useHashRoute';
+import { SpeakButton } from './SpeakButton';
 import { SwipeCard, type SwipeDirection } from './SwipeCard';
 
 interface Session {
@@ -124,6 +125,12 @@ export function DeckSession({
               leaving={leaving}
               onFlip={() => setFlipped((f) => !f)}
               onSwipe={(direction) => void answer(direction)}
+            />
+          </div>
+          <div className="text-tools center">
+            <SpeakButton
+              key={`${card.id}-${flipped ? 'example' : 'word'}`}
+              text={flipped ? card.example : cardLabel(card)}
             />
           </div>
           <p className="muted small hint">{t('swipeHint')}</p>

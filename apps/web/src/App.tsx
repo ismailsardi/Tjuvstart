@@ -10,6 +10,7 @@ import { Me } from './components/Me';
 import { NavBar } from './components/NavBar';
 import { Placement } from './components/Placement';
 import { Practice } from './components/Practice';
+import { Shadowing } from './components/Shadowing';
 import { Words } from './components/Words';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
@@ -33,9 +34,10 @@ export function App() {
   return (
     <I18nProvider language={language}>
       <UpdatePrompt />
-      {!needsOnboarding && !['lesson', 'deck', 'placement', 'practice'].includes(route.name) && (
-        <NavBar route={route} />
-      )}
+      {!needsOnboarding &&
+        !['lesson', 'shadow', 'deck', 'placement', 'practice'].includes(route.name) && (
+          <NavBar route={route} />
+        )}
       <main className="shell" lang={language}>
         {needsOnboarding ? (
           <Onboarding
@@ -69,15 +71,17 @@ function Page({
   if (route.name === 'me') return <Me packs={packs} />;
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
-  if (route.name !== 'lesson') return <Home packs={packs} />;
+  if (route.name !== 'lesson' && route.name !== 'shadow') return <Home packs={packs} />;
 
   const lesson = getLesson(route.lessonId);
-  if (!lesson) {
+  // Only lessons with a reading text can be shadowed.
+  if (!lesson || (route.name === 'shadow' && !lesson.text)) {
     return (
       <p>
         {t('lessonNotFound')} <a href={homeHref}>{t('backHome')}</a>
       </p>
     );
   }
+  if (route.name === 'shadow') return <Shadowing key={lesson.id} lesson={lesson} />;
   return <LessonPlayer key={lesson.id} lesson={lesson} packs={packs} />;
 }

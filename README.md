@@ -16,9 +16,10 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 
 ## Highlights
 
-- **Adaptive by design:** an Elo-style rating per skill picks each next item at about an 80% expected success rate.
+- **Adaptive by design:** a five-minute level check, an Elo-style rating per skill, and practice sessions built from the learner's weak skills and recurring mistakes.
 - **Built around CEFR and Norskprøven:** every lesson and task maps to CEFR descriptors, and CI checks coverage.
 - **Swipeable word cards:** a card for every word in the lessons, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
+- **Audio and shadowing:** every sentence and word card is recorded at build time with an open-source Norwegian voice (Piper); learners listen, record themselves and compare, all in the browser.
 - **Native-language aware:** cognates, false friends and grammar contrasts for English, French and Arabic speakers.
 - **Zero running cost:** a local-first PWA on GitHub Pages; AI features are optional and use the learner's own key.
 
@@ -29,6 +30,7 @@ apps/web/          React + TypeScript PWA (Vite)
 packages/engine/   Level rating and item selection, pure TypeScript
 content/           Lessons and items as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
+tools/audio/       Build-time audio with Piper TTS
 docs/              Specification and architecture decision records
 ```
 
@@ -46,6 +48,8 @@ pnpm lint && pnpm typecheck
 dotnet test tools/ContentCli/ContentCli.slnx
 dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
 ```
+
+Audio is optional for local development: without it, the app uses the browser's Norwegian voice when there is one. To record it locally, see [tools/audio](tools/audio/README.md).
 
 ## Documentation
 

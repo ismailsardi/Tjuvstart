@@ -134,7 +134,7 @@ The Words menu holds one card per word the learner needs for each level. A card 
 - the Norwegian word with its article or infinitive marker (_en jobb_, _å jobbe_) and an example sentence from a work or everyday situation;
 - the meaning in the learner's language;
 - a short memory hook in the learner's language where one helps: a cognate, a false-friend warning, a picture to imagine or a word-building tip;
-- audio, once build-time TTS is in place.
+- audio of the word and the example, with a button to play it.
 
 Cards are grouped by CEFR level and topic. The learner can browse them, and cards they have studied enter spaced repetition: a short daily review brings each card back just before it is likely to be forgotten. Words met in a lesson are added to the learner's deck when the lesson is finished.
 
@@ -148,6 +148,19 @@ The level word lists will come from an openly licensed frequency source, checked
 ### 10.2 Lesson progress
 
 A lesson is marked as completed when the learner reaches its end. The lesson list shows completed lessons with the best score, and the learner can redo any lesson.
+
+### 10.3 Audio and shadowing
+
+Every lesson sentence and every word card has audio ([ADR 0007](adr/0007-piper-audio-at-build-time.md)). Lesson texts have a button that reads the whole text, and word cards read the word on the front and the example on the back.
+
+Shadowing trains pronunciation and listening together. The learner goes through a lesson text one sentence at a time:
+
+1. hear the sentence, at normal speed or slower (75%, pitch kept);
+2. say it out loud, at the same time as the model or right after;
+3. record themselves and play back their own version, or play the model and their version one after the other to compare;
+4. judge it: _sounded close_ moves on, _try again_ stays on the sentence.
+
+The text can be hidden to practise by ear. Recordings stay in the page's memory and are never stored or uploaded; only the learner's verdict is saved, so the profile can show how many sentences they have said out loud. Speaking is not rated from these self-judgements: an estimate for speaking needs scored answers (with AI, step 7), and listening gets its own exercises in step 4.
 
 ## 11. Features and priorities
 
@@ -187,16 +200,16 @@ A lesson is marked as completed when the learner reaches its end. The lesson lis
           └──────────────────┘       └────────────────────┘      └────────────────────┘
 ```
 
-| Component       | Technology                                                                                                                         |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Web app         | React 19, TypeScript, Vite, `vite-plugin-pwa`                                                                                      |
-| Level engine    | TypeScript package (`packages/engine`), runs entirely in the browser                                                               |
-| Local storage   | IndexedDB                                                                                                                          |
-| Content tooling | .NET 10 console app (`tools/ContentCli`): validation and coverage checks in CI                                                     |
-| Audio           | Generated at build time with an open-source TTS engine that has Norwegian voices                                                   |
-| Sync            | Supabase free tier first; ASP.NET Core API on a free hosting tier later ([ADR 0004](adr/0004-dotnet-content-cli-then-sync-api.md)) |
-| AI (optional)   | Browser calls the provider directly with the learner's own key; on-device speech-to-text                                           |
-| CI/CD           | GitHub Actions; GitHub Pages for hosting                                                                                           |
+| Component       | Technology                                                                                                                             |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Web app         | React 19, TypeScript, Vite, `vite-plugin-pwa`                                                                                          |
+| Level engine    | TypeScript package (`packages/engine`), runs entirely in the browser                                                                   |
+| Local storage   | IndexedDB                                                                                                                              |
+| Content tooling | .NET 10 console app (`tools/ContentCli`): validation and coverage checks in CI                                                         |
+| Audio           | Recorded at build time with Piper (CC0 Norwegian voice), browser voice as fallback ([ADR 0007](adr/0007-piper-audio-at-build-time.md)) |
+| Sync            | Supabase free tier first; ASP.NET Core API on a free hosting tier later ([ADR 0004](adr/0004-dotnet-content-cli-then-sync-api.md))     |
+| AI (optional)   | Browser calls the provider directly with the learner's own key; on-device speech-to-text                                               |
+| CI/CD           | GitHub Actions; GitHub Pages for hosting                                                                                               |
 
 ## 13. Cost model
 
@@ -254,7 +267,6 @@ After the first milestones, features are built in this order, one pull request e
 
 Open questions:
 
-- Which open-source TTS voice gives the best bokmål quality at build time.
 - How long the placement check can be before learners drop off.
 - Which openly licensed frequency list to build the level word lists from.
 

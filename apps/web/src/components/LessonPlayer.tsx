@@ -12,7 +12,9 @@ import { lessonIdForItem, readingTextFor } from '../content/lessons';
 import { cardLevel, cardsInText } from '../content/vocab';
 import { completeLesson, recordAnswer } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { homeHref, wordsHref } from '../routing/useHashRoute';
+import { homeHref, shadowHref, wordsHref } from '../routing/useHashRoute';
+import { sentences } from '../audio/speech';
+import { SpeakButton } from './SpeakButton';
 import { ItemView } from './ItemView';
 
 type Feedback = { correct: boolean; answer: string } | null;
@@ -67,9 +69,16 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
             <a href={wordsHref}>{t('wordCards')}</a>
           </p>
         )}
-        <a className="button" href={homeHref}>
-          {t('backHome')}
-        </a>
+        <div className="actions">
+          {lesson.text && (
+            <a className="button secondary" href={shadowHref(lesson.id)}>
+              {t('shadowText')}
+            </a>
+          )}
+          <a className="button" href={homeHref}>
+            {t('backHome')}
+          </a>
+        </div>
       </section>
     );
   }
@@ -101,7 +110,14 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
       <h1 id="lesson-heading" lang="nb">
         {lesson.title}
       </h1>
-      {text && <ReadingText key={text} segments={segments} />}
+      {text && (
+        <ReadingText
+          key={text}
+          text={text}
+          segments={segments}
+          lessonId={practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id}
+        />
+      )}
 
       {contrasts.map((contrast) => (
         <details
@@ -157,7 +173,15 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
 }
 
 /** The lesson text with familiar words and look-alikes marked, followed by short glossaries. */
-function ReadingText({ segments }: { segments: Segment[] }) {
+function ReadingText({
+  text,
+  segments,
+  lessonId,
+}: {
+  text: string;
+  segments: Segment[];
+  lessonId: string;
+}) {
   const { t } = useI18n();
   const unique = (kind: 'cognate' | 'false-friend') => [
     ...new Map(
@@ -169,6 +193,10 @@ function ReadingText({ segments }: { segments: Segment[] }) {
 
   return (
     <>
+      <div className="text-tools">
+        <SpeakButton text={sentences(text)} label={t('listenText')} />
+        <a href={shadowHref(lessonId)}>{t('shadowText')}</a>
+      </div>
       <p className="reading-text" lang="nb">
         {segments.map((segment, i) =>
           segment.word ? (

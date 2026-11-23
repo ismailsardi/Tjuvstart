@@ -49,6 +49,15 @@ export interface Completion {
   lastCompletedAt: number;
 }
 
+/** One sentence said aloud in a shadowing session, with the learner's own verdict. */
+export interface ShadowingAttempt {
+  id?: number;
+  lessonId: string;
+  text: string;
+  verdict: 'close' | 'again';
+  at: number;
+}
+
 export const GUEST_ID = 'guest';
 
 export class TjuvstartDb extends Dexie {
@@ -57,6 +66,7 @@ export class TjuvstartDb extends Dexie {
   cards!: EntityTable<CardProgress, 'cardId'>;
   reviews!: EntityTable<Review, 'id'>;
   completions!: EntityTable<Completion, 'lessonId'>;
+  shadowing!: EntityTable<ShadowingAttempt, 'id'>;
 
   constructor(name = 'tjuvstart') {
     super(name);
@@ -68,6 +78,9 @@ export class TjuvstartDb extends Dexie {
       cards: 'cardId, due',
       reviews: '++id, cardId, at',
       completions: 'lessonId',
+    });
+    this.version(3).stores({
+      shadowing: '++id, lessonId, at',
     });
   }
 }

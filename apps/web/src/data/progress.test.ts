@@ -14,7 +14,9 @@ import {
   recordAnswer,
   reviewCard,
   saveLanguages,
+  recordShadowing,
   savePlacement,
+  shadowedSentences,
 } from './progress';
 
 const item: GapFillItem = {
@@ -140,5 +142,16 @@ describe('mistakeMemory', () => {
     expect(memory.recurring).toEqual([]);
     expect(memory.missed).toEqual([]);
     expect(memory.recentlyCorrect.has('a2-sick-11')).toBe(true);
+  });
+});
+
+describe('shadowing', () => {
+  it('counts each sentence judged close once', async () => {
+    db = new TjuvstartDb('test-shadowing');
+    await recordShadowing('l', 'Hei!', 'again', 1, db);
+    await recordShadowing('l', 'Hei!', 'close', 2, db);
+    await recordShadowing('l', 'Hei!', 'close', 3, db);
+    await recordShadowing('l', 'Takk.', 'again', 4, db);
+    expect(await shadowedSentences(db)).toBe(1);
   });
 });
