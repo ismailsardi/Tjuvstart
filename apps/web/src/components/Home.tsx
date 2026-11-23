@@ -3,9 +3,10 @@ import { MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
 import { firstNote, type LanguagePack } from '../content/packs';
 import { SKILLS, type Skill } from '../content/types';
-import { getProfile } from '../data/progress';
+import { db } from '../data/db';
+import { dueCards, getProfile } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { languagesHref, lessonHref } from '../routing/useHashRoute';
+import { languagesHref, lessonHref, wordsHref } from '../routing/useHashRoute';
 
 // Skill names stay in Norwegian: learners meet them again in the exam and in class.
 const SKILL_NAMES: Record<Skill, string> = {
@@ -18,6 +19,8 @@ const SKILL_NAMES: Record<Skill, string> = {
 export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
+  const completions = useLiveQuery(() => db.completions.toArray());
+  const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
   const languageNames =
     packs.length > 0 ? packs.map((pack) => pack.nativeName).join(', ') : t('otherLanguage');
 
@@ -52,13 +55,19 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         </ul>
       </section>
 
+      <a className="words-link" href={wordsHref}>
+        <strong>{t('wordCards')}</strong>
+        <span className="muted">{due > 0 ? t('dueCount', { n: due }) : t('nothingDue')}</span>
+      </a>
+
       <section aria-labelledby="lessons-heading">
         <h2 id="lessons-heading">{t('lessons')}</h2>
         <ul className="lessons">
           {lessons.map((lesson) => {
             const summary = firstNote(packs, (pack) => pack.lessonSummaries?.[lesson.id]);
+            const done = completions?.find((c) => c.lessonId === lesson.id);
             return (
-              <li key={lesson.id}>
+              <li key={lesson.id} className={done ? 'completed' : undefined}>
                 <a href={lessonHref(lesson.id)}>
                   <span className="badge">{lesson.level}</span>
                   <strong lang="nb">{lesson.title}</strong>
@@ -72,6 +81,11 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
                     </span>
                   ) : (
                     <span className="muted">{lesson.summary}</span>
+                  )}
+                  {done && (
+                    <span className="done" data-testid={`completed-${lesson.id}`}>
+                      ✓ {t('completed', { score: done.bestScore, total: done.total })}
+                    </span>
                   )}
                 </a>
               </li>

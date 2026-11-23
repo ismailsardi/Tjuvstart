@@ -3,7 +3,16 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { DEFAULT_RATING } from '@tjuvstart/engine';
 import type { GapFillItem } from '../content/types';
 import { TjuvstartDb } from './db';
-import { getProfile, recordAnswer, saveLanguages } from './progress';
+import { DAY_MS } from '@tjuvstart/engine';
+import {
+  addCards,
+  completeLesson,
+  dueCards,
+  getProfile,
+  recordAnswer,
+  reviewCard,
+  saveLanguages,
+} from './progress';
 
 const item: GapFillItem = {
   id: 'g',
@@ -55,5 +64,38 @@ describe('saveLanguages', () => {
     expect(profile.nativeLanguage).toBe('fr');
     expect(profile.knownLanguages).toEqual(['en']);
     expect(profile.answers.reading).toBe(0);
+  });
+});
+
+describe('word cards', () => {
+  const now = Date.UTC(2026, 0, 1);
+
+  it('adds new cards as due now and leaves existing ones alone', async () => {
+    db = new TjuvstartDb('test-cards');
+    expect(await addCards(['jobb', 'ha'], now, db)).toBe(2);
+    await reviewCard('jobb', 'good', now, db);
+    expect(await addCards(['jobb', 'syk'], now, db)).toBe(1);
+
+    const due = await dueCards(now, db);
+    expect(due.map((c) => c.cardId).sort()).toEqual(['ha', 'syk']);
+    expect((await dueCards(now + DAY_MS, db)).map((c) => c.cardId)).toContain('jobb');
+    expect(await db.reviews.count()).toBe(1);
+  });
+});
+
+describe('completeLesson', () => {
+  it('keeps the best score and adds the lesson words', async () => {
+    db = new TjuvstartDb('test-completion');
+    expect(await completeLesson('lesson', 8, 12, ['jobb'], 1000, db)).toBe(1);
+    await completeLesson('lesson', 5, 12, ['jobb'], 2000, db);
+
+    const done = await db.completions.get('lesson');
+    expect(done).toMatchObject({
+      bestScore: 8,
+      total: 12,
+      firstCompletedAt: 1000,
+      lastCompletedAt: 2000,
+    });
+    expect(await db.cards.count()).toBe(1);
   });
 });
