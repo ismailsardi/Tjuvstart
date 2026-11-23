@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "job-hospitality",
+  "title": "Hotell og restaurant",
+  "field": "hospitality",
+  "cards": [
+    {
+      "id": "gjest",
+      "nb": "gjest",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["gjest", "gjesten", "gjester"],
+      "example": "Gjestene kommer klokka sju."
+    },
+    {
+      "id": "bestilling",
+      "nb": "bestilling",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bestilling", "bestillingen", "bestillinger"],
+      "example": "Kan jeg ta bestillingen?"
+    },
+    {
+      "id": "servitor",
+      "nb": "servitør",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["servitør", "servitøren", "servitører"],
+      "example": "Jeg jobber som servitør."
+    },
+    {
+      "id": "kokk",
+      "nb": "kokk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kokk", "kokken", "kokker"],
+      "example": "Kokken lager middag."
+    },
+    {
+      "id": "meny",
+      "nb": "meny",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["meny", "menyen", "menyer"],
+      "example": "Her er menyen."
+    },
+    {
+      "id": "regning",
+      "nb": "regning",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["regning", "regningen", "regninger"],
+      "example": "Kan vi få regningen?"
+    },
+    {
+      "id": "bord",
+      "nb": "bord",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bord", "bordet"],
+      "example": "Bordet ved vinduet er ledig."
+    },
+    {
+      "id": "allergi",
+      "nb": "allergi",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["allergi", "allergien", "allergier"],
+      "example": "Har du noen allergier?"
+    },
+    {
+      "id": "oppvask",
+      "nb": "oppvask",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["oppvask", "oppvasken"],
+      "example": "Jeg tar oppvasken i kveld."
+    },
+    {
+      "id": "kasse",
+      "nb": "kasse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kasse", "kassen", "kasser"],
+      "example": "Du kan betale i kassen."
+    },
+    {
+      "id": "skift",
+      "nb": "skift",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skift", "skiftet"],
+      "example": "Jeg har tidlig skift i morgen."
+    },
+    {
+      "id": "reservere",
+      "nb": "reservere",
+      "pos": "verb",
+      "forms": ["reservere", "reserverer", "reserverte", "reservert"],
+      "example": "Jeg vil reservere et bord for to."
+    }
+  ]
+}

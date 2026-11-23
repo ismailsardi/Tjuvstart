@@ -7,21 +7,50 @@
   "required": ["level", "topic", "title", "cards"],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "level": { "enum": ["A1", "A2", "B1", "B2"] },
-    "topic": { "$ref": "#/$defs/slug" },
-    "title": { "description": "Deck title in Norwegian.", "type": "string", "minLength": 1 },
-    "cards": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/card" } }
+    "$schema": {
+      "type": "string"
+    },
+    "level": {
+      "enum": ["A1", "A2", "B1", "B2"]
+    },
+    "topic": {
+      "$ref": "#/$defs/slug"
+    },
+    "title": {
+      "description": "Deck title in Norwegian.",
+      "type": "string",
+      "minLength": 1
+    },
+    "field": {
+      "description": "Set on a 'my job' deck: the line of work it is for.",
+      "enum": ["it", "health", "construction", "hospitality"]
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/card"
+      }
+    }
   },
   "$defs": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
     "card": {
       "type": "object",
       "required": ["id", "nb", "pos", "forms", "example"],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/slug" },
-        "nb": { "description": "Dictionary form.", "type": "string", "minLength": 1 },
+        "id": {
+          "$ref": "#/$defs/slug"
+        },
+        "nb": {
+          "description": "Dictionary form.",
+          "type": "string",
+          "minLength": 1
+        },
         "pos": {
           "enum": [
             "noun",
@@ -45,12 +74,27 @@
           "description": "Every form to recognise in texts, lower case.",
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string", "pattern": "^[a-zæøå]+$" }
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zæøå]+$"
+          }
         },
-        "example": { "description": "A short example sentence.", "type": "string", "minLength": 1 }
+        "example": {
+          "description": "A short example sentence.",
+          "type": "string",
+          "minLength": 1
+        }
       },
-      "if": { "properties": { "pos": { "const": "noun" } } },
-      "then": { "required": ["gender"] }
+      "if": {
+        "properties": {
+          "pos": {
+            "const": "noun"
+          }
+        }
+      },
+      "then": {
+        "required": ["gender"]
+      }
     }
   }
 }

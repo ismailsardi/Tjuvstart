@@ -27,7 +27,7 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
   await page.getByRole('link', { name: '← Accueil' }).click();
   await page.getByRole('navigation').getByRole('link', { name: 'Moi' }).click();
   await expect(page.getByTestId('languages')).toContainText('Français, English');
-  await page.getByRole('link', { name: 'Modifier' }).click();
+  await page.getByTestId('languages').getByRole('link', { name: 'Modifier' }).click();
   await chooseLanguages(page, 'English');
   await expect(page.getByRole('heading', { name: 'Your level' })).toBeVisible();
 });

@@ -1,0 +1,106 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-dugnad",
+  "level": "A2",
+  "title": "Dugnad i borettslaget",
+  "summary": "Read a notice from the housing association about a dugnad, the Norwegian day of shared voluntary work.",
+  "document": {
+    "kind": "notice",
+    "from": "Styret i borettslaget"
+  },
+  "text": "Dugnad lørdag 26. april\nKjære naboer! Våren er her, og det er tid for dugnad. Vi møtes ved inngangen klokka ti.\nVi skal rydde søppel, male gjerdet og plante blomster. Ta gjerne med hansker.\nEtterpå griller vi pølser, og det blir kaffe og kake.\nHilsen styret i borettslaget",
+  "items": [
+    {
+      "id": "a2-dug-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 900,
+      "prompt": "Når er dugnaden?",
+      "options": ["Lørdag 26. april", "Søndag 26. april", "Lørdag 16. april"],
+      "answer": 0
+    },
+    {
+      "id": "a2-dug-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hvor møtes naboene?",
+      "options": ["Ved inngangen", "I kantina", "På hytta"],
+      "answer": 0
+    },
+    {
+      "id": "a2-dug-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hva skal de ikke gjøre?",
+      "options": ["Vaske vinduer", "Male gjerdet", "Plante blomster"],
+      "answer": 0
+    },
+    {
+      "id": "a2-dug-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hva skal du ta med?",
+      "options": ["Hansker", "Pølser", "Kake"],
+      "answer": 0
+    },
+    {
+      "id": "a2-dug-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva er en dugnad?",
+      "options": ["Naboer jobber sammen uten lønn", "En fest med musikk", "Et møte på jobben"],
+      "answer": 0
+    },
+    {
+      "id": "a2-dug-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Vi ___ ved inngangen klokka ti.",
+      "hint": "møte + s",
+      "answers": ["møtes"]
+    },
+    {
+      "id": "a2-dug-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1100,
+      "prompt": "Etterpå ___ vi pølser.",
+      "hint": "grille",
+      "answers": ["griller"]
+    },
+    {
+      "id": "a2-dug-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["blir", "det", "Etterpå", "kaffe og kake"],
+      "answer": "Etterpå blir det kaffe og kake"
+    }
+  ]
+}

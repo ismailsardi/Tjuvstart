@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "job-construction",
+  "title": "Bygg og anlegg",
+  "field": "construction",
+  "cards": [
+    {
+      "id": "byggeplass",
+      "nb": "byggeplass",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["byggeplass", "byggeplassen"],
+      "example": "Vi møtes på byggeplassen klokka sju."
+    },
+    {
+      "id": "verktoy",
+      "nb": "verktøy",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["verktøy", "verktøyet"],
+      "example": "Har du med verktøy?"
+    },
+    {
+      "id": "hjelm",
+      "nb": "hjelm",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hjelm", "hjelmen", "hjelmer"],
+      "example": "Du må bruke hjelm."
+    },
+    {
+      "id": "stige",
+      "nb": "stige",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["stige", "stigen", "stiger"],
+      "example": "Stigen står ved veggen."
+    },
+    {
+      "id": "tegning",
+      "nb": "tegning",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tegning", "tegningen", "tegninger"],
+      "example": "Se på tegningen først."
+    },
+    {
+      "id": "maale",
+      "nb": "måle",
+      "pos": "verb",
+      "forms": ["måle", "måler", "målte", "målt"],
+      "example": "Mål veggen før du kutter."
+    },
+    {
+      "id": "bore",
+      "nb": "bore",
+      "pos": "verb",
+      "forms": ["bore", "borer", "boret"],
+      "example": "Vi borer et hull i veggen."
+    },
+    {
+      "id": "betong",
+      "nb": "betong",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["betong", "betongen"],
+      "example": "Betongen må tørke."
+    },
+    {
+      "id": "tak",
+      "nb": "tak",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["tak", "taket"],
+      "example": "Vi legger nytt tak."
+    },
+    {
+      "id": "vegg",
+      "nb": "vegg",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vegg", "veggen", "vegger"],
+      "example": "Vi maler veggen hvit."
+    },
+    {
+      "id": "gulv",
+      "nb": "gulv",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["gulv", "gulvet"],
+      "example": "Gulvet er vått."
+    },
+    {
+      "id": "elektriker",
+      "nb": "elektriker",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["elektriker", "elektrikeren", "elektrikere"],
+      "example": "Vi venter på elektrikeren."
+    }
+  ]
+}

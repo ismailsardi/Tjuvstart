@@ -518,7 +518,7 @@
       "id": "skrive",
       "nb": "skrive",
       "pos": "verb",
-      "forms": ["skrive", "skriver", "skrev"],
+      "forms": ["skrive", "skriver", "skrev", "skriv"],
       "example": "Ahmed skriver til sjefen."
     },
     {
@@ -759,7 +759,7 @@
       "id": "ringe",
       "nb": "ringe",
       "pos": "verb",
-      "forms": ["ringe", "ringer", "ringte", "ringt"],
+      "forms": ["ringe", "ringer", "ringte", "ringt", "ring"],
       "example": "Omar ringer legekontoret."
     },
     {
@@ -874,6 +874,146 @@
       "pos": "verb",
       "forms": ["prøve", "prøver", "prøvde", "prøvd"],
       "example": "Neste uke skal jeg prøve matpakke."
+    },
+    {
+      "id": "april",
+      "nb": "april",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["april"],
+      "example": "Søknadsfristen er 1. april."
+    },
+    {
+      "id": "at",
+      "nb": "at",
+      "pos": "conjunction",
+      "forms": ["at"],
+      "example": "Vi ønsker at du har erfaring."
+    },
+    {
+      "id": "engelsk",
+      "nb": "engelsk",
+      "pos": "adjective",
+      "forms": ["engelsk"],
+      "example": "Snakker du engelsk?"
+    },
+    {
+      "id": "etterpa",
+      "nb": "etterpå",
+      "pos": "adverb",
+      "forms": ["etterpå"],
+      "example": "Etterpå griller vi pølser."
+    },
+    {
+      "id": "gammel",
+      "nb": "gammel",
+      "pos": "adjective",
+      "forms": ["gammel", "gammelt", "gamle"],
+      "example": "Sykkelen er tre år gammel."
+    },
+    {
+      "id": "kaffe",
+      "nb": "kaffe",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kaffe", "kaffen"],
+      "example": "Det blir kaffe og kake."
+    },
+    {
+      "id": "kake",
+      "nb": "kake",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kake", "kaka", "kaken", "kaker"],
+      "example": "Vi spiser kake etter dugnaden."
+    },
+    {
+      "id": "like",
+      "nb": "like",
+      "pos": "verb",
+      "forms": ["like", "liker", "likte", "likt"],
+      "example": "Jeg liker å jobbe i team."
+    },
+    {
+      "id": "liten",
+      "nb": "liten",
+      "pos": "adjective",
+      "forms": ["liten", "lite", "lille", "små"],
+      "example": "Vi er et lite firma."
+    },
+    {
+      "id": "snakke",
+      "nb": "snakke",
+      "pos": "verb",
+      "forms": ["snakke", "snakker", "snakket"],
+      "example": "Du snakker norsk eller engelsk."
+    },
+    {
+      "id": "ved",
+      "nb": "ved",
+      "pos": "preposition",
+      "forms": ["ved"],
+      "example": "Vi møtes ved inngangen."
+    },
+    {
+      "id": "var-season",
+      "nb": "vår",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["våren", "vårer"],
+      "example": "Våren er her!"
+    },
+    {
+      "id": "var-ours",
+      "nb": "vår",
+      "pos": "pronoun",
+      "forms": ["vår", "vårt", "våre"],
+      "example": "Vi trenger en ny kollega i teamet vårt."
+    },
+    {
+      "id": "ar",
+      "nb": "år",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["år", "året", "årene"],
+      "example": "Sykkelen er tre år gammel."
+    },
+    {
+      "id": "onske",
+      "nb": "ønske",
+      "pos": "verb",
+      "forms": ["ønske", "ønsker", "ønsket"],
+      "example": "Vi ønsker at du har erfaring."
+    },
+    {
+      "id": "pris",
+      "nb": "pris",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pris", "prisen", "priser"],
+      "example": "Prisen er ikke fast."
+    },
+    {
+      "id": "melding",
+      "nb": "melding",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["melding", "meldingen", "meldinger"],
+      "example": "Send meg en melding."
+    },
+    {
+      "id": "kjaer",
+      "nb": "kjær",
+      "pos": "adjective",
+      "forms": ["kjær", "kjært", "kjære"],
+      "example": "Kjære naboer!"
+    },
+    {
+      "id": "i-fjor",
+      "nb": "i fjor",
+      "pos": "phrase",
+      "forms": ["fjor"],
+      "example": "Jeg flyttet til Norge i fjor."
     }
   ]
 }

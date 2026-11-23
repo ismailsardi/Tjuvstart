@@ -177,6 +177,14 @@ Every lesson has listening exercises next to its reading and writing ones:
 
 Audio starts a little slower than natural speech (85%) and speeds up as the learner shows they can follow it: three right listening answers in a row move one step up, a wrong answer moves one step down, between 75% and 130%. A _slower_ replay is always there. Listening answers update the listening rating like any other skill, so the level check now covers reading, listening and writing (five questions each), and a listening practice session on Today mixes listening items from all lessons.
 
+### 10.6 Real-world texts and my job
+
+Learners in Norway read official letters and ads long before they can read a newspaper. A second track, _Ekte tekster_, has four texts written in the shape of real ones and simplified to A2: a letter from NAV about the _meldekort_, a used bike on Finn.no, a job ad and a _dugnad_ notice from the housing co-op. The lesson player shows them as documents, with a "real-world text, simplified to A2" label, the kind of document and who sent it. Exercises ask what readers of the real thing need to find: the deadline, the price, what to bring, who to call. The lesson schema has an optional `document` field (`kind` and `from`) for this.
+
+Today shows only the track in progress, so the first-weeks track comes first and the real-texts track takes over when it is done. Every track is on the Lessons tab.
+
+_My job_ adds a deck of twelve A2 words for the learner's line of work: IT, health and care, construction, or hotels and restaurants. The learner picks a field once on the Words tab, which then shows that deck at the top and hides the others; the choice is saved in the profile and can be changed on Words or from Me. Job decks use the optional `field` property of the deck schema.
+
 ## 11. Features and priorities
 
 | Feature                      | Description                                                                                             | Release |

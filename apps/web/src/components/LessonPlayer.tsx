@@ -7,8 +7,8 @@ import {
   type LanguagePack,
   type Segment,
 } from '../content/packs';
-import type { Lesson } from '../content/types';
-import { lessonIdForItem, readingTextFor } from '../content/lessons';
+import type { Lesson, LessonDocument } from '../content/types';
+import { getLesson, lessonIdForItem, readingTextFor } from '../content/lessons';
 import { cardLevel, cardsInText } from '../content/vocab';
 import { completeLesson, recordAnswer } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
@@ -38,6 +38,7 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
 
   const item = lesson.items[index];
   const text = practice ? (item ? readingTextFor(item) : undefined) : lesson.text;
+  const textLesson = practice && item ? getLesson(lessonIdForItem(item.id) ?? '') : lesson;
   const segments = useMemo(() => (text ? annotate(text, packs) : []), [text, packs]);
   const contrasts = useMemo(
     () => (practice ? [] : contrastsFor(lesson.id, packs)),
@@ -120,6 +121,8 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
           text={text}
           segments={segments}
           lessonId={practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id}
+          document={textLesson?.document}
+          level={textLesson?.level ?? lesson.level}
         />
       )}
 
@@ -198,10 +201,15 @@ function ReadingText({
   text,
   segments,
   lessonId,
+  document,
+  level,
 }: {
   text: string;
   segments: Segment[];
   lessonId: string;
+  /** Set when the text is a simplified real-world document: a letter, an ad or a notice. */
+  document?: LessonDocument;
+  level: string;
 }) {
   const { t } = useI18n();
   const unique = (kind: 'cognate' | 'false-friend') => [
@@ -210,6 +218,19 @@ function ReadingText({
     ).values(),
   ];
   const cognates = unique('cognate');
+  const body = (
+    <p className="reading-text" lang="nb">
+      {segments.map((segment, i) =>
+        segment.word ? (
+          <mark key={i} className={segment.word.kind}>
+            {segment.text}
+          </mark>
+        ) : (
+          segment.text
+        ),
+      )}
+    </p>
+  );
   const falseFriends = unique('false-friend');
 
   return (
@@ -218,17 +239,23 @@ function ReadingText({
         <SpeakButton text={sentences(text)} label={t('listenText')} />
         <a href={shadowHref(lessonId)}>{t('shadowText')}</a>
       </div>
-      <p className="reading-text" lang="nb">
-        {segments.map((segment, i) =>
-          segment.word ? (
-            <mark key={i} className={segment.word.kind}>
-              {segment.text}
-            </mark>
-          ) : (
-            segment.text
-          ),
-        )}
-      </p>
+      {document ? (
+        <figure className={`doc doc-${document.kind}`} data-testid="document">
+          <figcaption className="doc-meta">
+            <span className="badge">{t('realText', { level })}</span>{' '}
+            <span>{t(`doc_${document.kind}`)}</span>
+            {document.from && (
+              <>
+                {' · '}
+                <span lang="nb">{t('docFrom', { from: document.from })}</span>
+              </>
+            )}
+          </figcaption>
+          {body}
+        </figure>
+      ) : (
+        body
+      )}
       {cognates.length > 0 && (
         <section className="glossary" aria-label={t('knownWords')}>
           <h2>{t('knownWords')}</h2>

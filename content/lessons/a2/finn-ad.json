@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-finn-ad",
+  "level": "A2",
+  "title": "Til salgs på Finn",
+  "summary": "Read a second-hand ad like the ones on Finn.no: what is for sale, the price, where to pick it up and how to reply.",
+  "document": {
+    "kind": "ad",
+    "from": "Finn.no"
+  },
+  "text": "Til salgs: brukt sykkel\nSykkelen er tre år gammel og har 21 gir. Den er godt brukt, men den fungerer fint. Nye bremser i fjor.\nPris: 1 500 kr. Prisen er ikke fast.\nKan hentes på Grünerløkka. Send meg en melding hvis du er interessert. Førstemann til mølla!",
+  "items": [
+    {
+      "id": "a2-finn-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hva selger personen?",
+      "options": ["En sykkel", "En bil", "En sofa"],
+      "answer": 0
+    },
+    {
+      "id": "a2-finn-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Hvor gammel er sykkelen?",
+      "options": ["Tre år", "Ett år", "Tjueen år"],
+      "answer": 0
+    },
+    {
+      "id": "a2-finn-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hva er nytt på sykkelen?",
+      "options": ["Bremsene", "Girene", "Hjulene"],
+      "answer": 0
+    },
+    {
+      "id": "a2-finn-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1100,
+      "prompt": "Kan du kanskje betale mindre enn 1 500 kr?",
+      "options": ["Ja, prisen er ikke fast", "Nei, aldri", "Ja, sykkelen er gratis"],
+      "answer": 0
+    },
+    {
+      "id": "a2-finn-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Hva betyr «Førstemann til mølla»?",
+      "options": [
+        "Den som kommer først, får sykkelen",
+        "Sykkelen står ved en mølle",
+        "Du må komme tidlig om morgenen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-finn-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 1000,
+      "prompt": "Sykkelen ___ fint.",
+      "hint": "fungere",
+      "answers": ["fungerer"]
+    },
+    {
+      "id": "a2-finn-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["definite-form"],
+      "difficulty": 1100,
+      "prompt": "___ er ikke fast.",
+      "hint": "en pris, ___ (bestemt form)",
+      "answers": ["Prisen"]
+    },
+    {
+      "id": "a2-finn-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["object-pronouns"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["en melding", "Send", "meg"],
+      "answer": "Send meg en melding"
+    }
+  ]
+}

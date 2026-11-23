@@ -60,11 +60,18 @@ export interface DictationItem extends ItemBase {
 
 export type Item = MultipleChoiceItem | GapFillItem | WordOrderItem | DictationItem;
 
+/** A text shaped like a real-world document, simplified to the lesson's level. */
+export interface LessonDocument {
+  kind: 'letter' | 'ad' | 'job-ad' | 'notice';
+  from?: string;
+}
+
 export interface Lesson {
   id: string;
   level: Level;
   title: string;
   summary: string;
+  document?: LessonDocument;
   text?: string;
   items: Item[];
 }

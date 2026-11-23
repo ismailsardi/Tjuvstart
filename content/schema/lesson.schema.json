@@ -23,6 +23,22 @@
       "type": "string",
       "minLength": 1
     },
+    "document": {
+      "description": "Set when the text imitates a real-world document, simplified to the lesson's level. The app shows it in that form.",
+      "type": "object",
+      "required": ["kind"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": ["letter", "ad", "job-ad", "notice"]
+        },
+        "from": {
+          "description": "Who the document is from, as printed on it.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
     "text": {
       "description": "Optional reading text shown above the exercises.",
       "type": "string",

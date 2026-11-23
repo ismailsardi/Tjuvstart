@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "job-health",
+  "title": "Helse og omsorg",
+  "field": "health",
+  "cards": [
+    {
+      "id": "pasient",
+      "nb": "pasient",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pasient", "pasienten", "pasienter"],
+      "example": "Pasienten har feber."
+    },
+    {
+      "id": "sykepleier",
+      "nb": "sykepleier",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sykepleier", "sykepleieren", "sykepleiere"],
+      "example": "Jeg jobber som sykepleier."
+    },
+    {
+      "id": "sykehus",
+      "nb": "sykehus",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["sykehus", "sykehuset"],
+      "example": "Hun jobber på sykehuset."
+    },
+    {
+      "id": "vakt",
+      "nb": "vakt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vakt", "vakten", "vakter"],
+      "example": "Jeg har nattevakt i helgen."
+    },
+    {
+      "id": "resept",
+      "nb": "resept",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["resept", "resepten", "resepter"],
+      "example": "Legen skriver ut en resept."
+    },
+    {
+      "id": "blodtrykk",
+      "nb": "blodtrykk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["blodtrykk", "blodtrykket"],
+      "example": "Jeg måler blodtrykket ditt."
+    },
+    {
+      "id": "smerte",
+      "nb": "smerte",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["smerte", "smerten", "smerter"],
+      "example": "Har du smerter?"
+    },
+    {
+      "id": "undersoke",
+      "nb": "undersøke",
+      "pos": "verb",
+      "forms": ["undersøke", "undersøker", "undersøkte", "undersøkt"],
+      "example": "Legen undersøker pasienten."
+    },
+    {
+      "id": "journal",
+      "nb": "journal",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["journal", "journalen", "journaler"],
+      "example": "Skriv det i journalen."
+    },
+    {
+      "id": "avdeling",
+      "nb": "avdeling",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["avdeling", "avdelingen", "avdelinger"],
+      "example": "Hvilken avdeling jobber du på?"
+    },
+    {
+      "id": "pleie",
+      "nb": "pleie",
+      "pos": "verb",
+      "forms": ["pleie", "pleier", "pleiet"],
+      "example": "Vi pleier eldre pasienter."
+    },
+    {
+      "id": "vaksine",
+      "nb": "vaksine",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vaksine", "vaksinen", "vaksiner"],
+      "example": "Har du tatt vaksinen?"
+    }
+  ]
+}

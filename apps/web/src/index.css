@@ -1067,3 +1067,56 @@ mark.missed {
 .transcript {
   font-style: italic;
 }
+
+/* Real-world texts and my job */
+
+.doc {
+  margin: 0;
+}
+
+.doc .reading-text {
+  border-left: none;
+  border-top: 4px solid var(--accent);
+  font-family: ui-serif, Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+.doc-ad .reading-text,
+.doc-job-ad .reading-text {
+  border-top-color: var(--warm);
+}
+
+.doc-notice .reading-text {
+  border: 2px dashed var(--border);
+}
+
+.doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.4rem;
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+button.chip {
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.9rem;
+}
+
+button.chip[aria-pressed='true'] {
+  border-color: var(--warm);
+}
+
+button.link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

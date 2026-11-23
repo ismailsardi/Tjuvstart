@@ -1,0 +1,340 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "documents",
+  "title": "Brev og annonser",
+  "cards": [
+    {
+      "id": "arbeidssoker",
+      "nb": "arbeidssøker",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidssøker", "arbeidssøkeren", "arbeidssøkere"],
+      "example": "Du er registrert som arbeidssøker."
+    },
+    {
+      "id": "meldekort",
+      "nb": "meldekort",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["meldekort", "meldekortet", "meldekortene"],
+      "example": "Du må sende meldekort hver fjortende dag."
+    },
+    {
+      "id": "utbetaling",
+      "nb": "utbetaling",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["utbetaling", "utbetalingen", "utbetalinger"],
+      "example": "Utbetalingen kommer på fredag."
+    },
+    {
+      "id": "registrere",
+      "nb": "registrere",
+      "pos": "verb",
+      "forms": ["registrere", "registrerer", "registrerte", "registrert"],
+      "example": "Du er registrert hos NAV."
+    },
+    {
+      "id": "senest",
+      "nb": "senest",
+      "pos": "adverb",
+      "forms": ["senest"],
+      "example": "Send meldekortet senest fredag."
+    },
+    {
+      "id": "stoppe",
+      "nb": "stoppe",
+      "pos": "verb",
+      "forms": ["stoppe", "stopper", "stoppet"],
+      "example": "Utbetalingen kan stoppe."
+    },
+    {
+      "id": "fjortende",
+      "nb": "fjortende",
+      "pos": "number",
+      "forms": ["fjortende"],
+      "example": "hver fjortende dag"
+    },
+    {
+      "id": "til-salgs",
+      "nb": "til salgs",
+      "pos": "phrase",
+      "forms": ["salgs"],
+      "example": "Til salgs: brukt sykkel."
+    },
+    {
+      "id": "brukt",
+      "nb": "brukt",
+      "pos": "adjective",
+      "forms": ["brukt", "brukte"],
+      "example": "Jeg kjøper en brukt sykkel."
+    },
+    {
+      "id": "sykkel",
+      "nb": "sykkel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sykkel", "sykkelen", "sykler", "syklene"],
+      "example": "Sykkelen fungerer fint."
+    },
+    {
+      "id": "gir",
+      "nb": "gir",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["gir", "giret", "girene"],
+      "example": "Sykkelen har 21 gir."
+    },
+    {
+      "id": "fungere",
+      "nb": "fungere",
+      "pos": "verb",
+      "forms": ["fungere", "fungerer", "fungerte"],
+      "example": "Den fungerer fint."
+    },
+    {
+      "id": "bremse",
+      "nb": "bremse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bremse", "bremsen", "bremser", "bremsene"],
+      "example": "Sykkelen har nye bremser."
+    },
+    {
+      "id": "hente",
+      "nb": "hente",
+      "pos": "verb",
+      "forms": ["hente", "henter", "hentet", "hentes"],
+      "example": "Sykkelen kan hentes på Grünerløkka."
+    },
+    {
+      "id": "interessert",
+      "nb": "interessert",
+      "pos": "adjective",
+      "forms": ["interessert", "interesserte"],
+      "example": "Er du interessert?"
+    },
+    {
+      "id": "forstemann",
+      "nb": "førstemann til mølla",
+      "pos": "phrase",
+      "forms": ["førstemann", "mølla"],
+      "example": "Førstemann til mølla!"
+    },
+    {
+      "id": "stilling",
+      "nb": "stilling",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["stilling", "stillingen", "stillinger"],
+      "example": "Vi tilbyr fast stilling."
+    },
+    {
+      "id": "soke",
+      "nb": "søke",
+      "pos": "verb",
+      "forms": ["søke", "søker", "søkte", "søkt"],
+      "example": "Vi søker en utvikler."
+    },
+    {
+      "id": "soknad",
+      "nb": "søknad",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["søknad", "søknaden", "søknader"],
+      "example": "Send CV og søknad."
+    },
+    {
+      "id": "soknadsfrist",
+      "nb": "søknadsfrist",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["søknadsfrist", "søknadsfristen"],
+      "example": "Søknadsfristen er 1. april."
+    },
+    {
+      "id": "tilby",
+      "nb": "tilby",
+      "pos": "verb",
+      "forms": ["tilby", "tilbyr", "tilbød", "tilbudt"],
+      "example": "Vi tilbyr fleksibel arbeidstid."
+    },
+    {
+      "id": "fast",
+      "nb": "fast",
+      "pos": "adjective",
+      "forms": ["fast", "faste"],
+      "example": "Prisen er ikke fast."
+    },
+    {
+      "id": "fleksibel",
+      "nb": "fleksibel",
+      "pos": "adjective",
+      "forms": ["fleksibel", "fleksibelt", "fleksible"],
+      "example": "Vi har fleksibel arbeidstid."
+    },
+    {
+      "id": "arbeidstid",
+      "nb": "arbeidstid",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidstid", "arbeidstiden"],
+      "example": "Arbeidstiden er fra åtte til fire."
+    },
+    {
+      "id": "hjemmekontor",
+      "nb": "hjemmekontor",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hjemmekontor", "hjemmekontoret"],
+      "example": "Jeg har hjemmekontor på fredager."
+    },
+    {
+      "id": "erfaring",
+      "nb": "erfaring",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["erfaring", "erfaringen", "erfaringer"],
+      "example": "Jeg har erfaring med JavaScript."
+    },
+    {
+      "id": "firma",
+      "nb": "firma",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["firma", "firmaet", "firmaer"],
+      "example": "Vi er et lite firma."
+    },
+    {
+      "id": "team",
+      "nb": "team",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["team", "teamet", "teamene"],
+      "example": "Jeg liker å jobbe i team."
+    },
+    {
+      "id": "dugnad",
+      "nb": "dugnad",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["dugnad", "dugnaden", "dugnader"],
+      "example": "Det er dugnad på lørdag."
+    },
+    {
+      "id": "borettslag",
+      "nb": "borettslag",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["borettslag", "borettslaget"],
+      "example": "Vi bor i et borettslag."
+    },
+    {
+      "id": "styre",
+      "nb": "styre",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["styre", "styret"],
+      "example": "Hilsen styret i borettslaget."
+    },
+    {
+      "id": "nabo",
+      "nb": "nabo",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nabo", "naboen", "naboer", "naboene"],
+      "example": "Kjære naboer!"
+    },
+    {
+      "id": "inngang",
+      "nb": "inngang",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["inngang", "inngangen", "innganger"],
+      "example": "Vi møtes ved inngangen."
+    },
+    {
+      "id": "motes",
+      "nb": "møtes",
+      "pos": "verb",
+      "forms": ["møtes", "møttes"],
+      "example": "Vi møtes klokka ti."
+    },
+    {
+      "id": "rydde",
+      "nb": "rydde",
+      "pos": "verb",
+      "forms": ["rydde", "rydder", "ryddet"],
+      "example": "Vi skal rydde søppel."
+    },
+    {
+      "id": "soppel",
+      "nb": "søppel",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["søppel", "søppelet", "søpla"],
+      "example": "Hvor kaster jeg søppel?"
+    },
+    {
+      "id": "male",
+      "nb": "male",
+      "pos": "verb",
+      "forms": ["male", "maler", "malte", "malt"],
+      "example": "Vi skal male gjerdet."
+    },
+    {
+      "id": "gjerde",
+      "nb": "gjerde",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["gjerde", "gjerdet", "gjerder"],
+      "example": "Gjerdet er gammelt."
+    },
+    {
+      "id": "plante",
+      "nb": "plante",
+      "pos": "verb",
+      "forms": ["plante", "planter", "plantet"],
+      "example": "Vi planter blomster."
+    },
+    {
+      "id": "blomst",
+      "nb": "blomst",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["blomst", "blomsten", "blomster", "blomstene"],
+      "example": "Vi skal plante blomster."
+    },
+    {
+      "id": "hanske",
+      "nb": "hanske",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hanske", "hansken", "hansker", "hanskene"],
+      "example": "Ta gjerne med hansker."
+    },
+    {
+      "id": "grille",
+      "nb": "grille",
+      "pos": "verb",
+      "forms": ["grille", "griller", "grillet"],
+      "example": "Etterpå griller vi pølser."
+    },
+    {
+      "id": "polse",
+      "nb": "pølse",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["pølse", "pølsa", "pølsen", "pølser"],
+      "example": "Vi griller pølser."
+    },
+    {
+      "id": "vennlig",
+      "nb": "vennlig",
+      "pos": "adjective",
+      "forms": ["vennlig", "vennlige"],
+      "example": "Med vennlig hilsen, Kari"
+    }
+  ]
+}

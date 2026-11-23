@@ -1,6 +1,7 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { CardState, Grade, ListeningSpeed } from '@tjuvstart/engine';
 import type { Skill } from '../content/types';
+import type { JobField } from '../content/vocab';
 
 export interface Profile {
   id: string;
@@ -16,6 +17,8 @@ export interface Profile {
   placedAt?: number;
   /** Playback speed for listening exercises; it rises as the learner follows faster speech. */
   listening?: ListeningSpeed;
+  /** The learner's line of work, for the "my job" word deck. */
+  jobField?: JobField;
   createdAt: number;
 }
 
