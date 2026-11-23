@@ -1,0 +1,20 @@
+{
+  "id": "a2-first-day-at-work",
+  "level": "A2",
+  "title": "Første dag på jobben",
+  "items": [
+    {
+      "id": "a2-fdw-001",
+      "type": "multiple-choice",
+      "prompt": "Hva sier du når du møter en ny kollega?",
+      "options": ["Hei, jeg heter Ismail.", "Ha det bra!", "God natt."],
+      "answer": 0
+    },
+    {
+      "id": "a2-fdw-002",
+      "type": "gap-fill",
+      "prompt": "Jeg ___ i Oslo.",
+      "answer": "bor"
+    }
+  ]
+}
