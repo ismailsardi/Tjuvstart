@@ -4,6 +4,7 @@ import { learnerPacks } from './content/packs';
 import { Home } from './components/Home';
 import { LessonPlayer } from './components/LessonPlayer';
 import { Onboarding } from './components/Onboarding';
+import { DailySession } from './components/DailySession';
 import { DeckSession } from './components/DeckSession';
 import { LessonList } from './components/LessonList';
 import { Me } from './components/Me';
@@ -71,6 +72,7 @@ function Page({
   if (route.name === 'me') return <Me packs={packs} />;
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
+  if (route.name === 'daily') return <DailySession packs={packs} />;
   if (route.name === 'listening')
     return <Practice key="listening" packs={packs} skill="listening" />;
   if (route.name !== 'lesson' && route.name !== 'shadow') return <Home packs={packs} />;

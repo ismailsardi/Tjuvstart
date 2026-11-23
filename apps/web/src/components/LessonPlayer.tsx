@@ -28,9 +28,11 @@ interface Props {
    * lesson's text, answers are recorded against that lesson, and nothing is marked completed.
    */
   practice?: boolean;
+  /** Called at the end instead of showing the end screen, as in the daily session. */
+  onFinish?: (score: number) => void;
 }
 
-export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
+export function LessonPlayer({ lesson, packs = [], practice = false, onFinish }: Props) {
   const { t } = useI18n();
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
@@ -50,6 +52,10 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
   const saved = useRef(false);
 
   useEffect(() => {
+    if (finished) onFinish?.(score);
+  }, [finished, onFinish, score]);
+
+  useEffect(() => {
     if (!finished || saved.current || practice) return;
     saved.current = true;
     // Words from the lesson text at the lesson's level go to the learner's word cards.
@@ -58,6 +64,7 @@ export function LessonPlayer({ lesson, packs = [], practice = false }: Props) {
   }, [finished, lesson, score, practice]);
 
   if (!item) {
+    if (onFinish) return null;
     return (
       <section aria-labelledby="done-heading">
         <h1 id="done-heading" lang="nb">

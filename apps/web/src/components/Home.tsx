@@ -4,10 +4,11 @@ import { lessons } from '../content/lessons';
 import { nextInTrack, tracks } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
 import { db } from '../data/db';
-import { dueCards, getProfile, mistakeMemory } from '../data/progress';
+import { dailyProgress, dueCards, getProfile, mistakeMemory } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import {
   DUE_DECK,
+  dailyHref,
   deckHref,
   lessonsHref,
   placementHref,
@@ -15,9 +16,11 @@ import {
   practiceHref,
   wordsHref,
 } from '../routing/useHashRoute';
+import { DAILY_CARDS, DAILY_ITEMS } from './DailySession';
 import { MistakeList } from './MistakeList';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
+import { StreakLine } from './StreakLine';
 import { TrackPath } from './TrackPath';
 
 /** Today: the word review, the next lesson and the level estimate. */
@@ -29,6 +32,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   );
   const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
   const memory = useLiveQuery(() => mistakeMemory());
+  const progress = useLiveQuery(() => dailyProgress());
   const hasAnswers = useLiveQuery(async () => (await db.attempts.count()) > 0);
   // Practice needs something to go on: answers in lessons, or a finished level check.
   const canPractise = hasAnswers || profile?.placedAt !== undefined;
@@ -59,6 +63,17 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           <p className="muted">{t('placementCard')}</p>
           <a className="button" href={placementHref}>
             {t('start')}
+          </a>
+        </section>
+      )}
+
+      {!needsPlacement && (
+        <section className="panel daily-panel" aria-labelledby="daily-heading">
+          <h2 id="daily-heading">{t('dailyTitle')}</h2>
+          <p className="muted">{t('dailyBody', { cards: DAILY_CARDS, items: DAILY_ITEMS })}</p>
+          {progress && <StreakLine progress={progress} />}
+          <a className="button" href={dailyHref}>
+            {progress?.streak.doneToday ? t('dailyAgain') : t('start')}
           </a>
         </section>
       )}

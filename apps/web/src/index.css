@@ -1120,3 +1120,74 @@ button.link {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Daily session, streak and can-do statements */
+
+.daily-panel {
+  border: 2px solid var(--accent);
+}
+
+.streak p {
+  margin: 0.25rem 0;
+}
+
+.streak progress {
+  width: 100%;
+}
+
+.daily-steps {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  counter-reset: step;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.daily-steps li {
+  counter-increment: step;
+}
+
+.daily-steps li::before {
+  content: counter(step) '. ';
+}
+
+.daily-steps li[aria-current='step'] {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.can-do h3 {
+  margin: 0.75rem 0 0.25rem;
+  color: var(--muted);
+}
+
+.can-do ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.can-do li {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.can-do-mark {
+  flex: none;
+  width: 1.2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.can-do-can-do .can-do-mark {
+  color: var(--good);
+  font-weight: 700;
+}
+
+.can-do-practising .can-do-mark {
+  color: var(--accent);
+}
