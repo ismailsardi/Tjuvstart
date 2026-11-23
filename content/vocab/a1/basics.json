@@ -549,6 +549,331 @@
       "gender": "et",
       "forms": ["sted", "stedet", "steder"],
       "example": "Ta bussen i stedet."
+    },
+    {
+      "id": "alle",
+      "nb": "alle",
+      "pos": "pronoun",
+      "forms": ["alle"],
+      "example": "Alle som bor i Norge, kan ha en fastlege."
+    },
+    {
+      "id": "bare",
+      "nb": "bare",
+      "pos": "adverb",
+      "forms": ["bare"],
+      "example": "Jeg var bare hjemme."
+    },
+    {
+      "id": "da",
+      "nb": "da",
+      "pos": "adverb",
+      "forms": ["da"],
+      "example": "Da kan du logge inn."
+    },
+    {
+      "id": "den",
+      "nb": "den",
+      "pos": "pronoun",
+      "forms": ["den"],
+      "example": "Lønnen kommer den 20."
+    },
+    {
+      "id": "dere",
+      "nb": "dere",
+      "pos": "pronoun",
+      "forms": ["dere"],
+      "example": "Hva gjorde dere i helgen?"
+    },
+    {
+      "id": "eller",
+      "nb": "eller",
+      "pos": "conjunction",
+      "forms": ["eller"],
+      "example": "Et fødselsnummer eller et D-nummer."
+    },
+    {
+      "id": "eksempel",
+      "nb": "eksempel",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["eksempel", "eksempelet", "eksempler", "eksemplene"],
+      "example": "Mange ting krever BankID, for eksempel nettbanken."
+    },
+    {
+      "id": "foer",
+      "nb": "før",
+      "pos": "conjunction",
+      "forms": ["før"],
+      "example": "Før første lønn trenger vi skattekortet ditt."
+    },
+    {
+      "id": "forst",
+      "nb": "først",
+      "pos": "adverb",
+      "forms": ["først"],
+      "example": "Først trenger du et ID-nummer."
+    },
+    {
+      "id": "hva",
+      "nb": "hva",
+      "pos": "pronoun",
+      "forms": ["hva"],
+      "example": "Hva gjør du i helgen?"
+    },
+    {
+      "id": "hele",
+      "nb": "hele",
+      "pos": "determiner",
+      "forms": ["hele"],
+      "example": "Vi gikk på ski hele lørdagen."
+    },
+    {
+      "id": "hjemme",
+      "nb": "hjemme",
+      "pos": "adverb",
+      "forms": ["hjemme"],
+      "example": "Jeg var bare hjemme."
+    },
+    {
+      "id": "inn",
+      "nb": "inn",
+      "pos": "adverb",
+      "forms": ["inn"],
+      "example": "Du logger inn med en kode."
+    },
+    {
+      "id": "mange",
+      "nb": "mange",
+      "pos": "determiner",
+      "forms": ["mange"],
+      "example": "Mange ting i Norge krever BankID."
+    },
+    {
+      "id": "men",
+      "nb": "men",
+      "pos": "conjunction",
+      "forms": ["men"],
+      "example": "Jeg har ikke matpakke, men jeg kjøper mat."
+    },
+    {
+      "id": "nei",
+      "nb": "nei",
+      "pos": "interjection",
+      "forms": ["nei"],
+      "example": "– Har du feber? – Nei."
+    },
+    {
+      "id": "neste",
+      "nb": "neste",
+      "pos": "adjective",
+      "forms": ["neste"],
+      "example": "Neste uke skal jeg prøve matpakke."
+    },
+    {
+      "id": "noen",
+      "nb": "noen",
+      "pos": "pronoun",
+      "forms": ["noen"],
+      "example": "Etter noen dager kan du bestille BankID."
+    },
+    {
+      "id": "oss",
+      "nb": "oss",
+      "pos": "pronoun",
+      "forms": ["oss"],
+      "example": "Velkommen til oss!"
+    },
+    {
+      "id": "over",
+      "nb": "over",
+      "pos": "preposition",
+      "forms": ["over"],
+      "example": "Ta med en liste over medisinene dine."
+    },
+    {
+      "id": "to",
+      "nb": "to",
+      "pos": "number",
+      "forms": ["to"],
+      "example": "Jeg har hatt vondt i to uker."
+    },
+    {
+      "id": "uke",
+      "nb": "uke",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["uke", "uken", "uka", "uker", "ukene"],
+      "example": "Neste uke begynner jeg på jobben."
+    },
+    {
+      "id": "norsk",
+      "nb": "norsk",
+      "pos": "adjective",
+      "forms": ["norsk", "norske"],
+      "example": "Du trenger et norsk ID-nummer."
+    },
+    {
+      "id": "fa",
+      "nb": "få",
+      "pos": "verb",
+      "forms": ["få", "får", "fikk", "fått"],
+      "example": "Det får du hos Skatteetaten."
+    },
+    {
+      "id": "gjore",
+      "nb": "gjøre",
+      "pos": "verb",
+      "forms": ["gjøre", "gjør", "gjorde", "gjort"],
+      "example": "Hva gjorde dere i helgen?"
+    },
+    {
+      "id": "bli",
+      "nb": "bli",
+      "pos": "verb",
+      "forms": ["bli", "blir", "ble", "blitt"],
+      "example": "Hva gjør jeg hvis det blir verre?"
+    },
+    {
+      "id": "bo",
+      "nb": "bo",
+      "pos": "verb",
+      "forms": ["bo", "bor", "bodde", "bodd"],
+      "example": "Hvor bor du?"
+    },
+    {
+      "id": "si",
+      "nb": "si",
+      "pos": "verb",
+      "forms": ["si", "sier", "sa", "sagt"],
+      "example": "«Så fint!» sier Ingrid."
+    },
+    {
+      "id": "sitte",
+      "nb": "sitte",
+      "pos": "verb",
+      "forms": ["sitte", "sitter", "satt", "sittet"],
+      "example": "Sara sitter med Jonas og Ingrid."
+    },
+    {
+      "id": "ringe",
+      "nb": "ringe",
+      "pos": "verb",
+      "forms": ["ringe", "ringer", "ringte", "ringt"],
+      "example": "Omar ringer legekontoret."
+    },
+    {
+      "id": "trenge",
+      "nb": "trenge",
+      "pos": "verb",
+      "forms": ["trenge", "trenger", "trengte", "trengt"],
+      "example": "Jeg trenger et D-nummer."
+    },
+    {
+      "id": "kjope",
+      "nb": "kjøpe",
+      "pos": "verb",
+      "forms": ["kjøpe", "kjøper", "kjøpte", "kjøpt"],
+      "example": "Jeg kjøper mat i kantina."
+    },
+    {
+      "id": "ville",
+      "nb": "ville",
+      "pos": "verb",
+      "forms": ["ville", "vil", "villet"],
+      "example": "Jeg vil gjerne bestille en time."
+    },
+    {
+      "id": "matte",
+      "nb": "måtte",
+      "pos": "verb",
+      "forms": ["måtte", "må"],
+      "example": "Du må ta med passet ditt."
+    },
+    {
+      "id": "mat",
+      "nb": "mat",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mat", "maten"],
+      "example": "Jeg kjøper mat i kantina."
+    },
+    {
+      "id": "ting",
+      "nb": "ting",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ting", "tingen", "tingene"],
+      "example": "Mange ting krever BankID."
+    },
+    {
+      "id": "tid",
+      "nb": "tid",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tid", "tiden", "tida"],
+      "example": "Det regnet hele tiden."
+    },
+    {
+      "id": "lordag",
+      "nb": "lørdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lørdag", "lørdagen"],
+      "example": "Vi gikk på ski hele lørdagen."
+    },
+    {
+      "id": "torsdag",
+      "nb": "torsdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["torsdag", "torsdagen"],
+      "example": "Du kan komme på torsdag."
+    },
+    {
+      "id": "fin",
+      "nb": "fin",
+      "pos": "adjective",
+      "forms": ["fin", "fint", "fine"],
+      "example": "Så fint!"
+    },
+    {
+      "id": "familie",
+      "nb": "familie",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["familie", "familien", "familier"],
+      "example": "Jeg var på hytta med familien."
+    },
+    {
+      "id": "nummer",
+      "nb": "nummer",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["nummer", "nummeret", "numre", "numrene"],
+      "example": "Hva er nummeret til legevakten?"
+    },
+    {
+      "id": "mobil",
+      "nb": "mobil",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mobil", "mobilen", "mobiler"],
+      "example": "Du logger inn med en kode på mobilen."
+    },
+    {
+      "id": "apne",
+      "nb": "åpne",
+      "pos": "verb",
+      "forms": ["åpne", "åpner", "åpnet"],
+      "example": "Så kan du åpne en konto i en bank."
+    },
+    {
+      "id": "prove",
+      "nb": "prøve",
+      "pos": "verb",
+      "forms": ["prøve", "prøver", "prøvde", "prøvd"],
+      "example": "Neste uke skal jeg prøve matpakke."
     }
   ]
 }

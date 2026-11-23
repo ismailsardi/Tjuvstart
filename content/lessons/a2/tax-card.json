@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-tax-card",
+  "level": "A2",
+  "title": "Skattekortet",
+  "summary": "Read an email from HR about the tax card: where to order it, who sends it, and what happens without one.",
+  "text": "Hei Maria! Velkommen til oss. Før første lønn trenger vi skattekortet ditt. Du bestiller det på nettsiden til Skatteetaten. Vi får skattekortet automatisk fra Skatteetaten, så du trenger ikke å sende det til oss. Hvis vi ikke har et skattekort, må vi trekke 50 prosent skatt. Lønnen kommer den 20. hver måned. Hilsen Kari, HR",
+  "items": [
+    {
+      "id": "a2-tax-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvem skriver til Maria?",
+      "options": ["Kari fra HR", "Skatteetaten", "Banken"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hvor bestiller Maria skattekortet?",
+      "options": ["På nettsiden til Skatteetaten", "I banken", "Hos legen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Må Maria sende skattekortet til jobben?",
+      "options": ["Nei, jobben får det automatisk", "Ja, på e-post", "Ja, i posten"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hva skjer hvis jobben ikke har skattekortet?",
+      "options": ["De trekker 50 prosent skatt", "Hun får ikke lønn", "Hun må ringe banken"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 950,
+      "prompt": "Når kommer lønnen?",
+      "options": ["Den 20. hver måned", "Hver fredag", "Den 1. hver måned"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tax-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["noun-gender"],
+      "difficulty": 1100,
+      "prompt": "Jeg har bestilt ___ skattekort.",
+      "hint": "en, ei eller et?",
+      "answers": ["et"]
+    },
+    {
+      "id": "a2-tax-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["definite-form"],
+      "difficulty": 1150,
+      "prompt": "Når kommer ___?",
+      "hint": "en lønn, ___ (bestemt form)",
+      "answers": ["lønnen", "lønna"]
+    },
+    {
+      "id": "a2-tax-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["trenger", "vi", "Før første lønn", "skattekortet ditt"],
+      "answer": "Før første lønn trenger vi skattekortet ditt"
+    },
+    {
+      "id": "a2-tax-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["subordinate-clause", "ikke-placement"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "hint": "I en leddsetning står «ikke» foran verbet.",
+      "tokens": ["har", "ikke", "Hvis", "vi", "et skattekort"],
+      "answer": "Hvis vi ikke har et skattekort"
+    },
+    {
+      "id": "a2-tax-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 900,
+      "prompt": "___ til oss!",
+      "hint": "welcome",
+      "answers": ["Velkommen"]
+    }
+  ]
+}

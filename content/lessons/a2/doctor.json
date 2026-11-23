@@ -1,0 +1,129 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-doctor",
+  "level": "A2",
+  "title": "Hos fastlegen",
+  "summary": "Follow a phone call to book a doctor's appointment, and learn which numbers to call out of hours and in an emergency.",
+  "text": "Alle som bor i Norge, kan ha en fastlege. Omar ringer legekontoret.\n– Hei, jeg vil gjerne bestille en time. Jeg har hatt vondt i ryggen i to uker.\n– Har du feber?\n– Nei.\n– Da kan du komme på torsdag klokka halv to. Husk å ta med en liste over medisinene dine.\n– Takk! Hva gjør jeg hvis det blir verre i helgen?\n– Da ringer du 116 117, det er legevakten. Hvis det er akutt, ringer du 113.",
+  "items": [
+    {
+      "id": "a2-doc-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvorfor ringer Omar legekontoret?",
+      "options": [
+        "Han vil bestille en time",
+        "Han vil bestille BankID",
+        "Han vil leie en leilighet"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hva er problemet til Omar?",
+      "options": ["Han har vondt i ryggen", "Han har feber", "Han har vondt i halsen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1050,
+      "prompt": "Når skal Omar til legen?",
+      "options": ["Torsdag klokka 13.30", "Torsdag klokka 12.30", "Tirsdag klokka 13.30"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hva må Omar ta med?",
+      "options": ["En liste over medisinene sine", "Passet sitt", "Skattekortet sitt"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvilket nummer ringer du hvis det er akutt?",
+      "options": ["113", "116 117", "112"],
+      "answer": 0
+    },
+    {
+      "id": "a2-doc-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 950,
+      "prompt": "Jeg ___ gjerne bestille en time.",
+      "hint": "want",
+      "answers": ["vil"]
+    },
+    {
+      "id": "a2-doc-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Jeg har hatt vondt i ryggen ___ to uker.",
+      "answers": ["i"]
+    },
+    {
+      "id": "a2-doc-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order", "subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "hint": "Leddsetningen er det første leddet. Så kommer verbet.",
+      "tokens": ["ringer", "du", "Hvis det er akutt,", "113"],
+      "answer": "Hvis det er akutt, ringer du 113"
+    },
+    {
+      "id": "a2-doc-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 900,
+      "prompt": "Lag en setning.",
+      "tokens": ["bestille", "Jeg vil", "en time"],
+      "answer": "Jeg vil bestille en time"
+    },
+    {
+      "id": "a2-doc-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Det blir ___ i helgen.",
+      "hint": "dårlig, ___, verst",
+      "answers": ["verre"]
+    }
+  ]
+}

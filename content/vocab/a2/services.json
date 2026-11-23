@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "services",
+  "title": "Bank og skatt",
+  "cards": [
+    {
+      "id": "bankid",
+      "nb": "BankID",
+      "pos": "phrase",
+      "forms": ["bankid"],
+      "example": "Har du BankID?"
+    },
+    {
+      "id": "bank",
+      "nb": "bank",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bank", "banken", "banker", "bankene"],
+      "example": "Banken sjekker passet ditt."
+    },
+    {
+      "id": "konto",
+      "nb": "konto",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["konto", "kontoen", "kontoer"],
+      "example": "Jeg vil åpne en konto."
+    },
+    {
+      "id": "nettbank",
+      "nb": "nettbank",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nettbank", "nettbanken"],
+      "example": "Jeg betaler regningen i nettbanken."
+    },
+    {
+      "id": "kode",
+      "nb": "kode",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kode", "koden", "koder"],
+      "example": "Du logger inn med en kode."
+    },
+    {
+      "id": "fodselsnummer",
+      "nb": "fødselsnummer",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["fødselsnummer", "fødselsnummeret"],
+      "example": "Et fødselsnummer har elleve siffer."
+    },
+    {
+      "id": "skatteetaten",
+      "nb": "Skatteetaten",
+      "pos": "phrase",
+      "forms": ["skatteetaten"],
+      "example": "Du bestiller skattekortet hos Skatteetaten."
+    },
+    {
+      "id": "helsenorge",
+      "nb": "Helsenorge",
+      "pos": "phrase",
+      "forms": ["helsenorge"],
+      "example": "Du kan bytte fastlege på Helsenorge."
+    },
+    {
+      "id": "skatt",
+      "nb": "skatt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skatt", "skatten", "skatter"],
+      "example": "Hvor mye skatt betaler du?"
+    },
+    {
+      "id": "skattekort",
+      "nb": "skattekort",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skattekort", "skattekortet", "skattekortene"],
+      "example": "Jobben får skattekortet fra Skatteetaten."
+    },
+    {
+      "id": "lonn",
+      "nb": "lønn",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lønn", "lønnen", "lønna"],
+      "example": "Lønnen kommer den 20. hver måned."
+    },
+    {
+      "id": "prosent",
+      "nb": "prosent",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["prosent", "prosenten"],
+      "example": "Uten skattekort trekker jobben 50 prosent skatt."
+    },
+    {
+      "id": "trekke",
+      "nb": "trekke",
+      "pos": "verb",
+      "forms": ["trekke", "trekker", "trakk", "trukket"],
+      "example": "Vi må trekke 50 prosent skatt."
+    },
+    {
+      "id": "automatisk",
+      "nb": "automatisk",
+      "pos": "adjective",
+      "forms": ["automatisk", "automatiske"],
+      "example": "Vi får skattekortet automatisk."
+    },
+    {
+      "id": "nettside",
+      "nb": "nettside",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nettside", "nettsiden", "nettsider"],
+      "example": "Les mer på nettsiden til Skatteetaten."
+    },
+    {
+      "id": "kreve",
+      "nb": "kreve",
+      "pos": "verb",
+      "forms": ["kreve", "krever", "krevde"],
+      "example": "Mange ting krever BankID."
+    },
+    {
+      "id": "logge",
+      "nb": "logge",
+      "pos": "verb",
+      "forms": ["logge", "logger", "logget"],
+      "example": "Du kan logge inn med BankID."
+    },
+    {
+      "id": "sjekke",
+      "nb": "sjekke",
+      "pos": "verb",
+      "forms": ["sjekke", "sjekker", "sjekket"],
+      "example": "Banken sjekker passet ditt."
+    },
+    {
+      "id": "pass",
+      "nb": "pass",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["pass", "passet", "passene"],
+      "example": "Ta med passet ditt."
+    },
+    {
+      "id": "velkommen",
+      "nb": "velkommen",
+      "pos": "adjective",
+      "forms": ["velkommen", "velkomne"],
+      "example": "Velkommen til oss!"
+    },
+    {
+      "id": "liste",
+      "nb": "liste",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["liste", "listen", "lister"],
+      "example": "Ta med en liste over medisinene dine."
+    }
+  ]
+}

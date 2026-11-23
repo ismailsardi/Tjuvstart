@@ -94,6 +94,51 @@
       "nb": "inkludert",
       "forms": ["inkludert"],
       "meaning": "included"
+    },
+    {
+      "nb": "bank",
+      "forms": ["bank", "banken"],
+      "meaning": "bank"
+    },
+    {
+      "nb": "kode",
+      "forms": ["kode", "koden"],
+      "meaning": "code"
+    },
+    {
+      "nb": "familie",
+      "forms": ["familie", "familien"],
+      "meaning": "family"
+    },
+    {
+      "nb": "medisin",
+      "forms": ["medisin", "medisinen", "medisiner", "medisinene"],
+      "meaning": "medicine"
+    },
+    {
+      "nb": "akutt",
+      "forms": ["akutt", "akutte"],
+      "meaning": "acute, urgent"
+    },
+    {
+      "nb": "automatisk",
+      "forms": ["automatisk", "automatiske"],
+      "meaning": "automatic(ally)"
+    },
+    {
+      "nb": "liste",
+      "forms": ["liste", "listen"],
+      "meaning": "list"
+    },
+    {
+      "nb": "prosent",
+      "forms": ["prosent"],
+      "meaning": "percent"
+    },
+    {
+      "nb": "ski",
+      "forms": ["ski"],
+      "meaning": "ski"
     }
   ],
   "falseFriends": [
@@ -155,20 +200,24 @@
         "a2-first-day-at-work",
         "a2-renting-a-flat",
         "a2-getting-around",
-        "a2-calling-in-sick"
+        "a2-calling-in-sick",
+        "a2-bankid",
+        "a2-tax-card",
+        "a2-doctor",
+        "a2-lunch-small-talk"
       ]
     },
     {
       "id": "half-past",
       "title": "«Halv tolv» is 11:30",
       "body": "Norwegian counts half an hour towards the next hour. «Halv tolv» means 11:30, not 12:30 as British «half twelve» would.",
-      "lessons": ["a2-first-day-at-work"]
+      "lessons": ["a2-first-day-at-work", "a2-doctor"]
     },
     {
       "id": "ikke-in-subclause",
       "title": "«Ikke» before the verb after «fordi»",
       "body": "In a main clause «ikke» comes after the verb: «Trikken går ikke». After «fordi», «at» or «hvis» it moves in front of the verb: «…fordi trikken ikke går».",
-      "lessons": ["a2-getting-around", "a2-calling-in-sick"]
+      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card"]
     },
     {
       "id": "room-count",
@@ -197,7 +246,12 @@
     "a2-sick-06": "In Norway you can usually report yourself sick for a few days. After that you need a note from a doctor, a «sykmelding».",
     "a2-sick-08": "«Time» here means an appointment. «En time» can also mean an hour.",
     "a2-sick-10": "«Så» here means so, as a result: «Jeg er syk, så jeg blir hjemme».",
-    "a2-sick-11": "«I morgen» comes first, so the verb «kommer» moves before «jeg»."
+    "a2-sick-11": "«I morgen» comes first, so the verb «kommer» moves before «jeg».",
+    "a2-bid-02": "A D-nummer is a temporary ID number for people who stay in Norway for a shorter time. Skatteetaten gives it out after an ID check.",
+    "a2-tax-04": "Without a tax card, the employer must take 50% tax. Order the tax card before your first payday.",
+    "a2-doc-03": "«Halv to» is half an hour before two: 13.30.",
+    "a2-doc-05": "113 is for medical emergencies. 116 117 (legevakt) is for urgent help when your fastlege is closed.",
+    "a2-lunch-04": "Kantina is the workplace canteen. Many Norwegians bring a matpakke instead."
   },
   "words": {
     "jeg": {
@@ -607,6 +661,279 @@
     "sykmelding": {
       "meaning": "doctor's sick note",
       "hook": "syk (sick) + melding (message)."
+    },
+    "alle": {
+      "meaning": "everyone, all"
+    },
+    "bare": {
+      "meaning": "only, just"
+    },
+    "da": {
+      "meaning": "then"
+    },
+    "den": {
+      "meaning": "it; the, that (for en and ei words)"
+    },
+    "dere": {
+      "meaning": "you (more than one person)",
+      "hook": "du = one person, dere = several."
+    },
+    "eller": {
+      "meaning": "or"
+    },
+    "eksempel": {
+      "meaning": "example",
+      "hook": "for eksempel = for example."
+    },
+    "foer": {
+      "meaning": "before",
+      "hook": "før (before) is not for (for): the ø matters."
+    },
+    "forst": {
+      "meaning": "first, at first"
+    },
+    "hva": {
+      "meaning": "what"
+    },
+    "hele": {
+      "meaning": "the whole, all (of)",
+      "hook": "hele tiden = all the time."
+    },
+    "hjemme": {
+      "meaning": "at home",
+      "hook": "hjemme = at home; hjem = (going) home."
+    },
+    "inn": {
+      "meaning": "in, into (movement)"
+    },
+    "mange": {
+      "meaning": "many"
+    },
+    "men": {
+      "meaning": "but"
+    },
+    "nei": {
+      "meaning": "no"
+    },
+    "neste": {
+      "meaning": "next"
+    },
+    "noen": {
+      "meaning": "some, a few; someone"
+    },
+    "oss": {
+      "meaning": "us"
+    },
+    "over": {
+      "meaning": "over, above; (a list) of"
+    },
+    "to": {
+      "meaning": "two"
+    },
+    "uke": {
+      "meaning": "week"
+    },
+    "norsk": {
+      "meaning": "Norwegian"
+    },
+    "fa": {
+      "meaning": "to get, receive"
+    },
+    "gjore": {
+      "meaning": "to do"
+    },
+    "bli": {
+      "meaning": "to become, get"
+    },
+    "bo": {
+      "meaning": "to live (somewhere)",
+      "hook": "bo = live in a place; leve = be alive."
+    },
+    "si": {
+      "meaning": "to say"
+    },
+    "sitte": {
+      "meaning": "to sit"
+    },
+    "ringe": {
+      "meaning": "to call, phone",
+      "hook": "Like ring: you ring someone up."
+    },
+    "trenge": {
+      "meaning": "to need"
+    },
+    "kjope": {
+      "meaning": "to buy"
+    },
+    "ville": {
+      "meaning": "to want (to)",
+      "hook": "Careful: «vil» means want, not will."
+    },
+    "matte": {
+      "meaning": "must, have to"
+    },
+    "mat": {
+      "meaning": "food",
+      "hook": "Not «mate»: mat is just food."
+    },
+    "ting": {
+      "meaning": "thing"
+    },
+    "tid": {
+      "meaning": "time",
+      "hook": "tid is time in general; a doctor’s «time» is an appointment."
+    },
+    "lordag": {
+      "meaning": "Saturday"
+    },
+    "torsdag": {
+      "meaning": "Thursday",
+      "hook": "Thor’s day, like Thursday."
+    },
+    "fin": {
+      "meaning": "nice, fine",
+      "hook": "Så fint! = How nice!"
+    },
+    "familie": {
+      "meaning": "family"
+    },
+    "nummer": {
+      "meaning": "number"
+    },
+    "mobil": {
+      "meaning": "mobile phone"
+    },
+    "apne": {
+      "meaning": "to open"
+    },
+    "prove": {
+      "meaning": "to try",
+      "hook": "Like prove: you try something out."
+    },
+    "bankid": {
+      "meaning": "BankID, the Norwegian electronic ID",
+      "hook": "You log in to banks, Helsenorge and Skatteetaten with it."
+    },
+    "bank": {
+      "meaning": "bank"
+    },
+    "konto": {
+      "meaning": "(bank) account"
+    },
+    "nettbank": {
+      "meaning": "online banking",
+      "hook": "nett (internet) + bank."
+    },
+    "kode": {
+      "meaning": "code"
+    },
+    "fodselsnummer": {
+      "meaning": "national identity number",
+      "hook": "fødsel (birth) + nummer: it starts with your date of birth."
+    },
+    "skatteetaten": {
+      "meaning": "the Norwegian Tax Administration",
+      "hook": "skatt (tax) + etat (agency). It also gives out ID numbers."
+    },
+    "helsenorge": {
+      "meaning": "the public health website",
+      "hook": "helse (health) + Norge."
+    },
+    "skatt": {
+      "meaning": "tax"
+    },
+    "skattekort": {
+      "meaning": "tax deduction card",
+      "hook": "It tells your employer how much tax to take from your pay."
+    },
+    "lonn": {
+      "meaning": "pay, salary"
+    },
+    "prosent": {
+      "meaning": "percent"
+    },
+    "trekke": {
+      "meaning": "to pull; to deduct (tax)"
+    },
+    "automatisk": {
+      "meaning": "automatic, automatically"
+    },
+    "nettside": {
+      "meaning": "website"
+    },
+    "kreve": {
+      "meaning": "to require, demand"
+    },
+    "logge": {
+      "meaning": "to log (logge inn = log in)"
+    },
+    "sjekke": {
+      "meaning": "to check"
+    },
+    "pass": {
+      "meaning": "passport"
+    },
+    "velkommen": {
+      "meaning": "welcome"
+    },
+    "liste": {
+      "meaning": "list"
+    },
+    "fastlege": {
+      "meaning": "regular GP, your own doctor",
+      "hook": "fast (fixed) + lege (doctor)."
+    },
+    "legekontor": {
+      "meaning": "doctor’s office"
+    },
+    "legevakt": {
+      "meaning": "out-of-hours medical clinic",
+      "hook": "Call 116 117 when your fastlege is closed."
+    },
+    "akutt": {
+      "meaning": "acute, urgent"
+    },
+    "medisin": {
+      "meaning": "medicine, medication"
+    },
+    "rygg": {
+      "meaning": "back (of the body)"
+    },
+    "verre": {
+      "meaning": "worse",
+      "hook": "dårlig → verre → verst (bad, worse, worst)."
+    },
+    "gjerne": {
+      "meaning": "gladly; vil gjerne = would like to",
+      "hook": "«Jeg vil gjerne…» is the polite way to ask for something."
+    },
+    "helg": {
+      "meaning": "weekend",
+      "hook": "i helgen = at/last/this weekend."
+    },
+    "hytte": {
+      "meaning": "cabin, holiday cottage",
+      "hook": "«På hytta» is the classic Norwegian weekend."
+    },
+    "ski": {
+      "meaning": "ski",
+      "hook": "gå på ski = go skiing (literally walk on skis)."
+    },
+    "regne": {
+      "meaning": "to rain; to count"
+    },
+    "matpakke": {
+      "meaning": "packed lunch",
+      "hook": "Open sandwiches wrapped in paper: the Norwegian lunch."
+    },
+    "kantine": {
+      "meaning": "canteen"
+    },
+    "nordmann": {
+      "meaning": "Norwegian (person)"
+    },
+    "ekte": {
+      "meaning": "real, genuine"
     }
   }
 }

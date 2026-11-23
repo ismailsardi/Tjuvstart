@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-lunch-small-talk",
+  "level": "A2",
+  "title": "Lunsjprat",
+  "summary": "Listen in on lunch at the office: the weekend, the weather and the famous Norwegian packed lunch.",
+  "text": "Det er lunsj på kontoret. Sara sitter med Jonas og Ingrid.\n– Hva gjorde dere i helgen? spør Sara.\n– Jeg var på hytta med familien, sier Jonas. Vi gikk på ski hele lørdagen.\n– Så fint! Jeg var bare hjemme. Det regnet hele tiden, sier Ingrid.\n– Har du matpakke i dag, Sara?\n– Nei, jeg kjøper mat i kantina. Men neste uke skal jeg prøve matpakke, som en ekte nordmann!",
+  "items": [
+    {
+      "id": "a2-lunch-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvor er Sara?",
+      "options": ["På kontoret", "På hytta", "Hjemme"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hva gjorde Jonas i helgen?",
+      "options": ["Han gikk på ski", "Han var hjemme", "Han jobbet"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hvordan var været for Ingrid?",
+      "options": ["Det regnet", "Det var sol", "Det snødde"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hvor kjøper Sara mat?",
+      "options": ["I kantina", "På hytta", "Hun har matpakke"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Hva skal Sara prøve neste uke?",
+      "options": ["Matpakke", "Å gå på ski", "Å dra på hytta"],
+      "answer": 0
+    },
+    {
+      "id": "a2-lunch-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1100,
+      "prompt": "I helgen ___ jeg på hytta.",
+      "hint": "være i fortid",
+      "answers": ["var"]
+    },
+    {
+      "id": "a2-lunch-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["question-words"],
+      "difficulty": 950,
+      "prompt": "___ gjorde dere i helgen?",
+      "answers": ["Hva"]
+    },
+    {
+      "id": "a2-lunch-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order", "modal-verbs"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "hint": "Verbet står på plass nummer to.",
+      "tokens": ["skal", "jeg", "Neste uke", "prøve matpakke"],
+      "answer": "Neste uke skal jeg prøve matpakke"
+    },
+    {
+      "id": "a2-lunch-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["hjemme", "Jeg", "var", "bare"],
+      "answer": "Jeg var bare hjemme"
+    },
+    {
+      "id": "a2-lunch-10",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 900,
+      "prompt": "– Vi gikk på ski. – Så ___!",
+      "hint": "how nice",
+      "answers": ["fint"]
+    }
+  ]
+}
