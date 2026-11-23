@@ -1,25 +1,32 @@
 import { expect, test } from '@playwright/test';
 import { chooseLanguages } from './helpers';
 
-test('a learner can open a word card, learn it and review it', async ({ page }) => {
+test('a learner can swipe through a deck and review it later', async ({ page }) => {
   await page.goto('./');
   await chooseLanguages(page, 'English');
 
-  await page.getByRole('link', { name: /Word cards/ }).click();
-  await expect(page.getByRole('heading', { name: 'Word cards' })).toBeVisible();
+  await page.getByRole('navigation').getByRole('link', { name: 'Words' }).click();
+  await page.getByTestId('deck-a2-work').click();
+  await expect(page.getByRole('heading', { name: 'Jobben' })).toBeVisible();
 
-  await page.getByText('Jobben').click();
-  const card = page.getByTestId('card-sjef');
-  await card.getByRole('button', { name: /en sjef/ }).click();
-  await expect(card).toContainText('boss, manager');
-  await expect(card).toContainText('Look-alike: not «chef»');
+  const card = page.getByTestId('swipe-card');
+  await expect(card).toContainText('en jobb');
+  await card.click();
+  await expect(card).toHaveAttribute('aria-pressed', 'true');
+  await expect(card).toContainText('job, work');
 
-  await card.getByRole('button', { name: 'Learn' }).click();
-  await expect(card).toContainText('Learning');
+  // Swipe right: "know it".
+  const box = (await card.boundingBox())!;
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + 200, box.y + box.height / 2, { steps: 8 });
+  await page.mouse.up();
+  await expect(page.getByTestId('swipe-card')).toContainText('å jobbe');
 
-  await page.getByRole('link', { name: 'Review now' }).click();
-  await expect(page.getByText('en sjef')).toBeVisible();
-  await page.getByRole('button', { name: 'Show answer' }).click();
-  await page.getByRole('button', { name: 'Good' }).click();
-  await expect(page.getByRole('status')).toContainText('All done for now');
+  // The buttons do the same as swiping; "again" sends the card to the end of the deck.
+  await page.getByRole('button', { name: /Again/ }).click();
+  await expect(page.getByTestId('swipe-card')).toContainText('å arbeide');
+
+  await page.getByRole('link', { name: '← Words' }).click();
+  await expect(page.getByTestId('deck-a2-work')).toContainText('2 of 15 learning');
 });

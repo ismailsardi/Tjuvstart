@@ -50,6 +50,15 @@ export function cardLevel(id: string): Level | undefined {
   return levelById.get(id);
 }
 
+/** Route-friendly deck id, e.g. "a2-work". */
+export function deckId(deck: Deck): string {
+  return `${deck.level.toLowerCase()}-${deck.topic}`;
+}
+
+export function getDeck(id: string): Deck | undefined {
+  return decks.find((deck) => deckId(deck) === id);
+}
+
 export function getCard(id: string): Card | undefined {
   return byId.get(id);
 }

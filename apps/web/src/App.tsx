@@ -4,7 +4,10 @@ import { learnerPacks } from './content/packs';
 import { Home } from './components/Home';
 import { LessonPlayer } from './components/LessonPlayer';
 import { Onboarding } from './components/Onboarding';
-import { Review } from './components/Review';
+import { DeckSession } from './components/DeckSession';
+import { LessonList } from './components/LessonList';
+import { Me } from './components/Me';
+import { NavBar } from './components/NavBar';
 import { Words } from './components/Words';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
@@ -28,6 +31,9 @@ export function App() {
   return (
     <I18nProvider language={language}>
       <UpdatePrompt />
+      {!needsOnboarding && route.name !== 'lesson' && route.name !== 'deck' && (
+        <NavBar route={route} />
+      )}
       <main className="shell" lang={language}>
         {needsOnboarding ? (
           <Onboarding
@@ -54,8 +60,11 @@ function Page({
   packs: ReturnType<typeof learnerPacks>;
 }) {
   const { t } = useI18n();
-  if (route.name === 'words') return <Words packs={packs} />;
-  if (route.name === 'review') return <Review packs={packs} />;
+  if (route.name === 'lessons') return <LessonList packs={packs} />;
+  if (route.name === 'words') return <Words />;
+  if (route.name === 'deck')
+    return <DeckSession key={route.deckId} deckId={route.deckId} packs={packs} />;
+  if (route.name === 'me') return <Me packs={packs} />;
   if (route.name !== 'lesson') return <Home packs={packs} />;
 
   const lesson = getLesson(route.lessonId);

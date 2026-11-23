@@ -5,12 +5,15 @@ import { useI18n } from '../i18n/useI18n';
 interface Props {
   card: Card;
   packs: readonly LanguagePack[];
-  /** Whether the back of the card (meaning, hook, example) is shown. */
-  revealed: boolean;
+  /** Whether the back (meaning, hook, example) is showing. */
+  flipped: boolean;
 }
 
-/** One word card. The front is the Norwegian word; the back explains it in the learner's language. */
-export function WordCard({ card, packs, revealed }: Props) {
+/**
+ * A two-sided word card. The front is the Norwegian word; the back explains it in the
+ * learner's language. Both faces are rendered so the flip can animate.
+ */
+export function WordCard({ card, packs, flipped }: Props) {
   const { t } = useI18n();
   // Learners whose language has no pack yet get the English meanings.
   const sources = packs.length > 0 ? packs : [getPack('en')].filter((p) => p !== undefined);
@@ -19,35 +22,38 @@ export function WordCard({ card, packs, revealed }: Props) {
   const familiar = annotate(card.nb, packs)[0]?.word;
 
   return (
-    <div className={revealed ? 'word-card revealed' : 'word-card'}>
-      <p className="word" lang="nb">
-        {cardLabel(card)}
-      </p>
-      {revealed && (
-        <div className="back">
-          {meaning && (
-            <p className="meaning" lang={meaning.pack.language} dir={meaning.pack.direction}>
-              {meaning.text}
-            </p>
-          )}
-          {familiar && (
-            <p className={`tag ${familiar.kind}`}>
-              {familiar.kind === 'cognate'
-                ? t('probablyKnown')
-                : t('lookAlike', { word: familiar.looksLike ?? '' })}
-            </p>
-          )}
-          {hook && (
-            <p className="hook" lang={hook.pack.language} dir={hook.pack.direction}>
-              {hook.text}
-            </p>
-          )}
-          <p className="example">
-            <span className="visually-hidden">{t('example')}: </span>
-            <span lang="nb">{card.example}</span>
+    <div className={flipped ? 'word-card flipped' : 'word-card'}>
+      <div className="face front" aria-hidden={flipped}>
+        <p className="word" lang="nb">
+          {cardLabel(card)}
+        </p>
+        {familiar && (
+          <p className={`tag ${familiar.kind}`}>
+            {familiar.kind === 'cognate'
+              ? t('probablyKnown')
+              : t('lookAlike', { word: familiar.looksLike ?? '' })}
           </p>
-        </div>
-      )}
+        )}
+      </div>
+      <div className="face back" aria-hidden={!flipped}>
+        <p className="word small-word" lang="nb">
+          {cardLabel(card)}
+        </p>
+        {meaning && (
+          <p className="meaning" lang={meaning.pack.language} dir={meaning.pack.direction}>
+            {meaning.text}
+          </p>
+        )}
+        {hook && (
+          <p className="hook" lang={hook.pack.language} dir={hook.pack.direction}>
+            {hook.text}
+          </p>
+        )}
+        <p className="example">
+          <span className="visually-hidden">{t('example')}: </span>
+          <span lang="nb">{card.example}</span>
+        </p>
+      </div>
     </div>
   );
 }
