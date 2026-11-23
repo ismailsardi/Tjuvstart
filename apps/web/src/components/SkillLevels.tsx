@@ -1,15 +1,7 @@
 import { MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel } from '@tjuvstart/engine';
-import { SKILLS, type Skill } from '../content/types';
+import { SKILL_NAMES, SKILLS } from '../content/types';
 import type { Profile } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
-
-// Skill names stay in Norwegian: learners meet them again in the exam and in class.
-const SKILL_NAMES: Record<Skill, string> = {
-  reading: 'Lesing',
-  listening: 'Lytting',
-  writing: 'Skriving',
-  speaking: 'Muntlig',
-};
 
 /** The level estimate per skill, or how many answers are still needed for one. */
 export function SkillLevels({ profile }: { profile: Profile | undefined }) {

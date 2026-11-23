@@ -2,9 +2,17 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { lessons } from '../content/lessons';
 import type { LanguagePack } from '../content/packs';
 import { db } from '../data/db';
-import { dueCards, getProfile } from '../data/progress';
+import { dueCards, getProfile, mistakeMemory } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { DUE_DECK, deckHref, lessonsHref, wordsHref } from '../routing/useHashRoute';
+import {
+  DUE_DECK,
+  deckHref,
+  lessonsHref,
+  placementHref,
+  practiceHref,
+  wordsHref,
+} from '../routing/useHashRoute';
+import { MistakeList } from './MistakeList';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 
@@ -16,6 +24,14 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     async () => new Set(await db.completions.toCollection().primaryKeys()),
   );
   const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
+  const memory = useLiveQuery(() => mistakeMemory());
+  const hasAnswers = useLiveQuery(async () => (await db.attempts.count()) > 0);
+  // Practice needs something to go on: answers in lessons, or a finished level check.
+  const canPractise = hasAnswers || profile?.placedAt !== undefined;
+  const needsPlacement =
+    profile !== undefined &&
+    profile.placedAt === undefined &&
+    Object.values(profile.answers).every((n) => n === 0);
   const next = completed ? lessons.find((lesson) => !completed.has(lesson.id)) : undefined;
 
   return (
@@ -24,6 +40,16 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <h1>{t('hello')}</h1>
         <p className="muted">{t('todayIntro')}</p>
       </header>
+
+      {needsPlacement && (
+        <section className="panel placement-panel" aria-labelledby="placement-heading">
+          <h2 id="placement-heading">{t('placementTitle')}</h2>
+          <p className="muted">{t('placementCard')}</p>
+          <a className="button" href={placementHref}>
+            {t('start')}
+          </a>
+        </section>
+      )}
 
       <section className="panel review-panel" aria-labelledby="review-heading">
         <div>
@@ -46,6 +72,17 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           completed && <p className="muted">{t('allLessonsDone')}</p>
         )}
       </section>
+
+      {canPractise && (
+        <section className="panel" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">{t('practiceTitle')}</h2>
+          <p className="muted">{t('practiceCard')}</p>
+          {memory && memory.recurring.length > 0 && <MistakeList focus={memory.recurring} />}
+          <a className="button" href={practiceHref}>
+            {t('start')}
+          </a>
+        </section>
+      )}
 
       <section className="panel" aria-labelledby="level-heading">
         <h2 id="level-heading">{t('yourLevel')}</h2>

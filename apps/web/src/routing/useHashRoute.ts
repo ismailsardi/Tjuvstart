@@ -6,6 +6,8 @@ export type Route =
   | { name: 'words' }
   | { name: 'deck'; deckId: string }
   | { name: 'me' }
+  | { name: 'placement' }
+  | { name: 'practice' }
   | { name: 'languages' }
   | { name: 'lesson'; lessonId: string };
 
@@ -23,6 +25,10 @@ export function parseRoute(hash: string): Route {
       return { name: 'deck', deckId: DUE_DECK };
     case '#/me':
       return { name: 'me' };
+    case '#/placement':
+      return { name: 'placement' };
+    case '#/practice':
+      return { name: 'practice' };
     case '#/languages':
       return { name: 'languages' };
   }
@@ -50,3 +56,5 @@ export const meHref = '#/me';
 export const languagesHref = '#/languages';
 export const lessonHref = (lessonId: string) => `#/lesson/${lessonId}`;
 export const deckHref = (deckId: string) => `#/words/${deckId}`;
+export const placementHref = '#/placement';
+export const practiceHref = '#/practice';

@@ -7,7 +7,7 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
   await page.goto('./');
   await chooseLanguages(page, 'Français', ['English']);
 
-  await expect(page.getByRole('heading', { name: 'Votre niveau' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Votre niveau', exact: true })).toBeVisible();
 
   await page.getByRole('link', { name: /Første dag på jobben/ }).click();
   await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();

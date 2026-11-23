@@ -12,6 +12,8 @@ export interface Profile {
   nativeLanguage?: string;
   /** Other languages the learner knows well, used for extra cognate hints. */
   knownLanguages?: string[];
+  /** When the placement check was last completed. */
+  placedAt?: number;
   createdAt: number;
 }
 

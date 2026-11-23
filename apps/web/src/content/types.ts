@@ -5,11 +5,29 @@ import type { Level } from '@tjuvstart/engine';
 export const SKILLS = ['reading', 'listening', 'writing', 'speaking'] as const;
 export type Skill = (typeof SKILLS)[number];
 
+export const FOCUS_POINTS = [
+  'v2-word-order',
+  'subordinate-clause',
+  'ikke-placement',
+  'noun-gender',
+  'definite-form',
+  'object-pronouns',
+  'verb-present',
+  'modal-verbs',
+  'conjunctions',
+  'question-words',
+  'time-expressions',
+  'fixed-expressions',
+] as const;
+export type FocusPoint = (typeof FOCUS_POINTS)[number];
+
 interface ItemBase {
   id: string;
   skill: Skill;
   level: Level;
   descriptors: string[];
+  /** Grammar or usage points practised; repeated mistakes on them are recycled. */
+  focus?: FocusPoint[];
   difficulty: number;
   prompt: string;
   hint?: string;
@@ -42,3 +60,11 @@ export interface Lesson {
   text?: string;
   items: Item[];
 }
+
+// Skill names stay in Norwegian: learners meet them again in the exam and in class.
+export const SKILL_NAMES: Record<Skill, string> = {
+  reading: 'Lesing',
+  listening: 'Lytting',
+  writing: 'Skriving',
+  speaking: 'Muntlig',
+};
