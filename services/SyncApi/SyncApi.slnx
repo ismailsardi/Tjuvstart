@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Tjuvstart.SyncApi/Tjuvstart.SyncApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tjuvstart.SyncApi.Tests/Tjuvstart.SyncApi.Tests.csproj" />
+  </Folder>
+</Solution>

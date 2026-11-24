@@ -1,0 +1,30 @@
+using System.Net;
+using System.Net.Http.Json;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Tjuvstart.SyncApi.Tests;
+
+public sealed class ErrorResponseTests(SyncApiFactory factory) : IClassFixture<SyncApiFactory>
+{
+    private readonly HttpClient _client = factory.CreateClient();
+
+    [Fact]
+    public async Task Unknown_route_returns_problem_details()
+    {
+        var response = await _client.GetAsync(new Uri("/v1/does-not-exist", UriKind.Relative));
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
+        var problem = await response.Content.ReadFromJsonAsync<ProblemDetails>();
+        Assert.Equal(404, problem?.Status);
+    }
+
+    [Fact]
+    public async Task Wrong_method_returns_problem_details()
+    {
+        var response = await _client.DeleteAsync(new Uri("/v1/info", UriKind.Relative));
+
+        Assert.Equal(HttpStatusCode.MethodNotAllowed, response.StatusCode);
+        Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
+    }
+}
