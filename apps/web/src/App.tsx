@@ -4,6 +4,7 @@ import { getLesson } from './content/lessons';
 import { learnerPacks } from './content/packs';
 import { Home } from './components/Home';
 import { NavBar } from './components/NavBar';
+import { RouteFocus } from './components/RouteFocus';
 import { UpdatePrompt } from './components/UpdatePrompt';
 import { getProfile } from './data/progress';
 import { I18nProvider } from './i18n/I18nProvider';
@@ -81,6 +82,10 @@ export function App() {
           ) : (
             <Page route={route} packs={packs} />
           )}
+          <RouteFocus
+            routeKey={JSON.stringify(route)}
+            home={!needsOnboarding && route.name === 'home'}
+          />
         </Suspense>
       </main>
     </I18nProvider>

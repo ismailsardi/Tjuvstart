@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { canRecord, useRecorder } from '../audio/recorder';
 import { playRecording, sentences, speak } from '../audio/speech';
 import type { Lesson } from '../content/types';
@@ -6,6 +6,7 @@ import { recordShadowing } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { lessonHref } from '../routing/useHashRoute';
 import { SpeakButton } from './SpeakButton';
+import { useFocusOnChange } from './usePageFocus';
 
 /** Slow enough to hear every sound, fast enough to keep the melody. */
 const SLOW_RATE = 0.75;
@@ -23,6 +24,12 @@ export function Shadowing({ lesson }: { lesson: Lesson }) {
   const recorder = useRecorder();
   const recordingSupported = canRecord();
   const line = lines[index];
+  // The verdict buttons go away after a verdict: focus moves to the next sentence instead.
+  const lineRef = useRef<HTMLElement>(null);
+  useFocusOnChange(lineRef, index);
+  const setFocusTarget = (el: HTMLElement | null) => {
+    lineRef.current = el;
+  };
   // Without a microphone the learner repeats out loud and judges by ear.
   const canJudge = !!recorder.url || !recordingSupported || recorder.state === 'denied';
 
@@ -35,7 +42,7 @@ export function Shadowing({ lesson }: { lesson: Lesson }) {
   if (!line) {
     return (
       <section aria-labelledby="shadow-done" className="panel">
-        <h1 id="shadow-done" lang="nb">
+        <h1 id="shadow-done" lang="nb" ref={setFocusTarget} tabIndex={-1}>
           Ferdig!
         </h1>
         <p>{t('shadowDoneBody', { n: close, total: lines.length })}</p>
@@ -86,6 +93,8 @@ export function Shadowing({ lesson }: { lesson: Lesson }) {
         className={hideText ? 'shadow-line hidden-line' : 'shadow-line'}
         lang="nb"
         data-testid="shadow-line"
+        ref={setFocusTarget}
+        tabIndex={-1}
       >
         {line}
       </p>

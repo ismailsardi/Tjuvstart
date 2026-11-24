@@ -31,6 +31,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 - **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen at an adaptive speed, record themselves and compare.
 - **Native-language packs for English and French:** interface, tips, cognates, false friends and grammar contrasts in the learner's language.
 - **Optional AI practice:** role-play, writing feedback and fresh reading texts, called straight from the browser with the learner's own Anthropic key and structured outputs.
+- **Accessible:** checked against WCAG 2.2 AA with axe-core on every screen in CI, plus keyboard tests and Lighthouse. See [accessibility](docs/accessibility.md).
 - **Zero running cost:** a local-first PWA on GitHub Pages. Progress stays in the browser (IndexedDB) and the app works offline.
 
 ## Planned
@@ -75,6 +76,7 @@ Audio is optional for local development: without it, the app uses the browser's 
 
 - [Product specification](docs/spec.md)
 - [Architecture decision records](docs/adr/)
+- [Accessibility](docs/accessibility.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## License

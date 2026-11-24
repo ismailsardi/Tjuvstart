@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   PLACEMENT_DEFAULTS,
   maxPlacementQuestions,
@@ -19,6 +19,7 @@ import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
 import { Tusse } from './Tusse';
 import { useTusseGear } from './useTusseGear';
+import { useFocusOnChange } from './usePageFocus';
 
 /** Skills that have items today. Speaking joins once speaking exercises exist. */
 const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[];
@@ -45,6 +46,9 @@ export function Placement() {
     : maxPlacementQuestions(PLACED_SKILLS);
   const finished = state !== null && feedback === null && !item;
   const gear = useTusseGear();
+  // The next question, or the result, takes focus from the button that just went away.
+  const promptRef = useRef<HTMLHeadingElement>(null);
+  useFocusOnChange(promptRef, state && feedback === null ? state.seen.length : undefined);
 
   useEffect(() => {
     if (finished && state) void savePlacement(state.ratings);
@@ -69,7 +73,9 @@ export function Placement() {
     return (
       <section aria-labelledby="placement-done" className="panel done-screen">
         <Tusse pose="cheer" gear={gear} size={110} className="done-tusse" />
-        <h1 id="placement-done">{t('placementDone')}</h1>
+        <h1 id="placement-done" ref={promptRef} tabIndex={-1}>
+          {t('placementDone')}
+        </h1>
         <ul className="skills">
           {PLACED_SKILLS.map((skill) => (
             <li key={skill} data-testid={`placed-${skill}`}>
@@ -113,13 +119,13 @@ export function Placement() {
           {text}
         </p>
       )}
-      <h2 className="prompt" lang="nb">
+      <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
         {current.prompt}
       </h2>
       <ItemView key={current.id} item={current} disabled={feedback !== null} onSubmit={submit} />
       {feedback !== null && (
         <div className={feedback ? 'feedback good' : 'feedback bad'} role="status">
-          <p>
+          <p id="feedback-text">
             <span>
               {feedback ? (
                 t('correct')
@@ -136,7 +142,12 @@ export function Placement() {
             size={60}
             className="feedback-tusse"
           />
-          <button type="button" onClick={() => setFeedback(null)} autoFocus>
+          <button
+            type="button"
+            onClick={() => setFeedback(null)}
+            autoFocus
+            aria-describedby="feedback-text"
+          >
             {t('continue')}
           </button>
         </div>

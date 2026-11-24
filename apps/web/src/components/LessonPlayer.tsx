@@ -20,6 +20,7 @@ import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
 import { Tusse } from './Tusse';
 import { useTusseGear } from './useTusseGear';
+import { useFocusOnChange } from './usePageFocus';
 
 type Feedback = { correct: boolean; spelling: Spelling; answer: string; given?: string } | null;
 
@@ -69,6 +70,9 @@ export function LessonPlayer({
   const gear = useTusseGear();
   const [newCards, setNewCards] = useState(0);
   const saved = useRef(false);
+  // A new question, or the end screen, takes focus from the Continue button that just went away.
+  const promptRef = useRef<HTMLHeadingElement>(null);
+  useFocusOnChange(promptRef, index);
 
   useEffect(() => {
     if (finished) onFinish?.(score);
@@ -87,7 +91,7 @@ export function LessonPlayer({
     return (
       <section className="done-screen" aria-labelledby="done-heading">
         <Tusse pose="cheer" gear={gear} size={120} className="done-tusse" />
-        <h1 id="done-heading" lang="nb">
+        <h1 id="done-heading" lang="nb" ref={promptRef} tabIndex={-1}>
           Ferdig!
         </h1>
         <p>{t('doneBody', { score, total: lesson.items.length })}</p>
@@ -174,7 +178,7 @@ export function LessonPlayer({
         </details>
       ))}
 
-      <h2 className="prompt" lang="nb">
+      <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
         {item.prompt}
       </h2>
       {item.hint && (
@@ -187,7 +191,7 @@ export function LessonPlayer({
 
       {feedback && (
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
-          <p>
+          <p id="feedback-text">
             <span>
               {feedback.correct && feedback.spelling !== 'exact' ? (
                 <>
@@ -231,7 +235,7 @@ export function LessonPlayer({
               {note.text}
             </p>
           )}
-          <button type="button" onClick={next} autoFocus>
+          <button type="button" onClick={next} autoFocus aria-describedby="feedback-text">
             {t('continue')}
           </button>
         </div>

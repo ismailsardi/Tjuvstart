@@ -127,6 +127,10 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const trackSteps = currentTrack ? trackLessons(currentTrack) : [];
   const trackDone = trackSteps.filter((lesson) => completed?.has(lesson.id)).length;
 
+  // Wait the few milliseconds IndexedDB takes, so cards don't appear one by one and push the
+  // page down (this was most of Lighthouse's layout shift score).
+  if (!profile || !completed || !progress || hasAnswers === undefined) return null;
+
   return (
     <>
       <header className="page-header home-header">
