@@ -1,0 +1,131 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-kindergarten",
+  "level": "B1",
+  "title": "Tilbud om barnehageplass",
+  "summary": "Read a simplified letter offering a kindergarten place: the deadline to answer, what happens if you miss it, and the settling-in days.",
+  "review": "pending",
+  "document": {
+    "kind": "letter",
+    "from": "Oslo kommune"
+  },
+  "text": "Hei,\nDatteren deres, Lina, har fått tilbud om plass i Solsikken barnehage fra 15. august.\nDere må svare på tilbudet innen 10. mai. Det gjør dere på nett med BankID. Hvis dere ikke svarer innen fristen, mister dere plassen.\nDe første dagene i barnehagen kaller vi tilvenning. Da må en av foreldrene være sammen med barnet i barnehagen, slik at barnet blir trygt.\nHar dere spørsmål om plassen eller om prisen, kan dere kontakte barnehagen direkte.\nMed vennlig hilsen\nBarnehageopptaket",
+  "items": [
+    {
+      "id": "b1-bh-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva handler brevet om?",
+      "options": ["En plass i barnehagen", "En ny skole", "Et sommerkurs"],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Når kan Lina begynne i barnehagen?",
+      "options": ["15. august", "10. mai", "1. september"],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hva skjer hvis foreldrene ikke svarer innen 10. mai?",
+      "options": ["De mister plassen", "De må betale mer", "Lina begynner senere"],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor må en forelder være med de første dagene?",
+      "options": [
+        "Slik at barnet blir trygt",
+        "Fordi barnehagen mangler ansatte",
+        "For å betale for plassen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvem skal foreldrene kontakte om prisen?",
+      "options": ["Barnehagen", "NAV", "Banken"],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1250,
+      "prompt": "Dere må svare ___ 10. mai.",
+      "answers": ["innen", "senest"]
+    },
+    {
+      "id": "b1-bh-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Hvis dere ikke svarer, ___ dere plassen.",
+      "answers": ["mister"]
+    },
+    {
+      "id": "b1-bh-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["må", "De første dagene", "en forelder", "være med"],
+      "answer": "De første dagene må en forelder være med"
+    },
+    {
+      "id": "b1-bh-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hva må Lina ha med den første dagen?",
+      "audio": "Hei, dette er Solsikken barnehage. Vi gleder oss til å møte Lina. Husk å ta med regntøy, ekstra klær og innesko den første dagen.",
+      "options": ["Regntøy, ekstra klær og innesko", "Mat til hele uka", "Leker og bøker"],
+      "answer": 0
+    },
+    {
+      "id": "b1-bh-10",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Vi gleder oss til å møte dere."
+    }
+  ]
+}

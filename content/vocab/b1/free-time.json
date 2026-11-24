@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "B1",
+  "topic": "free-time",
+  "title": "Fritid og årstider",
+  "cards": [
+    {
+      "id": "paske",
+      "nb": "påske",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["påske", "påsken"],
+      "example": "Hva skal du gjøre i påsken?"
+    },
+    {
+      "id": "ferie",
+      "nb": "ferie",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ferie", "ferien", "ferier", "feriene"],
+      "example": "Vi har ferie i juli."
+    },
+    {
+      "id": "fjell",
+      "nb": "fjell",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["fjell", "fjellet", "fjellene"],
+      "example": "Vi går på tur i fjellet."
+    },
+    {
+      "id": "skitur",
+      "nb": "skitur",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skitur", "skituren", "skiturer"],
+      "example": "Vi gikk en lang skitur."
+    },
+    {
+      "id": "appelsin",
+      "nb": "appelsin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["appelsin", "appelsinen", "appelsiner"],
+      "example": "En appelsin på skituren er tradisjon."
+    },
+    {
+      "id": "krimbok",
+      "nb": "krimbok",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["krimbok", "krimboka", "krimbøker"],
+      "example": "I påsken leser mange en krimbok."
+    },
+    {
+      "id": "lur",
+      "nb": "lur",
+      "pos": "adjective",
+      "forms": ["lurt", "lur", "lure"],
+      "example": "Det er lurt å reise tidlig."
+    },
+    {
+      "id": "ko",
+      "nb": "kø",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kø", "køen", "køer"],
+      "example": "Det er lang kø på veien."
+    },
+    {
+      "id": "vei",
+      "nb": "vei",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vei", "veien", "veier", "veiene"],
+      "example": "Veien er stengt."
+    },
+    {
+      "id": "bade",
+      "nb": "både",
+      "pos": "conjunction",
+      "forms": ["både"],
+      "example": "Både jeg og Sara kommer."
+    },
+    {
+      "id": "vaer",
+      "nb": "vær",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["vær", "været"],
+      "example": "Hvordan blir været i morgen?"
+    },
+    {
+      "id": "skifte",
+      "nb": "skifte",
+      "pos": "verb",
+      "forms": ["skifte", "skifter", "skiftet"],
+      "example": "Været skifter fort på fjellet."
+    },
+    {
+      "id": "fort",
+      "nb": "fort",
+      "pos": "adverb",
+      "forms": ["fort"],
+      "example": "Han kjører for fort."
+    },
+    {
+      "id": "utenfor",
+      "nb": "utenfor",
+      "pos": "preposition",
+      "forms": ["utenfor"],
+      "example": "Vi venter utenfor."
+    },
+    {
+      "id": "loype",
+      "nb": "løype",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["løype", "løypa", "løypene", "løyper"],
+      "example": "Løypene er fine i dag."
+    },
+    {
+      "id": "burde",
+      "nb": "burde",
+      "pos": "verb",
+      "forms": ["bør", "burde", "burdet"],
+      "example": "Du bør sjekke været."
+    },
+    {
+      "id": "skredvarsel",
+      "nb": "skredvarsel",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skredvarsel", "skredvarselet"],
+      "example": "Sjekk skredvarselet før turen."
+    },
+    {
+      "id": "igjen",
+      "nb": "igjen",
+      "pos": "adverb",
+      "forms": ["igjen"],
+      "example": "Si det igjen. De ble igjen i byen."
+    },
+    {
+      "id": "holde",
+      "nb": "holde",
+      "pos": "verb",
+      "forms": ["holde", "holder", "holdt"],
+      "example": "Butikken holder stengt i dag."
+    },
+    {
+      "id": "helligdag",
+      "nb": "helligdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["helligdag", "helligdagen", "helligdager", "helligdagene"],
+      "example": "Langfredag er en helligdag."
+    },
+    {
+      "id": "bane",
+      "nb": "T-bane",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["banen"],
+      "example": "Vi tar T-banen til jobben."
+    },
+    {
+      "id": "videre",
+      "nb": "videre",
+      "pos": "adverb",
+      "forms": ["videre"],
+      "example": "Vi gikk videre."
+    },
+    {
+      "id": "innover",
+      "nb": "innover",
+      "pos": "adverb",
+      "forms": ["innover"],
+      "example": "Vi gikk innover i skogen."
+    },
+    {
+      "id": "marka",
+      "nb": "marka",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["marka"],
+      "example": "Om søndagen går vi tur i marka."
+    },
+    {
+      "id": "skinne",
+      "nb": "skinne",
+      "pos": "verb",
+      "forms": ["skinne", "skinner", "skinte"],
+      "example": "Sola skinte hele dagen."
+    },
+    {
+      "id": "sliten",
+      "nb": "sliten",
+      "pos": "adjective",
+      "forms": ["sliten", "slitent", "slitne"],
+      "example": "Jeg er sliten etter turen."
+    },
+    {
+      "id": "klem",
+      "nb": "klem",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["klem", "klemmen"],
+      "example": "Klem fra Maria"
+    },
+    {
+      "id": "host",
+      "nb": "høst",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["høst", "høsten"],
+      "example": "Kurset begynner i høst."
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "B1",
+  "topic": "home-and-family",
+  "title": "Hjem og familie",
+  "cards": [
+    {
+      "id": "datter",
+      "nb": "datter",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["datter", "datteren", "dattera", "døtre"],
+      "example": "Datteren min er tre år."
+    },
+    {
+      "id": "tilbud",
+      "nb": "tilbud",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["tilbud", "tilbudet", "tilbudene"],
+      "example": "Vi har fått tilbud om plass."
+    },
+    {
+      "id": "plass",
+      "nb": "plass",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["plass", "plassen", "plasser"],
+      "example": "Er det ledig plass?"
+    },
+    {
+      "id": "barnehage",
+      "nb": "barnehage",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["barnehage", "barnehagen", "barnehager"],
+      "example": "Lina går i barnehage."
+    },
+    {
+      "id": "innen",
+      "nb": "innen",
+      "pos": "preposition",
+      "forms": ["innen"],
+      "example": "Svar innen fredag."
+    },
+    {
+      "id": "frist",
+      "nb": "frist",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["frist", "fristen", "frister"],
+      "example": "Fristen er 10. mai."
+    },
+    {
+      "id": "miste",
+      "nb": "miste",
+      "pos": "verb",
+      "forms": ["miste", "mister", "mistet"],
+      "example": "Jeg har mistet nøkkelen."
+    },
+    {
+      "id": "kalle",
+      "nb": "kalle",
+      "pos": "verb",
+      "forms": ["kalle", "kaller", "kalte", "kalt"],
+      "example": "Vi kaller det tilvenning."
+    },
+    {
+      "id": "tilvenning",
+      "nb": "tilvenning",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["tilvenning", "tilvenningen"],
+      "example": "Tilvenningen tar tre dager."
+    },
+    {
+      "id": "foreldre",
+      "nb": "foreldre",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["foreldre", "foreldrene"],
+      "example": "Foreldrene mine bor i Frankrike."
+    },
+    {
+      "id": "barn",
+      "nb": "barn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["barn", "barnet", "barna"],
+      "example": "Barnet sover."
+    },
+    {
+      "id": "trygg",
+      "nb": "trygg",
+      "pos": "adjective",
+      "forms": ["trygg", "trygt", "trygge"],
+      "example": "Barna skal føle seg trygge."
+    },
+    {
+      "id": "kontakte",
+      "nb": "kontakte",
+      "pos": "verb",
+      "forms": ["kontakte", "kontakter", "kontaktet"],
+      "example": "Kontakt oss hvis du har spørsmål."
+    },
+    {
+      "id": "direkte",
+      "nb": "direkte",
+      "pos": "adverb",
+      "forms": ["direkte"],
+      "example": "Ring barnehagen direkte."
+    },
+    {
+      "id": "vaskemaskin",
+      "nb": "vaskemaskin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vaskemaskin", "vaskemaskinen", "vaskemaskiner"],
+      "example": "Vaskemaskinen virker ikke."
+    },
+    {
+      "id": "maskin",
+      "nb": "maskin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["maskin", "maskinen", "maskiner"],
+      "example": "Maskinen er gammel."
+    },
+    {
+      "id": "slutte",
+      "nb": "slutte",
+      "pos": "verb",
+      "forms": ["slutte", "slutter", "sluttet"],
+      "example": "Den har sluttet å virke."
+    },
+    {
+      "id": "virke",
+      "nb": "virke",
+      "pos": "verb",
+      "forms": ["virke", "virker", "virket"],
+      "example": "Telefonen virker ikke."
+    },
+    {
+      "id": "lukte",
+      "nb": "lukte",
+      "pos": "verb",
+      "forms": ["lukte", "lukter", "luktet"],
+      "example": "Det lukter godt her."
+    },
+    {
+      "id": "brent",
+      "nb": "brent",
+      "pos": "adjective",
+      "forms": ["brent", "brente"],
+      "example": "Det lukter brent."
+    },
+    {
+      "id": "kontakt",
+      "nb": "kontakt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kontakt", "kontakten", "kontakter"],
+      "example": "Sett kontakten i veggen."
+    },
+    {
+      "id": "sikring",
+      "nb": "sikring",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sikring", "sikringen", "sikringer"],
+      "example": "Sikringen gikk."
+    },
+    {
+      "id": "orden",
+      "nb": "orden",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["orden"],
+      "example": "Alt er i orden."
+    },
+    {
+      "id": "galt",
+      "nb": "galt",
+      "pos": "adjective",
+      "forms": ["galt", "gal", "gale"],
+      "example": "Noe er galt med maskinen."
+    },
+    {
+      "id": "selve",
+      "nb": "selve",
+      "pos": "determiner",
+      "forms": ["selve"],
+      "example": "Problemet er selve maskinen."
+    },
+    {
+      "id": "reparator",
+      "nb": "reparatør",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["reparatør", "reparatøren", "reparatører"],
+      "example": "Reparatøren kommer i morgen."
+    },
+    {
+      "id": "hverdag",
+      "nb": "hverdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hverdag", "hverdagen", "hverdager"],
+      "example": "Butikken er åpen på hverdager."
+    },
+    {
+      "id": "forhand",
+      "nb": "på forhånd",
+      "pos": "phrase",
+      "forms": ["forhånd"],
+      "example": "Takk på forhånd!"
+    }
+  ]
+}

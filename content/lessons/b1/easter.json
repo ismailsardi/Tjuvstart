@@ -1,0 +1,141 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-easter",
+  "level": "B1",
+  "title": "Påske på fjellet",
+  "summary": "Read a news-style text about Easter in Norway: the cabin, skiing, oranges and crime novels, traffic queues and closed shops. Then follow a traffic and weather report.",
+  "review": "pending",
+  "text": "Påsken er en av de store feriene i Norge. Mange tar fri hele uka og reiser til hytta på fjellet. For mange hører det med å gå lange skiturer, spise appelsin og Kvikk Lunsj i sola og lese en krimbok om kvelden.\nDet er lurt å planlegge turen godt. Det kan bli lange køer på veiene både før og etter påske. På fjellet kan været skifte fort, og de som skal gå utenfor løypene, bør sjekke skredvarselet før de drar.\nDe som blir igjen i byen, får en stille uke. Mange butikker holder stengt på helligdagene.",
+  "items": [
+    {
+      "id": "b1-pk-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva gjør mange i påsken?",
+      "options": ["Reiser til hytta på fjellet", "Jobber ekstra mye", "Flytter til en ny by"],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva er typisk å spise på skitur i påsken?",
+      "options": ["Appelsin og Kvikk Lunsj", "Pølser og is", "Fisk og poteter"],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor er det lurt å planlegge turen godt?",
+      "options": ["Det kan bli lange køer", "Hytta kan være stengt", "Det er ikke snø"],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hvem bør sjekke skredvarselet?",
+      "options": [
+        "De som skal gå utenfor løypene",
+        "Alle som kjører bil",
+        "De som blir igjen i byen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hvordan er det i byen i påsken?",
+      "options": [
+        "Stille, og mange butikker er stengt",
+        "Det er store fester overalt",
+        "Alle butikkene har lenger åpent"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "De ___ skal gå utenfor løypene, bør sjekke skredvarselet.",
+      "answers": ["som"]
+    },
+    {
+      "id": "b1-pk-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "difficulty": 1250,
+      "prompt": "På fjellet kan været ___ fort.",
+      "answers": ["skifte", "endre seg", "forandre seg"]
+    },
+    {
+      "id": "b1-pk-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order", "subordinate-clause"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["sjekker", "Før vi drar,", "vi", "værmeldingen"],
+      "answer": "Før vi drar, sjekker vi værmeldingen"
+    },
+    {
+      "id": "b1-pk-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1250,
+      "prompt": "Hva er rådet?",
+      "audio": "Det er ventet mye trafikk ut av Oslo i dag. Hvis du skal til fjellet, er det lurt å reise tidlig eller sent, og husk å ha med mat og drikke i bilen.",
+      "options": ["Reis tidlig eller sent", "Ikke reis i dag", "Ta toget"],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1300,
+      "prompt": "Hvordan blir været i morgen?",
+      "audio": "I morgen blir det sol i store deler av fjellet, men utover ettermiddagen kan det komme snø i nord. Det blir kaldt om natta.",
+      "options": ["Mest sol, men snø i nord senere på dagen", "Regn hele dagen", "Varmt om natta"],
+      "answer": 0
+    },
+    {
+      "id": "b1-pk-11",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Mange reiser til hytta i påsken."
+    }
+  ]
+}

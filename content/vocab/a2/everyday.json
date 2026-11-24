@@ -1,0 +1,338 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "everyday",
+  "title": "Hverdagsord",
+  "cards": [
+    {
+      "id": "gang",
+      "nb": "gang",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["gang", "gangen", "ganger", "gangene"],
+      "example": "Én gang i året har vi fest."
+    },
+    {
+      "id": "sin",
+      "nb": "sin",
+      "pos": "determiner",
+      "forms": ["sin", "sitt", "sine"],
+      "example": "Sara snakker med sjefen sin."
+    },
+    {
+      "id": "hvordan",
+      "nb": "hvordan",
+      "pos": "adverb",
+      "forms": ["hvordan"],
+      "example": "Hvordan går det?"
+    },
+    {
+      "id": "synes",
+      "nb": "synes",
+      "pos": "verb",
+      "forms": ["synes", "syntes", "synest"],
+      "example": "Hva synes du om jobben?"
+    },
+    {
+      "id": "tro",
+      "nb": "tro",
+      "pos": "verb",
+      "forms": ["tro", "tror", "trodde", "trodd"],
+      "example": "Jeg tror det blir sol i morgen."
+    },
+    {
+      "id": "laere",
+      "nb": "lære",
+      "pos": "verb",
+      "forms": ["lære", "lærer", "lærte", "lært"],
+      "example": "Jeg har lært mye i år."
+    },
+    {
+      "id": "flere",
+      "nb": "flere",
+      "pos": "determiner",
+      "forms": ["flere"],
+      "example": "Vi trenger flere folk."
+    },
+    {
+      "id": "bedre",
+      "nb": "bedre",
+      "pos": "adjective",
+      "forms": ["bedre"],
+      "example": "Jeg vil bli bedre i norsk."
+    },
+    {
+      "id": "alene",
+      "nb": "alene",
+      "pos": "adverb",
+      "forms": ["alene"],
+      "example": "Hun bor alene."
+    },
+    {
+      "id": "ut",
+      "nb": "ut",
+      "pos": "adverb",
+      "forms": ["ut"],
+      "example": "Det høres bra ut."
+    },
+    {
+      "id": "fri",
+      "nb": "fri",
+      "pos": "adjective",
+      "forms": ["fri", "fritt", "frie"],
+      "example": "Jeg har fri på fredag."
+    },
+    {
+      "id": "reise",
+      "nb": "reise",
+      "pos": "verb",
+      "forms": ["reise", "reiser", "reiste", "reist"],
+      "example": "Vi reiser til Bergen i morgen."
+    },
+    {
+      "id": "lese",
+      "nb": "lese",
+      "pos": "verb",
+      "forms": ["lese", "leser", "leste", "lest"],
+      "example": "Jeg leser en bok."
+    },
+    {
+      "id": "kveld",
+      "nb": "kveld",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kveld", "kvelden", "kvelder"],
+      "example": "Vi ses i kveld."
+    },
+    {
+      "id": "sol",
+      "nb": "sol",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["sol", "sola", "solen"],
+      "example": "Sola skinner."
+    },
+    {
+      "id": "by",
+      "nb": "by",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["by", "byen", "byer", "byene"],
+      "example": "Oslo er en fin by."
+    },
+    {
+      "id": "butikk",
+      "nb": "butikk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["butikk", "butikken", "butikker", "butikkene"],
+      "example": "Butikken åpner klokka sju."
+    },
+    {
+      "id": "stengt",
+      "nb": "stengt",
+      "pos": "adjective",
+      "forms": ["stengt"],
+      "example": "Butikken er stengt på søndag."
+    },
+    {
+      "id": "stille",
+      "nb": "stille",
+      "pos": "adjective",
+      "forms": ["stille"],
+      "example": "Det er stille i byen."
+    },
+    {
+      "id": "sammen",
+      "nb": "sammen",
+      "pos": "adverb",
+      "forms": ["sammen"],
+      "example": "Vi spiser lunsj sammen."
+    },
+    {
+      "id": "deres",
+      "nb": "deres",
+      "pos": "determiner",
+      "forms": ["deres"],
+      "example": "Er det huset deres?"
+    },
+    {
+      "id": "noe",
+      "nb": "noe",
+      "pos": "pronoun",
+      "forms": ["noe"],
+      "example": "Er det noe galt?"
+    },
+    {
+      "id": "mulig",
+      "nb": "mulig",
+      "pos": "adjective",
+      "forms": ["mulig", "mulige"],
+      "example": "Kom så fort som mulig."
+    },
+    {
+      "id": "snart",
+      "nb": "snart",
+      "pos": "adverb",
+      "forms": ["snart"],
+      "example": "Vi ses snart!"
+    },
+    {
+      "id": "se",
+      "nb": "se",
+      "pos": "verb",
+      "forms": ["se", "ser", "så", "sett"],
+      "example": "Har du sett filmen?"
+    },
+    {
+      "id": "sist",
+      "nb": "sist",
+      "pos": "adverb",
+      "forms": ["sist"],
+      "example": "Takk for sist!"
+    },
+    {
+      "id": "opp",
+      "nb": "opp",
+      "pos": "adverb",
+      "forms": ["opp"],
+      "example": "Vi går opp trappa."
+    },
+    {
+      "id": "aldri",
+      "nb": "aldri",
+      "pos": "adverb",
+      "forms": ["aldri"],
+      "example": "Jeg har aldri vært i Bergen."
+    },
+    {
+      "id": "sno",
+      "nb": "snø",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["snø", "snøen"],
+      "example": "Det kom mye snø i natt."
+    },
+    {
+      "id": "kald",
+      "nb": "kald",
+      "pos": "adjective",
+      "forms": ["kald", "kaldt", "kalde"],
+      "example": "Det er kaldt ute."
+    },
+    {
+      "id": "film",
+      "nb": "film",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["film", "filmen", "filmer"],
+      "example": "Vi så en film."
+    },
+    {
+      "id": "tur",
+      "nb": "tur",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tur", "turen", "turer", "turene"],
+      "example": "Skal vi gå en tur?"
+    },
+    {
+      "id": "glede",
+      "nb": "glede seg",
+      "pos": "verb",
+      "forms": ["gleder", "gledet", "glede"],
+      "example": "Jeg gleder meg til ferien."
+    },
+    {
+      "id": "dato",
+      "nb": "dato",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["dato", "datoen", "datoer"],
+      "example": "Hvilken dato er det i dag?"
+    },
+    {
+      "id": "august",
+      "nb": "august",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["august"],
+      "example": "Skolen begynner i august."
+    },
+    {
+      "id": "mai",
+      "nb": "mai",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mai"],
+      "example": "17. mai er nasjonaldagen."
+    },
+    {
+      "id": "nett",
+      "nb": "nett",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["nett", "nettet"],
+      "example": "Du kan søke på nett."
+    },
+    {
+      "id": "app",
+      "nb": "app",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["app", "appen", "apper"],
+      "example": "Last ned appen."
+    },
+    {
+      "id": "legge",
+      "nb": "legge",
+      "pos": "verb",
+      "forms": ["legge", "legger", "la", "lagt"],
+      "example": "Legg inn ferien i systemet."
+    },
+    {
+      "id": "starte",
+      "nb": "starte",
+      "pos": "verb",
+      "forms": ["starte", "starter", "startet"],
+      "example": "Bilen startet ikke."
+    },
+    {
+      "id": "vaske",
+      "nb": "vaske",
+      "pos": "verb",
+      "forms": ["vaske", "vasker", "vasket"],
+      "example": "Jeg vasker klær på søndag."
+    },
+    {
+      "id": "klaer",
+      "nb": "klær",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["klær", "klærne"],
+      "example": "Ta med ekstra klær."
+    },
+    {
+      "id": "test",
+      "nb": "test",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["test", "testen", "tester", "testene"],
+      "example": "Testene viste flere feil."
+    },
+    {
+      "id": "endelig",
+      "nb": "endelig",
+      "pos": "adverb",
+      "forms": ["endelig"],
+      "example": "Endelig er det helg!"
+    },
+    {
+      "id": "dra",
+      "nb": "dra",
+      "pos": "verb",
+      "forms": ["dra", "drar", "dro", "dratt"],
+      "example": "Vi drar klokka åtte."
+    }
+  ]
+}

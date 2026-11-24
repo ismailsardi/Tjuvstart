@@ -37,6 +37,20 @@
       "title": "Ekte tekster",
       "summary": "Real kinds of documents, simplified to your level: a letter from NAV, a second-hand ad, a job ad and a notice from the housing association.",
       "lessons": ["a2-nav-letter", "a2-finn-ad", "a2-job-ad", "a2-dugnad"]
+    },
+    {
+      "id": "towards-b1",
+      "level": "B1",
+      "title": "Videre mot B1",
+      "summary": "The next step: talking about what you did, writing to your landlord, meeting minutes, a yearly review at work, a kindergarten letter and a news text about Easter.",
+      "lessons": [
+        "b1-weekend",
+        "b1-landlord-email",
+        "b1-team-meeting",
+        "b1-appraisal",
+        "b1-kindergarten",
+        "b1-easter"
+      ]
     }
   ]
 }

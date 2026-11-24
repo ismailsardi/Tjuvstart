@@ -1,0 +1,152 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-team-meeting",
+  "level": "B1",
+  "title": "Referat fra teammøtet",
+  "summary": "Read the minutes of a team meeting: a delayed launch, a holiday deadline and new home-office rules. Practise explaining reasons with fordi and slik at.",
+  "review": "pending",
+  "text": "Referat fra teammøtet tirsdag 4. mars\nTil stede: Nina, Jonas, Omar og Sara\n1. Lanseringen av den nye appen blir utsatt to uker, fordi testene viste flere feil enn vi hadde regnet med. Ny dato er 1. april.\n2. Alle må legge inn sommerferien sin i systemet innen 15. mars, slik at vi kan planlegge vaktene.\n3. Fra neste måned kan alle jobbe hjemmefra to dager i uka, så lenge hele teamet er på kontoret på onsdager.\nNeste møte er tirsdag 18. mars. Omar skriver referat.",
+  "items": [
+    {
+      "id": "b1-tm-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvorfor blir lanseringen utsatt?",
+      "options": ["Testene viste flere feil enn ventet", "Teamet skal på ferie", "Sjefen er syk"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Når er den nye datoen for lanseringen?",
+      "options": ["1. april", "18. mars", "15. mars"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hva må alle gjøre innen 15. mars?",
+      "options": ["Legge inn sommerferien i systemet", "Teste appen", "Skrive referat"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hvilken dag må alle være på kontoret?",
+      "options": ["Onsdag", "Tirsdag", "Fredag"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hvem skriver referat på neste møte?",
+      "options": ["Omar", "Sara", "Nina"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["conjunctions"],
+      "difficulty": 1150,
+      "prompt": "Lanseringen blir utsatt, ___ testene viste flere feil.",
+      "answers": ["fordi"]
+    },
+    {
+      "id": "b1-tm-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["conjunctions"],
+      "difficulty": 1250,
+      "prompt": "Vi planlegger vaktene nå, ___ alle vet når de skal jobbe.",
+      "answers": ["slik at", "så"]
+    },
+    {
+      "id": "b1-tm-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["kan", "Fra neste måned", "alle", "jobbe hjemmefra"],
+      "answer": "Fra neste måned kan alle jobbe hjemmefra"
+    },
+    {
+      "id": "b1-tm-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["subordinate-clause", "ikke-placement"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg kommer ikke,", "fordi", "jeg", "ikke", "er", "frisk"],
+      "answer": "Jeg kommer ikke, fordi jeg ikke er frisk"
+    },
+    {
+      "id": "b1-tm-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor er møtet flyttet?",
+      "audio": "Hei alle sammen. Møtet i dag er flyttet fra klokka ni til klokka elleve, fordi kunden kommer litt senere. Vi er i det store møterommet.",
+      "options": ["Kunden kommer senere", "Møterommet er opptatt", "Sjefen er syk"],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1300,
+      "prompt": "Hva skal skje på mandag?",
+      "audio": "Kan alle sende meg forslagene sine før fredag? Da kan jeg samle dem og presentere dem for ledelsen på mandag.",
+      "options": [
+        "Forslagene blir presentert for ledelsen",
+        "Alle sender forslag",
+        "Teamet har fri"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-tm-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Lanseringen blir utsatt to uker."
+    }
+  ]
+}

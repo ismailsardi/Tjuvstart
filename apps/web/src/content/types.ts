@@ -20,6 +20,7 @@ export const FOCUS_POINTS = [
   'fixed-expressions',
   'sounds-spelling',
   'numbers',
+  'verb-past',
 ] as const;
 export type FocusPoint = (typeof FOCUS_POINTS)[number];
 
