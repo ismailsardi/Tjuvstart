@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { correctAnswer, dictationWords, isCorrect, normalize, optionOrder } from './answers';
+import {
+  checkAnswer,
+  correctAnswer,
+  dictationWords,
+  isCorrect,
+  normalize,
+  optionOrder,
+} from './answers';
 import type { DictationItem, GapFillItem, MultipleChoiceItem, WordOrderItem } from './types';
 
 const base = {
@@ -114,5 +121,39 @@ describe('optionOrder', () => {
     const firstStaysFirst = ids.filter((id) => optionOrder(id, 3)[0] === 0).length;
     expect(firstStaysFirst).toBeGreaterThan(60);
     expect(firstStaysFirst).toBeLessThan(140);
+  });
+});
+
+describe('checkAnswer', () => {
+  const gap: GapFillItem = {
+    id: 'g-typo',
+    type: 'gap-fill',
+    skill: 'writing',
+    level: 'A2',
+    descriptors: ['A2-W-02'],
+    difficulty: 1000,
+    prompt: 'Jeg ___ med pasientene.',
+    answers: ['hjelper'],
+  };
+  const text = (value: string) => ({ kind: 'text', value }) as const;
+
+  it('forgives a slip of the finger and says how it should be spelled', () => {
+    expect(checkAnswer(gap, text('Hjlper'))).toEqual({
+      correct: true,
+      spelling: 'typo',
+      meant: 'hjelper',
+    });
+    expect(checkAnswer(gap, text('hjelper.'))).toEqual({ correct: true, spelling: 'exact' });
+  });
+
+  it('does not forgive a different verb form', () => {
+    expect(checkAnswer(gap, text('hjelpet')).correct).toBe(false);
+    expect(checkAnswer(gap, text('hjelpe')).correct).toBe(false);
+  });
+
+  it('accepts æ, ø and å typed without the letters, except in spelling exercises', () => {
+    const item: GapFillItem = { ...gap, answers: ['går'] };
+    expect(checkAnswer(item, text('gaar'))).toMatchObject({ correct: true, spelling: 'letters' });
+    expect(checkAnswer({ ...item, focus: ['sounds-spelling'] }, text('gar')).correct).toBe(false);
   });
 });

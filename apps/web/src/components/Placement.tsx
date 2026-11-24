@@ -9,7 +9,7 @@ import {
   startPlacement,
   type PlacementState,
 } from '@tjuvstart/engine';
-import { correctAnswer, guessChance, isCorrect, type Response } from '../content/answers';
+import { checkAnswer, correctAnswer, guessChance, type Response } from '../content/answers';
 import { allItems, readingTextFor } from '../content/lessons';
 import { SKILL_NAMES, type Skill } from '../content/types';
 import { savePlacement } from '../data/progress';
@@ -92,7 +92,7 @@ export function Placement() {
 
   function submit(response: Response) {
     if (!current || feedback !== null || !state) return;
-    const correct = isCorrect(current, response);
+    const { correct } = checkAnswer(current, response);
     setFeedback(correct);
     setState(recordPlacementAnswer(state, current, correct, guessChance(current)));
   }

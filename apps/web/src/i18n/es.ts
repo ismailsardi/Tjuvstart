@@ -44,6 +44,8 @@ export const es: Record<StringKey, string> = {
   check: 'Comprobar',
   continue: 'Continuar',
   correct: '¡Correcto!',
+  spellingTypo: '¡Correcto! Ojo con la ortografía:',
+  spellingLetters: '¡Correcto! Con letras noruegas se escribe',
   notQuite: 'No exactamente. La respuesta es',
   doneBody: 'Has acertado {score} de {total}. Tu nivel estimado se ha actualizado.',
   backHome: 'Volver al inicio',

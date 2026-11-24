@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { correctAnswer, dictationWords, isCorrect, type Response } from '../content/answers';
+import { checkAnswer, correctAnswer, dictationWords, type Response } from '../content/answers';
+import type { Spelling } from '../content/spelling';
 import {
   annotate,
   contrastsFor,
@@ -20,7 +21,7 @@ import { SessionBar } from './SessionBar';
 import { Tusse } from './Tusse';
 import { useTusseGear } from './useTusseGear';
 
-type Feedback = { correct: boolean; answer: string; given?: string } | null;
+type Feedback = { correct: boolean; spelling: Spelling; answer: string; given?: string } | null;
 
 interface Props {
   lesson: Lesson;
@@ -114,10 +115,12 @@ export function LessonPlayer({
 
   async function submit(response: Response) {
     if (!item || feedback) return;
-    const correct = isCorrect(item, response);
+    // Small typos and missing æ, ø, å count as right; the feedback shows the spelling.
+    const { correct, spelling, meant } = checkAnswer(item, response);
     setFeedback({
       correct,
-      answer: correctAnswer(item),
+      spelling,
+      answer: meant ?? correctAnswer(item),
       given: response.kind === 'text' ? response.value : undefined,
     });
     if (correct) setScore((s) => s + 1);
@@ -186,7 +189,12 @@ export function LessonPlayer({
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
           <p>
             <span>
-              {feedback.correct ? (
+              {feedback.correct && feedback.spelling !== 'exact' ? (
+                <>
+                  {t(feedback.spelling === 'letters' ? 'spellingLetters' : 'spellingTypo')}{' '}
+                  <strong lang="nb">{feedback.answer}</strong>
+                </>
+              ) : feedback.correct ? (
                 t('correct')
               ) : (
                 <>
