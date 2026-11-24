@@ -15,6 +15,8 @@ What exists so far:
 | `GET /v1/account`        | The signed-in account and its linked logins       |
 | `POST /v1/sync/push`     | Upload local changes (idempotent)                 |
 | `GET /v1/sync/pull`      | Changes after a cursor, oldest first              |
+| `GET /v1/account/export` | Download everything stored for the account (JSON) |
+| `DELETE /v1/account`     | Permanently delete the account and all its data   |
 | `GET /openapi/v1.json`   | OpenAPI document (Development environment only)   |
 
 ## Run locally
@@ -72,6 +74,15 @@ The web app keeps working from IndexedDB and syncs in the background. A sync rou
 | `profiles`, `cards`, `completions` | The highest `updatedAt` wins; a tie keeps the stored version. `"deleted": true` stores a tombstone. |
 
 The server treats `data` as an opaque JSON object (at most 16 KB), so new client fields need no API change. Sequence numbers are per account and come from the server, so device clocks only matter for choosing between two versions of the same record.
+
+## Account deletion and export
+
+Both app stores require deletion from inside the app, and GDPR gives learners a right to their data.
+
+- `DELETE /v1/account` deletes the account row in one statement. Identities, refresh tokens and synced records are removed by `ON DELETE CASCADE` in the schema, so nothing can be left behind by a missed table. There is no soft delete. Signing in again afterwards creates a new, empty account.
+- `GET /v1/account/export` returns the account, its linked logins and every synced record grouped by collection, as a downloadable `tjuvstart-export-<date>.json`.
+
+Revoking the Apple token on deletion needs Apple's REST API and an Apple developer key, so it will come with the Apple sign-in setup.
 
 ## Configuration
 
