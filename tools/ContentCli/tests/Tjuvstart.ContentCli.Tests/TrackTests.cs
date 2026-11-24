@@ -8,7 +8,7 @@ public sealed class TrackTests : IDisposable
     {
         _content.WriteDescriptors(("A2-W-01", "writing"));
         _content.Write(Path.Combine(ContentLoader.LessonsFolder, "lesson-a.json"), $$"""
-            { "id": "lesson-a", "level": "A2", "title": "T", "summary": "S", "items": [ {{ContentFixture.Gap("item-1")}} ] }
+            { "id": "lesson-a", "level": "A2", "title": "T", "summary": "S", "review": "pending", "items": [ {{ContentFixture.Gap("item-1")}} ] }
             """);
     }
 
@@ -22,7 +22,7 @@ public sealed class TrackTests : IDisposable
     [Fact]
     public void Loads_tracks_in_order()
     {
-        WriteTracks("""{ "id": "first-weeks", "title": "De første ukene", "summary": "S", "lessons": ["lesson-a"] }""");
+        WriteTracks("""{ "id": "first-weeks", "level": "A2", "title": "De første ukene", "summary": "S", "lessons": ["lesson-a"] }""");
 
         var content = ContentLoader.Load(_content.Root);
 
@@ -34,8 +34,8 @@ public sealed class TrackTests : IDisposable
     public void Rejects_unknown_lessons_and_duplicate_tracks()
     {
         WriteTracks("""
-            { "id": "t", "title": "T", "summary": "S", "lessons": ["lesson-a", "ghost"] },
-            { "id": "t", "title": "T", "summary": "S", "lessons": ["lesson-a"] }
+            { "id": "t", "level": "A2", "title": "T", "summary": "S", "lessons": ["lesson-a", "ghost"] },
+            { "id": "t", "level": "A2", "title": "T", "summary": "S", "lessons": ["lesson-a"] }
             """);
 
         var messages = Validate().Select(i => i.Message).ToList();
@@ -47,7 +47,7 @@ public sealed class TrackTests : IDisposable
     [Fact]
     public void Rejects_a_track_that_lists_a_lesson_twice()
     {
-        WriteTracks("""{ "id": "t", "title": "T", "summary": "S", "lessons": ["lesson-a", "lesson-a"] }""");
+        WriteTracks("""{ "id": "t", "level": "A2", "title": "T", "summary": "S", "lessons": ["lesson-a", "lesson-a"] }""");
 
         Assert.Contains(Validate(), i => i.File == ContentLoader.TracksFile);
     }

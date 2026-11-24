@@ -31,9 +31,11 @@ public sealed class ContentFixture : IDisposable
         Write(ContentLoader.DescriptorsFile, $$"""{ "source": "test", "descriptors": [ {{string.Join(",", entries)}} ] }""");
     }
 
-    public void WriteLesson(string id, params string[] items) =>
+    public void WriteLesson(string id, params string[] items) => WriteLessonWithReview(id, Lesson.Pending, items);
+
+    public void WriteLessonWithReview(string id, string review, params string[] items) =>
         Write(Path.Combine(ContentLoader.LessonsFolder, $"{id}.json"),
-            $$"""{ "id": "{{id}}", "level": "A2", "title": "T", "summary": "S", "items": [ {{string.Join(",", items)}} ] }""");
+            $$"""{ "id": "{{id}}", "level": "A2", "title": "T", "summary": "S", "review": "{{review}}", "items": [ {{string.Join(",", items)}} ] }""");
 
     public static string Gap(string id, string descriptor = "A2-W-01", string skill = "writing") =>
         $$"""{ "id": "{{id}}", "type": "gap-fill", "skill": "{{skill}}", "level": "A2", "descriptors": ["{{descriptor}}"], "difficulty": 1000, "prompt": "Jeg ___ i Oslo.", "answers": ["bor"] }""";

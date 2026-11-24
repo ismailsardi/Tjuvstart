@@ -3,7 +3,7 @@
   "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/lesson.schema.json",
   "title": "Lesson",
   "type": "object",
-  "required": ["id", "level", "title", "summary", "items"],
+  "required": ["id", "level", "title", "summary", "review", "items"],
   "additionalProperties": false,
   "properties": {
     "$schema": {
@@ -22,6 +22,10 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "review": {
+      "description": "Native-speaker review status. New and changed lessons start as pending; only approved lessons ship to the app stores.",
+      "enum": ["pending", "approved"]
     },
     "document": {
       "description": "Set when the text imitates a real-world document, simplified to the lesson's level. The app shows it in that form.",
@@ -203,7 +207,9 @@
         "conjunctions",
         "question-words",
         "time-expressions",
-        "fixed-expressions"
+        "fixed-expressions",
+        "sounds-spelling",
+        "numbers"
       ]
     }
   }

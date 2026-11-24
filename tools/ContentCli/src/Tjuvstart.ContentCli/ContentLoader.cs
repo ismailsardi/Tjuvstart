@@ -73,7 +73,7 @@ public static class ContentLoader
                     var items = raw.Items
                         .Select(i => new LessonItem(i.Id, i.Skill, i.Level, i.Descriptors, i.Audio))
                         .ToList();
-                    lessons.Add(new Lesson(raw.Id, raw.Level, raw.Title, relative, items, raw.Text));
+                    lessons.Add(new Lesson(raw.Id, raw.Level, raw.Title, relative, items, raw.Text, raw.Review ?? Lesson.Pending));
                     CheckItemAnswers(relative, lessonDoc.RootElement, issues);
                 }
             }
@@ -288,7 +288,7 @@ public static class ContentLoader
 
     private sealed record ItemFile(string Id, string Skill, string Level, List<string> Descriptors, string? Audio);
 
-    private sealed record LessonFile(string Id, string Level, string Title, List<ItemFile> Items, string? Text);
+    private sealed record LessonFile(string Id, string Level, string Title, List<ItemFile> Items, string? Text, string? Review);
 
     private sealed record WordFile(List<string> Forms);
 

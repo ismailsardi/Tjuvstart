@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Dugnad i borettslaget",
   "summary": "Read a notice from the housing association about a dugnad, the Norwegian day of shared voluntary work.",
+  "review": "pending",
   "document": {
     "kind": "notice",
     "from": "Styret i borettslaget"

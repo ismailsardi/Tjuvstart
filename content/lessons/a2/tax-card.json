@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Skattekortet",
   "summary": "Read an email from HR about the tax card: where to order it, who sends it, and what happens without one.",
+  "review": "pending",
   "text": "Hei Maria! Velkommen til oss. Før første lønn trenger vi skattekortet ditt. Du bestiller det på nettsiden til Skatteetaten. Vi får skattekortet automatisk fra Skatteetaten, så du trenger ikke å sende det til oss. Hvis vi ikke har et skattekort, må vi trekke 50 prosent skatt. Lønnen kommer den 20. hver måned. Hilsen Kari, HR",
   "items": [
     {

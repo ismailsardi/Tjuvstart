@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Til salgs på Finn",
   "summary": "Read a second-hand ad like the ones on Finn.no: what is for sale, the price, where to pick it up and how to reply.",
+  "review": "pending",
   "document": {
     "kind": "ad",
     "from": "Finn.no"
