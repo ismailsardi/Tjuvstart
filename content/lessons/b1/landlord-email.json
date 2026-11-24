@@ -1,0 +1,139 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-landlord-email",
+  "level": "B1",
+  "title": "E-post til utleieren",
+  "summary": "Read an email to a landlord about a broken washing machine, and learn how to describe a problem, ask for help and say when you are available.",
+  "review": "pending",
+  "document": {
+    "kind": "letter",
+    "from": "Ahmed"
+  },
+  "text": "Hei Kari,\nJeg skriver fordi vaskemaskinen i leiligheten har sluttet å virke. Den startet ikke da jeg prøvde å vaske klær på søndag, og det lukter brent av den.\nJeg har sjekket at kontakten og sikringen er i orden, så jeg tror det er noe galt med selve maskinen.\nKan du sende en reparatør så snart som mulig? Jeg er hjemme etter klokka fire alle hverdager, og hele dagen på lørdag.\nPå forhånd takk.\nVennlig hilsen\nAhmed",
+  "items": [
+    {
+      "id": "b1-ll-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvorfor skriver Ahmed?",
+      "options": ["Vaskemaskinen virker ikke", "Husleien er for høy", "Han skal flytte"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ll-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hva har Ahmed allerede sjekket?",
+      "options": ["Kontakten og sikringen", "Om maskinen er ny", "Om naboen kan hjelpe"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ll-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1150,
+      "prompt": "Hva vil Ahmed at Kari skal gjøre?",
+      "options": ["Sende en reparatør", "Kjøpe en ny vaskemaskin til ham", "Ringe naboen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ll-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1300,
+      "prompt": "Når passer det ikke at reparatøren kommer?",
+      "options": ["Tirsdag klokka ti", "Onsdag klokka fem", "Lørdag formiddag"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ll-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "difficulty": 1200,
+      "prompt": "Vaskemaskinen har sluttet å ___.",
+      "answers": ["virke", "fungere"]
+    },
+    {
+      "id": "b1-ll-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Kan du sende en reparatør så snart som ___?",
+      "answers": ["mulig"]
+    },
+    {
+      "id": "b1-ll-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["conjunctions"],
+      "difficulty": 1350,
+      "prompt": "Den startet ikke ___ jeg prøvde å vaske klær på søndag.",
+      "answers": ["da"]
+    },
+    {
+      "id": "b1-ll-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["at", "Jeg tror", "noe er galt", "med maskinen"],
+      "answer": "Jeg tror at noe er galt med maskinen"
+    },
+    {
+      "id": "b1-ll-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["takk", "På", "forhånd"],
+      "answer": "På forhånd takk"
+    },
+    {
+      "id": "b1-ll-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Når kommer reparatøren?",
+      "audio": "Hei Ahmed, det er Kari. Takk for e-posten. En reparatør kommer på torsdag etter klokka fire. Hvis det ikke passer, kan du ringe meg.",
+      "options": ["Torsdag etter klokka fire", "Lørdag formiddag", "Tirsdag klokka ti"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ll-11",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg er hjemme etter klokka fire."
+    }
+  ]
+}

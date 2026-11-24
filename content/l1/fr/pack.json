@@ -247,7 +247,10 @@
         "a2-job-ad",
         "a2-dugnad",
         "a1-hello",
-        "a1-days-and-time"
+        "a1-days-and-time",
+        "b1-team-meeting",
+        "b1-kindergarten",
+        "b1-easter"
       ]
     },
     {
@@ -271,7 +274,13 @@
       "id": "ikke-in-subclause",
       "title": "« Ikke » avant le verbe après « fordi »",
       "body": "Dans une phrase principale, « ikke » (ne… pas) vient après le verbe : « Trikken går ikke ». Après « fordi », « at » ou « hvis », il passe devant le verbe : « …fordi trikken ikke går ».",
-      "lessons": ["a2-getting-around", "a2-calling-in-sick", "a2-tax-card", "a2-nav-letter"]
+      "lessons": [
+        "a2-getting-around",
+        "a2-calling-in-sick",
+        "a2-tax-card",
+        "a2-nav-letter",
+        "b1-team-meeting"
+      ]
     },
     {
       "id": "room-count",
@@ -335,6 +344,30 @@
       "title": "førti ou fjorten ?",
       "body": "-ti marque les dizaines et -ten les nombres de 13 à 19 : førti 40, fjorten 14 ; sytti 70, sytten 17. Pas de « soixante-dix » ni de « quatre-vingts » : chaque dizaine a son nom. Les grands nombres se disent souvent en centaines : 1300 se dit « tretten hundre ».",
       "lessons": ["a1-numbers", "a1-supermarket", "a1-cafe"]
+    },
+    {
+      "id": "past-tense",
+      "title": "Au passé, les verbes courants changent de voyelle",
+      "body": "Les verbes réguliers prennent -et ou -te : jobbe → jobbet, lære → lærte. Les verbes les plus fréquents sont irréguliers et s’apprennent par cœur : gå → gikk, ta → tok, se → så (har sett), bli → ble, være → var. Le norvégien n’a qu’un auxiliaire, « har », là où le français hésite entre être et avoir : « Jeg har gått » = je suis allé.",
+      "lessons": ["b1-weekend", "b1-appraisal"]
+    },
+    {
+      "id": "synes-tror",
+      "title": "synes, tror ou tenker ?",
+      "body": "« Synes » donne un avis fondé sur votre expérience : « Jeg synes filmen var bra » (j’ai trouvé le film bien). « Tror » exprime une supposition : « Jeg tror det blir sol » (je crois qu’il fera beau). « Tenker » désigne l’action de penser : « Jeg tenker på deg ».",
+      "lessons": ["b1-appraisal"]
+    },
+    {
+      "id": "da-naar",
+      "title": "da ou når ?",
+      "body": "Les deux veulent dire « quand ». « Da » sert pour une seule fois dans le passé : « Den startet ikke da jeg prøvde på søndag ». « Når » sert pour le présent, le futur et ce qui se répète : « Når jeg kommer hjem, lager jeg mat ».",
+      "lessons": ["b1-landlord-email", "b1-weekend"]
+    },
+    {
+      "id": "takk-for-sist",
+      "title": "« Takk for sist »",
+      "body": "En Norvège, on remercie la fois suivante, ou dans le message suivant : « Takk for sist » veut dire « merci pour la dernière fois ». Ne pas le dire peut paraître un peu froid.",
+      "lessons": ["b1-weekend"]
     }
   ],
   "itemNotes": {
@@ -392,7 +425,18 @@
     "a1-cafe-10": "« svart » veut dire noir : un café sans rien.",
     "a1-tid-07": "Si la phrase commence par « Onsdag », le verbe vient juste après : Onsdag passer fint.",
     "a1-tid-09": "« Halv ni », c’est une demi-heure avant neuf heures : 8 h 30.",
-    "a1-tid-10": "« Kvart over fire », c’est quatre heures et quart : 4 h 15."
+    "a1-tid-10": "« Kvart over fire », c’est quatre heures et quart : 4 h 15.",
+    "b1-hg-05": "ta → tok → har tatt.",
+    "b1-hg-06": "se → så → har sett.",
+    "b1-hg-08": "gå → gikk → har gått.",
+    "b1-hg-12": "« Takk for sist » remercie pour la dernière rencontre.",
+    "b1-ll-04": "Ahmed est chez lui après 16 h en semaine et toute la journée le samedi : mardi à 10 h ne convient pas.",
+    "b1-ll-07": "Pour une seule fois dans le passé, on dit « da », pas « når ».",
+    "b1-tm-07": "« slik at » (pour que) exprime le but. À l’oral, « så » est courant aussi.",
+    "b1-tm-09": "Après « fordi », « ikke » se place avant le verbe : fordi jeg ikke er frisk.",
+    "b1-ap-05": "« synes » donne un avis fondé sur votre propre expérience.",
+    "b1-bh-07": "Quand une proposition avec « hvis » vient en premier, le verbe principal suit directement.",
+    "b1-pk-06": "« de som » = ceux qui."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail.",
@@ -414,12 +458,19 @@
     "a1-numbers": "Comptez de zéro à cent, comprenez les prix et les numéros de téléphone, et négociez un peu le prix d’un vélo d’occasion.",
     "a1-supermarket": "Passez à la caisse du supermarché en norvégien : le sac, carte ou espèces, le ticket et l’au revoir.",
     "a1-cafe": "Commandez un café et une brioche à la cannelle, choisissez la taille, dites si c’est à emporter, et payez.",
-    "a1-days-and-time": "Apprenez les jours de la semaine, lisez l’heure et déplacez une réunion par message. Attention : « halv ni », c’est 8 h 30."
+    "a1-days-and-time": "Apprenez les jours de la semaine, lisez l’heure et déplacez une réunion par message. Attention : « halv ni », c’est 8 h 30.",
+    "b1-weekend": "Lisez un message sur une sortie à Holmenkollen et entraînez-vous au passé des verbes les plus courants.",
+    "b1-landlord-email": "Lisez un e-mail au propriétaire au sujet d’une machine à laver en panne, et apprenez à décrire un problème, demander de l’aide et dire quand vous êtes disponible.",
+    "b1-team-meeting": "Lisez le compte rendu d’une réunion d’équipe : un lancement reporté, une date limite pour les congés et de nouvelles règles de télétravail. Entraînez-vous à expliquer avec fordi et slik at.",
+    "b1-appraisal": "Suivez l’entretien annuel entre Sara et son responsable, et entraînez-vous à donner votre avis, dire ce que vous voulez et expliquer pourquoi.",
+    "b1-kindergarten": "Lisez une lettre simplifiée qui propose une place en crèche : la date limite pour répondre, ce qui se passe si on la manque, et la période d’adaptation.",
+    "b1-easter": "Lisez un texte d’actualité sur Pâques en Norvège : le chalet, le ski, les oranges et les romans policiers, les bouchons et les magasins fermés. Puis écoutez un bulletin trafic et météo."
   },
   "trackSummaries": {
     "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues.",
     "real-texts": "De vrais types de documents, simplifiés à votre niveau : une lettre de NAV, une petite annonce, une offre d’emploi et un avis de la coopérative.",
-    "from-zero": "Partir de zéro : les lettres et les sons du norvégien, se présenter, les nombres et les prix, le magasin, le café et l’heure."
+    "from-zero": "Partir de zéro : les lettres et les sons du norvégien, se présenter, les nombres et les prix, le magasin, le café et l’heure.",
+    "towards-b1": "L’étape suivante : raconter ce qu’on a fait, écrire à son propriétaire, un compte rendu de réunion, l’entretien annuel, une lettre de la crèche et un texte d’actualité sur Pâques."
   },
   "canDo": {
     "A1-R-01": "Je peux reconnaître des mots, des noms et des nombres familiers sur des panneaux, des étiquettes et des prix.",
@@ -1735,6 +1786,369 @@
     },
     "svart": {
       "meaning": "noir"
+    },
+    "gang": {
+      "meaning": "fois"
+    },
+    "sin": {
+      "meaning": "son, sa, ses (à soi)"
+    },
+    "hvordan": {
+      "meaning": "comment"
+    },
+    "synes": {
+      "meaning": "trouver, penser (avis)"
+    },
+    "tro": {
+      "meaning": "croire, penser"
+    },
+    "laere": {
+      "meaning": "apprendre"
+    },
+    "flere": {
+      "meaning": "plus de, plusieurs"
+    },
+    "bedre": {
+      "meaning": "meilleur, mieux"
+    },
+    "alene": {
+      "meaning": "seul"
+    },
+    "ut": {
+      "meaning": "dehors ; « høres … ut » = avoir l’air"
+    },
+    "fri": {
+      "meaning": "libre ; « ha fri » = être en congé"
+    },
+    "reise": {
+      "meaning": "voyager, partir"
+    },
+    "lese": {
+      "meaning": "lire"
+    },
+    "kveld": {
+      "meaning": "soir"
+    },
+    "sol": {
+      "meaning": "soleil"
+    },
+    "by": {
+      "meaning": "ville"
+    },
+    "butikk": {
+      "meaning": "magasin"
+    },
+    "stengt": {
+      "meaning": "fermé"
+    },
+    "stille": {
+      "meaning": "calme, silencieux"
+    },
+    "sammen": {
+      "meaning": "ensemble"
+    },
+    "deres": {
+      "meaning": "votre, leur"
+    },
+    "noe": {
+      "meaning": "quelque chose"
+    },
+    "mulig": {
+      "meaning": "possible"
+    },
+    "snart": {
+      "meaning": "bientôt"
+    },
+    "se": {
+      "meaning": "voir, regarder"
+    },
+    "sist": {
+      "meaning": "la dernière fois"
+    },
+    "opp": {
+      "meaning": "en haut, vers le haut"
+    },
+    "aldri": {
+      "meaning": "jamais"
+    },
+    "sno": {
+      "meaning": "neige"
+    },
+    "kald": {
+      "meaning": "froid"
+    },
+    "film": {
+      "meaning": "film"
+    },
+    "tur": {
+      "meaning": "promenade, excursion"
+    },
+    "glede": {
+      "meaning": "« glede seg til » = avoir hâte de"
+    },
+    "dato": {
+      "meaning": "date"
+    },
+    "august": {
+      "meaning": "août"
+    },
+    "mai": {
+      "meaning": "mai"
+    },
+    "nett": {
+      "meaning": "internet ; « på nett » = en ligne"
+    },
+    "app": {
+      "meaning": "application"
+    },
+    "legge": {
+      "meaning": "poser, mettre ; « legge inn » = saisir"
+    },
+    "starte": {
+      "meaning": "démarrer, commencer"
+    },
+    "vaske": {
+      "meaning": "laver"
+    },
+    "klaer": {
+      "meaning": "vêtements"
+    },
+    "test": {
+      "meaning": "test"
+    },
+    "endelig": {
+      "meaning": "enfin"
+    },
+    "dra": {
+      "meaning": "partir, aller"
+    },
+    "medarbeidersamtale": {
+      "meaning": "entretien annuel"
+    },
+    "saerlig": {
+      "meaning": "surtout, particulièrement"
+    },
+    "dit": {
+      "meaning": "là-bas (avec mouvement)"
+    },
+    "kurs": {
+      "meaning": "cours, formation"
+    },
+    "prosjektledelse": {
+      "meaning": "gestion de projet"
+    },
+    "hjelpe": {
+      "meaning": "aider"
+    },
+    "dessuten": {
+      "meaning": "en plus, de plus"
+    },
+    "slik": {
+      "meaning": "ainsi ; « slik at » = pour que"
+    },
+    "hores": {
+      "meaning": "sembler, avoir l’air"
+    },
+    "fornuftig": {
+      "meaning": "raisonnable"
+    },
+    "budsjett": {
+      "meaning": "budget"
+    },
+    "referat": {
+      "meaning": "compte rendu"
+    },
+    "teammote": {
+      "meaning": "réunion d’équipe"
+    },
+    "stede": {
+      "meaning": "présent"
+    },
+    "lansering": {
+      "meaning": "lancement"
+    },
+    "utsette": {
+      "meaning": "reporter"
+    },
+    "sommerferie": {
+      "meaning": "vacances d’été"
+    },
+    "hjemmefra": {
+      "meaning": "depuis la maison"
+    },
+    "lenge": {
+      "meaning": "longtemps ; « så lenge » = tant que"
+    },
+    "planlegge": {
+      "meaning": "planifier"
+    },
+    "datter": {
+      "meaning": "fille"
+    },
+    "tilbud": {
+      "meaning": "offre"
+    },
+    "plass": {
+      "meaning": "place"
+    },
+    "barnehage": {
+      "meaning": "crèche, école maternelle"
+    },
+    "innen": {
+      "meaning": "avant, d’ici"
+    },
+    "frist": {
+      "meaning": "date limite"
+    },
+    "miste": {
+      "meaning": "perdre"
+    },
+    "kalle": {
+      "meaning": "appeler"
+    },
+    "tilvenning": {
+      "meaning": "période d’adaptation"
+    },
+    "foreldre": {
+      "meaning": "parents"
+    },
+    "barn": {
+      "meaning": "enfant"
+    },
+    "trygg": {
+      "meaning": "en sécurité, rassuré"
+    },
+    "kontakte": {
+      "meaning": "contacter"
+    },
+    "direkte": {
+      "meaning": "directement"
+    },
+    "vaskemaskin": {
+      "meaning": "machine à laver"
+    },
+    "maskin": {
+      "meaning": "machine"
+    },
+    "slutte": {
+      "meaning": "arrêter, cesser"
+    },
+    "virke": {
+      "meaning": "fonctionner, marcher"
+    },
+    "lukte": {
+      "meaning": "sentir (odeur)"
+    },
+    "brent": {
+      "meaning": "brûlé"
+    },
+    "kontakt": {
+      "meaning": "prise ; contact"
+    },
+    "sikring": {
+      "meaning": "fusible"
+    },
+    "orden": {
+      "meaning": "ordre ; « i orden » = en ordre"
+    },
+    "galt": {
+      "meaning": "faux, qui ne va pas"
+    },
+    "selve": {
+      "meaning": "… lui-même, … elle-même"
+    },
+    "reparator": {
+      "meaning": "réparateur"
+    },
+    "hverdag": {
+      "meaning": "jour de semaine ; quotidien"
+    },
+    "forhand": {
+      "meaning": "à l’avance"
+    },
+    "paske": {
+      "meaning": "Pâques"
+    },
+    "ferie": {
+      "meaning": "vacances"
+    },
+    "fjell": {
+      "meaning": "montagne"
+    },
+    "skitur": {
+      "meaning": "sortie à ski"
+    },
+    "appelsin": {
+      "meaning": "orange"
+    },
+    "krimbok": {
+      "meaning": "roman policier"
+    },
+    "lur": {
+      "meaning": "malin ; « det er lurt » = c’est une bonne idée"
+    },
+    "ko": {
+      "meaning": "file d’attente, bouchon"
+    },
+    "vei": {
+      "meaning": "route, chemin"
+    },
+    "bade": {
+      "meaning": "à la fois («både … og»)"
+    },
+    "vaer": {
+      "meaning": "temps (météo)"
+    },
+    "skifte": {
+      "meaning": "changer"
+    },
+    "fort": {
+      "meaning": "vite"
+    },
+    "utenfor": {
+      "meaning": "dehors, en dehors de"
+    },
+    "loype": {
+      "meaning": "piste (de ski de fond)"
+    },
+    "burde": {
+      "meaning": "devoir (conseil)"
+    },
+    "skredvarsel": {
+      "meaning": "bulletin d’avalanche"
+    },
+    "igjen": {
+      "meaning": "encore ; « bli igjen » = rester"
+    },
+    "holde": {
+      "meaning": "tenir, garder"
+    },
+    "helligdag": {
+      "meaning": "jour férié"
+    },
+    "bane": {
+      "meaning": "métro"
+    },
+    "videre": {
+      "meaning": "plus loin"
+    },
+    "innover": {
+      "meaning": "vers l’intérieur"
+    },
+    "marka": {
+      "meaning": "la forêt autour d’Oslo"
+    },
+    "skinne": {
+      "meaning": "briller"
+    },
+    "sliten": {
+      "meaning": "fatigué"
+    },
+    "klem": {
+      "meaning": "câlin (aussi pour finir un message)"
+    },
+    "host": {
+      "meaning": "automne"
     }
   }
 }

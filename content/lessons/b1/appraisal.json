@@ -1,0 +1,149 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-appraisal",
+  "level": "B1",
+  "title": "Medarbeidersamtalen",
+  "summary": "Follow a yearly review between Sara and her manager, and practise giving your opinion, saying what you want and explaining why.",
+  "review": "pending",
+  "text": "Én gang i året har Sara medarbeidersamtale med sjefen sin, Lars.\n– Hvordan synes du det første året har gått?\n– Jeg synes det har gått bra. Jeg har lært mye, særlig om systemene våre. Men jeg skulle gjerne hatt flere oppgaver med kunder.\n– Det er fint at du sier det. Hva trenger du for å komme dit?\n– Jeg tror at et kurs i prosjektledelse ville hjulpet meg. Dessuten vil jeg bli bedre i norsk, slik at jeg kan ta møtene med kundene alene.\n– Det høres fornuftig ut. Jeg skal sjekke om vi har budsjett til kurset i høst.",
+  "items": [
+    {
+      "id": "b1-ap-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvordan synes Sara det første året har gått?",
+      "options": ["Bra", "Dårlig", "Hun vet ikke"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva vil Sara gjøre mer av?",
+      "options": ["Jobbe med kunder", "Jobbe hjemmefra", "Lære systemene"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor vil Sara bli bedre i norsk?",
+      "options": ["For å ta kundemøtene alene", "For å ta en eksamen", "For å snakke med naboene"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva skal Lars sjekke?",
+      "options": [
+        "Om det er budsjett til kurset",
+        "Om Sara kan få høyere lønn",
+        "Når Sara har ferie"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Hva ___ du om den nye kantina? Jeg liker den godt.",
+      "answers": ["synes"]
+    },
+    {
+      "id": "b1-ap-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "difficulty": 1250,
+      "prompt": "Jeg har lært mye, ___ om systemene våre.",
+      "answers": ["særlig", "spesielt"]
+    },
+    {
+      "id": "b1-ap-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["conjunctions"],
+      "difficulty": 1250,
+      "prompt": "Jeg vil bli bedre i norsk, ___ jeg kan ta møtene alene.",
+      "answers": ["slik at", "så"]
+    },
+    {
+      "id": "b1-ap-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg tror", "at", "et kurs", "ville hjelpe meg"],
+      "answer": "Jeg tror at et kurs ville hjelpe meg"
+    },
+    {
+      "id": "b1-ap-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["vil", "Dessuten", "jeg", "bli bedre i norsk"],
+      "answer": "Dessuten vil jeg bli bedre i norsk"
+    },
+    {
+      "id": "b1-ap-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hva er hun ikke fornøyd med?",
+      "audio": "Jeg er fornøyd med jobben, men jeg synes vi har for mange møter. Jeg skulle ønske vi brukte mer tid på selve arbeidet.",
+      "options": ["Det er for mange møter", "Lønnen", "Kollegaene"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hva vil han gjøre neste år?",
+      "audio": "Neste år vil jeg gjerne lede et lite prosjekt. Jeg har ikke gjort det før, men jeg tror jeg er klar for det.",
+      "options": ["Lede et prosjekt", "Bytte jobb", "Ta et kurs"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ap-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Det høres fornuftig ut."
+    }
+  ]
+}

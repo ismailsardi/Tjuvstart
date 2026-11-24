@@ -57,4 +57,11 @@ describe('suggested tracks', () => {
     expect(suggestedTracks('A2').map((t) => t.id)).not.toContain('from-zero');
     expect(suggestedTracks('A2')[0]?.id).toBe('first-weeks');
   });
+
+  it('ends with the track towards B1', () => {
+    const towardsB1 = tracks.find((t) => t.id === 'towards-b1')!;
+    expect(towardsB1.level).toBe('B1');
+    expect(trackLessons(towardsB1).every((l) => l.level === 'B1')).toBe(true);
+    expect(suggestedTracks('A2').at(-1)?.id).toBe('towards-b1');
+  });
 });

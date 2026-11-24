@@ -497,7 +497,7 @@
       "id": "ga",
       "nb": "gå",
       "pos": "verb",
-      "forms": ["gå", "går", "gikk"],
+      "forms": ["gå", "går", "gikk", "gått"],
       "example": "Bussen går hvert tiende minutt."
     },
     {

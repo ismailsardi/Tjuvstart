@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "B1",
+  "topic": "work",
+  "title": "Jobb og møter",
+  "cards": [
+    {
+      "id": "medarbeidersamtale",
+      "nb": "medarbeidersamtale",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["medarbeidersamtale", "medarbeidersamtalen", "medarbeidersamtaler"],
+      "example": "Jeg har medarbeidersamtale i morgen."
+    },
+    {
+      "id": "saerlig",
+      "nb": "særlig",
+      "pos": "adverb",
+      "forms": ["særlig"],
+      "example": "Jeg liker jobben, særlig kollegaene."
+    },
+    {
+      "id": "dit",
+      "nb": "dit",
+      "pos": "adverb",
+      "forms": ["dit"],
+      "example": "Hvordan kommer jeg dit?"
+    },
+    {
+      "id": "kurs",
+      "nb": "kurs",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kurs", "kurset", "kursene"],
+      "example": "Jeg tar et kurs i norsk."
+    },
+    {
+      "id": "prosjektledelse",
+      "nb": "prosjektledelse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["prosjektledelse", "prosjektledelsen"],
+      "example": "Hun har erfaring med prosjektledelse."
+    },
+    {
+      "id": "hjelpe",
+      "nb": "hjelpe",
+      "pos": "verb",
+      "forms": ["hjelpe", "hjelper", "hjalp", "hjulpet"],
+      "example": "Kan du hjelpe meg?"
+    },
+    {
+      "id": "dessuten",
+      "nb": "dessuten",
+      "pos": "adverb",
+      "forms": ["dessuten"],
+      "example": "Det er dyrt. Dessuten er det langt unna."
+    },
+    {
+      "id": "slik",
+      "nb": "slik",
+      "pos": "adverb",
+      "forms": ["slik"],
+      "example": "Vi gjør det slik at alle forstår."
+    },
+    {
+      "id": "hores",
+      "nb": "høres",
+      "pos": "verb",
+      "forms": ["høres", "hørtes"],
+      "example": "Det høres bra ut."
+    },
+    {
+      "id": "fornuftig",
+      "nb": "fornuftig",
+      "pos": "adjective",
+      "forms": ["fornuftig", "fornuftige"],
+      "example": "Det er en fornuftig plan."
+    },
+    {
+      "id": "budsjett",
+      "nb": "budsjett",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["budsjett", "budsjettet", "budsjetter"],
+      "example": "Vi har ikke budsjett til det."
+    },
+    {
+      "id": "referat",
+      "nb": "referat",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["referat", "referatet", "referater"],
+      "example": "Hvem skriver referat?"
+    },
+    {
+      "id": "teammote",
+      "nb": "teammøte",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["teammøte", "teammøtet", "teammøter"],
+      "example": "Vi har teammøte hver tirsdag."
+    },
+    {
+      "id": "stede",
+      "nb": "til stede",
+      "pos": "phrase",
+      "forms": ["stede"],
+      "example": "Alle var til stede."
+    },
+    {
+      "id": "lansering",
+      "nb": "lansering",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lansering", "lanseringen"],
+      "example": "Lanseringen er i april."
+    },
+    {
+      "id": "utsette",
+      "nb": "utsette",
+      "pos": "verb",
+      "forms": ["utsette", "utsetter", "utsatte", "utsatt"],
+      "example": "Møtet er utsatt til fredag."
+    },
+    {
+      "id": "sommerferie",
+      "nb": "sommerferie",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sommerferie", "sommerferien"],
+      "example": "Jeg har sommerferie i juli."
+    },
+    {
+      "id": "hjemmefra",
+      "nb": "hjemmefra",
+      "pos": "adverb",
+      "forms": ["hjemmefra"],
+      "example": "Jeg jobber hjemmefra i dag."
+    },
+    {
+      "id": "lenge",
+      "nb": "lenge",
+      "pos": "adverb",
+      "forms": ["lenge"],
+      "example": "Så lenge alle er enige, er det greit."
+    },
+    {
+      "id": "planlegge",
+      "nb": "planlegge",
+      "pos": "verb",
+      "forms": ["planlegge", "planlegger", "planla", "planlagt"],
+      "example": "Vi må planlegge turen."
+    }
+  ]
+}

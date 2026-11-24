@@ -209,7 +209,8 @@
         "time-expressions",
         "fixed-expressions",
         "sounds-spelling",
-        "numbers"
+        "numbers",
+        "verb-past"
       ]
     }
   }

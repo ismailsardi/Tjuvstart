@@ -47,7 +47,7 @@
       "nb": "kunde",
       "pos": "noun",
       "gender": "en",
-      "forms": ["kunde", "kunden", "kunder"],
+      "forms": ["kunde", "kunden", "kunder", "kundene"],
       "example": "Nina tar møtet med kunden."
     },
     {
@@ -63,7 +63,7 @@
       "nb": "møte",
       "pos": "noun",
       "gender": "et",
-      "forms": ["møte", "møtet", "møter"],
+      "forms": ["møte", "møtet", "møter", "møtene"],
       "example": "Etter lunsj har vi et møte."
     },
     {

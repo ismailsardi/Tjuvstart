@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-weekend",
+  "level": "B1",
+  "title": "Hva gjorde du i helgen?",
+  "summary": "Read a message about a weekend trip to Holmenkollen and practise the past tense of the verbs you use most.",
+  "review": "pending",
+  "text": "Hei Nina!\nTakk for sist! Det var så hyggelig å se deg på fredag.\nI helgen var jeg endelig i Holmenkollen. Vi tok T-banen opp på lørdag morgen, og så gikk vi videre innover i marka. Det var kaldt, men sola skinte hele dagen. Jeg har aldri sett så mye snø før!\nPå søndag var jeg så sliten at jeg ble hjemme og så en film. Nå gleder jeg meg til neste tur. Vil du bli med neste gang?\nKlem fra Maria",
+  "items": [
+    {
+      "id": "b1-hg-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvor var Maria på lørdag?",
+      "options": ["I Holmenkollen og i marka", "På kino", "Hjemme hos Nina"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hg-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1150,
+      "prompt": "Hvordan var været?",
+      "options": ["Kaldt, med sol", "Varmt, med regn", "Kaldt, med tåke"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hg-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor ble Maria hjemme på søndag?",
+      "options": ["Hun var sliten", "Det regnet", "Hun var syk"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hg-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva spør Maria om til slutt?",
+      "options": [
+        "Om Nina vil bli med på neste tur",
+        "Om Nina kan låne henne ski",
+        "Om Nina så filmen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-hg-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1200,
+      "prompt": "I går ___ vi T-banen til jobben.",
+      "hint": "ta – tar – ___",
+      "answers": ["tok"]
+    },
+    {
+      "id": "b1-hg-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1250,
+      "prompt": "Jeg har aldri ___ så mye snø.",
+      "hint": "se – så – har ___",
+      "answers": ["sett"]
+    },
+    {
+      "id": "b1-hg-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1200,
+      "prompt": "På søndag ___ jeg hjemme.",
+      "hint": "bli – blir – ___",
+      "answers": ["ble"]
+    },
+    {
+      "id": "b1-hg-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1200,
+      "prompt": "Vi ___ en lang tur på lørdag.",
+      "hint": "gå – går – ___",
+      "answers": ["gikk"]
+    },
+    {
+      "id": "b1-hg-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["v2-word-order", "verb-past"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["så", "På søndag", "jeg", "en film"],
+      "answer": "På søndag så jeg en film"
+    },
+    {
+      "id": "b1-hg-10",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["at", "Jeg var så sliten", "jeg", "ble hjemme"],
+      "answer": "Jeg var så sliten at jeg ble hjemme"
+    },
+    {
+      "id": "b1-hg-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["verb-past"],
+      "difficulty": 1250,
+      "prompt": "Hva gjorde de på lørdag?",
+      "audio": "Jeg var på hytta i helgen. Vi skulle gå på ski, men det regnet hele lørdagen, så vi spilte kort og laget god mat i stedet.",
+      "options": ["Spilte kort og laget mat", "Gikk på ski", "Kjørte hjem"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hg-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1100,
+      "prompt": "Skriv det du hører.",
+      "audio": "Takk for sist!"
+    }
+  ]
+}

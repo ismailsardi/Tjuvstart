@@ -21,12 +21,12 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 
 ## What works today
 
-- **20 lessons, 258 exercises (8 at A1, 12 at A2):** reading, listening, gap-fill, word order and dictation, each tagged with a CEFR level, a difficulty and the grammar points it practises.
+- **26 lessons, 326 exercises (8 at A1, 12 at A2, 6 at B1):** reading, listening, gap-fill, word order and dictation, each tagged with a CEFR level, a difficulty and the grammar points it practises.
 - **Adaptive by design:** a five-minute level check, an Elo-style rating per skill, and practice sessions built from the learner's weak skills and recurring mistakes.
 - **Start from zero:** a beginner track for the alphabet with æ, ø and å, the sounds English and French speakers miss, greetings, numbers and prices, the supermarket checkout, the café and telling the time. Learners whose level check lands at A1 start here; everyone else is never sent back to it.
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk.
 - **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are.
-- **396 swipeable word cards:** A1 and A2 decks, plus decks for four lines of work, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
+- **517 swipeable word cards:** A1, A2 and B1 decks, plus decks for four lines of work, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
 - **Ten minutes a day:** one daily session of word cards and targeted exercises, a streak that forgives a missed day, and CEFR can-do statements that tick off as the learner proves them.
 - **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen at an adaptive speed, record themselves and compare.
 - **Native-language packs for English and French:** interface, tips, cognates, false friends and grammar contrasts in the learner's language.
@@ -35,7 +35,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 
 ## Planned
 
-- B1 and B2 lessons, and a licensed frequency list to measure word coverage per level.
+- More B1 lessons, B2 lessons, and a licensed frequency list to measure word coverage per level.
 - Sign-in and sync across devices through a small ASP.NET Core API on a free tier.
 - Speech recognition for speaking practice.
 - Calibrated item difficulty (item response theory) and an FSRS scheduler, fitted to the answer and review logs the app already keeps.
