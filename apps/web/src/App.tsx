@@ -63,7 +63,7 @@ export function App() {
     <I18nProvider language={language}>
       <UpdatePrompt />
       {!needsOnboarding &&
-        !['lesson', 'shadow', 'deck', 'placement', 'practice', 'listening'].includes(
+        !['lesson', 'shadow', 'deck', 'placement', 'practice', 'listening', 'daily'].includes(
           route.name,
         ) && <NavBar route={route} />}
       <main className="shell" lang={language}>

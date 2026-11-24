@@ -32,6 +32,8 @@ export async function stubAudio(page: Page): Promise<string[]> {
 /** Completes the first-run language question. */
 export async function chooseLanguages(page: Page, native: string, known: string[] = []) {
   await page.getByRole('radio', { name: native }).check();
+  // Onboarding asks one question per screen.
+  await page.getByRole('button', { name: /Continue|Continuer/ }).click();
   for (const language of known) {
     await page.getByRole('checkbox', { name: language }).check();
   }

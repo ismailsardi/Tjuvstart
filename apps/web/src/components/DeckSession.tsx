@@ -4,9 +4,10 @@ import { cardLabel, getCard, getDeck } from '../content/vocab';
 import { db } from '../data/db';
 import { addCards, dueCards, reviewCard } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { DUE_DECK, wordsHref } from '../routing/useHashRoute';
+import { DUE_DECK, homeHref, wordsHref } from '../routing/useHashRoute';
 import { SpeakButton } from './SpeakButton';
 import { SwipeCard, type SwipeDirection } from './SwipeCard';
+import { SessionBar } from './SessionBar';
 
 interface Session {
   queue: string[];
@@ -107,11 +108,24 @@ export function DeckSession({
   const total = session.queue.length;
 
   return (
-    <article className="deck-session" aria-labelledby="deck-heading">
-      <a href={wordsHref} className="back-link">
-        {t('backToWords')}
-      </a>
-      <h1 id="deck-heading" lang={deckId === DUE_DECK ? undefined : 'nb'}>
+    <article className="deck-session session" aria-labelledby="deck-heading">
+      {card ? (
+        <SessionBar
+          closeHref={onFinish ? homeHref : wordsHref}
+          done={index}
+          total={total}
+          label={t('cardOf', { n: index + 1, total })}
+        />
+      ) : (
+        <a href={wordsHref} className="back-link">
+          {t('backToWords')}
+        </a>
+      )}
+      <h1
+        id="deck-heading"
+        className={card ? 'eyebrow' : undefined}
+        lang={deckId === DUE_DECK ? undefined : 'nb'}
+      >
         {title}
       </h1>
 
@@ -129,8 +143,6 @@ export function DeckSession({
         </div>
       ) : (
         <>
-          <progress value={index} max={total} aria-label={t('cardOf', { n: index + 1, total })} />
-          <p className="muted small">{t('cardOf', { n: index + 1, total })}</p>
           <div className="card-stack">
             {session.queue[index + 1] && <div className="stack-shadow two" aria-hidden="true" />}
             {session.queue[index + 2] && <div className="stack-shadow three" aria-hidden="true" />}

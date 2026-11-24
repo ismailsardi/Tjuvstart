@@ -16,11 +16,14 @@ import { homeHref, shadowHref, wordsHref } from '../routing/useHashRoute';
 import { sentences } from '../audio/speech';
 import { SpeakButton } from './SpeakButton';
 import { ItemView } from './ItemView';
+import { SessionBar } from './SessionBar';
 
 type Feedback = { correct: boolean; answer: string; given?: string } | null;
 
 interface Props {
   lesson: Lesson;
+  /** Where the close button leads. Home by default. */
+  closeHref?: string;
   /** The learner's language packs, native language first. */
   packs?: readonly LanguagePack[];
   /**
@@ -43,6 +46,7 @@ export function LessonPlayer({
   practice = false,
   onFinish,
   ephemeral = false,
+  closeHref = homeHref,
 }: Props) {
   const { t } = useI18n();
   const [index, setIndex] = useState(0);
@@ -127,11 +131,14 @@ export function LessonPlayer({
   }
 
   return (
-    <article aria-labelledby="lesson-heading">
-      <a href={homeHref} className="muted">
-        {t('home')}
-      </a>
-      <h1 id="lesson-heading" lang="nb">
+    <article className="session" aria-labelledby="lesson-heading">
+      <SessionBar
+        closeHref={closeHref}
+        done={index}
+        total={lesson.items.length}
+        label={t('question', { n: index + 1, total: lesson.items.length })}
+      />
+      <h1 id="lesson-heading" className="eyebrow" lang="nb">
         {lesson.title}
       </h1>
       {text && (
@@ -159,9 +166,6 @@ export function LessonPlayer({
           <p>{contrast.body}</p>
         </details>
       ))}
-
-      <progress value={index} max={lesson.items.length} aria-label={t('progress')} />
-      <p className="muted">{t('question', { n: index + 1, total: lesson.items.length })}</p>
 
       <h2 className="prompt" lang="nb">
         {item.prompt}
@@ -279,8 +283,10 @@ function ReadingText({
         body
       )}
       {cognates.length > 0 && (
-        <section className="glossary" aria-label={t('knownWords')}>
-          <h2>{t('knownWords')}</h2>
+        <details className="glossary" aria-label={t('knownWords')}>
+          <summary>
+            <h2>{t('knownWords')}</h2> <span className="muted">({cognates.length})</span>
+          </summary>
           <ul>
             {cognates.map((word) => (
               <li key={word.nb}>
@@ -291,11 +297,13 @@ function ReadingText({
               </li>
             ))}
           </ul>
-        </section>
+        </details>
       )}
       {falseFriends.length > 0 && (
-        <section className="glossary" aria-label={t('falseFriends')}>
-          <h2>{t('falseFriends')}</h2>
+        <details className="glossary" open aria-label={t('falseFriends')}>
+          <summary>
+            <h2>{t('falseFriends')}</h2> <span className="muted">({falseFriends.length})</span>
+          </summary>
           <ul>
             {falseFriends.map((word) => (
               <li key={word.nb}>
@@ -308,7 +316,7 @@ function ReadingText({
               </li>
             ))}
           </ul>
-        </section>
+        </details>
       )}
     </>
   );

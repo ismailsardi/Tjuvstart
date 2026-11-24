@@ -27,16 +27,27 @@ export function Words() {
     setChoosing(false);
   }
 
-  const tile = (deck: Deck) => {
+  const row = (deck: Deck) => {
     const studied = deck.cards.filter((card) => learning?.has(card.id)).length;
     return (
-      <a className="deck-tile" href={deckHref(deckId(deck))} data-testid={`deck-${deckId(deck)}`}>
+      <a className="deck-row" href={deckHref(deckId(deck))} data-testid={`deck-${deckId(deck)}`}>
         <span className="badge">{deck.level}</span>
-        <strong lang="nb">{deck.title}</strong>
-        <span className="muted small">
-          {t('learningOf', { n: studied, total: deck.cards.length })}
+        <span className="deck-row-main">
+          <strong lang="nb">{deck.title}</strong>
+          {studied > 0 ? (
+            <span className="deck-row-progress">
+              <progress value={studied} max={deck.cards.length} aria-hidden="true" />
+              <span className="muted small">
+                {t('learningOf', { n: studied, total: deck.cards.length })}
+              </span>
+            </span>
+          ) : (
+            <span className="muted small">{t('deckNotStarted', { total: deck.cards.length })}</span>
+          )}
         </span>
-        <progress value={studied} max={deck.cards.length} aria-hidden="true" />
+        <svg className="chevron" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m9 6 6 6-6 6" />
+        </svg>
       </a>
     );
   };
@@ -48,10 +59,21 @@ export function Words() {
         <p className="muted">{t('wordCardsIntro')}</p>
       </header>
 
-      <a className={due > 0 ? 'deck-tile due' : 'deck-tile due empty'} href={deckHref(DUE_DECK)}>
-        <strong>{t('dueDeck')}</strong>
-        <span>{due > 0 ? t('dueCount', { n: due }) : t('dueDeckEmpty')}</span>
-      </a>
+      <section className="panel due-card" aria-labelledby="due-heading">
+        <h2 id="due-heading" className="eyebrow">
+          {t('dueDeck')}
+        </h2>
+        {due > 0 ? (
+          <>
+            <p className="due-count">{t('dueCount', { n: due })}</p>
+            <a className="button" href={deckHref(DUE_DECK)}>
+              {t('reviewNow')}
+            </a>
+          </>
+        ) : (
+          <p className="muted">{t('dueDeckEmpty')}</p>
+        )}
+      </section>
 
       {profile && (
         <section className="my-job" aria-labelledby="my-job-heading">
@@ -67,7 +89,7 @@ export function Words() {
             )}
           </div>
           {myDeck && !choosing ? (
-            tile(myDeck)
+            <div className="deck-list">{row(myDeck)}</div>
           ) : (
             <>
               <p className="muted">{t('myJobIntro')}</p>
@@ -89,9 +111,10 @@ export function Words() {
         </section>
       )}
 
+      <h2 className="section-title">{t('decks')}</h2>
       <ul className="deck-list">
         {general.map((deck) => (
-          <li key={deckId(deck)}>{tile(deck)}</li>
+          <li key={deckId(deck)}>{row(deck)}</li>
         ))}
       </ul>
     </>

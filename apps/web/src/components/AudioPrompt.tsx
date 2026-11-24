@@ -15,19 +15,27 @@ export function AudioPrompt({ text }: { text: string }) {
   const rate = useLiveQuery(() => getProfile())?.listening?.rate ?? DEFAULT_LISTENING_RATE;
   return (
     <div className="audio-prompt">
-      <SpeakButton text={text} rate={rate} label={t('playAudio')} className="button" essential />
-      {rate > SLOW_RATE && (
-        <SpeakButton
-          text={text}
-          rate={SLOW_RATE}
-          label={t('listenSlow')}
-          className="button secondary"
-          essential
-        />
-      )}
-      <span className="muted small" data-testid="listening-speed">
-        {t('listeningSpeed', { percent: Math.round(rate * 100) })}
-      </span>
+      <SpeakButton
+        text={text}
+        rate={rate}
+        label={t('playAudio')}
+        className="button play-main"
+        essential
+      />
+      <div className="audio-options">
+        {rate > SLOW_RATE && (
+          <SpeakButton
+            text={text}
+            rate={SLOW_RATE}
+            label={t('listenSlow')}
+            className="button secondary play-slow"
+            essential
+          />
+        )}
+        <span className="speed-badge" data-testid="listening-speed">
+          {t('listeningSpeed', { percent: Math.round(rate * 100) })}
+        </span>
+      </div>
     </div>
   );
 }

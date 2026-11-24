@@ -35,6 +35,7 @@ export function NavBar({ route }: { route: Route }) {
   return (
     <nav className="tabbar" aria-label="Tjuvstart">
       <a className="wordmark" href={homeHref}>
+        <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" />
         Tjuvstart
       </a>
       <ul>
