@@ -46,13 +46,14 @@ apps/web/          React + TypeScript PWA (Vite)
 packages/engine/   Level rating and item selection, pure TypeScript
 content/           Lessons, word decks, tracks and language packs as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
+services/SyncApi/  ASP.NET Core sync API (in progress)
 tools/audio/       Build-time audio (Azure neural voice, Piper fallback)
 docs/              Specification and architecture decision records
 ```
 
 ## Getting started
 
-Requirements: Node.js 22+, pnpm 10, and the .NET 10 SDK for the content tools.
+Requirements: Node.js 22+, pnpm 10, and the .NET 10 SDK for the content tools and the sync API.
 
 ```bash
 pnpm install
@@ -63,6 +64,8 @@ pnpm lint && pnpm typecheck
 
 dotnet test tools/ContentCli/ContentCli.slnx
 dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
+
+dotnet test services/SyncApi/SyncApi.slnx
 ```
 
 Audio is optional for local development: without it, the app uses the browser's Norwegian voice when there is one. To record it locally, see [tools/audio](tools/audio/README.md).

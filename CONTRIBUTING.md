@@ -13,7 +13,7 @@ Commits follow [Conventional Commits](https://www.conventionalcommits.org/):
 ```
 
 - **Types:** `feat`, `fix`, `docs`, `test`, `refactor`, `ci`, `build`, `chore`, `content`
-- **Scopes:** `web`, `engine`, `audio`, `cli`, `e2e`, or leave it out for repository-wide changes
+- **Scopes:** `web`, `engine`, `audio`, `cli`, `api`, `e2e`, or leave it out for repository-wide changes
 
 The body explains why the change is needed when the summary alone doesn't. For example:
 
@@ -28,6 +28,7 @@ content: add listening and dictation exercises to every lesson
 pnpm lint && pnpm format:check && pnpm typecheck && pnpm test
 pnpm e2e
 dotnet test tools/ContentCli/ContentCli.slnx
+dotnet test services/SyncApi/SyncApi.slnx
 ```
 
 Run `pnpm e2e` without a local `apps/web/public/audio` folder, since CI has no recorded audio either.
