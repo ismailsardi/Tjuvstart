@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { correctAnswer, dictationWords, isCorrect, normalize } from './answers';
+import { correctAnswer, dictationWords, isCorrect, normalize, optionOrder } from './answers';
 import type { DictationItem, GapFillItem, MultipleChoiceItem, WordOrderItem } from './types';
 
 const base = {
@@ -99,5 +99,20 @@ describe('dictation', () => {
       { word: 'hytta.', ok: true },
     ]);
     expect(dictationWords('Hei!', '').map((w) => w.ok)).toEqual([false]);
+  });
+});
+
+describe('optionOrder', () => {
+  it('is a permutation that stays the same for an item', () => {
+    const order = optionOrder('a2-doc-01', 4);
+    expect([...order].sort()).toEqual([0, 1, 2, 3]);
+    expect(optionOrder('a2-doc-01', 4)).toEqual(order);
+  });
+
+  it('does not keep the first option first for most items', () => {
+    const ids = Array.from({ length: 300 }, (_, n) => `item-${n}`);
+    const firstStaysFirst = ids.filter((id) => optionOrder(id, 3)[0] === 0).length;
+    expect(firstStaysFirst).toBeGreaterThan(60);
+    expect(firstStaysFirst).toBeLessThan(140);
   });
 });

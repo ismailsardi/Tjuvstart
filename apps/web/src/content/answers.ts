@@ -78,3 +78,30 @@ export function dictationWords(expected: string, given: string): { word: string;
   }
   return result;
 }
+
+/**
+ * A stable shuffle of option indexes for one item, seeded by its id. Authors put the right
+ * answer first; the learner should not be able to rely on that, but the order must not jump
+ * around between renders or sessions either.
+ */
+export function optionOrder(itemId: string, count: number): number[] {
+  // FNV-1a hash of the id, then a small xorshift generator for a Fisher-Yates shuffle.
+  let seed = 0x811c9dc5;
+  for (let i = 0; i < itemId.length; i++) {
+    seed ^= itemId.charCodeAt(i);
+    seed = Math.imul(seed, 0x01000193) >>> 0;
+  }
+  const next = () => {
+    seed ^= seed << 13;
+    seed ^= seed >>> 17;
+    seed ^= seed << 5;
+    seed >>>= 0;
+    return seed;
+  };
+  const order = Array.from({ length: count }, (_, i) => i);
+  for (let i = count - 1; i > 0; i--) {
+    const j = next() % (i + 1);
+    [order[i], order[j]] = [order[j]!, order[i]!];
+  }
+  return order;
+}
