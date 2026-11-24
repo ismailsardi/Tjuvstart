@@ -49,11 +49,13 @@ function OnboardingForm({
       return;
     }
     if (step === 3 && !startingPoint) return;
+    // The starting point goes first: saving the languages ends onboarding, and Home must not
+    // show (or be navigated away from) before the redirect below.
+    if (startingPoint) await saveStartingPoint(startingPoint);
     await saveLanguages(
       native,
       known.filter((code) => code !== native),
     );
-    if (startingPoint) await saveStartingPoint(startingPoint);
     onDone?.();
   }
 
