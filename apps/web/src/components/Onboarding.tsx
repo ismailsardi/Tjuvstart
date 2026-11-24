@@ -115,7 +115,7 @@ function OnboardingForm({
               />
               <span>
                 {t(label)}
-                <span className="muted small"> {t(hint)}</span>
+                <span className="choice-hint muted small"> {t(hint)}</span>
               </span>
             </label>
           ))}
