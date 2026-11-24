@@ -58,7 +58,7 @@ export const de: Record<StringKey, string> = {
   placementCard:
     'Ein fünfminütiger Test für Lesen, Hören und Schreiben, damit die Lektionen auf dem richtigen Niveau beginnen.',
   placementIntro:
-    'Du bekommst {n} kurze Fragen. Sie passen sich an: Richtige Antworten machen die nächste Frage schwerer. Keine Sorge wegen Fehlern, sie helfen bei der Schätzung.',
+    'Bis zu {n} kurze Fragen. Sie passen sich an: Richtige Antworten machen die nächste Frage schwerer, und der Test hört früher auf, sobald er dein Niveau kennt. Keine Sorge wegen Fehlern, sie helfen bei der Schätzung.',
   placementDone: 'Dein Startniveau',
   placementNote: 'Sprechen wird geschätzt, sobald es Sprechübungen gibt.',
   redoPlacement: 'Einstufungstest wiederholen',

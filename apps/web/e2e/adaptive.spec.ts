@@ -14,11 +14,11 @@ test('the level check sets a starting level, then practice targets weak spots', 
   await expect(page.getByRole('heading', { name: 'Find your level' })).toBeVisible();
   await page.getByRole('button', { name: 'Start' }).click();
 
-  const counter = page.getByText(/^Question \d+ of (\d+)$/);
-  const total = Number((await counter.textContent())!.match(/of (\d+)/)![1]);
-  for (let n = 0; n < total; n++) await answerAnything(page);
-
-  await expect(page.getByRole('heading', { name: 'Your starting level' })).toBeVisible();
+  // The check stops each skill once it is sure enough, so the number of questions varies.
+  const done = page.getByRole('heading', { name: 'Your starting level' });
+  await expect(page.getByText(/^Question 1 of \d+$/)).toBeVisible();
+  for (let n = 0; n < 30 && !(await done.isVisible()); n++) await answerAnything(page);
+  await expect(done).toBeVisible();
   await expect(page.getByTestId('placed-reading')).toContainText(/A1|A2|B1|B2/);
 
   await page.getByRole('link', { name: 'Back to home' }).click();

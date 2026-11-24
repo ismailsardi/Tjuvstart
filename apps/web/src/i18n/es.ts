@@ -58,7 +58,7 @@ export const es: Record<StringKey, string> = {
   placementCard:
     'Una prueba de cinco minutos de lectura, comprensión auditiva y escritura, para que las lecciones empiecen en el nivel adecuado.',
   placementIntro:
-    'Vas a recibir {n} preguntas cortas. Se adaptan sobre la marcha: si aciertas, la siguiente es más difícil. No te preocupes por los errores, ayudan a estimar tu nivel.',
+    'Hasta {n} preguntas cortas. Se adaptan sobre la marcha: si aciertas, la siguiente es más difícil, y la prueba termina antes en cuanto conoce tu nivel. No te preocupes por los errores, ayudan a estimar tu nivel.',
   placementDone: 'Tu nivel de partida',
   placementNote: 'La expresión oral se estimará cuando lleguen los ejercicios de habla.',
   redoPlacement: 'Repetir la prueba de nivel',

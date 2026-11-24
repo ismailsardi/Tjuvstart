@@ -5,7 +5,8 @@ import { describe, expect, it, vi } from 'vitest';
 import type { GapFillItem } from '../content/types';
 import { db } from '../data/db';
 import { getProfile } from '../data/progress';
-import { ITEMS_PER_SKILL, Placement } from './Placement';
+import { PLACEMENT_DEFAULTS } from '@tjuvstart/engine';
+import { Placement } from './Placement';
 
 const items: GapFillItem[] = vi.hoisted(() =>
   [800, 900, 1000, 1100, 1200, 1300, 1400].map((difficulty, i) => ({
@@ -31,12 +32,17 @@ describe('Placement', () => {
     render(<Placement />);
     await user.click(screen.getByRole('button', { name: 'Start' }));
 
-    for (let n = 1; n <= ITEMS_PER_SKILL; n++) {
-      expect(screen.getByText(`Question ${n} of ${ITEMS_PER_SKILL}`)).toBeTruthy();
+    // One skill here, so the counter shows its maximum until the check is sure enough to stop.
+    let asked = 0;
+    while (!screen.queryByText('Your starting level')) {
+      asked++;
+      expect(screen.getByText(`Question ${asked} of ${PLACEMENT_DEFAULTS.max}`)).toBeTruthy();
       await user.type(screen.getByLabelText('Missing word'), 'bor');
       await user.click(screen.getByRole('button', { name: 'Check' }));
       await user.click(await screen.findByRole('button', { name: 'Continue' }));
     }
+    expect(asked).toBeGreaterThanOrEqual(PLACEMENT_DEFAULTS.min);
+    expect(asked).toBeLessThanOrEqual(PLACEMENT_DEFAULTS.max);
 
     expect(await screen.findByText('Your starting level')).toBeTruthy();
     // Right answers all the way should place the learner above the default A2 start.
