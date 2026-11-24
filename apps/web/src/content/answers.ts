@@ -1,3 +1,5 @@
+import { knownWords } from './knownWords';
+import { compareSpelling, type Spelling } from './spelling';
 import type { Item } from './types';
 
 /** Lower-case, trim, collapse spaces and drop sentence punctuation, so "Bor." matches "bor". */
@@ -10,6 +12,40 @@ export function normalize(text: string): string {
 }
 
 export type Response = { kind: 'choice'; index: number } | { kind: 'text'; value: string };
+
+export interface Check {
+  correct: boolean;
+  /**
+   * How a correct typed answer was spelled: `exact`, `letters` (æ, ø or å typed as ae, oe,
+   * aa or the plain letter) or `typo` (a small slip). The feedback then shows the spelling.
+   */
+  spelling: Spelling;
+  /** For a forgiven spelling, the accepted answer the learner meant. */
+  meant?: string;
+}
+
+/**
+ * Checks an answer, forgiving small typos and missing æ, ø and å in typed answers. Exercises
+ * on spelling and sounds stay strict, since there the letters are the point.
+ */
+export function checkAnswer(item: Item, response: Response): Check {
+  if (isCorrect(item, response)) return { correct: true, spelling: 'exact' };
+  if (response.kind !== 'text' || (item.type !== 'gap-fill' && item.type !== 'dictation')) {
+    return { correct: false, spelling: 'wrong' };
+  }
+  if (item.focus?.includes('sounds-spelling')) return { correct: false, spelling: 'wrong' };
+  const accepted = item.type === 'gap-fill' ? item.answers : [item.audio];
+  const given = normalize(response.value);
+  const spellings = accepted.map((answer) =>
+    compareSpelling(normalize(answer), given, knownWords()),
+  );
+  // Prefer the closest reading: a missing ring on å is a smaller thing than a typo.
+  for (const spelling of ['letters', 'typo'] as const) {
+    const i = spellings.indexOf(spelling);
+    if (i >= 0) return { correct: true, spelling, meant: accepted[i] };
+  }
+  return { correct: false, spelling: 'wrong' };
+}
 
 export function isCorrect(item: Item, response: Response): boolean {
   switch (item.type) {

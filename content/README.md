@@ -21,11 +21,11 @@ Every lesson has a `review` status, `pending` or `approved`. New lessons, and le
 
 Every item references the descriptors it practises. The validator rejects an item whose skill or level does not match its descriptors.
 
-| Type              | Answer fields                                                      |
-| ----------------- | ------------------------------------------------------------------ |
-| `multiple-choice` | `options`, `answer` (index into `options`)                         |
-| `gap-fill`        | `answers` (all accepted answers; case and punctuation are ignored) |
-| `word-order`      | `tokens`, `answer` (must use exactly the tokens)                   |
+| Type              | Answer fields                                                                                  |
+| ----------------- | ---------------------------------------------------------------------------------------------- |
+| `multiple-choice` | `options`, `answer` (index into `options`)                                                     |
+| `gap-fill`        | `answers` (all accepted answers; case, punctuation and small typos are forgiven, see the spec) |
+| `word-order`      | `tokens`, `answer` (must use exactly the tokens)                                               |
 
 `difficulty` is on the level engine's rating scale: about 1000 for a typical A2 item, 1200 for B1 (see `packages/engine/src/levels.ts`).
 

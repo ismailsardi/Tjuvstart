@@ -73,6 +73,24 @@ describe('LessonPlayer', () => {
 });
 
 describe('LessonPlayer with language packs', () => {
+  it('counts a small typo as right and shows the spelling', async () => {
+    const user = userEvent.setup();
+    const typoLesson: Lesson = {
+      ...lesson,
+      id: 'typo-lesson',
+      items: [
+        { ...lesson.items[0]!, id: 't-typo', answers: ['jobber'] } as Lesson['items'][number],
+      ],
+    };
+    render(<LessonPlayer lesson={typoLesson} />);
+
+    await user.type(screen.getByLabelText('Missing word'), 'jbober');
+    await user.click(screen.getByRole('button', { name: 'Check' }));
+    const status = await screen.findByRole('status');
+    expect(status.textContent).toContain('Watch the spelling: jobber');
+    expect(status.className).toContain('good');
+  });
+
   it('uses the French interface, marks familiar words and shows notes in French', async () => {
     const user = userEvent.setup();
     const real = getLesson('a2-first-day-at-work');
