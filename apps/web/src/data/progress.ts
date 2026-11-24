@@ -6,6 +6,7 @@ import {
   canDoStatus,
   currentStreak,
   DEFAULT_RATING,
+  LEVEL_BASE,
   MIN_ANSWERS_FOR_ESTIMATE,
   mistakeScores,
   newCardState,
@@ -25,6 +26,7 @@ import {
   GUEST_ID,
   type Profile,
   type ShadowingAttempt,
+  type StartingPoint,
   type TjuvstartDb,
 } from './db';
 
@@ -87,6 +89,26 @@ export async function saveLanguages(
       nativeLanguage,
       knownLanguages: knownLanguages.filter((code) => code !== nativeLanguage),
     });
+  });
+}
+
+/**
+ * Saves where the learner starts. A beginner with no answers yet starts at the A1 base rating,
+ * so the first easy lessons move them up from A1 instead of down from A2.
+ */
+export async function saveStartingPoint(
+  startingPoint: StartingPoint,
+  db: TjuvstartDb = defaultDb,
+): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    const ratings = { ...profile.ratings };
+    if (startingPoint === 'beginner') {
+      for (const skill of SKILLS) {
+        if (profile.answers[skill] === 0) ratings[skill] = LEVEL_BASE.A1;
+      }
+    }
+    await db.profiles.put({ ...profile, startingPoint, ratings });
   });
 }
 

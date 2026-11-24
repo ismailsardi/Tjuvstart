@@ -29,8 +29,17 @@ export async function stubAudio(page: Page): Promise<string[]> {
   return played;
 }
 
-/** Completes the first-run language question. */
-export async function chooseLanguages(page: Page, native: string, known: string[] = []) {
+/**
+ * Completes the first-run questions: languages, then how much Norwegian the learner knows.
+ * By default the learner says they know some, which sends them to the level check. Pass
+ * `null` when editing languages later, where the level is not asked again.
+ */
+export async function chooseLanguages(
+  page: Page,
+  native: string,
+  known: string[] = [],
+  startingPoint: 'beginner' | 'some' | null = 'some',
+) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
   await page.getByRole('button', { name: /Continue|Continuer/ }).click();
@@ -38,6 +47,14 @@ export async function chooseLanguages(page: Page, native: string, known: string[
     await page.getByRole('checkbox', { name: language }).check();
   }
   await page.getByRole('button', { name: /Continue|Continuer/ }).click();
+  if (startingPoint) {
+    const level =
+      startingPoint === 'beginner'
+        ? /^(None yet|Je débute)/
+        : /^(Some already|J’ai déjà des bases)/;
+    await page.getByRole('radio', { name: level }).check();
+    await page.getByRole('button', { name: /Continue|Continuer/ }).click();
+  }
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }
 

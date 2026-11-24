@@ -46,6 +46,11 @@ describe('suggested tracks', () => {
     expect(overallLevel(flat(1000), none)).toBe('A2');
   });
 
+  it('assumes A1 for a learner who said they are starting from zero', () => {
+    expect(overallLevel(flat(1000), none, 'beginner')).toBe('A1');
+    expect(overallLevel(flat(1000), none, 'some')).toBe('A2');
+  });
+
   it('averages only the skills with answers', () => {
     const ratings = { ...flat(1000), reading: 760, listening: 780 };
     expect(overallLevel(ratings, { ...none, reading: 5, listening: 5 })).toBe('A1');
@@ -63,5 +68,16 @@ describe('suggested tracks', () => {
     expect(towardsB1.level).toBe('B1');
     expect(trackLessons(towardsB1).every((l) => l.level === 'B1')).toBe(true);
     expect(suggestedTracks('A2').at(-1)?.id).toBe('towards-b1');
+  });
+});
+
+describe('a beginner who levels up halfway', () => {
+  it('keeps the from-zero track until it is finished', () => {
+    const fromZero = tracks.find((t) => t.id === 'from-zero')!;
+    const halfway = new Set(fromZero.lessons.slice(0, 3));
+    expect(suggestedTracks('A2', halfway)[0]?.id).toBe('from-zero');
+    expect(suggestedTracks('A2', new Set(fromZero.lessons)).map((t) => t.id)).not.toContain(
+      'from-zero',
+    );
   });
 });
