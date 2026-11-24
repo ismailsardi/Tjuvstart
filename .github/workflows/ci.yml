@@ -77,6 +77,8 @@ jobs:
           dotnet ef migrations has-pending-model-changes -p src/Tjuvstart.SyncApi --no-build
       # Integration tests start PostgreSQL in Docker with Testcontainers.
       - run: dotnet test services/SyncApi/SyncApi.slnx --no-build
+      - name: Build the container image
+        run: docker build -t tjuvstart-sync services/SyncApi
 
   audio:
     name: Audio
