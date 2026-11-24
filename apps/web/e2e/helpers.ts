@@ -6,7 +6,8 @@ const lessonsDir = new URL('../../../content/lessons/', import.meta.url);
 
 /**
  * Stands in for the audio build, which only runs in the audio job and on deploy: every
- * listening text in the content gets a silent clip. Returns the clips played, in order.
+ * listening text, letter name and alphabet example gets a silent clip. Returns the clips
+ * played, in order.
  */
 export async function stubAudio(page: Page): Promise<string[]> {
   const index: Record<string, string> = {};
@@ -20,6 +21,13 @@ export async function stubAudio(page: Page): Promise<string[]> {
       }
     }
   }
+  const alphabet = JSON.parse(
+    readFileSync(new URL('../../../content/alphabet.json', import.meta.url), 'utf8'),
+  ) as { letters: { name: string; example: string }[] };
+  alphabet.letters.forEach(({ name, example }, i) => {
+    index[name] = `letter-${i + 1}`;
+    index[example] = `example-${i + 1}`;
+  });
   const played: string[] = [];
   await page.route('**/audio/index.json', (route) => route.fulfill({ json: index }));
   await page.route('**/audio/*.mp3', (route) => {

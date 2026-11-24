@@ -2001,3 +2001,45 @@ button.danger:not(.link) {
 .skill-pending progress {
   flex: 1;
 }
+
+/* A short explanation under an onboarding answer. */
+.choice-hint {
+  display: block;
+}
+
+/* Alphabet */
+
+.alphabet {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.75rem;
+}
+
+.alphabet li {
+  display: grid;
+  justify-items: start;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* æ, ø and å are the letters learners have never seen. */
+.alphabet li.extra {
+  border-color: var(--warm);
+}
+
+.alphabet-letter {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+.alphabet button.speak {
+  margin-top: 0.25rem;
+}

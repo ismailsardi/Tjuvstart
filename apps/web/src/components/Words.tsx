@@ -5,6 +5,7 @@ import { db } from '../data/db';
 import { dueCards, getProfile, saveJobField } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { DUE_DECK, deckHref } from '../routing/useHashRoute';
+import { AlphabetRow } from './AlphabetRow';
 
 /**
  * The Words tab: today's review, the deck for the learner's line of work, then every general
@@ -113,6 +114,9 @@ export function Words() {
 
       <h2 className="section-title">{t('decks')}</h2>
       <ul className="deck-list">
+        <li>
+          <AlphabetRow />
+        </li>
         {general.map((deck) => (
           <li key={deckId(deck)}>{row(deck)}</li>
         ))}
