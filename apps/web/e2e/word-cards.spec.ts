@@ -27,6 +27,6 @@ test('a learner can swipe through a deck and review it later', async ({ page }) 
   await page.getByRole('button', { name: /Again/ }).click();
   await expect(page.getByTestId('swipe-card')).toContainText('å arbeide');
 
-  await page.getByRole('link', { name: '← Words' }).click();
+  await page.getByRole('link', { name: 'Close' }).click();
   await expect(page.getByTestId('deck-a2-work')).toContainText('2 of 15 learning');
 });

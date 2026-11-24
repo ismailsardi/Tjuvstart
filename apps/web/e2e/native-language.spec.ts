@@ -24,7 +24,7 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
   await expect(page.getByRole('status')).toContainText('veut dire la même chose');
 
   // Languages can be changed later from the home page.
-  await page.getByRole('link', { name: '← Accueil' }).click();
+  await page.getByRole('link', { name: 'Fermer' }).click();
   await page.getByRole('navigation').getByRole('link', { name: 'Moi' }).click();
   await expect(page.getByTestId('languages')).toContainText('Français, English');
   await page.getByTestId('languages').getByRole('link', { name: 'Modifier' }).click();

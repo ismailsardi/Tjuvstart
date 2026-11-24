@@ -29,7 +29,7 @@ test('a learner picks a line of work and gets its word deck', async ({ page }) =
   await page.getByRole('button', { name: 'Construction' }).click();
 
   const deck = page.getByTestId('deck-a2-job-construction');
-  await expect(deck).toContainText('0 of 12 learning');
+  await expect(deck).toContainText('12 words · not started');
   await expect(page.getByTestId('deck-a2-job-it')).toHaveCount(0);
 
   await page.getByRole('navigation').getByRole('link', { name: 'Me' }).click();

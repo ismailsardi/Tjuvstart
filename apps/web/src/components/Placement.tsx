@@ -13,6 +13,7 @@ import { savePlacement } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { homeHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
+import { SessionBar } from './SessionBar';
 
 /** Skills that have items today. Speaking joins once speaking exercises exist. */
 const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[];
@@ -80,16 +81,16 @@ export function Placement() {
   }
 
   return (
-    <article aria-labelledby="placement-heading">
-      <h1 id="placement-heading">{t('placementTitle')}</h1>
-      <progress
-        value={state.seen.length - (feedback === null ? 0 : 1)}
-        max={total}
-        aria-label={t('question', { n: state.seen.length + (feedback === null ? 1 : 0), total })}
+    <article className="session" aria-labelledby="placement-heading">
+      <SessionBar
+        closeHref={homeHref}
+        done={state.seen.length - (feedback === null ? 0 : 1)}
+        total={total}
+        label={t('question', { n: state.seen.length + (feedback === null ? 1 : 0), total })}
       />
-      <p className="muted small">
-        {t('question', { n: state.seen.length + (feedback === null ? 1 : 0), total })}
-      </p>
+      <h1 id="placement-heading" className="eyebrow">
+        {t('placementTitle')}
+      </h1>
       {text && (
         <p className="reading-text" lang="nb">
           {text}

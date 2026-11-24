@@ -82,6 +82,12 @@ export default defineConfig({
             },
           },
           {
+            // The Inter font files are fetched on first use and then kept for offline use.
+            urlPattern: ({ url }) => url.pathname.endsWith('.woff2'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'fonts', cacheableResponse: { statuses: [0, 200] } },
+          },
+          {
             // File names change with the voice, so a stale list would point to missing files.
             urlPattern: ({ url }) => url.pathname.endsWith('/audio/index.json'),
             handler: 'NetworkFirst',

@@ -8,7 +8,10 @@ test('first visit asks for languages, then shows skills, lessons and the manifes
   await expect(page.getByRole('heading', { name: 'Velkommen!' })).toBeVisible();
   await chooseLanguages(page, 'English');
 
-  await expect(page.getByTestId('skill-reading')).toContainText('Not assessed yet');
+  // Until a skill has an estimate, the level card says so in one line.
+  await expect(page.getByRole('region', { name: 'Your level', exact: true })).toContainText(
+    'No estimate yet',
+  );
   await expect(
     page
       .getByRole('region', { name: /^(Next lesson|Prochaine leçon)$/ })

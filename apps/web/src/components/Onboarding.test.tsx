@@ -20,6 +20,7 @@ describe('Onboarding', () => {
 
     await user.click(screen.getByRole('radio', { name: 'Français' }));
     expect(screen.getByText('Quelle est votre langue maternelle ?')).toBeTruthy();
+    await user.click(screen.getByRole('button', { name: 'Continuer' }));
     await user.click(screen.getByRole('checkbox', { name: 'English' }));
     await user.click(screen.getByRole('button', { name: 'Continuer' }));
 
