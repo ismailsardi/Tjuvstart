@@ -9,16 +9,21 @@ public sealed class SyncService(SyncDbContext db)
 {
     public const int MaxPullLimit = 500;
 
-    public async Task<PushResponse> PushAsync(Guid accountId, IReadOnlyList<SyncChange> changes, CancellationToken cancellationToken)
+    /// <returns>The result, or <c>null</c> when the account no longer exists.</returns>
+    public async Task<PushResponse?> PushAsync(Guid accountId, IReadOnlyList<SyncChange> changes, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(changes);
         await using var transaction = await db.Database.BeginTransactionAsync(cancellationToken);
 
         // Locking the account row serializes pushes per account, so sequence numbers are handed
         // out without gaps or duplicates, and a pull never sees a later number before an earlier one.
-        var sequence = await db.Database
-            .SqlQuery<long>($"SELECT sync_sequence AS \"Value\" FROM accounts WHERE id = {accountId} FOR UPDATE")
-            .SingleAsync(cancellationToken);
+        var locked = await db.Database
+            .SqlQuery<long?>($"SELECT sync_sequence AS \"Value\" FROM accounts WHERE id = {accountId} FOR UPDATE")
+            .SingleOrDefaultAsync(cancellationToken);
+        if (locked is not { } sequence)
+        {
+            return null;
+        }
 
         var accepted = 0;
         foreach (var change in changes)

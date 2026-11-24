@@ -22,9 +22,11 @@ public static class SyncEndpoints
         return group;
     }
 
-    private static async Task<Ok<PushResponse>> PushAsync(
+    private static async Task<Results<Ok<PushResponse>, NotFound>> PushAsync(
         PushRequest request, ClaimsPrincipal user, SyncService sync, CancellationToken cancellationToken) =>
-        TypedResults.Ok(await sync.PushAsync(user.AccountId(), request.Changes, cancellationToken));
+        await sync.PushAsync(user.AccountId(), request.Changes, cancellationToken) is { } result
+            ? TypedResults.Ok(result)
+            : TypedResults.NotFound();
 
     private static async Task<Ok<PullResponse>> PullAsync(
         ClaimsPrincipal user,
