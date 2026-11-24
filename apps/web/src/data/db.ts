@@ -1,9 +1,23 @@
-import Dexie, { type EntityTable } from 'dexie';
+import Dexie, { type EntityTable, type Transaction } from 'dexie';
 import type { CardState, Grade, ListeningSpeed } from '@tjuvstart/engine';
 import type { Skill } from '../content/types';
 import type { JobField } from '../content/vocab';
 
-export interface Profile {
+/**
+ * Fields the sync layer maintains on every synced row (ADR 0011). Code that records progress
+ * never sets them: hooks stamp them on write.
+ */
+export interface SyncFields {
+  /** Last local change, in milliseconds since the epoch. Strictly increasing on one device. */
+  updatedAt?: number;
+}
+
+/** Log rows also get a random id, so rows from several devices never collide on the server. */
+export interface LogSyncFields extends SyncFields {
+  syncKey?: string;
+}
+
+export interface Profile extends SyncFields {
   id: string;
   /** Elo-style rating per skill (see packages/engine). */
   ratings: Record<Skill, number>;
@@ -22,7 +36,7 @@ export interface Profile {
   createdAt: number;
 }
 
-export interface Attempt {
+export interface Attempt extends LogSyncFields {
   id?: number;
   lessonId: string;
   itemId: string;
@@ -33,20 +47,20 @@ export interface Attempt {
 }
 
 /** Spaced repetition state for a card the learner has started studying. */
-export interface CardProgress extends CardState {
+export interface CardProgress extends CardState, SyncFields {
   cardId: string;
   addedAt: number;
 }
 
 /** Every card review is kept, so a better scheduler can be fitted to real data later (ADR 0005). */
-export interface Review {
+export interface Review extends LogSyncFields {
   id?: number;
   cardId: string;
   grade: Grade;
   at: number;
 }
 
-export interface Completion {
+export interface Completion extends SyncFields {
   lessonId: string;
   bestScore: number;
   total: number;
@@ -55,7 +69,7 @@ export interface Completion {
 }
 
 /** One sentence said aloud in a shadowing session, with the learner's own verdict. */
-export interface ShadowingAttempt {
+export interface ShadowingAttempt extends LogSyncFields {
   id?: number;
   lessonId: string;
   text: string;
@@ -73,7 +87,35 @@ export interface AiSettings {
   model: string;
 }
 
+/** Where sync left off, and the signed-in session. One row with id 'sync'. */
+export interface SyncState {
+  id: 'sync';
+  /** Server sequence number of the last pulled change. */
+  cursor: number;
+  /** Local rows with updatedAt at or above this still need pushing. */
+  pushFrom: number;
+  session?: {
+    accountId: string;
+    accessToken: string;
+    accessTokenExpiresAt: string;
+    refreshToken: string;
+  };
+}
+
 export const GUEST_ID = 'guest';
+
+export const STATE_TABLES = ['profiles', 'cards', 'completions'] as const;
+export const LOG_TABLES = ['attempts', 'reviews', 'shadowing'] as const;
+export type SyncedTable = (typeof STATE_TABLES)[number] | (typeof LOG_TABLES)[number];
+
+/** Transactions that apply pulled changes; hooks leave their timestamps alone. */
+export const remoteTransactions = new WeakSet<Transaction>();
+
+let lastStamp = 0;
+function stamp(): number {
+  lastStamp = Math.max(Date.now(), lastStamp + 1);
+  return lastStamp;
+}
 
 export class TjuvstartDb extends Dexie {
   profiles!: EntityTable<Profile, 'id'>;
@@ -83,6 +125,7 @@ export class TjuvstartDb extends Dexie {
   completions!: EntityTable<Completion, 'lessonId'>;
   shadowing!: EntityTable<ShadowingAttempt, 'id'>;
   aiSettings!: EntityTable<AiSettings, 'id'>;
+  syncState!: EntityTable<SyncState, 'id'>;
 
   constructor(name = 'tjuvstart') {
     super(name);
@@ -101,6 +144,46 @@ export class TjuvstartDb extends Dexie {
     this.version(4).stores({
       aiSettings: 'id',
     });
+    this.version(5)
+      .stores({
+        profiles: 'id, updatedAt',
+        attempts: '++id, lessonId, itemId, skill, at, updatedAt, &syncKey',
+        cards: 'cardId, due, updatedAt',
+        reviews: '++id, cardId, at, updatedAt, &syncKey',
+        completions: 'lessonId, updatedAt',
+        shadowing: '++id, lessonId, at, updatedAt, &syncKey',
+        syncState: 'id',
+      })
+      .upgrade(async (tx) => {
+        // Stamp rows written before sync existed, so the first sign-in uploads them.
+        for (const name of [...STATE_TABLES, ...LOG_TABLES]) {
+          const isLog = (LOG_TABLES as readonly string[]).includes(name);
+          await tx
+            .table(name)
+            .toCollection()
+            .modify((row: LogSyncFields) => {
+              row.updatedAt = stamp();
+              if (isLog) row.syncKey = crypto.randomUUID();
+            });
+        }
+      });
+    this.trackChanges();
+  }
+
+  /** Stamps every local write to a synced table, so the next sync knows to push it. */
+  private trackChanges() {
+    for (const name of [...STATE_TABLES, ...LOG_TABLES]) {
+      const table = this.table<LogSyncFields>(name);
+      const isLog = (LOG_TABLES as readonly string[]).includes(name);
+      table.hook('creating', (_key, row, tx) => {
+        if (remoteTransactions.has(tx)) return;
+        row.updatedAt = stamp();
+        if (isLog) row.syncKey ??= crypto.randomUUID();
+      });
+      table.hook('updating', (_changes, _key, _row, tx) =>
+        remoteTransactions.has(tx) ? undefined : { updatedAt: stamp() },
+      );
+    }
   }
 }
 

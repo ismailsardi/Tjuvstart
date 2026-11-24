@@ -6,9 +6,14 @@ import { VitePWA } from 'vite-plugin-pwa';
 // GitHub Pages serves the app from /<repo>/, so CI sets BASE_PATH.
 const base = process.env.BASE_PATH ?? '/';
 
+// The optional sync API (services/SyncApi). When set, the page may also talk to its origin.
+const syncApiOrigin = process.env.VITE_SYNC_API_URL
+  ? new URL(process.env.VITE_SYNC_API_URL).origin
+  : undefined;
+
 /**
- * The learner's API key lives in the browser, so the page only talks to itself and to the
- * Anthropic API. If a script were ever injected, it could not send the key anywhere else.
+ * The learner's API key lives in the browser, so the page only talks to itself, the Anthropic
+ * API and, when configured, the sync API. If a script were ever injected, it could not send the key anywhere else.
  * Added to the built page only: the dev server relies on inline scripts for hot reload.
  */
 const CONTENT_SECURITY_POLICY = [
@@ -18,7 +23,7 @@ const CONTENT_SECURITY_POLICY = [
   "img-src 'self' data:",
   // Learners' own recordings play from blob: URLs.
   "media-src 'self' blob:",
-  "connect-src 'self' https://api.anthropic.com",
+  ['connect-src', "'self'", 'https://api.anthropic.com', syncApiOrigin].filter(Boolean).join(' '),
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
