@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-cafe",
+  "level": "A1",
+  "title": "På kafé",
+  "summary": "Order a coffee and a cinnamon bun, choose a size, say whether it is to take away, and pay.",
+  "review": "pending",
+  "text": "Ahmed er på en kafé i sentrum.\n– Hei! Hva skal det være?\n– Jeg vil gjerne ha en kaffe og en kanelbolle.\n– Liten eller stor kaffe?\n– Stor, takk.\n– Skal du sitte her, eller vil du ha det med?\n– Til å ta med.\n– Det blir 95 kroner.\n– Kan jeg betale med Vipps?\n– Ja, selvfølgelig.",
+  "items": [
+    {
+      "id": "a1-cafe-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 650,
+      "prompt": "Hva kjøper Ahmed?",
+      "options": ["En kaffe og en kanelbolle", "En te og en kake", "En kaffe og et rundstykke"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 700,
+      "prompt": "Hvor stor er kaffen?",
+      "options": ["Stor", "Liten"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 850,
+      "prompt": "Skal Ahmed sitte på kafeen?",
+      "options": ["Nei, han tar det med", "Ja, han sitter der", "Han vet ikke"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 800,
+      "prompt": "Hvor mye koster det?",
+      "options": ["95 kroner", "59 kroner", "90 kroner"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 750,
+      "prompt": "Jeg vil gjerne ___ en kaffe.",
+      "answers": ["ha"]
+    },
+    {
+      "id": "a1-cafe-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 800,
+      "prompt": "Kan jeg ___ med Vipps?",
+      "answers": ["betale"]
+    },
+    {
+      "id": "a1-cafe-07",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 800,
+      "prompt": "Lag en setning.",
+      "tokens": ["få", "Kan jeg", "en te?"],
+      "answer": "Kan jeg få en te?"
+    },
+    {
+      "id": "a1-cafe-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 900,
+      "prompt": "Lag en setning.",
+      "tokens": ["skal", "Hva", "det være?"],
+      "answer": "Hva skal det være?"
+    },
+    {
+      "id": "a1-cafe-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 750,
+      "prompt": "Hva svarer du?",
+      "audio": "Hva skal det være?",
+      "options": ["En kaffe, takk.", "Til venstre.", "Ha det bra!"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Hva svarer du?",
+      "audio": "Vil du ha melk i kaffen?",
+      "options": ["Nei takk, bare svart.", "Ja, to poser.", "Jeg heter Ahmed."],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["ikke-placement"],
+      "difficulty": 950,
+      "prompt": "Hva har kafeen ikke mer av?",
+      "audio": "Beklager, vi har ikke flere kanelboller. Men vi har skoleboller.",
+      "options": ["Kanelboller", "Skoleboller", "Kaffe"],
+      "answer": 0
+    },
+    {
+      "id": "a1-cafe-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Skriv det du hører.",
+      "audio": "Til å ta med."
+    },
+    {
+      "id": "a1-cafe-13",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Skriv det du hører.",
+      "audio": "En stor kaffe, takk."
+    }
+  ]
+}

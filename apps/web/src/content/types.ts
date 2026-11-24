@@ -18,6 +18,8 @@ export const FOCUS_POINTS = [
   'question-words',
   'time-expressions',
   'fixed-expressions',
+  'sounds-spelling',
+  'numbers',
 ] as const;
 export type FocusPoint = (typeof FOCUS_POINTS)[number];
 
@@ -71,6 +73,11 @@ export interface Lesson {
   level: Level;
   title: string;
   summary: string;
+  /**
+   * Native-speaker review status. Every bundled lesson has one; lessons the app builds on the
+   * fly (practice sessions, AI readings) do not.
+   */
+  review?: 'pending' | 'approved';
   document?: LessonDocument;
   text?: string;
   items: Item[];

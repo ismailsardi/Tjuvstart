@@ -76,7 +76,7 @@
           "minItems": 1,
           "items": {
             "type": "string",
-            "pattern": "^[a-zæøå]+$"
+            "pattern": "^[a-zæøåé]+$"
           }
         },
         "example": {

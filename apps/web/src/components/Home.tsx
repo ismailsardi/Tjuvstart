@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { DEFAULT_LISTENING_RATE, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
-import { nextInTrack, tracks } from '../content/tracks';
+import { nextInTrack, overallLevel, suggestedTracks } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
 import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
 import { db } from '../data/db';
@@ -103,14 +103,19 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const anyEstimate =
     profile !== undefined &&
     Object.values(profile.answers).some((n) => n >= MIN_ANSWERS_FOR_ESTIMATE);
+  // Learners past A1 are not sent back to the beginner track.
+  const level = profile ? overallLevel(profile.ratings, profile.answers) : 'A2';
+  const shownTracks = suggestedTracks(level);
   // Only the track in progress is shown; the others wait on the lessons page.
   const currentTrack = completed
-    ? tracks.find((track) => nextInTrack(track, completed))
+    ? shownTracks.find((track) => nextInTrack(track, completed))
     : undefined;
   // Tracks come first, in order; after that, the easiest lesson not done yet.
   const next = completed
-    ? (tracks.map((track) => nextInTrack(track, completed)).find(Boolean) ??
-      lessons.find((lesson) => !completed.has(lesson.id)))
+    ? (shownTracks.map((track) => nextInTrack(track, completed)).find(Boolean) ??
+      lessons.find(
+        (lesson) => !completed.has(lesson.id) && (level === 'A1' || lesson.level !== 'A1'),
+      ))
     : undefined;
   const streakDays = progress?.streak.days ?? 0;
 

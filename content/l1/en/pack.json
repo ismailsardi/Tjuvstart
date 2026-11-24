@@ -248,14 +248,16 @@
         "a2-nav-letter",
         "a2-finn-ad",
         "a2-job-ad",
-        "a2-dugnad"
+        "a2-dugnad",
+        "a1-hello",
+        "a1-days-and-time"
       ]
     },
     {
       "id": "half-past",
       "title": "«Halv tolv» is 11:30",
       "body": "Norwegian counts half an hour towards the next hour. «Halv tolv» means 11:30, not 12:30 as British «half twelve» would.",
-      "lessons": ["a2-first-day-at-work", "a2-doctor"]
+      "lessons": ["a2-first-day-at-work", "a2-doctor", "a1-days-and-time"]
     },
     {
       "id": "ikke-in-subclause",
@@ -268,6 +270,63 @@
       "title": "«Toroms» counts all rooms",
       "body": "Flat ads count the living room too. A «toromsleilighet» has two rooms: a living room and one bedroom. A «treroms» has two bedrooms.",
       "lessons": ["a2-renting-a-flat"]
+    },
+    {
+      "id": "a1-instructions",
+      "title": "Words in the exercises",
+      "body": "The instructions are in simple Norwegian, and they repeat. «Hvilket ord hører du?» Which word do you hear? «Hvilken bokstav hører du?» Which letter do you hear? «Hva svarer du?» What do you answer? «Skriv det du hører.» Write what you hear. «Lag en setning.» Make a sentence.",
+      "lessons": [
+        "a1-alphabet",
+        "a1-sounds",
+        "a1-hello",
+        "a1-not-understand",
+        "a1-numbers",
+        "a1-supermarket",
+        "a1-cafe",
+        "a1-days-and-time"
+      ]
+    },
+    {
+      "id": "ae-oe-aa",
+      "title": "How æ, ø and å sound",
+      "body": "æ is close to the a in «bad», said longer. ø is like the vowel in «fur» with rounded lips. å is like the aw in «law». Careful with o: in Norwegian it often sounds like the oo in «food», so «bor» sounds close to «boor».",
+      "lessons": ["a1-alphabet", "a1-sounds"]
+    },
+    {
+      "id": "kj-sj",
+      "title": "Two sounds English spells «sh» and «h»",
+      "body": "kj, and k before i, y or ei, is a soft hiss like the h in «huge»: kjøre, kino. sj, skj, and sk before i, y or øy, sound like «sh»: sju, skje, ski. gj and hj are just a y sound: gjøre, hjem.",
+      "lessons": ["a1-sounds"]
+    },
+    {
+      "id": "long-short",
+      "title": "Double consonant, short vowel",
+      "body": "A double consonant makes the vowel before it short: «takk» (thanks) has a short a, «tak» (roof) a long one. The same goes for «penn» (pen) and «pen» (pretty). Getting the length right matters more than the exact vowel.",
+      "lessons": ["a1-sounds", "a1-alphabet"]
+    },
+    {
+      "id": "silent-letters",
+      "title": "Letters you write but don’t say",
+      "body": "The h in hv- and hj- is silent: hva, hvor, hjem. A final d after a vowel is often silent: god, med, ved. And «jeg» is said «yai».",
+      "lessons": ["a1-sounds", "a1-hello"]
+    },
+    {
+      "id": "du-for-everyone",
+      "title": "Everyone is «du»",
+      "body": "Norwegian uses «du» (you) for everyone: your boss, the doctor, a stranger in the street. The formal «De» is almost never used, so you never have to choose.",
+      "lessons": ["a1-hello"]
+    },
+    {
+      "id": "no-please",
+      "title": "There is no everyday word for «please»",
+      "body": "Politeness comes from the question and from thanking. «Kan jeg få en kaffe?» (Can I have a coffee?) and «Jeg vil gjerne ha…» (I would like…) are polite on their own. Add «takk» at the end: «En kaffe, takk.»",
+      "lessons": ["a1-cafe", "a1-supermarket", "a1-not-understand"]
+    },
+    {
+      "id": "tens-teens",
+      "title": "førti or fjorten?",
+      "body": "-ti marks the tens and -ten the teens: førti 40, fjorten 14; sytti 70, sytten 17. Big numbers often go in hundreds: 1300 is «tretten hundre». Phone numbers are read in small groups.",
+      "lessons": ["a1-numbers", "a1-supermarket", "a1-cafe"]
     }
   ],
   "itemNotes": {
@@ -299,9 +358,44 @@
     "a2-nav-02": "«Hver fjortende dag» means every 14 days, so every two weeks.",
     "a2-finn-05": "«Førstemann til mølla» means first come, first served: whoever comes first gets it.",
     "a2-dug-05": "A dugnad is unpaid shared work for the building, the school or the sports club. People expect neighbours to join.",
-    "a2-job-03": "«Fast stilling» is a permanent job; «midlertidig» is temporary."
+    "a2-job-03": "«Fast stilling» is a permanent job; «midlertidig» is temporary.",
+    "a1-abc-04": "å sounds like the aw in «law». Norwegian o is closer to «oo».",
+    "a1-abc-08": "«bær» (berry) has æ. «ber» (asks) has a closed e, like the a in «bay».",
+    "a1-abc-09": "«hår» means hair, «hør» means listen, «her» means here.",
+    "a1-snd-01": "kjøre (drive) starts with the soft kj hiss. gjøre (do) starts with a y sound, and skjøre (fragile) with «sh».",
+    "a1-snd-02": "gj is just a y sound: «yøre».",
+    "a1-snd-04": "skjære (cut) starts with «sh». kjære (dear) starts with the soft kj hiss.",
+    "a1-snd-07": "Double n, short vowel: «penn» is a pen. «pen» means pretty.",
+    "a1-snd-08": "The h in hv- is silent: «hva» sounds like «va».",
+    "a1-snd-09": "The d at the end of «god» is silent: «go».",
+    "a1-snd-10": "Double consonant, short vowel: takk.",
+    "a1-hei-08": "If the sentence starts with «Nå», the verb still comes second: Nå bor jeg.",
+    "a1-hei-09": "«I like måte» means likewise. It is the usual answer to «Hyggelig å hilse på deg».",
+    "a1-hei-10": "«Bare hyggelig» is how you say «you’re welcome».",
+    "a1-help-04": "«ikke» comes right after the verb: Jeg forstår ikke.",
+    "a1-help-05": "sakte (slowly) → saktere (more slowly).",
+    "a1-num-09": "sytti is 70. 17 is sytten.",
+    "a1-num-10": "førti is 40. 14 is fjorten.",
+    "a1-num-11": "Today people say «førtini» (49), tens first, as in English.",
+    "a1-num-12": "Phone numbers are read in groups, digit by digit or in pairs.",
+    "a1-shop-08": "«Trenger du pose?» Do you need a bag? Bags cost a few kroner extra.",
+    "a1-cafe-07": "«Kan jeg få …?» Can I have …? is the polite way to order.",
+    "a1-cafe-08": "«Hva skal det være?» What will it be? is what staff say when it is your turn.",
+    "a1-cafe-10": "«svart» is black: coffee with nothing in it.",
+    "a1-tid-07": "If the sentence starts with «Onsdag», the verb comes next: Onsdag passer fint.",
+    "a1-tid-09": "«Halv ni» is half an hour before nine: 8.30.",
+    "a1-tid-10": "«Kvart over fire» is a quarter past four: 4.15."
   },
   "canDo": {
+    "A1-R-01": "I can recognise familiar words, names and numbers on signs, labels and price tags.",
+    "A1-R-02": "I can follow very short, simple texts and dialogues about everyday needs.",
+    "A1-L-01": "I can hear the difference between Norwegian sounds, including æ, ø and å.",
+    "A1-L-02": "I can understand numbers, prices, days and times when people speak slowly.",
+    "A1-L-03": "I can understand simple questions in a shop or café when people speak slowly.",
+    "A1-W-01": "I can write familiar words and short everyday phrases.",
+    "A1-W-02": "I can write a few sentences about myself: my name, where I come from and where I live.",
+    "A1-S-01": "I can greet people, introduce myself, say thank you and sorry, and say I don’t understand.",
+    "A1-S-02": "I can ask for things in a shop or café and talk about prices and times.",
     "A2-R-01": "I can read short, simple texts about everyday life and work.",
     "A2-R-02": "I can find what I need in notices, timetables, menus and ads.",
     "A2-R-03": "I can understand short messages and simple instructions at work.",
@@ -1355,6 +1449,277 @@
     "vennlig": {
       "meaning": "friendly, kind",
       "hook": "«Med vennlig hilsen» = kind regards, at the end of a letter."
+    },
+    "alfabet": {
+      "meaning": "alphabet"
+    },
+    "bokstav": {
+      "meaning": "letter (of the alphabet)"
+    },
+    "lyd": {
+      "meaning": "sound"
+    },
+    "hore": {
+      "meaning": "hear, listen",
+      "hook": "«Hør!» is the command form: listen!"
+    },
+    "kjenne": {
+      "meaning": "know (a person or thing), recognise",
+      "hook": "kjenne is for people and things you know; vite is for facts."
+    },
+    "av": {
+      "meaning": "of, by, off"
+    },
+    "de": {
+      "meaning": "they",
+      "hook": "Pronounced «di»."
+    },
+    "dem": {
+      "meaning": "them"
+    },
+    "hun": {
+      "meaning": "she"
+    },
+    "deg": {
+      "meaning": "you (as an object)",
+      "hook": "du → deg, like jeg → meg."
+    },
+    "sta": {
+      "meaning": "stand; be (placed somewhere)"
+    },
+    "helt": {
+      "meaning": "completely, all the way"
+    },
+    "slutt": {
+      "meaning": "end",
+      "hook": "«til slutt» = finally, in the end."
+    },
+    "baer": {
+      "meaning": "berry"
+    },
+    "ol": {
+      "meaning": "beer"
+    },
+    "hvor": {
+      "meaning": "where",
+      "hook": "The h in hv- is silent: «vor»."
+    },
+    "na": {
+      "meaning": "now"
+    },
+    "hyggelig": {
+      "meaning": "nice, pleasant",
+      "hook": "«Bare hyggelig!» is how you say «you’re welcome»."
+    },
+    "hilse": {
+      "meaning": "greet, say hello"
+    },
+    "i-like-mate": {
+      "meaning": "likewise, you too"
+    },
+    "bra": {
+      "meaning": "good, well",
+      "hook": "«Ha det bra!» or just «Ha det!» = bye!"
+    },
+    "ja": {
+      "meaning": "yes"
+    },
+    "unnskyld": {
+      "meaning": "excuse me, sorry"
+    },
+    "mann": {
+      "meaning": "man"
+    },
+    "gate": {
+      "meaning": "street"
+    },
+    "litt": {
+      "meaning": "a little"
+    },
+    "stasjon": {
+      "meaning": "station",
+      "hook": "The sj sound is spelled «sj» here: «sta-shon»."
+    },
+    "der": {
+      "meaning": "there"
+    },
+    "borte": {
+      "meaning": "away; «der borte» = over there"
+    },
+    "venstre": {
+      "meaning": "left"
+    },
+    "hoyre": {
+      "meaning": "right (direction)"
+    },
+    "toalett": {
+      "meaning": "toilet"
+    },
+    "forsta": {
+      "meaning": "understand"
+    },
+    "sakte": {
+      "meaning": "slowly",
+      "hook": "sakte → saktere: slowly → more slowly."
+    },
+    "bety": {
+      "meaning": "mean"
+    },
+    "selvfolgelig": {
+      "meaning": "of course"
+    },
+    "kjore": {
+      "meaning": "drive"
+    },
+    "kino": {
+      "meaning": "cinema",
+      "hook": "k before i sounds soft, like kj."
+    },
+    "kirke": {
+      "meaning": "church"
+    },
+    "skje": {
+      "meaning": "spoon"
+    },
+    "lang": {
+      "meaning": "long"
+    },
+    "penn": {
+      "meaning": "pen",
+      "hook": "Double n, short vowel. «pen» with one n means pretty."
+    },
+    "pen": {
+      "meaning": "pretty, nice-looking"
+    },
+    "stum": {
+      "meaning": "silent"
+    },
+    "tall": {
+      "meaning": "number"
+    },
+    "null": {
+      "meaning": "zero"
+    },
+    "fire": {
+      "meaning": "four",
+      "hook": "Not about flames: fire is 4."
+    },
+    "fem": {
+      "meaning": "five"
+    },
+    "sju": {
+      "meaning": "seven",
+      "hook": "Pronounced «shu»."
+    },
+    "atte": {
+      "meaning": "eight"
+    },
+    "ni": {
+      "meaning": "nine"
+    },
+    "elleve": {
+      "meaning": "eleven"
+    },
+    "tjue": {
+      "meaning": "twenty"
+    },
+    "forti": {
+      "meaning": "forty",
+      "hook": "-ti is the tens, -ten the teens: førti 40, fjorten 14."
+    },
+    "femti": {
+      "meaning": "fifty"
+    },
+    "sytti": {
+      "meaning": "seventy",
+      "hook": "sytti 70, sytten 17."
+    },
+    "hundre": {
+      "meaning": "hundred"
+    },
+    "tusen": {
+      "meaning": "thousand",
+      "hook": "«Tusen takk» = a thousand thanks: thank you very much."
+    },
+    "mye": {
+      "meaning": "much, a lot; «hvor mye» = how much"
+    },
+    "koste": {
+      "meaning": "cost"
+    },
+    "tirsdag": {
+      "meaning": "Tuesday"
+    },
+    "onsdag": {
+      "meaning": "Wednesday"
+    },
+    "passe": {
+      "meaning": "suit, be convenient",
+      "hook": "«Det passer fint» = that works for me."
+    },
+    "ses": {
+      "meaning": "see you"
+    },
+    "handle": {
+      "meaning": "shop (for groceries)"
+    },
+    "melk": {
+      "meaning": "milk"
+    },
+    "brod": {
+      "meaning": "bread"
+    },
+    "eple": {
+      "meaning": "apple"
+    },
+    "pose": {
+      "meaning": "bag",
+      "hook": "Bags cost extra at the checkout, so the cashier asks."
+    },
+    "kort": {
+      "meaning": "card"
+    },
+    "kontant": {
+      "meaning": "in cash",
+      "hook": "Most people in Norway pay by card or phone, so you will mostly answer «kort»."
+    },
+    "kvittering": {
+      "meaning": "receipt"
+    },
+    "betale": {
+      "meaning": "pay"
+    },
+    "kafe": {
+      "meaning": "café"
+    },
+    "sentrum": {
+      "meaning": "city centre"
+    },
+    "kanelbolle": {
+      "meaning": "cinnamon bun"
+    },
+    "skolebolle": {
+      "meaning": "bun with custard and coconut",
+      "hook": "Literally «school bun»."
+    },
+    "stor": {
+      "meaning": "big, large"
+    },
+    "svart": {
+      "meaning": "black"
     }
+  },
+  "trackSummaries": {
+    "from-zero": "Start from zero: the letters and sounds of Norwegian, saying hello, numbers and prices, the shop, the café and telling the time."
+  },
+  "lessonSummaries": {
+    "a1-alphabet": "Meet the three extra letters æ, ø and å, hear how they differ from a, e and o, and write your first Norwegian words.",
+    "a1-sounds": "Practise the sounds that trip up beginners: kj and sj, long and short vowels, and letters you write but do not say.",
+    "a1-hello": "Say hello, give your name, say where you come from and where you live, and answer the polite phrases people use when they meet you.",
+    "a1-not-understand": "The phrases that keep a conversation going when you are lost: ask someone to repeat or slow down, ask what a word means, and ask the way.",
+    "a1-numbers": "Count from zero to a hundred, understand prices and phone numbers, and haggle a little over a second-hand bike.",
+    "a1-supermarket": "Get through the supermarket checkout in Norwegian: bags, card or cash, the receipt, and the friendly goodbye.",
+    "a1-cafe": "Order a coffee and a cinnamon bun, choose a size, say whether it is to take away, and pay.",
+    "a1-days-and-time": "Learn the days of the week, tell the time, and move a meeting by message. Watch out for «halv ni», which is 8.30."
   }
 }

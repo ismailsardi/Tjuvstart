@@ -10,6 +10,12 @@ vocab/<level>/*.json    word card decks (see vocab/README.md)
 schema/                 JSON Schemas for each file type
 ```
 
+## Lessons
+
+Every lesson has a `review` status, `pending` or `approved`. New lessons, and lessons with changed Norwegian text, are `pending` until a native speaker has checked them; only approved lessons are meant to ship in the store apps. `coverage` lists the lessons still waiting.
+
+`tracks.json` groups lessons into guided paths. Each track has a `level`: the home screen only suggests A1 tracks to learners whose estimated level is still A1.
+
 ## Items
 
 Every item references the descriptors it practises. The validator rejects an item whose skill or level does not match its descriptors.
@@ -44,4 +50,4 @@ dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate conte
 dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage content
 ```
 
-`validate` checks JSON Schema conformance, unique IDs, descriptor references and answer keys, that packs only reference lessons and items that exist, and that every word card has a meaning in every pack. `coverage` lists how many lessons and items cover each descriptor, and which lesson words have no word card yet; CI publishes it in the job summary. `--enforce A2` makes gaps at a level fail the build, which will be switched on once A2 content is complete.
+`validate` checks JSON Schema conformance, unique IDs, descriptor references and answer keys, that packs only reference lessons and items that exist, and that every word card has a meaning in every pack. `coverage` lists how many lessons and items cover each descriptor, which lesson words have no word card yet, and which lessons still need a native-speaker review; CI publishes it in the job summary. `--enforce A2` makes gaps at a level fail the build, which will be switched on once A2 content is complete.

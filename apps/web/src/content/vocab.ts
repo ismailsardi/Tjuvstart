@@ -87,7 +87,7 @@ for (const card of byId.values()) {
 
 /** Ids of the cards for every word in a text, in order of first appearance. */
 export function cardsInText(text: string): string[] {
-  const ids = (text.toLocaleLowerCase('nb').match(/[a-zæøå]+/g) ?? []).flatMap(
+  const ids = (text.toLocaleLowerCase('nb').match(/[a-zæøåé]+/g) ?? []).flatMap(
     (word) => byForm.get(word) ?? [],
   );
   return [...new Set(ids)];

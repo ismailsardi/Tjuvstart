@@ -9,8 +9,20 @@ describe('bundled lessons', () => {
   });
 
   it('lists lessons by level, easiest first', () => {
-    expect(lessons[0]?.id).toBe('a2-first-day-at-work');
-    expect(lessons.length).toBeGreaterThanOrEqual(4);
+    expect(lessons[0]?.level).toBe('A1');
+    expect(lessons.findIndex((l) => l.level === 'A2')).toBeGreaterThan(0);
+    expect(lessons.findLastIndex((l) => l.level === 'A1')).toBeLessThan(
+      lessons.findIndex((l) => l.level === 'A2'),
+    );
+  });
+
+  it('includes the beginner track from zero', () => {
+    expect(getLesson('a1-alphabet')?.title).toBe('Alfabetet og æ, ø, å');
+    expect(lessons.filter((l) => l.level === 'A1').length).toBeGreaterThanOrEqual(8);
+  });
+
+  it('marks every lesson with its native review status', () => {
+    for (const lesson of lessons) expect(['pending', 'approved']).toContain(lesson.review);
   });
 
   it('has unique item ids', () => {
