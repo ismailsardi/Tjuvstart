@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 import {
+  PLACEMENT_DEFAULTS,
+  maxPlacementQuestions,
   nextPlacementItem,
   ratingToLevel,
   recordPlacementAnswer,
+  skillPlaced,
   startPlacement,
   type PlacementState,
 } from '@tjuvstart/engine';
-import { correctAnswer, isCorrect, type Response } from '../content/answers';
+import { correctAnswer, guessChance, isCorrect, type Response } from '../content/answers';
 import { allItems, readingTextFor } from '../content/lessons';
 import { SKILL_NAMES, type Skill } from '../content/types';
 import { savePlacement } from '../data/progress';
@@ -19,17 +22,27 @@ import { useTusseGear } from './useTusseGear';
 
 /** Skills that have items today. Speaking joins once speaking exercises exist. */
 const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[];
-// Five per skill keeps the check to about five minutes with three skills.
-export const ITEMS_PER_SKILL = 5;
 
-/** The five-minute placement check: adaptive questions, then a starting level per skill. */
+/**
+ * The placement check: adaptive questions, then a starting level per skill. Each skill stops
+ * as soon as its estimate is precise enough, so most learners finish well before the maximum.
+ */
 export function Placement() {
   const { t } = useI18n();
   const [state, setState] = useState<PlacementState | null>(null);
   const [feedback, setFeedback] = useState<boolean | null>(null);
-  const total = PLACED_SKILLS.length * ITEMS_PER_SKILL;
-  const item =
-    state && feedback === null ? nextPlacementItem(state, allItems, ITEMS_PER_SKILL) : undefined;
+  const item = state && feedback === null ? nextPlacementItem(state, allItems) : undefined;
+  // The most questions still possible: skills already placed count what they took.
+  const total = state
+    ? PLACED_SKILLS.reduce(
+        (sum, skill) =>
+          sum +
+          (skillPlaced(state, skill)
+            ? (state.answers[skill]?.length ?? 0)
+            : PLACEMENT_DEFAULTS.max),
+        0,
+      )
+    : maxPlacementQuestions(PLACED_SKILLS);
   const finished = state !== null && feedback === null && !item;
   const gear = useTusseGear();
 
@@ -81,7 +94,7 @@ export function Placement() {
     if (!current || feedback !== null || !state) return;
     const correct = isCorrect(current, response);
     setFeedback(correct);
-    setState(recordPlacementAnswer(state, current, correct));
+    setState(recordPlacementAnswer(state, current, correct, guessChance(current)));
   }
 
   return (

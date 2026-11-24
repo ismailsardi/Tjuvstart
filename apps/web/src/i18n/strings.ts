@@ -59,7 +59,7 @@ const en = {
   placementCard:
     'A five-minute check of your reading, listening and writing, so lessons start at the right level.',
   placementIntro:
-    'You will get {n} short questions. They adapt as you go: right answers make the next one harder. Do not worry about mistakes, they help the estimate.',
+    'Up to {n} short questions. They adapt as you go: right answers make the next one harder, and the check stops early once it is sure of your level. Do not worry about mistakes, they help the estimate.',
   placementDone: 'Your starting level',
   placementNote: 'Speaking is estimated once speaking exercises arrive.',
   redoPlacement: 'Redo the level check',
@@ -330,7 +330,7 @@ const fr: Record<StringKey, string> = {
   placementCard:
     'Un test de cinq minutes en lecture, compréhension orale et écriture, pour que les leçons commencent au bon niveau.',
   placementIntro:
-    'Vous aurez {n} questions courtes. Elles s’adaptent : une bonne réponse rend la suivante plus difficile. Les erreurs ne sont pas graves, elles aident l’estimation.',
+    'Jusqu’à {n} questions courtes. Elles s’adaptent : une bonne réponse rend la suivante plus difficile, et le test s’arrête plus tôt dès qu’il connaît votre niveau. Les erreurs ne sont pas graves, elles aident l’estimation.',
   placementDone: 'Votre niveau de départ',
   placementNote: 'L’expression orale sera évaluée quand les exercices oraux arriveront.',
   redoPlacement: 'Refaire le test de niveau',

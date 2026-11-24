@@ -27,6 +27,14 @@ export function isCorrect(item: Item, response: Response): boolean {
   }
 }
 
+/**
+ * The chance of getting the item right by luck: one in the number of options for multiple
+ * choice. Typed answers and word order are treated as unguessable.
+ */
+export function guessChance(item: Item): number {
+  return item.type === 'multiple-choice' && item.options.length > 0 ? 1 / item.options.length : 0;
+}
+
 /** The answer to show after a wrong attempt. */
 export function correctAnswer(item: Item): string {
   switch (item.type) {

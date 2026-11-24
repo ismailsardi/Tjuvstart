@@ -18,6 +18,7 @@ import {
   type Grade,
   type Streak,
 } from '@tjuvstart/engine';
+import { guessChance } from '../content/answers';
 import { getItem } from '../content/lessons';
 import type { JobField } from '../content/vocab';
 import { SKILLS, type Item, type Skill } from '../content/types';
@@ -51,7 +52,15 @@ export async function recordAnswer(
 ): Promise<number> {
   return db.transaction('rw', db.profiles, db.attempts, async () => {
     const profile = await getProfile(db);
-    const ratingAfter = updateRating(profile.ratings[item.skill], item.difficulty, correct ? 1 : 0);
+    // A lucky guess on a multiple-choice item should not raise the rating as much as a typed answer.
+    const ratingAfter = updateRating(
+      profile.ratings[item.skill],
+      item.difficulty,
+      correct ? 1 : 0,
+      {
+        guess: guessChance(item),
+      },
+    );
     const updated: Profile = {
       ...profile,
       ratings: { ...profile.ratings, [item.skill]: ratingAfter },

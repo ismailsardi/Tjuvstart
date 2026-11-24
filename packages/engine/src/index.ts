@@ -10,8 +10,18 @@ export { RECURRING_THRESHOLD, mistakeScores, recurringMistakes } from './mistake
 export type { TaggedAnswer } from './mistakes';
 export { buildSession } from './session';
 export type { SessionItem, SessionOptions } from './session';
-export { PLACEMENT_K, nextPlacementItem, recordPlacementAnswer, startPlacement } from './placement';
-export type { PlacementState } from './placement';
+export {
+  PLACEMENT_DEFAULTS,
+  PLACEMENT_PRIOR,
+  SKILL_SPREAD,
+  estimate,
+  maxPlacementQuestions,
+  nextPlacementItem,
+  recordPlacementAnswer,
+  skillPlaced,
+  startPlacement,
+} from './placement';
+export type { PlacementAnswer, PlacementOptions, PlacementState } from './placement';
 export {
   CORRECT_IN_A_ROW_TO_SPEED_UP,
   DEFAULT_LISTENING_RATE,
