@@ -1,0 +1,127 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-parcel",
+  "level": "A2",
+  "title": "Du har fått en pakke",
+  "summary": "Read a parcel notice: where to pick it up, the pickup code, the deadline and when you need ID. Then follow a message from a courier.",
+  "review": "pending",
+  "document": {
+    "kind": "notice",
+    "from": "Pakkevarsel"
+  },
+  "text": "Du har fått en pakke!\nPakken din ligger i pakkeautomaten på Kiwi Storo. Du kan hente den fra i morgen klokka 08.00.\nHentekode: 4821\nPakken må hentes innen sju dager. Hvis du ikke henter den, blir den sendt tilbake.\nHusk legitimasjon hvis pakken veier over fem kilo.",
+  "items": [
+    {
+      "id": "a2-pak-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 900,
+      "prompt": "Hvor ligger pakken?",
+      "options": ["I pakkeautomaten på Kiwi Storo", "I postkassen", "Hos naboen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når kan du hente pakken?",
+      "options": ["Fra i morgen klokka 8", "Fra i dag klokka 8", "Om sju dager"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 900,
+      "prompt": "Hva er hentekoden?",
+      "options": ["4821", "4281", "8421"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hva skjer hvis du ikke henter pakken innen sju dager?",
+      "options": ["Den blir sendt tilbake", "Du må betale mer", "Den blir kastet"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Når må du ha med legitimasjon?",
+      "options": ["Hvis pakken veier over fem kilo", "Alltid", "Aldri"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1200,
+      "prompt": "Pakken må ___ innen sju dager.",
+      "hint": "hente → må ___",
+      "answers": ["hentes"]
+    },
+    {
+      "id": "a2-pak-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1100,
+      "prompt": "Husk ___: pass eller førerkort.",
+      "answers": ["legitimasjon"]
+    },
+    {
+      "id": "a2-pak-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["hente", "Kan du", "for meg?", "pakken"],
+      "answer": "Kan du hente pakken for meg?"
+    },
+    {
+      "id": "a2-pak-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1100,
+      "prompt": "Hvor er pakken nå?",
+      "audio": "Hei, dette er budet. Jeg står utenfor døra di med en pakke, men ingen åpner. Jeg legger den hos naboen i andre etasje.",
+      "options": ["Hos naboen i andre etasje", "Utenfor døra", "I pakkeautomaten"],
+      "answer": 0
+    },
+    {
+      "id": "a2-pak-10",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Pakken min har kommet."
+    }
+  ]
+}

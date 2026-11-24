@@ -39,6 +39,20 @@
       "lessons": ["a2-nav-letter", "a2-finn-ad", "a2-job-ad", "a2-dugnad"]
     },
     {
+      "id": "everyday-oslo",
+      "level": "A2",
+      "title": "Hverdagen i Oslo",
+      "summary": "Everyday errands and social life: the pharmacy, picking up a parcel, weather and clothes, a dinner invitation, booking a haircut and a job interview.",
+      "lessons": [
+        "a2-pharmacy",
+        "a2-parcel",
+        "a2-weather",
+        "a2-invitation",
+        "a2-hairdresser",
+        "a2-job-interview"
+      ]
+    },
+    {
       "id": "towards-b1",
       "level": "B1",
       "title": "Videre mot B1",

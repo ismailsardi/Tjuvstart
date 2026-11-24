@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-pharmacy",
+  "level": "A2",
+  "title": "På apoteket",
+  "summary": "Ask for something for a sore throat at the pharmacy, understand how often to take it, and learn when you need a prescription.",
+  "review": "pending",
+  "text": "Omar har vondt i halsen og hoster mye. Han går på apoteket.\n– Hei, jeg har vondt i halsen. Har dere noe som kan hjelpe?\n– Har du feber?\n– Nei, men jeg hoster mye, mest om natta.\n– Da kan du prøve disse halstablettene. Ta én tablett hver tredje time, men ikke mer enn åtte om dagen.\n– Takk. Trenger jeg resept?\n– Nei, de kan du kjøpe uten resept. Hvis du ikke er bedre om en uke, bør du gå til legen.",
+  "items": [
+    {
+      "id": "a2-apo-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hva er problemet til Omar?",
+      "options": [
+        "Han har vondt i halsen og hoster",
+        "Han har høy feber",
+        "Han har vondt i ryggen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når hoster Omar mest?",
+      "options": ["Om natta", "Om morgenen", "Etter lunsj"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1050,
+      "prompt": "Hvor ofte kan Omar ta en tablett?",
+      "options": ["Hver tredje time", "Hver time", "En gang om dagen"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 1050,
+      "prompt": "Hvor mange tabletter kan han ta på en dag?",
+      "options": ["Åtte", "Tre", "Seks"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1100,
+      "prompt": "Hva skal Omar gjøre hvis han ikke er bedre om en uke?",
+      "options": ["Gå til legen", "Kjøpe flere tabletter", "Ringe 113"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1000,
+      "prompt": "Har dere noe som kan ___ mot hoste?",
+      "answers": ["hjelpe"]
+    },
+    {
+      "id": "a2-apo-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 950,
+      "prompt": "Trenger jeg ___ fra legen?",
+      "answers": ["resept", "en resept"]
+    },
+    {
+      "id": "a2-apo-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order", "subordinate-clause"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["bør", "Hvis du ikke er bedre,", "du", "gå til legen"],
+      "answer": "Hvis du ikke er bedre, bør du gå til legen"
+    },
+    {
+      "id": "a2-apo-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når stenger apoteket på lørdager?",
+      "audio": "Velkommen til apoteket. Vi har åpent fra ni til åtte på hverdager og fra ti til seks på lørdager.",
+      "options": ["Klokka seks", "Klokka åtte", "Klokka ti"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Når skal du ta medisinen?",
+      "audio": "Denne medisinen skal du ta sammen med mat, morgen og kveld.",
+      "options": ["Morgen og kveld, med mat", "Bare om morgenen", "Om kvelden, uten mat"],
+      "answer": 0
+    },
+    {
+      "id": "a2-apo-11",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har vondt i halsen."
+    },
+    {
+      "id": "a2-apo-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Trenger jeg resept?"
+    }
+  ]
+}
