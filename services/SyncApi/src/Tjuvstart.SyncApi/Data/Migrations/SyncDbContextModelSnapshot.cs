@@ -37,6 +37,10 @@ namespace Tjuvstart.SyncApi.Data.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("last_seen_at");
 
+                    b.Property<long>("SyncSequence")
+                        .HasColumnType("bigint")
+                        .HasColumnName("sync_sequence");
+
                     b.HasKey("Id");
 
                     b.ToTable("accounts", (string)null);
@@ -134,6 +138,41 @@ namespace Tjuvstart.SyncApi.Data.Migrations
                     b.ToTable("refresh_tokens", (string)null);
                 });
 
+            modelBuilder.Entity("Tjuvstart.SyncApi.Data.SyncRecord", b =>
+                {
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("account_id");
+
+                    b.Property<string>("Collection")
+                        .HasMaxLength(32)
+                        .HasColumnType("character varying(32)")
+                        .HasColumnName("collection");
+
+                    b.Property<string>("Key")
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)")
+                        .HasColumnName("key");
+
+                    b.Property<string>("Data")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("data");
+
+                    b.Property<long>("Sequence")
+                        .HasColumnType("bigint")
+                        .HasColumnName("sequence");
+
+                    b.Property<long>("UpdatedAt")
+                        .HasColumnType("bigint")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("AccountId", "Collection", "Key");
+
+                    b.HasIndex("AccountId", "Sequence");
+
+                    b.ToTable("sync_records", (string)null);
+                });
+
             modelBuilder.Entity("Tjuvstart.SyncApi.Data.ExternalIdentity", b =>
                 {
                     b.HasOne("Tjuvstart.SyncApi.Data.Account", null)
@@ -144,6 +183,15 @@ namespace Tjuvstart.SyncApi.Data.Migrations
                 });
 
             modelBuilder.Entity("Tjuvstart.SyncApi.Data.RefreshToken", b =>
+                {
+                    b.HasOne("Tjuvstart.SyncApi.Data.Account", null)
+                        .WithMany()
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Tjuvstart.SyncApi.Data.SyncRecord", b =>
                 {
                     b.HasOne("Tjuvstart.SyncApi.Data.Account", null)
                         .WithMany()
