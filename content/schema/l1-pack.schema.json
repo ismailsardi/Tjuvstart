@@ -33,6 +33,10 @@
     "direction": {
       "enum": ["ltr", "rtl"]
     },
+    "review": {
+      "description": "Whether a speaker of the language has checked the translations. New packs start as pending; a pack without the field counts as approved.",
+      "enum": ["pending", "approved"]
+    },
     "cognates": {
       "description": "Norwegian words the learner probably recognises.",
       "type": "array",

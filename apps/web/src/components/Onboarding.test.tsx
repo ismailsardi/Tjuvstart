@@ -13,6 +13,7 @@ describe('Onboarding', () => {
 
     expect(screen.getByRole('button', { name: 'Continue' })).toHaveProperty('disabled', true);
     expect(screen.getAllByRole('radio').map((radio) => radio.getAttribute('value'))).toEqual([
+      'de',
       'en',
       'fr',
       'other',

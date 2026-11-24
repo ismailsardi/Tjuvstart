@@ -41,6 +41,8 @@ A pack helps speakers of one language: it never changes the Norwegian content, o
 | `words`           | Meaning and optional memory hook for each word card, keyed by card id.                                  |
 | `lessonSummaries` | The lesson summary in the learner's language.                                                           |
 
+A new pack has `"review": "pending"` until a speaker of that language has checked the translations; a pack without the field counts as approved. `coverage` lists the packs still waiting.
+
 `forms` lists every inflected form to match in texts, in lower case. When a learner knows several languages, their native pack wins, then the others in the order they picked them. Text in a pack is written in that language, so the French pack is written in French.
 
 ## Checks
