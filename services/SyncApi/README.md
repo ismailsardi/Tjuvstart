@@ -140,3 +140,42 @@ Checklist for a host:
 - The image sets `ASPNETCORE_FORWARDEDHEADERS_ENABLED=true` because these platforms terminate TLS in front of the container. This is what lets the rate limiter see client addresses. Do not expose the container directly to the internet without such a proxy.
 - `Database__MigrateOnStartup=true` is fine for a single instance. With several instances, run the migrations once per release instead: `dotnet ef migrations bundle` builds a self-contained migrator.
 - Add the API's URL to the web app's Content Security Policy (`connect-src`) when the web client starts calling it.
+
+### Azure Container Apps
+
+Every push to `main` that touches the API publishes `ghcr.io/ismailsardi/tjuvstart-sync` (tags `latest` and the commit SHA) through `.github/workflows/sync-api-image.yml`. Make the package public once, under the repository's **Packages** settings, so Azure can pull it without registry credentials.
+
+One-time setup with the Azure CLI (`az login` first). The database is a Neon PostgreSQL project in Frankfurt; use its connection string in the Npgsql form `Host=...;Database=...;Username=...;Password=...;SSL Mode=Require`.
+
+```bash
+az extension add --name containerapp --upgrade
+az provider register --namespace Microsoft.App
+az provider register --namespace Microsoft.OperationalInsights
+
+az containerapp env create -g tjuvstart -n tjuvstart-env -l norwayeast
+
+az containerapp create -g tjuvstart -n tjuvstart-sync \
+  --environment tjuvstart-env \
+  --image ghcr.io/ismailsardi/tjuvstart-sync:latest \
+  --ingress external --target-port 8080 \
+  --min-replicas 0 --max-replicas 1 \
+  --cpu 0.25 --memory 0.5Gi \
+  --secrets db="<Neon connection string>" signing-key="$(openssl rand -base64 48)" \
+  --env-vars \
+    ConnectionStrings__Sync=secretref:db \
+    Auth__SigningKey=secretref:signing-key \
+    Database__MigrateOnStartup=true \
+    Auth__Providers__google__Authority=https://accounts.google.com \
+    Auth__Providers__google__AdditionalIssuers__0=accounts.google.com \
+    Auth__Providers__google__ClientIds__0="<client id>.apps.googleusercontent.com" \
+    WebClient__AllowedOrigins__0=https://ismailsardi.github.io
+
+az containerapp show -g tjuvstart -n tjuvstart-sync --query properties.configuration.ingress.fqdn -o tsv
+```
+
+`--min-replicas 0` scales to zero when idle, which keeps the app inside the monthly free grant; the first request after a quiet period waits a few seconds for a cold start. To roll out a new image: `az containerapp update -g tjuvstart -n tjuvstart-sync --image ghcr.io/ismailsardi/tjuvstart-sync:<sha>`.
+
+Then turn sync on in the web app by setting two repository variables (**Settings → Secrets and variables → Actions → Variables**) and re-running the Pages deploy:
+
+- `SYNC_API_URL`: `https://<fqdn from the command above>`
+- `GOOGLE_CLIENT_ID`: the Google OAuth web client ID
