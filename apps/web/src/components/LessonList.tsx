@@ -14,7 +14,10 @@ export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly 
   const summary = firstNote(packs, (pack) => pack.lessonSummaries?.[lesson.id]);
   return (
     <a className={done ? 'lesson-card completed' : 'lesson-card'} href={lessonHref(lesson.id)}>
-      <span className="badge">{lesson.level}</span>
+      <span className="lesson-meta">
+        <span className="badge">{lesson.level}</span>
+        <span className="muted small">{t('lessonItems', { n: lesson.items.length })}</span>
+      </span>
       <strong lang="nb">{lesson.title}</strong>
       {summary ? (
         <span className="muted" lang={summary.pack.language} dir={summary.pack.direction}>

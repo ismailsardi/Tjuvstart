@@ -6,7 +6,7 @@ test('real-world texts read like the documents they come from', async ({ page })
   await chooseLanguages(page, 'English');
 
   // Home shows only the track in progress; the others are on the lessons page.
-  await expect(page.getByRole('region', { name: 'De første ukene i Norge' })).toBeVisible();
+  await expect(page.getByTestId('next-track')).toContainText('De første ukene i Norge');
   await expect(page.getByRole('region', { name: 'Ekte tekster' })).toHaveCount(0);
 
   await page.getByRole('link', { name: 'All lessons' }).click();

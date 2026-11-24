@@ -307,6 +307,7 @@ button.secondary,
 
 .skills li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.6rem 0;
@@ -724,6 +725,8 @@ progress::-moz-progress-bar {
   align-items: center;
   gap: 0.6rem;
   margin-top: 0;
+  /* Room for Tusse in the top corner. */
+  padding-inline-end: 4.25rem;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -1835,4 +1838,166 @@ button.danger:not(.link) {
 .confirm p {
   flex-basis: 100%;
   margin: 0;
+}
+
+/* Tusse, the troll */
+
+.tusse {
+  display: block;
+  flex: none;
+  overflow: visible;
+}
+
+.home-greeting {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.home-header {
+  align-items: flex-end;
+  margin-bottom: -0.35rem;
+}
+
+.home-tusse {
+  /* Sits on the top edge of the card below. */
+  margin: 0 0.25rem -0.9rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.feedback-tusse {
+  position: absolute;
+  top: -1.4rem;
+  right: 1rem;
+  animation: tusse-pop 260ms ease-out;
+}
+
+.done-screen {
+  text-align: center;
+}
+
+.done-screen .actions {
+  justify-content: center;
+}
+
+.done-screen .skills,
+.done-screen .panel {
+  text-align: start;
+}
+
+.done-tusse {
+  margin: 0.5rem auto 0;
+}
+
+.tusse-cheer .tusse-body {
+  transform-origin: 50% 90%;
+  animation: tusse-dance 900ms ease-in-out 2;
+}
+
+.tusse-wave .tusse-wave {
+  transform-origin: 152px 136px;
+  animation: tusse-hand 700ms ease-in-out 3;
+}
+
+.tusse-coffee .tusse-steam {
+  animation: tusse-steam 2.4s ease-in-out infinite;
+}
+
+@keyframes tusse-pop {
+  from {
+    transform: translateY(1rem) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes tusse-dance {
+  25% {
+    transform: rotate(-6deg) translateY(-4px);
+  }
+  75% {
+    transform: rotate(6deg) translateY(-4px);
+  }
+}
+
+@keyframes tusse-hand {
+  50% {
+    transform: rotate(-14deg);
+  }
+}
+
+@keyframes tusse-steam {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(2px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-tusse,
+  .tusse-cheer .tusse-body,
+  .tusse-wave .tusse-wave,
+  .tusse-coffee .tusse-steam {
+    animation: none;
+  }
+}
+
+/* Next lesson in its track */
+
+.next-track {
+  margin-bottom: 0.6rem;
+}
+
+.next-track p {
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+}
+
+.track-meter {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track-meter li {
+  flex: 1;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.track-meter .done {
+  background: var(--progress);
+}
+
+.track progress {
+  margin-top: 0.1rem;
+}
+
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Skill rows waiting for an estimate */
+
+.skill-pending {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  max-width: 14rem;
+}
+
+.skill-pending progress {
+  flex: 1;
 }
