@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Options;
+using Tjuvstart.SyncApi.Auth;
 using Tjuvstart.SyncApi.Data;
 using Tjuvstart.SyncApi.Endpoints;
 
@@ -30,6 +31,8 @@ public static class SyncApiHosting
                     .SetPreflightMaxAge(TimeSpan.FromHours(1))));
 
         services.AddProblemDetails();
+        services.AddValidation();
+        services.AddSyncAuth(configuration);
         services.AddSyncDatabase(configuration);
         services.AddHealthChecks()
             .AddDbContextCheck<SyncDbContext>("database", tags: [ReadyTag]);
@@ -48,6 +51,9 @@ public static class SyncApiHosting
         app.UseStatusCodePages();
 
         app.UseCors(WebClientCorsPolicy);
+        app.UseAuthentication();
+        app.UseAuthorization();
+        app.UseRateLimiter();
 
         if (app.Environment.IsDevelopment())
         {
@@ -58,7 +64,10 @@ public static class SyncApiHosting
         // make the host restart the API. Readiness includes it.
         app.MapHealthChecks("/health", new HealthCheckOptions { Predicate = _ => false });
         app.MapHealthChecks("/health/ready", new HealthCheckOptions { Predicate = c => c.Tags.Contains(ReadyTag) });
-        app.MapGroup("/v1").MapInfoEndpoints();
+        app.MapGroup("/v1")
+            .MapInfoEndpoints()
+            .MapAuthEndpoints()
+            .MapAccountEndpoints();
 
         return app;
     }
