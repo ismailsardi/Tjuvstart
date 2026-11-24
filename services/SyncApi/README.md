@@ -115,3 +115,28 @@ Provider settings for Google and Apple. Client ids are not secret, but they belo
 ```
 
 No provider is configured by default, so sign-in returns a validation error until at least one is set.
+
+## Deploy
+
+The API ships as a container (`services/SyncApi/Dockerfile`, chiseled .NET 10 image, non-root, port 8080). It is stateless, so any host that runs a container and gives it a PostgreSQL connection string will do. [ADR 0011](../../docs/adr/0011-sync-api-design.md) compares the free options; choosing one is still open.
+
+```bash
+docker build -t tjuvstart-sync services/SyncApi
+docker run -p 8080:8080 \
+  -e ConnectionStrings__Sync="Host=...;Database=...;Username=...;Password=...;SSL Mode=Require" \
+  -e Database__MigrateOnStartup=true \
+  -e Auth__SigningKey="<random, at least 32 characters>" \
+  -e Auth__Providers__google__Authority=https://accounts.google.com \
+  -e Auth__Providers__google__AdditionalIssuers__0=accounts.google.com \
+  -e Auth__Providers__google__ClientIds__0="<client id>.apps.googleusercontent.com" \
+  tjuvstart-sync
+```
+
+Checklist for a host:
+
+- Store `ConnectionStrings__Sync` and `Auth__SigningKey` as secrets, not plain settings. Generate the key with `openssl rand -base64 48`.
+- Pick an EU region for both the API and the database.
+- Point the host's liveness probe at `/health` and its readiness probe at `/health/ready`. Liveness never touches the database, so a database that is waking up does not restart the API.
+- The image sets `ASPNETCORE_FORWARDEDHEADERS_ENABLED=true` because these platforms terminate TLS in front of the container. This is what lets the rate limiter see client addresses. Do not expose the container directly to the internet without such a proxy.
+- `Database__MigrateOnStartup=true` is fine for a single instance. With several instances, run the migrations once per release instead: `dotnet ef migrations bundle` builds a self-contained migrator.
+- Add the API's URL to the web app's Content Security Policy (`connect-src`) when the web client starts calling it.
