@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-hairdresser",
+  "level": "A2",
+  "title": "Time hos frisøren",
+  "summary": "Book a haircut by phone: ask what is free, accept another time, give your name, and understand the cancellation rule.",
+  "review": "pending",
+  "text": "– Salong Nora, hei!\n– Hei, jeg vil gjerne bestille time for klipp.\n– Ja. Når passer det for deg?\n– Har dere noe ledig på fredag ettermiddag?\n– Fredag er dessverre helt fullt. Men jeg har en ledig time på lørdag klokka elleve.\n– Det passer fint.\n– Hva er navnet?\n– Ahmed Hassan.\n– Da har du time. Hvis du ikke kan komme, må du avbestille senest dagen før.",
+  "items": [
+    {
+      "id": "a2-fris-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hva vil Ahmed bestille?",
+      "options": ["En time for klipp", "Et bord på en restaurant", "En legetime"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fris-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hvorfor kan han ikke få time på fredag?",
+      "options": ["Det er fullt", "Salongen er stengt", "Frisøren er syk"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fris-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 950,
+      "prompt": "Når får Ahmed time?",
+      "options": ["Lørdag klokka 11", "Fredag klokka 11", "Lørdag klokka 1"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fris-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1100,
+      "prompt": "Hva må han gjøre hvis han ikke kan komme?",
+      "options": ["Avbestille senest dagen før", "Betale dobbelt", "Ringe samme dag"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fris-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 1000,
+      "prompt": "Har dere noe ___ på fredag?",
+      "answers": ["ledig"]
+    },
+    {
+      "id": "a2-fris-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 950,
+      "prompt": "Jeg vil gjerne ___ time.",
+      "answers": ["bestille"]
+    },
+    {
+      "id": "a2-fris-07",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 900,
+      "prompt": "Lag en setning.",
+      "tokens": ["passer", "Det", "fint"],
+      "answer": "Det passer fint"
+    },
+    {
+      "id": "a2-fris-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "tokens": ["kan", "På lørdag", "jeg", "komme klokka elleve"],
+      "answer": "På lørdag kan jeg komme klokka elleve"
+    },
+    {
+      "id": "a2-fris-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1050,
+      "prompt": "Hva er beskjeden?",
+      "audio": "Hei Ahmed, dette er Salong Nora. Vi minner deg om timen din i morgen klokka elleve. Velkommen!",
+      "options": ["En påminnelse om timen i morgen", "Timen er avlyst", "Timen er flyttet"],
+      "answer": 0
+    },
+    {
+      "id": "a2-fris-10",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil gjerne bestille time."
+    }
+  ]
+}

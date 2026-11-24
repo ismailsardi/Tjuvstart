@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-job-interview",
+  "level": "A2",
+  "title": "Jobbintervjuet",
+  "summary": "Follow a job interview at a hotel: talk about your experience and languages, say why you want the job, and ask your own question.",
+  "review": "pending",
+  "text": "Maria har jobbintervju på et hotell i Oslo.\n– Fortell litt om deg selv.\n– Jeg heter Maria og kommer fra Spania. Jeg har jobbet i resepsjonen på et hotell i Madrid i fire år. Nå bor jeg i Oslo med mannen min.\n– Hvorfor vil du jobbe hos oss?\n– Jeg liker å møte mennesker, og jeg snakker spansk, engelsk og litt norsk. Jeg lærer norsk på kurs to kvelder i uka.\n– Kan du jobbe skift og i helgene?\n– Ja, det går fint.\n– Har du noen spørsmål til oss?\n– Ja. Når kan jeg begynne?",
+  "items": [
+    {
+      "id": "a2-intv-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hvor har Maria jobbet før?",
+      "options": ["I resepsjonen på et hotell", "På et sykehus", "I en butikk"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Hvor lenge har hun jobbet der?",
+      "options": ["I fire år", "I to år", "I fire måneder"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hvilke språk snakker Maria?",
+      "options": ["Spansk, engelsk og litt norsk", "Bare spansk", "Fransk og norsk"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hvordan lærer hun norsk?",
+      "options": ["På kurs to kvelder i uka", "På jobben", "Med en app"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Kan Maria jobbe i helgene?",
+      "options": ["Ja", "Nei", "Bare på lørdager"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1050,
+      "prompt": "Jeg ___ jobbet på et hotell i fire år.",
+      "answers": ["har"]
+    },
+    {
+      "id": "a2-intv-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Jeg liker å ___ mennesker.",
+      "answers": ["møte"]
+    },
+    {
+      "id": "a2-intv-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["har", "Jeg", "jobbet", "i resepsjonen"],
+      "answer": "Jeg har jobbet i resepsjonen"
+    },
+    {
+      "id": "a2-intv-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["conjunctions"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg vil jobbe her,", "fordi", "jeg", "liker", "å møte mennesker"],
+      "answer": "Jeg vil jobbe her, fordi jeg liker å møte mennesker"
+    },
+    {
+      "id": "a2-intv-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når får Maria svar?",
+      "audio": "Takk for intervjuet. Vi snakker med flere kandidater denne uka, og vi ringer deg innen fredag.",
+      "options": ["Innen fredag", "I dag", "Neste måned"],
+      "answer": 0
+    },
+    {
+      "id": "a2-intv-11",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Når kan jeg begynne?"
+    }
+  ]
+}

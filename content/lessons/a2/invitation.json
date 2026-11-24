@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-invitation",
+  "level": "A2",
+  "title": "Vil du komme på middag?",
+  "summary": "Read an invitation to dinner from a colleague and the reply, then practise saying yes, no and sorry in a friendly way.",
+  "review": "pending",
+  "text": "Hei Ahmed!\nJonas og jeg skal ha middag hjemme hos oss på lørdag, og vi har lyst til å invitere deg. Vi begynner klokka sju. Du trenger ikke ta med noe, men du kan gjerne ta med noe å drikke.\nVi bor i Sognsveien 12, tredje etasje. Gi beskjed innen torsdag om du kan komme, så vi vet hvor mye mat vi skal lage.\nHilsen Nina\n\nHei Nina! Tusen takk, jeg kommer gjerne. Jeg tar med en flaske vin. Vi ses på lørdag!",
+  "items": [
+    {
+      "id": "a2-inv-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 900,
+      "prompt": "Hvorfor skriver Nina?",
+      "options": ["Hun vil invitere Ahmed på middag", "Hun vil låne penger", "Hun skal flytte"],
+      "answer": 0
+    },
+    {
+      "id": "a2-inv-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 950,
+      "prompt": "Når begynner middagen?",
+      "options": ["Lørdag klokka sju", "Torsdag klokka sju", "Lørdag klokka seks"],
+      "answer": 0
+    },
+    {
+      "id": "a2-inv-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hva må Ahmed gjøre innen torsdag?",
+      "options": ["Gi beskjed om han kommer", "Kjøpe mat", "Lage middag"],
+      "answer": 0
+    },
+    {
+      "id": "a2-inv-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hva tar Ahmed med?",
+      "options": ["En flaske vin", "En kake", "Ingenting"],
+      "answer": 0
+    },
+    {
+      "id": "a2-inv-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Tusen takk, jeg kommer ___!",
+      "answers": ["gjerne"]
+    },
+    {
+      "id": "a2-inv-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1050,
+      "prompt": "Vi har ___ til å invitere deg.",
+      "answers": ["lyst"]
+    },
+    {
+      "id": "a2-inv-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["ikke-placement"],
+      "difficulty": 950,
+      "prompt": "Beklager, jeg kan ___ komme på lørdag.",
+      "answers": ["ikke"]
+    },
+    {
+      "id": "a2-inv-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["v2-word-order", "ikke-placement"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["kan", "Dessverre", "jeg", "ikke komme"],
+      "answer": "Dessverre kan jeg ikke komme"
+    },
+    {
+      "id": "a2-inv-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hvorfor blir middagen flyttet?",
+      "audio": "Hei, det er Nina. Vi må flytte middagen til søndag, fordi Jonas er syk. Passer det for deg?",
+      "options": ["Jonas er syk", "Nina må jobbe", "De har ikke mat"],
+      "answer": 0
+    },
+    {
+      "id": "a2-inv-10",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg kommer gjerne!"
+    }
+  ]
+}

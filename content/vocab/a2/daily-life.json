@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "daily-life",
+  "title": "Ærender og hverdag",
+  "cards": [
+    {
+      "id": "salong",
+      "nb": "salong",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["salong", "salongen", "salonger"],
+      "example": "Salongen åpner klokka ni."
+    },
+    {
+      "id": "klipp",
+      "nb": "klipp",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["klipp", "klippen"],
+      "example": "Jeg vil bestille time for klipp."
+    },
+    {
+      "id": "nar",
+      "nb": "når",
+      "pos": "adverb",
+      "forms": ["når"],
+      "example": "Når passer det for deg?"
+    },
+    {
+      "id": "ettermiddag",
+      "nb": "ettermiddag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ettermiddag", "ettermiddagen", "ettermiddager"],
+      "example": "Vi ses i ettermiddag."
+    },
+    {
+      "id": "dessverre",
+      "nb": "dessverre",
+      "pos": "adverb",
+      "forms": ["dessverre"],
+      "example": "Dessverre kan jeg ikke komme."
+    },
+    {
+      "id": "full",
+      "nb": "full",
+      "pos": "adjective",
+      "forms": ["full", "fullt", "fulle"],
+      "example": "Bussen er full."
+    },
+    {
+      "id": "navn",
+      "nb": "navn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["navn", "navnet", "navnene"],
+      "example": "Hva er navnet ditt?"
+    },
+    {
+      "id": "avbestille",
+      "nb": "avbestille",
+      "pos": "verb",
+      "forms": ["avbestille", "avbestiller", "avbestilte", "avbestilt"],
+      "example": "Jeg må avbestille timen."
+    },
+    {
+      "id": "middag",
+      "nb": "middag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["middag", "middagen", "middager"],
+      "example": "Vi spiser middag klokka fem."
+    },
+    {
+      "id": "invitere",
+      "nb": "invitere",
+      "pos": "verb",
+      "forms": ["invitere", "inviterer", "inviterte", "invitert"],
+      "example": "Vi vil invitere deg på middag."
+    },
+    {
+      "id": "begynne",
+      "nb": "begynne",
+      "pos": "verb",
+      "forms": ["begynne", "begynner", "begynte", "begynt"],
+      "example": "Kurset begynner i august."
+    },
+    {
+      "id": "drikke",
+      "nb": "drikke",
+      "pos": "verb",
+      "forms": ["drikke", "drikker", "drakk", "drukket"],
+      "example": "Vil du ha noe å drikke?"
+    },
+    {
+      "id": "gi",
+      "nb": "gi",
+      "pos": "verb",
+      "forms": ["gi", "gir", "ga", "gitt"],
+      "example": "Gi beskjed hvis du kommer."
+    },
+    {
+      "id": "vite",
+      "nb": "vite",
+      "pos": "verb",
+      "forms": ["vite", "vet", "visste", "visst"],
+      "example": "Jeg vet ikke."
+    },
+    {
+      "id": "lage",
+      "nb": "lage",
+      "pos": "verb",
+      "forms": ["lage", "lager", "laget", "laga"],
+      "example": "Jeg lager middag."
+    },
+    {
+      "id": "flaske",
+      "nb": "flaske",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["flaske", "flaska", "flasken", "flasker"],
+      "example": "En flaske vann, takk."
+    },
+    {
+      "id": "vin",
+      "nb": "vin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vin", "vinen"],
+      "example": "Vi drikker et glass vin."
+    },
+    {
+      "id": "jobbintervju",
+      "nb": "jobbintervju",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["jobbintervju", "jobbintervjuet", "jobbintervjuer"],
+      "example": "Jeg har jobbintervju i morgen."
+    },
+    {
+      "id": "hotell",
+      "nb": "hotell",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hotell", "hotellet", "hoteller"],
+      "example": "Hun jobber på et hotell."
+    },
+    {
+      "id": "fortelle",
+      "nb": "fortelle",
+      "pos": "verb",
+      "forms": ["fortelle", "forteller", "fortalte", "fortalt", "fortell"],
+      "example": "Fortell litt om deg selv."
+    },
+    {
+      "id": "selv",
+      "nb": "selv",
+      "pos": "pronoun",
+      "forms": ["selv"],
+      "example": "Fortell om deg selv."
+    },
+    {
+      "id": "resepsjon",
+      "nb": "resepsjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["resepsjon", "resepsjonen"],
+      "example": "Spør i resepsjonen."
+    },
+    {
+      "id": "hvorfor",
+      "nb": "hvorfor",
+      "pos": "adverb",
+      "forms": ["hvorfor"],
+      "example": "Hvorfor vil du jobbe her?"
+    },
+    {
+      "id": "menneske",
+      "nb": "menneske",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["menneske", "mennesket", "mennesker", "menneskene"],
+      "example": "Jeg liker å møte nye mennesker."
+    },
+    {
+      "id": "spansk",
+      "nb": "spansk",
+      "pos": "adjective",
+      "forms": ["spansk"],
+      "example": "Hun snakker spansk."
+    },
+    {
+      "id": "pakke",
+      "nb": "pakke",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pakke", "pakken", "pakker", "pakkene"],
+      "example": "Jeg har fått en pakke."
+    },
+    {
+      "id": "ligge",
+      "nb": "ligge",
+      "pos": "verb",
+      "forms": ["ligge", "ligger", "lå", "ligget"],
+      "example": "Pakken ligger i automaten."
+    },
+    {
+      "id": "pakkeautomat",
+      "nb": "pakkeautomat",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pakkeautomat", "pakkeautomaten", "pakkeautomater"],
+      "example": "Hent pakken i pakkeautomaten."
+    },
+    {
+      "id": "hentekode",
+      "nb": "hentekode",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hentekode", "hentekoden"],
+      "example": "Du får en hentekode på SMS."
+    },
+    {
+      "id": "tilbake",
+      "nb": "tilbake",
+      "pos": "adverb",
+      "forms": ["tilbake"],
+      "example": "Pakken blir sendt tilbake."
+    },
+    {
+      "id": "legitimasjon",
+      "nb": "legitimasjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["legitimasjon", "legitimasjonen"],
+      "example": "Husk legitimasjon."
+    },
+    {
+      "id": "kilo",
+      "nb": "kilo",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kilo"],
+      "example": "Pakken veier to kilo."
+    },
+    {
+      "id": "hoste",
+      "nb": "hoste",
+      "pos": "verb",
+      "forms": ["hoste", "hoster", "hostet"],
+      "example": "Hun hoster mye."
+    },
+    {
+      "id": "apotek",
+      "nb": "apotek",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["apotek", "apoteket", "apoteker"],
+      "example": "Apoteket stenger klokka åtte."
+    },
+    {
+      "id": "natt",
+      "nb": "natt",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["natt", "natta", "natten", "netter"],
+      "example": "Jeg sov godt i natt."
+    },
+    {
+      "id": "denne",
+      "nb": "denne",
+      "pos": "determiner",
+      "forms": ["denne", "dette", "disse"],
+      "example": "Prøv disse tablettene."
+    },
+    {
+      "id": "halstablett",
+      "nb": "halstablett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["halstablett", "halstabletten", "halstabletter", "halstablettene"],
+      "example": "Halstablettene hjelper litt."
+    },
+    {
+      "id": "tablett",
+      "nb": "tablett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tablett", "tabletten", "tabletter", "tablettene"],
+      "example": "Ta én tablett om dagen."
+    },
+    {
+      "id": "uten",
+      "nb": "uten",
+      "pos": "preposition",
+      "forms": ["uten"],
+      "example": "Kan jeg kjøpe det uten resept?"
+    },
+    {
+      "id": "oktober",
+      "nb": "oktober",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["oktober"],
+      "example": "Det er kaldt i oktober."
+    },
+    {
+      "id": "venn",
+      "nb": "venn",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["venn", "vennen", "venner", "vennene"],
+      "example": "Hun skriver til en venn."
+    },
+    {
+      "id": "mork",
+      "nb": "mørk",
+      "pos": "adjective",
+      "forms": ["mørk", "mørkt", "mørke"],
+      "example": "Det er mørkt om morgenen."
+    },
+    {
+      "id": "nesten",
+      "nb": "nesten",
+      "pos": "adverb",
+      "forms": ["nesten"],
+      "example": "Det regner nesten hver dag."
+    },
+    {
+      "id": "grad",
+      "nb": "grad",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["grad", "graden", "grader"],
+      "example": "Det er minus fem grader."
+    },
+    {
+      "id": "finnes",
+      "nb": "finnes",
+      "pos": "verb",
+      "forms": ["finnes", "fantes"],
+      "example": "Det finnes ikke dårlig vær."
+    },
+    {
+      "id": "darlig",
+      "nb": "dårlig",
+      "pos": "adjective",
+      "forms": ["dårlig", "dårlige"],
+      "example": "Været er dårlig i dag."
+    },
+    {
+      "id": "regnjakke",
+      "nb": "regnjakke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["regnjakke", "regnjakka", "regnjakken"],
+      "example": "Ta med regnjakke!"
+    },
+    {
+      "id": "ullgenser",
+      "nb": "ullgenser",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ullgenser", "ullgenseren"],
+      "example": "En ullgenser holder deg varm."
+    },
+    {
+      "id": "sko",
+      "nb": "sko",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sko", "skoen", "skoene"],
+      "example": "Jeg trenger nye sko."
+    }
+  ]
+}

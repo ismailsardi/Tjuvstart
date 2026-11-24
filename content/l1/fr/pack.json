@@ -250,7 +250,11 @@
         "a1-days-and-time",
         "b1-team-meeting",
         "b1-kindergarten",
-        "b1-easter"
+        "b1-easter",
+        "a2-pharmacy",
+        "a2-weather",
+        "a2-invitation",
+        "a2-hairdresser"
       ]
     },
     {
@@ -349,7 +353,7 @@
       "id": "past-tense",
       "title": "Au passé, les verbes courants changent de voyelle",
       "body": "Les verbes réguliers prennent -et ou -te : jobbe → jobbet, lære → lærte. Les verbes les plus fréquents sont irréguliers et s’apprennent par cœur : gå → gikk, ta → tok, se → så (har sett), bli → ble, være → var. Le norvégien n’a qu’un auxiliaire, « har », là où le français hésite entre être et avoir : « Jeg har gått » = je suis allé.",
-      "lessons": ["b1-weekend", "b1-appraisal"]
+      "lessons": ["b1-weekend", "b1-appraisal", "a2-job-interview", "a2-weather"]
     },
     {
       "id": "synes-tror",
@@ -368,6 +372,18 @@
       "title": "« Takk for sist »",
       "body": "En Norvège, on remercie la fois suivante, ou dans le message suivant : « Takk for sist » veut dire « merci pour la dernière fois ». Ne pas le dire peut paraître un peu froid.",
       "lessons": ["b1-weekend"]
+    },
+    {
+      "id": "dinner-guest",
+      "title": "Dîner chez des Norvégiens",
+      "body": "Arrivez à l’heure, enlevez vos chaussures à l’entrée et apportez un petit cadeau : des fleurs, du chocolat ou une bouteille de vin. La fois suivante, dites « Takk for sist ».",
+      "lessons": ["a2-invitation"]
+    },
+    {
+      "id": "har-for-duration",
+      "title": "« Jeg har jobbet der i fire år »",
+      "body": "Pour une action commencée dans le passé et qui continue, le norvégien utilise « har » + participe passé avec « i » : « Jeg har bodd i Oslo i to måneder ». Le français dit au présent : « j’habite à Oslo depuis deux mois ».",
+      "lessons": ["a2-job-interview", "a2-weather"]
     }
   ],
   "itemNotes": {
@@ -436,7 +452,15 @@
     "b1-tm-09": "Après « fordi », « ikke » se place avant le verbe : fordi jeg ikke er frisk.",
     "b1-ap-05": "« synes » donne un avis fondé sur votre propre expérience.",
     "b1-bh-07": "Quand une proposition avec « hvis » vient en premier, le verbe principal suit directement.",
-    "b1-pk-06": "« de som » = ceux qui."
+    "b1-pk-06": "« de som » = ceux qui.",
+    "a2-apo-03": "« Hver tredje time » veut dire toutes les trois heures.",
+    "a2-apo-08": "Quand la proposition avec « hvis » vient en premier, le verbe suit directement : …, bør du gå til legen.",
+    "a2-pak-06": "Le -s après l’infinitif donne un passif : hente → hentes (être retiré).",
+    "a2-vaer-05": "Un dicton très norvégien : avec les bons vêtements, on peut sortir par tous les temps.",
+    "a2-inv-05": "« Jeg kommer gjerne » = je viens avec plaisir.",
+    "a2-inv-06": "« ha lyst til » = avoir envie de.",
+    "a2-inv-08": "« Dessverre » vient en premier, donc le verbe suit : Dessverre kan jeg…",
+    "a2-intv-06": "« har jobbet … i fire år » : commencé dans le passé et toujours vrai (= depuis quatre ans)."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail.",
@@ -464,13 +488,20 @@
     "b1-team-meeting": "Lisez le compte rendu d’une réunion d’équipe : un lancement reporté, une date limite pour les congés et de nouvelles règles de télétravail. Entraînez-vous à expliquer avec fordi et slik at.",
     "b1-appraisal": "Suivez l’entretien annuel entre Sara et son responsable, et entraînez-vous à donner votre avis, dire ce que vous voulez et expliquer pourquoi.",
     "b1-kindergarten": "Lisez une lettre simplifiée qui propose une place en crèche : la date limite pour répondre, ce qui se passe si on la manque, et la période d’adaptation.",
-    "b1-easter": "Lisez un texte d’actualité sur Pâques en Norvège : le chalet, le ski, les oranges et les romans policiers, les bouchons et les magasins fermés. Puis écoutez un bulletin trafic et météo."
+    "b1-easter": "Lisez un texte d’actualité sur Pâques en Norvège : le chalet, le ski, les oranges et les romans policiers, les bouchons et les magasins fermés. Puis écoutez un bulletin trafic et météo.",
+    "a2-pharmacy": "Demandez quelque chose contre le mal de gorge à la pharmacie, comprenez la posologie et découvrez quand il faut une ordonnance.",
+    "a2-parcel": "Lisez un avis de colis : où le retirer, le code de retrait, le délai et quand il faut une pièce d’identité. Puis écoutez le message d’un livreur.",
+    "a2-weather": "Lisez le message de Sara sur son premier automne à Oslo, parlez de la météo et des températures, et découvrez le dicton sur le mauvais temps et les mauvais vêtements.",
+    "a2-invitation": "Lisez une invitation à dîner d’une collègue et la réponse, puis entraînez-vous à accepter, refuser et vous excuser gentiment.",
+    "a2-hairdresser": "Prenez rendez-vous chez le coiffeur par téléphone : demandez ce qui est libre, acceptez un autre horaire, donnez votre nom et comprenez la règle d’annulation.",
+    "a2-job-interview": "Suivez un entretien d’embauche dans un hôtel : parlez de votre expérience et de vos langues, dites pourquoi vous voulez le poste et posez votre question."
   },
   "trackSummaries": {
     "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues.",
     "real-texts": "De vrais types de documents, simplifiés à votre niveau : une lettre de NAV, une petite annonce, une offre d’emploi et un avis de la coopérative.",
     "from-zero": "Partir de zéro : les lettres et les sons du norvégien, se présenter, les nombres et les prix, le magasin, le café et l’heure.",
-    "towards-b1": "L’étape suivante : raconter ce qu’on a fait, écrire à son propriétaire, un compte rendu de réunion, l’entretien annuel, une lettre de la crèche et un texte d’actualité sur Pâques."
+    "towards-b1": "L’étape suivante : raconter ce qu’on a fait, écrire à son propriétaire, un compte rendu de réunion, l’entretien annuel, une lettre de la crèche et un texte d’actualité sur Pâques.",
+    "everyday-oslo": "Les démarches et la vie sociale au quotidien : la pharmacie, un colis à retirer, la météo et les vêtements, une invitation à dîner, un rendez-vous chez le coiffeur et un entretien d’embauche."
   },
   "canDo": {
     "A1-R-01": "Je peux reconnaître des mots, des noms et des nombres familiers sur des panneaux, des étiquettes et des prix.",
@@ -2149,6 +2180,153 @@
     },
     "host": {
       "meaning": "automne"
+    },
+    "salong": {
+      "meaning": "salon"
+    },
+    "klipp": {
+      "meaning": "coupe (de cheveux)"
+    },
+    "nar": {
+      "meaning": "quand"
+    },
+    "ettermiddag": {
+      "meaning": "après-midi"
+    },
+    "dessverre": {
+      "meaning": "malheureusement"
+    },
+    "full": {
+      "meaning": "plein, complet"
+    },
+    "navn": {
+      "meaning": "nom"
+    },
+    "avbestille": {
+      "meaning": "annuler (une réservation)"
+    },
+    "middag": {
+      "meaning": "dîner"
+    },
+    "invitere": {
+      "meaning": "inviter"
+    },
+    "begynne": {
+      "meaning": "commencer"
+    },
+    "drikke": {
+      "meaning": "boire"
+    },
+    "gi": {
+      "meaning": "donner"
+    },
+    "vite": {
+      "meaning": "savoir"
+    },
+    "lage": {
+      "meaning": "faire, préparer"
+    },
+    "flaske": {
+      "meaning": "bouteille"
+    },
+    "vin": {
+      "meaning": "vin"
+    },
+    "jobbintervju": {
+      "meaning": "entretien d’embauche"
+    },
+    "hotell": {
+      "meaning": "hôtel"
+    },
+    "fortelle": {
+      "meaning": "raconter"
+    },
+    "selv": {
+      "meaning": "même (« deg selv » = toi-même)"
+    },
+    "resepsjon": {
+      "meaning": "réception"
+    },
+    "hvorfor": {
+      "meaning": "pourquoi"
+    },
+    "menneske": {
+      "meaning": "être humain ; « mennesker » = gens"
+    },
+    "spansk": {
+      "meaning": "espagnol"
+    },
+    "pakke": {
+      "meaning": "colis"
+    },
+    "ligge": {
+      "meaning": "être (posé), se trouver"
+    },
+    "pakkeautomat": {
+      "meaning": "consigne à colis"
+    },
+    "hentekode": {
+      "meaning": "code de retrait"
+    },
+    "tilbake": {
+      "meaning": "en retour, de retour"
+    },
+    "legitimasjon": {
+      "meaning": "pièce d’identité"
+    },
+    "kilo": {
+      "meaning": "kilo"
+    },
+    "hoste": {
+      "meaning": "tousser"
+    },
+    "apotek": {
+      "meaning": "pharmacie"
+    },
+    "natt": {
+      "meaning": "nuit"
+    },
+    "denne": {
+      "meaning": "ce, cette, ces"
+    },
+    "halstablett": {
+      "meaning": "pastille pour la gorge"
+    },
+    "tablett": {
+      "meaning": "comprimé"
+    },
+    "uten": {
+      "meaning": "sans"
+    },
+    "oktober": {
+      "meaning": "octobre"
+    },
+    "venn": {
+      "meaning": "ami"
+    },
+    "mork": {
+      "meaning": "sombre, noir"
+    },
+    "nesten": {
+      "meaning": "presque"
+    },
+    "grad": {
+      "meaning": "degré"
+    },
+    "finnes": {
+      "meaning": "exister ; « det finnes » = il existe"
+    },
+    "darlig": {
+      "meaning": "mauvais"
+    },
+    "regnjakke": {
+      "meaning": "imperméable"
+    },
+    "ullgenser": {
+      "meaning": "pull en laine"
+    },
+    "sko": {
+      "meaning": "chaussure(s)"
     }
   }
 }

@@ -1,0 +1,152 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-weather",
+  "level": "A2",
+  "title": "Været og klær",
+  "summary": "Read Sara’s message about her first Oslo autumn, talk about the weather and temperatures, and learn the saying about bad weather and bad clothes.",
+  "review": "pending",
+  "text": "Det er oktober, og Sara har bodd i Oslo i to måneder. Hun skriver til en venn:\n«Nå er det høst her. Det er mørkt når jeg går på jobb, og det regner nesten hver dag. I dag var det bare fire grader! Kollegaene mine sier at det ikke finnes dårlig vær, bare dårlige klær. Så i helgen kjøpte jeg regnjakke, ullgenser og gode sko. Nå gleder jeg meg til snøen kommer.»",
+  "items": [
+    {
+      "id": "a2-vaer-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 900,
+      "prompt": "Hvilken årstid er det?",
+      "options": ["Høst", "Vinter", "Vår"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hvordan er været i Oslo nå?",
+      "options": ["Det regner nesten hver dag", "Det er sol hver dag", "Det snør mye"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["numbers"],
+      "difficulty": 950,
+      "prompt": "Hvor kaldt var det i dag?",
+      "options": ["Fire grader", "Null grader", "Fjorten grader"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["verb-past"],
+      "difficulty": 1000,
+      "prompt": "Hva kjøpte Sara i helgen?",
+      "options": ["Regnjakke, ullgenser og sko", "En paraply", "Ski og lue"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Hva betyr «Det finnes ikke dårlig vær, bare dårlige klær»?",
+      "options": [
+        "Med riktige klær kan du være ute i all slags vær",
+        "Været i Norge er alltid dårlig",
+        "Du må kjøpe dyre klær"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 1000,
+      "prompt": "Det er kaldt, så jeg tar på meg en varm ___.",
+      "answers": ["genser", "ullgenser", "jakke"]
+    },
+    {
+      "id": "a2-vaer-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 950,
+      "prompt": "I dag er det minus fem ___.",
+      "answers": ["grader"]
+    },
+    {
+      "id": "a2-vaer-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 950,
+      "prompt": "Lag en setning.",
+      "tokens": ["er", "Nå", "det", "høst"],
+      "answer": "Nå er det høst"
+    },
+    {
+      "id": "a2-vaer-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["conjunctions"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg tar paraply,", "fordi", "det", "regner"],
+      "answer": "Jeg tar paraply, fordi det regner"
+    },
+    {
+      "id": "a2-vaer-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1100,
+      "prompt": "Når kommer sola tilbake?",
+      "audio": "I morgen blir det regn og vind på Østlandet, med temperaturer rundt sju grader. På søndag kommer sola tilbake.",
+      "options": ["På søndag", "I morgen", "På lørdag"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Hvordan er det ute?",
+      "audio": "Ta på deg lue og votter, det er minus ti ute!",
+      "options": ["Veldig kaldt", "Varmt", "Det regner"],
+      "answer": 0
+    },
+    {
+      "id": "a2-vaer-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Det regner nesten hver dag."
+    }
+  ]
+}

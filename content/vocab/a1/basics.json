@@ -267,7 +267,7 @@
       "id": "mer",
       "nb": "mer",
       "pos": "adverb",
-      "forms": ["mer"],
+      "forms": ["mer", "mest"],
       "example": "Jeg vil lære mer norsk."
     },
     {
@@ -532,7 +532,7 @@
       "id": "sende",
       "nb": "sende",
       "pos": "verb",
-      "forms": ["sende", "send", "sender", "sendte"],
+      "forms": ["sende", "send", "sender", "sendte", "sendt"],
       "example": "Send en SMS til Kari."
     },
     {
