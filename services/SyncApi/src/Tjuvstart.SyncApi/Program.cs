@@ -1,3 +1,4 @@
+using Tjuvstart.SyncApi.Data;
 using Tjuvstart.SyncApi.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,4 +9,6 @@ var app = builder.Build();
 
 app.UseSyncApi();
 
-app.Run();
+await app.MigrateIfConfiguredAsync();
+
+await app.RunAsync();

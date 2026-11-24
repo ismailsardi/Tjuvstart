@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Tjuvstart.SyncApi.Tests;
 
-public sealed class OpenApiTests
+[Collection(ApiTestGroup.Name)]
+public sealed class OpenApiTests(PostgresFixture postgres)
 {
     [Fact]
     public async Task Document_is_served_in_development()
     {
-        await using var factory = new SyncApiFactory().WithWebHostBuilder(b => b.UseEnvironment("Development"));
+        await using var factory = new SyncApiFactory(postgres).WithWebHostBuilder(b => b.UseEnvironment("Development"));
         using var client = factory.CreateClient();
 
         var json = await client.GetStringAsync(new Uri("/openapi/v1.json", UriKind.Relative));
@@ -21,7 +22,7 @@ public sealed class OpenApiTests
     [Fact]
     public async Task Document_is_not_served_outside_development()
     {
-        await using var factory = new SyncApiFactory();
+        await using var factory = new SyncApiFactory(postgres);
         using var client = factory.CreateClient();
 
         var response = await client.GetAsync(new Uri("/openapi/v1.json", UriKind.Relative));

@@ -1,0 +1,14 @@
+# Local PostgreSQL for development. Matches the connection string in appsettings.Development.json.
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tjuvstart_sync
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
