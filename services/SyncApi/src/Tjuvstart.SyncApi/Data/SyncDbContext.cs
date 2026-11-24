@@ -8,6 +8,8 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
 
     public DbSet<ExternalIdentity> ExternalIdentities => Set<ExternalIdentity>();
 
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(account =>
@@ -21,6 +23,11 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
             account.HasMany(a => a.Identities)
                 .WithOne()
                 .HasForeignKey(i => i.AccountId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            account.HasMany<RefreshToken>()
+                .WithOne()
+                .HasForeignKey(t => t.AccountId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
 
@@ -36,6 +43,22 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
 
             identity.HasIndex(i => new { i.Provider, i.Subject }).IsUnique();
             identity.HasIndex(i => new { i.AccountId, i.Provider }).IsUnique();
+        });
+
+        modelBuilder.Entity<RefreshToken>(token =>
+        {
+            token.ToTable("refresh_tokens");
+            token.Property(t => t.Id).HasColumnName("id");
+            token.Property(t => t.AccountId).HasColumnName("account_id");
+            token.Property(t => t.FamilyId).HasColumnName("family_id");
+            token.Property(t => t.TokenHash).HasColumnName("token_hash").HasMaxLength(32);
+            token.Property(t => t.CreatedAt).HasColumnName("created_at");
+            token.Property(t => t.ExpiresAt).HasColumnName("expires_at");
+            token.Property(t => t.UsedAt).HasColumnName("used_at");
+            token.Property(t => t.RevokedAt).HasColumnName("revoked_at");
+
+            token.HasIndex(t => t.TokenHash).IsUnique();
+            token.HasIndex(t => t.FamilyId);
         });
     }
 }
