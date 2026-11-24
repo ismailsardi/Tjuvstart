@@ -19,6 +19,8 @@ export interface LanguagePack {
   name: string;
   nativeName: string;
   direction: 'ltr' | 'rtl';
+  /** Whether a speaker of the language has checked the translations. Missing means approved. */
+  review?: 'pending' | 'approved';
   cognates: PackWord[];
   falseFriends: PackWord[];
   contrasts: Contrast[];

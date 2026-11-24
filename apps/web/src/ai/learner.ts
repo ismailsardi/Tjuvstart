@@ -4,7 +4,12 @@ import type { Profile } from '../data/db';
 import type { UiLanguage } from '../i18n/strings';
 import type { LearnerContext } from './prompts';
 
-const LANGUAGE_NAMES: Record<UiLanguage, string> = { en: 'English', fr: 'French' };
+const LANGUAGE_NAMES: Record<UiLanguage, string> = {
+  en: 'English',
+  fr: 'French',
+  de: 'German',
+  es: 'Spanish',
+};
 const JOB_NAMES: Record<string, string> = {
   it: 'IT and software',
   health: 'health and care',

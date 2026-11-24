@@ -1,0 +1,2465 @@
+{
+  "$schema": "../../schema/l1-pack.schema.json",
+  "language": "de",
+  "name": "German",
+  "nativeName": "Deutsch",
+  "direction": "ltr",
+  "review": "pending",
+  "cognates": [
+    {
+      "nb": "dag",
+      "forms": ["dag", "dagen", "dager", "dagene"],
+      "meaning": "Tag"
+    },
+    {
+      "nb": "morgen",
+      "forms": ["morgen", "morgenen"],
+      "meaning": "Morgen; «i morgen» = morgen"
+    },
+    {
+      "nb": "måned",
+      "forms": ["måned", "måneden", "måneder"],
+      "meaning": "Monat"
+    },
+    {
+      "nb": "år",
+      "forms": ["år", "året"],
+      "meaning": "Jahr"
+    },
+    {
+      "nb": "natt",
+      "forms": ["natt", "natta"],
+      "meaning": "Nacht"
+    },
+    {
+      "nb": "vinter",
+      "forms": ["vinter"],
+      "meaning": "Winter"
+    },
+    {
+      "nb": "kald",
+      "forms": ["kald", "kaldt"],
+      "meaning": "kalt"
+    },
+    {
+      "nb": "varm",
+      "forms": ["varm", "varmt"],
+      "meaning": "warm"
+    },
+    {
+      "nb": "regn",
+      "forms": ["regn", "regnet"],
+      "meaning": "Regen"
+    },
+    {
+      "nb": "mann",
+      "forms": ["mann", "mannen"],
+      "meaning": "Mann"
+    },
+    {
+      "nb": "familie",
+      "forms": ["familie", "familien"],
+      "meaning": "Familie"
+    },
+    {
+      "nb": "kjøkken",
+      "forms": ["kjøkken"],
+      "meaning": "Küche"
+    },
+    {
+      "nb": "hytte",
+      "forms": ["hytte", "hytta"],
+      "meaning": "Hütte, Ferienhaus"
+    },
+    {
+      "nb": "brød",
+      "forms": ["brød"],
+      "meaning": "Brot"
+    },
+    {
+      "nb": "melk",
+      "forms": ["melk", "melken"],
+      "meaning": "Milch"
+    },
+    {
+      "nb": "kaffe",
+      "forms": ["kaffe", "kaffen"],
+      "meaning": "Kaffee"
+    },
+    {
+      "nb": "kake",
+      "forms": ["kake"],
+      "meaning": "Kuchen"
+    },
+    {
+      "nb": "vin",
+      "forms": ["vin"],
+      "meaning": "Wein"
+    },
+    {
+      "nb": "fisk",
+      "forms": ["fisk"],
+      "meaning": "Fisch"
+    },
+    {
+      "nb": "kirke",
+      "forms": ["kirke"],
+      "meaning": "Kirche"
+    },
+    {
+      "nb": "kino",
+      "forms": ["kino"],
+      "meaning": "Kino"
+    },
+    {
+      "nb": "ferie",
+      "forms": ["ferie", "feriene"],
+      "meaning": "Ferien, Urlaub"
+    },
+    {
+      "nb": "kurs",
+      "forms": ["kurs", "kurset"],
+      "meaning": "Kurs"
+    },
+    {
+      "nb": "sjef",
+      "forms": ["sjef", "sjefen"],
+      "meaning": "Chef, Chefin"
+    },
+    {
+      "nb": "kollega",
+      "forms": ["kollega", "kollegaen", "kollegene", "kollegaene"],
+      "meaning": "Kollege, Kollegin"
+    },
+    {
+      "nb": "prosjekt",
+      "forms": ["prosjekt", "prosjektet"],
+      "meaning": "Projekt"
+    },
+    {
+      "nb": "firma",
+      "forms": ["firma", "firmaet"],
+      "meaning": "Firma"
+    },
+    {
+      "nb": "lønn",
+      "forms": ["lønn", "lønna", "lønnen"],
+      "meaning": "Lohn, Gehalt"
+    },
+    {
+      "nb": "bank",
+      "forms": ["bank", "banken"],
+      "meaning": "Bank"
+    },
+    {
+      "nb": "konto",
+      "forms": ["konto"],
+      "meaning": "Konto"
+    },
+    {
+      "nb": "prosent",
+      "forms": ["prosent"],
+      "meaning": "Prozent"
+    },
+    {
+      "nb": "pass",
+      "forms": ["pass", "passet"],
+      "meaning": "Pass, Reisepass"
+    },
+    {
+      "nb": "nummer",
+      "forms": ["nummer", "nummeret"],
+      "meaning": "Nummer"
+    },
+    {
+      "nb": "medisin",
+      "forms": ["medisin", "medisinen", "medisinene"],
+      "meaning": "Medizin, Medikament"
+    },
+    {
+      "nb": "apotek",
+      "forms": ["apotek", "apoteket"],
+      "meaning": "Apotheke"
+    },
+    {
+      "nb": "resept",
+      "forms": ["resept"],
+      "meaning": "Rezept (vom Arzt; ein Kochrezept ist «oppskrift»)"
+    },
+    {
+      "nb": "feber",
+      "forms": ["feber"],
+      "meaning": "Fieber"
+    },
+    {
+      "nb": "tablett",
+      "forms": ["tablett", "tabletter"],
+      "meaning": "Tablette"
+    },
+    {
+      "nb": "sentrum",
+      "forms": ["sentrum"],
+      "meaning": "Zentrum, Innenstadt"
+    },
+    {
+      "nb": "etasje",
+      "forms": ["etasje"],
+      "meaning": "Etage, Stockwerk"
+    },
+    {
+      "nb": "informasjon",
+      "forms": ["informasjon"],
+      "meaning": "Information"
+    },
+    {
+      "nb": "inkludert",
+      "forms": ["inkludert"],
+      "meaning": "inklusive"
+    },
+    {
+      "nb": "bestille",
+      "forms": ["bestille", "bestiller", "bestilt"],
+      "meaning": "bestellen, buchen"
+    },
+    {
+      "nb": "komme",
+      "forms": ["komme", "kommer"],
+      "meaning": "kommen"
+    },
+    {
+      "nb": "drikke",
+      "forms": ["drikke"],
+      "meaning": "trinken"
+    },
+    {
+      "nb": "koste",
+      "forms": ["koste", "koster"],
+      "meaning": "kosten"
+    },
+    {
+      "nb": "sende",
+      "forms": ["sende", "sender", "sendt"],
+      "meaning": "senden, schicken"
+    },
+    {
+      "nb": "vaske",
+      "forms": ["vaske"],
+      "meaning": "waschen"
+    },
+    {
+      "nb": "begynne",
+      "forms": ["begynne", "begynner"],
+      "meaning": "beginnen"
+    },
+    {
+      "nb": "planlegge",
+      "forms": ["planlegge", "planlegger"],
+      "meaning": "planen"
+    }
+  ],
+  "falseFriends": [
+    {
+      "nb": "rar",
+      "forms": ["rar", "rart", "rare"],
+      "looksLike": "rar",
+      "meaning": "seltsam, komisch"
+    },
+    {
+      "nb": "fast",
+      "forms": ["fast"],
+      "looksLike": "fast",
+      "meaning": "fest; «står fast» = steckt fest, «fast stilling» = Festanstellung"
+    },
+    {
+      "nb": "lege",
+      "forms": ["lege", "legen"],
+      "looksLike": "legen",
+      "meaning": "Arzt, Ärztin («legen» = der Arzt)"
+    },
+    {
+      "nb": "bord",
+      "forms": ["bord"],
+      "looksLike": "Bord",
+      "meaning": "Tisch"
+    },
+    {
+      "nb": "øl",
+      "forms": ["øl"],
+      "looksLike": "Öl",
+      "meaning": "Bier"
+    },
+    {
+      "nb": "gang",
+      "forms": ["gang"],
+      "looksLike": "Gang",
+      "meaning": "Mal («en gang til» = noch einmal)"
+    },
+    {
+      "nb": "frisk",
+      "forms": ["frisk"],
+      "looksLike": "frisch",
+      "meaning": "gesund («ikke frisk» = krank)"
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "verb-second",
+      "title": "Das Verb an zweiter Stelle, wie im Deutschen",
+      "body": "Gute Nachricht: Im Hauptsatz steht das Verb immer an zweiter Stelle, genau wie im Deutschen. Beginnt der Satz mit einer Zeit- oder Ortsangabe, kommt das Subjekt nach dem Verb: «I dag er det min første dag» = «Heute ist mein erster Tag».",
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-renting-a-flat",
+        "a2-getting-around",
+        "a2-calling-in-sick",
+        "a2-bankid",
+        "a2-tax-card",
+        "a2-doctor",
+        "a2-lunch-small-talk",
+        "a2-nav-letter",
+        "a2-finn-ad",
+        "a2-job-ad",
+        "a2-dugnad",
+        "a1-hello",
+        "a1-days-and-time",
+        "b1-team-meeting",
+        "b1-kindergarten",
+        "b1-easter",
+        "a2-pharmacy",
+        "a2-weather",
+        "a2-invitation",
+        "a2-hairdresser"
+      ]
+    },
+    {
+      "id": "half-past",
+      "title": "«Halv tolv» = halb zwölf",
+      "body": "Hier hilft dir das Deutsche: «halv tolv» ist wie «halb zwölf» eine halbe Stunde vor zwölf, also 11:30. Englischsprachige verwechseln das oft, du nicht.",
+      "lessons": ["a2-first-day-at-work", "a2-doctor", "a1-days-and-time"]
+    },
+    {
+      "id": "definite-suffix",
+      "title": "Der Artikel hängt am Ende",
+      "body": "«Ein Treffen» heißt «et møte», aber «das Treffen» heißt «møtet». Der bestimmte Artikel wird ans Wort angehängt: en jobb → jobben, en kollega → kollegaen. Dafür gibt es keine Fälle: «jobben» bleibt «jobben», ob Nominativ, Akkusativ oder Dativ.",
+      "lessons": [
+        "a2-first-day-at-work",
+        "a2-renting-a-flat",
+        "a2-getting-around",
+        "a2-calling-in-sick"
+      ]
+    },
+    {
+      "id": "ikke-in-subclause",
+      "title": "Nach «fordi» kein Verb am Satzende",
+      "body": "Die größte Falle für Deutschsprachige: Nach «fordi», «at» oder «hvis» wandert das Verb nicht ans Ende. Es bleibt direkt hinter dem Subjekt, nur «ikke» rückt davor: «…fordi trikken ikke går» (weil die Straßenbahn nicht fährt). Im Hauptsatz steht «ikke» nach dem Verb: «Trikken går ikke».",
+      "lessons": [
+        "a2-getting-around",
+        "a2-calling-in-sick",
+        "a2-tax-card",
+        "a2-nav-letter",
+        "b1-team-meeting"
+      ]
+    },
+    {
+      "id": "room-count",
+      "title": "«Toroms» zählt alle Zimmer",
+      "body": "Wie bei einer Zweizimmerwohnung zählt eine «toromsleilighet» das Wohnzimmer mit: Wohnzimmer und ein Schlafzimmer. Eine «treroms» hat zwei Schlafzimmer.",
+      "lessons": ["a2-renting-a-flat"]
+    },
+    {
+      "id": "a1-instructions",
+      "title": "Die Wörter in den Übungen",
+      "body": "Die Anweisungen sind in einfachem Norwegisch und kommen oft vor. «Hvilket ord hører du?» Welches Wort hörst du? «Hvilken bokstav hører du?» Welchen Buchstaben hörst du? «Hva svarer du?» Was antwortest du? «Skriv det du hører.» Schreib, was du hörst. «Lag en setning.» Bilde einen Satz.",
+      "lessons": [
+        "a1-alphabet",
+        "a1-sounds",
+        "a1-hello",
+        "a1-not-understand",
+        "a1-numbers",
+        "a1-supermarket",
+        "a1-cafe",
+        "a1-days-and-time"
+      ]
+    },
+    {
+      "id": "ae-oe-aa",
+      "title": "Die Laute æ, ø und å",
+      "body": "æ klingt wie das offene ä in «Bär». ø ist genau das deutsche ö in «schön»: Das hast du schon. å klingt wie das offene o in «Sonne» oder das lange o in «Boot». Achtung beim norwegischen o: Es klingt oft wie ein deutsches u, «bor» also fast wie «bur».",
+      "lessons": ["a1-alphabet", "a1-sounds"]
+    },
+    {
+      "id": "kj-sj",
+      "title": "Zwei Laute, die du schon kennst",
+      "body": "kj, und k vor i, y oder ei, ist der weiche Laut aus «ich»: kjøre, kino. sj, skj, und sk vor i, y oder øy, sprichst du wie deutsches «sch»: sju, skje, ski. gj und hj klingen einfach wie deutsches j: gjøre, hjem.",
+      "lessons": ["a1-sounds"]
+    },
+    {
+      "id": "long-short",
+      "title": "Doppelter Konsonant, kurzer Vokal",
+      "body": "Wie im Deutschen macht ein doppelter Konsonant den Vokal davor kurz: «takk» (danke) hat ein kurzes a, «tak» (Dach) ein langes, wie «Stadt» und «Staat». Genauso «penn» (Stift) und «pen» (hübsch).",
+      "lessons": ["a1-sounds", "a1-alphabet"]
+    },
+    {
+      "id": "silent-letters",
+      "title": "Stumme Buchstaben",
+      "body": "Das h in hv- und hj- wird nicht gesprochen: hva, hvor, hjem. Ein d am Wortende nach einem Vokal ist oft stumm: god, med, ved. Und «jeg» spricht man ungefähr «jai».",
+      "lessons": ["a1-sounds", "a1-hello"]
+    },
+    {
+      "id": "du-for-everyone",
+      "title": "Alle duzen sich",
+      "body": "Auf Norwegisch sagt man «du» zu allen: zur Chefin, zum Arzt, zu Fremden auf der Straße. Das Sie, «De», ist fast verschwunden. Du musst also nie überlegen, ob du siezen solltest.",
+      "lessons": ["a1-hello"]
+    },
+    {
+      "id": "no-please",
+      "title": "Kein «bitte» im Alltag",
+      "body": "Höflichkeit steckt in der Frage und im Dank. «Kan jeg få en kaffe?» (Kann ich einen Kaffee bekommen?) und «Jeg vil gjerne ha…» (Ich hätte gern…) sind so schon höflich. Am Ende sagt man «takk»: «En kaffe, takk.»",
+      "lessons": ["a1-cafe", "a1-supermarket", "a1-not-understand"]
+    },
+    {
+      "id": "tens-teens",
+      "title": "Zehner zuerst: førtini",
+      "body": "Anders als im Deutschen kommen die Zehner heute zuerst: 49 ist «førtini», nicht «neunundvierzig». Ältere Leute sagen manchmal noch «ni og førti», wie im Deutschen. -ti steht für die Zehner, -ten für 13 bis 19: førti 40, fjorten 14; sytti 70, sytten 17. Große Zahlen sagt man oft in Hunderten: 1300 heißt «tretten hundre».",
+      "lessons": ["a1-numbers", "a1-supermarket", "a1-cafe"]
+    },
+    {
+      "id": "past-tense",
+      "title": "Vergangenheit: nur «har», nie «er»",
+      "body": "Regelmäßige Verben bekommen -et oder -te: jobbe → jobbet, lære → lærte. Die häufigsten Verben sind unregelmäßig, oft ähnlich wie im Deutschen: gå → gikk (ging), se → så (sah), komme → kom (kam), være → var (war). Für das Perfekt gibt es nur «har»: «Jeg har gått» = ich bin gegangen. Ein «er gått» wie «bin gegangen» gibt es nicht.",
+      "lessons": ["b1-weekend", "b1-appraisal", "a2-job-interview", "a2-weather"]
+    },
+    {
+      "id": "synes-tror",
+      "title": "synes, tror oder tenker?",
+      "body": "«Synes» ist «finden», eine Meinung aus eigener Erfahrung: «Jeg synes filmen var bra» (ich fand den Film gut). «Tror» ist «glauben», eine Vermutung: «Jeg tror det blir sol» (ich glaube, es wird sonnig). «Tenker» ist «denken» im Sinne von nachdenken: «Jeg tenker på deg».",
+      "lessons": ["b1-appraisal"]
+    },
+    {
+      "id": "da-naar",
+      "title": "da oder når? Wie «als» und «wenn»",
+      "body": "Das kennst du aus dem Deutschen. «Da» ist «als», für ein einziges Mal in der Vergangenheit: «Den startet ikke da jeg prøvde på søndag». «Når» ist «wenn», für Gegenwart, Zukunft und Wiederholtes: «Når jeg kommer hjem, lager jeg mat».",
+      "lessons": ["b1-landlord-email", "b1-weekend"]
+    },
+    {
+      "id": "takk-for-sist",
+      "title": "«Takk for sist»",
+      "body": "In Norwegen bedankt man sich beim nächsten Treffen oder in der nächsten Nachricht: «Takk for sist» heißt «danke für das letzte Mal». Wer es weglässt, wirkt schnell etwas kühl.",
+      "lessons": ["b1-weekend"]
+    },
+    {
+      "id": "dinner-guest",
+      "title": "Zum Essen bei Norwegern",
+      "body": "Komm pünktlich, zieh im Flur die Schuhe aus und bring eine Kleinigkeit mit: Blumen, Schokolade oder eine Flasche Wein. Beim nächsten Mal sagst du «Takk for sist».",
+      "lessons": ["a2-invitation"]
+    },
+    {
+      "id": "har-for-duration",
+      "title": "«Jeg har jobbet der i fire år»",
+      "body": "Für etwas, das in der Vergangenheit begonnen hat und noch andauert, nimmt das Norwegische «har» + Partizip mit «i»: «Jeg har bodd i Oslo i to måneder». Auf Deutsch sagst du das im Präsens mit «seit»: «Ich wohne seit zwei Monaten in Oslo».",
+      "lessons": ["a2-job-interview", "a2-weather"]
+    }
+  ],
+  "itemNotes": {
+    "a2-fdw-02": "«Sjef» ist wie das deutsche «Chef»: die Person, die das Team leitet.",
+    "a2-fdw-03": "«Halv tolv» ist wie «halb zwölf»: 11:30.",
+    "a2-fdw-11": "Nach dem Verb steht das Objektpronomen: jeg (ich) → meg (mich).",
+    "a2-fdw-13": "Der Satz beginnt mit «I dag», also folgt das Verb «er» und dann das Subjekt «det». Wie im Deutschen: «Heute ist es…».",
+    "a2-fdw-14": "Dieselbe Regel: «Etter lunsj» + Verb «har» + Subjekt «vi».",
+    "a2-fdw-15": "Nach «fordi» (weil) kommt erst das Subjekt, dann das Verb: «kollegene er». Das Verb wandert nicht ans Ende.",
+    "a2-flat-01": "«Toroms» heißt zwei Zimmer insgesamt: Wohnzimmer und ein Schlafzimmer.",
+    "a2-flat-02": "«Strøm er ikke inkludert»: Strom ist nicht inklusive, du zahlst ihn extra.",
+    "a2-flat-04": "«Ingen husdyr» heißt: keine Haustiere.",
+    "a2-flat-11": "Der Satz beginnt mit «Neste måned», also kommt das Verb «vil» und dann «jeg».",
+    "a2-flat-12": "Nach «fordi» kommt erst das Subjekt, dann das Verb: «den er». Nicht «fordi den stor er».",
+    "a2-trip-02": "Von Montag, 3. März, bis Freitag, 14. März, sind es zwei Arbeitswochen.",
+    "a2-trip-06": "«Står fast» heißt «steckt fest». Das norwegische «fast» bedeutet nie «beinahe».",
+    "a2-trip-09": "«Komme for sent» heißt «zu spät kommen».",
+    "a2-trip-12": "Nach «fordi» steht «ikke» vor dem Verb, und das Verb bleibt hinter dem Subjekt: «trikken ikke går».",
+    "a2-sick-05": "«God bedring!» sagt man zu jemandem, der krank ist: gute Besserung. «Bedring» ist mit «Besserung» verwandt.",
+    "a2-sick-06": "In Norwegen kannst du dich meist ein paar Tage selbst krankmelden. Danach brauchst du eine Krankschreibung vom Arzt, eine «sykmelding».",
+    "a2-sick-08": "«Time» bedeutet hier einen Termin. «En time» kann auch eine Stunde sein.",
+    "a2-sick-10": "«Så» heißt hier «also, deshalb»: «Jeg er syk, så jeg blir hjemme».",
+    "a2-sick-11": "«I morgen» steht vorn, also rückt das Verb «kommer» vor «jeg». Wie «Morgen komme ich…».",
+    "a2-bid-02": "Eine D-nummer ist eine vorläufige Identifikationsnummer für Menschen, die kürzer in Norwegen bleiben. Skatteetaten vergibt sie nach einer Identitätsprüfung.",
+    "a2-tax-04": "Ohne Steuerkarte muss der Arbeitgeber 50 % Steuern abziehen. Bestell die Steuerkarte vor deinem ersten Zahltag.",
+    "a2-doc-03": "«Halv to» ist wie «halb zwei»: 13:30.",
+    "a2-doc-05": "113 ist für medizinische Notfälle. 116 117 (legevakt) ist für dringende Hilfe, wenn deine Hausarztpraxis geschlossen ist.",
+    "a2-lunch-04": "Kantina ist die Kantine im Betrieb. Viele Norweger bringen stattdessen eine «matpakke» mit.",
+    "a2-nav-02": "«Hver fjortende dag» heißt alle 14 Tage, also alle zwei Wochen.",
+    "a2-finn-05": "«Førstemann til mølla» heißt «wer zuerst kommt, mahlt zuerst». Fast wörtlich dasselbe Sprichwort wie im Deutschen.",
+    "a2-dug-05": "Ein Dugnad ist unbezahlte gemeinsame Arbeit für das Haus, die Schule oder den Sportverein. Von Nachbarn wird erwartet, dass sie mitmachen.",
+    "a2-job-03": "«Fast stilling» ist eine Festanstellung; «midlertidig» ist befristet.",
+    "a1-abc-04": "å klingt wie das o in «Sonne» oder «Boot». Das norwegische o liegt näher an einem deutschen u.",
+    "a1-abc-08": "«bær» (Beere) hat æ wie in «Bär». «ber» (bittet) hat ein geschlossenes e wie in «Beet».",
+    "a1-abc-09": "«hår» heißt Haar, «hør» heißt hör zu, «her» heißt hier.",
+    "a1-snd-01": "kjøre (fahren) beginnt mit dem weichen Laut aus «ich». gjøre (tun) beginnt mit j, skjøre (zerbrechlich) mit «sch».",
+    "a1-snd-02": "gj ist einfach ein deutsches j: «jøre».",
+    "a1-snd-04": "skjære (schneiden) beginnt mit «sch». kjære (liebe) beginnt mit dem weichen Laut aus «ich».",
+    "a1-snd-07": "Doppeltes n, kurzer Vokal: «penn» ist ein Stift. «pen» heißt hübsch.",
+    "a1-snd-08": "Das h in hv- ist stumm: «hva» klingt wie «wa».",
+    "a1-snd-09": "Das d am Ende von «god» ist stumm: «gu».",
+    "a1-snd-10": "Doppelter Konsonant, kurzer Vokal: takk.",
+    "a1-hei-08": "Wenn der Satz mit «Nå» beginnt, steht das Verb trotzdem an zweiter Stelle: Nå bor jeg. Wie «Jetzt wohne ich».",
+    "a1-hei-09": "«I like måte» heißt «gleichfalls». Das ist die übliche Antwort auf «Hyggelig å hilse på deg».",
+    "a1-hei-10": "«Bare hyggelig» sagt man für «gern geschehen».",
+    "a1-help-04": "«ikke» steht direkt nach dem Verb: Jeg forstår ikke.",
+    "a1-help-05": "sakte (langsam) → saktere (langsamer).",
+    "a1-num-09": "sytti ist 70. 17 ist sytten.",
+    "a1-num-10": "førti ist 40. 14 ist fjorten.",
+    "a1-num-11": "Heute sagt man «førtini» (49), Zehner zuerst, anders als «neunundvierzig».",
+    "a1-num-12": "Telefonnummern liest man in Gruppen, Ziffer für Ziffer oder paarweise.",
+    "a1-shop-08": "«Trenger du pose?» Brauchst du eine Tüte? Tüten kosten ein paar Kronen extra.",
+    "a1-cafe-07": "«Kan jeg få …?» Kann ich … bekommen? So bestellt man höflich.",
+    "a1-cafe-08": "«Hva skal det være?» Was darf es sein? Das sagt das Personal, wenn du dran bist.",
+    "a1-cafe-10": "«svart» heißt schwarz: Kaffee ohne alles.",
+    "a1-tid-07": "Wenn der Satz mit «Onsdag» beginnt, kommt danach das Verb: Onsdag passer fint.",
+    "a1-tid-09": "«Halv ni» ist wie «halb neun»: 8:30.",
+    "a1-tid-10": "«Kvart over fire» ist Viertel nach vier: 4:15.",
+    "b1-hg-05": "ta → tok → har tatt.",
+    "b1-hg-06": "se → så → har sett. Vergleiche: sehen → sah.",
+    "b1-hg-08": "gå → gikk → har gått. Vergleiche: gehen → ging, aber «har gått», nicht «er gått».",
+    "b1-hg-12": "Mit «Takk for sist» bedankt man sich für das letzte Treffen.",
+    "b1-ll-04": "Ahmed ist werktags ab vier und samstags den ganzen Tag zu Hause, also passt zehn Uhr an einem Dienstag nicht.",
+    "b1-ll-07": "Ein einziges Mal in der Vergangenheit: «da», wie deutsch «als». Nicht «når».",
+    "b1-tm-07": "«slik at» (sodass) nennt den Zweck. Gesprochen hört man auch oft «så».",
+    "b1-tm-09": "Nach «fordi» steht «ikke» vor dem Verb: fordi jeg ikke er frisk. Das Verb bleibt hinter dem Subjekt.",
+    "b1-ap-05": "«synes» ist «finden»: eine Meinung aus eigener Erfahrung.",
+    "b1-bh-07": "Wenn ein «hvis»-Satz vorn steht, folgt das Verb des Hauptsatzes direkt danach. Wie «Wenn…, musst du…».",
+    "b1-pk-06": "«de som» = diejenigen, die.",
+    "a2-apo-03": "«Hver tredje time» heißt alle drei Stunden.",
+    "a2-apo-08": "Wenn der «hvis»-Satz vorn steht, folgt direkt das Verb: …, bør du gå til legen.",
+    "a2-pak-06": "-s nach dem Infinitiv macht ihn passiv: hente → hentes (abgeholt werden).",
+    "a2-vaer-05": "Ein beliebtes norwegisches Sprichwort: Mit der richtigen Kleidung kann man bei jedem Wetter draußen sein. Es gibt kein schlechtes Wetter, nur schlechte Kleidung.",
+    "a2-inv-05": "«Jeg kommer gjerne» = ich komme gern.",
+    "a2-inv-06": "«ha lyst til» = Lust haben auf, etwas gern tun wollen.",
+    "a2-inv-08": "«Dessverre» steht vorn, also kommt danach das Verb: Dessverre kan jeg… Wie «Leider kann ich…».",
+    "a2-intv-06": "«har jobbet … i fire år»: hat in der Vergangenheit begonnen und gilt noch. Auf Deutsch: «arbeite seit vier Jahren»."
+  },
+  "lessonSummaries": {
+    "a2-first-day-at-work": "Lies über Saras ersten Tag in einem neuen Job und übe die Wörter und Sätze, die du bei der Arbeit brauchst.",
+    "a2-renting-a-flat": "Lies eine Wohnungsanzeige, finde Miete, Datum und Besichtigungstermin und schreib eine kurze Nachricht an den Vermieter.",
+    "a2-getting-around": "Lies einen Aushang über eine Straßenbahnsperrung, finde heraus, was stattdessen fährt und wie oft, und schreib über deinen Arbeitsweg.",
+    "a2-calling-in-sick": "Lies eine Krankmeldung und die Antwort der Chefin und schreib dann deine eigene kurze Nachricht, wenn du nicht zur Arbeit kommen kannst.",
+    "a2-bankid": "Finde heraus, was du für BankID brauchst: eine Identifikationsnummer vom Finanzamt, deinen Pass und ein Bankkonto.",
+    "a2-tax-card": "Lies eine E-Mail der Personalabteilung zur Steuerkarte: wo man sie bestellt, wer sie schickt und was ohne sie passiert.",
+    "a2-doctor": "Verfolge einen Anruf, um einen Arzttermin zu buchen, und lerne, welche Nummern du außerhalb der Sprechzeiten und im Notfall anrufst.",
+    "a2-lunch-small-talk": "Hör beim Mittagessen im Büro zu: das Wochenende, das Wetter und die berühmte norwegische Brotdose.",
+    "a2-nav-letter": "Lies einen vereinfachten Brief von NAV über das Meldeformular, das du alle zwei Wochen schickst: wann es fällig ist und was passiert, wenn du es vergisst.",
+    "a2-finn-ad": "Lies eine Gebrauchtanzeige wie auf Finn.no: was verkauft wird, der Preis, wo man es abholt und wie man antwortet.",
+    "a2-job-ad": "Lies eine Stellenanzeige für einen Entwickler: was die Firma bietet, was sie von dir erwartet und wann die Bewerbungsfrist endet.",
+    "a2-dugnad": "Lies einen Aushang der Wohnungsgenossenschaft über einen Dugnad, den norwegischen Tag gemeinsamer freiwilliger Arbeit.",
+    "a1-alphabet": "Lerne die drei zusätzlichen Buchstaben æ, ø und å kennen, hör, wie sie sich von a, e und o unterscheiden, und schreib deine ersten norwegischen Wörter.",
+    "a1-sounds": "Übe die Laute, die Anfängern Mühe machen: kj und sj, lange und kurze Vokale und Buchstaben, die man schreibt, aber nicht spricht.",
+    "a1-hello": "Grüß jemanden, nenn deinen Namen, sag, woher du kommst und wo du wohnst, und antworte auf die höflichen Sätze, die man beim Kennenlernen hört.",
+    "a1-not-understand": "Die Sätze, mit denen ein Gespräch weitergeht, wenn du nicht mehr mitkommst: um Wiederholung oder langsameres Sprechen bitten, fragen, was ein Wort bedeutet, und nach dem Weg fragen.",
+    "a1-numbers": "Zähl von null bis hundert, versteh Preise und Telefonnummern und handle ein bisschen beim Kauf eines gebrauchten Fahrrads.",
+    "a1-supermarket": "Komm auf Norwegisch durch die Supermarktkasse: Tüten, Karte oder bar, der Kassenbon und der freundliche Abschied.",
+    "a1-cafe": "Bestell einen Kaffee und eine Zimtschnecke, wähl eine Größe, sag, ob es zum Mitnehmen ist, und bezahle.",
+    "a1-days-and-time": "Lerne die Wochentage, sag die Uhrzeit und verschieb ein Treffen per Nachricht. «Halv ni» ist wie «halb neun»: 8:30.",
+    "b1-weekend": "Lies eine Nachricht über einen Wochenendausflug nach Holmenkollen und übe die Vergangenheit der Verben, die du am häufigsten brauchst.",
+    "b1-landlord-email": "Lies eine E-Mail an einen Vermieter über eine kaputte Waschmaschine und lerne, wie man ein Problem beschreibt, um Hilfe bittet und sagt, wann man Zeit hat.",
+    "b1-team-meeting": "Lies das Protokoll einer Teamsitzung: ein verschobener Launch, eine Urlaubsfrist und neue Regeln fürs Homeoffice. Übe, Gründe mit fordi und slik at zu erklären.",
+    "b1-appraisal": "Verfolge ein Mitarbeitergespräch zwischen Sara und ihrer Chefin und übe, deine Meinung zu sagen, Wünsche zu äußern und sie zu begründen.",
+    "b1-kindergarten": "Lies einen vereinfachten Brief mit einem Kitaplatz-Angebot: die Antwortfrist, was passiert, wenn du sie verpasst, und die Eingewöhnungstage.",
+    "b1-easter": "Lies einen Text im Nachrichtenstil über Ostern in Norwegen: die Hütte, Skifahren, Orangen und Krimis, Staus und geschlossene Geschäfte. Danach folgt ein Verkehrs- und Wetterbericht.",
+    "a2-pharmacy": "Frag in der Apotheke nach etwas gegen Halsschmerzen, versteh, wie oft du es nehmen sollst, und lerne, wann du ein Rezept brauchst.",
+    "a2-parcel": "Lies eine Paketbenachrichtigung: wo du es abholst, den Abholcode, die Frist und wann du einen Ausweis brauchst. Danach folgt eine Nachricht von einem Kurier.",
+    "a2-weather": "Lies Saras Nachricht über ihren ersten Herbst in Oslo, sprich über Wetter und Temperaturen und lerne das Sprichwort über schlechtes Wetter und schlechte Kleidung.",
+    "a2-invitation": "Lies eine Einladung zum Abendessen von einer Kollegin und die Antwort und übe, freundlich ja, nein und tut mir leid zu sagen.",
+    "a2-hairdresser": "Buch telefonisch einen Haarschnitt: frag, was frei ist, nimm einen anderen Termin an, nenn deinen Namen und versteh die Stornierungsregel.",
+    "a2-job-interview": "Verfolge ein Vorstellungsgespräch in einem Hotel: sprich über deine Erfahrung und Sprachen, sag, warum du den Job willst, und stell deine eigene Frage."
+  },
+  "trackSummaries": {
+    "first-weeks": "Die Situationen deiner ersten Wochen: der erste Arbeitstag, die Steuerkarte, BankID, die Wohnungssuche, der Arzt und das Mittagessen mit Kollegen.",
+    "real-texts": "Echte Arten von Dokumenten, vereinfacht auf dein Niveau: ein Brief von NAV, eine Gebrauchtanzeige, eine Stellenanzeige und ein Aushang der Wohnungsgenossenschaft.",
+    "from-zero": "Ganz von vorn: die Buchstaben und Laute des Norwegischen, Begrüßen, Zahlen und Preise, der Laden, das Café und die Uhrzeit.",
+    "towards-b1": "Der nächste Schritt: erzählen, was du gemacht hast, an den Vermieter schreiben, ein Sitzungsprotokoll, ein Mitarbeitergespräch, ein Brief von der Kita und ein Nachrichtentext über Ostern.",
+    "everyday-oslo": "Alltagserledigungen und soziales Leben: die Apotheke, ein Paket abholen, Wetter und Kleidung, eine Einladung zum Essen, einen Haarschnitt buchen und ein Vorstellungsgespräch."
+  },
+  "canDo": {
+    "A1-R-01": "Ich erkenne vertraute Wörter, Namen und Zahlen auf Schildern, Etiketten und Preisschildern.",
+    "A1-R-02": "Ich verstehe sehr kurze, einfache Texte und Dialoge über Alltagsbedürfnisse.",
+    "A1-L-01": "Ich höre den Unterschied zwischen norwegischen Lauten, auch bei æ, ø und å.",
+    "A1-L-02": "Ich verstehe Zahlen, Preise, Tage und Uhrzeiten, wenn langsam gesprochen wird.",
+    "A1-L-03": "Ich verstehe einfache Fragen in einem Laden oder Café, wenn langsam gesprochen wird.",
+    "A1-W-01": "Ich kann vertraute Wörter und kurze Alltagssätze schreiben.",
+    "A1-W-02": "Ich kann ein paar Sätze über mich schreiben: meinen Namen, woher ich komme und wo ich wohne.",
+    "A1-S-01": "Ich kann grüßen, mich vorstellen, danke und Entschuldigung sagen und sagen, dass ich nicht verstehe.",
+    "A1-S-02": "Ich kann in einem Laden oder Café nach etwas fragen und über Preise und Uhrzeiten sprechen.",
+    "A2-R-01": "Ich kann kurze, einfache Texte über Alltag und Arbeit lesen.",
+    "A2-R-02": "Ich finde, was ich brauche, in Aushängen, Fahrplänen, Speisekarten und Anzeigen.",
+    "A2-R-03": "Ich verstehe kurze Nachrichten und einfache Anweisungen bei der Arbeit.",
+    "A2-L-01": "Ich verstehe alltägliche Wörter und Sätze über mich und meine Arbeit, wenn langsam gesprochen wird.",
+    "A2-L-02": "Ich verstehe das Wichtigste in kurzen Nachrichten und Durchsagen.",
+    "A2-W-01": "Ich kann kurze Notizen und Nachrichten darüber schreiben, was ich brauche.",
+    "A2-W-02": "Ich kann einfache Sätze über mich und meine Arbeit schreiben und sie mit og, men und fordi verbinden.",
+    "A2-S-01": "Ich kann mich vorstellen und einfache Fragen zu meiner Arbeit und meinem Hintergrund beantworten.",
+    "A2-S-02": "Ich kann in kurzen Gesprächen grüßen, danken, mich entschuldigen und einladen.",
+    "A2-S-03": "Ich kann nach dem Weg und nach praktischen Informationen fragen und sie geben.",
+    "B1-R-01": "Ich verstehe klare Sachtexte zu Themen, die ich kenne.",
+    "B1-R-02": "Ich verstehe, was Menschen in Briefen und Nachrichten beschreiben: Ereignisse, Gefühle, Wünsche.",
+    "B1-L-01": "Ich verstehe das Wichtigste, wenn bei der Arbeit und im Alltag klar gesprochen wird.",
+    "B1-L-02": "Ich verstehe das Wichtigste in Nachrichten zu vertrauten Themen, wenn klar gesprochen wird.",
+    "B1-W-01": "Ich kann einen kurzen, zusammenhängenden Text zu einem vertrauten Thema schreiben.",
+    "B1-W-02": "Ich kann E-Mails und Nachrichten über meine Erlebnisse schreiben.",
+    "B1-S-01": "Ich komme in den meisten Alltags- und Arbeitssituationen zurecht, etwa bei Terminen und Dienstleistungen.",
+    "B1-S-02": "Ich kann meine Meinungen und Pläne begründen."
+  },
+  "words": {
+    "jeg": {
+      "meaning": "ich"
+    },
+    "meg": {
+      "meaning": "mich, mir",
+      "hook": "jeg → meg, wie ich → mich."
+    },
+    "du": {
+      "meaning": "du",
+      "hook": "Norweger sagen «du» zu fast allen, auch zur Chefin."
+    },
+    "han": {
+      "meaning": "er"
+    },
+    "vi": {
+      "meaning": "wir"
+    },
+    "det": {
+      "meaning": "es, das; es gibt",
+      "hook": "«Det er» deckt «es ist» und «es gibt» ab."
+    },
+    "min": {
+      "meaning": "mein, meine",
+      "hook": "Das Possessivpronomen steht meist nach dem Nomen: «sjefen min»."
+    },
+    "din": {
+      "meaning": "dein, deine"
+    },
+    "en": {
+      "meaning": "ein, eine; eins"
+    },
+    "et": {
+      "meaning": "ein (bei Neutrum-Nomen)",
+      "hook": "Lerne jedes Nomen mit Artikel: et møte, en jobb."
+    },
+    "ett": {
+      "meaning": "eins (bei Neutrum-Nomen)"
+    },
+    "vaere": {
+      "meaning": "sein",
+      "hook": "«Er» ist für alle gleich: jeg er, du er, vi er. Keine Konjugation!"
+    },
+    "ha": {
+      "meaning": "haben"
+    },
+    "kunne": {
+      "meaning": "können",
+      "hook": "«Jeg kan» = ich kann."
+    },
+    "skulle": {
+      "meaning": "werden, sollen; vorhaben",
+      "hook": "«Jeg skal» ist die normale Art, über Pläne zu sprechen."
+    },
+    "a": {
+      "meaning": "zu (vor einem Verb)",
+      "hook": "«Å» markiert den Infinitiv, wie «zu» in «zu arbeiten»."
+    },
+    "og": {
+      "meaning": "und"
+    },
+    "i": {
+      "meaning": "in"
+    },
+    "pa": {
+      "meaning": "auf, an, in",
+      "hook": "Stadtteile nehmen «på»: på Tøyen, på Storo."
+    },
+    "til": {
+      "meaning": "zu, nach; bis"
+    },
+    "fra": {
+      "meaning": "von, aus"
+    },
+    "med": {
+      "meaning": "mit"
+    },
+    "for": {
+      "meaning": "für; zu (vor einem Adjektiv)",
+      "hook": "«for sent» = zu spät."
+    },
+    "om": {
+      "meaning": "über; in (zeitlich)",
+      "hook": "«om to dager» = in zwei Tagen."
+    },
+    "hos": {
+      "meaning": "bei (jemandem)",
+      "hook": "«hos legen» = beim Arzt."
+    },
+    "etter": {
+      "meaning": "nach"
+    },
+    "mellom": {
+      "meaning": "zwischen"
+    },
+    "som": {
+      "meaning": "wie, als; der, die, das (Relativpronomen)"
+    },
+    "sa": {
+      "meaning": "so, dann, also"
+    },
+    "hvis": {
+      "meaning": "wenn, falls"
+    },
+    "fordi": {
+      "meaning": "weil",
+      "hook": "Nach «fordi» bleibt das Verb hinter dem Subjekt, nicht am Satzende."
+    },
+    "enn": {
+      "meaning": "als (beim Vergleich)",
+      "hook": "«bedre enn» = besser als."
+    },
+    "ogsa": {
+      "meaning": "auch"
+    },
+    "ikke": {
+      "meaning": "nicht"
+    },
+    "ingen": {
+      "meaning": "kein, keine; niemand"
+    },
+    "her": {
+      "meaning": "hier"
+    },
+    "hver": {
+      "meaning": "jeder, jede, jedes",
+      "hook": "«Hvert tiende minutt» = alle zehn Minuten."
+    },
+    "mer": {
+      "meaning": "mehr"
+    },
+    "hei": {
+      "meaning": "hallo, hi"
+    },
+    "takk": {
+      "meaning": "danke",
+      "hook": "Norweger sagen sehr oft «takk»: takk for maten, takk for i dag."
+    },
+    "god": {
+      "meaning": "gut",
+      "hook": "Sieht aus wie «Gott», ist aber «gut»."
+    },
+    "ny": {
+      "meaning": "neu"
+    },
+    "forste": {
+      "meaning": "erste"
+    },
+    "viktig": {
+      "meaning": "wichtig"
+    },
+    "dag": {
+      "meaning": "Tag",
+      "hook": "«I dag» = heute."
+    },
+    "morgen": {
+      "meaning": "Morgen",
+      "hook": "«I morgen» heißt morgen, «om morgenen» am Morgen. Wie im Deutschen!"
+    },
+    "maned": {
+      "meaning": "Monat"
+    },
+    "klokke": {
+      "meaning": "Uhr",
+      "hook": "«Klokka ti» = um zehn Uhr."
+    },
+    "halv": {
+      "meaning": "halb",
+      "hook": "«Halv tolv» ist wie «halb zwölf»: 11:30."
+    },
+    "tre": {
+      "meaning": "drei"
+    },
+    "seks": {
+      "meaning": "sechs"
+    },
+    "ti": {
+      "meaning": "zehn"
+    },
+    "tolv": {
+      "meaning": "zwölf"
+    },
+    "tredje": {
+      "meaning": "dritte"
+    },
+    "tiende": {
+      "meaning": "zehnte"
+    },
+    "minutt": {
+      "meaning": "Minute"
+    },
+    "mandag": {
+      "meaning": "Montag",
+      "hook": "Wochentage schreibt man klein."
+    },
+    "fredag": {
+      "meaning": "Freitag"
+    },
+    "sondag": {
+      "meaning": "Sonntag"
+    },
+    "februar": {
+      "meaning": "Februar"
+    },
+    "mars": {
+      "meaning": "März"
+    },
+    "krone": {
+      "meaning": "Krone (norwegisches Geld)"
+    },
+    "sporsmal": {
+      "meaning": "Frage"
+    },
+    "sms": {
+      "meaning": "SMS"
+    },
+    "hete": {
+      "meaning": "heißen",
+      "hook": "«Jeg heter…» = ich heiße…"
+    },
+    "spise": {
+      "meaning": "essen",
+      "hook": "Verwandt mit «Speise»."
+    },
+    "vise": {
+      "meaning": "zeigen",
+      "hook": "Verwandt mit «weisen»."
+    },
+    "komme": {
+      "meaning": "kommen"
+    },
+    "ga": {
+      "meaning": "gehen; fahren (Busse)",
+      "hook": "Busse und Straßenbahnen «går»: Sie gehen, also fahren."
+    },
+    "ta": {
+      "meaning": "nehmen"
+    },
+    "sporre": {
+      "meaning": "fragen"
+    },
+    "skrive": {
+      "meaning": "schreiben"
+    },
+    "svare": {
+      "meaning": "antworten"
+    },
+    "sende": {
+      "meaning": "senden, schicken"
+    },
+    "huske": {
+      "meaning": "sich erinnern, daran denken",
+      "hook": "«Husk!» = denk dran!"
+    },
+    "sted": {
+      "meaning": "Ort, Stelle; «i stedet» = stattdessen",
+      "hook": "Wie «Stätte» und «statt»: «i stedet» = an (seiner) Stelle."
+    },
+    "jobb": {
+      "meaning": "Job, Arbeit"
+    },
+    "jobbe": {
+      "meaning": "arbeiten"
+    },
+    "arbeide": {
+      "meaning": "arbeiten (formeller als «jobbe»)",
+      "hook": "Wie «arbeiten»."
+    },
+    "kollega": {
+      "meaning": "Kollege, Kollegin"
+    },
+    "kontor": {
+      "meaning": "Büro",
+      "hook": "Wie «Kontor»."
+    },
+    "kunde": {
+      "meaning": "Kunde, Kundin"
+    },
+    "lunsj": {
+      "meaning": "Mittagessen",
+      "hook": "Norweger essen früh zu Mittag, oft gegen 11:30."
+    },
+    "mote": {
+      "meaning": "Treffen, Sitzung"
+    },
+    "prosjekt": {
+      "meaning": "Projekt"
+    },
+    "presentere": {
+      "meaning": "präsentieren, vorstellen"
+    },
+    "sjef": {
+      "meaning": "Chef, Chefin",
+      "hook": "Wie im Deutschen: der Chef, nicht der Koch. Ein Koch ist «en kokk»."
+    },
+    "utvikler": {
+      "meaning": "Entwickler, Entwicklerin"
+    },
+    "beskjed": {
+      "meaning": "Nachricht, Bescheid",
+      "hook": "«Takk for beskjed» = danke für den Bescheid."
+    },
+    "hilsen": {
+      "meaning": "Gruß; «Hilsen» = Grüße (am Ende einer Nachricht)"
+    },
+    "midnatt": {
+      "meaning": "Mitternacht"
+    },
+    "leie": {
+      "meaning": "mieten; «til leie» = zu vermieten"
+    },
+    "leilighet": {
+      "meaning": "Wohnung"
+    },
+    "toromsleilighet": {
+      "meaning": "Zweizimmerwohnung (Wohnzimmer und ein Schlafzimmer)",
+      "hook": "to + rom + leilighet: Zwei-Zimmer-Wohnung."
+    },
+    "stue": {
+      "meaning": "Wohnzimmer",
+      "hook": "Wie die alte «Stube»."
+    },
+    "kjokken": {
+      "meaning": "Küche"
+    },
+    "soverom": {
+      "meaning": "Schlafzimmer",
+      "hook": "sove (schlafen) + rom (Raum)."
+    },
+    "bad": {
+      "meaning": "Bad, Badezimmer",
+      "hook": "Wie im Deutschen: «badet» ist das Bad."
+    },
+    "etasje": {
+      "meaning": "Etage, Stockwerk"
+    },
+    "kvadratmeter": {
+      "meaning": "Quadratmeter"
+    },
+    "husleie": {
+      "meaning": "Miete",
+      "hook": "hus (Haus) + leie (Miete)."
+    },
+    "depositum": {
+      "meaning": "Kaution"
+    },
+    "strom": {
+      "meaning": "Strom",
+      "hook": "Wie im Deutschen: elektrischer Strom und ein Fluss."
+    },
+    "inkludert": {
+      "meaning": "inklusive"
+    },
+    "ledig": {
+      "meaning": "frei, verfügbar",
+      "hook": "Wie «ledig»: nicht besetzt."
+    },
+    "husdyr": {
+      "meaning": "Haustier",
+      "hook": "hus (Haus) + dyr (Tier)."
+    },
+    "visning": {
+      "meaning": "Besichtigung (einer Wohnung)",
+      "hook": "Von «vise», zeigen."
+    },
+    "lys": {
+      "meaning": "hell, licht"
+    },
+    "buss": {
+      "meaning": "Bus"
+    },
+    "trikk": {
+      "meaning": "Straßenbahn"
+    },
+    "spor": {
+      "meaning": "Gleis, Spur"
+    },
+    "sjafor": {
+      "meaning": "Fahrer, Fahrerin",
+      "hook": "Wie «Chauffeur»."
+    },
+    "billett": {
+      "meaning": "Fahrkarte, Ticket"
+    },
+    "gjelde": {
+      "meaning": "gelten"
+    },
+    "informasjon": {
+      "meaning": "Information"
+    },
+    "syk": {
+      "meaning": "krank",
+      "hook": "Verwandt mit «siech»."
+    },
+    "feber": {
+      "meaning": "Fieber"
+    },
+    "hals": {
+      "meaning": "Hals"
+    },
+    "vondt": {
+      "meaning": "Schmerz; «ha vondt i» = Schmerzen haben in",
+      "hook": "«Jeg har vondt i…» + Körperteil."
+    },
+    "lege": {
+      "meaning": "Arzt, Ärztin",
+      "hook": "Falscher Freund: hat nichts mit «legen» zu tun. «Legen» heißt «der Arzt»."
+    },
+    "time": {
+      "meaning": "Termin; Stunde",
+      "hook": "«En time» ist eine Stunde oder ein Termin."
+    },
+    "bestille": {
+      "meaning": "bestellen, buchen"
+    },
+    "bedring": {
+      "meaning": "Besserung",
+      "hook": "«God bedring!» = gute Besserung!"
+    },
+    "sykmelding": {
+      "meaning": "Krankschreibung",
+      "hook": "syk (krank) + melding (Meldung)."
+    },
+    "alle": {
+      "meaning": "alle"
+    },
+    "bare": {
+      "meaning": "nur, bloß"
+    },
+    "da": {
+      "meaning": "dann; als"
+    },
+    "den": {
+      "meaning": "er, sie, es; der, die, das (bei en- und ei-Wörtern)"
+    },
+    "dere": {
+      "meaning": "ihr",
+      "hook": "du = eine Person, dere = mehrere."
+    },
+    "eller": {
+      "meaning": "oder"
+    },
+    "eksempel": {
+      "meaning": "Beispiel",
+      "hook": "for eksempel = zum Beispiel."
+    },
+    "foer": {
+      "meaning": "vor, bevor",
+      "hook": "før (vor) ist nicht for (für): Das ø macht den Unterschied."
+    },
+    "forst": {
+      "meaning": "zuerst"
+    },
+    "hva": {
+      "meaning": "was"
+    },
+    "hele": {
+      "meaning": "ganz, der ganze",
+      "hook": "hele tiden = die ganze Zeit."
+    },
+    "hjemme": {
+      "meaning": "zu Hause",
+      "hook": "hjemme = zu Hause; hjem = nach Hause. Wie «daheim» und «heim»."
+    },
+    "inn": {
+      "meaning": "hinein, rein (Bewegung)"
+    },
+    "mange": {
+      "meaning": "viele",
+      "hook": "Wie «manche»."
+    },
+    "men": {
+      "meaning": "aber"
+    },
+    "nei": {
+      "meaning": "nein"
+    },
+    "neste": {
+      "meaning": "nächste"
+    },
+    "noen": {
+      "meaning": "einige, ein paar; jemand"
+    },
+    "oss": {
+      "meaning": "uns"
+    },
+    "over": {
+      "meaning": "über; (eine Liste) von"
+    },
+    "to": {
+      "meaning": "zwei"
+    },
+    "uke": {
+      "meaning": "Woche"
+    },
+    "norsk": {
+      "meaning": "Norwegisch"
+    },
+    "fa": {
+      "meaning": "bekommen"
+    },
+    "gjore": {
+      "meaning": "tun, machen"
+    },
+    "bli": {
+      "meaning": "werden"
+    },
+    "bo": {
+      "meaning": "wohnen",
+      "hook": "bo = wohnen; leve = leben."
+    },
+    "si": {
+      "meaning": "sagen"
+    },
+    "sitte": {
+      "meaning": "sitzen"
+    },
+    "ringe": {
+      "meaning": "anrufen",
+      "hook": "Wie «anklingeln»."
+    },
+    "trenge": {
+      "meaning": "brauchen"
+    },
+    "kjope": {
+      "meaning": "kaufen",
+      "hook": "Wie «kaufen»."
+    },
+    "ville": {
+      "meaning": "wollen",
+      "hook": "«vil» heißt wollen, wie «ich will»."
+    },
+    "matte": {
+      "meaning": "müssen",
+      "hook": "«Jeg må» = ich muss."
+    },
+    "mat": {
+      "meaning": "Essen, Lebensmittel"
+    },
+    "ting": {
+      "meaning": "Ding, Sache",
+      "hook": "Wie «Ding»."
+    },
+    "tid": {
+      "meaning": "Zeit",
+      "hook": "tid ist Zeit allgemein; ein «time» beim Arzt ist ein Termin."
+    },
+    "lordag": {
+      "meaning": "Samstag"
+    },
+    "torsdag": {
+      "meaning": "Donnerstag",
+      "hook": "Thors Tag, wie Donnerstag (Donar)."
+    },
+    "fin": {
+      "meaning": "schön, fein",
+      "hook": "Så fint! = Wie schön!"
+    },
+    "familie": {
+      "meaning": "Familie"
+    },
+    "nummer": {
+      "meaning": "Nummer"
+    },
+    "mobil": {
+      "meaning": "Handy"
+    },
+    "apne": {
+      "meaning": "öffnen"
+    },
+    "prove": {
+      "meaning": "probieren, versuchen",
+      "hook": "Wie «proben, probieren»."
+    },
+    "bankid": {
+      "meaning": "BankID, die norwegische elektronische ID",
+      "hook": "Damit loggst du dich bei Banken, Helsenorge und Skatteetaten ein."
+    },
+    "bank": {
+      "meaning": "Bank"
+    },
+    "konto": {
+      "meaning": "Konto"
+    },
+    "nettbank": {
+      "meaning": "Onlinebanking",
+      "hook": "nett (Internet) + bank."
+    },
+    "kode": {
+      "meaning": "Code"
+    },
+    "fodselsnummer": {
+      "meaning": "persönliche Identifikationsnummer",
+      "hook": "fødsel (Geburt) + nummer: Sie beginnt mit deinem Geburtsdatum."
+    },
+    "skatteetaten": {
+      "meaning": "die norwegische Steuerbehörde",
+      "hook": "skatt (Steuer) + etat (Behörde). Sie vergibt auch Identifikationsnummern."
+    },
+    "helsenorge": {
+      "meaning": "das staatliche Gesundheitsportal",
+      "hook": "helse (Gesundheit) + Norge."
+    },
+    "skatt": {
+      "meaning": "Steuer",
+      "hook": "Wie «Schatz»: was der Staat einnimmt."
+    },
+    "skattekort": {
+      "meaning": "Steuerkarte",
+      "hook": "Sie sagt deinem Arbeitgeber, wie viel Steuer er von deinem Lohn abziehen soll."
+    },
+    "lonn": {
+      "meaning": "Lohn, Gehalt"
+    },
+    "prosent": {
+      "meaning": "Prozent"
+    },
+    "trekke": {
+      "meaning": "ziehen; abziehen (Steuern)"
+    },
+    "automatisk": {
+      "meaning": "automatisch"
+    },
+    "nettside": {
+      "meaning": "Website"
+    },
+    "kreve": {
+      "meaning": "verlangen, erfordern"
+    },
+    "logge": {
+      "meaning": "loggen (logge inn = einloggen)"
+    },
+    "sjekke": {
+      "meaning": "prüfen, checken"
+    },
+    "pass": {
+      "meaning": "Pass, Reisepass"
+    },
+    "velkommen": {
+      "meaning": "willkommen"
+    },
+    "liste": {
+      "meaning": "Liste"
+    },
+    "fastlege": {
+      "meaning": "Hausarzt, Hausärztin",
+      "hook": "fast (fest) + lege (Arzt): dein fester Arzt."
+    },
+    "legekontor": {
+      "meaning": "Arztpraxis"
+    },
+    "legevakt": {
+      "meaning": "ärztlicher Bereitschaftsdienst",
+      "hook": "Ruf 116 117 an, wenn deine Hausarztpraxis geschlossen ist."
+    },
+    "akutt": {
+      "meaning": "akut, dringend"
+    },
+    "medisin": {
+      "meaning": "Medizin, Medikament"
+    },
+    "rygg": {
+      "meaning": "Rücken"
+    },
+    "verre": {
+      "meaning": "schlimmer",
+      "hook": "dårlig → verre → verst (schlecht, schlimmer, am schlimmsten)."
+    },
+    "gjerne": {
+      "meaning": "gern; vil gjerne = möchte gern",
+      "hook": "«Jeg vil gjerne…» ist die höfliche Art, um etwas zu bitten."
+    },
+    "helg": {
+      "meaning": "Wochenende",
+      "hook": "i helgen = am (letzten/nächsten) Wochenende."
+    },
+    "hytte": {
+      "meaning": "Hütte, Ferienhaus",
+      "hook": "«På hytta» ist das klassische norwegische Wochenende."
+    },
+    "ski": {
+      "meaning": "Ski",
+      "hook": "gå på ski = Ski fahren (wörtlich: auf Skiern gehen)."
+    },
+    "regne": {
+      "meaning": "regnen; rechnen",
+      "hook": "Beides steckt drin: regnen und rechnen."
+    },
+    "matpakke": {
+      "meaning": "Brotdose, Pausenbrot",
+      "hook": "Belegte Brote in Papier: das norwegische Mittagessen."
+    },
+    "kantine": {
+      "meaning": "Kantine"
+    },
+    "nordmann": {
+      "meaning": "Norweger, Norwegerin"
+    },
+    "ekte": {
+      "meaning": "echt"
+    },
+    "april": {
+      "meaning": "April"
+    },
+    "at": {
+      "meaning": "dass"
+    },
+    "engelsk": {
+      "meaning": "Englisch"
+    },
+    "etterpa": {
+      "meaning": "danach, hinterher"
+    },
+    "gammel": {
+      "meaning": "alt",
+      "hook": "Alter: «Jeg er 30 år gammel»."
+    },
+    "kaffe": {
+      "meaning": "Kaffee"
+    },
+    "kake": {
+      "meaning": "Kuchen"
+    },
+    "like": {
+      "meaning": "mögen"
+    },
+    "liten": {
+      "meaning": "klein",
+      "hook": "liten (en), lita (ei), lite (et), små (Plural)."
+    },
+    "snakke": {
+      "meaning": "sprechen, reden"
+    },
+    "ved": {
+      "meaning": "bei, an, neben"
+    },
+    "var-season": {
+      "meaning": "Frühling",
+      "hook": "Gleiche Schreibung wie «vår» (unser): Der Zusammenhang entscheidet."
+    },
+    "var-ours": {
+      "meaning": "unser, unsere"
+    },
+    "ar": {
+      "meaning": "Jahr"
+    },
+    "onske": {
+      "meaning": "wünschen"
+    },
+    "pris": {
+      "meaning": "Preis"
+    },
+    "melding": {
+      "meaning": "Nachricht, Meldung"
+    },
+    "kjaer": {
+      "meaning": "liebe, lieber (Anrede)",
+      "hook": "«Kjære …» eröffnet einen freundlichen Brief."
+    },
+    "i-fjor": {
+      "meaning": "letztes Jahr"
+    },
+    "arbeidssoker": {
+      "meaning": "Arbeitssuchende, Arbeitssuchender",
+      "hook": "arbeid (Arbeit) + søker (Suchender)."
+    },
+    "meldekort": {
+      "meaning": "Meldekarte (alle zwei Wochen an NAV geschickt)"
+    },
+    "utbetaling": {
+      "meaning": "Auszahlung"
+    },
+    "registrere": {
+      "meaning": "registrieren"
+    },
+    "senest": {
+      "meaning": "spätestens"
+    },
+    "stoppe": {
+      "meaning": "stoppen, anhalten"
+    },
+    "fjortende": {
+      "meaning": "vierzehnte; hver fjortende dag = alle zwei Wochen",
+      "hook": "hver fjortende dag = alle 14 Tage."
+    },
+    "til-salgs": {
+      "meaning": "zu verkaufen"
+    },
+    "brukt": {
+      "meaning": "gebraucht"
+    },
+    "sykkel": {
+      "meaning": "Fahrrad"
+    },
+    "gir": {
+      "meaning": "Gang (beim Fahrrad)"
+    },
+    "fungere": {
+      "meaning": "funktionieren"
+    },
+    "bremse": {
+      "meaning": "Bremse"
+    },
+    "hente": {
+      "meaning": "abholen, holen",
+      "hook": "«kan hentes» = kann abgeholt werden (-s macht passiv)."
+    },
+    "interessert": {
+      "meaning": "interessiert"
+    },
+    "forstemann": {
+      "meaning": "wer zuerst kommt, mahlt zuerst",
+      "hook": "Wörtlich: der erste Mann zur Mühle. Wie im Deutschen!"
+    },
+    "stilling": {
+      "meaning": "Stelle, Position",
+      "hook": "fast stilling = Festanstellung."
+    },
+    "soke": {
+      "meaning": "suchen; sich bewerben",
+      "hook": "søke på en jobb = sich auf eine Stelle bewerben."
+    },
+    "soknad": {
+      "meaning": "Bewerbung"
+    },
+    "soknadsfrist": {
+      "meaning": "Bewerbungsfrist",
+      "hook": "søknad (Bewerbung) + frist (Frist)."
+    },
+    "tilby": {
+      "meaning": "anbieten"
+    },
+    "fast": {
+      "meaning": "fest, unbefristet",
+      "hook": "Falscher Freund: nie «beinahe». «Fast stilling» = Festanstellung."
+    },
+    "fleksibel": {
+      "meaning": "flexibel"
+    },
+    "arbeidstid": {
+      "meaning": "Arbeitszeit"
+    },
+    "hjemmekontor": {
+      "meaning": "Homeoffice",
+      "hook": "hjemme (zu Hause) + kontor (Büro)."
+    },
+    "erfaring": {
+      "meaning": "Erfahrung"
+    },
+    "firma": {
+      "meaning": "Firma"
+    },
+    "team": {
+      "meaning": "Team"
+    },
+    "dugnad": {
+      "meaning": "Tag gemeinsamer freiwilliger Arbeit",
+      "hook": "Nachbarn oder Eltern arbeiten gemeinsam und unbezahlt und essen danach zusammen."
+    },
+    "borettslag": {
+      "meaning": "Wohnungsgenossenschaft"
+    },
+    "styre": {
+      "meaning": "Vorstand (eines Vereins)"
+    },
+    "nabo": {
+      "meaning": "Nachbar, Nachbarin"
+    },
+    "inngang": {
+      "meaning": "Eingang"
+    },
+    "motes": {
+      "meaning": "sich treffen",
+      "hook": "møte + s = einander treffen."
+    },
+    "rydde": {
+      "meaning": "aufräumen"
+    },
+    "soppel": {
+      "meaning": "Müll"
+    },
+    "male": {
+      "meaning": "malen, streichen"
+    },
+    "gjerde": {
+      "meaning": "Zaun"
+    },
+    "plante": {
+      "meaning": "pflanzen"
+    },
+    "blomst": {
+      "meaning": "Blume"
+    },
+    "hanske": {
+      "meaning": "Handschuh"
+    },
+    "grille": {
+      "meaning": "grillen"
+    },
+    "polse": {
+      "meaning": "Würstchen, Hotdog"
+    },
+    "programvare": {
+      "meaning": "Software"
+    },
+    "system": {
+      "meaning": "System"
+    },
+    "server": {
+      "meaning": "Server"
+    },
+    "database": {
+      "meaning": "Datenbank"
+    },
+    "feil": {
+      "meaning": "Fehler, Bug",
+      "hook": "«Det er feil» heißt auch «das ist falsch»."
+    },
+    "oppgave": {
+      "meaning": "Aufgabe"
+    },
+    "losning": {
+      "meaning": "Lösung"
+    },
+    "bruker": {
+      "meaning": "Benutzer, Benutzerin"
+    },
+    "nettverk": {
+      "meaning": "Netzwerk"
+    },
+    "sikkerhet": {
+      "meaning": "Sicherheit"
+    },
+    "oppdatering": {
+      "meaning": "Update, Aktualisierung"
+    },
+    "skjerm": {
+      "meaning": "Bildschirm",
+      "hook": "Wie «Schirm»."
+    },
+    "pasient": {
+      "meaning": "Patient, Patientin"
+    },
+    "sykepleier": {
+      "meaning": "Krankenpfleger, Krankenpflegerin",
+      "hook": "syk (krank) + pleier (Pfleger)."
+    },
+    "sykehus": {
+      "meaning": "Krankenhaus",
+      "hook": "syk (krank) + hus (Haus): genau wie Kranken-haus."
+    },
+    "vakt": {
+      "meaning": "Schicht, Dienst",
+      "hook": "Wie «Wacht»."
+    },
+    "resept": {
+      "meaning": "Rezept (vom Arzt)",
+      "hook": "Wie im Deutschen. Aber ein Kochrezept ist «oppskrift»."
+    },
+    "blodtrykk": {
+      "meaning": "Blutdruck"
+    },
+    "smerte": {
+      "meaning": "Schmerz"
+    },
+    "undersoke": {
+      "meaning": "untersuchen"
+    },
+    "journal": {
+      "meaning": "Patientenakte",
+      "hook": "Keine Zeitschrift: die Akte eines Patienten."
+    },
+    "avdeling": {
+      "meaning": "Station, Abteilung"
+    },
+    "pleie": {
+      "meaning": "pflegen"
+    },
+    "vaksine": {
+      "meaning": "Impfstoff, Impfung"
+    },
+    "byggeplass": {
+      "meaning": "Baustelle"
+    },
+    "verktoy": {
+      "meaning": "Werkzeug",
+      "hook": "Wie «Werkzeug»."
+    },
+    "hjelm": {
+      "meaning": "Helm"
+    },
+    "stige": {
+      "meaning": "Leiter",
+      "hook": "Wie «steigen»."
+    },
+    "tegning": {
+      "meaning": "Zeichnung, Plan"
+    },
+    "maale": {
+      "meaning": "messen"
+    },
+    "bore": {
+      "meaning": "bohren"
+    },
+    "betong": {
+      "meaning": "Beton"
+    },
+    "tak": {
+      "meaning": "Dach, Decke",
+      "hook": "Wie «Dach». Nicht «takk» (danke)!"
+    },
+    "vegg": {
+      "meaning": "Wand"
+    },
+    "gulv": {
+      "meaning": "Fußboden"
+    },
+    "elektriker": {
+      "meaning": "Elektriker, Elektrikerin"
+    },
+    "gjest": {
+      "meaning": "Gast"
+    },
+    "bestilling": {
+      "meaning": "Bestellung, Reservierung"
+    },
+    "servitor": {
+      "meaning": "Kellner, Kellnerin"
+    },
+    "kokk": {
+      "meaning": "Koch, Köchin",
+      "hook": "Wie «Koch»."
+    },
+    "meny": {
+      "meaning": "Speisekarte, Menü"
+    },
+    "regning": {
+      "meaning": "Rechnung",
+      "hook": "Wie «Rechnung»."
+    },
+    "bord": {
+      "meaning": "Tisch",
+      "hook": "Falscher Freund: kein «Bord», sondern ein Tisch."
+    },
+    "allergi": {
+      "meaning": "Allergie"
+    },
+    "oppvask": {
+      "meaning": "Abwasch"
+    },
+    "kasse": {
+      "meaning": "Kasse"
+    },
+    "skift": {
+      "meaning": "Schicht"
+    },
+    "reservere": {
+      "meaning": "reservieren"
+    },
+    "vennlig": {
+      "meaning": "freundlich",
+      "hook": "«Med vennlig hilsen» = mit freundlichen Grüßen."
+    },
+    "alfabet": {
+      "meaning": "Alphabet"
+    },
+    "bokstav": {
+      "meaning": "Buchstabe",
+      "hook": "Wie «Buchstabe»."
+    },
+    "lyd": {
+      "meaning": "Laut, Ton"
+    },
+    "hore": {
+      "meaning": "hören",
+      "hook": "«Hør!» ist der Imperativ: hör zu!"
+    },
+    "kjenne": {
+      "meaning": "kennen",
+      "hook": "kjenne ist für Menschen und Dinge, die man kennt; vite für Wissen, wie «kennen» und «wissen»."
+    },
+    "av": {
+      "meaning": "von; ab"
+    },
+    "de": {
+      "meaning": "sie (Plural)",
+      "hook": "Gesprochen «di»."
+    },
+    "dem": {
+      "meaning": "sie, ihnen (Plural, Objekt)"
+    },
+    "hun": {
+      "meaning": "sie (eine Frau)"
+    },
+    "deg": {
+      "meaning": "dich, dir",
+      "hook": "du → deg, wie jeg → meg."
+    },
+    "sta": {
+      "meaning": "stehen"
+    },
+    "helt": {
+      "meaning": "ganz, völlig"
+    },
+    "slutt": {
+      "meaning": "Schluss, Ende",
+      "hook": "«til slutt» = zum Schluss."
+    },
+    "baer": {
+      "meaning": "Beere"
+    },
+    "ol": {
+      "meaning": "Bier",
+      "hook": "Falscher Freund: kein Öl, sondern Bier!"
+    },
+    "hvor": {
+      "meaning": "wo",
+      "hook": "Das h in hv- ist stumm: «wor»."
+    },
+    "na": {
+      "meaning": "jetzt"
+    },
+    "hyggelig": {
+      "meaning": "nett, angenehm",
+      "hook": "«Bare hyggelig!» = gern geschehen."
+    },
+    "hilse": {
+      "meaning": "grüßen"
+    },
+    "i-like-mate": {
+      "meaning": "gleichfalls"
+    },
+    "bra": {
+      "meaning": "gut",
+      "hook": "«Ha det bra!» oder einfach «Ha det!» = tschüss!"
+    },
+    "ja": {
+      "meaning": "ja"
+    },
+    "unnskyld": {
+      "meaning": "Entschuldigung"
+    },
+    "mann": {
+      "meaning": "Mann"
+    },
+    "gate": {
+      "meaning": "Straße",
+      "hook": "Wie «Gasse»."
+    },
+    "litt": {
+      "meaning": "ein bisschen"
+    },
+    "stasjon": {
+      "meaning": "Station, Bahnhof",
+      "hook": "Das sj klingt wie «sch»: «sta-schon»."
+    },
+    "der": {
+      "meaning": "dort, da"
+    },
+    "borte": {
+      "meaning": "weg; «der borte» = dort drüben"
+    },
+    "venstre": {
+      "meaning": "links"
+    },
+    "hoyre": {
+      "meaning": "rechts"
+    },
+    "toalett": {
+      "meaning": "Toilette"
+    },
+    "forsta": {
+      "meaning": "verstehen"
+    },
+    "sakte": {
+      "meaning": "langsam",
+      "hook": "sakte → saktere: langsam → langsamer."
+    },
+    "bety": {
+      "meaning": "bedeuten"
+    },
+    "selvfolgelig": {
+      "meaning": "selbstverständlich",
+      "hook": "selv (selbst) + følgelig (folglich)."
+    },
+    "kjore": {
+      "meaning": "fahren (Auto)"
+    },
+    "kino": {
+      "meaning": "Kino",
+      "hook": "k vor i klingt weich, wie das ch in «ich»."
+    },
+    "kirke": {
+      "meaning": "Kirche"
+    },
+    "skje": {
+      "meaning": "Löffel"
+    },
+    "lang": {
+      "meaning": "lang"
+    },
+    "penn": {
+      "meaning": "Stift, Kugelschreiber",
+      "hook": "Doppeltes n, kurzer Vokal. «pen» mit einem n heißt hübsch."
+    },
+    "pen": {
+      "meaning": "hübsch"
+    },
+    "stum": {
+      "meaning": "stumm"
+    },
+    "tall": {
+      "meaning": "Zahl"
+    },
+    "null": {
+      "meaning": "null"
+    },
+    "fire": {
+      "meaning": "vier"
+    },
+    "fem": {
+      "meaning": "fünf"
+    },
+    "sju": {
+      "meaning": "sieben",
+      "hook": "Gesprochen «schu»."
+    },
+    "atte": {
+      "meaning": "acht"
+    },
+    "ni": {
+      "meaning": "neun"
+    },
+    "elleve": {
+      "meaning": "elf"
+    },
+    "tjue": {
+      "meaning": "zwanzig"
+    },
+    "forti": {
+      "meaning": "vierzig",
+      "hook": "-ti sind die Zehner, -ten die Zahlen 13 bis 19: førti 40, fjorten 14."
+    },
+    "femti": {
+      "meaning": "fünfzig"
+    },
+    "sytti": {
+      "meaning": "siebzig",
+      "hook": "sytti 70, sytten 17."
+    },
+    "hundre": {
+      "meaning": "hundert"
+    },
+    "tusen": {
+      "meaning": "tausend",
+      "hook": "«Tusen takk» = tausend Dank: vielen Dank."
+    },
+    "mye": {
+      "meaning": "viel; «hvor mye» = wie viel"
+    },
+    "koste": {
+      "meaning": "kosten"
+    },
+    "tirsdag": {
+      "meaning": "Dienstag"
+    },
+    "onsdag": {
+      "meaning": "Mittwoch",
+      "hook": "Wodans Tag, wie das englische Wednesday."
+    },
+    "passe": {
+      "meaning": "passen",
+      "hook": "«Det passer fint» = das passt gut."
+    },
+    "ses": {
+      "meaning": "bis bald, man sieht sich"
+    },
+    "handle": {
+      "meaning": "einkaufen",
+      "hook": "Wie «handeln»."
+    },
+    "melk": {
+      "meaning": "Milch"
+    },
+    "brod": {
+      "meaning": "Brot"
+    },
+    "eple": {
+      "meaning": "Apfel"
+    },
+    "pose": {
+      "meaning": "Tüte",
+      "hook": "Tüten kosten an der Kasse extra, deshalb wirst du gefragt."
+    },
+    "kort": {
+      "meaning": "Karte"
+    },
+    "kontant": {
+      "meaning": "bar",
+      "hook": "In Norwegen zahlen die meisten mit Karte oder Handy, du antwortest also meist «kort»."
+    },
+    "kvittering": {
+      "meaning": "Kassenbon, Quittung",
+      "hook": "Wie «Quittung»."
+    },
+    "betale": {
+      "meaning": "bezahlen"
+    },
+    "kafe": {
+      "meaning": "Café"
+    },
+    "sentrum": {
+      "meaning": "Innenstadt, Zentrum"
+    },
+    "kanelbolle": {
+      "meaning": "Zimtschnecke"
+    },
+    "skolebolle": {
+      "meaning": "Hefebrötchen mit Vanillecreme und Kokos",
+      "hook": "Wörtlich «Schulbrötchen»."
+    },
+    "stor": {
+      "meaning": "groß"
+    },
+    "svart": {
+      "meaning": "schwarz"
+    },
+    "gang": {
+      "meaning": "Mal",
+      "hook": "Falscher Freund: kein Flur. «en gang til» = noch einmal."
+    },
+    "sin": {
+      "meaning": "sein, ihr (eigenes)"
+    },
+    "hvordan": {
+      "meaning": "wie"
+    },
+    "synes": {
+      "meaning": "finden (Meinung)"
+    },
+    "tro": {
+      "meaning": "glauben"
+    },
+    "laere": {
+      "meaning": "lernen, lehren",
+      "hook": "Beides in einem Wort: lernen und lehren."
+    },
+    "flere": {
+      "meaning": "mehrere, mehr"
+    },
+    "bedre": {
+      "meaning": "besser"
+    },
+    "alene": {
+      "meaning": "allein"
+    },
+    "ut": {
+      "meaning": "aus, hinaus; «høres … ut» = klingen (nach)"
+    },
+    "fri": {
+      "meaning": "frei; «ha fri» = frei haben"
+    },
+    "reise": {
+      "meaning": "reisen"
+    },
+    "lese": {
+      "meaning": "lesen"
+    },
+    "kveld": {
+      "meaning": "Abend"
+    },
+    "sol": {
+      "meaning": "Sonne"
+    },
+    "by": {
+      "meaning": "Stadt"
+    },
+    "butikk": {
+      "meaning": "Geschäft, Laden",
+      "hook": "Wie «Boutique»."
+    },
+    "stengt": {
+      "meaning": "geschlossen"
+    },
+    "stille": {
+      "meaning": "still, ruhig"
+    },
+    "sammen": {
+      "meaning": "zusammen",
+      "hook": "Wie «zusammen»."
+    },
+    "deres": {
+      "meaning": "euer, eure; ihr, ihre (Plural)"
+    },
+    "noe": {
+      "meaning": "etwas"
+    },
+    "mulig": {
+      "meaning": "möglich"
+    },
+    "snart": {
+      "meaning": "bald"
+    },
+    "se": {
+      "meaning": "sehen, anschauen"
+    },
+    "sist": {
+      "meaning": "letzte (Mal)"
+    },
+    "opp": {
+      "meaning": "auf, hinauf"
+    },
+    "aldri": {
+      "meaning": "nie"
+    },
+    "sno": {
+      "meaning": "Schnee"
+    },
+    "kald": {
+      "meaning": "kalt"
+    },
+    "film": {
+      "meaning": "Film"
+    },
+    "tur": {
+      "meaning": "Ausflug, Spaziergang",
+      "hook": "Wie «Tour»."
+    },
+    "glede": {
+      "meaning": "«glede seg til» = sich freuen auf",
+      "hook": "Wie «sich freuen» (Freude)."
+    },
+    "dato": {
+      "meaning": "Datum"
+    },
+    "august": {
+      "meaning": "August"
+    },
+    "mai": {
+      "meaning": "Mai"
+    },
+    "nett": {
+      "meaning": "Netz, Internet; «på nett» = online"
+    },
+    "app": {
+      "meaning": "App"
+    },
+    "legge": {
+      "meaning": "legen; «legge inn» = eingeben",
+      "hook": "Achtung: «legge» mit doppeltem g ist legen. «lege» ist der Arzt."
+    },
+    "starte": {
+      "meaning": "starten"
+    },
+    "vaske": {
+      "meaning": "waschen"
+    },
+    "klaer": {
+      "meaning": "Kleidung",
+      "hook": "Wie «Kleider»."
+    },
+    "test": {
+      "meaning": "Test"
+    },
+    "endelig": {
+      "meaning": "endlich"
+    },
+    "dra": {
+      "meaning": "fahren, gehen, aufbrechen"
+    },
+    "medarbeidersamtale": {
+      "meaning": "Mitarbeitergespräch"
+    },
+    "saerlig": {
+      "meaning": "besonders"
+    },
+    "dit": {
+      "meaning": "dorthin"
+    },
+    "kurs": {
+      "meaning": "Kurs"
+    },
+    "prosjektledelse": {
+      "meaning": "Projektleitung"
+    },
+    "hjelpe": {
+      "meaning": "helfen"
+    },
+    "dessuten": {
+      "meaning": "außerdem"
+    },
+    "slik": {
+      "meaning": "so, auf diese Art; «slik at» = sodass"
+    },
+    "hores": {
+      "meaning": "klingen (nach)",
+      "hook": "Wie «sich anhören»."
+    },
+    "fornuftig": {
+      "meaning": "vernünftig",
+      "hook": "Wie «vernünftig»."
+    },
+    "budsjett": {
+      "meaning": "Budget"
+    },
+    "referat": {
+      "meaning": "Protokoll (einer Sitzung)"
+    },
+    "teammote": {
+      "meaning": "Teamsitzung"
+    },
+    "stede": {
+      "meaning": "anwesend (bei einer Sitzung)"
+    },
+    "lansering": {
+      "meaning": "Launch, Markteinführung"
+    },
+    "utsette": {
+      "meaning": "verschieben"
+    },
+    "sommerferie": {
+      "meaning": "Sommerferien, Sommerurlaub"
+    },
+    "hjemmefra": {
+      "meaning": "von zu Hause aus"
+    },
+    "lenge": {
+      "meaning": "lange; «så lenge» = solange"
+    },
+    "planlegge": {
+      "meaning": "planen"
+    },
+    "datter": {
+      "meaning": "Tochter"
+    },
+    "tilbud": {
+      "meaning": "Angebot"
+    },
+    "plass": {
+      "meaning": "Platz"
+    },
+    "barnehage": {
+      "meaning": "Kita, Kindergarten",
+      "hook": "barn (Kind) + hage (Garten): fast wörtlich Kindergarten."
+    },
+    "innen": {
+      "meaning": "bis, innerhalb"
+    },
+    "frist": {
+      "meaning": "Frist"
+    },
+    "miste": {
+      "meaning": "verlieren, verpassen"
+    },
+    "kalle": {
+      "meaning": "nennen, rufen"
+    },
+    "tilvenning": {
+      "meaning": "Eingewöhnung"
+    },
+    "foreldre": {
+      "meaning": "Eltern"
+    },
+    "barn": {
+      "meaning": "Kind"
+    },
+    "trygg": {
+      "meaning": "sicher, geborgen"
+    },
+    "kontakte": {
+      "meaning": "kontaktieren"
+    },
+    "direkte": {
+      "meaning": "direkt"
+    },
+    "vaskemaskin": {
+      "meaning": "Waschmaschine"
+    },
+    "maskin": {
+      "meaning": "Maschine"
+    },
+    "slutte": {
+      "meaning": "aufhören"
+    },
+    "virke": {
+      "meaning": "funktionieren",
+      "hook": "Wie «wirken»."
+    },
+    "lukte": {
+      "meaning": "riechen"
+    },
+    "brent": {
+      "meaning": "verbrannt"
+    },
+    "kontakt": {
+      "meaning": "Steckdose, Stecker; Kontakt"
+    },
+    "sikring": {
+      "meaning": "Sicherung"
+    },
+    "orden": {
+      "meaning": "Ordnung; «i orden» = in Ordnung"
+    },
+    "galt": {
+      "meaning": "falsch"
+    },
+    "selve": {
+      "meaning": "selbst («selve maskinen» = die Maschine selbst)"
+    },
+    "reparator": {
+      "meaning": "Techniker, Handwerker (für Reparaturen)"
+    },
+    "hverdag": {
+      "meaning": "Werktag; Alltag"
+    },
+    "forhand": {
+      "meaning": "im Voraus"
+    },
+    "paske": {
+      "meaning": "Ostern"
+    },
+    "ferie": {
+      "meaning": "Ferien, Urlaub"
+    },
+    "fjell": {
+      "meaning": "Gebirge, Berg"
+    },
+    "skitur": {
+      "meaning": "Skitour"
+    },
+    "appelsin": {
+      "meaning": "Orange"
+    },
+    "krimbok": {
+      "meaning": "Krimi"
+    },
+    "lur": {
+      "meaning": "schlau; «det er lurt» = das ist eine gute Idee"
+    },
+    "ko": {
+      "meaning": "Schlange, Stau"
+    },
+    "vei": {
+      "meaning": "Weg, Straße",
+      "hook": "Wie «Weg»."
+    },
+    "bade": {
+      "meaning": "beide; «både … og» = sowohl … als auch"
+    },
+    "vaer": {
+      "meaning": "Wetter"
+    },
+    "skifte": {
+      "meaning": "wechseln"
+    },
+    "fort": {
+      "meaning": "schnell"
+    },
+    "utenfor": {
+      "meaning": "draußen, vor"
+    },
+    "loype": {
+      "meaning": "Loipe",
+      "hook": "Wie «Loipe»: Das deutsche Wort kommt aus dem Norwegischen."
+    },
+    "burde": {
+      "meaning": "sollte"
+    },
+    "skredvarsel": {
+      "meaning": "Lawinenwarnung"
+    },
+    "igjen": {
+      "meaning": "wieder; «bli igjen» = dableiben"
+    },
+    "holde": {
+      "meaning": "halten"
+    },
+    "helligdag": {
+      "meaning": "Feiertag",
+      "hook": "Wie «heiliger Tag»."
+    },
+    "bane": {
+      "meaning": "U-Bahn"
+    },
+    "videre": {
+      "meaning": "weiter"
+    },
+    "innover": {
+      "meaning": "nach innen, hinein"
+    },
+    "marka": {
+      "meaning": "die Wälder rund um Oslo"
+    },
+    "skinne": {
+      "meaning": "scheinen"
+    },
+    "sliten": {
+      "meaning": "müde, erschöpft"
+    },
+    "klem": {
+      "meaning": "Umarmung (auch als Gruß am Ende einer Nachricht)"
+    },
+    "host": {
+      "meaning": "Herbst"
+    },
+    "salong": {
+      "meaning": "Salon"
+    },
+    "klipp": {
+      "meaning": "Haarschnitt"
+    },
+    "nar": {
+      "meaning": "wann; wenn"
+    },
+    "ettermiddag": {
+      "meaning": "Nachmittag"
+    },
+    "dessverre": {
+      "meaning": "leider"
+    },
+    "full": {
+      "meaning": "voll"
+    },
+    "navn": {
+      "meaning": "Name"
+    },
+    "avbestille": {
+      "meaning": "stornieren, absagen",
+      "hook": "Das Gegenteil von bestille (bestellen)."
+    },
+    "middag": {
+      "meaning": "Abendessen",
+      "hook": "Achtung: kein Mittag. «Middag» ist die warme Hauptmahlzeit, meist gegen 17 Uhr."
+    },
+    "invitere": {
+      "meaning": "einladen"
+    },
+    "begynne": {
+      "meaning": "beginnen"
+    },
+    "drikke": {
+      "meaning": "trinken"
+    },
+    "gi": {
+      "meaning": "geben"
+    },
+    "vite": {
+      "meaning": "wissen"
+    },
+    "lage": {
+      "meaning": "machen, kochen"
+    },
+    "flaske": {
+      "meaning": "Flasche"
+    },
+    "vin": {
+      "meaning": "Wein"
+    },
+    "jobbintervju": {
+      "meaning": "Vorstellungsgespräch"
+    },
+    "hotell": {
+      "meaning": "Hotel"
+    },
+    "fortelle": {
+      "meaning": "erzählen"
+    },
+    "selv": {
+      "meaning": "selbst («deg selv» = dich selbst)"
+    },
+    "resepsjon": {
+      "meaning": "Rezeption"
+    },
+    "hvorfor": {
+      "meaning": "warum"
+    },
+    "menneske": {
+      "meaning": "Mensch; «mennesker» = Menschen"
+    },
+    "spansk": {
+      "meaning": "Spanisch"
+    },
+    "pakke": {
+      "meaning": "Paket"
+    },
+    "ligge": {
+      "meaning": "liegen"
+    },
+    "pakkeautomat": {
+      "meaning": "Paketautomat"
+    },
+    "hentekode": {
+      "meaning": "Abholcode"
+    },
+    "tilbake": {
+      "meaning": "zurück"
+    },
+    "legitimasjon": {
+      "meaning": "Ausweis",
+      "hook": "Wie «Legitimation»."
+    },
+    "kilo": {
+      "meaning": "Kilo"
+    },
+    "hoste": {
+      "meaning": "husten"
+    },
+    "apotek": {
+      "meaning": "Apotheke"
+    },
+    "natt": {
+      "meaning": "Nacht"
+    },
+    "denne": {
+      "meaning": "dieser, diese"
+    },
+    "halstablett": {
+      "meaning": "Halstablette"
+    },
+    "tablett": {
+      "meaning": "Tablette"
+    },
+    "uten": {
+      "meaning": "ohne"
+    },
+    "oktober": {
+      "meaning": "Oktober"
+    },
+    "venn": {
+      "meaning": "Freund, Freundin"
+    },
+    "mork": {
+      "meaning": "dunkel"
+    },
+    "nesten": {
+      "meaning": "fast, beinahe",
+      "hook": "Das norwegische Wort für «fast». Das norwegische «fast» heißt fest!"
+    },
+    "grad": {
+      "meaning": "Grad"
+    },
+    "finnes": {
+      "meaning": "existieren; «det finnes» = es gibt"
+    },
+    "darlig": {
+      "meaning": "schlecht"
+    },
+    "regnjakke": {
+      "meaning": "Regenjacke"
+    },
+    "ullgenser": {
+      "meaning": "Wollpullover"
+    },
+    "sko": {
+      "meaning": "Schuh, Schuhe"
+    }
+  }
+}

@@ -1,4 +1,7 @@
-export type UiLanguage = 'en' | 'fr';
+import { de } from './de';
+import { es } from './es';
+
+export type UiLanguage = 'en' | 'fr' | 'de' | 'es';
 
 const en = {
   tagline: 'Norwegian from A1 to B2, adapted to your level.',
@@ -544,10 +547,12 @@ const fr: Record<StringKey, string> = {
   listeningCard: 'Des messages courts et des dictées. L’audio accélère quand vous répondez juste.',
 };
 
-const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr };
+const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };
 
 export function uiLanguageFor(nativeLanguage: string | undefined): UiLanguage {
-  return nativeLanguage === 'fr' ? 'fr' : 'en';
+  return nativeLanguage !== undefined && Object.hasOwn(dictionaries, nativeLanguage)
+    ? (nativeLanguage as UiLanguage)
+    : 'en';
 }
 
 export function translate(

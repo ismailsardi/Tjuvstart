@@ -39,9 +39,35 @@ describe('annotate', () => {
 });
 
 describe('bundled packs', () => {
-  it('include English and French', () => {
+  it('include English, French, German and Spanish', () => {
     expect(getPack('en')?.name).toBe('English');
     expect(getPack('fr')?.nativeName).toBe('Français');
+    expect(getPack('de')?.nativeName).toBe('Deutsch');
+    expect(getPack('es')?.nativeName).toBe('Español');
+  });
+
+  it('mark Spanish look-alikes and the Spanish pack as waiting for review', () => {
+    const es = getPack('es')!;
+    expect(es.review).toBe('pending');
+    const segments = annotate('Sjefen sjekker datoen for prosjektet.', [es]);
+    expect(segments.find((s) => s.text === 'Sjefen')?.word).toMatchObject({
+      kind: 'false-friend',
+      looksLike: 'chef',
+    });
+    expect(segments.find((s) => s.text === 'datoen')?.word?.kind).toBe('false-friend');
+    expect(segments.find((s) => s.text === 'prosjektet')?.word?.kind).toBe('cognate');
+  });
+
+  it('mark German look-alikes and the German pack as waiting for review', () => {
+    const de = getPack('de')!;
+    expect(de.review).toBe('pending');
+    const segments = annotate('Legen sier at prosjektet er rart.', [de]);
+    expect(segments.find((s) => s.text === 'Legen')?.word).toMatchObject({
+      kind: 'false-friend',
+      looksLike: 'legen',
+    });
+    expect(segments.find((s) => s.text === 'prosjektet')?.word?.kind).toBe('cognate');
+    expect(segments.find((s) => s.text === 'rart')?.word?.kind).toBe('false-friend');
   });
 });
 

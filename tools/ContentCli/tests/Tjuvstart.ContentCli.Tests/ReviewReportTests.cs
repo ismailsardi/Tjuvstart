@@ -22,6 +22,24 @@ public sealed class ReviewReportTests : IDisposable
     }
 
     [Fact]
+    public void Lists_language_packs_that_still_need_a_review()
+    {
+        _content.Write(Path.Combine("l1", "de", ContentLoader.PackFileName), """
+            { "language": "de", "name": "German", "nativeName": "Deutsch", "direction": "ltr", "review": "pending",
+              "cognates": [], "falseFriends": [], "contrasts": [] }
+            """);
+        _content.Write(Path.Combine("l1", "en", ContentLoader.PackFileName), """
+            { "language": "en", "name": "English", "nativeName": "English", "direction": "ltr",
+              "cognates": [], "falseFriends": [], "contrasts": [] }
+            """);
+
+        var content = ContentLoader.Load(_content.Root);
+
+        Assert.Equal(["de"], ReviewReport.PendingPacks(content).Select(p => p.Language));
+        Assert.Contains("Language packs waiting for review: de.", ReviewReport.ToMarkdown(content));
+    }
+
+    [Fact]
     public void Rejects_a_lesson_without_a_review_status()
     {
         _content.WriteDescriptors(("A2-W-01", "writing"));

@@ -42,6 +42,9 @@ export async function stubAudio(page: Page): Promise<string[]> {
  * By default the learner says they know some, which sends them to the level check. Pass
  * `null` when editing languages later, where the level is not asked again.
  */
+/** The onboarding «Continue» button in every interface language. */
+const CONTINUE = /Continue|Continuer|Weiter|Continuar/;
+
 export async function chooseLanguages(
   page: Page,
   native: string,
@@ -50,18 +53,18 @@ export async function chooseLanguages(
 ) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
-  await page.getByRole('button', { name: /Continue|Continuer/ }).click();
+  await page.getByRole('button', { name: CONTINUE }).click();
   for (const language of known) {
     await page.getByRole('checkbox', { name: language }).check();
   }
-  await page.getByRole('button', { name: /Continue|Continuer/ }).click();
+  await page.getByRole('button', { name: CONTINUE }).click();
   if (startingPoint) {
     const level =
       startingPoint === 'beginner'
-        ? /^(None yet|Je débute)/
-        : /^(Some already|J’ai déjà des bases)/;
+        ? /^(None yet|Je débute|Noch gar nicht|Nada todavía)/
+        : /^(Some already|J’ai déjà des bases|Schon ein bisschen|Ya sé algo)/;
     await page.getByRole('radio', { name: level }).check();
-    await page.getByRole('button', { name: /Continue|Continuer/ }).click();
+    await page.getByRole('button', { name: CONTINUE }).click();
   }
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }
