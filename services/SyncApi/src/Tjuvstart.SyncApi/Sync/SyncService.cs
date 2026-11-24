@@ -78,5 +78,5 @@ public sealed class SyncService(SyncDbContext db)
     }
 
     internal static SyncedRecord ToSynced(SyncRecord r) =>
-        new(r.Collection, r.Key, r.UpdatedAt, r.Data is null ? null : JsonDocument.Parse(r.Data).RootElement, r.Data is null, r.Sequence);
+        new(r.Collection, r.Key, r.UpdatedAt, r.Data is null ? null : JsonElement.Parse(r.Data), r.Data is null, r.Sequence);
 }
