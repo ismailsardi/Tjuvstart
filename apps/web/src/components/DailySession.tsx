@@ -11,6 +11,8 @@ import { CanDoList } from './CanDoList';
 import { DeckSession } from './DeckSession';
 import { Practice } from './Practice';
 import { StreakLine } from './StreakLine';
+import { Tusse } from './Tusse';
+import { useTusseGear } from './useTusseGear';
 
 type Stage = 'cards' | 'practice' | 'done';
 
@@ -26,6 +28,7 @@ export function DailySession({ packs = [] }: { packs?: readonly LanguagePack[] }
   const [before, setBefore] = useState<Map<string, CanDoStatus> | null>(null);
   const [after, setAfter] = useState<Map<string, CanDoStatus> | null>(null);
   const progress = useLiveQuery(() => dailyProgress());
+  const gear = useTusseGear();
 
   useEffect(() => {
     void canDoProgress().then(setBefore);
@@ -47,7 +50,8 @@ export function DailySession({ packs = [] }: { packs?: readonly LanguagePack[] }
       (d) => after?.get(d.id) === 'can-do' && before.get(d.id) !== 'can-do',
     );
     return (
-      <section className="daily-done" aria-labelledby="daily-done-heading">
+      <section className="daily-done done-screen" aria-labelledby="daily-done-heading">
+        <Tusse pose="cheer" gear={gear} size={120} className="done-tusse" />
         <h1 id="daily-done-heading">{t('dailyDone')}</h1>
         <p>{t('dailyDoneBody', { score, total: DAILY_ITEMS })}</p>
         {progress && <StreakLine progress={progress} />}
