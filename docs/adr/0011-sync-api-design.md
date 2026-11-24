@@ -38,7 +38,7 @@ The client tables fall into two groups, and each syncs differently:
 | Client table                       | Kind                  | Sync rule                                                                                               |
 | ---------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
 | `attempts`, `reviews`, `shadowing` | Append-only logs      | Each row gets a client-generated UUID. Uploads are idempotent: a row the server already has is ignored. |
-| `profiles`, `cards`, `completions` | Current state per key | Last writer wins per record, using the client's `updatedAt`. Ties are broken by the server's order.     |
+| `profiles`, `cards`, `completions` | Current state per key | Last writer wins per record, using the client's `updatedAt`. A tie keeps the version already stored.    |
 | `aiSettings`                       | Device only           | Never synced.                                                                                           |
 
 - The server stamps every accepted change with a per-account, increasing sequence number. A client pulls with "everything after sequence N" and stores the new N. This avoids relying on device clocks to decide what is new.

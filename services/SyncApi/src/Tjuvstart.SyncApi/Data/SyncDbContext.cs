@@ -10,6 +10,8 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
 
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
+    public DbSet<SyncRecord> SyncRecords => Set<SyncRecord>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(account =>
@@ -18,6 +20,7 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
             account.Property(a => a.Id).HasColumnName("id");
             account.Property(a => a.CreatedAt).HasColumnName("created_at");
             account.Property(a => a.LastSeenAt).HasColumnName("last_seen_at");
+            account.Property(a => a.SyncSequence).HasColumnName("sync_sequence");
 
             // Deleting an account removes everything that belongs to it (ADR 0011).
             account.HasMany(a => a.Identities)
@@ -28,6 +31,11 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
             account.HasMany<RefreshToken>()
                 .WithOne()
                 .HasForeignKey(t => t.AccountId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            account.HasMany<SyncRecord>()
+                .WithOne()
+                .HasForeignKey(r => r.AccountId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
 
@@ -59,6 +67,21 @@ public sealed class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbC
 
             token.HasIndex(t => t.TokenHash).IsUnique();
             token.HasIndex(t => t.FamilyId);
+        });
+
+        modelBuilder.Entity<SyncRecord>(record =>
+        {
+            record.ToTable("sync_records");
+            record.HasKey(r => new { r.AccountId, r.Collection, r.Key });
+            record.Property(r => r.AccountId).HasColumnName("account_id");
+            record.Property(r => r.Collection).HasColumnName("collection").HasMaxLength(32);
+            record.Property(r => r.Key).HasColumnName("key").HasMaxLength(SyncRecord.KeyMaxLength);
+            record.Property(r => r.Data).HasColumnName("data").HasColumnType("jsonb");
+            record.Property(r => r.UpdatedAt).HasColumnName("updated_at");
+            record.Property(r => r.Sequence).HasColumnName("sequence");
+
+            // Pulls read "everything after sequence N" for one account.
+            record.HasIndex(r => new { r.AccountId, r.Sequence });
         });
     }
 }

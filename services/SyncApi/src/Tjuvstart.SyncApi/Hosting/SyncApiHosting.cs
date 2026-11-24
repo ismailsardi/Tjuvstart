@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using Tjuvstart.SyncApi.Auth;
 using Tjuvstart.SyncApi.Data;
 using Tjuvstart.SyncApi.Endpoints;
+using Tjuvstart.SyncApi.Sync;
 
 namespace Tjuvstart.SyncApi.Hosting;
 
@@ -33,6 +34,7 @@ public static class SyncApiHosting
         services.AddProblemDetails();
         services.AddValidation();
         services.AddSyncAuth(configuration);
+        services.AddScoped<SyncService>();
         services.AddSyncDatabase(configuration);
         services.AddHealthChecks()
             .AddDbContextCheck<SyncDbContext>("database", tags: [ReadyTag]);
@@ -67,7 +69,8 @@ public static class SyncApiHosting
         app.MapGroup("/v1")
             .MapInfoEndpoints()
             .MapAuthEndpoints()
-            .MapAccountEndpoints();
+            .MapAccountEndpoints()
+            .MapSyncEndpoints();
 
         return app;
     }

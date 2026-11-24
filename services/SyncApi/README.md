@@ -13,6 +13,8 @@ What exists so far:
 | `POST /v1/auth/refresh`  | Rotate the refresh token, get a new access token  |
 | `POST /v1/auth/sign-out` | Revoke the session                                |
 | `GET /v1/account`        | The signed-in account and its linked logins       |
+| `POST /v1/sync/push`     | Upload local changes (idempotent)                 |
+| `GET /v1/sync/pull`      | Changes after a cursor, oldest first              |
 | `GET /openapi/v1.json`   | OpenAPI document (Development environment only)   |
 
 ## Run locally
@@ -56,6 +58,20 @@ The response is a session:
 - a **refresh token**: an opaque random value valid for 60 days. Each refresh replaces it. The database only stores its SHA-256 hash. If an old refresh token is presented again, the whole session is revoked, since that means the token was copied. Clients should therefore refresh one request at a time (the web app will use a Web Lock across tabs).
 
 Sign-in and refresh are rate limited per client address.
+
+## Sync
+
+The web app keeps working from IndexedDB and syncs in the background. A sync round is:
+
+1. **Push** local changes made since the last push: `{ "changes": [{ "collection": "cards", "key": "jobb", "updatedAt": 1764000000000, "data": { ... } }] }`, up to 500 per request.
+2. **Pull** with the cursor from the previous pull, `GET /v1/sync/pull?after=<cursor>`, and repeat while `hasMore` is true. Store the new `cursor`.
+
+| Collections                        | Rule                                                                                                |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `attempts`, `reviews`, `shadowing` | Append-only, keyed by a client-generated UUID. A key the server already has is ignored.             |
+| `profiles`, `cards`, `completions` | The highest `updatedAt` wins; a tie keeps the stored version. `"deleted": true` stores a tombstone. |
+
+The server treats `data` as an opaque JSON object (at most 16 KB), so new client fields need no API change. Sequence numbers are per account and come from the server, so device clocks only matter for choosing between two versions of the same record.
 
 ## Configuration
 

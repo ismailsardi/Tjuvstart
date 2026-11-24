@@ -12,5 +12,8 @@ public sealed class Account
 
     public DateTimeOffset LastSeenAt { get; set; }
 
+    /// <summary>The last sequence number handed out to a synced change for this account.</summary>
+    public long SyncSequence { get; set; }
+
     public List<ExternalIdentity> Identities { get; init; } = [];
 }
