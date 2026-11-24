@@ -17,6 +17,8 @@ import { sentences } from '../audio/speech';
 import { SpeakButton } from './SpeakButton';
 import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
+import { Tusse } from './Tusse';
+import { useTusseGear } from './useTusseGear';
 
 type Feedback = { correct: boolean; answer: string; given?: string } | null;
 
@@ -63,6 +65,7 @@ export function LessonPlayer({
   );
 
   const finished = !item;
+  const gear = useTusseGear();
   const [newCards, setNewCards] = useState(0);
   const saved = useRef(false);
 
@@ -81,7 +84,8 @@ export function LessonPlayer({
   if (!item) {
     if (onFinish) return null;
     return (
-      <section aria-labelledby="done-heading">
+      <section className="done-screen" aria-labelledby="done-heading">
+        <Tusse pose="cheer" gear={gear} size={120} className="done-tusse" />
         <h1 id="done-heading" lang="nb">
           Ferdig!
         </h1>
@@ -181,15 +185,23 @@ export function LessonPlayer({
       {feedback && (
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
           <p>
-            {feedback.correct ? (
-              t('correct')
-            ) : (
-              <>
-                {t('notQuite')} <strong lang="nb">{feedback.answer}</strong>
-                {/[.!?]$/.test(feedback.answer) ? '' : '.'}
-              </>
-            )}
+            <span>
+              {feedback.correct ? (
+                t('correct')
+              ) : (
+                <>
+                  {t('notQuite')} <strong lang="nb">{feedback.answer}</strong>
+                  {/[.!?]$/.test(feedback.answer) ? '' : '.'}
+                </>
+              )}
+            </span>
           </p>
+          <Tusse
+            pose={feedback.correct ? 'thumbs' : 'shrug'}
+            gear={gear}
+            size={60}
+            className="feedback-tusse"
+          />
           {item.type === 'dictation' && !feedback.correct && (
             <p className="dictation-diff">
               <span className="small">{t('dictationFeedback')}</span>{' '}

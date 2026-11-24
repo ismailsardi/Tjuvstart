@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { DEFAULT_LISTENING_RATE, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
-import { nextInTrack, overallLevel, suggestedTracks } from '../content/tracks';
+import { nextInTrack, overallLevel, suggestedTracks, trackLessons } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
 import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
 import { db } from '../data/db';
@@ -22,7 +22,8 @@ import {
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
-import { TrackPath } from './TrackPath';
+import { Tusse } from './Tusse';
+import { useTusseGear } from './useTusseGear';
 
 const ICONS = {
   words: (
@@ -84,7 +85,7 @@ function Tile({
   );
 }
 
-/** Today: one clear next step, the track in progress, quick practice and the level estimate. */
+/** Today: one clear next step, the next lesson in context, quick practice and the level estimate. */
 export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const profile = useLiveQuery(() => getProfile());
@@ -118,23 +119,29 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
       ))
     : undefined;
   const streakDays = progress?.streak.days ?? 0;
+  const gear = useTusseGear();
+  const trackSteps = currentTrack ? trackLessons(currentTrack) : [];
+  const trackDone = trackSteps.filter((lesson) => completed?.has(lesson.id)).length;
 
   return (
     <>
       <header className="page-header home-header">
         <div>
-          <h1>{t('hello')}</h1>
+          <div className="home-greeting">
+            <h1>{t('hello')}</h1>
+            {streakDays > 0 && (
+              <span className="streak-badge" title={t('streakBadge', { n: streakDays })}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  {ICONS.streak}
+                </svg>
+                <span aria-hidden="true">{streakDays}</span>
+                <span className="visually-hidden">{t('streakBadge', { n: streakDays })}</span>
+              </span>
+            )}
+          </div>
           <p className="muted">{t('todayIntro')}</p>
         </div>
-        {streakDays > 0 && (
-          <span className="streak-badge" title={t('streakBadge', { n: streakDays })}>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              {ICONS.streak}
-            </svg>
-            <span aria-hidden="true">{streakDays}</span>
-            <span className="visually-hidden">{t('streakBadge', { n: streakDays })}</span>
-          </span>
-        )}
+        <Tusse pose="coffee" rock gear={gear} size={72} className="home-tusse" />
       </header>
 
       {needsPlacement ? (
@@ -156,13 +163,27 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         </section>
       )}
 
-      {currentTrack && <TrackPath track={currentTrack} packs={packs} />}
-
       <section aria-labelledby="next-heading">
         <div className="section-head">
           <h2 id="next-heading">{t('nextLesson')}</h2>
           <a href={lessonsHref}>{t('seeAllLessons')}</a>
         </div>
+        {currentTrack && next && (
+          <div className="next-track" data-testid="next-track">
+            <p className="small">
+              <span lang="nb">{currentTrack.title}</span>
+              <span className="muted">
+                {' · '}
+                {t('trackProgress', { done: trackDone, total: trackSteps.length })}
+              </span>
+            </p>
+            <ol className="track-meter" aria-hidden="true">
+              {trackSteps.map((lesson) => (
+                <li key={lesson.id} className={completed?.has(lesson.id) ? 'done' : undefined} />
+              ))}
+            </ol>
+          </div>
+        )}
         {next ? (
           <LessonCard lesson={next} packs={packs} />
         ) : (

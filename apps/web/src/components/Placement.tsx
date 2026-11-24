@@ -14,6 +14,8 @@ import { useI18n } from '../i18n/useI18n';
 import { homeHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
+import { Tusse } from './Tusse';
+import { useTusseGear } from './useTusseGear';
 
 /** Skills that have items today. Speaking joins once speaking exercises exist. */
 const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[];
@@ -29,6 +31,7 @@ export function Placement() {
   const item =
     state && feedback === null ? nextPlacementItem(state, allItems, ITEMS_PER_SKILL) : undefined;
   const finished = state !== null && feedback === null && !item;
+  const gear = useTusseGear();
 
   useEffect(() => {
     if (finished && state) void savePlacement(state.ratings);
@@ -51,7 +54,8 @@ export function Placement() {
 
   if (finished) {
     return (
-      <section aria-labelledby="placement-done" className="panel">
+      <section aria-labelledby="placement-done" className="panel done-screen">
+        <Tusse pose="cheer" gear={gear} size={110} className="done-tusse" />
         <h1 id="placement-done">{t('placementDone')}</h1>
         <ul className="skills">
           {PLACED_SKILLS.map((skill) => (
@@ -103,14 +107,22 @@ export function Placement() {
       {feedback !== null && (
         <div className={feedback ? 'feedback good' : 'feedback bad'} role="status">
           <p>
-            {feedback ? (
-              t('correct')
-            ) : (
-              <>
-                {t('notQuite')} <strong lang="nb">{correctAnswer(current)}</strong>.
-              </>
-            )}
+            <span>
+              {feedback ? (
+                t('correct')
+              ) : (
+                <>
+                  {t('notQuite')} <strong lang="nb">{correctAnswer(current)}</strong>.
+                </>
+              )}
+            </span>
           </p>
+          <Tusse
+            pose={feedback ? 'thumbs' : 'shrug'}
+            gear={gear}
+            size={60}
+            className="feedback-tusse"
+          />
           <button type="button" onClick={() => setFeedback(null)} autoFocus>
             {t('continue')}
           </button>

@@ -32,6 +32,7 @@ export function TrackPath({ track, packs }: { track: Track; packs: readonly Lang
       <p className="small" data-testid={`track-progress-${track.id}`}>
         {completed && !next ? t('trackDone') : t('trackProgress', { done, total: lessons.length })}
       </p>
+      <progress value={done} max={lessons.length} aria-hidden="true" />
       <ol className="track-steps">
         {lessons.map((lesson, index) => {
           const isDone = completed?.has(lesson.id) ?? false;
