@@ -1,7 +1,7 @@
 import 'fake-indexeddb/auto';
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { db } from '../data/db';
 import { getLesson } from '../content/lessons';
 import { learnerPacks } from '../content/packs';
@@ -39,6 +39,9 @@ const lesson: Lesson = {
     },
   ],
 };
+
+// Unmount after each test so live queries don't update a torn-down DOM.
+afterEach(cleanup);
 
 describe('LessonPlayer', () => {
   it('checks answers, shows feedback and ends with a score', async () => {

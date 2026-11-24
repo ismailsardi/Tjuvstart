@@ -1,9 +1,12 @@
 import 'fake-indexeddb/auto';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { getItem } from '../content/lessons';
 import { recordAnswer } from '../data/progress';
 import { Practice, PRACTICE_SIZE } from './Practice';
+
+// Unmount after each test so live queries don't update a torn-down DOM.
+afterEach(cleanup);
 
 describe('Practice', () => {
   it('starts with the item the learner missed last', async () => {
