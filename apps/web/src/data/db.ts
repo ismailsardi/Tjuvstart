@@ -94,6 +94,8 @@ export interface SyncState {
   cursor: number;
   /** Local rows with updatedAt at or above this still need pushing. */
   pushFrom: number;
+  /** When the last sync round finished, in milliseconds since the epoch. */
+  lastSyncedAt?: number;
   session?: {
     accountId: string;
     accessToken: string;

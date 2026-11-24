@@ -73,6 +73,24 @@ export class SyncApiClient {
     await this.db.syncState.update('sync', { session: undefined });
   }
 
+  /** Downloads everything the server stores for the account (GDPR export). */
+  async exportAccount(): Promise<Blob> {
+    const response = await this.authorizedResponse('GET', '/v1/account/export');
+    if (!response.ok) throw new Error(`Sync API answered ${response.status}`);
+    return response.blob();
+  }
+
+  /**
+   * Permanently deletes the account and everything stored on the server. Progress on this
+   * device stays, and the app carries on in guest mode.
+   */
+  async deleteAccount(): Promise<void> {
+    const response = await this.authorizedResponse('DELETE', '/v1/account');
+    if (!response.ok && response.status !== 404)
+      throw new Error(`Sync API answered ${response.status}`);
+    await this.db.syncState.put({ id: 'sync', cursor: 0, pushFrom: 0 });
+  }
+
   push(changes: SyncChange[]): Promise<PushResponse> {
     return this.authorized<PushResponse>('POST', '/v1/sync/push', { changes });
   }
@@ -82,6 +100,14 @@ export class SyncApiClient {
   }
 
   private async authorized<T>(method: string, path: string, body?: unknown): Promise<T> {
+    return this.read<T>(await this.authorizedResponse(method, path, body));
+  }
+
+  private async authorizedResponse(
+    method: string,
+    path: string,
+    body?: unknown,
+  ): Promise<Response> {
     let token = await this.accessToken();
     let response = await this.send(method, path, body, token);
     if (response.status === 401) {
@@ -89,7 +115,7 @@ export class SyncApiClient {
       response = await this.send(method, path, body, token);
     }
     if (response.status === 401) throw new SignedOutError();
-    return this.read<T>(response);
+    return response;
   }
 
   private async accessToken(force = false): Promise<string> {

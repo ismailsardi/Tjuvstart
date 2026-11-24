@@ -77,6 +77,14 @@ export function fakeSyncServer() {
     }
     if (!auth || !validAccess.has(auth)) return json({}, 401);
     if (url.pathname === '/v1/sync/push') return json(push(body.changes));
+    if (url.pathname === '/v1/account/export') {
+      return json({ accountId: 'account-1', collections: Object.fromEntries(records) });
+    }
+    if (url.pathname === '/v1/account' && init?.method === 'DELETE') {
+      records.clear();
+      server.revokeSessions();
+      return new Response(null, { status: 204 });
+    }
     if (url.pathname === '/v1/sync/pull') {
       return json(pull(Number(url.searchParams.get('after') ?? 0), server.pageSize));
     }
