@@ -15,6 +15,7 @@ import { CanDoList } from './CanDoList';
 import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
+import { SyncPanel } from './SyncPanel';
 
 export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
@@ -76,6 +77,7 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           <a href={wordsHref}>{t('change')}</a>
         </p>
       </section>
+      <SyncPanel />
       <section className="panel" aria-labelledby="me-ai">
         <h2 id="me-ai">{t('aiKeyTitle')}</h2>
         <AiSettingsForm />

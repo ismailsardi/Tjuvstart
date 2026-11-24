@@ -29,6 +29,7 @@ export interface SyncResult {
 export async function syncOnce(db: TjuvstartDb, api: SyncApiClient): Promise<SyncResult> {
   const pushed = await pushChanges(db, api);
   const pulled = await pullChanges(db, api);
+  await db.syncState.update('sync', { lastSyncedAt: Date.now() });
   return { pushed, pulled };
 }
 

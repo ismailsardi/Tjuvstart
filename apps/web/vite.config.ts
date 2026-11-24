@@ -11,19 +11,27 @@ const syncApiOrigin = process.env.VITE_SYNC_API_URL
   ? new URL(process.env.VITE_SYNC_API_URL).origin
   : undefined;
 
+// "Sign in with Google" loads Google's script, which draws its button in an iframe.
+const googleSignIn = Boolean(process.env.VITE_GOOGLE_CLIENT_ID);
+const GOOGLE_GSI = 'https://accounts.google.com/gsi/';
+
 /**
  * The learner's API key lives in the browser, so the page only talks to itself, the Anthropic
- * API and, when configured, the sync API. If a script were ever injected, it could not send the key anywhere else.
+ * API and, when configured, the sync API and Google sign-in. If a script were ever injected,
+ * it could not send the key anywhere else.
  * Added to the built page only: the dev server relies on inline scripts for hot reload.
  */
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
-  "script-src 'self'",
-  "style-src 'self'",
+  ['script-src', "'self'", googleSignIn && `${GOOGLE_GSI}client`].filter(Boolean).join(' '),
+  ['style-src', "'self'", googleSignIn && `${GOOGLE_GSI}style`].filter(Boolean).join(' '),
+  ...(googleSignIn ? [`frame-src ${GOOGLE_GSI}`] : []),
   "img-src 'self' data:",
   // Learners' own recordings play from blob: URLs.
   "media-src 'self' blob:",
-  ['connect-src', "'self'", 'https://api.anthropic.com', syncApiOrigin].filter(Boolean).join(' '),
+  ['connect-src', "'self'", 'https://api.anthropic.com', syncApiOrigin, googleSignIn && GOOGLE_GSI]
+    .filter(Boolean)
+    .join(' '),
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

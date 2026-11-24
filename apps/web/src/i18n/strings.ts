@@ -181,6 +181,22 @@ const en = {
   aiTitle: 'AI practice',
   aiIntro:
     'Optional. Talk through real situations, get feedback on your writing and read new texts at your level.',
+  syncTitle: 'Sync between devices',
+  syncIntro:
+    'Optional. Sign in to keep your progress on your phone and computer, and to get it back if you clear the browser. Without an account, everything stays on this device.',
+  syncLast: 'Last synced {time}.',
+  syncPending: 'Signed in. Syncing your progress…',
+  syncNow: 'Sync now',
+  syncExport: 'Download my data',
+  syncSignOut: 'Sign out',
+  syncDelete: 'Delete my account',
+  syncDeleteWarning:
+    'This permanently deletes your account and the progress stored on the server. Progress on this device stays.',
+  syncDeleteConfirm: 'Delete account',
+  syncDeleteCancel: 'Keep account',
+  syncSignInFailed: 'Sign-in did not work. Try again in a moment.',
+  syncGoogleUnavailable: 'Google sign-in could not load. Check your connection.',
+  syncActionFailed: 'That did not work. Check your connection and try again.',
   aiKeyTitle: 'Your API key',
   aiKeyIntro:
     'AI practice uses your own Anthropic API key. It is stored only on this device and sent only to Anthropic. Requests are billed to your Anthropic account.',
@@ -424,6 +440,22 @@ const fr: Record<StringKey, string> = {
   aiTitle: 'Pratique avec l’IA',
   aiIntro:
     'Facultatif. Entraînez-vous à des situations réelles, recevez un retour sur vos textes et lisez de nouveaux textes à votre niveau.',
+  syncTitle: 'Synchroniser entre appareils',
+  syncIntro:
+    'Facultatif. Connectez-vous pour retrouver votre progression sur votre téléphone et votre ordinateur, ou après avoir vidé le navigateur. Sans compte, tout reste sur cet appareil.',
+  syncLast: 'Dernière synchronisation : {time}.',
+  syncPending: 'Connecté. Synchronisation de votre progression…',
+  syncNow: 'Synchroniser',
+  syncExport: 'Télécharger mes données',
+  syncSignOut: 'Se déconnecter',
+  syncDelete: 'Supprimer mon compte',
+  syncDeleteWarning:
+    'Votre compte et la progression enregistrée sur le serveur seront définitivement supprimés. La progression sur cet appareil est conservée.',
+  syncDeleteConfirm: 'Supprimer le compte',
+  syncDeleteCancel: 'Garder le compte',
+  syncSignInFailed: 'La connexion a échoué. Réessayez dans un instant.',
+  syncGoogleUnavailable: 'La connexion Google n’a pas pu se charger. Vérifiez votre connexion.',
+  syncActionFailed: 'Cela n’a pas fonctionné. Vérifiez votre connexion et réessayez.',
   aiKeyTitle: 'Votre clé API',
   aiKeyIntro:
     'La pratique avec l’IA utilise votre propre clé API Anthropic. Elle est enregistrée uniquement sur cet appareil et envoyée uniquement à Anthropic. Les requêtes sont facturées sur votre compte Anthropic.',
