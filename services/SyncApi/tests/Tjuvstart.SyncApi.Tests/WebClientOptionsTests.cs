@@ -5,7 +5,8 @@ using Tjuvstart.SyncApi.Hosting;
 
 namespace Tjuvstart.SyncApi.Tests;
 
-public sealed class WebClientOptionsTests
+[Collection(ApiTestGroup.Name)]
+public sealed class WebClientOptionsTests(PostgresFixture postgres)
 {
     [Theory]
     [InlineData("https://ismailsardi.github.io")]
@@ -29,7 +30,7 @@ public sealed class WebClientOptionsTests
     [Fact]
     public void Startup_fails_with_an_invalid_origin()
     {
-        using var factory = new SyncApiFactory().WithWebHostBuilder(b =>
+        using var factory = new SyncApiFactory(postgres).WithWebHostBuilder(b =>
             b.UseSetting("WebClient:AllowedOrigins:0", "https://ismailsardi.github.io/Tjuvstart/"));
 
         Assert.Throws<OptionsValidationException>(() => factory.CreateClient());

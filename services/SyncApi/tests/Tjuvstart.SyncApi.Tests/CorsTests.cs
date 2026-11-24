@@ -2,14 +2,12 @@ using System.Net;
 
 namespace Tjuvstart.SyncApi.Tests;
 
-public sealed class CorsTests(SyncApiFactory factory) : IClassFixture<SyncApiFactory>
+public sealed class CorsTests(PostgresFixture postgres) : ApiTest(postgres)
 {
-    private readonly HttpClient _client = factory.CreateClient();
-
     [Fact]
     public async Task Preflight_from_the_web_client_is_allowed()
     {
-        using var response = await _client.SendAsync(Preflight(SyncApiFactory.WebOrigin));
+        using var response = await Client.SendAsync(Preflight(SyncApiFactory.WebOrigin));
 
         Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
         Assert.Equal(SyncApiFactory.WebOrigin, Assert.Single(response.Headers.GetValues("Access-Control-Allow-Origin")));
@@ -18,7 +16,7 @@ public sealed class CorsTests(SyncApiFactory factory) : IClassFixture<SyncApiFac
     [Fact]
     public async Task Preflight_from_another_origin_gets_no_cors_headers()
     {
-        using var response = await _client.SendAsync(Preflight("https://evil.example"));
+        using var response = await Client.SendAsync(Preflight("https://evil.example"));
 
         Assert.False(response.Headers.Contains("Access-Control-Allow-Origin"));
     }
