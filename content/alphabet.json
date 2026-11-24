@@ -1,0 +1,150 @@
+{
+  "$schema": "./schema/alphabet.schema.json",
+  "letters": [
+    {
+      "letter": "A",
+      "name": "a",
+      "example": "avis"
+    },
+    {
+      "letter": "B",
+      "name": "be",
+      "example": "buss"
+    },
+    {
+      "letter": "C",
+      "name": "se",
+      "example": "cirka"
+    },
+    {
+      "letter": "D",
+      "name": "de",
+      "example": "dag"
+    },
+    {
+      "letter": "E",
+      "name": "e",
+      "example": "eple"
+    },
+    {
+      "letter": "F",
+      "name": "eff",
+      "example": "fisk"
+    },
+    {
+      "letter": "G",
+      "name": "ge",
+      "example": "gate"
+    },
+    {
+      "letter": "H",
+      "name": "hå",
+      "example": "hus"
+    },
+    {
+      "letter": "I",
+      "name": "i",
+      "example": "is"
+    },
+    {
+      "letter": "J",
+      "name": "je",
+      "example": "jobb"
+    },
+    {
+      "letter": "K",
+      "name": "kå",
+      "example": "kaffe"
+    },
+    {
+      "letter": "L",
+      "name": "ell",
+      "example": "lege"
+    },
+    {
+      "letter": "M",
+      "name": "emm",
+      "example": "melk"
+    },
+    {
+      "letter": "N",
+      "name": "enn",
+      "example": "navn"
+    },
+    {
+      "letter": "O",
+      "name": "o",
+      "example": "ost"
+    },
+    {
+      "letter": "P",
+      "name": "pe",
+      "example": "post"
+    },
+    {
+      "letter": "Q",
+      "name": "ku",
+      "example": "quiz"
+    },
+    {
+      "letter": "R",
+      "name": "ærr",
+      "example": "regn"
+    },
+    {
+      "letter": "S",
+      "name": "ess",
+      "example": "sol"
+    },
+    {
+      "letter": "T",
+      "name": "te",
+      "example": "tog"
+    },
+    {
+      "letter": "U",
+      "name": "u",
+      "example": "uke"
+    },
+    {
+      "letter": "V",
+      "name": "ve",
+      "example": "vann"
+    },
+    {
+      "letter": "W",
+      "name": "dobbelt-ve",
+      "example": "wienerbrød"
+    },
+    {
+      "letter": "X",
+      "name": "eks",
+      "example": "taxi"
+    },
+    {
+      "letter": "Y",
+      "name": "y",
+      "example": "yrke"
+    },
+    {
+      "letter": "Z",
+      "name": "sett",
+      "example": "zebra"
+    },
+    {
+      "letter": "Æ",
+      "name": "æ",
+      "example": "lærer"
+    },
+    {
+      "letter": "Ø",
+      "name": "ø",
+      "example": "øst"
+    },
+    {
+      "letter": "Å",
+      "name": "å",
+      "example": "år"
+    }
+  ]
+}

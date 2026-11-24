@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { DEFAULT_RATING, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
+import { DEFAULT_RATING, LEVEL_BASE, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
 import { getItem } from '../content/lessons';
 import type { GapFillItem } from '../content/types';
 import { TjuvstartDb } from './db';
@@ -20,6 +20,7 @@ import {
   saveLanguages,
   recordShadowing,
   savePlacement,
+  saveStartingPoint,
   shadowedSentences,
 } from './progress';
 
@@ -73,6 +74,27 @@ describe('saveLanguages', () => {
     expect(profile.nativeLanguage).toBe('fr');
     expect(profile.knownLanguages).toEqual(['en']);
     expect(profile.answers.reading).toBe(0);
+  });
+});
+
+describe('saveStartingPoint', () => {
+  it('starts a beginner at the A1 base rating for skills with no answers yet', async () => {
+    db = new TjuvstartDb('test-beginner');
+    await recordAnswer(item, 'lesson', true, db);
+    const writing = (await getProfile(db)).ratings.writing;
+    await saveStartingPoint('beginner', db);
+    const profile = await getProfile(db);
+    expect(profile.startingPoint).toBe('beginner');
+    expect(profile.ratings.reading).toBe(LEVEL_BASE.A1);
+    expect(profile.ratings.writing).toBe(writing);
+  });
+
+  it('leaves ratings alone for a learner who knows some Norwegian', async () => {
+    db = new TjuvstartDb('test-some');
+    await saveStartingPoint('some', db);
+    const profile = await getProfile(db);
+    expect(profile.startingPoint).toBe('some');
+    expect(profile.ratings.reading).toBe(DEFAULT_RATING);
   });
 });
 

@@ -6,7 +6,8 @@ const lessonsDir = new URL('../../../content/lessons/', import.meta.url);
 
 /**
  * Stands in for the audio build, which only runs in the audio job and on deploy: every
- * listening text in the content gets a silent clip. Returns the clips played, in order.
+ * listening text, letter name and alphabet example gets a silent clip. Returns the clips
+ * played, in order.
  */
 export async function stubAudio(page: Page): Promise<string[]> {
   const index: Record<string, string> = {};
@@ -20,6 +21,13 @@ export async function stubAudio(page: Page): Promise<string[]> {
       }
     }
   }
+  const alphabet = JSON.parse(
+    readFileSync(new URL('../../../content/alphabet.json', import.meta.url), 'utf8'),
+  ) as { letters: { name: string; example: string }[] };
+  alphabet.letters.forEach(({ name, example }, i) => {
+    index[name] = `letter-${i + 1}`;
+    index[example] = `example-${i + 1}`;
+  });
   const played: string[] = [];
   await page.route('**/audio/index.json', (route) => route.fulfill({ json: index }));
   await page.route('**/audio/*.mp3', (route) => {
@@ -29,15 +37,35 @@ export async function stubAudio(page: Page): Promise<string[]> {
   return played;
 }
 
-/** Completes the first-run language question. */
-export async function chooseLanguages(page: Page, native: string, known: string[] = []) {
+/**
+ * Completes the first-run questions: languages, then how much Norwegian the learner knows.
+ * By default the learner says they know some, which sends them to the level check. Pass
+ * `null` when editing languages later, where the level is not asked again.
+ */
+/** The onboarding «Continue» button in every interface language. */
+const CONTINUE = /Continue|Continuer|Weiter|Continuar/;
+
+export async function chooseLanguages(
+  page: Page,
+  native: string,
+  known: string[] = [],
+  startingPoint: 'beginner' | 'some' | null = 'some',
+) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
-  await page.getByRole('button', { name: /Continue|Continuer|Weiter|Continuar/ }).click();
+  await page.getByRole('button', { name: CONTINUE }).click();
   for (const language of known) {
     await page.getByRole('checkbox', { name: language }).check();
   }
-  await page.getByRole('button', { name: /Continue|Continuer|Weiter|Continuar/ }).click();
+  await page.getByRole('button', { name: CONTINUE }).click();
+  if (startingPoint) {
+    const level =
+      startingPoint === 'beginner'
+        ? /^(None yet|Je débute|Noch gar nicht|Nada todavía)/
+        : /^(Some already|J’ai déjà des bases|Schon ein bisschen|Ya sé algo)/;
+    await page.getByRole('radio', { name: level }).check();
+    await page.getByRole('button', { name: CONTINUE }).click();
+  }
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }
 

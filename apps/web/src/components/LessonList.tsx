@@ -6,6 +6,7 @@ import type { Lesson } from '../content/types';
 import { db } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
 import { lessonHref } from '../routing/useHashRoute';
+import { AlphabetRow } from './AlphabetRow';
 import { TrackPath } from './TrackPath';
 
 export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly LanguagePack[] }) {
@@ -43,6 +44,9 @@ export function LessonList({ packs = [] }: { packs?: readonly LanguagePack[] }) 
   return (
     <>
       <h1>{t('lessons')}</h1>
+      <div className="deck-list">
+        <AlphabetRow />
+      </div>
       {tracks.map((track) => (
         <TrackPath key={track.id} track={track} packs={packs} />
       ))}

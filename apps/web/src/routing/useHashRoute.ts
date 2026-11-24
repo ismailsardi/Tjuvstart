@@ -15,6 +15,7 @@ export type Route =
   | { name: 'ai-reading' }
   | { name: 'listening' }
   | { name: 'languages' }
+  | { name: 'alphabet' }
   | { name: 'lesson'; lessonId: string }
   | { name: 'shadow'; lessonId: string };
 
@@ -46,6 +47,8 @@ export function parseRoute(hash: string): Route {
       return { name: 'listening' };
     case '#/languages':
       return { name: 'languages' };
+    case '#/alphabet':
+      return { name: 'alphabet' };
   }
   const lesson = /^#\/lesson\/([a-z0-9-]+)$/.exec(hash);
   if (lesson?.[1]) return { name: 'lesson', lessonId: lesson[1] };
@@ -73,6 +76,7 @@ export const lessonsHref = '#/lessons';
 export const wordsHref = '#/words';
 export const meHref = '#/me';
 export const languagesHref = '#/languages';
+export const alphabetHref = '#/alphabet';
 export const lessonHref = (lessonId: string) => `#/lesson/${lessonId}`;
 export const shadowHref = (lessonId: string) => `#/shadow/${lessonId}`;
 export const deckHref = (deckId: string) => `#/words/${deckId}`;

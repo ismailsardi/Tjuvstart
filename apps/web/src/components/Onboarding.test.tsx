@@ -26,9 +26,25 @@ describe('Onboarding', () => {
     await user.click(screen.getByRole('checkbox', { name: 'English' }));
     await user.click(screen.getByRole('button', { name: 'Continuer' }));
 
+    // Last question: how much Norwegian. Nothing is saved until the learner picks an answer.
+    expect(screen.getByRole('button', { name: 'Continuer' })).toHaveProperty('disabled', true);
+    await user.click(screen.getByRole('radio', { name: /^Je débute/ }));
+    await user.click(screen.getByRole('button', { name: 'Continuer' }));
+
     await vi.waitFor(() => expect(onDone).toHaveBeenCalled());
     const profile = await getProfile();
     expect(profile.nativeLanguage).toBe('fr');
     expect(profile.knownLanguages).toEqual(['en']);
+    expect(profile.startingPoint).toBe('beginner');
+  });
+
+  it('does not ask for the level again when the learner edits their languages', async () => {
+    const user = userEvent.setup();
+    const onDone = vi.fn();
+    render(<Onboarding nativeLanguage="en" knownLanguages={[]} onDone={onDone} />);
+
+    await user.click(screen.getByRole('button', { name: 'Continue' }));
+    await user.click(screen.getByRole('button', { name: 'Continue' }));
+    await vi.waitFor(() => expect(onDone).toHaveBeenCalled());
   });
 });

@@ -61,6 +61,9 @@ public sealed record LanguagePack(
 /// <summary>A guided path through lessons, in order.</summary>
 public sealed record Track(string Id, string Title, IReadOnlyList<string> Lessons);
 
+/// <summary>One letter on the alphabet page: the letter, how it is said, and an example word.</summary>
+public sealed record AlphabetLetter(string Letter, string Name, string Example);
+
 /// <summary>Everything loaded from a content folder, plus the problems found while loading it.</summary>
 public sealed record ContentSet(
     IReadOnlyList<Descriptor> Descriptors,
@@ -71,6 +74,8 @@ public sealed record ContentSet(
     public IReadOnlyList<Card> Cards { get; init; } = [];
 
     public IReadOnlyList<Track> Tracks { get; init; } = [];
+
+    public IReadOnlyList<AlphabetLetter> Alphabet { get; init; } = [];
 
     /// <summary>Lesson-text words that need no card, such as names.</summary>
     public IReadOnlySet<string> IgnoredWords { get; init; } = new HashSet<string>();

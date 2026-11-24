@@ -18,6 +18,7 @@ public static class ContentLoader
     public const string VocabFolder = "vocab";
     public const string IgnoreFileName = "ignore.json";
     public const string TracksFile = "tracks.json";
+    public const string AlphabetFile = "alphabet.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new() { PropertyNameCaseInsensitive = true };
 
@@ -35,6 +36,7 @@ public static class ContentLoader
         var packSchema = LoadSchema(contentRoot, "l1-pack.schema.json", issues);
         var deckSchema = LoadSchema(contentRoot, "vocab-deck.schema.json", issues);
         var tracksSchema = LoadSchema(contentRoot, "tracks.schema.json", issues);
+        var alphabetSchema = LoadSchema(contentRoot, "alphabet.schema.json", issues);
 
         var descriptors = new List<Descriptor>();
         var descriptorsPath = Path.Combine(contentRoot, DescriptorsFile);
@@ -133,11 +135,24 @@ public static class ContentLoader
             }
         }
 
+        // The alphabet page is optional too.
+        var alphabet = new List<AlphabetLetter>();
+        var alphabetPath = Path.Combine(contentRoot, AlphabetFile);
+        if (File.Exists(alphabetPath) && ReadChecked(contentRoot, alphabetPath, alphabetSchema, issues) is { } alphabetDoc)
+        {
+            using (alphabetDoc)
+            {
+                var file = alphabetDoc.RootElement.Deserialize<AlphabetFileModel>(JsonOptions)!;
+                alphabet.AddRange(file.Letters);
+            }
+        }
+
         return new ContentSet(descriptors, lessons, packs, issues)
         {
             Cards = cards,
             IgnoredWords = ignored,
             Tracks = tracks,
+            Alphabet = alphabet,
         };
     }
 
@@ -317,4 +332,6 @@ public static class ContentLoader
     private sealed record TrackFile(string Id, string Title, List<string> Lessons);
 
     private sealed record TracksFileModel(List<TrackFile> Tracks);
+
+    private sealed record AlphabetFileModel(List<AlphabetLetter> Letters);
 }
