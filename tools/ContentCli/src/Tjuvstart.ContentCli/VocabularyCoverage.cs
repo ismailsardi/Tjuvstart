@@ -55,6 +55,6 @@ public static partial class VocabularyCoverage
         return sb.ToString();
     }
 
-    [GeneratedRegex("[A-Za-zÆØÅæøå]+")]
+    [GeneratedRegex("[A-Za-zÆØÅÉæøåé]+")]
     private static partial Regex WordPattern();
 }

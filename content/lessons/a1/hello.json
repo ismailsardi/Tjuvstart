@@ -1,0 +1,160 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-hello",
+  "level": "A1",
+  "title": "Hei! Jeg heter …",
+  "summary": "Say hello, give your name, say where you come from and where you live, and answer the polite phrases people use when they meet you.",
+  "review": "pending",
+  "text": "Sara og Ahmed møtes på en kafé.\n– Hei! Jeg heter Sara. Hva heter du?\n– Hei, Sara. Jeg heter Ahmed.\n– Hvor kommer du fra?\n– Jeg kommer fra Marokko. Og du?\n– Jeg kommer fra Frankrike, men nå bor jeg i Oslo.\n– Hyggelig å hilse på deg!\n– I like måte. Ha det bra!",
+  "items": [
+    {
+      "id": "a1-hei-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 600,
+      "prompt": "Hva heter mannen?",
+      "options": ["Ahmed", "Sara", "Lars"],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 650,
+      "prompt": "Hvor kommer Ahmed fra?",
+      "options": ["Marokko", "Frankrike", "Norge"],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 750,
+      "prompt": "Hvor bor Sara nå?",
+      "options": ["I Oslo", "I Frankrike", "I Marokko"],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-04",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 650,
+      "prompt": "Jeg ___ Sara.",
+      "answers": ["heter"]
+    },
+    {
+      "id": "a1-hei-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["question-words"],
+      "difficulty": 700,
+      "prompt": "___ heter du?",
+      "answers": ["hva"]
+    },
+    {
+      "id": "a1-hei-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 750,
+      "prompt": "Hvor kommer du ___?",
+      "answers": ["fra"]
+    },
+    {
+      "id": "a1-hei-07",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 700,
+      "prompt": "Lag en setning.",
+      "tokens": ["kommer", "Jeg", "fra Frankrike"],
+      "answer": "Jeg kommer fra Frankrike"
+    },
+    {
+      "id": "a1-hei-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 850,
+      "prompt": "Lag en setning.",
+      "tokens": ["bor", "Nå", "jeg", "i Oslo"],
+      "answer": "Nå bor jeg i Oslo"
+    },
+    {
+      "id": "a1-hei-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 800,
+      "prompt": "Hva svarer du?",
+      "audio": "Hyggelig å hilse på deg!",
+      "options": ["I like måte!", "Unnskyld!", "Jeg kommer fra Oslo."],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 800,
+      "prompt": "Hva svarer du?",
+      "audio": "Tusen takk for hjelpen!",
+      "options": ["Bare hyggelig!", "God morgen!", "Jeg heter Sara."],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Hvor jobber Lars?",
+      "audio": "Hei, jeg heter Lars. Jeg jobber på et sykehus i Oslo.",
+      "options": ["På et sykehus", "På en kafé", "I en butikk"],
+      "answer": 0
+    },
+    {
+      "id": "a1-hei-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 800,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg heter Sara."
+    },
+    {
+      "id": "a1-hei-13",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["question-words"],
+      "difficulty": 900,
+      "prompt": "Skriv det du hører.",
+      "audio": "Hvor kommer du fra?"
+    }
+  ]
+}

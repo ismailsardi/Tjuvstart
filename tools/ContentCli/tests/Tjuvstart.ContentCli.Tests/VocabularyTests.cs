@@ -8,7 +8,7 @@ public sealed class VocabularyTests : IDisposable
     {
         _content.WriteDescriptors(("A2-W-01", "writing"));
         _content.Write(Path.Combine(ContentLoader.LessonsFolder, "lesson-a.json"), $$"""
-            { "id": "lesson-a", "level": "A2", "title": "T", "summary": "S", "text": "Sara har en jobb.",
+            { "id": "lesson-a", "level": "A2", "title": "T", "summary": "S", "review": "pending", "text": "Sara har en jobb.",
               "items": [ {{ContentFixture.Gap("item-1")}} ] }
             """);
     }

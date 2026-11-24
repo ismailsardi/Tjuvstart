@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { optionOrder } from '../content/answers';
 import type { Response } from '../content/answers';
 import { useI18n } from '../i18n/useI18n';
 import type {
@@ -80,11 +81,16 @@ function Dictation({ item, disabled, onSubmit }: Props<DictationItem>) {
 function MultipleChoice({ item, disabled, onSubmit }: Props<MultipleChoiceItem>) {
   const { t } = useI18n();
   const [chosen, setChosen] = useState<number | null>(null);
+  // Content lists the right answer first, so show the options in a stable, per-item order.
+  const order = useMemo(
+    () => optionOrder(item.id, item.options.length),
+    [item.id, item.options.length],
+  );
   return (
     <div className="options" role="group" aria-label={t('answerOptions')}>
-      {item.options.map((option, index) => (
+      {order.map((index) => (
         <button
-          key={option}
+          key={item.options[index]}
           type="button"
           className={chosen === index ? 'option chosen' : 'option'}
           aria-pressed={chosen === index}
@@ -94,7 +100,7 @@ function MultipleChoice({ item, disabled, onSubmit }: Props<MultipleChoiceItem>)
             onSubmit({ kind: 'choice', index });
           }}
         >
-          {option}
+          {item.options[index]}
         </button>
       ))}
     </div>

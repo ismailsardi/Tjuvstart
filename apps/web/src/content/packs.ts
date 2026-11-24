@@ -105,7 +105,7 @@ export function annotate(text: string, priority: readonly LanguagePack[]): Segme
   }
 
   return text
-    .split(/([A-Za-zÆØÅæøå]+)/)
+    .split(/([A-Za-zÆØÅÉæøåé]+)/)
     .filter((part) => part !== '')
     .map((part) => {
       const word = lookup.get(part.toLocaleLowerCase('nb'));

@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "shop-and-cafe",
+  "title": "Butikk og kafé",
+  "cards": [
+    {
+      "id": "handle",
+      "nb": "handle",
+      "pos": "verb",
+      "forms": ["handle", "handler", "handlet"],
+      "example": "Jeg handler på Kiwi etter jobben."
+    },
+    {
+      "id": "melk",
+      "nb": "melk",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["melk", "melka", "melken"],
+      "example": "Vil du ha melk i kaffen?"
+    },
+    {
+      "id": "brod",
+      "nb": "brød",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["brød", "brødet"],
+      "example": "Vi kjøper brød og melk."
+    },
+    {
+      "id": "eple",
+      "nb": "eple",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["eple", "eplet", "epler", "eplene"],
+      "example": "Jeg spiser et eple."
+    },
+    {
+      "id": "pose",
+      "nb": "pose",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pose", "posen", "poser", "posene"],
+      "example": "Trenger du pose?"
+    },
+    {
+      "id": "kort",
+      "nb": "kort",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kort", "kortet", "kortene"],
+      "example": "Kan jeg betale med kort?"
+    },
+    {
+      "id": "kontant",
+      "nb": "kontant",
+      "pos": "adverb",
+      "forms": ["kontant"],
+      "example": "Kort eller kontant?"
+    },
+    {
+      "id": "kvittering",
+      "nb": "kvittering",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kvittering", "kvitteringen", "kvitteringer"],
+      "example": "Vil du ha kvitteringen?"
+    },
+    {
+      "id": "betale",
+      "nb": "betale",
+      "pos": "verb",
+      "forms": ["betale", "betaler", "betalte", "betalt"],
+      "example": "Kan jeg betale med Vipps?"
+    },
+    {
+      "id": "kafe",
+      "nb": "kafé",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kafé", "kafe", "kafeen", "kaféen", "kafeer"],
+      "example": "Vi møtes på en kafé."
+    },
+    {
+      "id": "sentrum",
+      "nb": "sentrum",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["sentrum", "sentrumet"],
+      "example": "Kafeen ligger i sentrum."
+    },
+    {
+      "id": "kanelbolle",
+      "nb": "kanelbolle",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kanelbolle", "kanelbollen", "kanelboller", "kanelbollene"],
+      "example": "En kaffe og en kanelbolle, takk."
+    },
+    {
+      "id": "skolebolle",
+      "nb": "skolebolle",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skolebolle", "skolebollen", "skoleboller", "skolebollene"],
+      "example": "Skoleboller har vaniljekrem og kokos."
+    },
+    {
+      "id": "stor",
+      "nb": "stor",
+      "pos": "adjective",
+      "forms": ["stor", "stort", "store"],
+      "example": "En stor kaffe, takk."
+    },
+    {
+      "id": "svart",
+      "nb": "svart",
+      "pos": "adjective",
+      "forms": ["svart", "svarte"],
+      "example": "Jeg drikker kaffen svart."
+    }
+  ]
+}

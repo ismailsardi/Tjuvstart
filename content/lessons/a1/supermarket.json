@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-supermarket",
+  "level": "A1",
+  "title": "I butikken",
+  "summary": "Get through the supermarket checkout in Norwegian: bags, card or cash, the receipt, and the friendly goodbye.",
+  "review": "pending",
+  "text": "Sara handler på Kiwi etter jobben. Hun kjøper melk, brød og epler.\n– Hei! Trenger du pose?\n– Ja takk, én pose.\n– Det blir 87 kroner. Kort eller kontant?\n– Kort.\n– Vil du ha kvitteringen?\n– Nei takk.\n– Ha en fin dag!\n– I like måte!",
+  "items": [
+    {
+      "id": "a1-shop-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 600,
+      "prompt": "Hvor handler Sara?",
+      "options": ["På Kiwi", "På en kafé", "På jobben"],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 700,
+      "prompt": "Hva kjøper Sara?",
+      "options": ["Melk, brød og epler", "Melk, ost og egg", "Kaffe og brød"],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 800,
+      "prompt": "Hva koster det?",
+      "options": ["87 kroner", "78 kroner", "8 kroner"],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 750,
+      "prompt": "Hvordan betaler Sara?",
+      "options": ["Med kort", "Kontant", "Med Vipps"],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "difficulty": 750,
+      "prompt": "Trenger du ___?",
+      "answers": ["pose", "en pose"]
+    },
+    {
+      "id": "a1-shop-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 850,
+      "prompt": "Jeg vil gjerne ___ med kort.",
+      "answers": ["betale"]
+    },
+    {
+      "id": "a1-shop-07",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 850,
+      "prompt": "Lag en setning.",
+      "tokens": ["ha", "Vil du", "kvitteringen?"],
+      "answer": "Vil du ha kvitteringen?"
+    },
+    {
+      "id": "a1-shop-08",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 750,
+      "prompt": "Hva svarer du?",
+      "audio": "Trenger du pose?",
+      "options": ["Ja takk, én pose.", "Kort, takk.", "Jeg heter Sara."],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 800,
+      "prompt": "Hva svarer du?",
+      "audio": "Kort eller kontant?",
+      "options": ["Kort, takk.", "Én pose.", "I like måte."],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 800,
+      "prompt": "Hva svarer du?",
+      "audio": "Ha en fin dag!",
+      "options": ["Takk, i like måte!", "Nei takk.", "Det blir 87 kroner."],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 950,
+      "prompt": "Hvor er melken?",
+      "audio": "Melken står bakerst i butikken, til høyre.",
+      "options": ["Bakerst, til høyre", "Foran, til venstre", "Ved kassa"],
+      "answer": 0
+    },
+    {
+      "id": "a1-shop-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Skriv det du hører.",
+      "audio": "Kort eller kontant?"
+    },
+    {
+      "id": "a1-shop-13",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 800,
+      "prompt": "Skriv det du hører.",
+      "audio": "Nei takk."
+    }
+  ]
+}

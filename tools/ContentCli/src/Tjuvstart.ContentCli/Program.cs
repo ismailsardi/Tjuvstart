@@ -50,7 +50,9 @@ switch (command)
         }
 
         var report = CoverageReport.Build(content);
-        var markdown = report.ToMarkdown() + VocabularyCoverage.ToMarkdown(VocabularyCoverage.Build(content));
+        var markdown = report.ToMarkdown()
+            + VocabularyCoverage.ToMarkdown(VocabularyCoverage.Build(content))
+            + ReviewReport.ToMarkdown(content);
         Console.WriteLine(markdown);
         if (options.SummaryFile is { } summaryFile)
         {

@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Ledig stilling",
   "summary": "Read a job ad for a developer: what the company offers, what they want from you, and the application deadline.",
+  "review": "pending",
   "document": {
     "kind": "job-ad",
     "from": "Kari Hansen"

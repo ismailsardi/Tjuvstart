@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Syk i dag",
   "summary": "Read a sick-day message and the manager's reply, then write your own short message when you can't come to work.",
+  "review": "pending",
   "text": "Ahmed skriver til sjefen klokka 07.15: «Hei Lars! Jeg har feber og vondt i halsen, så jeg kommer ikke på jobb i dag. Jeg har bestilt time hos legen klokka ti. Kan Nina ta møtet med kunden? Hilsen Ahmed» Lars svarer klokka 07.40: «Hei Ahmed, takk for beskjed. God bedring! Nina tar møtet. Husk å sende meg en sykmelding hvis du er syk mer enn tre dager.»",
   "items": [
     {

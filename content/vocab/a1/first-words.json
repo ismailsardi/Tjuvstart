@@ -1,0 +1,330 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "first-words",
+  "title": "Første ord",
+  "cards": [
+    {
+      "id": "alfabet",
+      "nb": "alfabet",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["alfabet", "alfabetet"],
+      "example": "Det norske alfabetet har 29 bokstaver."
+    },
+    {
+      "id": "bokstav",
+      "nb": "bokstav",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bokstav", "bokstaven", "bokstaver", "bokstavene"],
+      "example": "Æ, ø og å er tre nye bokstaver."
+    },
+    {
+      "id": "lyd",
+      "nb": "lyd",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lyd", "lyden", "lyder", "lydene"],
+      "example": "Kj er en ny lyd for mange."
+    },
+    {
+      "id": "hore",
+      "nb": "høre",
+      "pos": "verb",
+      "forms": ["høre", "hører", "hørte", "hørt", "hør"],
+      "example": "Hør og si etter."
+    },
+    {
+      "id": "kjenne",
+      "nb": "kjenne",
+      "pos": "verb",
+      "forms": ["kjenne", "kjenner", "kjente", "kjent"],
+      "example": "Kjenner du Sara?"
+    },
+    {
+      "id": "av",
+      "nb": "av",
+      "pos": "preposition",
+      "forms": ["av"],
+      "example": "Tre av bokstavene er nye."
+    },
+    {
+      "id": "de",
+      "nb": "de",
+      "pos": "pronoun",
+      "forms": ["de"],
+      "example": "De bor i Oslo."
+    },
+    {
+      "id": "dem",
+      "nb": "dem",
+      "pos": "pronoun",
+      "forms": ["dem"],
+      "example": "Jeg kjenner dem fra jobben."
+    },
+    {
+      "id": "hun",
+      "nb": "hun",
+      "pos": "pronoun",
+      "forms": ["hun"],
+      "example": "Hun heter Maria."
+    },
+    {
+      "id": "deg",
+      "nb": "deg",
+      "pos": "pronoun",
+      "forms": ["deg"],
+      "example": "Hyggelig å hilse på deg!"
+    },
+    {
+      "id": "sta",
+      "nb": "stå",
+      "pos": "verb",
+      "forms": ["stå", "står", "sto", "stått"],
+      "example": "Melken står bakerst i butikken."
+    },
+    {
+      "id": "helt",
+      "nb": "helt",
+      "pos": "adverb",
+      "forms": ["helt"],
+      "example": "Æ, ø og å står helt til slutt."
+    },
+    {
+      "id": "slutt",
+      "nb": "slutt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["slutt", "slutten"],
+      "example": "Til slutt koster sykkelen 1300 kroner."
+    },
+    {
+      "id": "baer",
+      "nb": "bær",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bær", "bæret", "bærene"],
+      "example": "Vi plukker bær i skogen."
+    },
+    {
+      "id": "ol",
+      "nb": "øl",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["øl", "ølen", "ølet"],
+      "example": "Skal vi ta en øl etter jobben?"
+    },
+    {
+      "id": "hvor",
+      "nb": "hvor",
+      "pos": "adverb",
+      "forms": ["hvor"],
+      "example": "Hvor bor du?"
+    },
+    {
+      "id": "na",
+      "nb": "nå",
+      "pos": "adverb",
+      "forms": ["nå"],
+      "example": "Nå bor jeg i Oslo."
+    },
+    {
+      "id": "hyggelig",
+      "nb": "hyggelig",
+      "pos": "adjective",
+      "forms": ["hyggelig", "hyggelige"],
+      "example": "Hyggelig å hilse på deg!"
+    },
+    {
+      "id": "hilse",
+      "nb": "hilse",
+      "pos": "verb",
+      "forms": ["hilse", "hilser", "hilste", "hilst"],
+      "example": "Hyggelig å hilse på deg."
+    },
+    {
+      "id": "i-like-mate",
+      "nb": "i like måte",
+      "pos": "phrase",
+      "forms": ["måte"],
+      "example": "– Ha en fin dag! – I like måte!"
+    },
+    {
+      "id": "bra",
+      "nb": "bra",
+      "pos": "adjective",
+      "forms": ["bra"],
+      "example": "Ha det bra!"
+    },
+    {
+      "id": "ja",
+      "nb": "ja",
+      "pos": "interjection",
+      "forms": ["ja"],
+      "example": "Ja takk!"
+    },
+    {
+      "id": "unnskyld",
+      "nb": "unnskyld",
+      "pos": "interjection",
+      "forms": ["unnskyld"],
+      "example": "Unnskyld, snakker du engelsk?"
+    },
+    {
+      "id": "mann",
+      "nb": "mann",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mann", "mannen", "menn", "mennene"],
+      "example": "Mannen heter Ahmed."
+    },
+    {
+      "id": "gate",
+      "nb": "gate",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["gate", "gata", "gaten", "gater", "gatene"],
+      "example": "Hun spør en mann på gata."
+    },
+    {
+      "id": "litt",
+      "nb": "litt",
+      "pos": "adverb",
+      "forms": ["litt"],
+      "example": "Jeg snakker litt norsk."
+    },
+    {
+      "id": "stasjon",
+      "nb": "stasjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["stasjon", "stasjonen", "stasjoner", "stasjonene"],
+      "example": "Hvor er stasjonen?"
+    },
+    {
+      "id": "der",
+      "nb": "der",
+      "pos": "adverb",
+      "forms": ["der"],
+      "example": "Stasjonen er der."
+    },
+    {
+      "id": "borte",
+      "nb": "borte",
+      "pos": "adverb",
+      "forms": ["borte"],
+      "example": "Den er der borte."
+    },
+    {
+      "id": "venstre",
+      "nb": "venstre",
+      "pos": "adjective",
+      "forms": ["venstre"],
+      "example": "Gå til venstre."
+    },
+    {
+      "id": "hoyre",
+      "nb": "høyre",
+      "pos": "adjective",
+      "forms": ["høyre"],
+      "example": "Toalettet er til høyre."
+    },
+    {
+      "id": "toalett",
+      "nb": "toalett",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["toalett", "toalettet", "toaletter"],
+      "example": "Hvor er toalettet?"
+    },
+    {
+      "id": "forsta",
+      "nb": "forstå",
+      "pos": "verb",
+      "forms": ["forstå", "forstår", "forsto", "forstått"],
+      "example": "Jeg forstår ikke."
+    },
+    {
+      "id": "sakte",
+      "nb": "sakte",
+      "pos": "adverb",
+      "forms": ["sakte", "saktere"],
+      "example": "Kan du snakke litt saktere?"
+    },
+    {
+      "id": "bety",
+      "nb": "bety",
+      "pos": "verb",
+      "forms": ["bety", "betyr", "betydde"],
+      "example": "Hva betyr det?"
+    },
+    {
+      "id": "selvfolgelig",
+      "nb": "selvfølgelig",
+      "pos": "adverb",
+      "forms": ["selvfølgelig"],
+      "example": "Ja, selvfølgelig!"
+    },
+    {
+      "id": "kjore",
+      "nb": "kjøre",
+      "pos": "verb",
+      "forms": ["kjøre", "kjører", "kjørte", "kjørt"],
+      "example": "Jeg kjører til jobben."
+    },
+    {
+      "id": "kino",
+      "nb": "kino",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kino", "kinoen", "kinoer"],
+      "example": "Skal vi på kino?"
+    },
+    {
+      "id": "kirke",
+      "nb": "kirke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kirke", "kirka", "kirken", "kirker"],
+      "example": "Kirken er gammel."
+    },
+    {
+      "id": "skje",
+      "nb": "skje",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["skje", "skjea", "skjeen", "skjeer"],
+      "example": "Kan jeg få en skje?"
+    },
+    {
+      "id": "lang",
+      "nb": "lang",
+      "pos": "adjective",
+      "forms": ["lang", "langt", "lange"],
+      "example": "Det er en lang dag."
+    },
+    {
+      "id": "penn",
+      "nb": "penn",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["penn", "pennen", "penner"],
+      "example": "Har du en penn?"
+    },
+    {
+      "id": "pen",
+      "nb": "pen",
+      "pos": "adjective",
+      "forms": ["pen", "pent", "pene"],
+      "example": "Det er en pen leilighet."
+    },
+    {
+      "id": "stum",
+      "nb": "stum",
+      "pos": "adjective",
+      "forms": ["stum", "stumt", "stumme"],
+      "example": "H-en i «hva» er stum."
+    }
+  ]
+}

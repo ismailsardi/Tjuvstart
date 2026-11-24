@@ -8,7 +8,19 @@ public sealed record LessonItem(
     string Id, string Skill, string Level, IReadOnlyList<string> Descriptors, string? Audio = null);
 
 public sealed record Lesson(
-    string Id, string Level, string Title, string File, IReadOnlyList<LessonItem> Items, string? Text = null);
+    string Id,
+    string Level,
+    string Title,
+    string File,
+    IReadOnlyList<LessonItem> Items,
+    string? Text = null,
+    string Review = Lesson.Pending)
+{
+    public const string Pending = "pending";
+    public const string Approved = "approved";
+
+    public bool IsApproved => Review == Approved;
+}
 
 /// <summary>A word card. Meanings live in the language packs, keyed by <see cref="Id"/>.</summary>
 public sealed record Card(

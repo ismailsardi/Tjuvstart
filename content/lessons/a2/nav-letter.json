@@ -4,6 +4,7 @@
   "level": "A2",
   "title": "Brev fra NAV",
   "summary": "Read a simplified letter from NAV about the employment form you send every two weeks: when it is due and what happens if you forget.",
+  "review": "pending",
   "document": {
     "kind": "letter",
     "from": "NAV"

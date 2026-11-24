@@ -2,7 +2,24 @@
   "$schema": "schema/tracks.schema.json",
   "tracks": [
     {
+      "id": "from-zero",
+      "level": "A1",
+      "title": "Helt fra start",
+      "summary": "Start from zero: the letters and sounds of Norwegian, saying hello, numbers and prices, the shop, the café and telling the time.",
+      "lessons": [
+        "a1-alphabet",
+        "a1-sounds",
+        "a1-hello",
+        "a1-not-understand",
+        "a1-numbers",
+        "a1-supermarket",
+        "a1-cafe",
+        "a1-days-and-time"
+      ]
+    },
+    {
       "id": "first-weeks",
+      "level": "A2",
       "title": "De første ukene i Norge",
       "summary": "The situations of your first weeks: the first workday, the tax card, BankID, renting, the doctor and lunch with colleagues.",
       "lessons": [
@@ -16,6 +33,7 @@
     },
     {
       "id": "real-texts",
+      "level": "A2",
       "title": "Ekte tekster",
       "summary": "Real kinds of documents, simplified to your level: a letter from NAV, a second-hand ad, a job ad and a notice from the housing association.",
       "lessons": ["a2-nav-letter", "a2-finn-ad", "a2-job-ad", "a2-dugnad"]

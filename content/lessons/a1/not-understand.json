@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-not-understand",
+  "level": "A1",
+  "title": "Unnskyld, jeg forstår ikke",
+  "summary": "The phrases that keep a conversation going when you are lost: ask someone to repeat or slow down, ask what a word means, and ask the way.",
+  "review": "pending",
+  "text": "Maria er ny i Oslo. Hun spør en mann på gata.\n– Unnskyld, snakker du engelsk?\n– Litt. Men vi kan snakke norsk!\n– Ok. Hvor er stasjonen?\n– Den er der borte, til venstre.\n– Jeg forstår ikke. Kan du snakke litt saktere?\n– Selvfølgelig. Der borte. Til venstre.\n– Tusen takk!",
+  "items": [
+    {
+      "id": "a1-help-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 800,
+      "prompt": "Hva spør Maria om først?",
+      "options": ["Om mannen snakker engelsk", "Hva klokka er", "Hvor mannen bor"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 700,
+      "prompt": "Hvor er stasjonen?",
+      "options": ["Til venstre", "Til høyre", "Rett fram"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 850,
+      "prompt": "Hva sier Maria når hun ikke forstår?",
+      "options": ["Kan du snakke litt saktere?", "Snakker du engelsk?", "Tusen takk!"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-04",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["ikke-placement"],
+      "difficulty": 650,
+      "prompt": "Jeg forstår ___.",
+      "answers": ["ikke"]
+    },
+    {
+      "id": "a1-help-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "difficulty": 850,
+      "prompt": "Kan du snakke litt ___?",
+      "answers": ["saktere", "langsommere"]
+    },
+    {
+      "id": "a1-help-06",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["question-words"],
+      "difficulty": 750,
+      "prompt": "Lag en setning.",
+      "tokens": ["du", "Snakker", "engelsk?"],
+      "answer": "Snakker du engelsk?"
+    },
+    {
+      "id": "a1-help-07",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["question-words"],
+      "difficulty": 750,
+      "prompt": "Lag en setning.",
+      "tokens": ["er", "Hvor", "toalettet?"],
+      "answer": "Hvor er toalettet?"
+    },
+    {
+      "id": "a1-help-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["question-words"],
+      "difficulty": 850,
+      "prompt": "Lag en setning.",
+      "tokens": ["betyr", "Hva", "det?"],
+      "answer": "Hva betyr det?"
+    },
+    {
+      "id": "a1-help-09",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 800,
+      "prompt": "Hvor er toalettet?",
+      "audio": "Toalettet er der borte, til høyre.",
+      "options": ["Til høyre", "Til venstre", "Rett fram"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "focus": ["ikke-placement"],
+      "difficulty": 850,
+      "prompt": "Snakker kvinnen engelsk?",
+      "audio": "Beklager, jeg snakker ikke engelsk.",
+      "options": ["Nei", "Ja", "Litt"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 900,
+      "prompt": "Hva vil mannen?",
+      "audio": "Unnskyld, kan du si det en gang til?",
+      "options": ["At du sier det igjen", "At du går", "At du ringer"],
+      "answer": 0
+    },
+    {
+      "id": "a1-help-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 750,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg forstår ikke."
+    },
+    {
+      "id": "a1-help-13",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 850,
+      "prompt": "Skriv det du hører.",
+      "audio": "Hva betyr det?"
+    }
+  ]
+}

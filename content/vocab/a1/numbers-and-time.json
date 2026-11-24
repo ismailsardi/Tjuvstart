@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "numbers-and-time",
+  "title": "Tall og tid",
+  "cards": [
+    {
+      "id": "tall",
+      "nb": "tall",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["tall", "tallet", "tallene"],
+      "example": "Skriv tallet."
+    },
+    {
+      "id": "null",
+      "nb": "null",
+      "pos": "number",
+      "forms": ["null"],
+      "example": "Det er null grader ute."
+    },
+    {
+      "id": "fire",
+      "nb": "fire",
+      "pos": "number",
+      "forms": ["fire"],
+      "example": "Vi er fire på teamet."
+    },
+    {
+      "id": "fem",
+      "nb": "fem",
+      "pos": "number",
+      "forms": ["fem"],
+      "example": "Jeg jobber fem dager i uka."
+    },
+    {
+      "id": "sju",
+      "nb": "sju",
+      "pos": "number",
+      "forms": ["sju"],
+      "example": "Butikken åpner klokka sju."
+    },
+    {
+      "id": "atte",
+      "nb": "åtte",
+      "pos": "number",
+      "forms": ["åtte"],
+      "example": "Jeg begynner klokka åtte."
+    },
+    {
+      "id": "ni",
+      "nb": "ni",
+      "pos": "number",
+      "forms": ["ni"],
+      "example": "Butikken åpner klokka ni."
+    },
+    {
+      "id": "elleve",
+      "nb": "elleve",
+      "pos": "number",
+      "forms": ["elleve"],
+      "example": "Butikken er åpen til elleve."
+    },
+    {
+      "id": "tjue",
+      "nb": "tjue",
+      "pos": "number",
+      "forms": ["tjue"],
+      "example": "Det koster tjue kroner."
+    },
+    {
+      "id": "forti",
+      "nb": "førti",
+      "pos": "number",
+      "forms": ["førti"],
+      "example": "Førti er ikke fjorten."
+    },
+    {
+      "id": "femti",
+      "nb": "femti",
+      "pos": "number",
+      "forms": ["femti"],
+      "example": "Det koster femti kroner."
+    },
+    {
+      "id": "sytti",
+      "nb": "sytti",
+      "pos": "number",
+      "forms": ["sytti"],
+      "example": "Bestemoren min er sytti år."
+    },
+    {
+      "id": "hundre",
+      "nb": "hundre",
+      "pos": "number",
+      "forms": ["hundre"],
+      "example": "Billetten koster hundre kroner."
+    },
+    {
+      "id": "tusen",
+      "nb": "tusen",
+      "pos": "number",
+      "forms": ["tusen"],
+      "example": "Tusen takk!"
+    },
+    {
+      "id": "mye",
+      "nb": "mye",
+      "pos": "determiner",
+      "forms": ["mye"],
+      "example": "Hvor mye koster det?"
+    },
+    {
+      "id": "koste",
+      "nb": "koste",
+      "pos": "verb",
+      "forms": ["koste", "koster", "kostet"],
+      "example": "Hvor mye koster sykkelen?"
+    },
+    {
+      "id": "tirsdag",
+      "nb": "tirsdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tirsdag"],
+      "example": "På tirsdag skal jeg til legen."
+    },
+    {
+      "id": "onsdag",
+      "nb": "onsdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["onsdag"],
+      "example": "Møtet er på onsdag."
+    },
+    {
+      "id": "passe",
+      "nb": "passe",
+      "pos": "verb",
+      "forms": ["passe", "passer", "passet"],
+      "example": "Passer klokka ti?"
+    },
+    {
+      "id": "ses",
+      "nb": "vi ses",
+      "pos": "phrase",
+      "forms": ["ses"],
+      "example": "Vi ses i morgen!"
+    }
+  ]
+}

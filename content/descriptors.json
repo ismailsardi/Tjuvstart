@@ -3,6 +3,60 @@
   "source": "Can-do statements paraphrased from the illustrative descriptor scales in the CEFR Companion Volume (Council of Europe, 2020). Wording is our own and is to be checked against the source before content production scales up.",
   "descriptors": [
     {
+      "id": "A1-R-01",
+      "level": "A1",
+      "skill": "reading",
+      "text": "Can recognise familiar words, names and numbers on signs, labels, price tags and simple forms."
+    },
+    {
+      "id": "A1-R-02",
+      "level": "A1",
+      "skill": "reading",
+      "text": "Can understand very short, simple texts and dialogues about everyday needs, a phrase at a time."
+    },
+    {
+      "id": "A1-L-01",
+      "level": "A1",
+      "skill": "listening",
+      "text": "Can recognise the sounds of Norwegian, including æ, ø, å and long and short vowels, in single words and very short phrases."
+    },
+    {
+      "id": "A1-L-02",
+      "level": "A1",
+      "skill": "listening",
+      "text": "Can understand numbers, prices, days and times when they are said slowly and clearly."
+    },
+    {
+      "id": "A1-L-03",
+      "level": "A1",
+      "skill": "listening",
+      "text": "Can understand everyday expressions about simple, concrete needs, such as questions at a shop counter, when people speak slowly."
+    },
+    {
+      "id": "A1-W-01",
+      "level": "A1",
+      "skill": "writing",
+      "text": "Can write familiar words and short everyday phrases, and fill in simple details such as numbers and days."
+    },
+    {
+      "id": "A1-W-02",
+      "level": "A1",
+      "skill": "writing",
+      "text": "Can write simple phrases and sentences about themselves, such as their name, where they come from and where they live."
+    },
+    {
+      "id": "A1-S-01",
+      "level": "A1",
+      "skill": "speaking",
+      "text": "Can greet people, introduce themselves, say thank you and sorry, and say when they do not understand."
+    },
+    {
+      "id": "A1-S-02",
+      "level": "A1",
+      "skill": "speaking",
+      "text": "Can ask for things and give simple information in a shop or café, using numbers, prices and times."
+    },
+    {
       "id": "A2-R-01",
       "level": "A2",
       "skill": "reading",
