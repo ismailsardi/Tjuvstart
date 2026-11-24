@@ -7,6 +7,7 @@ descriptors.json        CEFR can-do statements with stable IDs, e.g. A2-R-01
 lessons/<level>/*.json  one file per lesson
 l1/<language>/pack.json native-language pack, folder named by ISO 639-1 code
 vocab/<level>/*.json    word card decks (see vocab/README.md)
+alphabet.json           the 29 letters for the alphabet page, each with its name and an example word
 schema/                 JSON Schemas for each file type
 ```
 

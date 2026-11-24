@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ismailsardi/Tjuvstart/content/schema/alphabet.schema.json",
+  "title": "Alphabet",
+  "description": "The Norwegian alphabet for the reference page: each letter, how it is said, and an example word. The letter names and example words are recorded at build time.",
+  "type": "object",
+  "required": ["letters"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "letters": {
+      "type": "array",
+      "minItems": 29,
+      "maxItems": 29,
+      "items": {
+        "type": "object",
+        "required": ["letter", "name", "example"],
+        "additionalProperties": false,
+        "properties": {
+          "letter": {
+            "description": "The capital letter.",
+            "type": "string",
+            "pattern": "^[A-ZÆØÅ]$"
+          },
+          "name": {
+            "description": "How the letter is said, written in Norwegian.",
+            "type": "string",
+            "minLength": 1
+          },
+          "example": {
+            "description": "A common word that uses the letter, in lower case.",
+            "type": "string",
+            "pattern": "^[a-zæøåé-]+$"
+          }
+        }
+      }
+    }
+  }
+}

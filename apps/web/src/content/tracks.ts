@@ -34,19 +34,33 @@ export function nextInTrack(track: Track, completed: ReadonlySet<string>): Lesso
 
 /**
  * The learner's overall level for choosing what to suggest: the mean rating over the skills
- * they have answered in. With no answers yet, A2, the level most of the audience starts at.
+ * they have answered in. With no answers yet, A1 for someone who said they are starting from
+ * zero, otherwise A2, the level most of the audience starts at.
  */
 export function overallLevel(
   ratings: Readonly<Record<Skill, number>>,
   answers: Readonly<Record<Skill, number>>,
+  startingPoint?: 'beginner' | 'some',
 ): Level {
   const answered = (Object.keys(ratings) as Skill[]).filter((skill) => answers[skill] > 0);
-  if (answered.length === 0) return 'A2';
+  if (answered.length === 0) return startingPoint === 'beginner' ? 'A1' : 'A2';
   const mean = answered.reduce((sum, skill) => sum + ratings[skill], 0) / answered.length;
   return ratingToLevel(mean);
 }
 
-/** Beginner tracks are only suggested to learners who are still at A1. */
-export function suggestedTracks(level: Level): readonly Track[] {
-  return level === 'A1' ? tracks : tracks.filter((track) => track.level !== 'A1');
+/**
+ * Beginner tracks are suggested to learners who are still at A1, and to anyone who has started
+ * one and not finished it, so a beginner who levels up halfway is not moved off their path.
+ */
+export function suggestedTracks(
+  level: Level,
+  completed: ReadonlySet<string> = new Set(),
+): readonly Track[] {
+  if (level === 'A1') return tracks;
+  return tracks.filter(
+    (track) =>
+      track.level !== 'A1' ||
+      (track.lessons.some((id) => completed.has(id)) &&
+        nextInTrack(track, completed) !== undefined),
+  );
 }

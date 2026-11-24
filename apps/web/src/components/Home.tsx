@@ -97,16 +97,20 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const hasAnswers = useLiveQuery(async () => (await db.attempts.count()) > 0);
   // Practice needs something to go on: answers in lessons, or a finished level check.
   const canPractise = hasAnswers || profile?.placedAt !== undefined;
+  // Beginners skip the level check: they start on the alphabet.
   const needsPlacement =
     profile !== undefined &&
+    profile.startingPoint !== 'beginner' &&
     profile.placedAt === undefined &&
     Object.values(profile.answers).every((n) => n === 0);
   const anyEstimate =
     profile !== undefined &&
     Object.values(profile.answers).some((n) => n >= MIN_ANSWERS_FOR_ESTIMATE);
   // Learners past A1 are not sent back to the beginner track.
-  const level = profile ? overallLevel(profile.ratings, profile.answers) : 'A2';
-  const shownTracks = suggestedTracks(level);
+  const level = profile
+    ? overallLevel(profile.ratings, profile.answers, profile.startingPoint)
+    : 'A2';
+  const shownTracks = suggestedTracks(level, completed);
   // Only the track in progress is shown; the others wait on the lessons page.
   const currentTrack = completed
     ? shownTracks.find((track) => nextInTrack(track, completed))

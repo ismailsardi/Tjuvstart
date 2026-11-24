@@ -17,6 +17,8 @@ export interface LogSyncFields extends SyncFields {
   syncKey?: string;
 }
 
+export type StartingPoint = 'beginner' | 'some';
+
 export interface Profile extends SyncFields {
   id: string;
   /** Elo-style rating per skill (see packages/engine). */
@@ -27,6 +29,11 @@ export interface Profile extends SyncFields {
   nativeLanguage?: string;
   /** Other languages the learner knows well, used for extra cognate hints. */
   knownLanguages?: string[];
+  /**
+   * What the learner said at onboarding: starting from zero, or knowing some Norwegian.
+   * Beginners start on the A1 track instead of the level check.
+   */
+  startingPoint?: StartingPoint;
   /** When the placement check was last completed. */
   placedAt?: number;
   /** Playback speed for listening exercises; it rises as the learner follows faster speech. */

@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { packs } from '../content/packs';
-import { saveLanguages } from '../data/progress';
+import type { StartingPoint } from '../data/db';
+import { saveLanguages, saveStartingPoint } from '../data/progress';
 import { I18nProvider } from '../i18n/I18nProvider';
 import { useI18n } from '../i18n/useI18n';
 import { uiLanguageFor } from '../i18n/strings';
@@ -12,7 +13,10 @@ interface Props {
   onDone?: () => void;
 }
 
-/** Asks for the learner's languages. The interface switches language as soon as one is picked. */
+/**
+ * Asks for the learner's languages and, on the first run, how much Norwegian they know.
+ * The interface switches language as soon as one is picked.
+ */
 export function Onboarding(props: Props) {
   const [native, setNative] = useState(props.nativeLanguage ?? '');
   return (
@@ -23,6 +27,7 @@ export function Onboarding(props: Props) {
 }
 
 function OnboardingForm({
+  nativeLanguage,
   knownLanguages = [],
   onDone,
   native,
@@ -30,30 +35,36 @@ function OnboardingForm({
 }: Props & { native: string; setNative: (code: string) => void }) {
   const { t } = useI18n();
   const [known, setKnown] = useState<string[]>([...knownLanguages]);
-  // One question per screen: the native language, then other languages.
-  const [step, setStep] = useState<1 | 2>(1);
+  const [startingPoint, setStartingPoint] = useState<StartingPoint | null>(null);
+  // One question per screen: the native language, other languages, then (first run only)
+  // how much Norwegian the learner already knows.
+  const totalSteps = nativeLanguage === undefined ? 3 : 2;
+  const [step, setStep] = useState(1);
 
   async function submit(event: FormEvent) {
     event.preventDefault();
     if (!native) return;
-    if (step === 1) {
-      setStep(2);
+    if (step < totalSteps) {
+      setStep(step + 1);
       return;
     }
+    if (step === 3 && !startingPoint) return;
     await saveLanguages(
       native,
       known.filter((code) => code !== native),
     );
+    if (startingPoint) await saveStartingPoint(startingPoint);
     onDone?.();
   }
 
   return (
     <form className="onboarding" onSubmit={submit} aria-labelledby="onboarding-heading">
       <div className="steps-dots" aria-hidden="true">
-        <span className={step === 1 ? 'active' : undefined} />
-        <span className={step === 2 ? 'active' : undefined} />
+        {Array.from({ length: totalSteps }, (_, i) => (
+          <span key={i} className={step === i + 1 ? 'active' : undefined} />
+        ))}
       </div>
-      <p className="visually-hidden">{t('stepOf', { n: step, total: 2 })}</p>
+      <p className="visually-hidden">{t('stepOf', { n: step, total: totalSteps })}</p>
       <h1 id="onboarding-heading" lang="nb">
         {t('onboardingTitle')}
       </h1>
@@ -85,6 +96,30 @@ function OnboardingForm({
             <span>{t('otherLanguage')}</span>
           </label>
         </fieldset>
+      ) : step === 3 ? (
+        <fieldset>
+          <legend>{t('levelQuestion')}</legend>
+          {(
+            [
+              ['beginner', 'levelBeginner', 'levelBeginnerHint'],
+              ['some', 'levelSome', 'levelSomeHint'],
+            ] as const
+          ).map(([value, label, hint]) => (
+            <label key={value} className="choice">
+              <input
+                type="radio"
+                name="starting-point"
+                value={value}
+                checked={startingPoint === value}
+                onChange={() => setStartingPoint(value)}
+              />
+              <span>
+                {t(label)}
+                <span className="choice-hint muted small"> {t(hint)}</span>
+              </span>
+            </label>
+          ))}
+        </fieldset>
       ) : (
         <fieldset>
           <legend>{t('knownQuestion')}</legend>
@@ -110,12 +145,12 @@ function OnboardingForm({
       )}
 
       <div className="bottom-actions">
-        {step === 2 && (
-          <button type="button" className="secondary" onClick={() => setStep(1)}>
+        {step > 1 && (
+          <button type="button" className="secondary" onClick={() => setStep(step - 1)}>
             {t('back')}
           </button>
         )}
-        <button type="submit" disabled={!native}>
+        <button type="submit" disabled={!native || (step === 3 && !startingPoint)}>
           {t('save')}
         </button>
       </div>

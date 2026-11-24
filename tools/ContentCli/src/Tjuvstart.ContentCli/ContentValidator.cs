@@ -131,6 +131,29 @@ public static class ContentValidator
             }
         }
 
+        ValidateAlphabet(content.Alphabet, issues);
         return issues;
+    }
+
+    /// <summary>The Norwegian alphabet, in order.</summary>
+    public const string NorwegianAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
+
+    private static void ValidateAlphabet(IReadOnlyList<AlphabetLetter> alphabet, List<ValidationIssue> issues)
+    {
+        if (alphabet.Count == 0)
+        {
+            return;
+        }
+
+        var letters = string.Concat(alphabet.Select(l => l.Letter));
+        if (letters != NorwegianAlphabet)
+        {
+            issues.Add(new ValidationIssue(ContentLoader.AlphabetFile, $"Letters must be {NorwegianAlphabet} in order, found {letters}."));
+        }
+
+        foreach (var letter in alphabet.Where(l => !l.Example.Contains(l.Letter.ToLowerInvariant(), StringComparison.Ordinal)))
+        {
+            issues.Add(new ValidationIssue(ContentLoader.AlphabetFile, $"Example '{letter.Example}' does not contain the letter {letter.Letter}."));
+        }
     }
 }

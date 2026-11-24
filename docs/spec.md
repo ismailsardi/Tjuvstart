@@ -88,11 +88,12 @@ For context, Norwegian citizenship requires a pass at B1 or higher in the oral t
 ### 7.3 How the level is estimated
 
 1. **Tagging.** Every item carries a CEFR level, a skill, descriptor IDs and a difficulty rating.
-2. **Placement.** A five-minute check asks five questions per skill that has exercises (reading, listening and writing today). Each question is picked near the current estimate (50% expected success, so every answer says as much as possible) and moves the rating with a larger step than normal practice. The result is saved as the starting estimate.
-3. **Continuous estimate.** Each answer updates a per-skill Elo-style rating: a correct answer on a hard item raises the rating more than one on an easy item (see [ADR 0003](adr/0003-elo-rating-before-irt.md)).
-4. **Item selection.** The next item is chosen so the expected success rate is about 80%.
-5. **Open answers.** With AI enabled, writing and speaking are scored against a CEFR-based rubric and the score feeds into the same rating. Without AI, learners self-assess against a model answer and a checklist, and the level for that skill is marked as self-assessed.
-6. **Recalibration.** A periodic short practice exam checks the estimate against exam-style tasks.
+2. **Starting point.** Onboarding asks whether the learner knows any Norwegian. Someone starting from zero skips the level check: their ratings start at the A1 base and Home sends them to the alphabet lesson, the first of the A1 track. That track stays suggested until it is finished, even if the learner moves past A1 halfway.
+3. **Placement.** For everyone else, a five-minute check asks five questions per skill that has exercises (reading, listening and writing today). Each question is picked near the current estimate (50% expected success, so every answer says as much as possible) and moves the rating with a larger step than normal practice. The result is saved as the starting estimate.
+4. **Continuous estimate.** Each answer updates a per-skill Elo-style rating: a correct answer on a hard item raises the rating more than one on an easy item (see [ADR 0003](adr/0003-elo-rating-before-irt.md)).
+5. **Item selection.** The next item is chosen so the expected success rate is about 80%.
+6. **Open answers.** With AI enabled, writing and speaking are scored against a CEFR-based rubric and the score feeds into the same rating. Without AI, learners self-assess against a model answer and a checklist, and the level for that skill is marked as self-assessed.
+7. **Recalibration.** A periodic short practice exam checks the estimate against exam-style tasks.
 
 ### 7.4 Error memory and practice sessions
 
