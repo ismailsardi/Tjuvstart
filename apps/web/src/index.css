@@ -1814,7 +1814,9 @@ button.link.danger {
   color: var(--bad);
 }
 
-button.danger {
+/* Filled destructive button. The text-style variant (link danger) keeps button.link's
+   transparent background. */
+button.danger:not(.link) {
   background: var(--bad);
   border-color: var(--bad);
   color: var(--surface);
