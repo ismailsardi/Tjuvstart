@@ -33,11 +33,11 @@ export async function stubAudio(page: Page): Promise<string[]> {
 export async function chooseLanguages(page: Page, native: string, known: string[] = []) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
-  await page.getByRole('button', { name: /Continue|Continuer|Weiter/ }).click();
+  await page.getByRole('button', { name: /Continue|Continuer|Weiter|Continuar/ }).click();
   for (const language of known) {
     await page.getByRole('checkbox', { name: language }).check();
   }
-  await page.getByRole('button', { name: /Continue|Continuer|Weiter/ }).click();
+  await page.getByRole('button', { name: /Continue|Continuer|Weiter|Continuar/ }).click();
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }
 

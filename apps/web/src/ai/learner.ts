@@ -8,6 +8,7 @@ const LANGUAGE_NAMES: Record<UiLanguage, string> = {
   en: 'English',
   fr: 'French',
   de: 'German',
+  es: 'Spanish',
 };
 const JOB_NAMES: Record<string, string> = {
   it: 'IT and software',

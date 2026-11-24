@@ -15,6 +15,7 @@ describe('Onboarding', () => {
     expect(screen.getAllByRole('radio').map((radio) => radio.getAttribute('value'))).toEqual([
       'de',
       'en',
+      'es',
       'fr',
       'other',
     ]);
