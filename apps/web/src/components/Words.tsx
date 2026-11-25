@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { JOB_FIELDS, decks, deckId, jobDeck, type Deck } from '../content/vocab';
 import { db } from '../data/db';
-import { dueCards, getProfile, saveJobField } from '../data/progress';
+import { dueCards, getProfile, saveJobField, wordCounts } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { DUE_DECK, deckHref } from '../routing/useHashRoute';
 import { AlphabetRow } from './AlphabetRow';
@@ -16,6 +16,7 @@ export function Words() {
   const learning = useLiveQuery(async () => new Set(await db.cards.toCollection().primaryKeys()));
   const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
   const profile = useLiveQuery(() => getProfile());
+  const counts = useLiveQuery(() => wordCounts());
   const [choosing, setChoosing] = useState(false);
 
   const field = profile?.jobField;
@@ -73,6 +74,11 @@ export function Words() {
           </>
         ) : (
           <p className="muted">{t('dueDeckEmpty')}</p>
+        )}
+        {counts && counts.studying > 0 && (
+          <p className="muted small" data-testid="words-known">
+            {t('wordsKnownLine', { known: counts.known, studying: counts.studying })}
+          </p>
         )}
       </section>
 

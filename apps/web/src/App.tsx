@@ -32,6 +32,9 @@ const DeckSession = lazy(() =>
 );
 const Alphabet = lazy(() => import('./components/Alphabet').then((m) => ({ default: m.Alphabet })));
 const Words = lazy(() => import('./components/Words').then((m) => ({ default: m.Words })));
+const GoalPage = lazy(() =>
+  import('./components/GoalPicker').then((m) => ({ default: m.GoalPage })),
+);
 const Me = lazy(() => import('./components/Me').then((m) => ({ default: m.Me })));
 const Placement = lazy(() =>
   import('./components/Placement').then((m) => ({ default: m.Placement })),
@@ -106,6 +109,7 @@ function Page({
   if (route.name === 'deck')
     return <DeckSession key={route.deckId} deckId={route.deckId} packs={packs} />;
   if (route.name === 'me') return <Me packs={packs} />;
+  if (route.name === 'goal') return <GoalPage />;
   if (route.name === 'placement') return <Placement />;
   if (route.name === 'practice') return <Practice packs={packs} />;
   if (route.name === 'daily') return <DailySession packs={packs} />;

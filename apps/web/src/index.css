@@ -2048,3 +2048,483 @@ button.danger:not(.link) {
 .alphabet button.speak {
   margin-top: 0.25rem;
 }
+
+/* Session result: revealed step by step (anticipation, reveal, celebration) */
+
+.session-result .reveal {
+  animation: reveal-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.session-result .tusse-cheer .tusse-body {
+  animation-delay: var(--cheer, 0ms);
+}
+
+.result-score {
+  display: grid;
+  justify-items: center;
+  gap: 0.25rem;
+}
+
+.result-score p {
+  margin: 0;
+}
+
+.score-ring {
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.score-ring circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+.score-ring-track {
+  stroke: var(--border);
+}
+
+.score-ring-fill {
+  stroke: var(--progress);
+  stroke-linecap: round;
+  stroke-dasharray: calc(var(--share) * 100) 100;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  animation: ring-fill 900ms ease-out both;
+  animation-delay: calc(var(--delay, 0ms) + 150ms);
+}
+
+.score-ring text {
+  fill: var(--text);
+  font-weight: 700;
+}
+
+.score-ring-score {
+  font-size: 2.25rem;
+}
+
+.score-ring-total {
+  font-size: 1.1rem;
+  fill: var(--muted);
+}
+
+.result-extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.result-extras p {
+  margin: 0;
+}
+
+.result-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.skill-changes {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem;
+  list-style: none;
+  text-align: start;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.skill-change {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.3rem 0.75rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.6rem;
+}
+
+.skill-change-name {
+  font-weight: 600;
+}
+
+.skill-change .level-meter {
+  grid-column: 1 / -1;
+}
+
+.skill-change-note {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.level-meter {
+  display: block;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.level-meter-fill {
+  display: block;
+  height: 100%;
+  width: calc(var(--to) * 100%);
+  border-radius: inherit;
+  background: var(--progress);
+  animation: meter-grow 900ms ease-out both;
+  animation-delay: calc(var(--delay, 0ms) + 200ms);
+}
+
+.level-up {
+  background: var(--accent-soft);
+  animation:
+    reveal-in 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both,
+    level-glow 1.2s ease-out both;
+  animation-delay: var(--delay, 0ms), calc(var(--delay, 0ms) + 900ms);
+}
+
+.level-up .skill-change-note {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.result-can-do {
+  margin-top: 1rem;
+}
+
+.session-result .actions {
+  margin-top: 1rem;
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+}
+
+@keyframes ring-fill {
+  from {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes meter-grow {
+  from {
+    width: calc(var(--from) * 100%);
+  }
+}
+
+@keyframes level-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgb(228 87 46 / 45%);
+  }
+  100% {
+    box-shadow: 0 0 0 0.75rem rgb(228 87 46 / 0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .session-result .reveal,
+  .score-ring-fill,
+  .level-meter-fill,
+  .level-up {
+    animation: none;
+  }
+}
+
+/* Daily goal ring and the last seven days */
+
+.streak-main {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.streak-main p {
+  margin: 0.1rem 0;
+}
+
+.goal-ring {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.goal-ring circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+.goal-ring-track {
+  stroke: var(--border);
+}
+
+.goal-ring-fill {
+  stroke: var(--progress);
+  stroke-linecap: round;
+  stroke-dasharray: calc(var(--share) * 100) 100;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dasharray 600ms ease-out;
+}
+
+/* An empty ring shows no dot from the round cap. */
+.goal-ring.empty .goal-ring-fill {
+  stroke-linecap: butt;
+}
+
+.goal-ring text {
+  fill: currentcolor;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.goal-ring.met .goal-ring-fill {
+  animation: goal-pulse 900ms ease-out 1;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.week li {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.week-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.week .active .week-dot {
+  background: var(--progress);
+  border-color: var(--progress);
+}
+
+.week .today .week-dot {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.week-day {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.hero .goal-ring-track,
+.hero .week-dot {
+  stroke: rgb(255 255 255 / 30%);
+  border-color: rgb(255 255 255 / 45%);
+}
+
+.hero .goal-ring-fill,
+.hero .week .active .week-dot {
+  stroke: #ffb199;
+  background: #ffb199;
+  border-color: #ffb199;
+}
+
+.hero .week-day {
+  color: rgb(255 255 255 / 85%);
+}
+
+.hero-link {
+  justify-self: center;
+  color: #fff;
+}
+
+.goal-picker {
+  border: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.goal-picker legend {
+  font-weight: 700;
+  padding: 0;
+}
+
+.goal-picker > p {
+  margin: 0.25rem 0 0.5rem;
+}
+
+@keyframes goal-pulse {
+  50% {
+    stroke-width: 7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .goal-ring-fill {
+    transition: none;
+  }
+
+  .goal-ring.met .goal-ring-fill {
+    animation: none;
+  }
+}
+
+/* Level estimate with progress toward the next level */
+
+.skill-level {
+  flex: 1;
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  max-width: 14rem;
+}
+
+.skill-level .level-meter {
+  width: 100%;
+}
+
+.level-meter-fill.static {
+  animation: none;
+}
+
+/* Mastery stats on Me */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.stats li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.85rem 0.75rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Tusse's new gear, on the session result */
+
+.gear-unlock {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: start;
+  background: var(--accent-soft);
+}
+
+.gear-unlock h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.gear-unlock p {
+  margin: 0;
+}
+
+.gear-unlock .tusse {
+  flex: none;
+}
+
+/* Answers still needed for an estimate: quieter than the level meter, so the two don't read alike. */
+.skill-pending progress::-webkit-progress-value {
+  background: var(--muted);
+}
+
+.skill-pending progress::-moz-progress-bar {
+  background: var(--muted);
+}
+
+/* Tracks fold down to a summary; the current one starts open */
+
+.track.current {
+  box-shadow:
+    inset 0 0 0 2px var(--accent),
+    var(--shadow);
+}
+
+.track-details {
+  margin-top: 0.6rem;
+}
+
+.track-details > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.track-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.track-details > summary::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(-45deg);
+  transition: transform 150ms ease-out;
+}
+
+.track-details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.track-details .track-steps {
+  margin-top: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track-details > summary::before {
+    transition: none;
+  }
+}
+
+.onboarding-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.onboarding-tusse {
+  flex: none;
+  margin-bottom: -0.25rem;
+}

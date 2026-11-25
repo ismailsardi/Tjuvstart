@@ -1,70 +1,54 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import type { CanDoStatus } from '@tjuvstart/engine';
-import { trackedDescriptors } from '../content/descriptors';
 import type { LanguagePack } from '../content/packs';
 import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
-import { canDoProgress, dailyProgress } from '../data/progress';
+import { dailyProgress } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { DUE_DECK, homeHref } from '../routing/useHashRoute';
-import { CanDoList } from './CanDoList';
 import { DeckSession } from './DeckSession';
 import { Practice } from './Practice';
+import { SessionResult } from './SessionResult';
 import { StreakLine } from './StreakLine';
-import { Tusse } from './Tusse';
-import { useTusseGear } from './useTusseGear';
+import { useProgressSnapshot } from './useProgressSnapshot';
 
 type Stage = 'cards' | 'practice' | 'done';
 
 /**
  * About ten minutes a day: the word cards that are due, then exercises picked from weak
- * skills and recurring mistakes. The end screen shows the streak and any can-do statement
- * the session completed.
+ * skills and recurring mistakes. The end screen reveals the score, how each skill moved, any
+ * can-do statement the session completed, and the streak.
  */
 export function DailySession({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
   const [stage, setStage] = useState<Stage>('cards');
-  const [score, setScore] = useState(0);
-  const [before, setBefore] = useState<Map<string, CanDoStatus> | null>(null);
-  const [after, setAfter] = useState<Map<string, CanDoStatus> | null>(null);
+  const [result, setResult] = useState({ score: 0, bestRun: 0 });
   const progress = useLiveQuery(() => dailyProgress());
-  const gear = useTusseGear();
-
-  useEffect(() => {
-    void canDoProgress().then(setBefore);
-  }, []);
-  useEffect(() => {
-    if (stage === 'done') void canDoProgress().then(setAfter);
-  }, [stage]);
+  const { before, after } = useProgressSnapshot(stage === 'done');
 
   const toPractice = useCallback(() => setStage('practice'), []);
-  const toDone = useCallback((n: number) => {
-    setScore(n);
+  const toDone = useCallback((score: number, bestRun = 0) => {
+    setResult({ score, bestRun });
     setStage('done');
   }, []);
 
   if (!before) return null;
 
   if (stage === 'done') {
-    const reached = trackedDescriptors.filter(
-      (d) => after?.get(d.id) === 'can-do' && before.get(d.id) !== 'can-do',
-    );
     return (
-      <section className="daily-done done-screen" aria-labelledby="daily-done-heading">
-        <Tusse pose="cheer" gear={gear} size={120} className="done-tusse" />
-        <h1 id="daily-done-heading">{t('dailyDone')}</h1>
-        <p>{t('dailyDoneBody', { score, total: DAILY_ITEMS })}</p>
-        {progress && <StreakLine progress={progress} />}
-        {reached.length > 0 && after && (
-          <section className="panel" aria-labelledby="new-can-do">
-            <h2 id="new-can-do">{t('canDoNew')}</h2>
-            <CanDoList descriptors={reached} status={after} packs={packs} />
-          </section>
-        )}
+      <SessionResult
+        heading={t('dailyDone')}
+        score={result.score}
+        total={DAILY_ITEMS}
+        bestRun={result.bestRun}
+        before={before}
+        after={after}
+        packs={packs}
+        footer={progress && <StreakLine progress={progress} />}
+      >
         <a className="button" href={homeHref}>
           {t('backHome')}
         </a>
-      </section>
+      </SessionResult>
     );
   }
 

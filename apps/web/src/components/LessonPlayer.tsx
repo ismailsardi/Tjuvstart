@@ -18,9 +18,11 @@ import { sentences } from '../audio/speech';
 import { SpeakButton } from './SpeakButton';
 import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
+import { SessionResult } from './SessionResult';
 import { Tusse } from './Tusse';
 import { useTusseGear } from './useTusseGear';
 import { useFocusOnChange } from './usePageFocus';
+import { useProgressSnapshot } from './useProgressSnapshot';
 
 type Feedback = { correct: boolean; spelling: Spelling; answer: string; given?: string } | null;
 
@@ -36,7 +38,7 @@ interface Props {
    */
   practice?: boolean;
   /** Called at the end instead of showing the end screen, as in the daily session. */
-  onFinish?: (score: number) => void;
+  onFinish?: (score: number, bestRun: number) => void;
   /**
    * For generated content that is not part of the course: answers do not change the ratings,
    * nothing is marked completed, and there is no shadowing link.
@@ -56,6 +58,8 @@ export function LessonPlayer({
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const [score, setScore] = useState(0);
+  // Right answers in a row: the current run and the best one this session.
+  const [run, setRun] = useState({ now: 0, best: 0 });
 
   const item = lesson.items[index];
   const text = practice ? (item ? readingTextFor(item) : undefined) : lesson.text;
@@ -68,6 +72,7 @@ export function LessonPlayer({
 
   const finished = !item;
   const gear = useTusseGear();
+  const { before, after } = useProgressSnapshot(finished, !onFinish && !ephemeral);
   const [newCards, setNewCards] = useState(0);
   const saved = useRef(false);
   // A new question, or the end screen, takes focus from the Continue button that just went away.
@@ -75,8 +80,8 @@ export function LessonPlayer({
   useFocusOnChange(promptRef, index);
 
   useEffect(() => {
-    if (finished) onFinish?.(score);
-  }, [finished, onFinish, score]);
+    if (finished) onFinish?.(score, run.best);
+  }, [finished, onFinish, score, run.best]);
 
   useEffect(() => {
     if (!finished || saved.current || practice || ephemeral) return;
@@ -89,29 +94,33 @@ export function LessonPlayer({
   if (!item) {
     if (onFinish) return null;
     return (
-      <section className="done-screen" aria-labelledby="done-heading">
-        <Tusse pose="cheer" gear={gear} size={120} className="done-tusse" />
-        <h1 id="done-heading" lang="nb" ref={promptRef} tabIndex={-1}>
-          Ferdig!
-        </h1>
-        <p>{t('doneBody', { score, total: lesson.items.length })}</p>
-        {newCards > 0 && (
-          <p>
-            {newCards === 1 ? t('newCard') : t('newCards', { n: newCards })}{' '}
-            <a href={wordsHref}>{t('wordCards')}</a>
-          </p>
-        )}
-        <div className="actions">
-          {lesson.text && (
-            <a className="button secondary" href={shadowHref(lesson.id)}>
-              {t('shadowText')}
-            </a>
-          )}
-          <a className="button" href={homeHref}>
-            {t('backHome')}
+      <SessionResult
+        heading={<span lang="nb">Ferdig!</span>}
+        headingRef={promptRef}
+        score={score}
+        total={lesson.items.length}
+        bestRun={run.best}
+        before={before}
+        after={after}
+        packs={packs}
+        extra={
+          newCards > 0 && (
+            <p>
+              {newCards === 1 ? t('newCard') : t('newCards', { n: newCards })}{' '}
+              <a href={wordsHref}>{t('wordCards')}</a>
+            </p>
+          )
+        }
+      >
+        {lesson.text && (
+          <a className="button secondary" href={shadowHref(lesson.id)}>
+            {t('shadowText')}
           </a>
-        </div>
-      </section>
+        )}
+        <a className="button" href={homeHref}>
+          {t('backHome')}
+        </a>
+      </SessionResult>
     );
   }
 
@@ -128,6 +137,10 @@ export function LessonPlayer({
       given: response.kind === 'text' ? response.value : undefined,
     });
     if (correct) setScore((s) => s + 1);
+    setRun((r) => {
+      const now = correct ? r.now + 1 : 0;
+      return { now, best: Math.max(r.best, now) };
+    });
     if (ephemeral) return;
     await recordAnswer(
       item,

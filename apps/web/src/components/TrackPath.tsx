@@ -5,8 +5,19 @@ import { db } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
 import { lessonHref } from '../routing/useHashRoute';
 
-/** A track as numbered steps, with completed lessons ticked and the next one highlighted. */
-export function TrackPath({ track, packs }: { track: Track; packs: readonly LanguagePack[] }) {
+/**
+ * A track as numbered steps, with completed lessons ticked and the next one highlighted. Only the
+ * learner's current track starts open; the others fold down to their title, summary and meter.
+ */
+export function TrackPath({
+  track,
+  packs,
+  open = false,
+}: {
+  track: Track;
+  packs: readonly LanguagePack[];
+  open?: boolean;
+}) {
   const { t } = useI18n();
   const completed = useLiveQuery(
     async () => new Set(await db.completions.toCollection().primaryKeys()),
@@ -18,7 +29,7 @@ export function TrackPath({ track, packs }: { track: Track; packs: readonly Lang
   const headingId = `track-${track.id}`;
 
   return (
-    <section className="panel track" aria-labelledby={headingId}>
+    <section className={open ? 'panel track current' : 'panel track'} aria-labelledby={headingId}>
       <h2 id={headingId} lang="nb">
         {track.title}
       </h2>
@@ -32,24 +43,31 @@ export function TrackPath({ track, packs }: { track: Track; packs: readonly Lang
       <p className="small" data-testid={`track-progress-${track.id}`}>
         {completed && !next ? t('trackDone') : t('trackProgress', { done, total: lessons.length })}
       </p>
-      <progress value={done} max={lessons.length} aria-hidden="true" />
-      <ol className="track-steps">
-        {lessons.map((lesson, index) => {
-          const isDone = completed?.has(lesson.id) ?? false;
-          const isNext = lesson.id === next?.id;
-          return (
-            <li key={lesson.id} className={isDone ? 'done' : isNext ? 'next' : undefined}>
-              <a href={lessonHref(lesson.id)} aria-current={isNext ? 'step' : undefined}>
-                <span className="step-dot" aria-hidden="true">
-                  {isDone ? '✓' : index + 1}
-                </span>
-                <span className="visually-hidden">{t('trackStep', { n: index + 1 })}: </span>
-                <span lang="nb">{lesson.title}</span>
-              </a>
-            </li>
-          );
-        })}
+      <ol className="track-meter" aria-hidden="true">
+        {lessons.map((lesson) => (
+          <li key={lesson.id} className={completed?.has(lesson.id) ? 'done' : undefined} />
+        ))}
       </ol>
+      <details className="track-details" open={open}>
+        <summary>{t('trackShowLessons', { n: lessons.length })}</summary>
+        <ol className="track-steps">
+          {lessons.map((lesson, index) => {
+            const isDone = completed?.has(lesson.id) ?? false;
+            const isNext = lesson.id === next?.id;
+            return (
+              <li key={lesson.id} className={isDone ? 'done' : isNext ? 'next' : undefined}>
+                <a href={lessonHref(lesson.id)} aria-current={isNext ? 'step' : undefined}>
+                  <span className="step-dot" aria-hidden="true">
+                    {isDone ? '✓' : index + 1}
+                  </span>
+                  <span className="visually-hidden">{t('trackStep', { n: index + 1 })}: </span>
+                  <span lang="nb">{lesson.title}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      </details>
     </section>
   );
 }
