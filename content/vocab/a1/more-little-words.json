@@ -1,0 +1,268 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "more-little-words",
+  "title": "Flere småord",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "allerede",
+      "nb": "allerede",
+      "pos": "adverb",
+      "forms": ["allerede"],
+      "example": "Jeg har allerede spist."
+    },
+    {
+      "id": "kanskje",
+      "nb": "kanskje",
+      "pos": "adverb",
+      "forms": ["kanskje"],
+      "example": "Kanskje vi ses i morgen."
+    },
+    {
+      "id": "likevel",
+      "nb": "likevel",
+      "pos": "adverb",
+      "forms": ["likevel"],
+      "example": "Det regnet, men vi gikk tur likevel."
+    },
+    {
+      "id": "derfor",
+      "nb": "derfor",
+      "pos": "adverb",
+      "forms": ["derfor"],
+      "example": "Jeg var syk, derfor kom jeg ikke."
+    },
+    {
+      "id": "ofte",
+      "nb": "ofte",
+      "pos": "adverb",
+      "forms": ["ofte", "oftere", "oftest"],
+      "example": "Jeg tar ofte trikken."
+    },
+    {
+      "id": "alltid",
+      "nb": "alltid",
+      "pos": "adverb",
+      "forms": ["alltid"],
+      "example": "Hun kommer alltid for sent."
+    },
+    {
+      "id": "ganske",
+      "nb": "ganske",
+      "pos": "adverb",
+      "forms": ["ganske"],
+      "example": "Det er ganske kaldt i dag."
+    },
+    {
+      "id": "akkurat",
+      "nb": "akkurat",
+      "pos": "adverb",
+      "forms": ["akkurat"],
+      "example": "Klokka er akkurat åtte."
+    },
+    {
+      "id": "egentlig",
+      "nb": "egentlig",
+      "pos": "adverb",
+      "forms": ["egentlig"],
+      "example": "Hva jobber du med, egentlig?"
+    },
+    {
+      "id": "faktisk",
+      "nb": "faktisk",
+      "pos": "adverb",
+      "forms": ["faktisk"],
+      "example": "Det var faktisk ganske gøy."
+    },
+    {
+      "id": "virkelig",
+      "nb": "virkelig",
+      "pos": "adverb",
+      "forms": ["virkelig"],
+      "example": "Det var virkelig hyggelig."
+    },
+    {
+      "id": "fortsatt",
+      "nb": "fortsatt",
+      "pos": "adverb",
+      "forms": ["fortsatt"],
+      "example": "Bor du fortsatt på Grünerløkka?"
+    },
+    {
+      "id": "nettopp",
+      "nb": "nettopp",
+      "pos": "adverb",
+      "forms": ["nettopp"],
+      "example": "Jeg kom nettopp hjem."
+    },
+    {
+      "id": "ellers",
+      "nb": "ellers",
+      "pos": "adverb",
+      "forms": ["ellers"],
+      "example": "Ellers alt bra?"
+    },
+    {
+      "id": "heller",
+      "nb": "heller",
+      "pos": "adverb",
+      "forms": ["heller"],
+      "example": "Jeg vil heller ha te."
+    },
+    {
+      "id": "ute",
+      "nb": "ute",
+      "pos": "adverb",
+      "forms": ["ute"],
+      "example": "Barna leker ute."
+    },
+    {
+      "id": "inne",
+      "nb": "inne",
+      "pos": "adverb",
+      "forms": ["inne"],
+      "example": "Vi blir inne når det regner."
+    },
+    {
+      "id": "hjem",
+      "nb": "hjem",
+      "pos": "adverb",
+      "forms": ["hjem"],
+      "example": "Jeg går hjem nå."
+    },
+    {
+      "id": "bort",
+      "nb": "bort",
+      "pos": "adverb",
+      "forms": ["bort"],
+      "example": "Gå bort fra døra!"
+    },
+    {
+      "id": "ned",
+      "nb": "ned",
+      "pos": "adverb",
+      "forms": ["ned"],
+      "example": "Vi går ned trappa."
+    },
+    {
+      "id": "mens",
+      "nb": "mens",
+      "pos": "conjunction",
+      "forms": ["mens"],
+      "example": "Jeg hører på radio mens jeg lager mat."
+    },
+    {
+      "id": "siden",
+      "nb": "siden",
+      "pos": "conjunction",
+      "forms": ["siden"],
+      "example": "Siden det regner, tar vi bussen."
+    },
+    {
+      "id": "dersom",
+      "nb": "dersom",
+      "pos": "conjunction",
+      "forms": ["dersom"],
+      "example": "Ring meg dersom du blir syk."
+    },
+    {
+      "id": "rundt",
+      "nb": "rundt",
+      "pos": "preposition",
+      "forms": ["rundt"],
+      "example": "Vi går en tur rundt vannet."
+    },
+    {
+      "id": "gjennom",
+      "nb": "gjennom",
+      "pos": "preposition",
+      "forms": ["gjennom"],
+      "example": "Vi kjører gjennom tunnelen."
+    },
+    {
+      "id": "bak",
+      "nb": "bak",
+      "pos": "preposition",
+      "forms": ["bak"],
+      "example": "Sykkelen står bak huset."
+    },
+    {
+      "id": "foran",
+      "nb": "foran",
+      "pos": "preposition",
+      "forms": ["foran"],
+      "example": "Vi møtes foran stasjonen."
+    },
+    {
+      "id": "blant",
+      "nb": "blant",
+      "pos": "preposition",
+      "forms": ["blant"],
+      "example": "Han er populær blant kollegaene."
+    },
+    {
+      "id": "ifolge",
+      "nb": "ifølge",
+      "pos": "preposition",
+      "forms": ["ifølge"],
+      "example": "Ifølge yr blir det regn i morgen."
+    },
+    {
+      "id": "mot",
+      "nb": "mot",
+      "pos": "preposition",
+      "forms": ["mot"],
+      "example": "Toget mot Bergen er forsinket."
+    },
+    {
+      "id": "under",
+      "nb": "under",
+      "pos": "preposition",
+      "forms": ["under"],
+      "example": "Katten ligger under bordet."
+    },
+    {
+      "id": "hverandre",
+      "nb": "hverandre",
+      "pos": "pronoun",
+      "forms": ["hverandre"],
+      "example": "Vi kjenner hverandre fra jobben."
+    },
+    {
+      "id": "begge",
+      "nb": "begge",
+      "pos": "determiner",
+      "forms": ["begge"],
+      "example": "Begge barna går på skolen."
+    },
+    {
+      "id": "egen",
+      "nb": "egen",
+      "pos": "determiner",
+      "forms": ["egen", "eget", "egne"],
+      "example": "Jeg vil ha mitt eget rom."
+    },
+    {
+      "id": "samme",
+      "nb": "samme",
+      "pos": "determiner",
+      "forms": ["samme"],
+      "example": "Vi bor i samme gate."
+    },
+    {
+      "id": "hvilken",
+      "nb": "hvilken",
+      "pos": "determiner",
+      "forms": ["hvilken", "hvilke", "hvilket"],
+      "example": "Hvilken buss tar du?"
+    },
+    {
+      "id": "enda",
+      "nb": "enda",
+      "pos": "adverb",
+      "forms": ["enda"],
+      "example": "Det er enda kaldere i dag."
+    }
+  ]
+}

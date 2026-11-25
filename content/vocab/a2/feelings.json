@@ -1,0 +1,205 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "feelings",
+  "title": "Tanker og følelser",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "glede-noun",
+      "nb": "glede",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["glede", "gleda", "gleden", "gleder", "gledene"],
+      "example": "Det er en glede å jobbe her."
+    },
+    {
+      "id": "frykt",
+      "nb": "frykt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["frykt", "frykten", "frykter", "fryktene"],
+      "example": "Han har frykt for å fly."
+    },
+    {
+      "id": "tvil",
+      "nb": "tvil",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tvil", "tvilen", "tvilene"],
+      "example": "Det er ingen tvil om det."
+    },
+    {
+      "id": "folelse",
+      "nb": "følelse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["følelse", "følelsen", "følelser", "følelsene"],
+      "example": "Jeg har en god følelse."
+    },
+    {
+      "id": "inntrykk",
+      "nb": "inntrykk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["inntrykk", "inntrykka", "inntrykket", "inntrykkene"],
+      "example": "Hun gjorde et godt inntrykk på intervjuet."
+    },
+    {
+      "id": "opplevelse",
+      "nb": "opplevelse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["opplevelse", "opplevelsen", "opplevelser", "opplevelsene"],
+      "example": "Nordlyset var en fantastisk opplevelse."
+    },
+    {
+      "id": "kunnskap",
+      "nb": "kunnskap",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kunnskap", "kunnskapen", "kunnskaper", "kunnskapene"],
+      "example": "Hun har god kunnskap om IT."
+    },
+    {
+      "id": "glad",
+      "nb": "glad",
+      "pos": "adjective",
+      "forms": ["glad", "glade", "gladere", "gladest", "gladeste"],
+      "example": "Jeg er glad for at du kom."
+    },
+    {
+      "id": "redd",
+      "nb": "redd",
+      "pos": "adjective",
+      "forms": ["redd", "redde", "reddere", "reddest", "reddeste"],
+      "example": "Barnet er redd for hunden."
+    },
+    {
+      "id": "rolig",
+      "nb": "rolig",
+      "pos": "adjective",
+      "forms": ["rolig", "rolige", "roligst", "roligere", "roligste"],
+      "example": "Det er et rolig nabolag."
+    },
+    {
+      "id": "morsom",
+      "nb": "morsom",
+      "pos": "adjective",
+      "forms": ["morsom", "morsomt", "morsomme", "morsomst", "morsomste", "morsommere"],
+      "example": "Filmen var veldig morsom."
+    },
+    {
+      "id": "flink",
+      "nb": "flink",
+      "pos": "adjective",
+      "forms": ["flink", "flinke", "flinkt", "flinkere", "flinkest", "flinkeste"],
+      "example": "Du er flink til å snakke norsk!"
+    },
+    {
+      "id": "vakker",
+      "nb": "vakker",
+      "pos": "adjective",
+      "forms": ["vakker", "vakre", "vakkert", "vakrere", "vakrest", "vakreste"],
+      "example": "For en vakker utsikt!"
+    },
+    {
+      "id": "fantastisk",
+      "nb": "fantastisk",
+      "pos": "adjective",
+      "forms": ["fantastisk", "fantastiske"],
+      "example": "Turen var fantastisk."
+    },
+    {
+      "id": "spennende",
+      "nb": "spennende",
+      "pos": "adjective",
+      "forms": ["spennende"],
+      "example": "Den nye jobben er spennende."
+    },
+    {
+      "id": "interessant",
+      "nb": "interessant",
+      "pos": "adjective",
+      "forms": ["interessant", "interessante"],
+      "example": "Det var et interessant foredrag."
+    },
+    {
+      "id": "farlig",
+      "nb": "farlig",
+      "pos": "adjective",
+      "forms": ["farlig", "farlige", "farligst", "farligere", "farligste"],
+      "example": "Det er farlig å gå på tynn is."
+    },
+    {
+      "id": "umulig",
+      "nb": "umulig",
+      "pos": "adjective",
+      "forms": ["umulig", "umulige"],
+      "example": "Det er umulig å finne parkering her."
+    },
+    {
+      "id": "utrolig",
+      "nb": "utrolig",
+      "pos": "adjective",
+      "forms": ["utrolig", "utrolige"],
+      "example": "Det er utrolig hvor fort tida går."
+    },
+    {
+      "id": "usikker",
+      "nb": "usikker",
+      "pos": "adjective",
+      "forms": ["usikker", "usikre", "usikkert", "usikrere", "usikrest", "usikreste"],
+      "example": "Jeg er usikker på svaret."
+    },
+    {
+      "id": "avhengig",
+      "nb": "avhengig",
+      "pos": "adjective",
+      "forms": ["avhengig", "avhengige"],
+      "example": "Det er avhengig av været."
+    },
+    {
+      "id": "savne",
+      "nb": "savne",
+      "pos": "verb",
+      "forms": ["savne", "savna", "savner", "savnet"],
+      "example": "Jeg savner familien min."
+    },
+    {
+      "id": "smile",
+      "nb": "smile",
+      "pos": "verb",
+      "forms": ["smile", "smilt", "smiler", "smilte"],
+      "example": "Hun smiler alltid."
+    },
+    {
+      "id": "le",
+      "nb": "le",
+      "pos": "verb",
+      "forms": ["le", "lo", "ler", "ledd"],
+      "example": "Vi lo hele kvelden."
+    },
+    {
+      "id": "takke",
+      "nb": "takke",
+      "pos": "verb",
+      "forms": ["takke", "takka", "takker", "takket"],
+      "example": "Jeg vil takke alle for hjelpen."
+    },
+    {
+      "id": "feire",
+      "nb": "feire",
+      "pos": "verb",
+      "forms": ["feire", "feira", "feirer", "feiret"],
+      "example": "Vi feirer 17. mai i sentrum."
+    },
+    {
+      "id": "stole",
+      "nb": "stole",
+      "pos": "verb",
+      "forms": ["stole", "stolt", "stoler", "stolte"],
+      "example": "Du kan stole på meg."
+    }
+  ]
+}

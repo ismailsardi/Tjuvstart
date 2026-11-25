@@ -1,0 +1,193 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "business",
+  "title": "Arbeidslivet",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "selskap",
+      "nb": "selskap",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["selskap", "selskapa", "selskaper", "selskapet", "selskapene"],
+      "example": "Hun jobber i et stort selskap."
+    },
+    {
+      "id": "bedrift",
+      "nb": "bedrift",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bedrift", "bedriften", "bedrifter", "bedriftene"],
+      "example": "Bedriften har femti ansatte."
+    },
+    {
+      "id": "leder",
+      "nb": "leder",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["leder", "ledere", "lederen", "lederne"],
+      "example": "Lederen min heter Kari."
+    },
+    {
+      "id": "direktor",
+      "nb": "direktør",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["direktør", "direktøren", "direktører", "direktørene"],
+      "example": "Direktøren holdt en tale."
+    },
+    {
+      "id": "medlem",
+      "nb": "medlem",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["medlem", "medlemma", "medlemmer", "medlemmet", "medlemmene"],
+      "example": "Er du medlem av fagforeningen?"
+    },
+    {
+      "id": "eier",
+      "nb": "eier",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["eier", "eiere", "eieren", "eierne"],
+      "example": "Eieren av leiligheten bor i utlandet."
+    },
+    {
+      "id": "marked",
+      "nb": "marked",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["marked", "markeda", "markeder", "markedet", "markedene"],
+      "example": "Arbeidsmarkedet i Oslo er godt."
+    },
+    {
+      "id": "salg",
+      "nb": "salg",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["salg", "salga", "salget", "salgene"],
+      "example": "Salget gikk opp i år."
+    },
+    {
+      "id": "produkt",
+      "nb": "produkt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["produkt", "produkta", "produkter", "produktet", "produktene"],
+      "example": "Vi lanserer et nytt produkt i vår."
+    },
+    {
+      "id": "inntekt",
+      "nb": "inntekt",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["inntekt", "inntekta", "inntekten", "inntekter", "inntektene"],
+      "example": "Skatten avhenger av inntekten din."
+    },
+    {
+      "id": "okonomi",
+      "nb": "økonomi",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["økonomi", "økonomien", "økonomier", "økonomiene"],
+      "example": "Jeg har dårlig økonomi denne måneden."
+    },
+    {
+      "id": "kontrakt",
+      "nb": "kontrakt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kontrakt", "kontrakten", "kontrakter", "kontraktene"],
+      "example": "Jeg skrev under kontrakten i går."
+    },
+    {
+      "id": "arbeidsplass",
+      "nb": "arbeidsplass",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidsplass", "arbeidsplassen", "arbeidsplasser", "arbeidsplassene"],
+      "example": "Det er røykfritt på arbeidsplassen."
+    },
+    {
+      "id": "praksis",
+      "nb": "praksis",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["praksis", "praksisen", "praksiser", "praksisene"],
+      "example": "Jeg har tre måneder praksis i en bank."
+    },
+    {
+      "id": "konkurranse",
+      "nb": "konkurranse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["konkurranse", "konkurransen", "konkurranser", "konkurransene"],
+      "example": "Det er stor konkurranse om jobbene."
+    },
+    {
+      "id": "kvalitet",
+      "nb": "kvalitet",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kvalitet", "kvaliteten", "kvaliteter", "kvalitetene"],
+      "example": "Kvaliteten er viktigere enn prisen."
+    },
+    {
+      "id": "rapport",
+      "nb": "rapport",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["rapport", "rapporten", "rapporter", "rapportene"],
+      "example": "Rapporten må være ferdig til fredag."
+    },
+    {
+      "id": "forslag",
+      "nb": "forslag",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["forslag", "forslaga", "forslaget", "forslagene"],
+      "example": "Har du et bedre forslag?"
+    },
+    {
+      "id": "krav",
+      "nb": "krav",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["krav", "krava", "kravet", "kravene"],
+      "example": "Norsk er et krav for jobben."
+    },
+    {
+      "id": "utvikling",
+      "nb": "utvikling",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["utvikling", "utviklinga", "utviklingen", "utviklinger", "utviklingene"],
+      "example": "Vi følger utviklingen nøye."
+    },
+    {
+      "id": "endring",
+      "nb": "endring",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["endring", "endringa", "endringen", "endringer", "endringene"],
+      "example": "Det blir noen endringer i planen."
+    },
+    {
+      "id": "behov",
+      "nb": "behov",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["behov", "behova", "behovet", "behovene"],
+      "example": "Vi tilpasser kurset etter dine behov."
+    },
+    {
+      "id": "avtale",
+      "nb": "avtale",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["avtale", "avtalen", "avtaler", "avtalene"],
+      "example": "Vi har en avtale klokka to."
+    }
+  ]
+}

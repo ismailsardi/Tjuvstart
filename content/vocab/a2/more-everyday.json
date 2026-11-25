@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "more-everyday",
+  "title": "Mer hverdag",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "kropp",
+      "nb": "kropp",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kropp", "kroppen", "kropper", "kroppene"],
+      "example": "Trening er bra for kroppen."
+    },
+    {
+      "id": "hjerte",
+      "nb": "hjerte",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hjerte", "hjerta", "hjerter", "hjertet", "hjertene"],
+      "example": "Hjertet mitt banker fort."
+    },
+    {
+      "id": "fot",
+      "nb": "fot",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fot", "foten", "føtter", "føttene"],
+      "example": "Jeg har vondt i foten."
+    },
+    {
+      "id": "ansikt",
+      "nb": "ansikt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["ansikt", "ansikta", "ansikter", "ansiktet", "ansiktene"],
+      "example": "Hun har et vennlig ansikt."
+    },
+    {
+      "id": "luft",
+      "nb": "luft",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["luft", "lufta", "luften", "lufter", "luftene"],
+      "example": "Jeg trenger litt frisk luft."
+    },
+    {
+      "id": "alder",
+      "nb": "alder",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["alder", "aldre", "aldere", "aldrer", "alderen", "alderne", "aldrene"],
+      "example": "Alder spiller ingen rolle."
+    },
+    {
+      "id": "restaurant",
+      "nb": "restaurant",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["restaurant", "restauranten", "restauranter", "restaurantene"],
+      "example": "Vi spiser på restaurant i kveld."
+    },
+    {
+      "id": "rom",
+      "nb": "rom",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["rom", "romma", "rommet", "rommene"],
+      "example": "Leiligheten har tre rom."
+    },
+    {
+      "id": "kilometer",
+      "nb": "kilometer",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kilometer", "kilometeren", "kilometerne"],
+      "example": "Det er fem kilometer til sentrum."
+    },
+    {
+      "id": "meter",
+      "nb": "meter",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["meter", "meteren", "meterne"],
+      "example": "Bussholdeplassen er hundre meter herfra."
+    },
+    {
+      "id": "sekund",
+      "nb": "sekund",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["sekund", "sekunda", "sekunder", "sekundet", "sekundene"],
+      "example": "Vent et sekund!"
+    },
+    {
+      "id": "oyeblikk",
+      "nb": "øyeblikk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["øyeblikk", "øyeblikka", "øyeblikket", "øyeblikkene"],
+      "example": "Et øyeblikk, jeg skal sjekke."
+    },
+    {
+      "id": "stund",
+      "nb": "stund",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["stund", "stunda", "stunden", "stunder", "stundene"],
+      "example": "Vi ble sittende en stund."
+    },
+    {
+      "id": "lane",
+      "nb": "låne",
+      "pos": "verb",
+      "forms": ["låne", "lånt", "låner", "lånte"],
+      "example": "Kan jeg låne en penn?"
+    },
+    {
+      "id": "spare",
+      "nb": "spare",
+      "pos": "verb",
+      "forms": ["spare", "spart", "sparer", "sparte"],
+      "example": "Vi sparer til en ny bil."
+    },
+    {
+      "id": "vokse",
+      "nb": "vokse",
+      "pos": "verb",
+      "forms": ["vokse", "vokst", "vokser", "vokste"],
+      "example": "Barna vokser så fort."
+    },
+    {
+      "id": "synge",
+      "nb": "synge",
+      "pos": "verb",
+      "forms": ["synge", "sang", "sunget", "synger"],
+      "example": "Hun synger i et kor."
+    },
+    {
+      "id": "hoppe",
+      "nb": "hoppe",
+      "pos": "verb",
+      "forms": ["hoppe", "hoppa", "hopper", "hoppet"],
+      "example": "Barna hopper i vannet."
+    },
+    {
+      "id": "lete",
+      "nb": "lete",
+      "pos": "verb",
+      "forms": ["lete", "leter", "lette"],
+      "example": "Jeg leter etter en leilighet."
+    }
+  ]
+}

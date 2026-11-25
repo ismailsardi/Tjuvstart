@@ -1,0 +1,152 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "society",
+  "title": "Samfunnet",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "politi",
+      "nb": "politi",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["politi", "politia", "politier", "politiet", "politiene"],
+      "example": "Ring politiet på 112."
+    },
+    {
+      "id": "kommune",
+      "nb": "kommune",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kommune", "kommunen", "kommuner", "kommunene"],
+      "example": "Kommunen har mange tilbud for nye innbyggere."
+    },
+    {
+      "id": "regjering",
+      "nb": "regjering",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["regjering", "regjeringa", "regjeringen", "regjeringer", "regjeringene"],
+      "example": "Regjeringen la fram et nytt budsjett."
+    },
+    {
+      "id": "lov",
+      "nb": "lov",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lov", "loven", "lover", "lovene"],
+      "example": "Det er mot loven."
+    },
+    {
+      "id": "stat",
+      "nb": "stat",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["stat", "staten", "stater", "statene"],
+      "example": "Staten eier mange selskaper i Norge."
+    },
+    {
+      "id": "samfunn",
+      "nb": "samfunn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["samfunn", "samfunna", "samfunnet", "samfunnene"],
+      "example": "Det norske samfunnet er ganske flatt."
+    },
+    {
+      "id": "myndighet",
+      "nb": "myndighet",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["myndighet", "myndigheta", "myndigheten", "myndigheter", "myndighetene"],
+      "example": "Norske myndigheter anbefaler vaksine."
+    },
+    {
+      "id": "valg",
+      "nb": "valg",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["valg", "valga", "valget", "valgene"],
+      "example": "Det er valg i september."
+    },
+    {
+      "id": "politiker",
+      "nb": "politiker",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["politiker", "politikere", "politikeren", "politikerne"],
+      "example": "Politikerne diskuterer skatten."
+    },
+    {
+      "id": "innbygger",
+      "nb": "innbygger",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["innbygger", "innbyggere", "innbyggeren", "innbyggerne"],
+      "example": "Oslo får flere innbyggere hvert år."
+    },
+    {
+      "id": "befolkning",
+      "nb": "befolkning",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["befolkning", "befolkninga", "befolkningen", "befolkninger", "befolkningene"],
+      "example": "Befolkningen i Norge er cirka fem og en halv million."
+    },
+    {
+      "id": "offentlig",
+      "nb": "offentlig",
+      "pos": "adjective",
+      "forms": ["offentlig", "offentlige"],
+      "example": "Jeg tar offentlig transport til jobben."
+    },
+    {
+      "id": "ulykke",
+      "nb": "ulykke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["ulykke", "ulykka", "ulykken", "ulykker", "ulykkene"],
+      "example": "Det var en ulykke på E18 i morges."
+    },
+    {
+      "id": "brann",
+      "nb": "brann",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["brann", "brannen", "branner", "brannene"],
+      "example": "Ring 110 hvis det er brann."
+    },
+    {
+      "id": "advokat",
+      "nb": "advokat",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["advokat", "advokaten", "advokater", "advokatene"],
+      "example": "Du bør snakke med en advokat."
+    },
+    {
+      "id": "miljo",
+      "nb": "miljø",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["miljø", "miljøa", "miljøer", "miljøet", "miljøene"],
+      "example": "Vi sorterer søppel for miljøets skyld."
+    },
+    {
+      "id": "trafikk",
+      "nb": "trafikk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["trafikk", "trafikken", "trafikker", "trafikkene"],
+      "example": "Det er mye trafikk om morgenen."
+    },
+    {
+      "id": "flyplass",
+      "nb": "flyplass",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["flyplass", "flyplassen", "flyplasser", "flyplassene"],
+      "example": "Flytoget går til flyplassen."
+    }
+  ]
+}
