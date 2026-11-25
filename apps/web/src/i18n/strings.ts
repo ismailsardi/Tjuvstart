@@ -270,6 +270,11 @@ const en = {
   'doc_job-ad': 'Job ad',
   doc_notice: 'Notice',
   listeningCard: 'Short messages and dictation. The audio gets faster as you get answers right.',
+  bestRun: '{n} right in a row',
+  skillsAfter: 'Your skills after this session',
+  levelToward: 'On the way to {level}',
+  levelUp: 'New level: {level}!',
+  levelTop: 'Top of the scale',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -549,6 +554,11 @@ const fr: Record<StringKey, string> = {
   'doc_job-ad': 'Offre d’emploi',
   doc_notice: 'Avis',
   listeningCard: 'Des messages courts et des dictées. L’audio accélère quand vous répondez juste.',
+  bestRun: '{n} bonnes réponses d’affilée',
+  skillsAfter: 'Vos compétences après cette séance',
+  levelToward: 'En route vers {level}',
+  levelUp: 'Nouveau niveau : {level} !',
+  levelTop: 'Haut de l’échelle',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };

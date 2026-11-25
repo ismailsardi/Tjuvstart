@@ -275,4 +275,9 @@ export const de: Record<StringKey, string> = {
   doc_notice: 'Aushang',
   listeningCard:
     'Kurze Nachrichten und Diktate. Das Audio wird schneller, wenn du richtig antwortest.',
+  bestRun: '{n} richtig in Folge',
+  skillsAfter: 'Deine Fertigkeiten nach dieser Einheit',
+  levelToward: 'Auf dem Weg zu {level}',
+  levelUp: 'Neues Niveau: {level}!',
+  levelTop: 'Ganz oben auf der Skala',
 };

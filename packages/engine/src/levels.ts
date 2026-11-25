@@ -26,3 +26,25 @@ export function ratingToLevel(rating: number): Level {
   }
   return 'A1';
 }
+
+export interface LevelProgress {
+  level: Level;
+  /** The level after this one, or undefined at the top of the scale. */
+  next?: Level;
+  /** How far through the level's band the rating is, from 0 to 1. */
+  fraction: number;
+}
+
+/**
+ * Where a rating sits inside its level's band, for a "toward the next level" meter. A1 has no
+ * lower edge, so its meter starts 200 points below the base: beginners who miss a lot still see
+ * it move instead of sitting at zero.
+ */
+export function levelProgress(rating: number): LevelProgress {
+  const level = ratingToLevel(rating);
+  const next = LEVELS[LEVELS.indexOf(level) + 1];
+  const end = LEVEL_BASE[level] + 100;
+  const start = LEVEL_BASE[level] - (level === 'A1' ? 200 : 100);
+  const fraction = Math.min(1, Math.max(0, (rating - start) / (end - start)));
+  return next ? { level, next, fraction } : { level, fraction };
+}

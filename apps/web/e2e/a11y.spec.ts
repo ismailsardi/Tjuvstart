@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
-import { answerAnything, chooseLanguages, stubAudio } from './helpers';
+import { answerAnything, chooseLanguages, finishLesson, stubAudio } from './helpers';
 
 /**
  * Runs axe (WCAG 2.2 A and AA rules) on every screen of the app, in light and dark mode.
@@ -72,6 +72,16 @@ for (const colorScheme of ['light', 'dark'] as const) {
       await audit(page, 'lesson: second exercise');
       await answerAnything(page);
       await audit(page, 'lesson: third exercise');
+    });
+
+    test('the end of a lesson has no axe violations', async ({ page }) => {
+      await stubAudio(page);
+      await page.goto('./');
+      await chooseLanguages(page, 'English');
+      await page.goto('./#/lesson/a2-first-day-at-work');
+      await finishLesson(page);
+      await expect(page.getByTestId('skill-change').first()).toBeVisible();
+      await audit(page, 'lesson: end screen');
     });
 
     test('the daily session has no axe violations', async ({ page }) => {

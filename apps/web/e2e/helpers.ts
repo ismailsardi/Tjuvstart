@@ -89,3 +89,16 @@ export async function answerAnything(page: Page) {
   }
   await page.getByRole('button', { name: /^(Continue|Continuer)$/ }).click();
 }
+
+/** Answers whatever comes until the lesson's end screen shows. */
+export async function finishLesson(page: Page) {
+  const done = page.getByRole('heading', { level: 1, name: 'Ferdig!' });
+  const question = page
+    .getByRole('button', { name: /^(Check|Vérifier)$/ })
+    .or(page.getByRole('group', { name: /^(Answer options|Réponses possibles)$/ }));
+  while (true) {
+    await expect(done.or(question.first())).toBeVisible();
+    if (await done.isVisible()) return;
+    await answerAnything(page);
+  }
+}

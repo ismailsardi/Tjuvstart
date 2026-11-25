@@ -272,4 +272,9 @@ export const es: Record<StringKey, string> = {
   'doc_job-ad': 'Oferta de empleo',
   doc_notice: 'Aviso',
   listeningCard: 'Mensajes cortos y dictados. El audio va más rápido a medida que aciertas.',
+  bestRun: '{n} aciertos seguidos',
+  skillsAfter: 'Tus destrezas después de esta sesión',
+  levelToward: 'En camino a {level}',
+  levelUp: '¡Nuevo nivel: {level}!',
+  levelTop: 'Lo más alto de la escala',
 };

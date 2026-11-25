@@ -23,7 +23,7 @@ export function Practice({
   packs?: readonly LanguagePack[];
   skill?: Skill;
   size?: number;
-  onFinish?: (score: number) => void;
+  onFinish?: (score: number, bestRun: number) => void;
 }) {
   const { t } = useI18n();
   const [session, setSession] = useState<Lesson | null>(null);
@@ -39,7 +39,7 @@ export function Practice({
         exclude: memory.recentlyCorrect,
       });
       // Inside the daily session there is simply nothing to add; move on.
-      if (items.length === 0 && onFinish) return onFinish(0);
+      if (items.length === 0 && onFinish) return onFinish(0, 0);
       setSession({
         id: skill ? `practice-${skill}` : 'practice',
         level: 'A2',
