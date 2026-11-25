@@ -10,7 +10,13 @@ import {
   wordCounts,
 } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { aiHref, languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
+import {
+  aiHref,
+  languagesHref,
+  placementHref,
+  wardrobeHref,
+  wordsHref,
+} from '../routing/useHashRoute';
 import { AiSettingsForm } from './AiSettingsForm';
 import { CanDoList } from './CanDoList';
 import { GoalPicker } from './GoalPicker';
@@ -18,6 +24,8 @@ import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
 import { SyncPanel } from './SyncPanel';
+import { Tusse } from './Tusse';
+import { useTroll } from './useTroll';
 
 export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const { t } = useI18n();
@@ -27,6 +35,7 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const progress = useLiveQuery(() => dailyProgress());
   const canDo = useLiveQuery(() => canDoProgress());
   const words = useLiveQuery(() => wordCounts());
+  const troll = useTroll();
   const canDoReached = canDo ? [...canDo.values()].filter((s) => s === 'can-do').length : 0;
   // Only statements that some exercise checks, grouped by level.
   const levels = [...new Set(trackedDescriptors.map((d) => d.level))];
@@ -53,6 +62,15 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <h2 id="me-level">{t('yourLevel')}</h2>
         <SkillLevels profile={profile} />
         <a href={placementHref}>{t('redoPlacement')}</a>
+      </section>
+      <section className="panel me-troll" aria-labelledby="me-troll">
+        <Tusse pose="rest" outfit={troll.outfit} size={64} />
+        <div>
+          <h2 id="me-troll">{t('trollTitle')}</h2>
+          <p data-testid="troll-name">
+            {troll.name} · <a href={wardrobeHref}>{t('trollEdit')}</a>
+          </p>
+        </div>
       </section>
       {progress && (
         <section className="panel" aria-label={t('dailyGoalTitle')}>

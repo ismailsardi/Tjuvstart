@@ -18,7 +18,7 @@ import { homeHref } from '../routing/useHashRoute';
 import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
 import { Tusse } from './Tusse';
-import { useTusseGear } from './useTusseGear';
+import { useTroll } from './useTroll';
 import { useFocusOnChange } from './usePageFocus';
 
 /** Skills that have items today. Speaking joins once speaking exercises exist. */
@@ -45,7 +45,7 @@ export function Placement() {
       )
     : maxPlacementQuestions(PLACED_SKILLS);
   const finished = state !== null && feedback === null && !item;
-  const gear = useTusseGear();
+  const troll = useTroll();
   // The next question, or the result, takes focus from the button that just went away.
   const promptRef = useRef<HTMLHeadingElement>(null);
   useFocusOnChange(promptRef, state && feedback === null ? state.seen.length : undefined);
@@ -72,7 +72,7 @@ export function Placement() {
   if (finished) {
     return (
       <section aria-labelledby="placement-done" className="panel done-screen">
-        <Tusse pose="cheer" gear={gear} size={110} className="done-tusse" />
+        <Tusse pose="cheer" outfit={troll.outfit} size={110} className="done-tusse" />
         <h1 id="placement-done" ref={promptRef} tabIndex={-1}>
           {t('placementDone')}
         </h1>
@@ -138,7 +138,7 @@ export function Placement() {
           </p>
           <Tusse
             pose={feedback ? 'thumbs' : 'shrug'}
-            gear={gear}
+            outfit={troll.outfit}
             size={60}
             className="feedback-tusse"
           />

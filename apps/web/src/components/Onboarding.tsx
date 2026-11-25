@@ -1,11 +1,12 @@
 import { useState, type FormEvent } from 'react';
 import { packs } from '../content/packs';
 import type { StartingPoint } from '../data/db';
-import { saveLanguages, saveStartingPoint } from '../data/progress';
+import { saveLanguages, saveStartingPoint, saveTrollName } from '../data/progress';
 import { I18nProvider } from '../i18n/I18nProvider';
 import { useI18n } from '../i18n/useI18n';
 import { uiLanguageFor } from '../i18n/strings';
 import { Tusse } from './Tusse';
+import { DEFAULT_TROLL_NAME, MAX_TROLL_NAME } from './outfits';
 
 interface Props {
   nativeLanguage?: string;
@@ -37,9 +38,11 @@ function OnboardingForm({
   const { t } = useI18n();
   const [known, setKnown] = useState<string[]>([...knownLanguages]);
   const [startingPoint, setStartingPoint] = useState<StartingPoint | null>(null);
+  const [name, setName] = useState(DEFAULT_TROLL_NAME);
   // One question per screen: the native language, other languages, then (first run only)
-  // how much Norwegian the learner already knows.
-  const totalSteps = nativeLanguage === undefined ? 3 : 2;
+  // how much Norwegian the learner already knows and a name for their troll.
+  const firstRun = nativeLanguage === undefined;
+  const totalSteps = firstRun ? 4 : 2;
   const [step, setStep] = useState(1);
 
   async function submit(event: FormEvent) {
@@ -53,6 +56,7 @@ function OnboardingForm({
     // The starting point goes first: saving the languages ends onboarding, and Home must not
     // show (or be navigated away from) before the redirect below.
     if (startingPoint) await saveStartingPoint(startingPoint);
+    if (firstRun) await saveTrollName(name);
     await saveLanguages(
       native,
       known.filter((code) => code !== native),
@@ -101,6 +105,26 @@ function OnboardingForm({
             />
             <span>{t('otherLanguage')}</span>
           </label>
+        </fieldset>
+      ) : step === 4 ? (
+        <fieldset className="troll-step">
+          <legend>{t('trollNameQuestion')}</legend>
+          <Tusse pose="wave" size={132} className="troll-step-tusse" />
+          <p className="muted">{t('trollNameIntro')}</p>
+          <label htmlFor="onboarding-troll-name">{t('trollNameLabel')}</label>
+          <input
+            id="onboarding-troll-name"
+            type="text"
+            value={name}
+            maxLength={MAX_TROLL_NAME}
+            autoComplete="off"
+            spellCheck={false}
+            aria-describedby="onboarding-troll-hint"
+            onChange={(event) => setName(event.target.value)}
+          />
+          <p id="onboarding-troll-hint" className="muted small">
+            {t('trollNameHint')}
+          </p>
         </fieldset>
       ) : step === 3 ? (
         <fieldset>

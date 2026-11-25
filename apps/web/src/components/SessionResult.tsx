@@ -6,7 +6,9 @@ import { SKILL_NAMES } from '../content/types';
 import { useI18n } from '../i18n/useI18n';
 import { CanDoList } from './CanDoList';
 import { Tusse } from './Tusse';
-import { gearFor, useTusseGear } from './useTusseGear';
+import { trollFor, useTroll } from './useTroll';
+import { itemById, type ItemId } from './outfits';
+import { wardrobeHref } from '../routing/useHashRoute';
 import { skillChanges, type ProgressSnapshot, type SkillChange } from './useProgressSnapshot';
 
 /** Each step of the reveal starts this long after the one before (see .reveal in CSS). */
@@ -115,7 +117,7 @@ export function SessionResult({
   children: ReactNode;
 }) {
   const { t } = useI18n();
-  const gear = useTusseGear();
+  const troll = useTroll();
   const changes = before && after ? skillChanges(before, after) : [];
   const reached =
     before && after
@@ -124,24 +126,20 @@ export function SessionResult({
         )
       : [];
 
-  // Gear Tusse earned during this session, newest first: the lusekofte outranks the helmet.
-  const gearBefore = gearFor(before?.profile);
-  const gearAfter = gearFor(after?.profile);
-  const newGear =
-    before && after
-      ? gearAfter.sweater && !gearBefore.sweater
-        ? 'sweater'
-        : gearAfter.helmet && !gearBefore.helmet
-          ? 'helmet'
-          : undefined
-      : undefined;
+  // Clothes the troll earned during this session, by level or by streak.
+  const trollBefore = before ? trollFor(before.profile, before.longest) : undefined;
+  const trollAfter = after ? trollFor(after.profile, after.longest) : undefined;
+  const newItems: ItemId[] =
+    trollBefore && trollAfter
+      ? [...trollAfter.earned].filter((id) => !trollBefore.earned.has(id))
+      : [];
 
   let i = 1;
   const next = () => step(i++);
   const ringStep = next();
   const extrasStep = next();
   const skillSteps = changes.map(() => next());
-  const gearStep = newGear ? next() : undefined;
+  const itemsStep = newItems.length > 0 ? next() : undefined;
   const canDoStep = reached.length > 0 ? next() : undefined;
   const footerStep = next();
   // Tusse is there from the start and dances once everything else is out.
@@ -154,7 +152,7 @@ export function SessionResult({
       style={{ '--cheer': cheerDelay } as CSSProperties}
     >
       <div className="reveal result-tusse" style={step(0)}>
-        <Tusse pose="cheer" gear={gear} size={112} className="done-tusse" />
+        <Tusse pose="cheer" outfit={troll.outfit} size={112} className="done-tusse" />
       </div>
       <h1 id="result-heading" ref={headingRef} tabIndex={-1} className="reveal" style={step(0)}>
         {heading}
@@ -180,24 +178,36 @@ export function SessionResult({
           ))}
         </ul>
       )}
-      {gearStep && newGear && (
-        <section
-          className="panel reveal gear-unlock"
-          style={gearStep}
-          aria-labelledby="gear-heading"
-          data-testid="gear-unlock"
-        >
-          <Tusse pose="thumbs" gear={gearAfter} size={72} />
-          <div>
-            <h2 id="gear-heading">
-              {t(newGear === 'sweater' ? 'gearSweaterTitle' : 'gearHelmetTitle')}
-            </h2>
-            <p className="muted small">
-              {t(newGear === 'sweater' ? 'gearSweaterBody' : 'gearHelmetBody')}
-            </p>
-          </div>
-        </section>
-      )}
+      {itemsStep &&
+        trollAfter &&
+        newItems.map((id) => {
+          const item = itemById(id);
+          return (
+            <section
+              key={id}
+              className="panel reveal gear-unlock"
+              style={itemsStep}
+              aria-labelledby={`earned-${id}`}
+              data-testid="gear-unlock"
+            >
+              <Tusse
+                pose="thumbs"
+                outfit={{ ...trollAfter.outfit, [item.slot]: id }}
+                size={72}
+                idle={false}
+              />
+              <div>
+                <h2 id={`earned-${id}`}>{t(`got_${id}`, { name: trollAfter.name })}</h2>
+                <p className="muted small">
+                  {'level' in item.unlock
+                    ? t('earnedForLevel', { level: item.unlock.level })
+                    : t('earnedForStreak', { n: item.unlock.streak })}{' '}
+                  <a href={wardrobeHref}>{t('changeOutfit')}</a>
+                </p>
+              </div>
+            </section>
+          );
+        })}
       {canDoStep && after && (
         <section
           className="panel reveal result-can-do"

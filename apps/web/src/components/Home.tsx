@@ -24,7 +24,7 @@ import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
 import { Tusse } from './Tusse';
-import { useTusseGear } from './useTusseGear';
+import { useTroll } from './useTroll';
 
 const ICONS = {
   words: (
@@ -124,7 +124,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
       ))
     : undefined;
   const streakDays = progress?.streak.days ?? 0;
-  const gear = useTusseGear();
+  const troll = useTroll();
   const trackSteps = currentTrack ? trackLessons(currentTrack) : [];
   const trackDone = trackSteps.filter((lesson) => completed?.has(lesson.id)).length;
 
@@ -204,7 +204,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           </div>
           <p className="muted">{t('todayIntro')}</p>
         </div>
-        <Tusse pose="coffee" rock gear={gear} size={72} className="home-tusse" />
+        <Tusse pose="coffee" rock outfit={troll.outfit} size={72} className="home-tusse" />
       </header>
 
       {needsPlacement && (

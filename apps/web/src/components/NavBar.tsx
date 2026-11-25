@@ -30,7 +30,12 @@ export function NavBar({ route }: { route: Route }) {
     { id: 'home', href: homeHref, label: t('navToday'), active: route.name === 'home' },
     { id: 'lessons', href: lessonsHref, label: t('navLessons'), active: route.name === 'lessons' },
     { id: 'words', href: wordsHref, label: t('navWords'), active: route.name === 'words' },
-    { id: 'me', href: meHref, label: t('navMe'), active: route.name === 'me' },
+    {
+      id: 'me',
+      href: meHref,
+      label: t('navMe'),
+      active: route.name === 'me' || route.name === 'troll',
+    },
   ];
   return (
     <nav className="tabbar" aria-label="Tjuvstart">
