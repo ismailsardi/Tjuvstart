@@ -39,3 +39,21 @@ export function currentStreak(activeDays: Iterable<number>, today: number): Stre
   }
   return { days, doneToday, atRisk: days > 0 && !doneToday && !active.has(today - 1) };
 }
+
+/**
+ * The longest streak ever, under the same rule: active days separated by at most one missed day
+ * belong to one streak, and only active days are counted. Rewards for streaks follow this rather
+ * than the current streak, so a broken streak never takes back what it earned.
+ */
+export function longestStreak(activeDays: Iterable<number>): number {
+  const days = [...new Set(activeDays)].sort((a, b) => a - b);
+  let best = 0;
+  let run = 0;
+  let previous: number | undefined;
+  for (const day of days) {
+    run = previous !== undefined && day - previous <= 2 ? run + 1 : 1;
+    best = Math.max(best, run);
+    previous = day;
+  }
+  return best;
+}

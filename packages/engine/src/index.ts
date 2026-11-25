@@ -36,7 +36,7 @@ export {
   updateListeningSpeed,
 } from './listening';
 export type { ListeningSpeed } from './listening';
-export { DAILY_GOAL, currentStreak } from './streak';
+export { DAILY_GOAL, currentStreak, longestStreak } from './streak';
 export type { Streak } from './streak';
 export { CAN_DO_ACCURACY, CAN_DO_MIN_ITEMS, canDoStatus } from './cando';
 export type { CanDoStatus } from './cando';
