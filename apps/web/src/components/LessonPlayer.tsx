@@ -112,14 +112,10 @@ export function LessonPlayer({
           )
         }
       >
-        {lesson.text && (
-          <a className="button secondary" href={shadowHref(lesson.id)}>
-            {t('shadowText')}
-          </a>
-        )}
         <a className="button" href={homeHref}>
           {t('backHome')}
         </a>
+        {lesson.text && <a href={shadowHref(lesson.id)}>{t('shadowText')}</a>}
       </SessionResult>
     );
   }

@@ -4,7 +4,7 @@ Tjuvstart targets WCAG 2.2 level AA. This page records how it is checked and wha
 
 ## How it is checked
 
-- **axe-core in CI.** [`apps/web/e2e/a11y.spec.ts`](../apps/web/e2e/a11y.spec.ts) runs axe with the WCAG 2.0, 2.1 and 2.2 A/AA rules on every screen: the three onboarding steps, Today, lessons, the alphabet, word cards and a deck, Me, practice, listening, AI practice, languages, shadowing, the level check, the daily session and three exercises inside a lesson. Each screen is checked in light and dark mode, on a desktop and a phone viewport. Any violation fails the end-to-end job.
+- **axe-core in CI.** [`apps/web/e2e/a11y.spec.ts`](../apps/web/e2e/a11y.spec.ts) runs axe with the WCAG 2.0, 2.1 and 2.2 A/AA rules on every screen: the three onboarding steps, Today (before and after the daily goal is met), lessons, the alphabet, word cards and a deck, Me, practice, listening, AI practice, languages, shadowing, the level check, the daily session and three exercises inside a lesson. Each screen is checked in light and dark mode, on a desktop and a phone viewport. Any violation fails the end-to-end job.
 - **Keyboard tests.** The same file checks that a lesson can be done with the keyboard alone, that focus moves to each new question, that the feedback is read out with the Continue button, and that moving between pages focuses the new heading and updates the tab title.
 - **Lighthouse,** run by hand on twelve screens of a production build.
 - **Manual checks** for what tools can't measure: tab order, focus visibility, reflow at 320 px wide, reduced motion and `lang` attributes.

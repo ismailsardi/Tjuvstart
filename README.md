@@ -14,9 +14,9 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 > Status: early development. Try it at [ismailsardi.github.io/Tjuvstart](https://ismailsardi.github.io/Tjuvstart/), and see the [product specification](docs/spec.md).
 
 <p>
-  <img src="docs/screenshots/today.png" alt="Today screen with the daily session, streak progress and the current track" width="250">
+  <img src="docs/screenshots/today.png" alt="Today screen with the next lesson as the main action, then the daily streak and quick practice" width="250">
   <img src="docs/screenshots/word-card.png" alt="A flipped word card with its meaning and an example sentence" width="250">
-  <img src="docs/screenshots/decks.png" alt="Words screen with today's review, job decks and the deck list" width="250">
+  <img src="docs/screenshots/decks.png" alt="Words screen with today's reviews, job decks and the deck list" width="250">
 </p>
 
 ## What works today

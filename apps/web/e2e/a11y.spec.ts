@@ -85,6 +85,18 @@ for (const colorScheme of ['light', 'dark'] as const) {
       await audit(page, 'lesson: end screen');
     });
 
+    test('Today with the daily goal met has no axe violations', async ({ page }) => {
+      await stubAudio(page);
+      await page.goto('./');
+      await chooseLanguages(page, 'English');
+      await page.goto('./#/lesson/a2-first-day-at-work');
+      await finishLesson(page);
+      await page.goto('./');
+      // The next lesson is now the filled block at the top of the page.
+      await expect(page.getByRole('link', { name: /Start lesson$/ })).toBeVisible();
+      await audit(page, 'home: daily goal met');
+    });
+
     test('the daily session has no axe violations', async ({ page }) => {
       await stubAudio(page);
       await page.goto('./');

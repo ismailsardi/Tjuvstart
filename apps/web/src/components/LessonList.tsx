@@ -16,12 +16,27 @@ import { lessonHref } from '../routing/useHashRoute';
 import { AlphabetRow } from './AlphabetRow';
 import { TrackPath } from './TrackPath';
 
-export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly LanguagePack[] }) {
+/**
+ * One lesson as a single link. With `focus`, it is the page's main action (Today, once the
+ * daily goal is met) and ends in a button-style call to action inside the same link.
+ */
+export function LessonCard({
+  lesson,
+  packs,
+  focus = false,
+}: {
+  lesson: Lesson;
+  packs: readonly LanguagePack[];
+  focus?: boolean;
+}) {
   const { t } = useI18n();
   const done = useLiveQuery(() => db.completions.get(lesson.id), [lesson.id]);
   const summary = firstNote(packs, (pack) => pack.lessonSummaries?.[lesson.id]);
   return (
-    <a className={done ? 'lesson-card completed' : 'lesson-card'} href={lessonHref(lesson.id)}>
+    <a
+      className={['lesson-card', done && 'completed', focus && 'focus'].filter(Boolean).join(' ')}
+      href={lessonHref(lesson.id)}
+    >
       <span className="lesson-meta">
         <span className="badge">{lesson.level}</span>
         <span className="muted small">{t('lessonItems', { n: lesson.items.length })}</span>
@@ -39,6 +54,7 @@ export function LessonCard({ lesson, packs }: { lesson: Lesson; packs: readonly 
           ✓ {t('completed', { score: done.bestScore, total: done.total })}
         </span>
       )}
+      {focus && <span className="lesson-cta">{t('startLesson')}</span>}
     </a>
   );
 }
