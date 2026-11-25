@@ -9,6 +9,7 @@ import {
   addCards,
   canDoProgress,
   dailyProgress,
+  saveDailyGoal,
   dayNumber,
   completeLesson,
   dueCards,
@@ -238,6 +239,41 @@ describe('dailyProgress', () => {
     expect(progress.today).toBe(3);
     expect(progress.streak).toEqual({ days: 2, doneToday: false, atRisk: false });
     expect(dayNumber(now) - dayNumber(now - DAY_MS)).toBe(1);
+    expect(progress.goal).toBe(8);
+    expect(progress.week.map((d) => d.active)).toEqual([
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+    ]);
+  });
+
+  it('uses the chosen goal for today, and never more than the default for the streak', async () => {
+    db = new TjuvstartDb('test-daily-goal');
+    const now = new Date(2026, 10, 23, 12).getTime();
+    await db.attempts.bulkAdd(
+      Array.from({ length: 6 }, (_, i) => ({
+        lessonId: 'l',
+        itemId: `i${i}`,
+        skill: 'reading' as const,
+        correct: true,
+        ratingAfter: 1000,
+        at: now - DAY_MS,
+      })),
+    );
+
+    await saveDailyGoal('light', db);
+    let progress = await dailyProgress(now, db);
+    expect(progress).toMatchObject({ goal: 5, streakMin: 5, goalSize: 'light' });
+    expect(progress.streak.days).toBe(1);
+
+    await saveDailyGoal('serious', db);
+    progress = await dailyProgress(now, db);
+    expect(progress).toMatchObject({ goal: 18, streakMin: 8 });
+    expect(progress.streak.days).toBe(0);
   });
 });
 

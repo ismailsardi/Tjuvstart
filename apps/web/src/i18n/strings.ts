@@ -275,6 +275,19 @@ const en = {
   levelToward: 'On the way to {level}',
   levelUp: 'New level: {level}!',
   levelTop: 'Top of the scale',
+  goalReached: 'Daily goal reached. Nice work.',
+  lastSevenDays: 'The last seven days',
+  dayDone: 'practised',
+  dayNotDone: 'no practice',
+  dailyGoalTitle: 'Daily goal',
+  dailyGoalIntro: 'How much do you want to do each day? You can change this any time.',
+  goal_light: 'Light',
+  goal_lightHint: '{n} a day. A few minutes.',
+  goal_regular: 'Regular',
+  goal_regularHint: '{n} a day. About five minutes.',
+  goal_serious: 'Serious',
+  goal_seriousHint: '{n} a day. The full ten minutes.',
+  changeGoal: 'Change goal',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -559,6 +572,19 @@ const fr: Record<StringKey, string> = {
   levelToward: 'En route vers {level}',
   levelUp: 'Nouveau niveau : {level} !',
   levelTop: 'Haut de l’échelle',
+  goalReached: 'Objectif du jour atteint. Bravo.',
+  lastSevenDays: 'Les sept derniers jours',
+  dayDone: 'pratiqué',
+  dayNotDone: 'pas de pratique',
+  dailyGoalTitle: 'Objectif quotidien',
+  dailyGoalIntro: 'Combien voulez-vous faire chaque jour ? Vous pouvez changer à tout moment.',
+  goal_light: 'Léger',
+  goal_lightHint: '{n} par jour. Quelques minutes.',
+  goal_regular: 'Régulier',
+  goal_regularHint: '{n} par jour. Environ cinq minutes.',
+  goal_serious: 'Intensif',
+  goal_seriousHint: '{n} par jour. Les dix minutes complètes.',
+  changeGoal: 'Changer d’objectif',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };

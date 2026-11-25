@@ -19,6 +19,7 @@ import {
   type Streak,
 } from '@tjuvstart/engine';
 import { guessChance } from '../content/answers';
+import { DEFAULT_GOAL, GOAL_SIZES, type GoalSize } from './daily';
 import { getItem } from '../content/lessons';
 import type { JobField } from '../content/vocab';
 import { SKILLS, type Item, type Skill } from '../content/types';
@@ -118,6 +119,13 @@ export async function saveStartingPoint(
       }
     }
     await db.profiles.put({ ...profile, startingPoint, ratings });
+  });
+}
+
+/** Saves how much the learner wants to do each day. */
+export async function saveDailyGoal(size: GoalSize, db: TjuvstartDb = defaultDb): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    await db.profiles.put({ ...(await getProfile(db)), dailyGoal: size });
   });
 }
 
@@ -266,34 +274,65 @@ export function dayNumber(at: number): number {
   return Math.floor((at - new Date(at).getTimezoneOffset() * 60_000) / DAY_MS);
 }
 
+export interface DayActivity {
+  day: number;
+  /** Answers, card reviews and shadowed sentences that day. */
+  count: number;
+  /** The day counts toward the streak. */
+  active: boolean;
+}
+
 export interface DailyProgress {
   /** Answers, card reviews and shadowed sentences done today. */
   today: number;
+  /** The learner's chosen daily goal. */
   goal: number;
+  goalSize: GoalSize;
+  /** Activity a day needs to count toward the streak. */
+  streakMin: number;
   streak: Streak;
+  /** The last seven days, oldest first, today last. */
+  week: DayActivity[];
 }
 
-/** Today's activity toward the daily goal, and the forgiving streak (see the engine). */
+/**
+ * Today's activity toward the learner's goal, the last week, and the forgiving streak (see the
+ * engine). A day counts for the streak at the chosen goal or the engine's default, whichever is
+ * smaller: picking a bigger goal raises today's target but never erases streak days already
+ * earned, and a light goal makes days count sooner.
+ */
 export async function dailyProgress(
   now = Date.now(),
   db: TjuvstartDb = defaultDb,
 ): Promise<DailyProgress> {
-  const [attempts, reviews, shadowing] = await Promise.all([
+  const [profile, attempts, reviews, shadowing] = await Promise.all([
+    getProfile(db),
     db.attempts.toArray(),
     db.reviews.toArray(),
     db.shadowing.toArray(),
   ]);
+  const goalSize = profile.dailyGoal ?? DEFAULT_GOAL;
+  const goal = GOAL_SIZES[goalSize];
+  const streakMin = Math.min(goal, DAILY_GOAL);
   const perDay = new Map<number, number>();
   for (const { at } of [...attempts, ...reviews, ...shadowing]) {
     const day = dayNumber(at);
     perDay.set(day, (perDay.get(day) ?? 0) + 1);
   }
   const today = dayNumber(now);
-  const activeDays = [...perDay].filter(([, n]) => n >= DAILY_GOAL).map(([day]) => day);
+  const activeDays = [...perDay].filter(([, n]) => n >= streakMin).map(([day]) => day);
+  const week = Array.from({ length: 7 }, (_, i) => {
+    const day = today - 6 + i;
+    const count = perDay.get(day) ?? 0;
+    return { day, count, active: count >= streakMin };
+  });
   return {
     today: perDay.get(today) ?? 0,
-    goal: DAILY_GOAL,
+    goal,
+    goalSize,
+    streakMin,
     streak: currentStreak(activeDays, today),
+    week,
   };
 }
 

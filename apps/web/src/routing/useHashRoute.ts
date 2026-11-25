@@ -16,6 +16,7 @@ export type Route =
   | { name: 'listening' }
   | { name: 'languages' }
   | { name: 'alphabet' }
+  | { name: 'goal' }
   | { name: 'lesson'; lessonId: string }
   | { name: 'shadow'; lessonId: string };
 
@@ -49,6 +50,8 @@ export function parseRoute(hash: string): Route {
       return { name: 'languages' };
     case '#/alphabet':
       return { name: 'alphabet' };
+    case '#/goal':
+      return { name: 'goal' };
   }
   const lesson = /^#\/lesson\/([a-z0-9-]+)$/.exec(hash);
   if (lesson?.[1]) return { name: 'lesson', lessonId: lesson[1] };
@@ -83,6 +86,7 @@ export const deckHref = (deckId: string) => `#/words/${deckId}`;
 export const placementHref = '#/placement';
 export const practiceHref = '#/practice';
 export const dailyHref = '#/daily';
+export const goalHref = '#/goal';
 export const aiHref = '#/ai';
 export const aiReadingHref = '#/ai/reading';
 export const rolePlayHref = (id: string) => `#/ai/roleplay/${id}`;

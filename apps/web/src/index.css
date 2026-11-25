@@ -2239,3 +2239,146 @@ button.danger:not(.link) {
     animation: none;
   }
 }
+
+/* Daily goal ring and the last seven days */
+
+.streak-main {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.streak-main p {
+  margin: 0.1rem 0;
+}
+
+.goal-ring {
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.goal-ring circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+.goal-ring-track {
+  stroke: var(--border);
+}
+
+.goal-ring-fill {
+  stroke: var(--progress);
+  stroke-linecap: round;
+  stroke-dasharray: calc(var(--share) * 100) 100;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dasharray 600ms ease-out;
+}
+
+/* An empty ring shows no dot from the round cap. */
+.goal-ring.empty .goal-ring-fill {
+  stroke-linecap: butt;
+}
+
+.goal-ring text {
+  fill: currentcolor;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.goal-ring.met .goal-ring-fill {
+  animation: goal-pulse 900ms ease-out 1;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.week li {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.week-dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.week .active .week-dot {
+  background: var(--progress);
+  border-color: var(--progress);
+}
+
+.week .today .week-dot {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.week-day {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.hero .goal-ring-track,
+.hero .week-dot {
+  stroke: rgb(255 255 255 / 30%);
+  border-color: rgb(255 255 255 / 45%);
+}
+
+.hero .goal-ring-fill,
+.hero .week .active .week-dot {
+  stroke: #ffb199;
+  background: #ffb199;
+  border-color: #ffb199;
+}
+
+.hero .week-day {
+  color: rgb(255 255 255 / 85%);
+}
+
+.hero-link {
+  justify-self: center;
+  color: #fff;
+}
+
+.goal-picker {
+  border: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.goal-picker legend {
+  font-weight: 700;
+  padding: 0;
+}
+
+.goal-picker > p {
+  margin: 0.25rem 0 0.5rem;
+}
+
+@keyframes goal-pulse {
+  50% {
+    stroke-width: 7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .goal-ring-fill {
+    transition: none;
+  }
+
+  .goal-ring.met .goal-ring-fill {
+    animation: none;
+  }
+}

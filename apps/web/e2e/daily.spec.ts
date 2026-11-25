@@ -14,7 +14,7 @@ test('the daily session ends with a streak and can-do statements on Me', async (
 
   await expect(page.getByRole('heading', { name: 'Done for today!' })).toBeVisible();
   await expect(page.getByTestId('streak')).toContainText('Streak: 1 day');
-  await expect(page.getByTestId('streak')).toContainText('Today counts for your streak.');
+  await expect(page.getByTestId('streak')).toContainText('Daily goal reached.');
 
   await page.getByRole('link', { name: 'Back to home' }).click();
   const daily = page.getByRole('region', { name: 'Today’s 10 minutes' });

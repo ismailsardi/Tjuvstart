@@ -12,6 +12,7 @@ import { useI18n } from '../i18n/useI18n';
 import { aiHref, languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
 import { AiSettingsForm } from './AiSettingsForm';
 import { CanDoList } from './CanDoList';
+import { GoalPicker } from './GoalPicker';
 import { MistakeList } from './MistakeList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
@@ -40,9 +41,10 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <a href={placementHref}>{t('redoPlacement')}</a>
       </section>
       {progress && (
-        <section className="panel">
+        <section className="panel" aria-label={t('dailyGoalTitle')}>
           <StreakLine progress={progress} />
           <p className="muted small">{t('streakRule')}</p>
+          <GoalPicker value={progress.goalSize} />
         </section>
       )}
       {canDo && (

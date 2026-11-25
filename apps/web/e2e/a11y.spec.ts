@@ -54,6 +54,7 @@ for (const colorScheme of ['light', 'dark'] as const) {
         ['#/languages', 'languages'],
         ['#/shadow/a2-first-day-at-work', 'shadowing'],
         ['#/placement', 'level check'],
+        ['#/goal', 'daily goal'],
       ] as const) {
         await page.goto(`./${hash}`);
         await expect(page.getByRole('main')).toBeVisible();

@@ -2,6 +2,7 @@ import Dexie, { type EntityTable, type Transaction } from 'dexie';
 import type { CardState, Grade, ListeningSpeed } from '@tjuvstart/engine';
 import type { Skill } from '../content/types';
 import type { JobField } from '../content/vocab';
+import type { GoalSize } from './daily';
 
 /**
  * Fields the sync layer maintains on every synced row (ADR 0011). Code that records progress
@@ -40,6 +41,8 @@ export interface Profile extends SyncFields {
   listening?: ListeningSpeed;
   /** The learner's line of work, for the "my job" word deck. */
   jobField?: JobField;
+  /** How much the learner wants to do each day. Unset means the regular goal. */
+  dailyGoal?: GoalSize;
   createdAt: number;
 }
 

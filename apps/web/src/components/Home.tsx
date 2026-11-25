@@ -12,6 +12,7 @@ import {
   DUE_DECK,
   aiHref,
   dailyHref,
+  goalHref,
   deckHref,
   lessonsHref,
   placementHref,
@@ -167,6 +168,9 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           {progress && <StreakLine progress={progress} />}
           <a className="button" href={dailyHref}>
             {progress?.streak.doneToday ? t('dailyAgain') : t('start')}
+          </a>
+          <a className="hero-link small" href={goalHref}>
+            {t('changeGoal')}
           </a>
         </section>
       )}
