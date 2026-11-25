@@ -19,15 +19,15 @@ describe('troll3dEnabled', () => {
 });
 
 describe('Troll', () => {
-  it('shows the drawn troll by default', () => {
+  it('shows the 2D troll by default', () => {
     const { container } = render(<Troll pose="wave" />);
-    expect(container.querySelector('svg.tusse')).not.toBeNull();
+    expect(container.querySelector('img.tusse-art')).not.toBeNull();
     expect(container.querySelector('canvas')).toBeNull();
   });
 
-  it('stays on the drawing when the preview is on but the device has no WebGL', () => {
+  it('stays in 2D when the preview is on but the device has no WebGL', () => {
     localStorage.setItem('tjuvstart.troll3d', '1');
     const { container } = render(<Troll pose="wave" />);
-    expect(container.querySelector('svg.tusse')).not.toBeNull();
+    expect(container.querySelector('img.tusse-art')).not.toBeNull();
   });
 });
