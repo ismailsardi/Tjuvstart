@@ -1,8 +1,12 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 
 /**
  * Tusse, the app's troll. Purely decorative: it reacts to answers and gains gear as the
  * learner's level goes up, but never carries information the text doesn't already give.
+ *
+ * Between reactions it idles: it breathes, sways, blinks, looks around, twitches its ears and swishes
+ * its tail, each on its own loop so the mix rarely repeats. A tap makes it hop. All of this is CSS
+ * and switches off under prefers-reduced-motion.
  */
 export type TussePose = 'rest' | 'coffee' | 'thumbs' | 'shrug' | 'cheer' | 'wave' | 'sleep';
 
@@ -94,19 +98,21 @@ function Arms({ pose }: { pose: TussePose }) {
         <>
           <Arm d="M48 140 C40 156 52 168 72 168" />
           <Arm d="M152 140 C160 156 148 168 128 168" />
-          <rect x={84} y={154} width={32} height={30} rx={6} fill={C.orange} />
-          <path d="M116 162 c10 0 10 14 0 14" stroke={C.orange} strokeWidth={5} fill="none" />
-          <rect x={84} y={154} width={32} height={7} rx={3} fill={C.orangeDark} />
-          <path
-            className="tusse-steam"
-            d="M94 150 c-3 -4 3 -6 0 -9 M106 150 c-3 -4 3 -6 0 -9"
-            stroke={C.snow}
-            strokeWidth={2.5}
-            opacity={0.9}
-            {...line}
-          />
-          <Hand x={76} y={168} />
-          <Hand x={124} y={168} />
+          <g className="tusse-cup">
+            <rect x={84} y={154} width={32} height={30} rx={6} fill={C.orange} />
+            <path d="M116 162 c10 0 10 14 0 14" stroke={C.orange} strokeWidth={5} fill="none" />
+            <rect x={84} y={154} width={32} height={7} rx={3} fill={C.orangeDark} />
+            <path
+              className="tusse-steam"
+              d="M94 150 c-3 -4 3 -6 0 -9 M106 150 c-3 -4 3 -6 0 -9"
+              stroke={C.snow}
+              strokeWidth={2.5}
+              opacity={0.9}
+              {...line}
+            />
+            <Hand x={76} y={168} />
+            <Hand x={124} y={168} />
+          </g>
         </>
       );
     default:
@@ -120,7 +126,7 @@ function Arms({ pose }: { pose: TussePose }) {
 }
 
 function Face({ pose }: { pose: TussePose }) {
-  const happy = pose === 'thumbs' || pose === 'cheer' || pose === 'coffee';
+  const happy = pose === 'thumbs' || pose === 'cheer';
   const closed = pose === 'sleep';
   const worried = pose === 'shrug';
   const stroke = { stroke: C.ink, ...line };
@@ -131,14 +137,32 @@ function Face({ pose }: { pose: TussePose }) {
   } else if (happy) {
     eyes = <path d="M78 104 q8 -9 16 0 M106 104 q8 -9 16 0" strokeWidth={3.4} {...stroke} />;
   } else {
-    eyes = (
-      <g className="tusse-eyes">
-        <ellipse cx={86} cy={101} rx={6.5} ry={8} fill={C.ink} />
-        <ellipse cx={114} cy={101} rx={6.5} ry={8} fill={C.ink} />
-        <circle cx={88.5} cy={97.5} r={2.4} fill="#fff" />
-        <circle cx={116.5} cy={97.5} r={2.4} fill="#fff" />
+    const open = (
+      <g className="tusse-look">
+        <g className="tusse-eyes">
+          <ellipse cx={86} cy={101} rx={6.5} ry={8} fill={C.ink} />
+          <ellipse cx={114} cy={101} rx={6.5} ry={8} fill={C.ink} />
+          <circle cx={88.5} cy={97.5} r={2.4} fill="#fff" />
+          <circle cx={116.5} cy={97.5} r={2.4} fill="#fff" />
+        </g>
       </g>
     );
+    // With coffee, the eyes close happily on each sip.
+    eyes =
+      pose === 'coffee' ? (
+        <>
+          <g className="tusse-sip-open">{open}</g>
+          <path
+            className="tusse-sip-happy"
+            d="M78 104 q8 -9 16 0 M106 104 q8 -9 16 0"
+            strokeWidth={3.4}
+            opacity={0}
+            {...stroke}
+          />
+        </>
+      ) : (
+        open
+      );
   }
 
   let mouth: ReactNode;
@@ -215,6 +239,7 @@ export function Tusse({
   gear = {},
   size = 96,
   rock = false,
+  idle = true,
   className,
 }: {
   pose?: TussePose;
@@ -223,17 +248,35 @@ export function Tusse({
   size?: number;
   /** Sit it on a rock, for idle poses. */
   rock?: boolean;
+  /** Small idle movements (breathing, blinking, fidgets). Off under reduced motion either way. */
+  idle?: boolean;
   className?: string;
 }) {
+  const [hopping, setHopping] = useState(false);
   const figure = (
     <>
-      <path d="M128 182 C158 194 190 180 184 158" stroke={C.bodyDark} strokeWidth={10} {...line} />
+      <g className="tusse-tail">
+        <path
+          d="M128 182 C158 194 190 180 184 158"
+          stroke={C.bodyDark}
+          strokeWidth={10}
+          {...line}
+        />
+        <path
+          d="M184 158 c-10 -6 -6 -20 4 -18 c2 -9 15 -6 12 4 c9 2 6 15 -4 14 c-2 3 -8 3 -12 0z"
+          fill={C.orange}
+        />
+      </g>
       <path
-        d="M184 158 c-10 -6 -6 -20 4 -18 c2 -9 15 -6 12 4 c9 2 6 15 -4 14 c-2 3 -8 3 -12 0z"
-        fill={C.orange}
+        className="tusse-ear-l"
+        d="M52 104 C36 96 34 84 40 80 C48 82 56 92 60 100Z"
+        fill={C.bodyDark}
       />
-      <path d="M52 104 C36 96 34 84 40 80 C48 82 56 92 60 100Z" fill={C.bodyDark} />
-      <path d="M148 104 C164 96 166 84 160 80 C152 82 144 92 140 100Z" fill={C.bodyDark} />
+      <path
+        className="tusse-ear-r"
+        d="M148 104 C164 96 166 84 160 80 C152 82 144 92 140 100Z"
+        fill={C.bodyDark}
+      />
       <ellipse cx={78} cy={200} rx={20} ry={10} fill={C.bodyDark} />
       <ellipse cx={122} cy={200} rx={20} ry={10} fill={C.bodyDark} />
       <path
@@ -253,12 +296,25 @@ export function Tusse({
 
   return (
     <svg
-      className={['tusse', `tusse-${pose}`, className].filter(Boolean).join(' ')}
+      className={[
+        'tusse',
+        `tusse-${pose}`,
+        idle && 'tusse-idle',
+        hopping && 'tusse-hopping',
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       viewBox="0 0 200 220"
       width={size}
       height={(size * 220) / 200}
       aria-hidden="true"
       focusable="false"
+      // A tap is only for fun: it changes nothing, so there's no keyboard or screen reader equivalent.
+      onPointerDown={idle ? () => setHopping(true) : undefined}
+      onAnimationEnd={(e) => {
+        if (e.animationName === 'tusse-hop') setHopping(false);
+      }}
     >
       {rock && (
         <>
@@ -270,7 +326,11 @@ export function Tusse({
         </>
       )}
       <g className="tusse-body">
-        {pose === 'cheer' ? <g transform="rotate(-6 100 140)">{figure}</g> : figure}
+        <g className="tusse-sway">
+          <g className="tusse-breathe">
+            {pose === 'cheer' ? <g transform="rotate(-6 100 140)">{figure}</g> : figure}
+          </g>
+        </g>
       </g>
     </svg>
   );
