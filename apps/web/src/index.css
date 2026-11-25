@@ -1943,11 +1943,204 @@ button.danger:not(.link) {
   }
 }
 
+/*
+ * Idle movements. Each loop has its own length (3.7s, 6.3s, 8.9s, 10.1s, 11.3s, 13.7s), so the
+ * combination keeps shifting instead of playing back as one obvious cycle. Origins are in the SVG's
+ * viewBox units: 100 205 is between the feet.
+ */
+
+.tusse-idle .tusse-breathe {
+  transform-origin: 100px 205px;
+  animation: tusse-breathe 3.7s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-sway {
+  transform-origin: 100px 205px;
+  animation: tusse-sway 8.9s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-eyes {
+  transform-origin: 100px 101px;
+  animation: tusse-blink 6.3s linear infinite;
+}
+
+.tusse-idle .tusse-look {
+  animation: tusse-look 13.7s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-ear-l {
+  transform-origin: 56px 102px;
+  animation: tusse-ear-l 10.1s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-ear-r {
+  transform-origin: 144px 102px;
+  animation: tusse-ear-r 10.1s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-tail {
+  transform-origin: 128px 182px;
+  animation: tusse-tail 4.9s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-cup {
+  animation: tusse-sip 11.3s ease-in-out infinite;
+}
+
+.tusse-idle .tusse-sip-open {
+  animation: tusse-sip-open 11.3s linear infinite;
+}
+
+.tusse-idle .tusse-sip-happy {
+  animation: tusse-sip-happy 11.3s linear infinite;
+}
+
+/* A tap: a quick hop, then back to swaying. */
+.tusse-hopping .tusse-sway {
+  animation: tusse-hop 520ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@keyframes tusse-breathe {
+  50% {
+    transform: scale(1.015, 1.035);
+  }
+}
+
+@keyframes tusse-sway {
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+/* One blink, then a double blink later in the loop. */
+@keyframes tusse-blink {
+  0%,
+  44%,
+  48%,
+  88%,
+  91%,
+  94%,
+  100% {
+    transform: scaleY(1);
+  }
+  46%,
+  89.5%,
+  92.5% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes tusse-look {
+  0%,
+  30%,
+  70%,
+  100% {
+    transform: translate(0, 0);
+  }
+  35%,
+  46% {
+    transform: translate(-3px, 1px);
+  }
+  52%,
+  64% {
+    transform: translate(3px, -1px);
+  }
+}
+
+@keyframes tusse-ear-l {
+  0%,
+  20%,
+  27%,
+  100% {
+    transform: rotate(0);
+  }
+  22%,
+  25% {
+    transform: rotate(-12deg);
+  }
+}
+
+@keyframes tusse-ear-r {
+  0%,
+  62%,
+  69%,
+  100% {
+    transform: rotate(0);
+  }
+  64%,
+  67% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes tusse-tail {
+  50% {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes tusse-sip {
+  0%,
+  36%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  42%,
+  56% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes tusse-sip-open {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  41%,
+  57% {
+    opacity: 0;
+  }
+  58%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tusse-sip-happy {
+  0%,
+  40% {
+    opacity: 0;
+  }
+  41%,
+  57% {
+    opacity: 1;
+  }
+  58%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tusse-hop {
+  40% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  70% {
+    transform: translateY(0) scale(1.04, 0.95);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .feedback-tusse,
   .tusse-cheer .tusse-body,
   .tusse-wave .tusse-wave,
-  .tusse-coffee .tusse-steam {
+  .tusse-coffee .tusse-steam,
+  .tusse.tusse-idle *,
+  .tusse.tusse-hopping * {
     animation: none;
   }
 }
