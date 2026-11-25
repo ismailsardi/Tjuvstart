@@ -295,6 +295,7 @@ const en = {
   gearHelmetBody: 'One of your skills reached A2.',
   gearSweaterTitle: 'Tusse got a lusekofte',
   gearSweaterBody: 'One of your skills reached B1.',
+  trackShowLessons: 'The {n} lessons',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -599,6 +600,7 @@ const fr: Record<StringKey, string> = {
   gearHelmetBody: 'Une de vos compétences a atteint A2.',
   gearSweaterTitle: 'Tusse a reçu un lusekofte',
   gearSweaterBody: 'Une de vos compétences a atteint B1.',
+  trackShowLessons: 'Les {n} leçons',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };

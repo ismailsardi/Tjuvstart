@@ -5,6 +5,7 @@ import { saveLanguages, saveStartingPoint } from '../data/progress';
 import { I18nProvider } from '../i18n/I18nProvider';
 import { useI18n } from '../i18n/useI18n';
 import { uiLanguageFor } from '../i18n/strings';
+import { Tusse } from './Tusse';
 
 interface Props {
   nativeLanguage?: string;
@@ -67,9 +68,12 @@ function OnboardingForm({
         ))}
       </div>
       <p className="visually-hidden">{t('stepOf', { n: step, total: totalSteps })}</p>
-      <h1 id="onboarding-heading" lang="nb">
-        {t('onboardingTitle')}
-      </h1>
+      <div className="onboarding-head">
+        <h1 id="onboarding-heading" lang="nb">
+          {t('onboardingTitle')}
+        </h1>
+        {step === 1 && <Tusse pose="wave" size={76} className="onboarding-tusse" />}
+      </div>
       {step === 1 && <p className="muted">{t('onboardingIntro')}</p>}
 
       {step === 1 ? (

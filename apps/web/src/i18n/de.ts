@@ -300,4 +300,5 @@ export const de: Record<StringKey, string> = {
   gearHelmetBody: 'Eine deiner Fertigkeiten hat A2 erreicht.',
   gearSweaterTitle: 'Tusse hat einen Lusekofte bekommen',
   gearSweaterBody: 'Eine deiner Fertigkeiten hat B1 erreicht.',
+  trackShowLessons: 'Die {n} Lektionen',
 };

@@ -2465,3 +2465,66 @@ button.danger:not(.link) {
 .skill-pending progress::-moz-progress-bar {
   background: var(--muted);
 }
+
+/* Tracks fold down to a summary; the current one starts open */
+
+.track.current {
+  box-shadow:
+    inset 0 0 0 2px var(--accent),
+    var(--shadow);
+}
+
+.track-details {
+  margin-top: 0.6rem;
+}
+
+.track-details > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.track-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.track-details > summary::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: rotate(-45deg);
+  transition: transform 150ms ease-out;
+}
+
+.track-details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.track-details .track-steps {
+  margin-top: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track-details > summary::before {
+    transition: none;
+  }
+}
+
+.onboarding-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.onboarding-tusse {
+  flex: none;
+  margin-bottom: -0.25rem;
+}

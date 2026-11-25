@@ -1,9 +1,16 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { lessons } from '../content/lessons';
-import { trackedLessonIds, tracks } from '../content/tracks';
+import {
+  nextInTrack,
+  overallLevel,
+  suggestedTracks,
+  trackedLessonIds,
+  tracks,
+} from '../content/tracks';
 import { firstNote, type LanguagePack } from '../content/packs';
 import type { Lesson } from '../content/types';
 import { db } from '../data/db';
+import { getProfile } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { lessonHref } from '../routing/useHashRoute';
 import { AlphabetRow } from './AlphabetRow';
@@ -41,6 +48,18 @@ export function LessonList({ packs = [] }: { packs?: readonly LanguagePack[] }) 
   const { t } = useI18n();
   const others = lessons.filter((lesson) => !trackedLessonIds.has(lesson.id));
   const levels = [...new Set(others.map((lesson) => lesson.level))];
+  const profile = useLiveQuery(() => getProfile());
+  const completed = useLiveQuery(
+    async () => new Set(await db.completions.toCollection().primaryKeys()),
+  );
+  // The track Today points to starts open, the same rule as on Today.
+  const level = profile
+    ? overallLevel(profile.ratings, profile.answers, profile.startingPoint)
+    : 'A2';
+  const current = completed
+    ? suggestedTracks(level, completed).find((track) => nextInTrack(track, completed))
+    : undefined;
+  if (!completed) return null;
   return (
     <>
       <h1>{t('lessons')}</h1>
@@ -48,7 +67,7 @@ export function LessonList({ packs = [] }: { packs?: readonly LanguagePack[] }) 
         <AlphabetRow />
       </div>
       {tracks.map((track) => (
-        <TrackPath key={track.id} track={track} packs={packs} />
+        <TrackPath key={track.id} track={track} packs={packs} open={track.id === current?.id} />
       ))}
       {others.length > 0 && <h2>{t('moreLessons')}</h2>}
       {levels.map((level) => (

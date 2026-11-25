@@ -297,4 +297,5 @@ export const es: Record<StringKey, string> = {
   gearHelmetBody: 'Una de tus destrezas ha llegado a A2.',
   gearSweaterTitle: 'Tusse ha conseguido un lusekofte',
   gearSweaterBody: 'Una de tus destrezas ha llegado a B1.',
+  trackShowLessons: 'Las {n} lecciones',
 };

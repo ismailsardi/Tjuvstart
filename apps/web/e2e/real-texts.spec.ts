@@ -12,6 +12,8 @@ test('real-world texts read like the documents they come from', async ({ page })
   await page.getByRole('link', { name: 'All lessons' }).click();
   const track = page.getByRole('region', { name: 'Ekte tekster' });
   await expect(track).toContainText('0 of 4 done');
+  // Only the track in progress starts open.
+  await track.getByText('The 4 lessons').click();
   await track.getByRole('link', { name: /Brev fra NAV/ }).click();
 
   const doc = page.getByTestId('document');
