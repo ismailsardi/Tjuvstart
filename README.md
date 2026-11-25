@@ -26,7 +26,8 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 - **Start from zero:** a beginner track for the alphabet with æ, ø and å, the sounds English and French speakers miss, greetings, numbers and prices, the supermarket checkout, the café and telling the time. Learners whose level check lands at A1 start here; everyone else is never sent back to it.
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk. A second track, "Hverdagen i Oslo", covers the pharmacy, parcels, weather and clothes, a dinner invitation, booking a haircut and a job interview.
 - **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are.
-- **566 swipeable word cards:** A1, A2 and B1 decks, plus decks for four lines of work, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
+- **825 swipeable word cards:** A1, A2 and B1 decks, plus decks for four lines of work, with meanings and memory hooks in the learner's language and SM-2-style spaced repetition.
+- **A core word list to B2:** the 5,000 most frequent Bokmål lemmas, ranked from Språkbanken's open N-gram counts and lemmatised with Norsk Ordbank, tagged A1 to B2 by frequency. CI reports how much of each band has a card (507 of the 700 A1 words today).
 - **Ten minutes a day:** one daily session of word cards and targeted exercises, a streak that forgives a missed day, and CEFR can-do statements that tick off as the learner proves them.
 - **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen at an adaptive speed, record themselves and compare.
 - **Native-language packs for English and French:** interface, tips, cognates, false friends and grammar contrasts in the learner's language.
@@ -36,7 +37,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 
 ## Planned
 
-- More B1 lessons, B2 lessons, and a licensed frequency list to measure word coverage per level.
+- More B1 lessons, B2 lessons, and word cards for the rest of the core list, batch by batch as they are reviewed.
 - Sign-in and sync across devices through a small ASP.NET Core API on a free tier.
 - Speech recognition for speaking practice.
 - Calibrated item difficulty (item response theory) and an FSRS scheduler, fitted to the answer and review logs the app already keeps.
@@ -50,6 +51,7 @@ content/           Lessons, word decks, tracks and language packs as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
 services/SyncApi/  ASP.NET Core sync API (in progress)
 tools/audio/       Build-time audio (Azure neural voice, Piper fallback)
+tools/corelist/    Core word list from open Norwegian data (Python)
 docs/              Specification and architecture decision records
 ```
 
