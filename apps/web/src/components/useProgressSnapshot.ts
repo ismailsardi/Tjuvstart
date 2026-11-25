@@ -2,21 +2,27 @@ import { useEffect, useState } from 'react';
 import { MIN_ANSWERS_FOR_ESTIMATE, type CanDoStatus } from '@tjuvstart/engine';
 import { SKILLS, type Skill } from '../content/types';
 import type { Profile } from '../data/db';
-import { canDoProgress, getProfile } from '../data/progress';
+import { canDoProgress, dailyProgress, getProfile, rememberBests } from '../data/progress';
 
 export interface ProgressSnapshot {
   profile: Profile;
   canDo: Map<string, CanDoStatus>;
+  /** Longest streak so far, which earns the troll's clothes. */
+  longest: number;
 }
 
 async function snapshot(): Promise<ProgressSnapshot> {
-  const [profile, canDo] = await Promise.all([getProfile(), canDoProgress()]);
-  return { profile, canDo };
+  const [profile, canDo, progress] = await Promise.all([
+    getProfile(),
+    canDoProgress(),
+    dailyProgress(),
+  ]);
+  return { profile, canDo, longest: progress.longest };
 }
 
 /**
  * Reads the learner's ratings and can-do statements when a session starts and again when it
- * ends, so the end screen can show what moved. Does nothing while `enabled` is false.
+ * ends, so the end screen can show what moved, including clothes the troll earned. Does nothing while `enabled` is false.
  */
 export function useProgressSnapshot(done: boolean, enabled = true) {
   const [before, setBefore] = useState<ProgressSnapshot | null>(null);
@@ -25,7 +31,8 @@ export function useProgressSnapshot(done: boolean, enabled = true) {
     if (enabled) void snapshot().then(setBefore);
   }, [enabled]);
   useEffect(() => {
-    if (enabled && done) void snapshot().then(setAfter);
+    // Whatever the session earned is remembered first, so it stays earned.
+    if (enabled && done) void rememberBests().then(snapshot).then(setAfter);
   }, [enabled, done]);
   return { before, after };
 }

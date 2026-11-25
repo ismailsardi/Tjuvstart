@@ -34,6 +34,10 @@ for (const colorScheme of ['light', 'dark'] as const) {
       await audit(page, 'onboarding: other languages');
       await page.getByRole('button', { name: 'Continue' }).click();
       await audit(page, 'onboarding: starting point');
+      await page.getByRole('radio', { name: /^None yet/ }).check();
+      await page.getByRole('button', { name: 'Continue' }).click();
+      await expect(page.getByRole('textbox', { name: 'Name' })).toHaveValue('Tusse');
+      await audit(page, 'onboarding: troll name');
     });
 
     test('main screens have no axe violations', async ({ page }) => {
@@ -55,6 +59,7 @@ for (const colorScheme of ['light', 'dark'] as const) {
         ['#/shadow/a2-first-day-at-work', 'shadowing'],
         ['#/placement', 'level check'],
         ['#/goal', 'daily goal'],
+        ['#/troll', 'wardrobe'],
       ] as const) {
         await page.goto(`./${hash}`);
         await expect(page.getByRole('main')).toBeVisible();

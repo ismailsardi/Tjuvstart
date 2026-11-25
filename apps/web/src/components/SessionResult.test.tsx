@@ -6,9 +6,10 @@ import { I18nProvider } from '../i18n/I18nProvider';
 import { SessionResult } from './SessionResult';
 import type { ProgressSnapshot } from './useProgressSnapshot';
 
-function snap(reading: { answers: number; rating: number }): ProgressSnapshot {
+function snap(reading: { answers: number; rating: number }, longest = 0): ProgressSnapshot {
   const profile = newGuestProfile(0);
   return {
+    longest,
     profile: {
       ...profile,
       answers: { ...profile.answers, reading: reading.answers },
@@ -48,10 +49,31 @@ describe('SessionResult', () => {
     expect(screen.queryByTestId('gear-unlock')).toBeNull();
   });
 
-  it('celebrates a new level and the gear Tusse gets for it', () => {
+  it('celebrates a new level and the helmet the troll gets for it', () => {
     renderResult(snap({ answers: 5, rating: 880 }), snap({ answers: 10, rating: 910 }));
     expect(screen.getByTestId('skill-change').textContent).toContain('New level: A2!');
     expect(screen.getByRole('heading', { name: 'Tusse got a horned helmet' })).toBeTruthy();
+  });
+
+  it('gives the scarf when the streak first reaches three days, under the chosen name', () => {
+    const before = snap({ answers: 5, rating: 820 }, 2);
+    const after = snap({ answers: 10, rating: 840 }, 3);
+    after.profile.trollName = 'Knut';
+    renderResult(before, after);
+    expect(screen.getByRole('heading', { name: 'Knut got a knitted scarf' })).toBeTruthy();
+    expect(screen.getByTestId('gear-unlock').textContent).toContain('For a 3-day streak.');
+    expect(screen.getByRole('link', { name: 'Change outfit' }).getAttribute('href')).toBe(
+      '#/troll',
+    );
+  });
+
+  it('does not give the scarf again after a break', () => {
+    const before = snap({ answers: 5, rating: 820 }, 1);
+    before.profile.bestStreak = 4;
+    const after = snap({ answers: 10, rating: 840 }, 3);
+    after.profile.bestStreak = 4;
+    renderResult(before, after);
+    expect(screen.queryByTestId('gear-unlock')).toBeNull();
   });
 
   it('leaves out runs under three', () => {

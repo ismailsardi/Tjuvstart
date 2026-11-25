@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable, type Transaction } from 'dexie';
-import type { CardState, Grade, ListeningSpeed } from '@tjuvstart/engine';
+import type { CardState, Grade, Level, ListeningSpeed } from '@tjuvstart/engine';
+import type { ItemId, Slot } from '../components/outfits';
 import type { Skill } from '../content/types';
 import type { JobField } from '../content/vocab';
 import type { GoalSize } from './daily';
@@ -43,6 +44,17 @@ export interface Profile extends SyncFields {
   jobField?: JobField;
   /** How much the learner wants to do each day. Unset means the regular goal. */
   dailyGoal?: GoalSize;
+  /** What the learner calls their troll. Unset means the default, Tusse. */
+  trollName?: string;
+  /**
+   * The troll's clothes as the learner picked them, per slot. A slot left unset wears the latest
+   * item earned for it; 'none' keeps it empty.
+   */
+  outfit?: Partial<Record<Slot, ItemId | 'none'>>;
+  /** Longest streak reached so far. Clothes earned by streaks follow it, so they are never lost. */
+  bestStreak?: number;
+  /** Highest level reached so far in any skill, for the same reason. */
+  bestLevel?: Level;
   createdAt: number;
 }
 

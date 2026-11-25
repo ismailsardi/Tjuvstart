@@ -20,7 +20,7 @@ import { ItemView } from './ItemView';
 import { SessionBar } from './SessionBar';
 import { SessionResult } from './SessionResult';
 import { Tusse } from './Tusse';
-import { useTusseGear } from './useTusseGear';
+import { useTroll } from './useTroll';
 import { useFocusOnChange } from './usePageFocus';
 import { useProgressSnapshot } from './useProgressSnapshot';
 
@@ -71,7 +71,7 @@ export function LessonPlayer({
   );
 
   const finished = !item;
-  const gear = useTusseGear();
+  const troll = useTroll();
   const { before, after } = useProgressSnapshot(finished, !onFinish && !ephemeral);
   const [newCards, setNewCards] = useState(0);
   const saved = useRef(false);
@@ -248,7 +248,7 @@ export function LessonPlayer({
           )}
           <Tusse
             pose={feedback.correct ? 'thumbs' : 'shrug'}
-            gear={gear}
+            outfit={troll.outfit}
             size={60}
             className="feedback-tusse"
           />

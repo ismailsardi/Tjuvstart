@@ -6,6 +6,8 @@ import {
   isKnown,
   canDoStatus,
   currentStreak,
+  longestStreak,
+  LEVELS,
   DEFAULT_RATING,
   LEVEL_BASE,
   MIN_ANSWERS_FOR_ESTIMATE,
@@ -19,6 +21,7 @@ import {
   type Grade,
   type Streak,
 } from '@tjuvstart/engine';
+import { bestLevel, cleanTrollName, type ItemId, type Slot } from '../components/outfits';
 import { guessChance } from '../content/answers';
 import { DEFAULT_GOAL, GOAL_SIZES, type GoalSize } from './daily';
 import { getItem } from '../content/lessons';
@@ -127,6 +130,52 @@ export async function saveStartingPoint(
 export async function saveDailyGoal(size: GoalSize, db: TjuvstartDb = defaultDb): Promise<void> {
   await db.transaction('rw', db.profiles, async () => {
     await db.profiles.put({ ...(await getProfile(db)), dailyGoal: size });
+  });
+}
+
+/** Saves the troll's name. A blank name goes back to the default. */
+export async function saveTrollName(name: string, db: TjuvstartDb = defaultDb): Promise<void> {
+  const cleaned = cleanTrollName(name);
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    const updated: Profile = { ...profile, trollName: cleaned || undefined };
+    if (!cleaned) delete updated.trollName;
+    await db.profiles.put(updated);
+  });
+}
+
+/** Saves what the troll wears in one slot: an item, or 'none' for nothing. */
+export async function saveOutfitSlot(
+  slot: Slot,
+  choice: ItemId | 'none',
+  db: TjuvstartDb = defaultDb,
+): Promise<void> {
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    await db.profiles.put({ ...profile, outfit: { ...profile.outfit, [slot]: choice } });
+  });
+}
+
+/**
+ * Remembers the longest streak and the highest level reached so far, so clothes earned with them
+ * stay earned after a break or a dip in a rating. Writes only when one of them went up.
+ */
+export async function rememberBests(db: TjuvstartDb = defaultDb): Promise<void> {
+  const { longest } = await dailyProgress(Date.now(), db);
+  await db.transaction('rw', db.profiles, async () => {
+    const profile = await getProfile(db);
+    const level = bestLevel(profile);
+    const higherLevel =
+      level !== undefined &&
+      (profile.bestLevel === undefined ||
+        LEVELS.indexOf(level) > LEVELS.indexOf(profile.bestLevel));
+    const longerStreak = longest > (profile.bestStreak ?? 0);
+    if (!higherLevel && !longerStreak) return;
+    await db.profiles.put({
+      ...profile,
+      ...(higherLevel ? { bestLevel: level } : {}),
+      ...(longerStreak ? { bestStreak: longest } : {}),
+    });
   });
 }
 
@@ -292,6 +341,8 @@ export interface DailyProgress {
   /** Activity a day needs to count toward the streak. */
   streakMin: number;
   streak: Streak;
+  /** The longest streak in the learner's history, by the same rule. */
+  longest: number;
   /** The last seven days, oldest first, today last. */
   week: DayActivity[];
 }
@@ -333,6 +384,7 @@ export async function dailyProgress(
     goalSize,
     streakMin,
     streak: currentStreak(activeDays, today),
+    longest: longestStreak(activeDays),
     week,
   };
 }

@@ -38,9 +38,10 @@ export async function stubAudio(page: Page): Promise<string[]> {
 }
 
 /**
- * Completes the first-run questions: languages, then how much Norwegian the learner knows.
- * By default the learner says they know some, which sends them to the level check. Pass
- * `null` when editing languages later, where the level is not asked again.
+ * Completes the first-run questions: languages, how much Norwegian the learner knows, and a
+ * name for their troll (kept as Tusse unless `trollName` is given). By default the learner says
+ * they know some, which sends them to the level check. Pass `null` when editing languages later,
+ * where neither the level nor the name is asked again.
  */
 /** The onboarding «Continue» button in every interface language. */
 const CONTINUE = /Continue|Continuer|Weiter|Continuar/;
@@ -50,6 +51,7 @@ export async function chooseLanguages(
   native: string,
   known: string[] = [],
   startingPoint: 'beginner' | 'some' | null = 'some',
+  trollName?: string,
 ) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
@@ -64,6 +66,10 @@ export async function chooseLanguages(
         ? /^(None yet|Je débute|Noch gar nicht|Nada todavía)/
         : /^(Some already|J’ai déjà des bases|Schon ein bisschen|Ya sé algo)/;
     await page.getByRole('radio', { name: level }).check();
+    await page.getByRole('button', { name: CONTINUE }).click();
+    if (trollName !== undefined) {
+      await page.getByRole('textbox', { name: /^(Name|Nom|Nombre)$/ }).fill(trollName);
+    }
     await page.getByRole('button', { name: CONTINUE }).click();
   }
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
