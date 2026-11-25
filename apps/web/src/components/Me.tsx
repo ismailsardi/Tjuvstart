@@ -7,6 +7,7 @@ import {
   getProfile,
   mistakeMemory,
   shadowedSentences,
+  wordCounts,
 } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { aiHref, languagesHref, placementHref, wordsHref } from '../routing/useHashRoute';
@@ -25,6 +26,8 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const shadowed = useLiveQuery(() => shadowedSentences()) ?? 0;
   const progress = useLiveQuery(() => dailyProgress());
   const canDo = useLiveQuery(() => canDoProgress());
+  const words = useLiveQuery(() => wordCounts());
+  const canDoReached = canDo ? [...canDo.values()].filter((s) => s === 'can-do').length : 0;
   // Only statements that some exercise checks, grouped by level.
   const levels = [...new Set(trackedDescriptors.map((d) => d.level))];
   const languageNames =
@@ -32,12 +35,23 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   return (
     <>
       <h1>{t('profile')}</h1>
+      <ul className="stats" data-testid="stats">
+        <li>
+          <span className="stat-value">{words?.known ?? 0}</span>
+          <span className="stat-label">{t('statWordsKnown')}</span>
+        </li>
+        <li>
+          <span className="stat-value">{canDoReached}</span>
+          <span className="stat-label">{t('statCanDo')}</span>
+        </li>
+        <li data-testid="shadowed">
+          <span className="stat-value">{shadowed}</span>
+          <span className="stat-label">{t('statSpoken')}</span>
+        </li>
+      </ul>
       <section className="panel" aria-labelledby="me-level">
         <h2 id="me-level">{t('yourLevel')}</h2>
         <SkillLevels profile={profile} />
-        <p className="muted small" data-testid="shadowed">
-          {t('shadowedCount', { n: shadowed })}
-        </p>
         <a href={placementHref}>{t('redoPlacement')}</a>
       </section>
       {progress && (

@@ -10,6 +10,7 @@ import {
   canDoProgress,
   dailyProgress,
   saveDailyGoal,
+  wordCounts,
   dayNumber,
   completeLesson,
   dueCards,
@@ -213,6 +214,15 @@ describe('listening speed', () => {
     expect((await getProfile(db)).listening).toEqual({ rate: 1, streak: 0 });
     await recordAnswer(listening, 'lesson', false, db);
     expect((await getProfile(db)).listening?.rate).toBe(0.85);
+  });
+});
+
+describe('wordCounts', () => {
+  it('counts cards studied and cards known', async () => {
+    db = new TjuvstartDb('test-word-counts');
+    await addCards(['a', 'b', 'c'], 0, db);
+    await db.cards.update('a', { interval: 30 });
+    expect(await wordCounts(db)).toEqual({ studying: 3, known: 1 });
   });
 });
 

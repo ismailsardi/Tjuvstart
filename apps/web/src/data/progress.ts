@@ -3,6 +3,7 @@ import {
   DAY_MS,
   DEFAULT_LISTENING_SPEED,
   isDue,
+  isKnown,
   canDoStatus,
   currentStreak,
   DEFAULT_RATING,
@@ -334,6 +335,19 @@ export async function dailyProgress(
     streak: currentStreak(activeDays, today),
     week,
   };
+}
+
+export interface WordCounts {
+  /** Cards in the learner's deck. */
+  studying: number;
+  /** Cards recalled over three weeks or more (see the engine's isKnown). */
+  known: number;
+}
+
+/** How many words the learner is studying and how many they know. */
+export async function wordCounts(db: TjuvstartDb = defaultDb): Promise<WordCounts> {
+  const cards = await db.cards.toArray();
+  return { studying: cards.length, known: cards.filter(isKnown).length };
 }
 
 /** Where the learner stands on each CEFR descriptor, from their latest answer to each item. */

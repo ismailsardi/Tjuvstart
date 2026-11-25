@@ -2382,3 +2382,86 @@ button.danger:not(.link) {
     animation: none;
   }
 }
+
+/* Level estimate with progress toward the next level */
+
+.skill-level {
+  flex: 1;
+  display: grid;
+  justify-items: end;
+  gap: 0.2rem;
+  max-width: 14rem;
+}
+
+.skill-level .level-meter {
+  width: 100%;
+}
+
+.level-meter-fill.static {
+  animation: none;
+}
+
+/* Mastery stats on Me */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.stats li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.85rem 0.75rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Tusse's new gear, on the session result */
+
+.gear-unlock {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: start;
+  background: var(--accent-soft);
+}
+
+.gear-unlock h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.gear-unlock p {
+  margin: 0;
+}
+
+.gear-unlock .tusse {
+  flex: none;
+}
+
+/* Answers still needed for an estimate: quieter than the level meter, so the two don't read alike. */
+.skill-pending progress::-webkit-progress-value {
+  background: var(--muted);
+}
+
+.skill-pending progress::-moz-progress-bar {
+  background: var(--muted);
+}

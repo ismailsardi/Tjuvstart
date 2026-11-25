@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { DAY_MS, MIN_EASE, RELEARN_MS, isDue, newCardState, review } from './srs';
+import {
+  DAY_MS,
+  KNOWN_INTERVAL,
+  MIN_EASE,
+  RELEARN_MS,
+  isDue,
+  isKnown,
+  newCardState,
+  review,
+} from './srs';
 
 const now = Date.UTC(2026, 0, 1);
 
@@ -42,5 +51,14 @@ describe('isDue', () => {
     const state = review(newCardState(now), 'good', now);
     expect(isDue(state, now)).toBe(false);
     expect(isDue(state, now + DAY_MS)).toBe(true);
+  });
+});
+
+describe('isKnown', () => {
+  it('counts a card as known from a three-week interval', () => {
+    const card = newCardState(0);
+    expect(isKnown(card)).toBe(false);
+    expect(isKnown({ ...card, interval: KNOWN_INTERVAL - 1 })).toBe(false);
+    expect(isKnown({ ...card, interval: KNOWN_INTERVAL })).toBe(true);
   });
 });

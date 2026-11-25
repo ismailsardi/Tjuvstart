@@ -10,7 +10,7 @@ export {
   ratingToLevel,
 } from './levels';
 export type { Level, LevelProgress } from './levels';
-export { DAY_MS, isDue, newCardState, review } from './srs';
+export { DAY_MS, KNOWN_INTERVAL, isDue, isKnown, newCardState, review } from './srs';
 export type { CardState, Grade } from './srs';
 export { RECURRING_THRESHOLD, mistakeScores, recurringMistakes } from './mistakes';
 export type { TaggedAnswer } from './mistakes';

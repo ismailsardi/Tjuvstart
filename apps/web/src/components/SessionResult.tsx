@@ -6,7 +6,7 @@ import { SKILL_NAMES } from '../content/types';
 import { useI18n } from '../i18n/useI18n';
 import { CanDoList } from './CanDoList';
 import { Tusse } from './Tusse';
-import { useTusseGear } from './useTusseGear';
+import { gearFor, useTusseGear } from './useTusseGear';
 import { skillChanges, type ProgressSnapshot, type SkillChange } from './useProgressSnapshot';
 
 /** Each step of the reveal starts this long after the one before (see .reveal in CSS). */
@@ -124,11 +124,24 @@ export function SessionResult({
         )
       : [];
 
+  // Gear Tusse earned during this session, newest first: the lusekofte outranks the helmet.
+  const gearBefore = gearFor(before?.profile);
+  const gearAfter = gearFor(after?.profile);
+  const newGear =
+    before && after
+      ? gearAfter.sweater && !gearBefore.sweater
+        ? 'sweater'
+        : gearAfter.helmet && !gearBefore.helmet
+          ? 'helmet'
+          : undefined
+      : undefined;
+
   let i = 1;
   const next = () => step(i++);
   const ringStep = next();
   const extrasStep = next();
   const skillSteps = changes.map(() => next());
+  const gearStep = newGear ? next() : undefined;
   const canDoStep = reached.length > 0 ? next() : undefined;
   const footerStep = next();
   // Tusse is there from the start and dances once everything else is out.
@@ -166,6 +179,24 @@ export function SessionResult({
             <SkillMeter key={change.skill} change={change} delay={skillSteps[n] ?? step(0)} />
           ))}
         </ul>
+      )}
+      {gearStep && newGear && (
+        <section
+          className="panel reveal gear-unlock"
+          style={gearStep}
+          aria-labelledby="gear-heading"
+          data-testid="gear-unlock"
+        >
+          <Tusse pose="thumbs" gear={gearAfter} size={72} />
+          <div>
+            <h2 id="gear-heading">
+              {t(newGear === 'sweater' ? 'gearSweaterTitle' : 'gearHelmetTitle')}
+            </h2>
+            <p className="muted small">
+              {t(newGear === 'sweater' ? 'gearSweaterBody' : 'gearHelmetBody')}
+            </p>
+          </div>
+        </section>
       )}
       {canDoStep && after && (
         <section

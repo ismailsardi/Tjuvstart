@@ -54,5 +54,5 @@ test('a learner can listen, record and shadow a lesson sentence by sentence', as
   await page.getByRole('link', { name: 'Back to the lesson' }).click();
   await page.getByRole('link', { name: 'Close' }).click();
   await page.getByRole('navigation').getByRole('link', { name: 'Me' }).click();
-  await expect(page.getByTestId('shadowed')).toHaveText('Sentences said out loud: 1');
+  await expect(page.getByTestId('shadowed')).toHaveText(/^1\s*sentences said aloud$/);
 });

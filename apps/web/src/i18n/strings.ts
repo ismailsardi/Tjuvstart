@@ -159,7 +159,6 @@ const en = {
   recordingPrivacy: 'Recordings stay on this device and are gone when you leave the page.',
   shadowDoneBody: 'You said {n} of {total} sentences out loud.',
   backToLesson: 'Back to the lesson',
-  shadowedCount: 'Sentences said out loud: {n}',
   trackProgress: '{done} of {total} done',
   lessonItems: '{n} exercises',
   trackStep: 'Step {n}',
@@ -288,6 +287,14 @@ const en = {
   goal_serious: 'Serious',
   goal_seriousHint: '{n} a day. The full ten minutes.',
   changeGoal: 'Change goal',
+  statWordsKnown: 'words known',
+  statCanDo: 'things you can do',
+  statSpoken: 'sentences said aloud',
+  wordsKnownLine: '{known} known · {studying} in your cards',
+  gearHelmetTitle: 'Tusse got a horned helmet',
+  gearHelmetBody: 'One of your skills reached A2.',
+  gearSweaterTitle: 'Tusse got a lusekofte',
+  gearSweaterBody: 'One of your skills reached B1.',
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -454,7 +461,6 @@ const fr: Record<StringKey, string> = {
     'Les enregistrements restent sur cet appareil et disparaissent quand vous quittez la page.',
   shadowDoneBody: 'Vous avez dit {n} phrases sur {total} à voix haute.',
   backToLesson: 'Retour à la leçon',
-  shadowedCount: 'Phrases dites à voix haute : {n}',
   trackProgress: '{done} sur {total} terminées',
   lessonItems: '{n} exercices',
   trackStep: 'Étape {n}',
@@ -585,6 +591,14 @@ const fr: Record<StringKey, string> = {
   goal_serious: 'Intensif',
   goal_seriousHint: '{n} par jour. Les dix minutes complètes.',
   changeGoal: 'Changer d’objectif',
+  statWordsKnown: 'mots connus',
+  statCanDo: 'choses que vous savez faire',
+  statSpoken: 'phrases dites à voix haute',
+  wordsKnownLine: '{known} connus · {studying} dans vos cartes',
+  gearHelmetTitle: 'Tusse a reçu un casque à cornes',
+  gearHelmetBody: 'Une de vos compétences a atteint A2.',
+  gearSweaterTitle: 'Tusse a reçu un lusekofte',
+  gearSweaterBody: 'Une de vos compétences a atteint B1.',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };

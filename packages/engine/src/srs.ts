@@ -66,3 +66,13 @@ export function review(state: CardState, grade: Grade, now: number): CardState {
 export function isDue(state: CardState, now: number): boolean {
   return state.due <= now;
 }
+
+/**
+ * A card counts as known once its interval reaches three weeks: the learner has recalled it
+ * several times over growing gaps. This is the usual "mature card" line in spaced repetition.
+ */
+export const KNOWN_INTERVAL = 21;
+
+export function isKnown(state: CardState): boolean {
+  return state.interval >= KNOWN_INTERVAL;
+}
