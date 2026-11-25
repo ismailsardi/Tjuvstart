@@ -90,7 +90,9 @@ export default defineConfig({
         // so installing the app does not download every recording up front.
         // The AI SDK is only useful online, so it is fetched on first use instead of at install.
         // The same goes for the 3D troll (three.js and the model), which only some screens show.
-        globIgnores: ['audio/**', 'assets/sdk-*.js', 'assets/trollScene-*.js', 'troll/**'],
+        // The troll's pose stills (troll/*.webp) are small and on most screens, so they are kept.
+        globPatterns: ['**/*.{js,wasm,css,html}', 'troll/*.webp'],
+        globIgnores: ['audio/**', 'assets/sdk-*.js', 'assets/trollScene-*.js', 'troll/*.glb'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>

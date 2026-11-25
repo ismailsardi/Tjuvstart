@@ -2210,7 +2210,37 @@ button.danger:not(.link) {
   }
 }
 
+/* The illustrated troll: one still per pose, so the idle life is a slow breathe from the feet. */
+.tusse-art {
+  object-fit: contain;
+  transform-origin: 50% 96%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.tusse-art.tusse-idle {
+  animation: tusse-art-breathe 3.7s ease-in-out infinite;
+}
+
+.tusse-art.tusse-cheer.tusse-idle {
+  animation:
+    tusse-dance 900ms ease-in-out 2,
+    tusse-art-breathe 3.7s ease-in-out 1.8s infinite;
+}
+
+.tusse-art.tusse-hopping {
+  animation: tusse-hop 520ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@keyframes tusse-art-breathe {
+  50% {
+    transform: scale(1.015, 0.985);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .tusse-art.tusse-idle,
+  .tusse-art.tusse-hopping,
   .feedback-tusse,
   .tusse-cheer .tusse-body,
   .tusse-wave .tusse-wave,

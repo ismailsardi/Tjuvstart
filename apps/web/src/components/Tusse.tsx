@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useState, type ComponentProps, type ReactNode } from 'react';
 import type { Outfit } from './outfits';
 
 /**
@@ -478,7 +478,9 @@ function Cape() {
   );
 }
 
-export function Tusse({
+/** The hand-drawn troll. It can wear every outfit item, so it stays in use while the learner
+ * wears any (see {@link Tusse}). */
+export function DrawnTusse({
   pose = 'rest',
   outfit = {},
   size = 96,
@@ -643,5 +645,58 @@ export function Tusse({
         </g>
       </g>
     </svg>
+  );
+}
+
+/** Which illustrated pose each pose shows. The rest pose uses the friendly wave. */
+const ART_FOR_POSE: Record<TussePose, string> = {
+  rest: 'wave',
+  wave: 'wave',
+  thumbs: 'thumbs',
+  shrug: 'shrug',
+  cheer: 'cheer',
+  coffee: 'coffee',
+  sleep: 'sleep',
+};
+
+function artUrl(pose: TussePose): string {
+  return `${import.meta.env.BASE_URL}troll/tusse-${ART_FOR_POSE[pose]}.webp`;
+}
+
+/**
+ * Tusse as the learner sees it: the illustrated troll (rendered stills in public/troll/, one per
+ * pose, drawn in the same 200 × 220 box), with a CSS idle bounce and a hop on tap.
+ *
+ * The illustrations have no outfit pieces yet, so while the learner wears any item the drawn troll
+ * is shown instead and their earned clothes stay visible. The coffee pose brings its own rock.
+ */
+export function Tusse(props: ComponentProps<typeof DrawnTusse>) {
+  const { pose = 'rest', outfit = {}, size = 96, idle = true, className } = props;
+  const [hopping, setHopping] = useState(false);
+  if (Object.values(outfit).some(Boolean)) return <DrawnTusse {...props} />;
+  return (
+    <img
+      src={artUrl(pose)}
+      alt=""
+      aria-hidden="true"
+      draggable={false}
+      width={size}
+      height={(size * 220) / 200}
+      className={[
+        'tusse',
+        'tusse-art',
+        `tusse-${pose}`,
+        idle && 'tusse-idle',
+        hopping && 'tusse-hopping',
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
+      // A tap is only for fun: it changes nothing, so there's no keyboard or screen reader equivalent.
+      onPointerDown={idle ? () => setHopping(true) : undefined}
+      onAnimationEnd={(e) => {
+        if (e.animationName === 'tusse-hop') setHopping(false);
+      }}
+    />
   );
 }
