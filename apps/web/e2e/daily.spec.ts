@@ -20,6 +20,14 @@ test('the daily session ends with a streak and can-do statements on Me', async (
   const daily = page.getByRole('region', { name: 'Today’s 10 minutes' });
   await expect(daily.getByRole('link', { name: 'One more round' })).toBeVisible();
 
+  // With the goal met, the next lesson becomes the main action and comes first on the page.
+  const next = page.getByRole('region', { name: 'Next lesson' });
+  await expect(next.getByRole('link', { name: /Start lesson$/ })).toBeVisible();
+  const [nextTop, dailyTop] = await Promise.all(
+    [next, daily].map(async (region) => (await region.boundingBox())!.y),
+  );
+  expect(nextTop).toBeLessThan(dailyTop);
+
   await page.getByRole('navigation').getByRole('link', { name: 'Me' }).click();
   const canDo = page.getByRole('region', { name: 'What I can do' });
   await expect(canDo).toContainText('I can find what I need in notices');

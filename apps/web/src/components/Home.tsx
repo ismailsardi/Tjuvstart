@@ -53,7 +53,7 @@ const ICONS = {
   ),
 };
 
-/** A quick-practice tile. The whole tile is the link's hit area. */
+/** A quick-practice row. The whole row is the link's hit area. */
 function Tile({
   id,
   icon,
@@ -128,6 +128,60 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const trackSteps = currentTrack ? trackLessons(currentTrack) : [];
   const trackDone = trackSteps.filter((lesson) => completed?.has(lesson.id)).length;
 
+  // One thing on the page gets the weight. Before the daily goal is met that is today's
+  // session; once it is met, the next lesson takes over and the daily block steps back.
+  const goalMet = progress !== undefined && progress.today >= progress.goal;
+  const lessonFirst = !needsPlacement && goalMet && next !== undefined;
+
+  const daily = progress && (
+    <section className={lessonFirst ? 'daily-quiet' : 'hero'} aria-labelledby="daily-heading">
+      <h2 id="daily-heading">{t('dailyTitle')}</h2>
+      {!lessonFirst && (
+        <p className="hero-body">{t('dailyBody', { cards: DAILY_CARDS, items: DAILY_ITEMS })}</p>
+      )}
+      <StreakLine progress={progress} />
+      <a className={lessonFirst ? 'daily-again' : 'button'} href={dailyHref}>
+        {progress.streak.doneToday ? t('dailyAgain') : t('start')}
+      </a>
+      <a className="hero-link small" href={goalHref}>
+        {t('changeGoal')}
+      </a>
+    </section>
+  );
+
+  const nextLesson = completed && (
+    <section
+      className={lessonFirst ? 'next-lesson focus' : 'next-lesson'}
+      aria-labelledby="next-heading"
+    >
+      <div className="section-head">
+        <h2 id="next-heading">{t('nextLesson')}</h2>
+        <a href={lessonsHref}>{t('seeAllLessons')}</a>
+      </div>
+      {currentTrack && next && (
+        <div className="next-track" data-testid="next-track">
+          <p className="small">
+            <span lang="nb">{currentTrack.title}</span>
+            <span className="muted">
+              {' · '}
+              {t('trackProgress', { done: trackDone, total: trackSteps.length })}
+            </span>
+          </p>
+          <ol className="track-meter" aria-hidden="true">
+            {trackSteps.map((lesson) => (
+              <li key={lesson.id} className={completed.has(lesson.id) ? 'done' : undefined} />
+            ))}
+          </ol>
+        </div>
+      )}
+      {next ? (
+        <LessonCard lesson={next} packs={packs} focus={lessonFirst} />
+      ) : (
+        <p className="muted">{t('allLessonsDone')}</p>
+      )}
+    </section>
+  );
+
   // Wait the few milliseconds IndexedDB takes, so cards don't appear one by one and push the
   // page down (this was most of Lighthouse's layout shift score).
   if (!profile || !completed || !progress || hasAnswers === undefined) return null;
@@ -153,7 +207,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <Tusse pose="coffee" rock gear={gear} size={72} className="home-tusse" />
       </header>
 
-      {needsPlacement ? (
+      {needsPlacement && (
         <section className="hero" aria-labelledby="placement-heading">
           <h2 id="placement-heading">{t('placementTitle')}</h2>
           <p className="hero-body">{t('placementCard')}</p>
@@ -161,47 +215,18 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
             {t('start')}
           </a>
         </section>
-      ) : (
-        <section className="hero" aria-labelledby="daily-heading">
-          <h2 id="daily-heading">{t('dailyTitle')}</h2>
-          <p className="hero-body">{t('dailyBody', { cards: DAILY_CARDS, items: DAILY_ITEMS })}</p>
-          {progress && <StreakLine progress={progress} />}
-          <a className="button" href={dailyHref}>
-            {progress?.streak.doneToday ? t('dailyAgain') : t('start')}
-          </a>
-          <a className="hero-link small" href={goalHref}>
-            {t('changeGoal')}
-          </a>
-        </section>
       )}
-
-      <section aria-labelledby="next-heading">
-        <div className="section-head">
-          <h2 id="next-heading">{t('nextLesson')}</h2>
-          <a href={lessonsHref}>{t('seeAllLessons')}</a>
-        </div>
-        {currentTrack && next && (
-          <div className="next-track" data-testid="next-track">
-            <p className="small">
-              <span lang="nb">{currentTrack.title}</span>
-              <span className="muted">
-                {' · '}
-                {t('trackProgress', { done: trackDone, total: trackSteps.length })}
-              </span>
-            </p>
-            <ol className="track-meter" aria-hidden="true">
-              {trackSteps.map((lesson) => (
-                <li key={lesson.id} className={completed?.has(lesson.id) ? 'done' : undefined} />
-              ))}
-            </ol>
-          </div>
-        )}
-        {next ? (
-          <LessonCard lesson={next} packs={packs} />
-        ) : (
-          completed && <p className="muted">{t('allLessonsDone')}</p>
-        )}
-      </section>
+      {lessonFirst ? (
+        <>
+          {nextLesson}
+          {daily}
+        </>
+      ) : (
+        <>
+          {!needsPlacement && daily}
+          {nextLesson}
+        </>
+      )}
 
       <h2 className="section-title">{t('quickPractice')}</h2>
       <div className="tiles">
@@ -247,7 +272,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         />
       </div>
 
-      <section className="panel" aria-labelledby="level-heading">
+      <section className="home-level" aria-labelledby="level-heading">
         <h2 id="level-heading">{t('yourLevel')}</h2>
         {anyEstimate ? (
           <SkillLevels profile={profile} />

@@ -182,6 +182,7 @@ export const de: Record<StringKey, string> = {
   dailyTitle: 'Deine 10 Minuten heute',
   dailyBody: 'Bis zu {cards} Wortkarten, danach {items} Übungen, für dich ausgewählt.',
   dailyAgain: 'Noch eine Runde',
+  startLesson: 'Lektion starten',
   dailyProgress: '{n} von {goal} heute geschafft',
   dailyGoalMet: 'Heute zählt für deine Serie.',
   dailyStepCards: 'Wortkarten',

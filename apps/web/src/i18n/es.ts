@@ -180,6 +180,7 @@ export const es: Record<StringKey, string> = {
   dailyTitle: 'Tus 10 minutos de hoy',
   dailyBody: 'Hasta {cards} tarjetas de vocabulario y luego {items} ejercicios elegidos para ti.',
   dailyAgain: 'Otra ronda',
+  startLesson: 'Empezar la lección',
   dailyProgress: '{n} de {goal} hechos hoy',
   dailyGoalMet: 'Hoy cuenta para tu racha.',
   dailyStepCards: 'Tarjetas',

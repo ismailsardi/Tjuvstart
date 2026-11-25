@@ -15,8 +15,12 @@
   --bad: #d14343;
   --border: #dfe4ec;
   --shadow: 0 1px 2px rgb(19 33 59 / 6%), 0 8px 24px rgb(19 33 59 / 8%);
-  --radius: 1rem;
-  --control-radius: 0.875rem;
+  /* Radius follows size: the one focal block and the word card are round, containers less,
+     controls less again, and small labels are nearly square. */
+  --radius-lg: 1.25rem;
+  --radius: 0.75rem;
+  --control-radius: 0.625rem;
+  --radius-sm: 0.3rem;
   --progress: var(--warm);
   --tabbar-height: 4rem;
   font-family:
@@ -268,11 +272,17 @@ button.secondary,
 }
 
 .panel {
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.1rem 1.25rem;
-  margin: 1rem 0;
+  margin: 1.75rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+/* A one-line message (empty state, status), or a section right under the page title, needs no rule. */
+p.panel,
+div.panel[role='status'],
+h1 + .panel {
+  border-top: 0;
+  padding-top: 0;
 }
 
 .panel h2 {
@@ -296,10 +306,12 @@ button.secondary,
   width: fit-content;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.1rem 0.55rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  line-height: 1.4;
+  padding: 0 0.3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid currentcolor;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 /* Level per skill */
@@ -332,29 +344,78 @@ button.secondary,
 
 .lessons {
   list-style: none;
+  margin: 0;
   padding: 0;
-  display: grid;
-  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.lessons li {
+  border-bottom: 1px solid var(--border);
 }
 
 .lesson-card {
   display: grid;
-  gap: 0.3rem;
-  padding: 1rem 1.15rem;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  gap: 0.2rem;
+  padding: 0.9rem 0;
   text-decoration: none;
   color: var(--text);
-  border: 1px solid var(--border);
 }
 
 .lesson-card strong {
   font-size: 1.1rem;
 }
 
-.lesson-card.completed {
-  border-color: color-mix(in srgb, var(--good) 35%, var(--border));
+@media (hover: hover) {
+  .lesson-card:hover strong {
+    color: var(--accent);
+  }
+}
+
+/* The next lesson as the page's main action: the only filled block on the screen. */
+.lesson-card.focus {
+  gap: 0.35rem;
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 18px rgb(29 78 137 / 22%);
+}
+
+.lesson-card.focus strong {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.lesson-card.focus .muted {
+  color: rgb(255 255 255 / 85%);
+}
+
+.lesson-card.focus .badge {
+  color: #fff;
+}
+
+.lesson-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  margin-top: 0.85rem;
+  border-radius: var(--control-radius);
+  background: #fff;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lesson-card.focus {
+    background: #24497a;
+    box-shadow: none;
+  }
+
+  .lesson-cta {
+    color: #142b4b;
+  }
 }
 
 .done {
@@ -497,14 +558,10 @@ progress::-moz-progress-bar {
   padding: 1.75rem;
   text-align: center;
   background: var(--surface);
-  border-radius: 1.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   backface-visibility: hidden;
   overflow: auto;
-}
-
-.word-card .front {
-  background: radial-gradient(circle at 30% 20%, var(--accent-soft), var(--surface) 70%);
 }
 
 .word-card .back {
@@ -545,14 +602,11 @@ progress::-moz-progress-bar {
 }
 
 .word-card .tag {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
 }
 
 .tag.cognate {
-  background: color-mix(in srgb, var(--good) 18%, transparent);
   color: var(--good);
 }
 
@@ -814,10 +868,8 @@ mark.false-friend {
 
 .glossary {
   margin: 0.75rem 0 0;
-  padding: 0.75rem 1rem;
-  border-radius: var(--control-radius);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .glossary summary {
@@ -838,10 +890,9 @@ mark.false-friend {
 }
 
 .tip {
-  margin: 1rem 0;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius);
-  background: var(--accent-soft);
+  margin: 0;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .tip summary {
@@ -1393,10 +1444,8 @@ button.link {
 
 .eyebrow {
   margin: 0 0 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -1446,10 +1495,10 @@ button.link {
   gap: 0.9rem;
   margin: 0 0 1.5rem;
   padding: 1.35rem;
-  border-radius: 1.5rem;
+  border-radius: var(--radius-lg);
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 10px 28px rgb(29 78 137 / 28%);
+  box-shadow: 0 6px 18px rgb(29 78 137 / 22%);
 }
 
 .hero h2 {
@@ -1467,6 +1516,7 @@ button.link {
   color: #fff;
 }
 
+.hero .muted,
 .hero .streak .muted {
   color: rgb(255 255 255 / 80%);
 }
@@ -1502,26 +1552,17 @@ button.link {
 }
 
 .tiles {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
+  border-top: 1px solid var(--border);
 }
 
 .tile {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  padding: 1rem;
-  border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
-@media (hover: hover) {
-  .tile:hover {
-    border-color: var(--accent);
-  }
+  display: grid;
+  grid-template-columns: 1.25rem 1fr auto;
+  align-items: center;
+  column-gap: 0.85rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .tile:has(.tile-link:focus-visible) {
@@ -1530,32 +1571,41 @@ button.link {
 }
 
 .tile-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-bottom: 0.25rem;
+  grid-row: span 2;
+  width: 1.25rem;
+  height: 1.25rem;
   fill: none;
-  stroke: var(--accent);
+  stroke: var(--muted);
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .tile h2 {
+  grid-column: 2;
   margin: 0;
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.3;
 }
 
 .tile p {
+  grid-column: 2;
   margin: 0;
 }
 
 .tile-link {
-  margin-top: auto;
-  padding-top: 0.35rem;
+  grid-column: 3;
+  grid-row: 1 / span 2;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  .tile:hover h2 {
+    color: var(--accent);
+  }
 }
 
 /* The tile is one big target. */
@@ -1794,11 +1844,7 @@ button.link {
 
 .bottom-actions button.secondary {
   flex: 0 0 auto;
-}
-
-/* An odd last tile takes the whole row. */
-.tile:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
+  border-color: transparent;
 }
 
 /* After answering, the picked option stays clear and the others step back. */
@@ -2314,25 +2360,19 @@ button.danger:not(.link) {
 }
 
 .result-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .skill-changes {
   display: grid;
   gap: 0.5rem;
   margin: 1.25rem 0 0;
-  padding: 1rem;
+  padding: 0.75rem 0;
   list-style: none;
   text-align: start;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .skill-change {
@@ -2392,8 +2432,17 @@ button.danger:not(.link) {
   margin-top: 1rem;
 }
 
+/* One primary action; anything else is a plain link under it. */
 .session-result .actions {
-  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.session-result .actions .button {
+  width: 100%;
+  max-width: 22rem;
 }
 
 @keyframes reveal-in {
@@ -2545,6 +2594,62 @@ button.danger:not(.link) {
   color: #fff;
 }
 
+/* Today once the daily goal is met: the day's status steps back to a line under the lesson. */
+.daily-quiet {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  margin: 1.75rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.daily-quiet h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.daily-quiet .streak {
+  grid-column: 1 / -1;
+}
+
+.daily-quiet .daily-again {
+  font-weight: 600;
+}
+
+.daily-quiet .hero-link {
+  justify-self: end;
+  color: var(--accent);
+}
+
+.next-lesson .section-head h2 {
+  margin-top: 0;
+}
+
+.next-lesson.focus {
+  /* Clears Tusse, who sits on the edge of the header. */
+  margin: 2.25rem 0 0;
+}
+
+.next-lesson:not(.focus) {
+  margin-top: 0.5rem;
+}
+
+.next-lesson:not(.focus) .lesson-card {
+  border-bottom: 1px solid var(--border);
+}
+
+.next-lesson:not(.focus) .lesson-card > .muted {
+  font-size: 0.95rem;
+}
+
+.home-level {
+  margin-top: 2.5rem;
+}
+
 .goal-picker {
   border: 0;
   margin: 1rem 0 0;
@@ -2608,14 +2713,11 @@ button.danger:not(.link) {
 .stats li {
   display: grid;
   gap: 0.1rem;
-  padding: 0.85rem 0.75rem;
-  background: var(--surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  align-content: start;
 }
 
 .stat-value {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.1;
   color: var(--accent);
@@ -2633,6 +2735,9 @@ button.danger:not(.link) {
   gap: 1rem;
   align-items: center;
   margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border: 0;
+  border-radius: var(--radius);
   text-align: start;
   background: var(--accent-soft);
 }
@@ -2662,9 +2767,14 @@ button.danger:not(.link) {
 /* Tracks fold down to a summary; the current one starts open */
 
 .track.current {
-  box-shadow:
-    inset 0 0 0 2px var(--accent),
-    var(--shadow);
+  padding: 1.1rem 1.25rem;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.track.current + .track {
+  border-top: 0;
 }
 
 .track-details {

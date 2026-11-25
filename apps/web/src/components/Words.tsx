@@ -61,7 +61,11 @@ export function Words() {
         <p className="muted">{t('wordCardsIntro')}</p>
       </header>
 
-      <section className="panel due-card" aria-labelledby="due-heading">
+      {/* Cards due are the reason to open this page, so they get the weight when there are any. */}
+      <section
+        className={due > 0 ? 'hero due-card' : 'panel due-card'}
+        aria-labelledby="due-heading"
+      >
         <h2 id="due-heading" className="eyebrow">
           {t('dueDeck')}
         </h2>
