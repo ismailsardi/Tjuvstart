@@ -140,6 +140,8 @@ export const de: Record<StringKey, string> = {
   listen: 'Anhören',
   listenSlow: 'Langsamer',
   listenText: 'Text anhören',
+  showText: 'Text anzeigen',
+  youWrote: 'Du hast geschrieben',
   stopListening: 'Stopp',
   audioFailed:
     'Das Audio konnte nicht geladen werden. Prüfe deine Verbindung und versuch es noch einmal.',

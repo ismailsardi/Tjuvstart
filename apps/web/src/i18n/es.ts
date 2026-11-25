@@ -139,6 +139,8 @@ export const es: Record<StringKey, string> = {
   listen: 'Escuchar',
   listenSlow: 'Más despacio',
   listenText: 'Escuchar el texto',
+  showText: 'Mostrar el texto',
+  youWrote: 'Escribiste',
   stopListening: 'Parar',
   audioFailed: 'No se ha podido cargar el audio. Revisa tu conexión e inténtalo de nuevo.',
   shadowText: 'Repetir este texto en voz alta',

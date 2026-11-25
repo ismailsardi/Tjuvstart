@@ -900,6 +900,36 @@ mark.false-friend {
   font-weight: 600;
 }
 
+/* Exercises that do not ask about the text keep it folded, one tap away. */
+.text-toggle {
+  margin: 0.5rem 0 0;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.text-toggle summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 1.75rem;
+}
+
+.word-help {
+  margin-top: 1.25rem;
+}
+
+.word-help > :first-child {
+  margin-top: 0;
+}
+
+.feedback .given {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.feedback .given s {
+  color: var(--text);
+}
+
 /* Onboarding */
 
 .onboarding fieldset {

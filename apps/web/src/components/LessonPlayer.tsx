@@ -121,6 +121,10 @@ export function LessonPlayer({
   }
 
   const note = firstNote(packs, (pack) => pack.itemNotes?.[item.id]);
+  // Reading questions need the text in view. Other exercises keep it one tap away, so the
+  // question and answers are not pushed below the fold by a text they do not ask about.
+  const textInView = practice || item.skill === 'reading';
+  const textLessonId = practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id;
 
   async function submit(response: Response) {
     if (!item || feedback) return;
@@ -161,31 +165,30 @@ export function LessonPlayer({
       <h1 id="lesson-heading" className="eyebrow" lang="nb">
         {lesson.title}
       </h1>
-      {text && (
-        <ReadingText
-          key={text}
-          text={text}
-          segments={segments}
-          lessonId={practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id}
-          document={textLesson?.document}
-          canShadow={!ephemeral}
-          level={textLesson?.level ?? lesson.level}
-        />
-      )}
-
-      {contrasts.map((contrast) => (
-        <details
-          key={contrast.id}
-          className="tip"
-          lang={contrast.language}
-          dir={contrast.direction}
-        >
-          <summary>
-            {t('tip')}: {contrast.title}
-          </summary>
-          <p>{contrast.body}</p>
-        </details>
-      ))}
+      {text &&
+        (textInView ? (
+          <ReadingText
+            key={text}
+            text={text}
+            segments={segments}
+            lessonId={textLessonId}
+            document={textLesson?.document}
+            canShadow={!ephemeral}
+            level={textLesson?.level ?? lesson.level}
+          />
+        ) : (
+          <details className="text-toggle" data-testid="text-toggle">
+            <summary>{t('showText')}</summary>
+            <ReadingText
+              text={text}
+              segments={segments}
+              lessonId={textLessonId}
+              document={textLesson?.document}
+              canShadow={!ephemeral}
+              level={textLesson?.level ?? lesson.level}
+            />
+          </details>
+        ))}
 
       <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
         {item.prompt}
@@ -197,6 +200,26 @@ export function LessonPlayer({
       )}
 
       <ItemView item={item} disabled={feedback !== null} onSubmit={submit} />
+
+      {/* Word help and tips come after the answers: there when wanted, never in the way. */}
+      {((text && textInView) || contrasts.length > 0) && (
+        <div className="word-help">
+          {text && textInView && <Glossaries segments={segments} />}
+          {contrasts.map((contrast) => (
+            <details
+              key={contrast.id}
+              className="tip"
+              lang={contrast.language}
+              dir={contrast.direction}
+            >
+              <summary>
+                {t('tip')}: {contrast.title}
+              </summary>
+              <p>{contrast.body}</p>
+            </details>
+          ))}
+        </div>
+      )}
 
       {feedback && (
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
@@ -217,6 +240,12 @@ export function LessonPlayer({
               )}
             </span>
           </p>
+          {!feedback.correct && item.type !== 'dictation' && feedback.given?.trim() && (
+            // The sheet can cover the input, so repeat what the learner typed next to the answer.
+            <p className="given" data-testid="given">
+              {t('youWrote')}: <s lang="nb">{feedback.given.trim()}</s>
+            </p>
+          )}
           <Tusse
             pose={feedback.correct ? 'thumbs' : 'shrug'}
             gear={gear}
@@ -253,7 +282,7 @@ export function LessonPlayer({
   );
 }
 
-/** The lesson text with familiar words and look-alikes marked, followed by short glossaries. */
+/** The lesson text with familiar words and look-alikes marked. */
 function ReadingText({
   text,
   segments,
@@ -271,12 +300,6 @@ function ReadingText({
   canShadow: boolean;
 }) {
   const { t } = useI18n();
-  const unique = (kind: 'cognate' | 'false-friend') => [
-    ...new Map(
-      segments.flatMap((s) => (s.word?.kind === kind ? [[s.word.nb, s.word] as const] : [])),
-    ).values(),
-  ];
-  const cognates = unique('cognate');
   const body = (
     <p className="reading-text" lang="nb">
       {segments.map((segment, i) =>
@@ -290,8 +313,6 @@ function ReadingText({
       )}
     </p>
   );
-  const falseFriends = unique('false-friend');
-
   return (
     <>
       <div className="text-tools">
@@ -315,6 +336,23 @@ function ReadingText({
       ) : (
         body
       )}
+    </>
+  );
+}
+
+/** Short glossaries of the familiar words and look-alikes marked in the text. */
+function Glossaries({ segments }: { segments: Segment[] }) {
+  const { t } = useI18n();
+  const unique = (kind: 'cognate' | 'false-friend') => [
+    ...new Map(
+      segments.flatMap((s) => (s.word?.kind === kind ? [[s.word.nb, s.word] as const] : [])),
+    ).values(),
+  ];
+  const cognates = unique('cognate');
+  const falseFriends = unique('false-friend');
+
+  return (
+    <>
       {cognates.length > 0 && (
         <details className="glossary" aria-label={t('knownWords')}>
           <summary>
