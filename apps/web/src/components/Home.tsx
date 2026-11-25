@@ -23,7 +23,7 @@ import {
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
-import { Tusse } from './Tusse';
+import { Troll } from '../troll3d/Troll';
 import { useTroll } from './useTroll';
 
 const ICONS = {
@@ -204,7 +204,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           </div>
           <p className="muted">{t('todayIntro')}</p>
         </div>
-        <Tusse pose="coffee" rock outfit={troll.outfit} size={72} className="home-tusse" />
+        <Troll pose="coffee" rock outfit={troll.outfit} size={72} className="home-tusse" />
       </header>
 
       {needsPlacement && (

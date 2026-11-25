@@ -3,7 +3,7 @@ import { useState, type FormEvent } from 'react';
 import { getProfile, saveOutfitSlot, saveTrollName } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { meHref } from '../routing/useHashRoute';
-import { Tusse } from './Tusse';
+import { Troll } from '../troll3d/Troll';
 import { useTroll } from './useTroll';
 import {
   cleanTrollName,
@@ -33,7 +33,7 @@ export function Wardrobe() {
     <>
       <h1>{troll.name}</h1>
       <div className="wardrobe-stage">
-        <Tusse pose="wave" outfit={troll.outfit} size={168} />
+        <Troll pose="wave" outfit={troll.outfit} size={168} />
       </div>
       <NameForm initial={trollName(profile)} />
       <section className="panel" aria-labelledby="wardrobe-heading">

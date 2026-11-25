@@ -26,10 +26,18 @@ const CONTENT_SECURITY_POLICY = [
   ['script-src', "'self'", googleSignIn && `${GOOGLE_GSI}client`].filter(Boolean).join(' '),
   ['style-src', "'self'", googleSignIn && `${GOOGLE_GSI}style`].filter(Boolean).join(' '),
   ...(googleSignIn ? [`frame-src ${GOOGLE_GSI}`] : []),
-  "img-src 'self' data:",
+  // The 3D troll's textures are unpacked from its model file into blob: URLs.
+  "img-src 'self' data: blob:",
   // Learners' own recordings play from blob: URLs.
   "media-src 'self' blob:",
-  ['connect-src', "'self'", 'https://api.anthropic.com', syncApiOrigin, googleSignIn && GOOGLE_GSI]
+  [
+    'connect-src',
+    "'self'",
+    'blob:',
+    'https://api.anthropic.com',
+    syncApiOrigin,
+    googleSignIn && GOOGLE_GSI,
+  ]
     .filter(Boolean)
     .join(' '),
   "object-src 'none'",
@@ -81,7 +89,8 @@ export default defineConfig({
         // Audio is fetched the first time a sentence is played and then kept for offline use,
         // so installing the app does not download every recording up front.
         // The AI SDK is only useful online, so it is fetched on first use instead of at install.
-        globIgnores: ['audio/**', 'assets/sdk-*.js'],
+        // The same goes for the 3D troll (three.js and the model), which only some screens show.
+        globIgnores: ['audio/**', 'assets/sdk-*.js', 'assets/trollScene-*.js', 'troll/**'],
         runtimeCaching: [
           {
             urlPattern: ({ url }) =>
