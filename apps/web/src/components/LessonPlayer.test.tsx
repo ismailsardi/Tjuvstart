@@ -72,6 +72,46 @@ describe('LessonPlayer', () => {
   });
 });
 
+describe('LessonPlayer layout', () => {
+  it('keeps the text in view for reading questions and folds it for the rest', async () => {
+    const user = userEvent.setup();
+    const real = getLesson('a2-first-day-at-work');
+    if (!real) throw new Error('Sample lesson missing');
+    const reading = real.items.findIndex((item) => item.skill === 'reading');
+    const writing = real.items.findIndex((item) => item.skill === 'writing');
+    const items = [real.items[reading]!, real.items[writing]!];
+    const { container } = render(
+      <LessonPlayer lesson={{ ...real, id: 'layout-lesson', items }} packs={learnerPacks('en')} />,
+    );
+
+    // A reading question: the text is open, and the word help comes after the answers.
+    expect(screen.queryByTestId('text-toggle')).toBeNull();
+    expect(container.querySelector('.reading-text')).toBeTruthy();
+    const answers = screen.getByRole('group', { name: 'Answer options' });
+    const help = container.querySelector('.word-help');
+    expect(help).toBeTruthy();
+    expect(answers.compareDocumentPosition(help!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+
+    await user.click(answers.querySelectorAll('button')[1]!);
+    await user.click(await screen.findByRole('button', { name: 'Continue' }));
+
+    // A writing exercise: the text is folded behind «Show the text», without the glossaries.
+    const toggle = screen.getByTestId('text-toggle');
+    expect(toggle.hasAttribute('open')).toBe(false);
+    expect(toggle.querySelector('.reading-text')).toBeTruthy();
+    expect(container.querySelector('.glossary')).toBeNull();
+  });
+
+  it('repeats a wrong typed answer in the feedback', async () => {
+    const user = userEvent.setup();
+    render(<LessonPlayer lesson={{ ...lesson, id: 'given-lesson' }} />);
+
+    await user.type(screen.getByLabelText('Missing word'), 'heter');
+    await user.click(screen.getByRole('button', { name: 'Check' }));
+    expect((await screen.findByTestId('given')).textContent).toBe('You wrote: heter');
+  });
+});
+
 describe('LessonPlayer with language packs', () => {
   it('counts a small typo as right and shows the spelling', async () => {
     const user = userEvent.setup();

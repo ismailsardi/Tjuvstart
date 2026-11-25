@@ -73,6 +73,13 @@ for (const colorScheme of ['light', 'dark'] as const) {
       await audit(page, 'lesson: second exercise');
       await answerAnything(page);
       await audit(page, 'lesson: third exercise');
+
+      // Writing exercises fold the text away; check them closed and open.
+      const toggle = page.getByTestId('text-toggle');
+      while (!(await toggle.isVisible())) await answerAnything(page);
+      await audit(page, 'lesson: writing exercise, text folded');
+      await toggle.getByText('Show the text').click();
+      await audit(page, 'lesson: writing exercise, text open');
     });
 
     test('the end of a lesson has no axe violations', async ({ page }) => {
