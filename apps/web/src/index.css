@@ -2036,7 +2036,7 @@ button.danger:not(.link) {
 }
 
 .tusse-idle .tusse-eyes {
-  transform-origin: 100px 101px;
+  transform-origin: 100px 104px;
   animation: tusse-blink 6.3s linear infinite;
 }
 
@@ -2860,4 +2860,93 @@ button.danger:not(.link) {
 .onboarding-tusse {
   flex: none;
   margin-bottom: -0.25rem;
+}
+
+/* The troll: naming it at onboarding, the Me summary, and the wardrobe page */
+
+.troll-step {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.troll-step legend {
+  margin-bottom: 0;
+}
+
+.troll-step-tusse {
+  margin: 0.25rem auto 0.5rem;
+}
+
+.troll-step label,
+.troll-name label {
+  font-weight: 600;
+}
+
+.troll-step input,
+.troll-name input {
+  min-width: 0;
+  font: inherit;
+  font-size: 1.05rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--control-radius);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.troll-step p {
+  margin: 0;
+}
+
+.me-troll {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.me-troll h2,
+.me-troll p {
+  margin: 0;
+}
+
+.wardrobe-stage {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--accent-soft);
+}
+
+.troll-name {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.troll-name-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.troll-name-row input {
+  flex: 1;
+}
+
+.troll-name p {
+  min-height: 1.2em;
+  margin: 0;
+}
+
+.slot-picker {
+  border: 0;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.slot-picker legend {
+  font-weight: 700;
+  padding: 0;
+}
+
+.slot-picker .choice.locked {
+  color: var(--muted);
 }
