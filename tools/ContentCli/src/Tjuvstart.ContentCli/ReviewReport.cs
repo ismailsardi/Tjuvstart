@@ -5,7 +5,8 @@ namespace Tjuvstart.ContentCli;
 /// <summary>
 /// Which lessons a native speaker has approved. Every lesson starts as pending, and only
 /// approved lessons are meant to ship in the store apps. New language packs are also marked
-/// pending until a speaker of that language has checked the translations.
+/// pending until a speaker of that language has checked the translations, and so are word decks
+/// added from the core word list.
 /// </summary>
 public static class ReviewReport
 {
@@ -27,6 +28,13 @@ public static class ReviewReport
         if (pendingPacks.Count > 0)
         {
             sb.AppendLine($"Language packs waiting for review: {string.Join(", ", pendingPacks.Select(p => p.Language))}.");
+            sb.AppendLine();
+        }
+
+        if (content.PendingDecks.Count > 0)
+        {
+            var decks = content.PendingDecks.Select(d => d.Replace('\\', '/'));
+            sb.AppendLine($"Word decks waiting for review: {string.Join(", ", decks)}.");
             sb.AppendLine();
         }
 

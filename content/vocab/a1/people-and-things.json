@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "people-and-things",
+  "title": "Folk og ting",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "folk",
+      "nb": "folk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["folk", "folka", "folket", "folkene"],
+      "example": "Det er mange folk på bussen i dag."
+    },
+    {
+      "id": "person",
+      "nb": "person",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["person", "personen", "personer", "personene"],
+      "example": "Bordet er for fire personer."
+    },
+    {
+      "id": "kvinne",
+      "nb": "kvinne",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kvinne", "kvinna", "kvinnen", "kvinner", "kvinnene"],
+      "example": "Kvinnen ved siden av meg snakker fransk."
+    },
+    {
+      "id": "jente",
+      "nb": "jente",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["jente", "jenta", "jenten", "jenter", "jentene"],
+      "example": "Jenta i klassen min heter Sara."
+    },
+    {
+      "id": "gutt",
+      "nb": "gutt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["gutt", "gutten", "gutter", "guttene"],
+      "example": "Gutten spiller fotball etter skolen."
+    },
+    {
+      "id": "mor",
+      "nb": "mor",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["mor", "mora", "moren", "mødre", "mødrer", "mødrene"],
+      "example": "Mora mi bor i Lyon."
+    },
+    {
+      "id": "far",
+      "nb": "far",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["far", "faren", "fedre", "fedrene"],
+      "example": "Faren min kommer på besøk i juli."
+    },
+    {
+      "id": "sonn",
+      "nb": "sønn",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sønn", "sønnen", "sønner", "sønnene"],
+      "example": "Sønnen vår begynner i barnehagen."
+    },
+    {
+      "id": "bror",
+      "nb": "bror",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bror", "broren", "brødre", "brødrene"],
+      "example": "Broren min jobber i Bergen."
+    },
+    {
+      "id": "soster",
+      "nb": "søster",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["søster", "søstre", "søstera", "søstrer", "søsteren", "søstrene"],
+      "example": "Søstera mi har to barn."
+    },
+    {
+      "id": "kone",
+      "nb": "kone",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kone", "kona", "konen", "koner", "konene"],
+      "example": "Kona mi er fra Norge."
+    },
+    {
+      "id": "forelder",
+      "nb": "forelder",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["forelder", "foreldra", "forelderen", "foreldrene"],
+      "example": "Foreldrene mine bor i Spania."
+    },
+    {
+      "id": "elev",
+      "nb": "elev",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["elev", "eleven", "elever", "elevene"],
+      "example": "Det er tjue elever i klassen."
+    },
+    {
+      "id": "land",
+      "nb": "land",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["land", "landa", "landet", "landene"],
+      "example": "Hvilket land kommer du fra?"
+    },
+    {
+      "id": "verden",
+      "nb": "verden",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["verden", "verdenen", "verdener", "verdenene"],
+      "example": "Hun har reist rundt i hele verden."
+    },
+    {
+      "id": "hus",
+      "nb": "hus",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hus", "husa", "huset", "husene"],
+      "example": "Huset har en stor hage."
+    },
+    {
+      "id": "bil",
+      "nb": "bil",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bil", "bilen", "biler", "bilene"],
+      "example": "Vi har ikke bil i Oslo."
+    },
+    {
+      "id": "bat",
+      "nb": "båt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["båt", "båten", "båter", "båtene"],
+      "example": "Vi tar båten til Hovedøya."
+    },
+    {
+      "id": "fly",
+      "nb": "fly",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["fly", "flya", "flyet", "flyene"],
+      "example": "Flyet til Paris går klokka ni."
+    },
+    {
+      "id": "skole",
+      "nb": "skole",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skole", "skolen", "skoler", "skolene"],
+      "example": "Skolen ligger rett ved siden av."
+    },
+    {
+      "id": "bok",
+      "nb": "bok",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["bok", "boka", "boken", "bøker", "bøkene"],
+      "example": "Jeg leser en bok på norsk."
+    },
+    {
+      "id": "avis",
+      "nb": "avis",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["avis", "avisa", "avisen", "aviser", "avisene"],
+      "example": "Jeg leser avisa på telefonen."
+    },
+    {
+      "id": "bilde",
+      "nb": "bilde",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bilde", "bilda", "bilder", "bildet", "bildene"],
+      "example": "Kan du ta et bilde av oss?"
+    },
+    {
+      "id": "brev",
+      "nb": "brev",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["brev", "breva", "brever", "brevet", "brevene"],
+      "example": "Jeg fikk et brev fra Skatteetaten."
+    },
+    {
+      "id": "ord",
+      "nb": "ord",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["ord", "orda", "ordet", "ordene"],
+      "example": "Hva betyr dette ordet?"
+    },
+    {
+      "id": "telefon",
+      "nb": "telefon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["telefon", "telefonen", "telefoner", "telefonene"],
+      "example": "Telefonen min er tom for strøm."
+    },
+    {
+      "id": "hund",
+      "nb": "hund",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hund", "hunden", "hunder", "hundene"],
+      "example": "Naboen har en stor hund."
+    },
+    {
+      "id": "fisk",
+      "nb": "fisk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fisk", "fisken", "fisker", "fiskene"],
+      "example": "Vi spiser fisk på fredag."
+    },
+    {
+      "id": "vann",
+      "nb": "vann",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["vann", "vanna", "vannet", "vannene"],
+      "example": "Kan jeg få et glass vann?"
+    },
+    {
+      "id": "musikk",
+      "nb": "musikk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["musikk", "musikken", "musikker", "musikkene"],
+      "example": "Hvilken musikk liker du?"
+    },
+    {
+      "id": "fotball",
+      "nb": "fotball",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fotball", "fotballen", "fotballer", "fotballene"],
+      "example": "Vi ser fotball på tv i kveld."
+    },
+    {
+      "id": "hand",
+      "nb": "hånd",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["hånd", "hånda", "hender", "hånden", "hendene"],
+      "example": "Vask hendene før maten."
+    },
+    {
+      "id": "hode",
+      "nb": "hode",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hode", "hoda", "hoder", "hodet", "hodene"],
+      "example": "Jeg har vondt i hodet."
+    },
+    {
+      "id": "oye",
+      "nb": "øye",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["øye", "øya", "øyer", "øyet", "øyne", "øyene", "øynene"],
+      "example": "Hun har blå øyne."
+    },
+    {
+      "id": "dor",
+      "nb": "dør",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["dør", "døra", "døren", "dører", "dørene"],
+      "example": "Kan du lukke døra?"
+    }
+  ]
+}

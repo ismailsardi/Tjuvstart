@@ -2460,6 +2460,783 @@
     },
     "sko": {
       "meaning": "Schuh, Schuhe"
+    },
+    "folk": {
+      "meaning": "Leute"
+    },
+    "person": {
+      "meaning": "Person"
+    },
+    "kvinne": {
+      "meaning": "Frau"
+    },
+    "jente": {
+      "meaning": "Mädchen"
+    },
+    "gutt": {
+      "meaning": "Junge"
+    },
+    "mor": {
+      "meaning": "Mutter"
+    },
+    "far": {
+      "meaning": "Vater"
+    },
+    "sonn": {
+      "meaning": "Sohn"
+    },
+    "bror": {
+      "meaning": "Bruder"
+    },
+    "soster": {
+      "meaning": "Schwester"
+    },
+    "kone": {
+      "meaning": "Ehefrau"
+    },
+    "forelder": {
+      "meaning": "Elternteil"
+    },
+    "elev": {
+      "meaning": "Schüler"
+    },
+    "land": {
+      "meaning": "Land"
+    },
+    "verden": {
+      "meaning": "Welt"
+    },
+    "hus": {
+      "meaning": "Haus"
+    },
+    "bil": {
+      "meaning": "Auto"
+    },
+    "bat": {
+      "meaning": "Boot"
+    },
+    "fly": {
+      "meaning": "Flugzeug"
+    },
+    "skole": {
+      "meaning": "Schule"
+    },
+    "bok": {
+      "meaning": "Buch"
+    },
+    "avis": {
+      "meaning": "Zeitung"
+    },
+    "bilde": {
+      "meaning": "Bild, Foto"
+    },
+    "brev": {
+      "meaning": "Brief"
+    },
+    "ord": {
+      "meaning": "Wort"
+    },
+    "telefon": {
+      "meaning": "Telefon, Handy"
+    },
+    "hund": {
+      "meaning": "Hund"
+    },
+    "fisk": {
+      "meaning": "Fisch"
+    },
+    "vann": {
+      "meaning": "Wasser"
+    },
+    "musikk": {
+      "meaning": "Musik"
+    },
+    "fotball": {
+      "meaning": "Fußball"
+    },
+    "hand": {
+      "meaning": "Hand"
+    },
+    "hode": {
+      "meaning": "Kopf"
+    },
+    "oye": {
+      "meaning": "Auge"
+    },
+    "dor": {
+      "meaning": "Tür"
+    },
+    "liv": {
+      "meaning": "Leben"
+    },
+    "million": {
+      "meaning": "Million"
+    },
+    "arbeid": {
+      "meaning": "Arbeit"
+    },
+    "problem": {
+      "meaning": "Problem"
+    },
+    "plan": {
+      "meaning": "Plan"
+    },
+    "del": {
+      "meaning": "Teil"
+    },
+    "grunn": {
+      "meaning": "Grund"
+    },
+    "resultat": {
+      "meaning": "Ergebnis"
+    },
+    "mulighet": {
+      "meaning": "Möglichkeit"
+    },
+    "sjanse": {
+      "meaning": "Chance"
+    },
+    "hjelp": {
+      "meaning": "Hilfe"
+    },
+    "svar": {
+      "meaning": "Antwort"
+    },
+    "type": {
+      "meaning": "Art, Typ"
+    },
+    "gruppe": {
+      "meaning": "Gruppe"
+    },
+    "par": {
+      "meaning": "Paar; ein paar"
+    },
+    "historie": {
+      "meaning": "Geschichte"
+    },
+    "ansvar": {
+      "meaning": "Verantwortung"
+    },
+    "interesse": {
+      "meaning": "Interesse"
+    },
+    "mening": {
+      "meaning": "Meinung; Sinn"
+    },
+    "tanke": {
+      "meaning": "Gedanke"
+    },
+    "sommer": {
+      "meaning": "Sommer"
+    },
+    "vinter": {
+      "meaning": "Winter"
+    },
+    "januar": {
+      "meaning": "Januar"
+    },
+    "juni": {
+      "meaning": "Juni"
+    },
+    "juli": {
+      "meaning": "Juli"
+    },
+    "september": {
+      "meaning": "September"
+    },
+    "november": {
+      "meaning": "November"
+    },
+    "desember": {
+      "meaning": "Dezember"
+    },
+    "jul": {
+      "meaning": "Weihnachten"
+    },
+    "finne": {
+      "meaning": "finden"
+    },
+    "bruke": {
+      "meaning": "benutzen; verbringen, ausgeben"
+    },
+    "spille": {
+      "meaning": "spielen"
+    },
+    "sette": {
+      "meaning": "setzen, stellen"
+    },
+    "tenke": {
+      "meaning": "denken"
+    },
+    "mene": {
+      "meaning": "meinen"
+    },
+    "hape": {
+      "meaning": "hoffen"
+    },
+    "vente": {
+      "meaning": "warten; erwarten"
+    },
+    "be": {
+      "meaning": "bitten; beten"
+    },
+    "selge": {
+      "meaning": "verkaufen"
+    },
+    "velge": {
+      "meaning": "wählen"
+    },
+    "bygge": {
+      "meaning": "bauen"
+    },
+    "flytte": {
+      "meaning": "umziehen; verschieben"
+    },
+    "glemme": {
+      "meaning": "vergessen"
+    },
+    "leve": {
+      "meaning": "leben"
+    },
+    "lope": {
+      "meaning": "laufen, rennen"
+    },
+    "fole": {
+      "meaning": "fühlen"
+    },
+    "folge": {
+      "meaning": "folgen"
+    },
+    "fortsette": {
+      "meaning": "weitermachen, fortsetzen"
+    },
+    "klare": {
+      "meaning": "schaffen"
+    },
+    "forklare": {
+      "meaning": "erklären"
+    },
+    "dele": {
+      "meaning": "teilen"
+    },
+    "delta": {
+      "meaning": "teilnehmen"
+    },
+    "oppleve": {
+      "meaning": "erleben"
+    },
+    "besoke": {
+      "meaning": "besuchen"
+    },
+    "endre": {
+      "meaning": "ändern"
+    },
+    "levere": {
+      "meaning": "liefern; abgeben"
+    },
+    "treffe": {
+      "meaning": "treffen"
+    },
+    "bestemme": {
+      "meaning": "entscheiden, bestimmen"
+    },
+    "lose": {
+      "meaning": "lösen"
+    },
+    "forsoke": {
+      "meaning": "versuchen"
+    },
+    "vinne": {
+      "meaning": "gewinnen"
+    },
+    "falle": {
+      "meaning": "fallen"
+    },
+    "oke": {
+      "meaning": "steigen, erhöhen"
+    },
+    "samle": {
+      "meaning": "sammeln"
+    },
+    "trene": {
+      "meaning": "trainieren"
+    },
+    "fylle": {
+      "meaning": "füllen"
+    },
+    "kaste": {
+      "meaning": "werfen; wegwerfen"
+    },
+    "unnga": {
+      "meaning": "vermeiden"
+    },
+    "tjene": {
+      "meaning": "verdienen"
+    },
+    "tidlig": {
+      "meaning": "früh"
+    },
+    "sen": {
+      "meaning": "spät"
+    },
+    "hoy": {
+      "meaning": "hoch, groß; laut"
+    },
+    "lav": {
+      "meaning": "niedrig"
+    },
+    "sterk": {
+      "meaning": "stark"
+    },
+    "lett": {
+      "meaning": "leicht"
+    },
+    "hard": {
+      "meaning": "hart"
+    },
+    "vanskelig": {
+      "meaning": "schwierig"
+    },
+    "enkel": {
+      "meaning": "einfach"
+    },
+    "rask": {
+      "meaning": "schnell"
+    },
+    "ung": {
+      "meaning": "jung"
+    },
+    "vanlig": {
+      "meaning": "üblich, normal"
+    },
+    "riktig": {
+      "meaning": "richtig"
+    },
+    "sikker": {
+      "meaning": "sicher"
+    },
+    "spesiell": {
+      "meaning": "besonders, speziell"
+    },
+    "alvorlig": {
+      "meaning": "ernst"
+    },
+    "apen": {
+      "meaning": "offen, geöffnet"
+    },
+    "privat": {
+      "meaning": "privat"
+    },
+    "ren": {
+      "meaning": "sauber"
+    },
+    "dyr": {
+      "meaning": "teuer"
+    },
+    "ferdig": {
+      "meaning": "fertig"
+    },
+    "tung": {
+      "meaning": "schwer"
+    },
+    "personlig": {
+      "meaning": "persönlich"
+    },
+    "nodvendig": {
+      "meaning": "nötig"
+    },
+    "forskjellig": {
+      "meaning": "verschieden"
+    },
+    "daglig": {
+      "meaning": "täglich"
+    },
+    "ekstra": {
+      "meaning": "zusätzlich, extra"
+    },
+    "enig": {
+      "meaning": "einverstanden, einig"
+    },
+    "fornoyd": {
+      "meaning": "zufrieden"
+    },
+    "aktiv": {
+      "meaning": "aktiv"
+    },
+    "positiv": {
+      "meaning": "positiv"
+    },
+    "allerede": {
+      "meaning": "schon, bereits"
+    },
+    "kanskje": {
+      "meaning": "vielleicht"
+    },
+    "likevel": {
+      "meaning": "trotzdem"
+    },
+    "derfor": {
+      "meaning": "deshalb"
+    },
+    "ofte": {
+      "meaning": "oft"
+    },
+    "alltid": {
+      "meaning": "immer"
+    },
+    "ganske": {
+      "meaning": "ziemlich"
+    },
+    "akkurat": {
+      "meaning": "genau; gerade"
+    },
+    "egentlig": {
+      "meaning": "eigentlich"
+    },
+    "faktisk": {
+      "meaning": "tatsächlich"
+    },
+    "virkelig": {
+      "meaning": "wirklich"
+    },
+    "fortsatt": {
+      "meaning": "immer noch"
+    },
+    "nettopp": {
+      "meaning": "gerade eben"
+    },
+    "ellers": {
+      "meaning": "sonst"
+    },
+    "heller": {
+      "meaning": "lieber; auch nicht"
+    },
+    "ute": {
+      "meaning": "draußen"
+    },
+    "inne": {
+      "meaning": "drinnen"
+    },
+    "hjem": {
+      "meaning": "nach Hause"
+    },
+    "bort": {
+      "meaning": "weg"
+    },
+    "ned": {
+      "meaning": "hinunter, runter"
+    },
+    "mens": {
+      "meaning": "während"
+    },
+    "siden": {
+      "meaning": "da, weil"
+    },
+    "dersom": {
+      "meaning": "falls"
+    },
+    "rundt": {
+      "meaning": "um … herum"
+    },
+    "gjennom": {
+      "meaning": "durch"
+    },
+    "bak": {
+      "meaning": "hinter"
+    },
+    "foran": {
+      "meaning": "vor"
+    },
+    "blant": {
+      "meaning": "unter"
+    },
+    "ifolge": {
+      "meaning": "laut"
+    },
+    "mot": {
+      "meaning": "nach, in Richtung; gegen"
+    },
+    "under": {
+      "meaning": "unter; während"
+    },
+    "hverandre": {
+      "meaning": "einander"
+    },
+    "begge": {
+      "meaning": "beide"
+    },
+    "egen": {
+      "meaning": "eigen"
+    },
+    "samme": {
+      "meaning": "gleich, derselbe"
+    },
+    "hvilken": {
+      "meaning": "welcher"
+    },
+    "enda": {
+      "meaning": "noch"
+    },
+    "politi": {
+      "meaning": "Polizei"
+    },
+    "kommune": {
+      "meaning": "Gemeinde, Kommune"
+    },
+    "regjering": {
+      "meaning": "Regierung"
+    },
+    "lov": {
+      "meaning": "Gesetz; Erlaubnis"
+    },
+    "stat": {
+      "meaning": "Staat"
+    },
+    "samfunn": {
+      "meaning": "Gesellschaft"
+    },
+    "myndighet": {
+      "meaning": "Behörde"
+    },
+    "valg": {
+      "meaning": "Wahl"
+    },
+    "politiker": {
+      "meaning": "Politiker"
+    },
+    "innbygger": {
+      "meaning": "Einwohner"
+    },
+    "befolkning": {
+      "meaning": "Bevölkerung"
+    },
+    "offentlig": {
+      "meaning": "öffentlich"
+    },
+    "ulykke": {
+      "meaning": "Unfall"
+    },
+    "brann": {
+      "meaning": "Brand, Feuer"
+    },
+    "advokat": {
+      "meaning": "Anwalt"
+    },
+    "miljo": {
+      "meaning": "Umwelt"
+    },
+    "trafikk": {
+      "meaning": "Verkehr"
+    },
+    "flyplass": {
+      "meaning": "Flughafen"
+    },
+    "selskap": {
+      "meaning": "Firma, Gesellschaft"
+    },
+    "bedrift": {
+      "meaning": "Betrieb, Unternehmen"
+    },
+    "leder": {
+      "meaning": "Leiter, Chef"
+    },
+    "direktor": {
+      "meaning": "Direktor"
+    },
+    "medlem": {
+      "meaning": "Mitglied"
+    },
+    "eier": {
+      "meaning": "Eigentümer"
+    },
+    "marked": {
+      "meaning": "Markt"
+    },
+    "salg": {
+      "meaning": "Verkauf"
+    },
+    "produkt": {
+      "meaning": "Produkt"
+    },
+    "inntekt": {
+      "meaning": "Einkommen"
+    },
+    "okonomi": {
+      "meaning": "Wirtschaft; Finanzen"
+    },
+    "kontrakt": {
+      "meaning": "Vertrag"
+    },
+    "arbeidsplass": {
+      "meaning": "Arbeitsplatz"
+    },
+    "praksis": {
+      "meaning": "Praktikum; Praxis"
+    },
+    "konkurranse": {
+      "meaning": "Wettbewerb, Konkurrenz"
+    },
+    "kvalitet": {
+      "meaning": "Qualität"
+    },
+    "rapport": {
+      "meaning": "Bericht"
+    },
+    "forslag": {
+      "meaning": "Vorschlag"
+    },
+    "krav": {
+      "meaning": "Anforderung"
+    },
+    "utvikling": {
+      "meaning": "Entwicklung"
+    },
+    "endring": {
+      "meaning": "Änderung"
+    },
+    "behov": {
+      "meaning": "Bedarf, Bedürfnis"
+    },
+    "avtale": {
+      "meaning": "Termin; Vereinbarung"
+    },
+    "glede-noun": {
+      "meaning": "Freude"
+    },
+    "frykt": {
+      "meaning": "Angst, Furcht"
+    },
+    "tvil": {
+      "meaning": "Zweifel"
+    },
+    "folelse": {
+      "meaning": "Gefühl"
+    },
+    "inntrykk": {
+      "meaning": "Eindruck"
+    },
+    "opplevelse": {
+      "meaning": "Erlebnis"
+    },
+    "kunnskap": {
+      "meaning": "Wissen, Kenntnisse"
+    },
+    "glad": {
+      "meaning": "froh"
+    },
+    "redd": {
+      "meaning": "ängstlich (redd for = Angst vor)"
+    },
+    "rolig": {
+      "meaning": "ruhig"
+    },
+    "morsom": {
+      "meaning": "lustig"
+    },
+    "flink": {
+      "meaning": "gut (in), geschickt"
+    },
+    "vakker": {
+      "meaning": "schön"
+    },
+    "fantastisk": {
+      "meaning": "fantastisch"
+    },
+    "spennende": {
+      "meaning": "spannend"
+    },
+    "interessant": {
+      "meaning": "interessant"
+    },
+    "farlig": {
+      "meaning": "gefährlich"
+    },
+    "umulig": {
+      "meaning": "unmöglich"
+    },
+    "utrolig": {
+      "meaning": "unglaublich"
+    },
+    "usikker": {
+      "meaning": "unsicher"
+    },
+    "avhengig": {
+      "meaning": "abhängig (von)"
+    },
+    "savne": {
+      "meaning": "vermissen"
+    },
+    "smile": {
+      "meaning": "lächeln"
+    },
+    "le": {
+      "meaning": "lachen"
+    },
+    "takke": {
+      "meaning": "danken"
+    },
+    "feire": {
+      "meaning": "feiern"
+    },
+    "stole": {
+      "meaning": "vertrauen (auf)"
+    },
+    "kropp": {
+      "meaning": "Körper"
+    },
+    "hjerte": {
+      "meaning": "Herz"
+    },
+    "fot": {
+      "meaning": "Fuß"
+    },
+    "ansikt": {
+      "meaning": "Gesicht"
+    },
+    "luft": {
+      "meaning": "Luft"
+    },
+    "alder": {
+      "meaning": "Alter"
+    },
+    "restaurant": {
+      "meaning": "Restaurant"
+    },
+    "rom": {
+      "meaning": "Zimmer, Raum"
+    },
+    "kilometer": {
+      "meaning": "Kilometer"
+    },
+    "meter": {
+      "meaning": "Meter"
+    },
+    "sekund": {
+      "meaning": "Sekunde"
+    },
+    "oyeblikk": {
+      "meaning": "Augenblick"
+    },
+    "stund": {
+      "meaning": "Weile"
+    },
+    "lane": {
+      "meaning": "leihen"
+    },
+    "spare": {
+      "meaning": "sparen"
+    },
+    "vokse": {
+      "meaning": "wachsen"
+    },
+    "synge": {
+      "meaning": "singen"
+    },
+    "hoppe": {
+      "meaning": "springen"
+    },
+    "lete": {
+      "meaning": "suchen"
     }
   }
 }

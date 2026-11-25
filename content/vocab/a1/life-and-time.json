@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "life-and-time",
+  "title": "Livet og tiden",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "liv",
+      "nb": "liv",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["liv", "liva", "livet", "livene"],
+      "example": "Livet i Oslo er ganske rolig."
+    },
+    {
+      "id": "million",
+      "nb": "million",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["million", "millionen", "millioner", "millionene"],
+      "example": "Oslo har over en halv million innbyggere."
+    },
+    {
+      "id": "arbeid",
+      "nb": "arbeid",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["arbeid", "arbeida", "arbeider", "arbeidet", "arbeidene"],
+      "example": "Hun leter etter arbeid i Oslo."
+    },
+    {
+      "id": "problem",
+      "nb": "problem",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["problem", "problema", "problemer", "problemet", "problemene"],
+      "example": "Det er ikke noe problem."
+    },
+    {
+      "id": "plan",
+      "nb": "plan",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["plan", "planen", "planer", "planene"],
+      "example": "Hva er planen for helga?"
+    },
+    {
+      "id": "del",
+      "nb": "del",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["del", "delen", "deler", "delene"],
+      "example": "En del av jobben er møter."
+    },
+    {
+      "id": "grunn",
+      "nb": "grunn",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["grunn", "grunnen", "grunner", "grunnene"],
+      "example": "Av hvilken grunn flyttet du hit?"
+    },
+    {
+      "id": "resultat",
+      "nb": "resultat",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["resultat", "resultata", "resultater", "resultatet", "resultatene"],
+      "example": "Resultatet av testen kommer i morgen."
+    },
+    {
+      "id": "mulighet",
+      "nb": "mulighet",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["mulighet", "muligheta", "muligheten", "muligheter", "mulighetene"],
+      "example": "Er det mulighet for å jobbe hjemmefra?"
+    },
+    {
+      "id": "sjanse",
+      "nb": "sjanse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sjanse", "sjansen", "sjanser", "sjansene"],
+      "example": "Dette er en god sjanse for deg."
+    },
+    {
+      "id": "hjelp",
+      "nb": "hjelp",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["hjelp", "hjelpa", "hjelpen", "hjelper", "hjelpene"],
+      "example": "Takk for hjelpen!"
+    },
+    {
+      "id": "svar",
+      "nb": "svar",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["svar", "svara", "svaret", "svarene"],
+      "example": "Jeg venter på svar fra NAV."
+    },
+    {
+      "id": "type",
+      "nb": "type",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["type", "typen", "typer", "typene"],
+      "example": "Hva slags type jobb ser du etter?"
+    },
+    {
+      "id": "gruppe",
+      "nb": "gruppe",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["gruppe", "gruppa", "gruppen", "grupper", "gruppene"],
+      "example": "Vi jobber i grupper på tre."
+    },
+    {
+      "id": "par",
+      "nb": "par",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["par", "para", "paret", "parene"],
+      "example": "Jeg kommer om et par dager."
+    },
+    {
+      "id": "historie",
+      "nb": "historie",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["historie", "historia", "historien", "historier", "historiene"],
+      "example": "Kan du fortelle historien igjen?"
+    },
+    {
+      "id": "ansvar",
+      "nb": "ansvar",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["ansvar", "ansvara", "ansvaret", "ansvarene"],
+      "example": "Hun har ansvar for kundene."
+    },
+    {
+      "id": "interesse",
+      "nb": "interesse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["interesse", "interessen", "interesser", "interessene"],
+      "example": "Takk for interessen!"
+    },
+    {
+      "id": "mening",
+      "nb": "mening",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["mening", "meninga", "meningen", "meninger", "meningene"],
+      "example": "Hva er din mening om det?"
+    },
+    {
+      "id": "tanke",
+      "nb": "tanke",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tanke", "tanken", "tanker", "tankene"],
+      "example": "Det er en god tanke."
+    },
+    {
+      "id": "sommer",
+      "nb": "sommer",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sommer", "somre", "somrer", "sommere", "somrene", "sommeren", "sommerne"],
+      "example": "I sommer skal vi til Lofoten."
+    },
+    {
+      "id": "vinter",
+      "nb": "vinter",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vinter", "vintre", "vintere", "vintrer", "vinteren", "vinterne", "vintrene"],
+      "example": "Vinteren i Oslo er lang og mørk."
+    },
+    {
+      "id": "januar",
+      "nb": "januar",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["januar", "januaren", "januarer", "januarene"],
+      "example": "Jeg begynner i ny jobb i januar."
+    },
+    {
+      "id": "juni",
+      "nb": "juni",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["juni", "junien", "junier", "juniene"],
+      "example": "Skolen slutter i juni."
+    },
+    {
+      "id": "juli",
+      "nb": "juli",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["juli", "julien", "julier", "juliene"],
+      "example": "Mange har ferie i juli."
+    },
+    {
+      "id": "september",
+      "nb": "september",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["september", "septemberen", "septemberer", "septemberene"],
+      "example": "Kurset starter i september."
+    },
+    {
+      "id": "november",
+      "nb": "november",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["november", "novemberen", "novemberer", "novemberene"],
+      "example": "I november blir det mørkt tidlig."
+    },
+    {
+      "id": "desember",
+      "nb": "desember",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["desember", "desemberen", "desemberer", "desemberene"],
+      "example": "Vi flytter til Oslo i desember."
+    },
+    {
+      "id": "jul",
+      "nb": "jul",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["jul", "jula", "julen", "juler", "julene"],
+      "example": "Hva gjør dere i jula?"
+    }
+  ]
+}

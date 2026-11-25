@@ -70,4 +70,33 @@ public sealed class VocabularyTests : IDisposable
         Assert.Equal(["en", "jobb"], row.Missing);
         Assert.Contains("| A2 | 1 | 1 of 3 | en, jobb |", VocabularyCoverage.ToMarkdown([row]));
     }
+
+    [Fact]
+    public void Core_list_coverage_counts_list_words_with_a_card_by_level()
+    {
+        WriteDeck("a2", "A2", Card("ha", "\"ha\", \"har\"") + "," + Card("hjem", "\"hjem\"", "adverb"));
+        _content.Write(Path.Combine(ContentLoader.VocabFolder, ContentLoader.CoreListFileName),
+            "rank\tlemma\tpos\tgender\tper_million\tlevel\n" +
+            "1\tha\tverb\t\t5000.0\tA1\n" +
+            "2\tjobb\tnoun\ten\t900.0\tA1\n" +
+            "3\thjem\tnoun\tet\t80.0\tA2\n");
+
+        var rows = CoreListCoverage.Build(Load());
+
+        Assert.Equal(["A1", "A2"], rows.Select(r => r.Level));
+        Assert.Equal((2, 1), (rows[0].Words, rows[0].WithCard));
+        Assert.Equal(["jobb"], rows[0].NextMissing.Select(w => w.Lemma));
+        // "hjem" is a noun in the list and an adverb on the card; it still counts
+        Assert.Equal(1, rows[1].WithCard);
+        Assert.Contains("| A1 | 1 of 2 | jobb |", CoreListCoverage.ToMarkdown(rows));
+    }
+
+    [Fact]
+    public void A_malformed_core_list_line_is_reported()
+    {
+        _content.Write(Path.Combine(ContentLoader.VocabFolder, ContentLoader.CoreListFileName),
+            "rank\tlemma\tpos\tgender\tper_million\tlevel\nfirst\tha\n");
+
+        Assert.Contains(Load().Issues, i => i.Message.StartsWith("Line 2:"));
+    }
 }

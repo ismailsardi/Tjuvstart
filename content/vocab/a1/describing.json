@@ -1,0 +1,226 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "describing",
+  "title": "Å beskrive",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "tidlig",
+      "nb": "tidlig",
+      "pos": "adjective",
+      "forms": ["tidlig", "tidlige", "tidligst", "tidligere", "tidligste"],
+      "example": "Jeg står opp tidlig."
+    },
+    {
+      "id": "sen",
+      "nb": "sen",
+      "pos": "adjective",
+      "forms": ["sen", "sene", "sent", "senere", "seneste"],
+      "example": "Bussen er sen i dag."
+    },
+    {
+      "id": "hoy",
+      "nb": "høy",
+      "pos": "adjective",
+      "forms": ["høy", "høye", "høyt", "høyere", "høyest", "høyeste"],
+      "example": "Han er veldig høy."
+    },
+    {
+      "id": "lav",
+      "nb": "lav",
+      "pos": "adjective",
+      "forms": ["lav", "lave", "lavt", "lavere", "lavest", "laveste"],
+      "example": "Prisene er lave i januar."
+    },
+    {
+      "id": "sterk",
+      "nb": "sterk",
+      "pos": "adjective",
+      "forms": ["sterk", "sterke", "sterkt", "sterkere", "sterkest", "sterkeste"],
+      "example": "Kaffen er for sterk."
+    },
+    {
+      "id": "lett",
+      "nb": "lett",
+      "pos": "adjective",
+      "forms": ["lett", "lette", "lettere", "lettest", "letteste"],
+      "example": "Oppgaven er lett."
+    },
+    {
+      "id": "hard",
+      "nb": "hard",
+      "pos": "adjective",
+      "forms": ["hard", "harde", "hardt", "hardere", "hardest", "hardeste"],
+      "example": "Det var en hard uke."
+    },
+    {
+      "id": "vanskelig",
+      "nb": "vanskelig",
+      "pos": "adjective",
+      "forms": ["vanskelig", "vanskelige", "vanskeligst", "vanskeligere", "vanskeligste"],
+      "example": "Norsk uttale er vanskelig."
+    },
+    {
+      "id": "enkel",
+      "nb": "enkel",
+      "pos": "adjective",
+      "forms": ["enkel", "enkle", "enkelt", "enklere", "enklest", "enkleste"],
+      "example": "Det er en enkel løsning."
+    },
+    {
+      "id": "rask",
+      "nb": "rask",
+      "pos": "adjective",
+      "forms": ["rask", "raske", "raskt", "raskere", "raskest", "raskeste"],
+      "example": "Hun er rask til å lære."
+    },
+    {
+      "id": "ung",
+      "nb": "ung",
+      "pos": "adjective",
+      "forms": ["ung", "unge", "ungt", "yngre", "yngst", "yngste"],
+      "example": "Han er ung og ny i jobben."
+    },
+    {
+      "id": "vanlig",
+      "nb": "vanlig",
+      "pos": "adjective",
+      "forms": ["vanlig", "vanlige", "vanligst", "vanligere", "vanligste"],
+      "example": "Det er vanlig å gå tur på søndag."
+    },
+    {
+      "id": "riktig",
+      "nb": "riktig",
+      "pos": "adjective",
+      "forms": ["riktig", "riktige", "riktigst", "riktigere", "riktigste"],
+      "example": "Det er riktig svar."
+    },
+    {
+      "id": "sikker",
+      "nb": "sikker",
+      "pos": "adjective",
+      "forms": ["sikker", "sikre", "sikkert", "sikrere", "sikrest", "sikreste"],
+      "example": "Er du sikker?"
+    },
+    {
+      "id": "spesiell",
+      "nb": "spesiell",
+      "pos": "adjective",
+      "forms": ["spesiell", "spesielt", "spesielle"],
+      "example": "Det er en spesiell dag i dag."
+    },
+    {
+      "id": "alvorlig",
+      "nb": "alvorlig",
+      "pos": "adjective",
+      "forms": ["alvorlig", "alvorlige", "alvorligst", "alvorligere", "alvorligste"],
+      "example": "Er det noe alvorlig?"
+    },
+    {
+      "id": "apen",
+      "nb": "åpen",
+      "pos": "adjective",
+      "forms": ["åpen", "åpent", "åpnere", "åpnest", "åpneste"],
+      "example": "Butikken er åpen til ni."
+    },
+    {
+      "id": "privat",
+      "nb": "privat",
+      "pos": "adjective",
+      "forms": ["privat", "private"],
+      "example": "Det er en privat samtale."
+    },
+    {
+      "id": "ren",
+      "nb": "ren",
+      "pos": "adjective",
+      "forms": ["ren", "rene", "rent", "renere", "renest", "reneste"],
+      "example": "Kjøkkenet er rent nå."
+    },
+    {
+      "id": "dyr",
+      "nb": "dyr",
+      "pos": "adjective",
+      "forms": ["dyr", "dyre", "dyrt", "dyrere", "dyrest", "dyreste"],
+      "example": "Oslo er en dyr by."
+    },
+    {
+      "id": "ferdig",
+      "nb": "ferdig",
+      "pos": "adjective",
+      "forms": ["ferdig", "ferdige"],
+      "example": "Er du ferdig med jobben?"
+    },
+    {
+      "id": "tung",
+      "nb": "tung",
+      "pos": "adjective",
+      "forms": ["tung", "tunge", "tungt", "tyngre", "tyngst", "tyngste"],
+      "example": "Sekken er veldig tung."
+    },
+    {
+      "id": "personlig",
+      "nb": "personlig",
+      "pos": "adjective",
+      "forms": ["personlig", "personlige", "personligst", "personligere", "personligste"],
+      "example": "Kan jeg spørre om noe personlig?"
+    },
+    {
+      "id": "nodvendig",
+      "nb": "nødvendig",
+      "pos": "adjective",
+      "forms": ["nødvendig", "nødvendige"],
+      "example": "Det er ikke nødvendig å komme tidlig."
+    },
+    {
+      "id": "forskjellig",
+      "nb": "forskjellig",
+      "pos": "adjective",
+      "forms": ["forskjellig", "forskjellige"],
+      "example": "Vi har forskjellige meninger."
+    },
+    {
+      "id": "daglig",
+      "nb": "daglig",
+      "pos": "adjective",
+      "forms": ["daglig", "daglige"],
+      "example": "Jeg bruker norsk i det daglige."
+    },
+    {
+      "id": "ekstra",
+      "nb": "ekstra",
+      "pos": "adjective",
+      "forms": ["ekstra"],
+      "example": "Jeg tar en ekstra vakt i helga."
+    },
+    {
+      "id": "enig",
+      "nb": "enig",
+      "pos": "adjective",
+      "forms": ["enig", "enige"],
+      "example": "Jeg er enig med deg."
+    },
+    {
+      "id": "fornoyd",
+      "nb": "fornøyd",
+      "pos": "adjective",
+      "forms": ["fornøyd", "fornøyde"],
+      "example": "Er du fornøyd med leiligheten?"
+    },
+    {
+      "id": "aktiv",
+      "nb": "aktiv",
+      "pos": "adjective",
+      "forms": ["aktiv", "aktive", "aktivt"],
+      "example": "Hun er veldig aktiv på fritida."
+    },
+    {
+      "id": "positiv",
+      "nb": "positiv",
+      "pos": "adjective",
+      "forms": ["positiv", "positive", "positivt"],
+      "example": "Svaret var positivt."
+    }
+  ]
+}

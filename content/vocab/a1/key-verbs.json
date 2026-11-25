@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "key-verbs",
+  "title": "Viktige verb",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "finne",
+      "nb": "finne",
+      "pos": "verb",
+      "forms": ["finne", "fant", "finner", "funnet"],
+      "example": "Jeg finner ikke nøklene mine."
+    },
+    {
+      "id": "bruke",
+      "nb": "bruke",
+      "pos": "verb",
+      "forms": ["bruke", "brukte"],
+      "example": "Kan jeg bruke telefonen din?"
+    },
+    {
+      "id": "spille",
+      "nb": "spille",
+      "pos": "verb",
+      "forms": ["spille", "spilt", "spilte", "spiller"],
+      "example": "Hun spiller piano."
+    },
+    {
+      "id": "sette",
+      "nb": "sette",
+      "pos": "verb",
+      "forms": ["sette", "satt", "satte", "setter"],
+      "example": "Sett deg ned!"
+    },
+    {
+      "id": "tenke",
+      "nb": "tenke",
+      "pos": "verb",
+      "forms": ["tenke", "tenkt", "tenker", "tenkte"],
+      "example": "Jeg må tenke på det."
+    },
+    {
+      "id": "mene",
+      "nb": "mene",
+      "pos": "verb",
+      "forms": ["mene", "ment", "mener", "mente"],
+      "example": "Hva mener du?"
+    },
+    {
+      "id": "hape",
+      "nb": "håpe",
+      "pos": "verb",
+      "forms": ["håpe", "håpa", "håpt", "håper", "håpet", "håpte"],
+      "example": "Jeg håper det blir sol i morgen."
+    },
+    {
+      "id": "vente",
+      "nb": "vente",
+      "pos": "verb",
+      "forms": ["vente", "venta", "venter", "ventet"],
+      "example": "Vent litt, jeg kommer!"
+    },
+    {
+      "id": "be",
+      "nb": "be",
+      "pos": "verb",
+      "forms": ["be", "ba", "ber", "bedt"],
+      "example": "Han ba meg om hjelp."
+    },
+    {
+      "id": "selge",
+      "nb": "selge",
+      "pos": "verb",
+      "forms": ["selge", "solgt", "selger", "solgte"],
+      "example": "Vi selger den gamle sofaen."
+    },
+    {
+      "id": "velge",
+      "nb": "velge",
+      "pos": "verb",
+      "forms": ["velge", "valgt", "valgte", "velger"],
+      "example": "Du kan velge mellom kaffe og te."
+    },
+    {
+      "id": "bygge",
+      "nb": "bygge",
+      "pos": "verb",
+      "forms": ["bygge", "bygd", "bygde", "bygger", "bygget"],
+      "example": "De bygger en ny skole her."
+    },
+    {
+      "id": "flytte",
+      "nb": "flytte",
+      "pos": "verb",
+      "forms": ["flytte", "flytta", "flytter", "flyttet"],
+      "example": "Vi flytter til Oslo i desember."
+    },
+    {
+      "id": "glemme",
+      "nb": "glemme",
+      "pos": "verb",
+      "forms": ["glemme", "glemt", "glemte", "glemmer"],
+      "example": "Ikke glem paraplyen!"
+    },
+    {
+      "id": "leve",
+      "nb": "leve",
+      "pos": "verb",
+      "forms": ["leve", "levd", "levde", "lever"],
+      "example": "Hun lever et godt liv i Norge."
+    },
+    {
+      "id": "lope",
+      "nb": "løpe",
+      "pos": "verb",
+      "forms": ["løpe", "løp", "løpt", "løper", "løpet"],
+      "example": "Jeg løper en tur hver morgen."
+    },
+    {
+      "id": "fole",
+      "nb": "føle",
+      "pos": "verb",
+      "forms": ["føle", "følt", "føler", "følte"],
+      "example": "Jeg føler meg trøtt i dag."
+    },
+    {
+      "id": "folge",
+      "nb": "følge",
+      "pos": "verb",
+      "forms": ["følge", "fulgt", "fulgte", "følger"],
+      "example": "Følg skiltene til toget."
+    },
+    {
+      "id": "fortsette",
+      "nb": "fortsette",
+      "pos": "verb",
+      "forms": ["fortsette", "fortsatte", "fortsetter"],
+      "example": "Vi fortsetter i morgen."
+    },
+    {
+      "id": "klare",
+      "nb": "klare",
+      "pos": "verb",
+      "forms": ["klare", "klara", "klart", "klarer", "klaret", "klarte"],
+      "example": "Jeg klarer det ikke alene."
+    },
+    {
+      "id": "forklare",
+      "nb": "forklare",
+      "pos": "verb",
+      "forms": ["forklare", "forklart", "forklarer", "forklarte"],
+      "example": "Kan du forklare det en gang til?"
+    },
+    {
+      "id": "dele",
+      "nb": "dele",
+      "pos": "verb",
+      "forms": ["dele", "delt", "deler", "delte"],
+      "example": "Vi deler regningen."
+    },
+    {
+      "id": "delta",
+      "nb": "delta",
+      "pos": "verb",
+      "forms": ["delta", "deltar", "deltok", "deltatt"],
+      "example": "Alle må delta på møtet."
+    },
+    {
+      "id": "oppleve",
+      "nb": "oppleve",
+      "pos": "verb",
+      "forms": ["oppleve", "opplevd", "opplevde", "opplever"],
+      "example": "Vi opplevde mye i sommer."
+    },
+    {
+      "id": "besoke",
+      "nb": "besøke",
+      "pos": "verb",
+      "forms": ["besøke", "besøkt", "besøker", "besøkte"],
+      "example": "Vi besøker familien i Trondheim."
+    },
+    {
+      "id": "endre",
+      "nb": "endre",
+      "pos": "verb",
+      "forms": ["endre", "endra", "endrer", "endret"],
+      "example": "Kan jeg endre tiden for timen?"
+    },
+    {
+      "id": "levere",
+      "nb": "levere",
+      "pos": "verb",
+      "forms": ["levere", "levert", "leverer", "leverte"],
+      "example": "Pakken blir levert i morgen."
+    },
+    {
+      "id": "treffe",
+      "nb": "treffe",
+      "pos": "verb",
+      "forms": ["treffe", "traff", "treffer", "truffet"],
+      "example": "Hyggelig å treffe deg!"
+    },
+    {
+      "id": "bestemme",
+      "nb": "bestemme",
+      "pos": "verb",
+      "forms": ["bestemme", "bestemt", "bestemte", "bestemmer"],
+      "example": "Vi har ikke bestemt oss ennå."
+    },
+    {
+      "id": "lose",
+      "nb": "løse",
+      "pos": "verb",
+      "forms": ["løse", "løst", "løser", "løste"],
+      "example": "Vi må løse problemet."
+    },
+    {
+      "id": "forsoke",
+      "nb": "forsøke",
+      "pos": "verb",
+      "forms": ["forsøke", "forsøkt", "forsøker", "forsøkte"],
+      "example": "Jeg forsøker å snakke norsk hver dag."
+    },
+    {
+      "id": "vinne",
+      "nb": "vinne",
+      "pos": "verb",
+      "forms": ["vinne", "vant", "vinner", "vunnet"],
+      "example": "Hvem vant kampen?"
+    },
+    {
+      "id": "falle",
+      "nb": "falle",
+      "pos": "verb",
+      "forms": ["falle", "falt", "faller"],
+      "example": "Pass på, du kan falle på isen."
+    },
+    {
+      "id": "oke",
+      "nb": "øke",
+      "pos": "verb",
+      "forms": ["øke", "øka", "økt", "øker", "øket", "økte"],
+      "example": "Prisene øker hvert år."
+    },
+    {
+      "id": "samle",
+      "nb": "samle",
+      "pos": "verb",
+      "forms": ["samle", "samla", "samler", "samlet"],
+      "example": "Hun samler på gamle bøker."
+    },
+    {
+      "id": "trene",
+      "nb": "trene",
+      "pos": "verb",
+      "forms": ["trene", "trena", "trent", "trener", "trenet", "trente"],
+      "example": "Jeg trener tre ganger i uka."
+    },
+    {
+      "id": "fylle",
+      "nb": "fylle",
+      "pos": "verb",
+      "forms": ["fylle", "fylt", "fylte", "fyller"],
+      "example": "Fyll ut skjemaet, er du snill."
+    },
+    {
+      "id": "kaste",
+      "nb": "kaste",
+      "pos": "verb",
+      "forms": ["kaste", "kasta", "kaster", "kastet"],
+      "example": "Ikke kast plast i restavfallet."
+    },
+    {
+      "id": "unnga",
+      "nb": "unngå",
+      "pos": "verb",
+      "forms": ["unngå", "unngår", "unngikk", "unngått"],
+      "example": "Jeg prøver å unngå rushtida."
+    },
+    {
+      "id": "tjene",
+      "nb": "tjene",
+      "pos": "verb",
+      "forms": ["tjene", "tjent", "tjener", "tjente"],
+      "example": "Hvor mye tjener du?"
+    }
+  ]
+}

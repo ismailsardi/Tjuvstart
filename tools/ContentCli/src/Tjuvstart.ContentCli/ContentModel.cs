@@ -42,6 +42,9 @@ public sealed record Card(
     };
 }
 
+/// <summary>One row of the core word list: a lemma, its rank by frequency and its level band.</summary>
+public sealed record CoreWord(int Rank, string Lemma, string Pos, string Level);
+
 /// <summary>A native-language pack, reduced to what cross-file checks need.</summary>
 public sealed record LanguagePack(
     string Language,
@@ -76,6 +79,12 @@ public sealed record ContentSet(
     public IReadOnlyList<Track> Tracks { get; init; } = [];
 
     public IReadOnlyList<AlphabetLetter> Alphabet { get; init; } = [];
+
+    /// <summary>Deck files whose <c>review</c> is <c>pending</c>.</summary>
+    public IReadOnlyList<string> PendingDecks { get; init; } = [];
+
+    /// <summary>The frequency-ranked core word list (<c>vocab/core-list.tsv</c>), if present.</summary>
+    public IReadOnlyList<CoreWord> CoreList { get; init; } = [];
 
     /// <summary>Lesson-text words that need no card, such as names.</summary>
     public IReadOnlySet<string> IgnoredWords { get; init; } = new HashSet<string>();

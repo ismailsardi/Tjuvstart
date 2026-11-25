@@ -1,0 +1,101 @@
+# Lemmas the frequency method gets wrong, one per line: "lemma<TAB>pos", or a
+# bare lemma for every part of speech. Mostly rare homographs of common words
+# ("et under", a miracle, next to the preposition "under"), and spellings that
+# are not standard Bokmål.
+#
+# A line starting with "+" keeps a lemma that the homograph rules in
+# build_core_list.py would drop.
++feil	adjective
++fri	adjective
++høyre	adjective
++venstre	adjective
++ønske	noun
++norsk	noun
++bytte	noun
++velkommen	adjective
+i	pronoun
+i	noun
+men	noun
+et	conjunction
+to	noun
+de	preposition
+tre	verb
+var	noun
+var	adjective
+vid	adjective
+komme	noun
+for	noun
+å	noun
+å	interjection
+med	noun
+ikke	noun
+jeg	noun
+om	noun
+ti	adverb
+og	adverb
+at	adverb
+fra	conjunction
+til	conjunction
+en	adverb
+ene	adverb
+ene	determiner
+krone	verb
+lite	verb
+hele	noun
+fire	verb
+fare	verb
+stede	verb
+kvinne	verb
+døde	verb
+danske	verb
+mine	verb
+orde	verb
+vie	verb
+time	verb
+vann	adverb
+viss	conjunction
+finne	noun
+vinne	noun
+hete	noun
+stå	adjective
+ny	noun
+internasjonale	noun
+helgen	noun
+dreier	noun
+tyder	noun
+bor	noun
+fat	noun
+kong	noun
+vise	noun
+like	noun
+slett	noun
+idag
+igår
+ifjor
+forøvrig
+bedre	verb
+by	verb
+vanne	verb
+dette	verb
+bare	verb
+neste	verb
+neste	noun
+man	noun
+under	noun
+gode	noun
+hvite	noun
+visse	noun
+lett	noun
+sett	noun
+and	noun
+in	adjective
+van	preposition
+jan	noun
+km	noun
+fly	adverb
+lys	adverb
+etterhvert
+efterhvert
+såvel
+tilstede
+iallfall

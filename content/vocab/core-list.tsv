@@ -1,0 +1,5001 @@
+rank	lemma	pos	gender	per_million	level
+1	være	verb		32729.4	A1
+2	på	preposition		19427.6	A1
+3	ha	verb		18943.5	A1
+4	av	preposition		15436.4	A1
+5	og	conjunction		14959.2	A1
+6	en	determiner		14331.7	A1
+7	i	determiner		13646.9	A1
+8	i	preposition		13646.9	A1
+9	med	preposition		13127.2	A1
+10	det	determiner		11553.8	A1
+11	det	pronoun		11553.8	A1
+12	bli	verb		10141.9	A1
+13	ikke	adverb		9740.3	A1
+14	til	preposition		9273.0	A1
+15	som	conjunction		8878.6	A1
+16	som	preposition		8878.6	A1
+17	han	pronoun		8503.9	A1
+18	å	conjunction		8156.8	A1
+19	at	conjunction		7577.7	A1
+20	vi	pronoun		7125.2	A1
+21	si	verb		7065.5	A1
+22	jeg	pronoun		5803.4	A1
+23	kunne	verb		5571.5	A1
+24	de	pronoun		5329.1	A1
+25	seg	pronoun		5271.4	A1
+26	for	adverb		5219.8	A1
+27	for	conjunction		5219.8	A1
+28	for	preposition		5219.8	A1
+29	ville	verb		5194.2	A1
+30	få	verb		5056.6	A1
+31	men	conjunction		5002.1	A1
+32	skulle	verb		4977.2	A1
+33	den	determiner		4432.3	A1
+34	den	pronoun		4432.3	A1
+35	en	pronoun		4293.1	A1
+36	om	conjunction		3938.2	A1
+37	om	preposition		3938.2	A1
+38	år	noun	et	3697.1	A1
+39	også	adverb		3444.4	A1
+40	de	determiner		3378.8	A1
+41	se	verb		3273.2	A1
+42	fra	preposition		3257.4	A1
+43	mange	adjective		3236.4	A1
+44	gå	verb		3183.8	A1
+45	stor	adjective		3146.2	A1
+46	mye	adjective		3053.4	A1
+47	sin	determiner		2999.3	A1
+48	ta	verb		2855.3	A1
+49	komme	verb		2842.8	A1
+50	måtte	verb		2739.7	A1
+51	ut	adverb		2671.4	A1
+52	ved	preposition		2650.6	A1
+53	hun	pronoun		2605.6	A1
+54	god	adjective		2523.3	A1
+55	mot	preposition		2467.8	A1
+56	gjøre	verb		2418.2	A1
+57	over	preposition		2370.6	A1
+58	annen	determiner		2232.2	A1
+59	opp	adverb		2042.9	A1
+60	noen	determiner		2006.5	A1
+61	dag	noun	en	1979.6	A1
+62	eller	conjunction		1911.3	A1
+63	inn	adverb		1768.3	A1
+64	etter	conjunction		1766.5	A1
+65	etter	preposition		1766.5	A1
+66	gi	verb		1677.6	A1
+67	du	pronoun		1664.0	A1
+68	man	pronoun		1556.8	A1
+69	der	adverb		1480.5	A1
+70	gang	noun	en	1462.0	A1
+71	tid	noun	ei	1416.7	A1
+72	dette	determiner		1400.5	A1
+73	dette	pronoun		1400.5	A1
+74	under	preposition		1394.1	A1
+75	da	adverb		1388.0	A1
+76	da	conjunction		1388.0	A1
+77	nå	adverb		1344.4	A1
+78	nå	interjection		1344.4	A1
+79	første	adjective		1343.3	A1
+80	sist	adjective		1335.5	A1
+81	liten	adjective		1331.3	A1
+82	tidlig	adjective		1301.2	A1
+83	prosent	noun	en	1272.9	A1
+84	stå	verb		1270.5	A1
+85	alle	pronoun		1251.1	A1
+86	ny	adjective		1239.0	A1
+87	million	noun	en	1210.5	A1
+88	mellom	preposition		1202.7	A1
+89	krone	noun	ei	1188.5	A1
+90	slik	determiner		1170.1	A1
+91	to	number		1152.4	A1
+92	både	conjunction		1123.6	A1
+93	legge	verb		1098.8	A1
+94	her	adverb		1097.5	A1
+95	finne	verb		1091.4	A1
+96	bruke	verb		1090.8	A1
+97	mann	noun	en	1086.8	A1
+98	blant	preposition		1069.2	A1
+99	land	noun	et	1059.7	A1
+100	all	determiner		1054.9	A1
+101	gammel	adjective		1045.5	A1
+102	tro	verb		1004.2	A1
+103	selv	determiner		1000.8	A1
+104	sak	noun	ei	996.6	A1
+105	politi	noun	en	987.6	A1
+106	kamp	noun	en	967.8	A1
+107	andre	adjective		951.4	A1
+108	sammen	adverb		901.8	A1
+109	mens	conjunction		899.8	A1
+110	nok	adverb		885.4	A1
+111	rundt	preposition		874.6	A1
+112	ifølge	preposition		868.7	A1
+113	bare	adverb		860.9	A1
+114	bare	conjunction		860.9	A1
+115	hans	determiner		857.9	A1
+116	igjen	adverb		853.6	A1
+117	holde	verb		850.4	A1
+118	så	adverb		849.6	A1
+119	så	conjunction		849.6	A1
+120	uke	noun	ei	845.6	A1
+121	egen	determiner		835.3	A1
+122	viktig	adjective		833.6	A1
+123	når	adverb		832.0	A1
+124	når	conjunction		832.0	A1
+125	denne	determiner		828.2	A1
+126	denne	pronoun		828.2	A1
+127	samme	determiner		814.0	A1
+128	uten	preposition		806.4	A1
+129	folk	noun	et	792.1	A1
+130	hver	determiner		787.9	A1
+131	vise	verb		774.5	A1
+132	vite	verb		772.4	A1
+133	side	noun	ei	771.8	A1
+134	selv	adverb		768.8	A1
+135	spille	verb		757.5	A1
+136	barn	noun	et	752.6	A1
+137	lang	adjective		749.6	A1
+138	vår	determiner		748.3	A1
+139	ned	adverb		742.6	A1
+140	bra	adjective		737.0	A1
+141	skje	verb		733.4	A1
+142	del	noun	en	719.5	A1
+143	gjennom	preposition		718.9	A1
+144	fortsette	verb		715.6	A1
+145	mene	verb		707.4	A1
+146	sette	verb		690.7	A1
+147	høy	adjective		684.9	A1
+148	tilbake	adverb		683.9	A1
+149	sted	noun	et	679.0	A1
+150	én	number		677.8	A1
+151	gjerne	adverb		676.9	A1
+152	sitte	verb		674.2	A1
+153	fordi	conjunction		673.8	A1
+154	sterk	adjective		672.4	A1
+155	norsk	adjective		659.6	A1
+156	klare	verb		636.3	A1
+157	vei	noun	en	629.9	A1
+158	noen	pronoun		628.4	A1
+159	derfor	adverb		627.6	A1
+160	leder	noun	en	612.9	A1
+161	mål	noun	et	606.3	A1
+162	ingen	determiner		605.4	A1
+163	enn	adverb		605.2	A1
+164	enn	conjunction		605.2	A1
+165	enn	preposition		605.2	A1
+166	kveld	noun	en	604.4	A1
+167	problem	noun	et	601.8	A1
+168	plass	noun	en	585.8	A1
+169	dårlig	adjective		584.5	A1
+170	menneske	noun	et	581.1	A1
+171	kvinne	noun	ei	580.8	A1
+172	ligge	verb		579.4	A1
+173	allerede	adverb		579.1	A1
+174	kommune	noun	en	575.1	A1
+175	person	noun	en	574.2	A1
+176	slå	verb		570.1	A1
+177	forhold	noun	et	567.3	A1
+178	bil	noun	en	566.1	A1
+179	neste	determiner		557.6	A1
+180	flere	adjective		555.9	A1
+181	selskap	noun	et	555.8	A1
+182	først	adverb		555.2	A1
+183	regjering	noun	ei	548.0	A1
+184	fjor	noun	en	547.3	A1
+185	fem	number		540.9	A1
+186	svær	adjective		540.5	A1
+187	føre	verb		539.4	A1
+188	sen	adjective		536.2	A1
+189	liv	noun	et	536.2	A1
+190	hva	conjunction		535.6	A1
+191	hva	pronoun		535.6	A1
+192	min	determiner		530.7	A1
+193	penger	noun	en	528.2	A1
+194	område	noun	et	523.2	A1
+195	langt	adverb		520.4	A1
+196	politisk	adjective		518.8	A1
+197	hvor	adverb		518.0	A1
+198	hvor	conjunction		518.0	A1
+199	ingen	pronoun		516.6	A1
+200	mer	adjective		516.1	A1
+201	fram	adverb		504.2	A1
+202	før	adverb		503.0	A1
+203	før	conjunction		503.0	A1
+204	før	preposition		503.0	A1
+205	mulig	adjective		502.5	A1
+206	samtidig	adjective		500.4	A1
+207	dermed	adverb		499.2	A1
+208	kanskje	adverb		499.1	A1
+209	amerikansk	adjective		498.5	A1
+210	måned	noun	en	498.2	A1
+211	by	noun	en	495.4	A1
+212	aldri	adverb		493.0	A1
+213	burde	verb		492.2	A1
+214	lage	verb		491.0	A1
+215	skrive	verb		487.2	A1
+216	likevel	adverb		486.2	A1
+217	frem	adverb		486.1	A1
+218	øke	verb		485.4	A1
+219	sende	verb		479.5	A1
+220	veldig	adjective		474.7	A1
+221	håpe	verb		469.3	A1
+222	imidlertid	adverb		468.8	A1
+223	lenge	adverb		467.8	A1
+224	klar	adjective		465.8	A1
+225	opplyse	verb		465.5	A1
+226	bak	preposition		465.5	A1
+227	full	adjective		461.9	A1
+228	grunn	noun	en	461.3	A1
+229	siden	adverb		460.4	A1
+230	siden	conjunction		460.4	A1
+231	spiller	noun	en	458.4	A1
+232	synes	verb		453.6	A1
+233	tre	noun	et	452.0	A1
+234	hos	preposition		445.6	A1
+235	lørdag	noun	en	443.9	A1
+236	dersom	conjunction		443.0	A1
+237	tillegg	noun	et	442.7	A1
+238	fredag	noun	en	442.6	A1
+239	møte	verb		442.4	A1
+240	vanskelig	adjective		441.5	A1
+241	vente	verb		440.7	A1
+242	spørsmål	noun	et	437.3	A1
+243	lag	noun	et	435.7	A1
+244	fortelle	verb		435.0	A1
+245	mandag	noun	en	433.5	A1
+246	søndag	noun	en	431.1	A1
+247	møte	noun	et	430.9	A1
+248	ønske	verb		429.2	A1
+249	bygge	verb		427.4	A1
+250	spesiell	adjective		425.6	A1
+251	president	noun	en	424.7	A1
+252	situasjon	noun	en	424.3	A1
+253	følge	verb		423.4	A1
+254	parti	noun	et	421.2	A1
+255	ønske	noun	et	419.4	A1
+256	resultat	noun	et	416.2	A1
+257	like	adverb		413.9	A1
+258	mulighet	noun	ei	411.2	A1
+259	onsdag	noun	en	410.0	A1
+260	skole	noun	en	408.1	A1
+261	vel	adverb		405.5	A1
+262	pris	noun	en	405.5	A1
+263	jobb	noun	en	401.5	A1
+264	noe	determiner		401.5	A1
+265	noe	pronoun		401.5	A1
+266	nær	adverb		397.4	A1
+267	minutt	noun	et	396.0	A1
+268	utenfor	preposition		392.0	A1
+269	torsdag	noun	en	391.0	A1
+270	bilde	noun	et	388.0	A1
+271	trekke	verb		387.6	A1
+272	be	verb		385.8	A1
+273	milliard	noun	en	385.4	A1
+274	sikker	adjective		385.2	A1
+275	måte	noun	en	385.0	A1
+276	tirsdag	noun	en	383.6	A1
+277	kjøpe	verb		382.1	A1
+278	tenke	verb		381.1	A1
+279	tre	number		380.3	A1
+280	økonomisk	adjective		378.9	A1
+281	nesten	adverb		375.8	A1
+282	bety	verb		375.5	A1
+283	forsøke	verb		374.7	A1
+284	snakke	verb		370.1	A1
+285	seks	number		368.8	A1
+286	starte	verb		367.9	A1
+287	betale	verb		365.8	A1
+288	slutt	noun	en	365.4	A1
+289	selge	verb		363.2	A1
+290	hvis	conjunction		362.5	A1
+291	hvis	pronoun		362.5	A1
+292	vinne	verb		362.4	A1
+293	forslag	noun	et	362.2	A1
+294	disse	determiner		361.4	A1
+295	disse	pronoun		361.4	A1
+296	eneste	determiner		359.2	A1
+297	myndighet	noun	ei	357.4	A1
+298	velge	verb		357.1	A1
+299	begynne	verb		351.9	A1
+300	skape	verb		351.9	A1
+301	enkelt	adjective		351.7	A1
+302	løp	noun	et	349.6	A1
+303	avis	noun	ei	349.6	A1
+304	fire	number		348.8	A1
+305	foran	preposition		347.2	A1
+306	hevde	verb		345.4	A1
+307	kjøre	verb		343.9	A1
+308	hjelpe	verb		343.7	A1
+309	krav	noun	et	342.2	A1
+310	rette	verb		340.9	A1
+311	plan	noun	en	340.3	A1
+312	internasjonal	adjective		339.8	A1
+313	trenge	verb		339.3	A1
+314	kjent	adjective		338.4	A1
+315	film	noun	en	336.3	A1
+316	verden	noun	en	335.8	A1
+317	slik	adverb		335.4	A1
+318	bok	noun	ei	334.7	A1
+319	høre	verb		334.7	A1
+320	deres	determiner		331.8	A1
+321	familie	noun	en	329.3	A1
+322	klubb	noun	en	329.0	A1
+323	ofte	adverb		325.7	A1
+324	gruppe	noun	ei	324.6	A1
+325	jobbe	verb		322.9	A1
+326	meter	noun	en	321.6	A1
+327	natt	noun	ei	320.3	A1
+328	sesong	noun	en	320.1	A1
+329	la	verb		316.3	A1
+330	kreve	verb		315.7	A1
+331	regne	verb		313.3	A1
+332	statsminister	noun	en	312.5	A1
+333	eksempel	noun	et	310.5	A1
+334	valg	noun	et	309.7	A1
+335	sykehus	noun	et	305.6	A1
+336	arbeide	verb		304.5	A1
+337	alvorlig	adjective		299.7	A1
+338	særlig	adjective		298.1	A1
+339	meget	adverb		298.0	A1
+340	medlem	noun	et	295.0	A1
+341	vurdere	verb		293.7	A1
+342	lav	adjective		292.3	A1
+343	hus	noun	et	290.7	A1
+344	rette	noun	ei	289.6	A1
+345	overfor	preposition		288.8	A1
+346	klokke	noun	ei	285.2	A1
+347	trolig	adjective		285.1	A1
+348	stille	verb		284.0	A1
+349	utvikling	noun	ei	283.5	A1
+350	ute	adverb		282.9	A1
+351	avtale	noun	en	280.1	A1
+352	dessuten	adverb		280.0	A1
+353	rask	adjective		279.7	A1
+354	alltid	adverb		278.7	A1
+355	poeng	noun	et	278.7	A1
+356	jente	noun	ei	276.8	A1
+357	offentlig	adjective		276.7	A1
+358	hard	adjective		275.3	A1
+359	ansvar	noun	et	273.2	A1
+360	hennes	determiner		271.2	A1
+361	lett	adjective		271.1	A1
+362	periode	noun	en	269.1	A1
+363	forbindelse	noun	en	268.9	A1
+364	delta	verb		268.3	A1
+365	åpne	verb		268.0	A1
+366	par	noun	et	267.7	A1
+367	dele	verb		267.6	A1
+368	morgen	noun	en	267.1	A1
+369	oppleve	verb		266.3	A1
+370	slippe	verb		266.2	A1
+371	nei	interjection		266.2	A1
+372	ting	noun	en	265.9	A1
+373	navn	noun	et	264.6	A1
+374	nordmann	noun	en	264.3	A1
+375	hvordan	adverb		264.1	A1
+376	hvordan	conjunction		264.1	A1
+377	forrige	adjective		264.1	A1
+378	fall	noun	en	263.2	A1
+379	vanlig	adjective		262.5	A1
+380	ung	adjective		262.5	A1
+381	seier	noun	en	262.4	A1
+382	gjelder	noun	en	261.3	A1
+383	rett	adverb		259.3	A1
+384	tall	noun	en	259.2	A1
+385	grad	noun	en	259.1	A1
+386	ja	interjection		258.5	A1
+387	fast	adjective		258.4	A1
+388	direktør	noun	en	257.9	A1
+389	form	noun	ei	257.1	A1
+390	stadig	adverb		254.7	A1
+391	svare	verb		254.0	A1
+392	tape	verb		253.9	A1
+393	ledelse	noun	en	252.6	A1
+394	høst	noun	en	251.7	A1
+395	jo	adverb		251.7	A1
+396	jo	interjection		251.7	A1
+397	understreke	verb		251.1	A1
+398	nå	verb		250.9	A1
+399	melde	verb		250.8	A1
+400	antall	noun	et	250.4	A1
+401	bidra	verb		250.0	A1
+402	forklare	verb		248.9	A1
+403	redusere	verb		248.9	A1
+404	lov	noun	en	248.8	A1
+405	reise	verb		246.9	A1
+406	sommer	noun	en	246.8	A1
+407	ansatt	adjective		245.7	A1
+408	politiker	noun	en	244.0	A1
+409	time	noun	en	243.9	A1
+410	falle	verb		243.4	A1
+411	svenske	noun	en	243.3	A1
+412	marked	noun	et	243.1	A1
+413	historie	noun	ei	242.4	A1
+414	tross	preposition		240.7	A1
+415	drive	verb		239.8	A1
+416	skade	verb		238.4	A1
+417	kalle	verb		238.1	A1
+418	litt	adjective		237.1	A1
+419	kraftig	adjective		237.1	A1
+420	bedrift	noun	en	236.9	A1
+421	altså	adverb		236.1	A1
+422	positiv	adjective		234.8	A1
+423	hjemme	adverb		234.5	A1
+424	ennå	adverb		234.3	A1
+425	stat	noun	en	234.0	A1
+426	dra	verb		233.9	A1
+427	bekrefte	verb		233.6	A1
+428	arbeid	noun	et	233.4	A1
+429	kontakt	noun	en	229.1	A1
+430	små	adjective		228.6	A1
+431	tilbud	noun	et	226.5	A1
+432	drepe	verb		226.2	A1
+433	helt	noun	en	225.9	A1
+434	hvilken	determiner		225.6	A1
+435	nødvendig	adjective		225.1	A1
+436	krig	noun	en	224.7	A1
+437	årsak	noun	ei	223.5	A1
+438	rekke	verb		223.0	A1
+439	hjem	adverb		223.0	A1
+440	fengsel	noun	et	222.7	A1
+441	inne	adverb		222.5	A1
+442	stilling	noun	ei	222.4	A1
+443	løsning	noun	ei	222.1	A1
+444	riktig	adjective		220.8	A1
+445	nemlig	adverb		220.3	A1
+446	løpe	verb		219.6	A1
+447	bort	adverb		219.1	A1
+448	snart	adverb		218.9	A1
+449	behov	noun	et	218.9	A1
+450	spørre	verb		218.3	A1
+451	omgang	noun	en	218.0	A1
+452	gutt	noun	en	217.1	A1
+453	støtte	verb		216.8	A1
+454	undersøkelse	noun	en	216.6	A1
+455	egentlig	adjective		215.9	A1
+456	alt	adverb		215.9	A1
+457	alt	pronoun		215.9	A1
+458	rekke	noun	ei	215.8	A1
+459	enig	adjective		215.2	A1
+460	fornøyd	adjective		214.3	A1
+461	rapport	noun	en	214.3	A1
+462	føle	verb		214.1	A1
+463	unge	noun	en	212.6	A1
+464	foreløpig	adjective		212.2	A1
+465	prosjekt	noun	et	211.6	A1
+466	soldat	noun	en	209.9	A1
+467	britisk	adjective		209.9	A1
+468	organisasjon	noun	en	209.5	A1
+469	kort	adjective		209.5	A1
+470	miste	verb		208.1	A1
+471	tilfelle	noun	et	207.9	A1
+472	interesse	noun	en	207.7	A1
+473	sjanse	noun	en	207.6	A1
+474	støtte	noun	ei	207.5	A1
+475	akkurat	adverb		207.1	A1
+476	åpen	adjective		206.5	A1
+477	ulykke	noun	ei	205.0	A1
+478	ganske	adverb		204.4	A1
+479	satse	verb		204.4	A1
+480	kontroll	noun	en	204.3	A1
+481	total	adjective		204.1	A1
+482	gjennomføre	verb		203.9	A1
+483	sentral	adjective		203.5	A1
+484	såkalt	adjective		203.3	A1
+485	fin	adjective		203.1	A1
+486	hånd	noun	ei	202.9	A1
+487	privat	adjective		202.6	A1
+488	elev	noun	en	201.5	A1
+489	forelder	noun	en	201.4	A1
+490	bryte	verb		200.2	A1
+491	flytte	verb		200.0	A1
+492	følge	noun	en	199.9	A1
+493	januar	noun	en	198.5	A1
+494	tysk	adjective		198.0	A1
+495	angrep	noun	et	197.9	A1
+496	dollar	noun	en	197.5	A1
+497	heller	adverb		196.6	A1
+498	behandling	noun	ei	196.3	A1
+499	faktisk	adjective		195.4	A1
+500	forstå	verb		195.4	A1
+501	koste	verb		194.6	A1
+502	like	verb		194.4	A1
+503	politikk	noun	en	194.3	A1
+504	levere	verb		193.9	A1
+505	tredje	adjective		192.8	A1
+506	melding	noun	ei	192.6	A1
+507	kun	adverb		192.4	A1
+508	bank	noun	en	191.5	A1
+509	samfunn	noun	et	191.1	A1
+510	fremst	adjective		190.4	A1
+511	ungdom	noun	en	190.3	A1
+512	tiltak	noun	et	190.0	A1
+513	dere	pronoun		189.8	A1
+514	sikre	verb		189.7	A1
+515	tur	noun	en	189.5	A1
+516	advokat	noun	en	189.4	A1
+517	fortsatt	adverb		189.0	A1
+518	godt	noun	en	188.5	A1
+519	direkte	adjective		188.4	A1
+520	rest	noun	en	188.3	A1
+521	prøve	verb		188.1	A1
+522	virkelig	adjective		187.9	A1
+523	fly	noun	en	187.9	A1
+524	fri	adjective		187.4	A1
+525	aksje	noun	en	187.2	A1
+526	ettermiddag	noun	en	186.4	A1
+527	hente	verb		186.2	A1
+528	ren	adjective		185.8	A1
+529	hverandre	pronoun		185.4	A1
+530	mor	noun	ei	184.1	A1
+531	grense	noun	ei	184.1	A1
+532	skade	noun	en	183.9	A1
+533	aktuell	adjective		182.7	A1
+534	din	determiner		182.3	A1
+535	nettopp	adverb		182.2	A1
+536	søke	verb		181.9	A1
+537	helg	noun	ei	181.6	A1
+538	endelig	adjective		181.5	A1
+539	bakgrunn	noun	en	180.9	A1
+540	program	noun	et	180.8	A1
+541	imot	preposition		180.5	A1
+542	begge	determiner		180.0	A1
+543	begge	pronoun		180.0	A1
+544	aller	adverb		179.3	A1
+545	oppgave	noun	ei	179.1	A1
+546	juni	noun	en	179.0	A1
+547	debatt	noun	en	178.5	A1
+548	forskjellig	adjective		178.0	A1
+549	økonomi	noun	en	178.0	A1
+550	sentrum	noun	et	177.9	A1
+551	bane	noun	en	177.3	A1
+552	før	adjective		177.2	A1
+553	samle	verb		176.8	A1
+554	ellers	adverb		176.4	A1
+555	utvikle	verb		176.0	A1
+556	betydelig	adjective		175.4	A1
+557	øye	noun	et	175.3	A1
+558	styre	verb		175.3	A1
+559	salg	noun	et	174.8	A1
+560	september	noun	en	174.4	A1
+561	styrke	noun	en	174.3	A1
+562	gjelde	verb		173.8	A1
+563	eie	verb		173.8	A1
+564	daglig	adjective		173.0	A1
+565	musikk	noun	en	172.7	A1
+566	bord	noun	en	172.2	A1
+567	lege	noun	en	172.1	A1
+568	ball	noun	en	172.0	A1
+569	fransk	adjective		171.7	A1
+570	drap	noun	et	171.6	A1
+571	brann	noun	en	171.5	A1
+572	venn	noun	en	171.4	A1
+573	bestemme	verb		171.0	A1
+574	topp	noun	en	170.4	A1
+575	flertall	noun	et	170.0	A1
+576	regel	noun	en	170.0	A1
+577	dyr	adjective		169.7	A1
+578	publikum	noun	et	169.6	A1
+579	uansett	preposition		169.6	A1
+580	mai	noun	en	169.3	A1
+581	ord	noun	et	169.0	A1
+582	stoppe	verb		168.9	A1
+583	ekstra	adjective		168.4	A1
+584	lese	verb		168.4	A1
+585	kjenne	verb		168.3	A1
+586	brev	noun	et	167.7	A1
+587	russisk	adjective		167.6	A1
+588	august	noun	en	167.5	A1
+589	samarbeide	verb		167.4	A1
+590	ni	number		166.5	A1
+591	mars	noun	en	166.3	A1
+592	gate	noun	ei	165.5	A1
+593	treffe	verb		165.2	A1
+594	kontrakt	noun	en	164.5	A1
+595	vedta	verb		163.9	A1
+596	råd	noun	en	163.6	A1
+597	løse	verb		163.3	A1
+598	pasient	noun	en	163.2	A1
+599	bo	verb		163.0	A1
+600	overta	verb		162.6	A1
+601	konkurranse	noun	en	162.6	A1
+602	ende	verb		162.4	A1
+603	forhandling	noun	ei	162.3	A1
+604	behandle	verb		161.3	A1
+605	opplysning	noun	ei	161.1	A1
+606	dømme	verb		161.0	A1
+607	foreslå	verb		160.9	A1
+608	ferdig	adjective		160.8	A1
+609	redde	verb		160.8	A1
+610	enkel	adjective		160.7	A1
+611	nummer	noun	et	160.4	A1
+612	ytterligere	adjective		160.0	A1
+613	ramme	verb		159.8	A1
+614	forlate	verb		159.7	A1
+615	unna	preposition		159.3	A1
+616	eventuell	adjective		158.8	A1
+617	miljø	noun	et	158.5	A1
+618	verdi	noun	en	158.4	A1
+619	dom	noun	en	158.4	A1
+620	frykt	noun	en	158.1	A1
+621	representant	noun	en	158.0	A1
+622	mangel	noun	en	157.3	A1
+623	grunnlag	noun	et	157.2	A1
+624	kilometer	noun	en	157.0	A1
+625	båt	noun	en	156.9	A1
+626	oktober	noun	en	156.7	A1
+627	innrømme	verb		156.7	A1
+628	kritikk	noun	en	156.4	A1
+629	militær	adjective		156.3	A1
+630	eier	noun	en	155.6	A1
+631	satt	adjective		154.9	A1
+632	motta	verb		154.7	A1
+633	tanke	noun	en	154.7	A1
+634	april	noun	en	154.5	A1
+635	skyte	verb		154.4	A1
+636	forsvinne	verb		153.9	A1
+637	europeisk	adjective		153.7	A1
+638	trener	noun	en	153.5	A1
+639	bolig	noun	en	153.3	A1
+640	innsats	noun	en	152.9	A1
+641	hovedstad	noun	en	152.3	A1
+642	kunde	noun	en	151.6	A1
+643	kirke	noun	ei	151.5	A1
+644	tung	adjective		151.1	A1
+645	lede	verb		151.0	A1
+646	hjelp	noun	ei	150.9	A1
+647	hode	noun	et	150.8	A1
+648	rolle	noun	ei	150.2	A1
+649	ulike	adjective		150.2	A1
+650	informasjon	noun	en	150.1	A1
+651	endre	verb		149.9	A1
+652	virksomhet	noun	ei	149.4	A1
+653	lokale	noun	et	149.1	A1
+654	sørge	verb		148.8	A1
+655	nivå	noun	et	148.6	A1
+656	juli	noun	en	148.3	A1
+657	tak	noun	et	148.3	A1
+658	ferd	noun	ei	148.2	A1
+659	nylig	adjective		147.9	A1
+660	medium	noun	et	147.4	A1
+661	erfaring	noun	ei	147.4	A1
+662	stemme	noun	en	147.3	A1
+663	desember	noun	en	147.3	A1
+664	kort	noun	et	147.3	A1
+665	slutte	verb		147.1	A1
+666	november	noun	en	146.8	A1
+667	personlig	adjective		146.8	A1
+668	deretter	adverb		146.8	A1
+669	tvil	noun	en	146.7	A1
+670	trene	verb		146.5	A1
+671	leilighet	noun	ei	146.2	A1
+672	besøke	verb		146.1	A1
+673	februar	noun	en	146.0	A1
+674	økning	noun	ei	145.9	A1
+675	fotball	noun	en	145.7	A1
+676	type	noun	en	145.0	A1
+677	selvsagt	adjective		144.2	A1
+678	avgjøre	verb		144.1	A1
+679	hete	verb		144.1	A1
+680	skaffe	verb		144.0	A1
+681	inntekt	noun	ei	143.7	A1
+682	fylle	verb		143.4	A1
+683	alene	adverb		143.1	A1
+684	påpeke	verb		142.9	A1
+685	mat	noun	en	142.6	A1
+686	utgangspunkt	noun	et	142.2	A1
+687	hittil	adverb		142.2	A1
+688	midt	noun	en	141.9	A1
+689	anledning	noun	ei	141.8	A1
+690	skip	noun	en	141.8	A1
+691	åtte	number		141.7	A1
+692	innenfor	preposition		141.6	A1
+693	halv	adjective		141.3	A1
+694	start	noun	en	140.9	A1
+695	sønn	noun	en	140.6	A1
+696	aktiv	adjective		140.3	A1
+697	kraft	noun	ei	139.5	A1
+698	utenriksminister	noun	en	139.4	A1
+699	tjene	verb		139.0	A1
+700	derimot	adverb		139.0	A1
+701	fremtid	noun	ei	138.6	A2
+702	unngå	verb		138.0	A2
+703	talsmann	noun	en	138.0	A2
+704	tilby	verb		137.7	A2
+705	øvrig	adjective		137.4	A2
+706	innen	conjunction		137.4	A2
+707	innen	preposition		137.4	A2
+708	kaste	verb		137.2	A2
+709	part	noun	en	136.4	A2
+710	leve	verb		136.2	A2
+711	opptatt	adjective		136.0	A2
+712	benytte	verb		135.9	A2
+713	foreta	verb		135.5	A2
+714	sammenheng	noun	en	135.5	A2
+715	konsekvens	noun	en	135.3	A2
+716	verk	noun	en	135.3	A2
+717	avslutte	verb		135.0	A2
+718	journalist	noun	en	134.8	A2
+719	mening	noun	ei	134.7	A2
+720	per	preposition		134.4	A2
+721	sju	number		134.2	A2
+722	makt	noun	ei	134.1	A2
+723	nasjonal	adjective		134.1	A2
+724	system	noun	et	133.8	A2
+725	uttalelse	noun	en	133.7	A2
+726	stemme	verb		133.6	A2
+727	beskjed	noun	en	133.4	A2
+728	konflikt	noun	en	133.4	A2
+729	dør	noun	ei	133.4	A2
+730	israelsk	adjective		133.4	A2
+731	velger	noun	en	133.0	A2
+732	forsker	noun	en	133.0	A2
+733	svak	adjective		132.7	A2
+734	feil	noun	en	132.6	A2
+735	arbeide	noun	et	132.5	A2
+736	reise	noun	ei	132.4	A2
+737	presse	verb		132.2	A2
+738	fremdeles	adverb		132.0	A2
+739	naturlig	adjective		131.8	A2
+740	lokal	adjective		131.2	A2
+741	vekst	noun	en	131.1	A2
+742	sjef	noun	en	131.0	A2
+743	fungere	verb		130.9	A2
+744	borte	adverb		130.7	A2
+745	endring	noun	ei	130.7	A2
+746	student	noun	en	130.5	A2
+747	glad	adjective		130.5	A2
+748	forfatter	noun	en	130.4	A2
+749	hensyn	noun	et	130.4	A2
+750	press	noun	en	129.8	A2
+751	tjeneste	noun	en	129.7	A2
+752	utenlandsk	adjective		129.5	A2
+753	enda	adverb		129.3	A2
+754	enda	conjunction		129.3	A2
+755	forsvare	verb		128.7	A2
+756	aksjon	noun	en	128.5	A2
+757	representere	verb		128.4	A2
+758	styrke	verb		128.3	A2
+759	reagere	verb		128.0	A2
+760	engelsk	adjective		128.0	A2
+761	nekte	verb		128.0	A2
+762	vedtak	noun	et	127.5	A2
+763	produksjon	noun	en	127.3	A2
+764	kommentere	verb		126.9	A2
+765	utsette	verb		126.6	A2
+766	slags	adjective		126.1	A2
+767	slite	verb		126.1	A2
+768	skikkelig	adjective		125.2	A2
+769	samtale	noun	en	125.1	A2
+770	enorm	adjective		125.0	A2
+771	virke	verb		124.9	A2
+772	våpen	noun	et	124.9	A2
+773	hvem	conjunction		124.7	A2
+774	hvem	pronoun		124.7	A2
+775	sekund	noun	en	124.7	A2
+776	innføre	verb		124.6	A2
+777	bruk	noun	en	124.1	A2
+778	lære	verb		123.5	A2
+779	teknisk	adjective		123.4	A2
+780	skyldes	verb		123.4	A2
+781	presentere	verb		123.1	A2
+782	trening	noun	ei	123.0	A2
+783	lærer	noun	en	122.9	A2
+784	sikkerhet	noun	ei	122.8	A2
+785	utfordring	noun	ei	122.6	A2
+786	love	verb		122.5	A2
+787	politidistrikt	noun	et	122.3	A2
+788	innebære	verb		122.3	A2
+789	svar	noun	et	122.0	A2
+790	formiddag	noun	en	121.3	A2
+791	le	verb		120.7	A2
+792	befolkning	noun	ei	120.6	A2
+793	utgjøre	verb		120.5	A2
+794	neppe	adverb		120.4	A2
+795	professor	noun	en	120.3	A2
+796	true	verb		119.9	A2
+797	syv	number		119.6	A2
+798	sikte	verb		119.2	A2
+799	tøff	adjective		119.2	A2
+800	avgjørelse	noun	en	119.1	A2
+801	normal	adjective		119.1	A2
+802	score	verb		118.9	A2
+803	betydning	noun	ei	118.4	A2
+804	konsert	noun	en	117.7	A2
+805	prøve	noun	ei	117.6	A2
+806	serie	noun	en	117.5	A2
+807	trygg	adjective		117.3	A2
+808	beholde	verb		117.3	A2
+809	inngå	verb		117.2	A2
+810	rente	noun	ei	117.0	A2
+811	ingenting	determiner		116.8	A2
+812	kurs	noun	en	116.0	A2
+813	omkring	preposition		116.0	A2
+814	grei	adjective		115.4	A2
+815	utland	noun	et	115.2	A2
+816	spennende	adjective		115.1	A2
+817	havne	verb		115.0	A2
+818	passasjer	noun	en	115.0	A2
+819	omfattende	adjective		114.9	A2
+820	sosial	adjective		114.9	A2
+821	kollega	noun	en	114.8	A2
+822	farlig	adjective		114.6	A2
+823	utrolig	adjective		114.4	A2
+824	gjest	noun	en	114.3	A2
+825	samarbeid	noun	et	114.3	A2
+826	død	adjective		114.2	A2
+827	scene	noun	en	114.1	A2
+828	ordning	noun	ei	114.0	A2
+829	bred	adjective		114.0	A2
+830	kvartal	noun	et	113.7	A2
+831	handle	verb		113.3	A2
+832	holdning	noun	ei	113.3	A2
+833	forklaring	noun	ei	113.2	A2
+834	etablere	verb		112.9	A2
+835	forholde	verb		112.6	A2
+836	nevne	verb		112.4	A2
+837	diskutere	verb		112.1	A2
+838	vinter	noun	en	111.8	A2
+839	utover	preposition		111.6	A2
+840	langs	preposition		111.6	A2
+841	registrere	verb		111.5	A2
+842	enten	conjunction		111.3	A2
+843	rom	noun	en	111.3	A2
+844	generell	adjective		110.7	A2
+845	offisiell	adjective		110.7	A2
+846	kilde	noun	en	110.6	A2
+847	kvalitet	noun	en	110.4	A2
+848	billig	adjective		110.4	A2
+849	retning	noun	ei	110.4	A2
+850	selvfølgelig	adjective		110.3	A2
+851	oppstå	verb		110.3	A2
+852	påstand	noun	en	110.2	A2
+853	ansette	verb		110.1	A2
+854	plassere	verb		110.0	A2
+855	forskjell	noun	en	109.9	A2
+856	butikk	noun	en	109.8	A2
+857	uttrykke	verb		109.8	A2
+858	nord	adverb		109.7	A2
+859	ødelegge	verb		109.6	A2
+860	drift	noun	ei	109.5	A2
+861	sykdom	noun	en	109.5	A2
+862	bestå	verb		109.4	A2
+863	departement	noun	et	109.4	A2
+864	glede	noun	ei	109.3	A2
+865	populær	adjective		109.1	A2
+866	pause	noun	en	109.1	A2
+867	måle	verb		109.1	A2
+868	datter	noun	ei	108.5	A2
+869	hvorfor	adverb		108.4	A2
+870	hvorfor	conjunction		108.4	A2
+871	lik	adjective		108.3	A2
+872	voksen	adjective		108.0	A2
+873	kontor	noun	et	108.0	A2
+874	svensk	adjective		107.9	A2
+875	forvente	verb		107.8	A2
+876	liste	noun	ei	107.6	A2
+877	dommer	noun	en	107.5	A2
+878	halvpart	noun	en	107.3	A2
+879	prege	verb		107.2	A2
+880	oppnå	verb		107.1	A2
+881	budsjett	noun	et	107.0	A2
+882	næringsliv	noun	et	106.6	A2
+883	buss	noun	en	106.5	A2
+884	årlig	adjective		106.4	A2
+885	beslutning	noun	ei	105.8	A2
+886	innbygger	noun	en	105.7	A2
+887	stenge	verb		105.3	A2
+888	linje	noun	ei	105.3	A2
+889	telefon	noun	en	105.1	A2
+890	planlegge	verb		105.0	A2
+891	tett	adjective		104.9	A2
+892	ordfører	noun	en	104.7	A2
+893	avvise	verb		104.7	A2
+894	tydelig	adjective		104.6	A2
+895	inneholde	verb		104.4	A2
+896	nordisk	adjective		104.3	A2
+897	hotell	noun	et	104.1	A2
+898	dyp	adjective		103.9	A2
+899	amerikaner	noun	en	103.9	A2
+900	hindre	verb		103.8	A2
+901	fjerne	verb		103.8	A2
+902	stige	verb		103.7	A2
+903	arrangere	verb		103.7	A2
+904	utføre	verb		103.4	A2
+905	produsere	verb		103.1	A2
+906	interessant	adjective		103.0	A2
+907	begynnelse	noun	en	102.9	A2
+908	befinne	verb		102.8	A2
+909	skatt	noun	en	102.7	A2
+910	stand	noun	en	102.6	A2
+911	suksess	noun	en	102.2	A2
+912	uttale	verb		101.8	A2
+913	vår	noun	en	101.7	A2
+914	vold	noun	en	101.6	A2
+915	umulig	adjective		101.6	A2
+916	kommentar	noun	en	101.6	A2
+917	følelse	noun	en	101.5	A2
+918	lykkes	verb		101.4	A2
+919	altfor	adverb		101.4	A2
+920	reaksjon	noun	en	101.3	A2
+921	slag	noun	et	101.3	A2
+922	statsråd	noun	en	100.9	A2
+923	finnes	verb		100.8	A2
+924	takke	verb		100.7	A2
+925	dramatisk	adjective		100.7	A2
+926	avdeling	noun	ei	100.6	A2
+927	dekke	verb		100.4	A2
+928	far	noun	en	100.3	A2
+929	praksis	noun	en	100.3	A2
+930	arbeidsplass	noun	en	100.2	A2
+931	foregå	verb		99.9	A2
+932	villig	adjective		99.8	A2
+933	pressekonferanse	noun	en	99.7	A2
+934	handel	noun	en	99.7	A2
+935	negativ	adjective		99.6	A2
+936	aktivitet	noun	en	99.6	A2
+937	vurdering	noun	ei	99.4	A2
+938	tema	noun	et	99.3	A2
+939	moderne	adjective		99.1	A2
+940	inntrykk	noun	et	98.7	A2
+941	produkt	noun	et	98.5	A2
+942	ulovlig	adjective		98.4	A2
+943	bygning	noun	ei	98.4	A2
+944	merke	verb		98.3	A2
+945	hjem	noun	et	98.0	A2
+946	an	adverb		97.9	A2
+947	statlig	adjective		97.9	A2
+948	bære	verb		97.8	A2
+949	omtrent	adverb		97.7	A2
+950	alternativ	noun	et	97.4	A2
+951	finale	noun	en	97.3	A2
+952	sovjetisk	adjective		97.2	A2
+953	knytte	verb		97.1	A2
+954	utvalg	noun	et	96.9	A2
+955	palestinsk	adjective		96.9	A2
+956	henge	verb		96.8	A2
+957	basere	verb		96.7	A2
+958	besøk	noun	et	96.3	A2
+959	vant	adjective		96.0	A2
+960	ressurs	noun	en	95.7	A2
+961	umiddelbar	adjective		95.7	A2
+962	tale	verb		95.7	A2
+963	varm	adjective		95.6	A2
+964	nær	adjective		95.6	A2
+965	fremover	preposition		95.5	A2
+966	smile	verb		95.4	A2
+967	kritisk	adjective		95.2	A2
+968	nyhetsbyrå	noun	et	95.2	A2
+969	stanse	verb		95.1	A2
+970	felt	noun	en	94.8	A2
+971	streng	adjective		94.7	A2
+972	skjule	verb		94.7	A2
+973	spiss	noun	en	94.6	A2
+974	kultur	noun	en	94.4	A2
+975	beskrive	verb		94.4	A2
+976	skyld	noun	ei	94.3	A2
+977	vekt	noun	ei	94.2	A2
+978	etterforskning	noun	ei	94.2	A2
+979	oppgjør	noun	et	94.0	A2
+980	drøy	adjective		94.0	A2
+981	bakke	noun	en	93.9	A2
+982	kjempe	verb		93.6	A2
+983	gripe	verb		93.5	A2
+984	styre	noun	et	93.5	A2
+985	snakk	noun	en	93.5	A2
+986	fastslå	verb		93.5	A2
+987	kropp	noun	en	93.4	A2
+988	frykte	verb		93.2	A2
+989	strid	noun	en	93.1	A2
+990	tradisjonell	adjective		93.0	A2
+991	danske	noun	en	93.0	A2
+992	trafikk	noun	en	93.0	A2
+993	oppfordre	verb		92.9	A2
+994	handling	noun	ei	92.7	A2
+995	alvor	noun	et	92.7	A2
+996	skudd	noun	et	92.7	A2
+997	tidspunkt	noun	et	92.6	A2
+998	vakker	adjective		92.5	A2
+999	effektiv	adjective		92.4	A2
+1000	prosess	noun	en	92.4	A2
+1001	trussel	noun	en	92.3	A2
+1002	konkret	adjective		92.3	A2
+1003	usikker	adjective		92.3	A2
+1004	avhengig	adjective		92.1	A2
+1005	spare	verb		92.1	A2
+1006	advare	verb		91.7	A2
+1007	syn	noun	et	91.7	A2
+1008	sånn	determiner		91.5	A2
+1009	fantastisk	adjective		91.1	A2
+1010	hvit	adjective		91.1	A2
+1011	kunnskap	noun	en	90.9	A2
+1012	opprette	verb		90.9	A2
+1013	oppdage	verb		90.7	A2
+1014	formann	noun	en	90.7	A2
+1015	kandidat	noun	en	90.7	A2
+1016	hendelse	noun	en	90.6	A2
+1017	stoff	noun	et	90.4	A2
+1018	nærhet	noun	ei	90.3	A2
+1019	fort	adjective		90.2	A2
+1020	vokse	verb		90.1	A2
+1021	brudd	noun	et	90.0	A2
+1022	intervju	noun	et	90.0	A2
+1023	plutselig	adjective		89.8	A2
+1024	sjekke	verb		89.8	A2
+1025	klasse	noun	ei	89.8	A2
+1026	tonn	noun	et	89.7	A2
+1027	forskning	noun	ei	89.7	A2
+1028	glemme	verb		89.6	A2
+1029	runde	noun	en	89.5	A2
+1030	spill	noun	et	89.5	A2
+1031	flyplass	noun	en	89.2	A2
+1032	øyeblikk	noun	et	89.0	A2
+1033	synge	verb		89.0	A2
+1034	via	preposition		89.0	A2
+1035	oppdrag	noun	et	88.9	A2
+1036	vestlig	adjective		88.8	A2
+1037	opprinnelig	adjective		88.5	A2
+1038	fullstendig	adjective		88.5	A2
+1039	band	noun	et	88.4	A2
+1040	solid	adjective		88.2	A2
+1041	alder	noun	en	88.2	A2
+1042	bringe	verb		87.6	A2
+1043	gull	noun	et	87.5	A2
+1044	ansvarlig	adjective		87.4	A2
+1045	glede	verb		87.4	A2
+1046	forberede	verb		87.4	A2
+1047	offer	noun	et	87.2	A2
+1048	flyktning	noun	en	87.2	A2
+1049	sivil	adjective		87.1	A2
+1050	krise	noun	ei	86.9	A2
+1051	tillit	noun	ei	86.6	A2
+1052	skjønne	verb		86.6	A2
+1053	plate	noun	ei	86.5	A2
+1054	stikke	verb		86.5	A2
+1055	oppe	adverb		86.4	A2
+1056	fordele	verb		86.4	A2
+1057	jakt	noun	ei	86.3	A2
+1058	kommunal	adjective		86.0	A2
+1059	oppfatte	verb		86.0	A2
+1060	mistenke	verb		85.9	A2
+1061	interessert	adjective		85.9	A2
+1062	anbefale	verb		85.8	A2
+1063	italiensk	adjective		85.6	A2
+1064	oppmerksomhet	noun	ei	85.6	A2
+1065	anlegg	noun	et	85.6	A2
+1066	påvirke	verb		85.5	A2
+1067	historisk	adjective		85.5	A2
+1068	bestemt	adjective		85.4	A2
+1069	luft	noun	ei	85.4	A2
+1070	vond	adjective		85.3	A2
+1071	fremme	verb		85.2	A2
+1072	gjeld	noun	en	85.2	A2
+1073	kutte	verb		84.9	A2
+1074	omfatte	verb		84.8	A2
+1075	fare	noun	en	84.8	A2
+1076	skuespiller	noun	en	84.8	A2
+1077	døgn	noun	et	84.7	A2
+1078	varsel	noun	et	84.6	A2
+1079	kvinnelig	adjective		84.5	A2
+1080	markere	verb		84.5	A2
+1081	signal	noun	et	84.4	A2
+1082	fred	noun	en	84.4	A2
+1083	fysisk	adjective		84.2	A2
+1084	fjerde	adjective		84.1	A2
+1085	investering	noun	ei	83.6	A2
+1086	tvinge	verb		83.6	A2
+1087	streik	noun	en	83.5	A2
+1088	invitere	verb		83.2	A2
+1089	posisjon	noun	en	83.0	A2
+1090	vilje	noun	en	82.5	A2
+1091	utvide	verb		82.5	A2
+1092	generalsekretær	noun	en	82.4	A2
+1093	omsetning	noun	ei	82.4	A2
+1094	akseptere	verb		82.4	A2
+1095	idé	noun	en	82.0	A2
+1096	stund	noun	ei	81.8	A2
+1097	ekspert	noun	en	81.6	A2
+1098	kilo	noun	en	81.5	A2
+1099	lure	verb		81.4	A2
+1100	undersøke	verb		81.3	A2
+1101	ukjent	adjective		81.0	A2
+1102	jord	noun	ei	80.9	A2
+1103	avstand	noun	en	80.8	A2
+1104	dessverre	adverb		80.7	A2
+1105	innhold	noun	et	80.7	A2
+1106	snu	verb		80.7	A2
+1107	vesentlig	adjective		80.7	A2
+1108	landslag	noun	et	80.4	A2
+1109	samt	adverb		80.3	A2
+1110	samt	conjunction		80.3	A2
+1111	firma	noun	et	80.3	A2
+1112	mannskap	noun	et	80.2	A2
+1113	voldsom	adjective		80.2	A2
+1114	nabo	noun	en	80.1	A2
+1115	kald	adjective		80.1	A2
+1116	sammenligne	verb		80.1	A2
+1117	huske	verb		79.9	A2
+1118	lete	verb		79.9	A2
+1119	bror	noun	en	79.8	A2
+1120	punkt	noun	et	79.7	A2
+1121	dø	verb		79.7	A2
+1122	tilstand	noun	en	79.5	A2
+1123	foreligge	verb		79.4	A2
+1124	feire	verb		79.4	A2
+1125	minne	verb		79.3	A2
+1126	grov	adjective		79.3	A2
+1127	artikkel	noun	en	79.2	A2
+1128	søknad	noun	en	79.2	A2
+1129	passere	verb		79.0	A2
+1130	spre	verb		79.0	A2
+1131	utstilling	noun	ei	78.9	A2
+1132	godta	verb		78.9	A2
+1133	feil	adjective		78.9	A2
+1134	utgift	noun	ei	78.9	A2
+1135	grønn	adjective		78.7	A2
+1136	nedgang	noun	en	78.7	A2
+1137	lønn	noun	ei	78.6	A2
+1138	scoring	noun	ei	78.4	A2
+1139	ansikt	noun	et	77.8	A2
+1140	tiltalt	adjective		77.6	A2
+1141	pågripe	verb		77.6	A2
+1142	oppgi	verb		77.6	A2
+1143	frisk	adjective		77.6	A2
+1144	tekst	noun	ei	77.5	A2
+1145	operasjon	noun	en	77.4	A2
+1146	mengde	noun	en	77.3	A2
+1147	angripe	verb		77.3	A2
+1148	bydel	noun	en	77.2	A2
+1149	modell	noun	en	77.2	A2
+1150	ringe	verb		77.2	A2
+1151	omtale	verb		77.1	A2
+1152	uavhengig	adjective		77.1	A2
+1153	motstander	noun	en	77.0	A2
+1154	tale	noun	en	77.0	A2
+1155	syk	adjective		76.9	A2
+1156	motstand	noun	en	76.9	A2
+1157	opplevelse	noun	en	76.8	A2
+1158	risiko	noun	en	76.6	A2
+1159	virkelighet	noun	ei	76.6	A2
+1160	vinner	noun	en	76.5	A2
+1161	straffe	verb		76.5	A2
+1162	rimelig	adjective		76.5	A2
+1163	nyhet	noun	ei	76.5	A2
+1164	omkomme	verb		76.2	A2
+1165	tog	noun	et	76.2	A2
+1166	andel	noun	en	75.9	A2
+1167	danne	verb		75.9	A2
+1168	sør	adverb		75.6	A2
+1169	fattig	adjective		75.6	A2
+1170	relativ	adjective		75.4	A2
+1171	låt	noun	en	75.4	A2
+1172	rettssak	noun	ei	75.3	A2
+1173	spise	verb		75.3	A2
+1174	anta	verb		75.1	A2
+1175	hverken	conjunction		74.9	A2
+1176	kontrollere	verb		74.9	A2
+1177	hoppe	verb		74.9	A2
+1178	annerledes	adjective		74.9	A2
+1179	rygg	noun	en	74.7	A2
+1180	oversikt	noun	en	74.6	A2
+1181	sang	noun	en	74.5	A2
+1182	slett	adjective		74.4	A2
+1183	industri	noun	en	74.4	A2
+1184	tillate	verb		74.2	A2
+1185	rik	adjective		74.1	A2
+1186	vegg	noun	en	74.1	A2
+1187	frivillig	adjective		73.9	A2
+1188	idrett	noun	en	73.9	A2
+1189	forestilling	noun	ei	73.8	A2
+1190	operasjonsleder	noun	en	73.8	A2
+1191	konkurrent	noun	en	73.8	A2
+1192	jul	noun	ei	73.8	A2
+1193	forutsetning	noun	ei	73.6	A2
+1194	fordel	noun	en	73.6	A2
+1195	keeper	noun	en	73.5	A2
+1196	operere	verb		73.4	A2
+1197	vitne	noun	et	73.2	A2
+1198	pressemelding	noun	ei	73.2	A2
+1199	faktum	noun	et	73.1	A2
+1200	middel	noun	en	73.1	A2
+1201	effekt	noun	en	72.9	A2
+1202	nett	noun	et	72.9	A2
+1203	avsløre	verb		72.8	A2
+1204	ettersom	conjunction		72.7	A2
+1205	fange	noun	en	72.5	A2
+1206	opptre	verb		72.4	A2
+1207	helse	noun	ei	72.4	A2
+1208	lande	verb		72.4	A2
+1209	uttrykk	noun	et	72.4	A2
+1210	passe	verb		72.3	A2
+1211	inntil	conjunction		72.3	A2
+1212	inntil	preposition		72.3	A2
+1213	bonde	noun	en	72.1	A2
+1214	nede	adverb		72.0	A2
+1215	eiendom	noun	en	72.0	A2
+1216	fokus	noun	et	72.0	A2
+1217	brenne	verb		72.0	A2
+1218	utbygging	noun	ei	71.9	A2
+1219	heve	verb		71.9	A2
+1220	kunstner	noun	en	71.9	A2
+1221	utstyr	noun	et	71.9	A2
+1222	gratis	adjective		71.9	A2
+1223	overgrep	noun	et	71.8	A2
+1224	olje	noun	ei	71.8	A2
+1225	leser	noun	en	71.8	A2
+1226	mest	adjective		71.8	A2
+1227	risikere	verb		71.8	A2
+1228	kø	noun	en	71.8	A2
+1229	etterpå	adverb		71.7	A2
+1230	rettighet	noun	ei	71.6	A2
+1231	kunst	noun	en	71.6	A2
+1232	overskudd	noun	et	71.5	A2
+1233	detalj	noun	en	71.4	A2
+1234	vin	noun	en	71.4	A2
+1235	jevn	adjective		71.3	A2
+1236	mindre	adjective		71.2	A2
+1237	utsatt	adjective		71.1	A2
+1238	initiativ	noun	et	71.1	A2
+1239	kontakte	verb		71.1	A2
+1240	erstatte	verb		70.9	A2
+1241	kinesisk	adjective		70.9	A2
+1242	hensikt	noun	en	70.7	A2
+1243	forbi	preposition		70.6	A2
+1244	tradisjon	noun	en	70.5	A2
+1245	engasjere	verb		70.4	A2
+1246	diskusjon	noun	en	70.4	A2
+1247	spor	noun	et	70.2	A2
+1248	barnehage	noun	en	70.2	A2
+1249	kostnad	noun	en	70.1	A2
+1250	nærmeste	adjective		70.1	A2
+1251	begrense	verb		70.1	A2
+1252	valgkamp	noun	en	70.1	A2
+1253	dreie	verb		70.0	A2
+1254	forståelse	noun	en	69.9	A2
+1255	tilgjengelig	adjective		69.9	A2
+1256	minne	noun	et	69.9	A2
+1257	skille	verb		69.8	A2
+1258	opprettholde	verb		69.8	A2
+1259	offentliggjøre	verb		69.7	A2
+1260	lide	verb		69.7	A2
+1261	praktisk	adjective		69.6	A2
+1262	fisk	noun	en	69.5	A2
+1263	lansere	verb		69.5	A2
+1264	tittel	noun	en	69.4	A2
+1265	forsøk	noun	et	69.3	A2
+1266	kritisere	verb		69.3	A2
+1267	palestiner	noun	en	69.2	A2
+1268	sannsynligvis	adverb		69.1	A2
+1269	divisjon	noun	en	69.1	A2
+1270	forventning	noun	ei	69.0	A2
+1271	episode	noun	en	69.0	A2
+1272	erstatning	noun	ei	68.9	A2
+1273	peke	verb		68.9	A2
+1274	stole	verb		68.8	A2
+1275	fører	noun	en	68.8	A2
+1276	forsvarer	noun	en	68.8	A2
+1277	pågå	verb		68.7	A2
+1278	institusjon	noun	en	68.7	A2
+1279	strøm	noun	en	68.7	A2
+1280	utnytte	verb		68.6	A2
+1281	ferie	noun	en	68.6	A2
+1282	stemning	noun	ei	68.6	A2
+1283	sjåfør	noun	en	68.2	A2
+1284	prioritere	verb		68.2	A2
+1285	konstatere	verb		68.1	A2
+1286	bevise	verb		68.0	A2
+1287	ambassade	noun	en	67.9	A2
+1288	fjell	noun	et	67.9	A2
+1289	roman	noun	en	67.7	A2
+1290	arrangement	noun	et	67.7	A2
+1291	hyggelig	adjective		67.6	A2
+1292	norsk	noun	en	67.6	A2
+1293	forhånd	noun	ei	67.1	A2
+1294	vekke	verb		67.1	A2
+1295	ulik	adjective		66.8	A2
+1296	enhver	determiner		66.7	A2
+1297	forsvar	noun	et	66.7	A2
+1298	artist	noun	en	66.5	A2
+1299	låne	verb		66.5	A2
+1300	riktignok	adverb		66.4	A2
+1301	fylke	noun	et	66.4	A2
+1302	savne	verb		66.3	A2
+1303	respekt	noun	en	66.3	A2
+1304	rolig	adjective		66.3	A2
+1305	psykisk	adjective		66.1	A2
+1306	videregående	adjective		66.1	A2
+1307	hund	noun	en	66.0	A2
+1308	framtid	noun	ei	65.9	A2
+1309	natur	noun	en	65.9	A2
+1310	lån	noun	en	65.9	A2
+1311	oppfatning	noun	ei	65.9	A2
+1312	greie	verb		65.8	A2
+1313	organisere	verb		65.8	A2
+1314	svekke	verb		65.7	A2
+1315	universitet	noun	et	65.6	A2
+1316	tåle	verb		65.5	A2
+1317	morsom	adjective		65.3	A2
+1318	is	noun	en	65.3	A2
+1319	turist	noun	en	65.3	A2
+1320	merke	noun	et	65.2	A2
+1321	teste	verb		65.1	A2
+1322	stjele	verb		65.0	A2
+1323	formell	adjective		64.9	A2
+1324	gass	noun	en	64.8	A2
+1325	løfte	verb		64.8	A2
+1326	tusen	noun	et	64.8	A2
+1327	lyd	noun	en	64.8	A2
+1328	medisinsk	adjective		64.8	A2
+1329	tilskuer	noun	en	64.8	A2
+1330	flink	adjective		64.6	A2
+1331	mesterskap	noun	et	64.6	A2
+1332	gård	noun	en	64.5	A2
+1333	evne	noun	ei	64.5	A2
+1334	billett	noun	en	64.2	A2
+1335	kone	noun	ei	64.2	A2
+1336	ran	noun	et	64.0	A2
+1337	fortjene	verb		64.0	A2
+1338	medarbeider	noun	en	63.9	A2
+1339	rekord	noun	en	63.8	A2
+1340	hjerte	noun	et	63.8	A2
+1341	rykke	verb		63.7	A2
+1342	klassisk	adjective		63.7	A2
+1343	frakte	verb		63.6	A2
+1344	demokratisk	adjective		63.6	A2
+1345	prinsipp	noun	et	63.5	A2
+1346	region	noun	en	63.4	A2
+1347	faglig	adjective		63.3	A2
+1348	ekstrem	adjective		63.3	A2
+1349	beklage	verb		63.3	A2
+1350	produsent	noun	en	63.2	A2
+1351	tilgang	noun	en	63.0	A2
+1352	kaptein	noun	en	63.0	A2
+1353	hav	noun	et	63.0	A2
+1354	engasjement	noun	et	63.0	A2
+1355	åpning	noun	ei	63.0	A2
+1356	intern	adjective		62.9	A2
+1357	sjelden	adjective		62.8	A2
+1358	materiale	noun	et	62.7	A2
+1359	tap	noun	et	62.7	A2
+1360	konklusjon	noun	en	62.6	A2
+1361	hundre	noun	et	62.6	A2
+1362	mot	noun	et	62.6	A2
+1363	forbud	noun	et	62.5	A2
+1364	aktør	noun	en	62.4	A2
+1365	avgjørende	adjective		62.3	A2
+1366	likhet	noun	ei	62.3	A2
+1367	skritt	noun	et	62.3	A2
+1368	studere	verb		62.3	A2
+1369	dame	noun	ei	62.2	A2
+1370	karriere	noun	en	62.2	A2
+1371	drøfte	verb		62.2	A2
+1372	felles	noun	en	62.2	A2
+1373	arbeidsgiver	noun	en	62.2	A2
+1374	finsk	adjective		62.1	A2
+1375	enighet	noun	ei	62.1	A2
+1376	arrestere	verb		62.0	A2
+1377	hundre	number		62.0	A2
+1378	innstilling	noun	ei	62.0	A2
+1379	løs	adjective		61.9	A2
+1380	delvis	adjective		61.9	A2
+1381	flott	adjective		61.9	A2
+1382	overgang	noun	en	61.9	A2
+1383	antyde	verb		61.8	A2
+1384	inkludere	verb		61.6	A2
+1385	bruker	noun	en	61.6	A2
+1386	tingrett	noun	en	61.6	A2
+1387	størrelse	noun	en	61.5	A2
+1388	album	noun	et	61.5	A2
+1389	festival	noun	en	61.3	A2
+1390	protest	noun	en	61.2	A2
+1391	halvannen	determiner		61.1	A2
+1392	død	noun	en	60.8	A2
+1393	orden	noun	en	60.8	A2
+1394	alternativ	adjective		60.8	A2
+1395	fly	verb		60.8	A2
+1396	nåværende	adjective		60.8	A2
+1397	redd	adjective		60.7	A2
+1398	seksuell	adjective		60.5	A2
+1399	reell	adjective		60.5	A2
+1400	rad	noun	ei	60.4	A2
+1401	vann	noun	et	60.4	A2
+1402	grundig	adjective		60.4	A2
+1403	konkludere	verb		60.4	A2
+1404	nødt	adjective		60.3	A2
+1405	sannsynlig	adjective		60.3	A2
+1406	underskudd	noun	et	60.3	A2
+1407	nyte	verb		60.2	A2
+1408	knapt	adverb		60.1	A2
+1409	sjø	noun	en	60.0	A2
+1410	hemmelig	adjective		60.0	A2
+1411	sol	noun	ei	59.9	A2
+1412	stjerne	noun	ei	59.8	A2
+1413	drikke	verb		59.8	A2
+1414	tom	adjective		59.7	A2
+1415	tegn	noun	et	59.6	A2
+1416	medføre	verb		59.6	A2
+1417	motsetning	noun	ei	59.6	A2
+1418	vekk	adverb		59.6	A2
+1419	virkning	noun	ei	59.5	A2
+1420	oppholde	verb		59.5	A2
+1421	høyde	noun	en	59.4	A2
+1422	demonstrant	noun	en	59.3	A2
+1423	avhøre	verb		59.3	A2
+1424	drøm	noun	en	59.3	A2
+1425	forsiktig	adjective		59.3	A2
+1426	henholdsvis	adverb		59.2	A2
+1427	godkjenne	verb		59.2	A2
+1428	rykte	noun	et	59.2	A2
+1429	utelukke	verb		59.2	A2
+1430	avgift	noun	ei	59.2	A2
+1431	bidrag	noun	et	59.2	A2
+1432	bransje	noun	en	59.1	A2
+1433	restaurant	noun	en	59.1	A2
+1434	involvere	verb		59.1	A2
+1435	innlegg	noun	et	59.0	A2
+1436	bystyre	noun	et	59.0	A2
+1437	lyse	verb		59.0	A2
+1438	kriminell	adjective		58.9	A2
+1439	sektor	noun	en	58.9	A2
+1440	lagmannsrett	noun	en	58.9	A2
+1441	etasje	noun	en	58.7	A2
+1442	nasjonalforsamling	noun	ei	58.6	A2
+1443	klær	noun	et	58.6	A2
+1444	beskytte	verb		58.5	A2
+1445	nasjon	noun	en	58.4	A2
+1446	landsmøte	noun	et	58.4	A2
+1447	rar	adjective		58.4	A2
+1448	bevisst	adjective		58.4	A2
+1449	beløp	noun	et	58.3	A2
+1450	helikopter	noun	et	58.2	A2
+1451	bombe	noun	ei	58.1	A2
+1452	bot	noun	ei	57.9	A2
+1453	opposisjon	noun	en	57.9	A2
+1454	politimann	noun	en	57.9	A2
+1455	rådgiver	noun	en	57.8	A2
+1456	rolle	verb		57.7	A2
+1457	finansminister	noun	en	57.5	A2
+1458	bevegelse	noun	en	57.4	A2
+1459	språk	noun	et	57.3	A2
+1460	uklar	adjective		57.2	A2
+1461	utdannelse	noun	en	57.2	A2
+1462	gjenstå	verb		57.1	A2
+1463	anse	verb		57.1	A2
+1464	dukke	verb		57.0	A2
+1465	demonstrasjon	noun	en	57.0	A2
+1466	stil	noun	en	56.9	A2
+1467	kompetanse	noun	en	56.9	A2
+1468	hær	noun	en	56.9	A2
+1469	karakter	noun	en	56.9	A2
+1470	igjennom	preposition		56.8	A2
+1471	bygging	noun	ei	56.7	A2
+1472	uheldig	adjective		56.7	A2
+1473	utslipp	noun	et	56.6	A2
+1474	nærme	verb		56.6	A2
+1475	stabil	adjective		56.6	A2
+1476	forandre	verb		56.6	A2
+1477	nestleder	noun	en	56.5	A2
+1478	anmelde	verb		56.3	A2
+1479	leie	verb		56.2	A2
+1480	frihet	noun	ei	56.0	A2
+1481	statsbudsjett	noun	et	56.0	A2
+1482	informasjonssjef	noun	en	56.0	A2
+1483	overføre	verb		56.0	A2
+1484	tegne	verb		55.9	A2
+1485	bein	noun	et	55.9	A2
+1486	tilstrekkelig	adjective		55.9	A2
+1487	varsle	verb		55.8	A2
+1488	egne	verb		55.7	A2
+1489	unntak	noun	et	55.7	A2
+1490	satsing	noun	ei	55.7	A2
+1491	teknologi	noun	en	55.7	A2
+1492	dialog	noun	en	55.6	A2
+1493	lys	noun	et	55.6	A2
+1494	fot	noun	en	55.6	A2
+1495	ramme	noun	ei	55.6	A2
+1496	forsikre	verb		55.5	A2
+1497	landslagssjef	noun	en	55.5	A2
+1498	erkjenne	verb		55.5	A2
+1499	politikammer	noun	et	55.4	A2
+1500	utøver	noun	en	55.4	A2
+1501	profesjonell	adjective		55.4	B1
+1502	russer	noun	en	55.4	B1
+1503	føde	verb		55.3	B1
+1504	verd	noun	en	55.2	B1
+1505	fatte	verb		55.2	B1
+1506	betegne	verb		55.2	B1
+1507	vindu	noun	et	55.2	B1
+1508	heldigvis	adverb		55.2	B1
+1509	generasjon	noun	en	55.2	B1
+1510	byråd	noun	en	55.1	B1
+1511	demokrati	noun	et	55.0	B1
+1512	stadion	noun	et	55.0	B1
+1513	bevege	verb		54.9	B1
+1514	tilhenger	noun	en	54.9	B1
+1515	konsentrere	verb		54.8	B1
+1516	henvendelse	noun	en	54.8	B1
+1517	overleve	verb		54.8	B1
+1518	rope	verb		54.7	B1
+1519	synke	verb		54.7	B1
+1520	servere	verb		54.7	B1
+1521	radio	noun	en	54.7	B1
+1522	japansk	adjective		54.6	B1
+1523	beboer	noun	en	54.5	B1
+1524	samling	noun	ei	54.5	B1
+1525	kapasitet	noun	en	54.4	B1
+1526	lignende	adjective		54.4	B1
+1527	teater	noun	et	54.4	B1
+1528	etappe	noun	en	54.4	B1
+1529	utspill	noun	et	54.4	B1
+1530	begå	verb		54.3	B1
+1531	redaktør	noun	en	54.3	B1
+1532	meningsmåling	noun	ei	54.2	B1
+1533	vegne	noun	en	54.2	B1
+1534	karakterisere	verb		54.1	B1
+1535	tysker	noun	en	54.1	B1
+1536	tyde	verb		54.0	B1
+1537	vanligvis	adverb		54.0	B1
+1538	nøye	verb		54.0	B1
+1539	verdt	adjective		53.9	B1
+1540	manager	noun	en	53.8	B1
+1541	tropp	noun	en	53.8	B1
+1542	investor	noun	en	53.8	B1
+1543	pen	adjective		53.7	B1
+1544	opptil	preposition		53.7	B1
+1545	reform	noun	en	53.7	B1
+1546	forhandle	verb		53.6	B1
+1547	konservativ	adjective		53.6	B1
+1548	dokumentere	verb		53.5	B1
+1549	ledig	adjective		53.4	B1
+1550	oppslutning	noun	ei	53.3	B1
+1551	vind	noun	en	53.3	B1
+1552	turnering	noun	ei	53.2	B1
+1553	mørk	adjective		53.2	B1
+1554	institutt	noun	et	53.1	B1
+1555	hel	adjective		53.0	B1
+1556	presse	noun	ei	53.0	B1
+1557	medisin	noun	en	53.0	B1
+1558	energi	noun	en	53.0	B1
+1559	kanal	noun	en	52.8	B1
+1560	domstol	noun	en	52.8	B1
+1561	runde	verb		52.7	B1
+1562	sum	noun	en	52.6	B1
+1563	rive	verb		52.6	B1
+1564	arm	noun	en	52.5	B1
+1565	statistikk	noun	en	52.5	B1
+1566	pålegge	verb		52.4	B1
+1567	forutsette	verb		52.4	B1
+1568	funn	noun	et	52.3	B1
+1569	berøre	verb		52.2	B1
+1570	mistanke	noun	en	52.1	B1
+1571	øre	noun	en	52.1	B1
+1572	landsby	noun	en	52.0	B1
+1573	strategi	noun	en	51.9	B1
+1574	avtale	verb		51.9	B1
+1575	forsvarsminister	noun	en	51.9	B1
+1576	opplegg	noun	et	51.8	B1
+1577	skog	noun	en	51.8	B1
+1578	arrangør	noun	en	51.7	B1
+1579	rød	adjective		51.7	B1
+1580	engang	adverb		51.7	B1
+1581	innstille	verb		51.7	B1
+1582	fremholde	verb		51.7	B1
+1583	øst	adverb		51.6	B1
+1584	eksplosjon	noun	en	51.4	B1
+1585	vende	verb		51.4	B1
+1586	bekymre	verb		51.4	B1
+1587	konferanse	noun	en	51.4	B1
+1588	midlertidig	adjective		51.3	B1
+1589	hest	noun	en	51.3	B1
+1590	brannvesen	noun	et	51.3	B1
+1591	versjon	noun	en	51.2	B1
+1592	løper	noun	en	51.2	B1
+1593	post	noun	en	51.1	B1
+1594	spenning	noun	ei	51.1	B1
+1595	midt	adverb		51.1	B1
+1596	senter	noun	en	51.0	B1
+1597	minst	adjective		51.0	B1
+1598	framover	preposition		51.0	B1
+1599	favoritt	noun	en	51.0	B1
+1600	semifinale	noun	en	50.9	B1
+1601	bry	verb		50.9	B1
+1602	dyr	noun	et	50.9	B1
+1603	muslimsk	adjective		50.9	B1
+1604	anslå	verb		50.9	B1
+1605	konkurrere	verb		50.8	B1
+1606	metode	noun	en	50.8	B1
+1607	kjæreste	noun	en	50.8	B1
+1608	muslim	noun	en	50.7	B1
+1609	skifte	verb		50.7	B1
+1610	perfekt	adjective		50.6	B1
+1611	ski	noun	ei	50.5	B1
+1612	studie	noun	en	50.5	B1
+1613	tiltale	verb		50.3	B1
+1614	halvår	noun	et	50.3	B1
+1615	oljepris	noun	en	50.2	B1
+1616	høyre	noun	en	50.2	B1
+1617	hverdag	noun	en	50.0	B1
+1618	utdanning	noun	ei	50.0	B1
+1619	tips	noun	en	50.0	B1
+1620	investere	verb		50.0	B1
+1621	kyst	noun	en	49.9	B1
+1622	måling	noun	ei	49.9	B1
+1623	noensinne	adverb		49.8	B1
+1624	dit	adverb		49.7	B1
+1625	serbisk	adjective		49.7	B1
+1626	styreformann	noun	en	49.7	B1
+1627	finansiere	verb		49.7	B1
+1628	temperatur	noun	en	49.7	B1
+1629	realitet	noun	en	49.6	B1
+1630	dronning	noun	ei	49.6	B1
+1631	arbeider	noun	en	49.6	B1
+1632	tråd	noun	en	49.6	B1
+1633	bytte	verb		49.5	B1
+1634	bevis	noun	et	49.4	B1
+1635	fylkeskommune	noun	en	49.4	B1
+1636	galt	noun	en	49.3	B1
+1637	næring	noun	ei	49.3	B1
+1638	kjærlighet	noun	ei	49.3	B1
+1639	status	noun	en	49.3	B1
+1640	innvandrer	noun	en	49.3	B1
+1641	sann	adjective		49.3	B1
+1642	video	noun	en	49.3	B1
+1643	omstridt	adjective		49.3	B1
+1644	formål	noun	et	49.2	B1
+1645	utstyre	verb		49.2	B1
+1646	bortsett	adverb		49.2	B1
+1647	distrikt	noun	et	49.2	B1
+1648	variere	verb		49.2	B1
+1649	absolutt	adjective		49.1	B1
+1650	tendens	noun	en	49.1	B1
+1651	indre	adjective		49.1	B1
+1652	rektor	noun	en	49.1	B1
+1653	fest	noun	en	49.1	B1
+1654	betrakte	verb		49.1	B1
+1655	stortingsrepresentant	noun	en	49.1	B1
+1656	stykke	noun	et	49.1	B1
+1657	biskop	noun	en	49.1	B1
+1658	ære	noun	ei	49.0	B1
+1659	informere	verb		49.0	B1
+1660	dekke	noun	et	49.0	B1
+1661	rute	noun	ei	48.9	B1
+1662	eliteserie	noun	en	48.8	B1
+1663	alkohol	noun	en	48.8	B1
+1664	budskap	noun	et	48.7	B1
+1665	dels	adverb		48.7	B1
+1666	religiøs	adjective		48.7	B1
+1667	hit	adverb		48.6	B1
+1668	prest	noun	en	48.6	B1
+1669	juridisk	adjective		48.5	B1
+1670	innlede	verb		48.5	B1
+1671	skyldig	adjective		48.5	B1
+1672	bjørn	noun	en	48.5	B1
+1673	museum	noun	et	48.4	B1
+1674	plukke	verb		48.4	B1
+1675	regning	noun	ei	48.4	B1
+1676	trykke	verb		48.4	B1
+1677	hjemmebane	noun	en	48.2	B1
+1678	forby	verb		48.2	B1
+1679	ankomme	verb		48.2	B1
+1680	strekke	verb		48.1	B1
+1681	avgang	noun	en	48.0	B1
+1682	søker	noun	en	48.0	B1
+1683	cirka	adverb		48.0	B1
+1684	gjennomsnitt	noun	et	48.0	B1
+1685	tunnel	noun	en	47.9	B1
+1686	gjenta	verb		47.9	B1
+1687	utgang	noun	en	47.9	B1
+1688	hvilke	pronoun		47.9	B1
+1689	angivelig	adjective		47.8	B1
+1690	uro	noun	ei	47.8	B1
+1691	borgerlig	adjective		47.8	B1
+1692	trist	adjective		47.8	B1
+1693	høyre	adjective		47.7	B1
+1694	musiker	noun	en	47.7	B1
+1695	uvanlig	adjective		47.7	B1
+1696	fiske	verb		47.7	B1
+1697	fersk	adjective		47.7	B1
+1698	fremstå	verb		47.6	B1
+1699	deltaker	noun	en	47.6	B1
+1700	innse	verb		47.5	B1
+1701	papir	noun	et	47.4	B1
+1702	spark	noun	en	47.3	B1
+1703	imponere	verb		47.3	B1
+1704	påstå	verb		47.3	B1
+1705	regi	noun	en	47.3	B1
+1706	garantere	verb		47.2	B1
+1707	bud	noun	et	47.2	B1
+1708	administrasjon	noun	en	47.2	B1
+1709	intens	adjective		47.2	B1
+1710	kamerat	noun	en	47.2	B1
+1711	blå	adjective		47.1	B1
+1712	statssekretær	noun	en	47.1	B1
+1713	gjennomgå	verb		47.1	B1
+1714	dokument	noun	et	47.0	B1
+1715	usikkerhet	noun	ei	47.0	B1
+1716	forening	noun	ei	47.0	B1
+1717	hytte	noun	ei	47.0	B1
+1718	regelverk	noun	et	46.8	B1
+1719	global	adjective		46.8	B1
+1720	nøyaktig	adjective		46.7	B1
+1721	ambassadør	noun	en	46.6	B1
+1722	snø	noun	en	46.6	B1
+1723	spore	verb		46.6	B1
+1724	adgang	noun	en	46.6	B1
+1725	utgave	noun	ei	46.5	B1
+1726	heldig	adjective		46.4	B1
+1727	utarbeide	verb		46.3	B1
+1728	begrunnelse	noun	en	46.3	B1
+1729	brite	noun	en	46.2	B1
+1730	utsikt	noun	en	46.1	B1
+1731	tjenestemann	noun	en	46.1	B1
+1732	elv	noun	ei	46.1	B1
+1733	skarp	adjective		46.1	B1
+1734	vest	adverb		46.1	B1
+1735	fange	verb		46.1	B1
+1736	senke	verb		46.0	B1
+1737	fart	noun	en	46.0	B1
+1738	sove	verb		46.0	B1
+1739	gjerningsmann	noun	en	45.9	B1
+1740	klient	noun	en	45.9	B1
+1741	nærmere	adverb		45.9	B1
+1742	bekymring	noun	ei	45.8	B1
+1743	rederi	noun	et	45.6	B1
+1744	vellykket	adjective		45.6	B1
+1745	tilhører	noun	en	45.6	B1
+1746	erklære	verb		45.5	B1
+1747	tilpasse	verb		45.5	B1
+1748	tildele	verb		45.5	B1
+1749	tolke	verb		45.4	B1
+1750	forbund	noun	et	45.4	B1
+1751	regissør	noun	en	45.4	B1
+1752	føre	adverb		45.3	B1
+1753	motor	noun	en	45.3	B1
+1754	fremtidig	adjective		45.2	B1
+1755	utløse	verb		45.1	B1
+1756	mil	noun	ei	45.1	B1
+1757	fjernsyn	noun	et	45.1	B1
+1758	avhør	noun	et	45.0	B1
+1759	reduksjon	noun	en	45.0	B1
+1760	smak	noun	en	44.9	B1
+1761	lys	adjective		44.9	B1
+1762	dyktig	adjective		44.9	B1
+1763	kombinere	verb		44.9	B1
+1764	mobiltelefon	noun	en	44.8	B1
+1765	pådra	verb		44.8	B1
+1766	serber	noun	en	44.8	B1
+1767	typisk	adjective		44.7	B1
+1768	utgi	verb		44.7	B1
+1769	utlending	noun	en	44.7	B1
+1770	kvadratmeter	noun	en	44.7	B1
+1771	underveis	adverb		44.6	B1
+1772	utnevne	verb		44.6	B1
+1773	rapportere	verb		44.6	B1
+1774	foto	noun	et	44.5	B1
+1775	general	noun	en	44.5	B1
+1776	hjemmelaget	adjective		44.5	B1
+1777	sein	adjective		44.5	B1
+1778	åpenbare	verb		44.4	B1
+1779	justisminister	noun	en	44.4	B1
+1780	kniv	noun	en	44.4	B1
+1781	langsiktig	adjective		44.3	B1
+1782	styreleder	noun	en	44.3	B1
+1783	gjenstand	noun	en	44.2	B1
+1784	frist	noun	en	44.2	B1
+1785	innom	preposition		44.2	B1
+1786	maskin	noun	en	44.2	B1
+1787	mektig	adjective		44.1	B1
+1788	forbruker	noun	en	44.1	B1
+1789	ille	adverb		44.1	B1
+1790	preg	noun	et	44.1	B1
+1791	irakisk	adjective		44.0	B1
+1792	falsk	adjective		44.0	B1
+1793	seriøs	adjective		44.0	B1
+1794	ordinær	adjective		43.9	B1
+1795	klage	verb		43.9	B1
+1796	fag	noun	et	43.8	B1
+1797	blad	noun	et	43.8	B1
+1798	argument	noun	et	43.7	B1
+1799	musikalsk	adjective		43.7	B1
+1800	oppfylle	verb		43.7	B1
+1801	telle	verb		43.6	B1
+1802	lyst	noun	ei	43.6	B1
+1803	knapp	adjective		43.5	B1
+1804	omfang	noun	et	43.4	B1
+1805	overlate	verb		43.3	B1
+1806	øvelse	noun	en	43.3	B1
+1807	ordne	verb		43.3	B1
+1808	kant	noun	en	43.2	B1
+1809	arabisk	adjective		43.2	B1
+1810	tilknytning	noun	ei	43.1	B1
+1811	hjemland	noun	et	43.1	B1
+1812	aksjonær	noun	en	43.0	B1
+1813	klage	noun	ei	43.0	B1
+1814	stasjon	noun	en	42.9	B1
+1815	regime	noun	et	42.9	B1
+1816	børs	noun	en	42.9	B1
+1817	hvorvidt	conjunction		42.8	B1
+1818	oppgang	noun	en	42.8	B1
+1819	mild	adjective		42.8	B1
+1820	høyst	adverb		42.7	B1
+1821	offensiv	adjective		42.7	B1
+1822	protestere	verb		42.5	B1
+1823	gave	noun	ei	42.5	B1
+1824	trives	verb		42.5	B1
+1825	dominere	verb		42.5	B1
+1826	ro	noun	ei	42.4	B1
+1827	femte	adjective		42.4	B1
+1828	tillatelse	noun	en	42.4	B1
+1829	søster	noun	ei	42.4	B1
+1830	dobbelt	adjective		42.2	B1
+1831	oppføre	verb		42.1	B1
+1832	binde	verb		42.1	B1
+1833	tore	verb		42.1	B1
+1834	kreft	noun	en	42.0	B1
+1835	tiltale	noun	en	42.0	B1
+1836	midler	noun	en	42.0	B1
+1837	venstre	noun	en	42.0	B1
+1838	komité	noun	en	42.0	B1
+1839	overbevise	verb		42.0	B1
+1840	nedover	preposition		42.0	B1
+1841	tiår	noun	et	42.0	B1
+1842	blod	noun	et	42.0	B1
+1843	motsatt	adjective		42.0	B1
+1844	tone	noun	en	41.9	B1
+1845	bekymret	adjective		41.9	B1
+1846	nødvendigvis	adverb		41.9	B1
+1847	øl	noun	en	41.9	B1
+1848	venstre	adjective		41.8	B1
+1849	statsadvokat	noun	en	41.8	B1
+1850	muligens	adverb		41.8	B1
+1851	forbruk	noun	et	41.8	B1
+1852	sykkel	noun	en	41.7	B1
+1853	skeptisk	adjective		41.6	B1
+1854	politifolk	noun	et	41.6	B1
+1855	innta	verb		41.6	B1
+1856	foruten	preposition		41.6	B1
+1857	fremfor	preposition		41.6	B1
+1858	avslutning	noun	ei	41.5	B1
+1859	kombinasjon	noun	en	41.5	B1
+1860	etterlyse	verb		41.4	B1
+1861	sannhet	noun	ei	41.4	B1
+1862	havn	noun	ei	41.4	B1
+1863	medalje	noun	en	41.3	B1
+1864	overraskelse	noun	en	41.3	B1
+1865	tilsynelatende	adjective		41.3	B1
+1866	påføre	verb		41.2	B1
+1867	motiv	noun	et	41.2	B1
+1868	svensk	noun	en	41.2	B1
+1869	standpunkt	noun	et	41.1	B1
+1870	bevare	verb		41.1	B1
+1871	fond	noun	en	41.1	B1
+1872	partileder	noun	en	41.1	B1
+1873	opprører	noun	en	41.1	B1
+1874	flyselskap	noun	et	41.0	B1
+1875	ivareta	verb		41.0	B1
+1876	asylsøker	noun	en	41.0	B1
+1877	ro	verb		40.9	B1
+1878	bar	adjective		40.9	B1
+1879	kommisjon	noun	en	40.9	B1
+1880	forhindre	verb		40.9	B1
+1881	konsernsjef	noun	en	40.8	B1
+1882	kamera	noun	et	40.8	B1
+1883	katastrofe	noun	en	40.8	B1
+1884	bunn	noun	en	40.8	B1
+1885	mester	noun	en	40.7	B1
+1886	innslag	noun	et	40.7	B1
+1887	kjempe	noun	ei	40.7	B1
+1888	tilfeldig	adjective		40.7	B1
+1889	såpass	adverb		40.7	B1
+1890	kampanje	noun	en	40.6	B1
+1891	bestille	verb		40.6	B1
+1892	sex	noun	en	40.6	B1
+1893	kino	noun	en	40.6	B1
+1894	utenom	preposition		40.5	B1
+1895	ane	verb		40.5	B1
+1896	synlig	adjective		40.5	B1
+1897	analyse	noun	en	40.5	B1
+1898	menneskelig	adjective		40.4	B1
+1899	formidle	verb		40.4	B1
+1900	lette	verb		40.4	B1
+1901	knuse	verb		40.4	B1
+1902	samtlige	determiner		40.3	B1
+1903	samtlige	pronoun		40.3	B1
+1904	undervisning	noun	ei	40.3	B1
+1905	tvert	adverb		40.3	B1
+1906	ambisjon	noun	en	40.3	B1
+1907	løslate	verb		40.2	B1
+1908	påtalemyndighet	noun	ei	40.1	B1
+1909	tomt	noun	ei	40.1	B1
+1910	virkemiddel	noun	et	40.1	B1
+1911	euro	noun	en	40.1	B1
+1912	innflytelse	noun	en	40.1	B1
+1913	renn	noun	et	40.1	B1
+1914	påske	noun	ei	40.1	B1
+1915	sammenstøt	noun	et	40.0	B1
+1916	homofil	adjective		40.0	B1
+1917	landskamp	noun	en	40.0	B1
+1918	anmeldelse	noun	en	39.9	B1
+1919	synd	noun	ei	39.9	B1
+1920	gjeng	noun	en	39.9	B1
+1921	forlag	noun	et	39.8	B1
+1922	rakett	noun	en	39.8	B1
+1923	oppover	preposition		39.8	B1
+1924	kjøtt	noun	et	39.8	B1
+1925	verken	conjunction		39.8	B1
+1926	utfall	noun	et	39.8	B1
+1927	ektepar	noun	et	39.7	B1
+1928	avdekke	verb		39.7	B1
+1929	løfte	noun	et	39.7	B1
+1930	rydde	verb		39.7	B1
+1931	fyr	noun	en	39.6	B1
+1932	element	noun	et	39.6	B1
+1933	enhet	noun	ei	39.6	B1
+1934	rot	noun	en	39.6	B1
+1935	øvre	adjective		39.6	B1
+1936	fartøy	noun	et	39.6	B1
+1937	konkurs	noun	en	39.5	B1
+1938	prinsesse	noun	ei	39.5	B1
+1939	omsette	verb		39.4	B1
+1940	etterforsker	noun	en	39.4	B1
+1941	tempo	noun	et	39.4	B1
+1942	beregne	verb		39.4	B1
+1943	rutine	noun	en	39.3	B1
+1944	gevinst	noun	en	39.3	B1
+1945	seng	noun	ei	39.3	B1
+1946	stygg	adjective		39.3	B1
+1947	spå	verb		39.2	B1
+1948	sportslig	adjective		39.2	B1
+1949	uenig	adjective		39.1	B1
+1950	fabrikk	noun	en	39.1	B1
+1951	aktor	noun	en	39.1	B1
+1952	teori	noun	en	39.1	B1
+1953	beskylde	verb		39.1	B1
+1954	samboer	noun	en	39.1	B1
+1955	reklame	noun	en	39.1	B1
+1956	deltager	noun	en	39.0	B1
+1957	tilsi	verb		39.0	B1
+1958	organ	noun	et	38.9	B1
+1959	kriminalitet	noun	en	38.9	B1
+1960	sprenge	verb		38.8	B1
+1961	håndtere	verb		38.8	B1
+1962	nytte	verb		38.8	B1
+1963	hovedsak	noun	ei	38.8	B1
+1964	arbeidsliv	noun	et	38.8	B1
+1965	pårørende	noun	en	38.7	B1
+1966	folkeavstemning	noun	ei	38.7	B1
+1967	omsorg	noun	ei	38.6	B1
+1968	forbedre	verb		38.6	B1
+1969	verdenskrig	noun	en	38.6	B1
+1970	nyttår	noun	et	38.6	B1
+1971	krysse	verb		38.5	B1
+1972	unik	adjective		38.5	B1
+1973	masse	noun	en	38.5	B1
+1974	sykepleier	noun	en	38.5	B1
+1975	garanti	noun	en	38.5	B1
+1976	sjelden	adverb		38.4	B1
+1977	gjennomsnittlig	adjective		38.4	B1
+1978	stadig	adjective		38.4	B1
+1979	oljeselskap	noun	et	38.3	B1
+1980	brutal	adjective		38.3	B1
+1981	tydeligvis	adverb		38.2	B1
+1982	kvalifisere	verb		38.2	B1
+1983	avvikle	verb		38.2	B1
+1984	forandring	noun	ei	38.2	B1
+1985	merkelig	adjective		38.2	B1
+1986	fornuftig	adjective		38.2	B1
+1987	nederlag	noun	et	38.1	B1
+1988	øverst	adjective		38.1	B1
+1989	ektemann	noun	en	38.1	B1
+1990	sunn	adjective		38.1	B1
+1991	fokusere	verb		38.1	B1
+1992	tusen	number		38.0	B1
+1993	lagkamerat	noun	en	38.0	B1
+1994	blande	verb		38.0	B1
+1995	voldtekt	noun	ei	38.0	B1
+1996	skjebne	noun	en	37.9	B1
+1997	prosentpoeng	noun	et	37.9	B1
+1998	tilsvare	verb		37.9	B1
+1999	naturligvis	adverb		37.8	B1
+2000	skjære	verb		37.8	B1
+2001	plassering	noun	ei	37.7	B1
+2002	erfare	verb		37.7	B1
+2003	balanse	noun	en	37.6	B1
+2004	bevilgning	noun	ei	37.6	B1
+2005	bryst	noun	et	37.6	B1
+2006	anklage	verb		37.5	B1
+2007	hull	noun	et	37.5	B1
+2008	bilist	noun	en	37.4	B1
+2009	kåre	verb		37.4	B1
+2010	pensjonist	noun	en	37.3	B1
+2011	foretrekke	verb		37.3	B1
+2012	agent	noun	en	37.3	B1
+2013	laks	noun	en	37.3	B1
+2014	fellesskap	noun	et	37.2	B1
+2015	bistand	noun	en	37.2	B1
+2016	forsterke	verb		37.1	B1
+2017	lykkelig	adjective		37.0	B1
+2018	betingelse	noun	en	37.0	B1
+2019	tro	noun	ei	37.0	B1
+2020	århundre	noun	et	37.0	B1
+2021	menneskerettighet	noun	ei	36.9	B1
+2022	selvstendig	adjective		36.9	B1
+2023	tanke	verb		36.9	B1
+2024	tusenvis	adverb		36.9	B1
+2025	ben	noun	et	36.8	B1
+2026	grunnleggende	adjective		36.8	B1
+2027	sal	noun	en	36.8	B1
+2028	fullføre	verb		36.8	B1
+2029	teknikk	noun	en	36.8	B1
+2030	dempe	verb		36.7	B1
+2031	etterforske	verb		36.7	B1
+2032	forlange	verb		36.7	B1
+2033	lytte	verb		36.7	B1
+2034	identitet	noun	en	36.6	B1
+2035	mark	noun	ei	36.6	B1
+2036	landbruk	noun	et	36.5	B1
+2037	nære	verb		36.5	B1
+2038	opplæring	noun	ei	36.5	B1
+2039	prestasjon	noun	en	36.5	B1
+2040	jury	noun	en	36.5	B1
+2041	trenges	verb		36.5	B1
+2042	forbinde	verb		36.4	B1
+2043	tørre	verb		36.4	B1
+2044	verdensmester	noun	en	36.4	B1
+2045	kommersiell	adjective		36.4	B1
+2046	veie	verb		36.4	B1
+2047	opptak	noun	et	36.4	B1
+2048	finger	noun	en	36.4	B1
+2049	ekteskap	noun	et	36.3	B1
+2050	flykte	verb		36.3	B1
+2051	talent	noun	en	36.3	B1
+2052	narkotika	noun	en	36.3	B1
+2053	kvitte	verb		36.2	B1
+2054	rådmann	noun	en	36.2	B1
+2055	internett	noun	et	36.2	B1
+2056	diplomat	noun	en	36.2	B1
+2057	kjøretøy	noun	et	36.2	B1
+2058	individuell	adjective		36.2	B1
+2059	nest	adverb		36.2	B1
+2060	presisere	verb		36.2	B1
+2061	nederlandsk	adjective		36.1	B1
+2062	nokså	adverb		36.0	B1
+2063	maleri	noun	et	35.9	B1
+2064	koble	verb		35.9	B1
+2065	strekning	noun	ei	35.9	B1
+2066	ekstraordinær	adjective		35.9	B1
+2067	trang	adjective		35.9	B1
+2068	synspunkt	noun	et	35.9	B1
+2069	bevilge	verb		35.9	B1
+2070	iransk	adjective		35.8	B1
+2071	hår	noun	et	35.8	B1
+2072	notere	verb		35.8	B1
+2073	dødsfall	noun	et	35.8	B1
+2074	glass	noun	et	35.8	B1
+2075	nettside	noun	ei	35.7	B1
+2076	nettsted	noun	et	35.7	B1
+2077	takle	verb		35.7	B1
+2078	politimester	noun	en	35.6	B1
+2079	eksport	noun	en	35.6	B1
+2080	morges	noun	en	35.6	B1
+2081	forferdelig	adjective		35.6	B1
+2082	plikt	noun	ei	35.6	B1
+2083	avgi	verb		35.6	B1
+2084	analytiker	noun	en	35.6	B1
+2085	skille	noun	et	35.6	B1
+2086	møtes	verb		35.5	B1
+2087	attraktiv	adjective		35.5	B1
+2088	olympisk	adjective		35.4	B1
+2089	personbil	noun	en	35.4	B1
+2090	arbeidsledighet	noun	ei	35.4	B1
+2091	eksistere	verb		35.4	B1
+2092	evakuere	verb		35.4	B1
+2093	gissel	noun	et	35.4	B1
+2094	hinder	noun	et	35.4	B1
+2095	lever	noun	ei	35.4	B1
+2096	helhet	noun	ei	35.3	B1
+2097	kunngjøre	verb		35.3	B1
+2098	kulturell	adjective		35.2	B1
+2099	årsskifte	noun	et	35.2	B1
+2100	test	noun	en	35.2	B1
+2101	tilskudd	noun	et	35.2	B1
+2102	danse	verb		35.2	B1
+2103	hjørne	noun	et	35.2	B1
+2104	lokke	verb		35.1	B1
+2105	kjørt	adjective		35.1	B1
+2106	pappa	noun	en	35.1	B1
+2107	jøde	noun	en	35.1	B1
+2108	behøve	verb		35.1	B1
+2109	tredjeplass	noun	en	35.1	B1
+2110	opphold	noun	et	35.1	B1
+2111	etterspørsel	noun	en	35.0	B1
+2112	utredning	noun	ei	35.0	B1
+2113	tolv	number		35.0	B1
+2114	berge	verb		35.0	B1
+2115	ombord	preposition		34.9	B1
+2116	styring	noun	ei	34.9	B1
+2117	regional	adjective		34.9	B1
+2118	sykehjem	noun	et	34.9	B1
+2119	kjedelig	adjective		34.8	B1
+2120	medlemskap	noun	et	34.8	B1
+2121	varme	noun	en	34.7	B1
+2122	suveren	adjective		34.7	B1
+2123	partner	noun	en	34.7	B1
+2124	sølv	noun	et	34.7	B1
+2125	standard	noun	en	34.7	B1
+2126	konsern	noun	et	34.7	B1
+2127	advarsel	noun	en	34.7	B1
+2128	tyrkisk	adjective		34.6	B1
+2129	oppheve	verb		34.6	B1
+2130	oppmerksom	adjective		34.5	B1
+2131	løype	noun	ei	34.5	B1
+2132	tabell	noun	en	34.5	B1
+2133	sliten	adjective		34.5	B1
+2134	fortid	noun	ei	34.5	B1
+2135	ambulanse	noun	en	34.4	B1
+2136	strand	noun	ei	34.4	B1
+2137	menighet	noun	ei	34.4	B1
+2138	iverksette	verb		34.4	B1
+2139	middag	noun	en	34.3	B1
+2140	transport	noun	en	34.3	B1
+2141	oppta	verb		34.3	B1
+2142	fremstille	verb		34.2	B1
+2143	byrett	noun	en	34.2	B1
+2144	sving	noun	en	34.2	B1
+2145	smerte	noun	en	34.2	B1
+2146	så	verb		34.2	B1
+2147	regjeringsparti	noun	et	34.1	B1
+2148	demonstrere	verb		34.1	B1
+2149	overlege	noun	en	34.0	B1
+2150	verdenscup	noun	en	34.0	B1
+2151	toppmøte	noun	et	34.0	B1
+2152	bergenser	noun	en	34.0	B1
+2153	regnskap	noun	et	34.0	B1
+2154	omstendighet	noun	ei	34.0	B1
+2155	venninne	noun	ei	34.0	B1
+2156	delstat	noun	en	33.9	B1
+2157	dato	noun	en	33.9	B1
+2158	kritiker	noun	en	33.9	B1
+2159	polsk	adjective		33.8	B1
+2160	ryke	verb		33.7	B1
+2161	dum	adjective		33.6	B1
+2162	uenighet	noun	ei	33.6	B1
+2163	slåss	verb		33.6	B1
+2164	trend	noun	en	33.5	B1
+2165	pensjon	noun	en	33.5	B1
+2166	lensmann	noun	en	33.5	B1
+2167	dens	determiner		33.5	B1
+2168	kjøper	noun	en	33.4	B1
+2169	sliter	noun	en	33.4	B1
+2170	lidelse	noun	en	33.4	B1
+2171	republikk	noun	en	33.3	B1
+2172	definitiv	adjective		33.3	B1
+2173	orientere	verb		33.3	B1
+2174	feste	verb		33.2	B1
+2175	landslagstrener	noun	en	33.2	B1
+2176	idet	conjunction		33.2	B1
+2177	arkitekt	noun	en	33.2	B1
+2178	gresk	adjective		33.2	B1
+2179	flagg	noun	et	33.2	B1
+2180	bygd	noun	ei	33.1	B1
+2181	profil	noun	en	33.1	B1
+2182	benekte	verb		33.1	B1
+2183	etat	noun	en	33.1	B1
+2184	bråk	noun	en	33.1	B1
+2185	forlenge	verb		33.1	B1
+2186	anke	verb		33.1	B1
+2187	mandat	noun	et	33.0	B1
+2188	elektronisk	adjective		33.0	B1
+2189	fisker	noun	en	33.0	B1
+2190	litteratur	noun	en	33.0	B1
+2191	politistasjon	noun	en	33.0	B1
+2192	skryte	verb		33.0	B1
+2193	lastebil	noun	en	32.9	B1
+2194	tyveri	noun	et	32.9	B1
+2195	forkant	noun	en	32.9	B1
+2196	høring	noun	ei	32.8	B1
+2197	automatisk	adjective		32.8	B1
+2198	seer	noun	en	32.8	B1
+2199	tillegge	verb		32.8	B1
+2200	ivrig	adjective		32.7	B1
+2201	korrekt	adjective		32.7	B1
+2202	gulv	noun	et	32.7	B1
+2203	mannlig	adjective		32.6	B1
+2204	tragisk	adjective		32.6	B1
+2205	tenne	verb		32.6	B1
+2206	kronprins	noun	en	32.6	B1
+2207	franskmann	noun	en	32.6	B1
+2208	indisk	adjective		32.5	B1
+2209	misbruke	verb		32.5	B1
+2210	styremedlem	noun	et	32.5	B1
+2211	begrunne	verb		32.5	B1
+2212	bytte	noun	et	32.5	B1
+2213	hjemmeside	noun	ei	32.5	B1
+2214	optimistisk	adjective		32.4	B1
+2215	prestere	verb		32.4	B1
+2216	sistnevnt	adjective		32.4	B1
+2217	ende	noun	en	32.4	B1
+2218	nordlig	adjective		32.4	B1
+2219	tragedie	noun	en	32.4	B1
+2220	felle	verb		32.4	B1
+2221	vilkår	noun	et	32.4	B1
+2222	front	noun	en	32.4	B1
+2223	uhell	noun	et	32.4	B1
+2224	faktor	noun	en	32.4	B1
+2225	jødisk	adjective		32.4	B1
+2226	trygghet	noun	ei	32.3	B1
+2227	utfordre	verb		32.3	B1
+2228	sår	noun	et	32.3	B1
+2229	sånn	adverb		32.3	B1
+2230	retningslinje	noun	ei	32.3	B1
+2231	veteran	noun	en	32.2	B1
+2232	kne	noun	et	32.2	B1
+2233	etnisk	adjective		32.2	B1
+2234	tegning	noun	ei	32.2	B1
+2235	begrep	noun	et	32.2	B1
+2236	beregning	noun	ei	32.2	B1
+2237	overtid	noun	ei	32.2	B1
+2238	omgivelse	noun	en	32.1	B1
+2239	rett	noun	en	32.1	B1
+2240	best	adjective		32.1	B1
+2241	belastning	noun	ei	32.1	B1
+2242	bestemmelse	noun	en	32.1	B1
+2243	spekulere	verb		32.1	B1
+2244	hage	noun	en	32.1	B1
+2245	skyting	noun	ei	32.1	B1
+2246	fredelig	adjective		32.1	B1
+2247	nettverk	noun	et	32.0	B1
+2248	forsikring	noun	ei	32.0	B1
+2249	blomst	noun	en	32.0	B1
+2250	kle	verb		32.0	B1
+2251	massiv	adjective		31.9	B1
+2252	duell	noun	en	31.9	B1
+2253	prins	noun	en	31.9	B1
+2254	utslag	noun	et	31.8	B1
+2255	offiser	noun	en	31.8	B1
+2256	gunstig	adjective		31.8	B1
+2257	beslutte	verb		31.7	B1
+2258	frukt	noun	ei	31.7	B1
+2259	dekning	noun	ei	31.7	B1
+2260	gifte	verb		31.7	B1
+2261	tvers	adverb		31.7	B1
+2262	spekulasjon	noun	en	31.7	B1
+2263	forretning	noun	ei	31.6	B1
+2264	munn	noun	en	31.6	B1
+2265	langvarig	adjective		31.6	B1
+2266	sort	adjective		31.6	B1
+2267	lønne	verb		31.6	B1
+2268	realistisk	adjective		31.6	B1
+2269	søkelys	noun	et	31.5	B1
+2270	centimeter	noun	en	31.5	B1
+2271	minister	noun	en	31.5	B1
+2272	stein	noun	en	31.5	B1
+2273	respektere	verb		31.5	B1
+2274	straff	noun	ei	31.5	B1
+2275	tribune	noun	en	31.5	B1
+2276	daværende	adjective		31.4	B1
+2277	observatør	noun	en	31.4	B1
+2278	pakke	noun	ei	31.4	B1
+2279	perspektiv	noun	et	31.4	B1
+2280	fotograf	noun	en	31.4	B1
+2281	raner	noun	en	31.3	B1
+2282	humor	noun	en	31.3	B1
+2283	velkommen	adjective		31.3	B1
+2284	tvile	verb		31.3	B1
+2285	storm	noun	en	31.2	B1
+2286	verdifull	adjective		31.2	B1
+2287	fremmed	adjective		31.2	B1
+2288	benk	noun	en	31.2	B1
+2289	forsikringsselskap	noun	et	31.1	B1
+2290	arena	noun	en	31.1	B1
+2291	åsted	noun	et	31.1	B1
+2292	show	noun	et	31.1	B1
+2293	strategisk	adjective		31.0	B1
+2294	skulder	noun	ei	31.0	B1
+2295	fylkesmann	noun	en	30.9	B1
+2296	ville	noun	ei	30.9	B1
+2297	sans	noun	en	30.9	B1
+2298	kaos	noun	et	30.9	B1
+2299	erklæring	noun	ei	30.9	B1
+2300	rase	verb		30.8	B1
+2301	blåse	verb		30.8	B1
+2302	avklare	verb		30.8	B1
+2303	utvise	verb		30.8	B1
+2304	bro	noun	ei	30.8	B1
+2305	terrorist	noun	en	30.8	B1
+2306	skjerm	noun	en	30.8	B1
+2307	utenriksdepartement	noun	et	30.7	B1
+2308	anonym	adjective		30.7	B1
+2309	fusjon	noun	en	30.7	B1
+2310	art	noun	ei	30.7	B1
+2311	het	adjective		30.7	B1
+2312	sterkt	noun	et	30.7	B1
+2313	forholdsvis	adverb		30.7	B1
+2314	mamma	noun	en	30.6	B1
+2315	interessere	verb		30.6	B1
+2316	svart	adjective		30.6	B1
+2317	uavgjort	adjective		30.6	B1
+2318	forme	verb		30.5	B1
+2319	kunstnerisk	adjective		30.5	B1
+2320	tilbringe	verb		30.5	B1
+2321	funksjon	noun	en	30.5	B1
+2322	begivenhet	noun	ei	30.5	B1
+2323	uventet	adjective		30.5	B1
+2324	live	adverb		30.4	B1
+2325	oppsiktsvekkende	adjective		30.4	B1
+2326	ettertid	noun	ei	30.3	B1
+2327	fryktelig	adjective		30.3	B1
+2328	radikal	adjective		30.3	B1
+2329	utvidelse	noun	en	30.3	B1
+2330	pakistansk	adjective		30.3	B1
+2331	huse	verb		30.3	B1
+2332	avslag	noun	et	30.3	B1
+2333	utvilsom	adjective		30.3	B1
+2334	henvise	verb		30.3	B1
+2335	plattform	noun	ei	30.3	B1
+2336	gradvis	adjective		30.2	B1
+2337	syne	verb		30.2	B1
+2338	moralsk	adjective		30.2	B1
+2339	laste	verb		30.2	B1
+2340	nedlegge	verb		30.2	B1
+2341	enhver	pronoun		30.2	B1
+2342	kjøring	noun	ei	30.1	B1
+2343	svinge	verb		30.1	B1
+2344	lønnsom	adjective		30.1	B1
+2345	ha	interjection		30.1	B1
+2346	forbrytelse	noun	en	30.1	B1
+2347	rom	adjective		30.0	B1
+2348	forbli	verb		30.0	B1
+2349	lensmannskontor	noun	et	30.0	B1
+2350	jubel	noun	en	30.0	B1
+2351	overføring	noun	ei	30.0	B1
+2352	våpenhvile	noun	ei	30.0	B1
+2353	definere	verb		30.0	B1
+2354	undertegne	verb		29.9	B1
+2355	uskyldig	adjective		29.9	B1
+2356	bitter	adjective		29.9	B1
+2357	distanse	noun	en	29.9	B1
+2358	afrikansk	adjective		29.9	B1
+2359	tynn	adjective		29.9	B1
+2360	egenskap	noun	en	29.8	B1
+2361	helsevesen	noun	et	29.8	B1
+2362	oppfordring	noun	ei	29.8	B1
+2363	bølge	noun	ei	29.8	B1
+2364	hemmelighet	noun	ei	29.8	B1
+2365	eksemplar	noun	et	29.7	B1
+2366	planlegging	noun	ei	29.7	B1
+2367	hovedrolle	noun	ei	29.7	B1
+2368	himmel	noun	en	29.7	B1
+2369	kjøkken	noun	et	29.7	B1
+2370	elleve	number		29.7	B1
+2371	fotballspiller	noun	en	29.7	B1
+2372	allianse	noun	en	29.6	B1
+2373	kaffe	noun	en	29.6	B1
+2374	derfra	adverb		29.6	B1
+2375	avdød	adjective		29.5	B1
+2376	ærlig	adjective		29.5	B1
+2377	renne	verb		29.5	B1
+2378	hvorav	adverb		29.5	B1
+2379	fremgang	noun	en	29.5	B1
+2380	fans	noun	en	29.4	B1
+2381	beskjeden	adjective		29.4	B1
+2382	kjennelse	noun	en	29.4	B1
+2383	male	verb		29.4	B1
+2384	arbeidskraft	noun	ei	29.3	B1
+2385	anklage	noun	ei	29.3	B1
+2386	forårsake	verb		29.3	B1
+2387	drømme	verb		29.3	B1
+2388	hilse	verb		29.3	B1
+2389	utmerket	adjective		29.3	B1
+2390	snau	adjective		29.3	B1
+2391	påvise	verb		29.3	B1
+2392	nyttig	adjective		29.2	B1
+2393	moderat	adjective		29.2	B1
+2394	særdeles	adverb		29.2	B1
+2395	temmelig	adverb		29.2	B1
+2396	signere	verb		29.2	B1
+2397	israeler	noun	en	29.2	B1
+2398	utbetale	verb		29.2	B1
+2399	elektrisk	adjective		29.2	B1
+2400	parlamentarisk	adjective		29.2	B1
+2401	varme	verb		29.2	B1
+2402	tyv	noun	en	29.1	B1
+2403	innbrudd	noun	et	29.1	B1
+2404	granske	verb		29.1	B1
+2405	sorg	noun	ei	29.1	B1
+2406	allikevel	adverb		29.1	B1
+2407	enstemmig	adjective		29.0	B1
+2408	adresse	noun	ei	29.0	B1
+2409	argumentere	verb		29.0	B1
+2410	generalforsamling	noun	ei	28.9	B1
+2411	skriftlig	adjective		28.9	B1
+2412	verne	verb		28.9	B1
+2413	fødsel	noun	en	28.9	B1
+2414	sur	adjective		28.9	B1
+2415	travel	adjective		28.9	B1
+2416	maksimal	adjective		28.8	B1
+2417	utrede	verb		28.8	B1
+2418	vakt	noun	ei	28.8	B1
+2419	tv	noun	en	28.8	B1
+2420	formannskap	noun	et	28.8	B1
+2421	midnatt	noun	ei	28.7	B1
+2422	leverandør	noun	en	28.7	B1
+2423	sone	noun	ei	28.7	B1
+2424	kvartfinale	noun	en	28.7	B1
+2425	plage	verb		28.7	B1
+2426	juble	verb		28.7	B1
+2427	fiende	noun	en	28.7	B1
+2428	gal	adjective		28.7	B1
+2429	bite	verb		28.7	B1
+2430	forskrift	noun	ei	28.7	B1
+2431	oppsøke	verb		28.6	B1
+2432	delegasjon	noun	en	28.6	B1
+2433	gravid	adjective		28.6	B1
+2434	trykk	noun	en	28.6	B1
+2435	diplomatisk	adjective		28.6	B1
+2436	opptreden	noun	en	28.6	B1
+2437	blodig	adjective		28.6	B1
+2438	selvtillit	noun	ei	28.4	B1
+2439	forsinkelse	noun	en	28.4	B1
+2440	friste	verb		28.4	B1
+2441	opprør	noun	et	28.4	B1
+2442	våkne	verb		28.4	B1
+2443	sikt	noun	ei	28.4	B1
+2444	forberedelse	noun	en	28.4	B1
+2445	markedsføring	noun	ei	28.4	B1
+2446	smake	verb		28.4	B1
+2447	fastsette	verb		28.4	B1
+2448	kartlegge	verb		28.3	B1
+2449	oppfølging	noun	ei	28.3	B1
+2450	drama	noun	et	28.3	B1
+2451	debutere	verb		28.3	B1
+2452	sjokk	noun	et	28.3	B1
+2453	knallhard	adjective		28.3	B1
+2454	vill	adjective		28.2	B1
+2455	komplisert	adjective		28.2	B1
+2456	blanding	noun	ei	28.2	B1
+2457	våge	verb		28.1	B1
+2458	konsesjon	noun	en	28.1	B1
+2459	religion	noun	en	28.1	B1
+2460	leting	noun	ei	28.1	B1
+2461	sammenlagt	adjective		28.1	B1
+2462	strøk	noun	et	28.1	B1
+2463	blikk	noun	et	28.1	B1
+2464	seile	verb		28.1	B1
+2465	identifisere	verb		28.0	B1
+2466	forsvarlig	adjective		28.0	B1
+2467	hvilken	pronoun		28.0	B1
+2468	krets	noun	en	28.0	B1
+2469	forpliktelse	noun	en	28.0	B1
+2470	visepresident	noun	en	27.9	B1
+2471	unødvendig	adjective		27.9	B1
+2472	hovedkvarter	noun	et	27.9	B1
+2473	humanitær	adjective		27.9	B1
+2474	tilsyn	noun	et	27.9	B1
+2475	eksplodere	verb		27.9	B1
+2476	elske	verb		27.9	B1
+2477	trønder	noun	en	27.9	B1
+2478	deriblant	adverb		27.8	B1
+2479	jordskjelv	noun	et	27.8	B1
+2480	egg	noun	en	27.7	B1
+2481	berømme	verb		27.7	B1
+2482	psykiatrisk	adjective		27.7	B1
+2483	sone	verb		27.6	B1
+2484	avlyse	verb		27.6	B1
+2485	grave	verb		27.6	B1
+2486	aggressiv	adjective		27.6	B1
+2487	etisk	adjective		27.6	B1
+2488	innfri	verb		27.6	B1
+2489	park	noun	en	27.6	B1
+2490	ordre	noun	en	27.5	B1
+2491	droppe	verb		27.4	B1
+2492	bekjempe	verb		27.4	B1
+2493	takt	noun	ei	27.4	B1
+2494	deilig	adjective		27.4	B1
+2495	observere	verb		27.4	B1
+2496	bånd	noun	et	27.4	B1
+2497	ordentlig	adjective		27.4	B1
+2498	overhodet	adverb		27.4	B1
+2499	finansiering	noun	ei	27.4	B1
+2500	naboland	noun	et	27.3	B1
+2501	forplikte	verb		27.3	B1
+2502	sørlig	adjective		27.3	B1
+2503	sending	noun	ei	27.3	B1
+2504	bensin	noun	en	27.3	B1
+2505	varig	adjective		27.3	B1
+2506	design	noun	en	27.3	B1
+2507	glimrende	adjective		27.3	B1
+2508	sanksjon	noun	en	27.2	B1
+2509	prate	verb		27.2	B1
+2510	minus	adverb		27.2	B1
+2511	kollisjon	noun	en	27.2	B1
+2512	mønster	noun	et	27.2	B1
+2513	landskap	noun	et	27.1	B1
+2514	gjennombrudd	noun	et	27.1	B1
+2515	datamaskin	noun	en	27.0	B1
+2516	afghansk	adjective		27.0	B1
+2517	kristen	adjective		27.0	B1
+2518	fugl	noun	en	27.0	B1
+2519	snitt	noun	en	27.0	B1
+2520	beskrivelse	noun	en	27.0	B1
+2521	pass	noun	en	27.0	B1
+2522	konto	noun	en	27.0	B1
+2523	høydepunkt	noun	et	27.0	B1
+2524	skjerpe	verb		27.0	B1
+2525	fenomen	noun	et	26.9	B1
+2526	snill	adjective		26.9	B1
+2527	fjord	noun	en	26.9	B1
+2528	oppsigelse	noun	en	26.9	B1
+2529	medlemsland	noun	et	26.8	B1
+2530	gjenoppta	verb		26.8	B1
+2531	overraske	verb		26.8	B1
+2532	resultere	verb		26.8	B1
+2533	beslaglegge	verb		26.8	B1
+2534	regulere	verb		26.8	B1
+2535	godkjent	adjective		26.7	B1
+2536	skygge	noun	en	26.7	B1
+2537	beredskap	noun	en	26.7	B1
+2538	barnevern	noun	et	26.7	B1
+2539	kvote	noun	en	26.7	B1
+2540	kjøp	noun	et	26.7	B1
+2541	eksamen	noun	en	26.7	B1
+2542	boks	noun	en	26.7	B1
+2543	kongelig	adjective		26.6	B1
+2544	nervøs	adjective		26.6	B1
+2545	frata	verb		26.6	B1
+2546	foredrag	noun	et	26.6	B1
+2547	alliert	adjective		26.6	B1
+2548	innføring	noun	ei	26.6	B1
+2549	vedkommende	adjective		26.6	B1
+2550	vedkommende	noun	et	26.6	B1
+2551	kjapp	adjective		26.6	B1
+2552	holdt	interjection		26.6	B1
+2553	problemstilling	noun	ei	26.6	B1
+2554	verft	noun	et	26.6	B1
+2555	offentlighet	noun	ei	26.6	B1
+2556	hundrevis	adverb		26.6	B1
+2557	desto	adverb		26.6	B1
+2558	sint	adjective		26.6	B1
+2559	klok	adjective		26.6	B1
+2560	kai	noun	ei	26.6	B1
+2561	pund	noun	et	26.6	B1
+2562	anerkjenne	verb		26.5	B1
+2563	borger	noun	en	26.5	B1
+2564	islamsk	adjective		26.5	B1
+2565	arbeiderparti	noun	et	26.5	B1
+2566	krangel	noun	en	26.5	B1
+2567	valuta	noun	en	26.5	B1
+2568	bak	noun	en	26.4	B1
+2569	hals	noun	en	26.4	B1
+2570	rettferdig	adjective		26.4	B1
+2571	late	verb		26.4	B1
+2572	liberal	adjective		26.4	B1
+2573	avkastning	noun	ei	26.4	B1
+2574	kart	noun	en	26.4	B1
+2575	varetekt	noun	ei	26.3	B1
+2576	dagsorden	noun	en	26.3	B1
+2577	korrupsjon	noun	en	26.3	B1
+2578	alarm	noun	en	26.3	B1
+2579	lykke	noun	ei	26.3	B1
+2580	prognose	noun	en	26.3	B1
+2581	margin	noun	en	26.2	B1
+2582	folkevalgt	adjective		26.2	B1
+2583	kulturminister	noun	en	26.2	B1
+2584	driftsresultat	noun	et	26.2	B1
+2585	nedbør	noun	en	26.2	B1
+2586	flukt	noun	ei	26.2	B1
+2587	smal	adjective		26.2	B1
+2588	blokk	noun	ei	26.2	B1
+2589	innkalle	verb		26.1	B1
+2590	rulle	verb		26.1	B1
+2591	hvile	noun	ei	26.1	B1
+2592	farge	noun	en	26.1	B1
+2593	framholde	verb		26.1	B1
+2594	helle	verb		26.1	B1
+2595	gjennomgang	noun	en	26.0	B1
+2596	tvilsom	adjective		26.0	B1
+2597	kommunikasjon	noun	en	26.0	B1
+2598	fotballforbund	noun	et	26.0	B1
+2599	kostbar	adjective		26.0	B1
+2600	digital	adjective		26.0	B1
+2601	forstand	noun	en	25.9	B1
+2602	retur	noun	en	25.9	B1
+2603	evne	verb		25.9	B1
+2604	overvåke	verb		25.9	B1
+2605	trappe	verb		25.9	B1
+2606	prinsipiell	adjective		25.8	B1
+2607	tilføre	verb		25.8	B1
+2608	programleder	noun	en	25.8	B1
+2609	misfornøyd	adjective		25.8	B1
+2610	symbol	noun	et	25.8	B1
+2611	siktelse	noun	en	25.8	B1
+2612	ulv	noun	en	25.8	B1
+2613	dansk	adjective		25.7	B1
+2614	stiftelse	noun	en	25.7	B1
+2615	storting	noun	et	25.7	B1
+2616	sokkel	noun	en	25.7	B1
+2617	sponsor	noun	en	25.7	B1
+2618	tilføye	verb		25.6	B1
+2619	tredjedel	noun	en	25.6	B1
+2620	lengde	noun	ei	25.6	B1
+2621	mestepart	noun	en	25.6	B1
+2622	statsborger	noun	en	25.6	B1
+2623	begrensning	noun	ei	25.6	B1
+2624	lei	adjective		25.6	B1
+2625	mage	noun	en	25.6	B1
+2626	data	noun	en	25.6	B1
+2627	elsker	noun	en	25.6	B1
+2628	sammenligning	noun	ei	25.5	B1
+2629	beskyttelse	noun	en	25.5	B1
+2630	prosjektleder	noun	en	25.5	B1
+2631	klima	noun	et	25.5	B1
+2632	halvtime	noun	en	25.5	B1
+2633	straffe	noun	en	25.5	B1
+2634	opera	noun	en	25.5	B1
+2635	anslag	noun	et	25.4	B1
+2636	tilværelse	noun	en	25.4	B1
+2637	førerkort	noun	et	25.4	B1
+2638	terror	noun	en	25.4	B1
+2639	hovedperson	noun	en	25.4	B1
+2640	dyrke	verb		25.4	B1
+2641	politiinspektør	noun	en	25.3	B1
+2642	ledighet	noun	ei	25.3	B1
+2643	kategori	noun	en	25.3	B1
+2644	skuffelse	noun	en	25.3	B1
+2645	intervjue	verb		25.3	B1
+2646	andreplass	noun	en	25.3	B1
+2647	straks	adverb		25.3	B1
+2648	straks	conjunction		25.3	B1
+2649	kjeller	noun	en	25.3	B1
+2650	adskillig	adjective		25.2	B1
+2651	riksvei	noun	en	25.2	B1
+2652	mellomtid	noun	ei	25.2	B1
+2653	parkere	verb		25.2	B1
+2654	ild	noun	en	25.2	B1
+2655	analysere	verb		25.2	B1
+2656	tilfreds	adjective		25.2	B1
+2657	midtbane	noun	en	25.2	B1
+2658	fornye	verb		25.2	B1
+2659	stryke	verb		25.1	B1
+2660	sjel	noun	ei	25.1	B1
+2661	innlagt	adjective		25.1	B1
+2662	atomvåpen	noun	et	25.1	B1
+2663	sparke	verb		25.1	B1
+2664	markering	noun	ei	25.1	B1
+2665	grep	noun	et	25.1	B1
+2666	forvaltning	noun	ei	25.1	B1
+2667	stram	adjective		25.0	B1
+2668	mangle	verb		25.0	B1
+2669	anbefaling	noun	ei	25.0	B1
+2670	sprekke	verb		24.9	B1
+2671	sannsynlighet	noun	ei	24.9	B1
+2672	antagelig	adverb		24.8	B1
+2673	kreativ	adjective		24.8	B1
+2674	makte	verb		24.8	B1
+2675	avbryte	verb		24.8	B1
+2676	kollidere	verb		24.7	B1
+2677	mental	adjective		24.7	B1
+2678	skandale	noun	en	24.7	B1
+2679	fremme	adverb		24.7	B1
+2680	kjennskap	noun	en	24.7	B1
+2681	beslag	noun	et	24.7	B1
+2682	grå	adjective		24.6	B1
+2683	avstemning	noun	ei	24.6	B1
+2684	isolere	verb		24.6	B1
+2685	kommunestyre	noun	et	24.6	B1
+2686	terreng	noun	et	24.6	B1
+2687	fattigdom	noun	en	24.5	B1
+2688	fravær	noun	et	24.5	B1
+2689	høste	verb		24.5	B1
+2690	fremgå	verb		24.5	B1
+2691	ligne	verb		24.5	B1
+2692	utdanne	verb		24.5	B1
+2693	union	noun	en	24.5	B1
+2694	unnskyldning	noun	ei	24.5	B1
+2695	elegant	adjective		24.4	B1
+2696	inflasjon	noun	en	24.4	B1
+2697	troverdighet	noun	ei	24.3	B1
+2698	disposisjon	noun	en	24.3	B1
+2699	gledelig	adjective		24.3	B1
+2700	presidentvalg	noun	et	24.3	B1
+2701	mur	noun	en	24.3	B1
+2702	utested	noun	et	24.3	B1
+2703	magasin	noun	et	24.3	B1
+2704	kollektiv	adjective		24.2	B1
+2705	atmosfære	noun	en	24.2	B1
+2706	psykolog	noun	en	24.2	B1
+2707	lege	verb		24.2	B1
+2708	sko	noun	en	24.2	B1
+2709	oppkjøp	noun	et	24.2	B1
+2710	skru	verb		24.2	B1
+2711	legevakt	noun	ei	24.1	B1
+2712	strømme	verb		24.1	B1
+2713	tillitsvalgt	adjective		24.1	B1
+2714	import	noun	en	24.1	B1
+2715	hovedsakelig	adjective		24.1	B1
+2716	bistå	verb		24.1	B1
+2717	skrike	verb		24.1	B1
+2718	aksjemarked	noun	et	24.1	B1
+2719	påta	verb		24.0	B1
+2720	overalt	adverb		24.0	B1
+2721	studio	noun	et	24.0	B1
+2722	betaling	noun	ei	24.0	B1
+2723	håndball	noun	en	24.0	B1
+2724	formue	noun	en	24.0	B1
+2725	sau	noun	en	24.0	B1
+2726	orkester	noun	et	24.0	B1
+2727	pakke	verb		23.9	B1
+2728	feiring	noun	ei	23.9	B1
+2729	sysselsetting	noun	ei	23.9	B1
+2730	publisere	verb		23.9	B1
+2731	fordeling	noun	ei	23.9	B1
+2732	bosnisk	adjective		23.9	B1
+2733	systematisk	adjective		23.9	B1
+2734	italiener	noun	en	23.9	B1
+2735	målsetting	noun	ei	23.8	B1
+2736	venne	verb		23.8	B1
+2737	irsk	adjective		23.8	B1
+2738	kasse	noun	ei	23.8	B1
+2739	sårbar	adjective		23.8	B1
+2740	potensiell	adjective		23.8	B1
+2741	ubehagelig	adjective		23.8	B1
+2742	erfaren	adjective		23.8	B1
+2743	gjennomført	adjective		23.7	B1
+2744	dokumentasjon	noun	en	23.7	B1
+2745	vis	adjective		23.7	B1
+2746	flaske	noun	ei	23.7	B1
+2747	seminar	noun	et	23.6	B1
+2748	dobbel	adjective		23.6	B1
+2749	skyve	verb		23.6	B1
+2750	røyk	noun	en	23.6	B1
+2751	kapital	noun	en	23.6	B1
+2752	gjengjeld	noun	ei	23.6	B1
+2753	realisere	verb		23.6	B1
+2754	øyeblikkelig	adjective		23.6	B1
+2755	artig	adjective		23.6	B1
+2756	røpe	verb		23.6	B1
+2757	vert	noun	en	23.5	B1
+2758	sentralbank	noun	en	23.5	B1
+2759	vesttysk	adjective		23.5	B1
+2760	vegvesen	noun	et	23.5	B1
+2761	defensiv	adjective		23.5	B1
+2762	vest	noun	en	23.5	B1
+2763	love	noun	en	23.5	B1
+2764	katolsk	adjective		23.5	B1
+2765	kvalifisering	noun	ei	23.4	B1
+2766	gjorde	verb		23.4	B1
+2767	terrorangrep	noun	et	23.4	B1
+2768	paragraf	noun	en	23.4	B1
+2769	humør	noun	et	23.4	B1
+2770	optimisme	noun	en	23.4	B1
+2771	nøkkel	noun	en	23.4	B1
+2772	australsk	adjective		23.4	B1
+2773	kar	noun	en	23.4	B1
+2774	håpløs	adjective		23.3	B1
+2775	hyppig	adjective		23.3	B1
+2776	revolusjon	noun	en	23.3	B1
+2777	medgi	verb		23.3	B1
+2778	vanskelighet	noun	ei	23.3	B1
+2779	premiere	noun	en	23.3	B1
+2780	arbeidsmarked	noun	et	23.3	B1
+2781	årsmøte	noun	et	23.3	B1
+2782	hektisk	adjective		23.3	B1
+2783	base	noun	en	23.2	B1
+2784	plakat	noun	en	23.2	B1
+2785	hjerne	noun	en	23.2	B1
+2786	nese	noun	ei	23.2	B1
+2787	midtbanespiller	noun	en	23.2	B1
+2788	orke	verb		23.2	B1
+2789	sekretær	noun	en	23.2	B1
+2790	finanskrise	noun	ei	23.2	B1
+2791	signalisere	verb		23.2	B1
+2792	takket	adjective		23.2	B1
+2793	rock	noun	en	23.2	B1
+2794	arbeidstaker	noun	en	23.1	B1
+2795	katt	noun	en	23.1	B1
+2796	frispark	noun	et	23.1	B1
+2797	sukker	noun	et	23.1	B1
+2798	smell	noun	en	23.1	B1
+2799	dramatikk	noun	en	23.1	B1
+2800	utfor	preposition		23.1	B1
+2801	sanger	noun	en	23.1	B1
+2802	pleie	verb		23.1	B1
+2803	utlevere	verb		23.1	B1
+2804	oppførsel	noun	en	23.1	B1
+2805	fortelling	noun	ei	23.1	B1
+2806	åpenhet	noun	ei	23.1	B1
+2807	jurist	noun	en	23.1	B1
+2808	nytte	noun	ei	23.0	B1
+2809	sveitsisk	adjective		23.0	B1
+2810	tilhøre	verb		23.0	B1
+2811	koke	verb		23.0	B1
+2812	motsette	verb		23.0	B1
+2813	studium	noun	et	23.0	B1
+2814	kjønn	noun	et	23.0	B1
+2815	team	noun	et	23.0	B1
+2816	straffespark	noun	et	22.9	B1
+2817	henger	noun	en	22.9	B1
+2818	eventyr	noun	et	22.9	B1
+2819	angå	verb		22.9	B1
+2820	parkeringsplass	noun	en	22.9	B1
+2821	megler	noun	en	22.9	B1
+2822	imellom	preposition		22.9	B1
+2823	tørr	adjective		22.9	B1
+2824	henvende	verb		22.9	B1
+2825	motivere	verb		22.8	B1
+2826	variant	noun	en	22.8	B1
+2827	stolt	adjective		22.8	B1
+2828	skylde	verb		22.8	B1
+2829	provins	noun	en	22.8	B1
+2830	kontroversiell	adjective		22.8	B1
+2831	skremme	verb		22.8	B1
+2832	fritid	noun	ei	22.8	B1
+2833	brukt	adjective		22.8	B1
+2834	fremføre	verb		22.8	B1
+2835	gjennomslag	noun	et	22.7	B1
+2836	avklaring	noun	ei	22.7	B1
+2837	svakhet	noun	ei	22.7	B1
+2838	etablering	noun	ei	22.7	B1
+2839	verdensrekord	noun	en	22.7	B1
+2840	fremlegge	verb		22.7	B1
+2841	nedtur	noun	en	22.7	B1
+2842	lager	noun	et	22.7	B1
+2843	stimulere	verb		22.7	B1
+2844	syklist	noun	en	22.7	B1
+2845	islandsk	adjective		22.6	B1
+2846	ungdomsskole	noun	en	22.6	B1
+2847	forbedring	noun	ei	22.6	B1
+2848	kompromiss	noun	et	22.6	B1
+2849	selger	noun	en	22.5	B1
+2850	moro	noun	ei	22.5	B1
+2851	opplagt	adjective		22.5	B1
+2852	sete	noun	et	22.5	B1
+2853	importere	verb		22.5	B1
+2854	pluss	adverb		22.5	B1
+2855	pluss	conjunction		22.5	B1
+2856	hall	noun	en	22.5	B1
+2857	kjemisk	adjective		22.4	B1
+2858	unggutt	noun	en	22.4	B1
+2859	stol	noun	en	22.4	B1
+2860	lek	noun	en	22.3	B1
+2861	innsikt	noun	en	22.3	B1
+2862	økte	verb		22.3	B1
+2863	kontrast	noun	en	22.3	B1
+2864	filme	verb		22.3	B1
+2865	irritere	verb		22.3	B1
+2866	evig	adjective		22.3	B1
+2867	bibliotek	noun	et	22.3	B1
+2868	lekkasje	noun	en	22.3	B1
+2869	arbeidsledig	adjective		22.3	B1
+2870	hjemmekamp	noun	en	22.2	B1
+2871	null	noun	en	22.2	B1
+2872	inngang	noun	en	22.2	B1
+2873	blank	adjective		22.2	B1
+2874	ond	adjective		22.2	B1
+2875	avansert	adjective		22.2	B1
+2876	røyke	verb		22.2	B1
+2877	liga	noun	en	22.2	B1
+2878	utgivelse	noun	en	22.2	B1
+2879	inspirere	verb		22.1	B1
+2880	brukbar	adjective		22.1	B1
+2881	landsmann	noun	en	22.1	B1
+2882	dikt	noun	et	22.1	B1
+2883	kjølvann	noun	et	22.1	B1
+2884	alminnelig	adjective		22.1	B1
+2885	leke	noun	ei	22.1	B1
+2886	herlig	adjective		22.1	B1
+2887	fagfolk	noun	et	22.1	B1
+2888	seriekamp	noun	en	22.1	B1
+2889	strek	noun	en	22.1	B1
+2890	roe	verb		22.1	B1
+2891	banke	noun	en	22.1	B1
+2892	miljøvernminister	noun	en	22.1	B1
+2893	overkant	noun	en	22.1	B1
+2894	fri	verb		22.1	B1
+2895	instrument	noun	et	22.1	B1
+2896	annonsere	verb		22.1	B1
+2897	taper	noun	en	22.0	B1
+2898	kose	verb		22.0	B1
+2899	debut	noun	en	22.0	B1
+2900	åpenbar	adjective		22.0	B1
+2901	smitte	verb		22.0	B1
+2902	korte	verb		22.0	B1
+2903	forhandler	noun	en	22.0	B1
+2904	eierandel	noun	en	22.0	B1
+2905	hjul	noun	et	21.9	B1
+2906	verv	noun	en	21.9	B1
+2907	toppscorer	noun	en	21.9	B1
+2908	moden	adjective		21.9	B1
+2909	kost	noun	en	21.9	B1
+2910	sjette	adjective		21.9	B1
+2911	innspilling	noun	ei	21.9	B1
+2912	konsulent	noun	en	21.9	B1
+2913	areal	noun	et	21.9	B1
+2914	nydelig	adjective		21.9	B1
+2915	velkjent	adjective		21.9	B1
+2916	arbeidstid	noun	ei	21.9	B1
+2917	straffesak	noun	ei	21.9	B1
+2918	stab	noun	en	21.9	B1
+2919	kvarter	noun	et	21.8	B1
+2920	mangfold	noun	et	21.8	B1
+2921	utsagn	noun	et	21.8	B1
+2922	belgisk	adjective		21.8	B1
+2923	halvdel	noun	en	21.8	B1
+2924	leke	verb		21.8	B1
+2925	komponist	noun	en	21.8	B1
+2926	cup	noun	en	21.8	B1
+2927	gasskraftverk	noun	et	21.8	B1
+2928	biologisk	adjective		21.8	B1
+2929	storby	noun	en	21.8	B1
+2930	pressetalsmann	noun	en	21.7	B1
+2931	bekostning	noun	ei	21.7	B1
+2932	klatre	verb		21.7	B1
+2933	splitte	verb		21.7	B1
+2934	hastighet	noun	ei	21.7	B1
+2935	misnøye	noun	en	21.7	B1
+2936	urettferdig	adjective		21.7	B1
+2937	overordnet	adjective		21.7	B1
+2938	avfall	noun	et	21.7	B1
+2939	langrenn	noun	et	21.7	B1
+2940	unnlate	verb		21.7	B1
+2941	midtstopper	noun	en	21.7	B1
+2942	comeback	noun	et	21.7	B1
+2943	tilbakemelding	noun	ei	21.7	B1
+2944	pilot	noun	en	21.7	B1
+2945	elendig	adjective		21.7	B1
+2946	desperat	adjective		21.7	B1
+2947	kontant	noun	en	21.7	B1
+2948	materiell	adjective		21.6	B1
+2949	service	noun	en	21.6	B1
+2950	slektning	noun	en	21.6	B1
+2951	flom	noun	en	21.6	B1
+2952	flamme	noun	en	21.5	B1
+2953	tidsskrift	noun	et	21.5	B1
+2954	herre	noun	en	21.5	B1
+2955	dem	pronoun		21.5	B1
+2956	framstå	verb		21.5	B1
+2957	sperre	verb		21.5	B1
+2958	avslå	verb		21.5	B1
+2959	sykle	verb		21.5	B1
+2960	melk	noun	ei	21.5	B1
+2961	politiadvokat	noun	en	21.5	B1
+2962	ganger	noun	en	21.5	B1
+2963	avhenge	verb		21.4	B1
+2964	virus	noun	et	21.4	B1
+2965	eventuelt	noun	en	21.4	B1
+2966	låse	verb		21.4	B1
+2967	administrativ	adjective		21.4	B1
+2968	vitenskapelig	adjective		21.4	B1
+2969	spansk	adjective		21.3	B1
+2970	dets	determiner		21.3	B1
+2971	jakte	verb		21.3	B1
+2972	tømme	verb		21.3	B1
+2973	enslig	adjective		21.3	B1
+2974	justere	verb		21.2	B1
+2975	kor	noun	et	21.2	B1
+2976	straffbar	adjective		21.2	B1
+2977	hytte	verb		21.2	B1
+2978	fantasi	noun	en	21.2	B1
+2979	resolusjon	noun	en	21.1	B1
+2980	samferdselsminister	noun	en	21.1	B1
+2981	tilstå	verb		21.1	B1
+2982	dans	noun	en	21.1	B1
+2983	skepsis	noun	en	21.1	B1
+2984	utpeke	verb		21.1	B1
+2985	stafett	noun	en	21.1	B1
+2986	fylke	verb		21.1	B1
+2987	dimensjon	noun	en	21.1	B1
+2988	borgerkrig	noun	en	21.1	B1
+2989	medhold	noun	et	21.0	B1
+2990	litterær	adjective		21.0	B1
+2991	fordømme	verb		21.0	B1
+2992	velte	verb		21.0	B1
+2993	underlig	adjective		21.0	B1
+2994	spurte	verb		21.0	B1
+2995	utbetaling	noun	ei	21.0	B1
+2996	fjerdeplass	noun	en	21.0	B1
+2997	stall	noun	en	21.0	B1
+2998	grunnlov	noun	en	21.0	B1
+2999	deltakelse	noun	en	20.9	B1
+3000	farvann	noun	et	20.9	B1
+3001	hvile	verb		20.9	B2
+3002	uakseptabel	adjective		20.9	B2
+3003	skandinavisk	adjective		20.9	B2
+3004	avsette	verb		20.9	B2
+3005	fagforening	noun	ei	20.9	B2
+3006	overlevere	verb		20.9	B2
+3007	figur	noun	en	20.9	B2
+3008	forekomme	verb		20.9	B2
+3009	leir	noun	en	20.9	B2
+3010	omlegging	noun	ei	20.9	B2
+3011	triumf	noun	en	20.9	B2
+3012	pågripelse	noun	en	20.8	B2
+3013	lønnsoppgjør	noun	et	20.8	B2
+3014	derefter	adverb		20.8	B2
+3015	vare	verb		20.8	B2
+3016	voldelig	adjective		20.8	B2
+3017	smart	adjective		20.8	B2
+3018	mobil	noun	en	20.8	B2
+3019	gjemme	verb		20.8	B2
+3020	rike	verb		20.7	B2
+3021	stramme	verb		20.7	B2
+3022	fremheve	verb		20.7	B2
+3023	struktur	noun	en	20.7	B2
+3024	annonse	noun	en	20.7	B2
+3025	nominere	verb		20.7	B2
+3026	naken	adjective		20.7	B2
+3027	bevissthet	noun	ei	20.7	B2
+3028	fagbevegelse	noun	en	20.7	B2
+3029	problematisk	adjective		20.6	B2
+3030	beskyldning	noun	ei	20.6	B2
+3031	imponerende	adjective		20.6	B2
+3032	ifra	preposition		20.6	B2
+3033	usedvanlig	adjective		20.6	B2
+3034	informasjonsdirektør	noun	en	20.6	B2
+3035	vaske	verb		20.6	B2
+3036	myte	noun	en	20.6	B2
+3037	urimelig	adjective		20.6	B2
+3038	heftig	adjective		20.6	B2
+3039	hende	verb		20.6	B2
+3040	utsettelse	noun	en	20.6	B2
+3041	øve	verb		20.6	B2
+3042	detaljert	adjective		20.6	B2
+3043	premiss	noun	en	20.6	B2
+3044	ca	adverb		20.5	B2
+3045	fase	noun	en	20.5	B2
+3046	forvalte	verb		20.5	B2
+3047	kjede	noun	en	20.5	B2
+3048	finansiell	adjective		20.5	B2
+3049	kriterium	noun	et	20.5	B2
+3050	hasj	noun	en	20.5	B2
+3051	økonom	noun	en	20.4	B2
+3052	henhold	noun	en	20.4	B2
+3053	sammensatt	adjective		20.4	B2
+3054	ide	noun	ei	20.4	B2
+3055	videreføre	verb		20.4	B2
+3056	landsdel	noun	en	20.4	B2
+3057	frustrasjon	noun	en	20.4	B2
+3058	således	adverb		20.4	B2
+3059	apparat	noun	et	20.3	B2
+3060	stue	noun	ei	20.3	B2
+3061	egenkapital	noun	en	20.3	B2
+3062	betraktning	noun	ei	20.3	B2
+3063	von	preposition		20.3	B2
+3064	forsamling	noun	ei	20.3	B2
+3065	flat	adjective		20.3	B2
+3066	oppdatere	verb		20.3	B2
+3067	vogn	noun	ei	20.3	B2
+3068	tilfeldighet	noun	ei	20.2	B2
+3069	dyster	adjective		20.2	B2
+3070	poengtere	verb		20.2	B2
+3071	presis	adjective		20.2	B2
+3072	såvidt	adverb		20.2	B2
+3073	gjennomføring	noun	ei	20.2	B2
+3074	kineser	noun	en	20.2	B2
+3075	langsom	adjective		20.2	B2
+3076	meningsløs	adjective		20.2	B2
+3077	fredsprosess	noun	en	20.2	B2
+3078	datterselskap	noun	et	20.1	B2
+3079	flytting	noun	ei	20.1	B2
+3080	fortjeneste	noun	ei	20.1	B2
+3081	beløpe	verb		20.1	B2
+3082	bilfører	noun	en	20.1	B2
+3083	oversette	verb		20.1	B2
+3084	samarbeidspartner	noun	en	20.1	B2
+3085	parlament	noun	et	20.1	B2
+3086	bo	noun	en	20.1	B2
+3087	avsløring	noun	ei	20.1	B2
+3088	vedlikehold	noun	et	20.0	B2
+3089	tette	verb		20.0	B2
+3090	kjøpesenter	noun	et	20.0	B2
+3091	stortingsvalg	noun	et	20.0	B2
+3092	led	noun	en	20.0	B2
+3093	forgjenger	noun	en	20.0	B2
+3094	pistol	noun	en	20.0	B2
+3095	parallell	adjective		20.0	B2
+3096	trapp	noun	ei	20.0	B2
+3097	visjon	noun	en	20.0	B2
+3098	underholdning	noun	ei	20.0	B2
+3099	svikte	verb		20.0	B2
+3100	uviss	adjective		20.0	B2
+3101	landslagsspiller	noun	en	20.0	B2
+3102	rekruttere	verb		19.9	B2
+3103	anke	noun	en	19.9	B2
+3104	kongress	noun	en	19.9	B2
+3105	inngrep	noun	et	19.9	B2
+3106	innhente	verb		19.9	B2
+3107	lønning	noun	ei	19.9	B2
+3108	brasiliansk	adjective		19.9	B2
+3109	jage	verb		19.8	B2
+3110	svikt	noun	en	19.8	B2
+3111	samvittighet	noun	ei	19.8	B2
+3112	supporter	noun	en	19.8	B2
+3113	bedring	noun	ei	19.8	B2
+3114	permisjon	noun	en	19.8	B2
+3115	bryllup	noun	et	19.8	B2
+3116	bombe	verb		19.8	B2
+3117	omsider	adverb		19.7	B2
+3118	forurensning	noun	ei	19.7	B2
+3119	støy	noun	en	19.7	B2
+3120	al	noun	en	19.7	B2
+3121	stein	adverb		19.7	B2
+3122	håndtering	noun	ei	19.7	B2
+3123	ringe	noun	ei	19.7	B2
+3124	okkupere	verb		19.7	B2
+3125	appell	noun	en	19.7	B2
+3126	helseminister	noun	en	19.7	B2
+3127	treningskamp	noun	en	19.7	B2
+3128	markedsføre	verb		19.7	B2
+3129	drastisk	adjective		19.7	B2
+3130	rettslig	adjective		19.7	B2
+3131	fjern	adjective		19.7	B2
+3132	gøy	adjective		19.6	B2
+3133	stige	noun	en	19.6	B2
+3134	funksjonshemmet	adjective		19.6	B2
+3135	ytringsfrihet	noun	ei	19.6	B2
+3136	tolkning	noun	ei	19.6	B2
+3137	spenne	verb		19.6	B2
+3138	disponere	verb		19.6	B2
+3139	økologisk	adjective		19.6	B2
+3140	oppslag	noun	et	19.6	B2
+3141	reportasje	noun	en	19.6	B2
+3142	lovlig	adjective		19.6	B2
+3143	prioritering	noun	ei	19.6	B2
+3144	akutt	adjective		19.5	B2
+3145	turné	noun	en	19.5	B2
+3146	basis	noun	en	19.5	B2
+3147	pasning	noun	ei	19.5	B2
+3148	flyte	verb		19.5	B2
+3149	venstreside	noun	ei	19.5	B2
+3150	sosialdemokrat	noun	en	19.4	B2
+3151	medvirkning	noun	en	19.4	B2
+3152	inspirasjon	noun	en	19.4	B2
+3153	slapp	adjective		19.4	B2
+3154	motorsykkel	noun	en	19.4	B2
+3155	troverdig	adjective		19.4	B2
+3156	kaste	noun	en	19.4	B2
+3157	stabilitet	noun	en	19.4	B2
+3158	garderobe	noun	en	19.4	B2
+3159	terrorisme	noun	en	19.4	B2
+3160	gigantisk	adjective		19.4	B2
+3161	avdelingsdirektør	noun	en	19.4	B2
+3162	returnere	verb		19.3	B2
+3163	forsinke	verb		19.3	B2
+3164	tet	noun	en	19.3	B2
+3165	lomme	noun	ei	19.3	B2
+3166	søksmål	noun	et	19.3	B2
+3167	redegjørelse	noun	en	19.3	B2
+3168	spent	adverb		19.3	B2
+3169	oppskrift	noun	ei	19.3	B2
+3170	sikkerhetsråd	noun	et	19.3	B2
+3171	enestående	adjective		19.3	B2
+3172	forhørsrett	noun	en	19.3	B2
+3173	våt	adjective		19.2	B2
+3174	avvente	verb		19.2	B2
+3175	personale	noun	et	19.2	B2
+3176	mørke	verb		19.2	B2
+3177	skjøt	noun	en	19.2	B2
+3178	offensiv	noun	en	19.2	B2
+3179	intensjon	noun	en	19.2	B2
+3180	framtidig	adjective		19.2	B2
+3181	gråte	verb		19.2	B2
+3182	stanse	noun	en	19.2	B2
+3183	sinne	noun	et	19.2	B2
+3184	bortimot	adverb		19.2	B2
+3185	plateselskap	noun	et	19.1	B2
+3186	forfølge	verb		19.1	B2
+3187	årrekke	noun	ei	19.1	B2
+3188	liste	verb		19.1	B2
+3189	sosialdemokratisk	adjective		19.1	B2
+3190	ensidig	adjective		19.1	B2
+3191	grunnskole	noun	en	19.1	B2
+3192	prosedyre	noun	en	19.1	B2
+3193	fredsavtale	noun	en	19.1	B2
+3194	matvare	noun	ei	19.1	B2
+3195	deltagelse	noun	en	19.1	B2
+3196	årevis	adverb		19.1	B2
+3197	etterlate	verb		19.1	B2
+3198	årsverk	noun	et	19.0	B2
+3199	røre	verb		19.0	B2
+3200	taktisk	adjective		19.0	B2
+3201	fryse	verb		19.0	B2
+3202	konsentrasjon	noun	en	19.0	B2
+3203	gitar	noun	en	19.0	B2
+3204	blokkere	verb		19.0	B2
+3205	miljøvennlig	adjective		19.0	B2
+3206	bredde	noun	en	19.0	B2
+3207	celle	noun	ei	19.0	B2
+3208	observasjon	noun	en	19.0	B2
+3209	utforme	verb		19.0	B2
+3210	øyenvitne	noun	et	19.0	B2
+3211	kunstig	adjective		19.0	B2
+3212	iraker	noun	en	19.0	B2
+3213	arrestasjon	noun	en	19.0	B2
+3214	permanent	adjective		19.0	B2
+3215	melodi	noun	en	19.0	B2
+3216	vrake	verb		19.0	B2
+3217	barnebarn	noun	et	19.0	B2
+3218	akseptabel	adjective		19.0	B2
+3219	gratulere	verb		19.0	B2
+3220	fangst	noun	en	18.9	B2
+3221	eldreomsorg	noun	ei	18.9	B2
+3222	bosatt	adjective		18.9	B2
+3223	ihvertfall	adverb		18.9	B2
+3224	mindretall	noun	et	18.9	B2
+3225	oss	pronoun		18.9	B2
+3226	angst	noun	en	18.9	B2
+3227	revidere	verb		18.9	B2
+3228	spesialist	noun	en	18.9	B2
+3229	fru	noun	en	18.9	B2
+3230	omgjøre	verb		18.8	B2
+3231	bokstavelig	adjective		18.8	B2
+3232	tenåring	noun	en	18.8	B2
+3233	premie	noun	en	18.8	B2
+3234	oppsikt	noun	en	18.8	B2
+3235	fyre	verb		18.8	B2
+3236	forlengst	adverb		18.8	B2
+3237	gress	noun	et	18.8	B2
+3238	styrte	verb		18.8	B2
+3239	uaktuell	adjective		18.8	B2
+3240	betinget	adjective		18.7	B2
+3241	løsne	verb		18.7	B2
+3242	ventetid	noun	ei	18.7	B2
+3243	forsyne	verb		18.6	B2
+3244	nordover	preposition		18.6	B2
+3245	arne	noun	en	18.6	B2
+3246	bit	noun	en	18.6	B2
+3247	nedre	adjective		18.6	B2
+3248	voldta	verb		18.6	B2
+3249	kontinuerlig	adjective		18.6	B2
+3250	brå	adjective		18.6	B2
+3251	respons	noun	en	18.6	B2
+3252	obligatorisk	adjective		18.6	B2
+3253	rømme	verb		18.6	B2
+3254	direktorat	noun	et	18.6	B2
+3255	østerriksk	adjective		18.6	B2
+3256	overflate	noun	ei	18.6	B2
+3257	sprint	noun	en	18.6	B2
+3258	manus	noun	et	18.6	B2
+3259	lovforslag	noun	et	18.6	B2
+3260	diverse	adjective		18.6	B2
+3261	bensinstasjon	noun	en	18.5	B2
+3262	skotsk	adjective		18.5	B2
+3263	verksted	noun	et	18.5	B2
+3264	diagnose	noun	en	18.5	B2
+3265	kjendis	noun	en	18.5	B2
+3266	greie	noun	en	18.5	B2
+3267	ferde	verb		18.5	B2
+3268	pike	noun	ei	18.5	B2
+3269	selvmord	noun	et	18.5	B2
+3270	bomme	verb		18.5	B2
+3271	tids	adjective		18.5	B2
+3272	meny	noun	en	18.5	B2
+3273	erklært	adjective		18.4	B2
+3274	sykefravær	noun	et	18.4	B2
+3275	pinlig	adjective		18.4	B2
+3276	ri	verb		18.4	B2
+3277	kutt	noun	et	18.4	B2
+3278	markedsandel	noun	en	18.4	B2
+3279	tredel	noun	en	18.4	B2
+3280	intellektuell	adjective		18.4	B2
+3281	høyesterett	noun	en	18.4	B2
+3282	økt	noun	ei	18.4	B2
+3283	affære	noun	en	18.3	B2
+3284	innkjøp	noun	et	18.3	B2
+3285	ubåt	noun	en	18.3	B2
+3286	seremoni	noun	en	18.3	B2
+3287	dødelig	adjective		18.3	B2
+3288	invasjon	noun	en	18.3	B2
+3289	bonus	noun	en	18.3	B2
+3290	toppe	verb		18.3	B2
+3291	ensom	adjective		18.3	B2
+3292	skyld	adjective		18.3	B2
+3293	mislykket	adjective		18.3	B2
+3294	verdig	adjective		18.3	B2
+3295	kjekk	adjective		18.3	B2
+3296	innsyn	noun	et	18.2	B2
+3297	teppe	noun	et	18.2	B2
+3298	illustrere	verb		18.2	B2
+3299	støttespiller	noun	en	18.2	B2
+3300	hylle	verb		18.2	B2
+3301	istedenfor	preposition		18.2	B2
+3302	hurtig	adjective		18.1	B2
+3303	julaften	noun	en	18.1	B2
+3304	titalls	adjective		18.1	B2
+3305	bemerke	verb		18.1	B2
+3306	begravelse	noun	en	18.1	B2
+3307	hud	noun	ei	18.1	B2
+3308	rytter	noun	en	18.1	B2
+3309	vanvittig	adjective		18.1	B2
+3310	meg	pronoun		18.1	B2
+3311	heroin	noun	en	18.1	B2
+3312	forbeholde	verb		18.1	B2
+3313	opptøyer	noun	et	18.1	B2
+3314	fotografere	verb		18.1	B2
+3315	konsept	noun	et	18.1	B2
+3316	personlighet	noun	ei	18.1	B2
+3317	sommerferie	noun	en	18.1	B2
+3318	original	adjective		18.1	B2
+3319	oppvarming	noun	ei	18.1	B2
+3320	nedleggelse	noun	en	18.0	B2
+3321	gift	adjective		18.0	B2
+3322	styremøte	noun	et	18.0	B2
+3323	gebyr	noun	et	18.0	B2
+3324	toppsjef	noun	en	18.0	B2
+3325	kopiere	verb		18.0	B2
+3326	trafikkulykke	noun	ei	18.0	B2
+3327	kompensasjon	noun	en	18.0	B2
+3328	talskvinne	noun	ei	18.0	B2
+3329	utallig	adjective		18.0	B2
+3330	høyskole	noun	en	18.0	B2
+3331	gli	verb		17.9	B2
+3332	begeistret	adjective		17.9	B2
+3333	kafé	noun	en	17.9	B2
+3334	sår	adjective		17.9	B2
+3335	potet	noun	ei	17.9	B2
+3336	ryste	verb		17.9	B2
+3337	avholde	verb		17.9	B2
+3338	østlig	adjective		17.9	B2
+3339	utkast	noun	et	17.9	B2
+3340	betjene	verb		17.9	B2
+3341	kurdisk	adjective		17.9	B2
+3342	puste	verb		17.9	B2
+3343	kontantstøtte	noun	ei	17.9	B2
+3344	bronse	noun	en	17.9	B2
+3345	abort	noun	en	17.8	B2
+3346	gjensidig	adjective		17.8	B2
+3347	ideell	adjective		17.8	B2
+3348	presentasjon	noun	en	17.8	B2
+3349	grønnsak	noun	ei	17.8	B2
+3350	ruin	noun	en	17.8	B2
+3351	bre	verb		17.8	B2
+3352	strake	noun	en	17.8	B2
+3353	doble	verb		17.8	B2
+3354	register	noun	et	17.8	B2
+3355	panikk	noun	en	17.8	B2
+3356	slukke	verb		17.8	B2
+3357	rekruttering	noun	ei	17.8	B2
+3358	sentralbanksjef	noun	en	17.8	B2
+3359	oppløsning	noun	ei	17.8	B2
+3360	instans	noun	en	17.7	B2
+3361	latter	noun	en	17.7	B2
+3362	notat	noun	et	17.7	B2
+3363	pave	noun	en	17.7	B2
+3364	ras	noun	et	17.7	B2
+3365	nedsette	verb		17.7	B2
+3366	jevnlig	adverb		17.7	B2
+3367	opprettelse	noun	en	17.7	B2
+3368	slagord	noun	et	17.7	B2
+3369	mareritt	noun	et	17.7	B2
+3370	eierskap	noun	et	17.7	B2
+3371	sentralbyrå	noun	et	17.7	B2
+3372	ubetinget	adjective		17.7	B2
+3373	drakt	noun	ei	17.7	B2
+3374	lovverk	noun	et	17.7	B2
+3375	prisstigning	noun	ei	17.7	B2
+3376	tidsrom	noun	et	17.6	B2
+3377	fløy	noun	en	17.6	B2
+3378	kulde	noun	ei	17.6	B2
+3379	inneværende	adjective		17.6	B2
+3380	drosje	noun	ei	17.6	B2
+3381	ødeleggelse	noun	en	17.6	B2
+3382	medvirke	verb		17.6	B2
+3383	teknologisk	adjective		17.6	B2
+3384	knekke	verb		17.6	B2
+3385	anerkjennelse	noun	en	17.6	B2
+3386	grav	noun	en	17.6	B2
+3387	uttelling	noun	ei	17.6	B2
+3388	stelle	verb		17.6	B2
+3389	nøktern	adjective		17.5	B2
+3390	forbilde	noun	et	17.5	B2
+3391	putte	verb		17.5	B2
+3392	vokalist	noun	en	17.5	B2
+3393	jernbane	noun	en	17.5	B2
+3394	tann	noun	ei	17.5	B2
+3395	framfor	preposition		17.5	B2
+3396	inntreffe	verb		17.5	B2
+3397	energiminister	noun	en	17.5	B2
+3398	utvalgt	adjective		17.5	B2
+3399	passer	noun	en	17.5	B2
+3400	grusom	adjective		17.5	B2
+3401	tape	noun	en	17.5	B2
+3402	sidelinje	noun	ei	17.5	B2
+3403	kjerne	noun	ei	17.5	B2
+3404	kutte	noun	ei	17.5	B2
+3405	ole	interjection		17.4	B2
+3406	sammenlikne	verb		17.4	B2
+3407	varetektsfengsling	noun	ei	17.4	B2
+3408	borettslag	noun	et	17.4	B2
+3409	bakterie	noun	en	17.4	B2
+3410	hopper	noun	en	17.4	B2
+3411	viking	noun	en	17.4	B2
+3412	sammenslåing	noun	ei	17.4	B2
+3413	gransking	noun	ei	17.4	B2
+3414	sosialistisk	adjective		17.3	B2
+3415	lagre	verb		17.3	B2
+3416	halvt	noun	en	17.3	B2
+3417	gul	adjective		17.3	B2
+3418	skikkelse	noun	en	17.3	B2
+3419	kommunist	noun	en	17.3	B2
+3420	kroatisk	adjective		17.3	B2
+3421	provosere	verb		17.3	B2
+3422	ingeniør	noun	en	17.3	B2
+3423	oppnevne	verb		17.3	B2
+3424	dukke	noun	ei	17.3	B2
+3425	anlegge	verb		17.3	B2
+3426	forsprang	noun	et	17.3	B2
+3427	sitere	verb		17.3	B2
+3428	sakkyndig	adjective		17.3	B2
+3429	dykker	noun	en	17.3	B2
+3430	betegnelse	noun	en	17.3	B2
+3431	farvel	interjection		17.2	B2
+3432	etterretning	noun	ei	17.2	B2
+3433	eksportere	verb		17.2	B2
+3434	førstkommende	adjective		17.2	B2
+3435	fjorår	noun	et	17.2	B2
+3436	applaus	noun	en	17.2	B2
+3437	urolig	adjective		17.2	B2
+3438	komplett	adjective		17.2	B2
+3439	kopi	noun	en	17.2	B2
+3440	beruset	adjective		17.2	B2
+3441	stopp	noun	en	17.2	B2
+3442	framgang	noun	en	17.1	B2
+3443	organisering	noun	ei	17.1	B2
+3444	toalett	noun	et	17.1	B2
+3445	indirekte	adjective		17.1	B2
+3446	motivasjon	noun	en	17.1	B2
+3447	uvær	noun	et	17.1	B2
+3448	slott	noun	et	17.1	B2
+3449	friske	verb		17.1	B2
+3450	kontinent	noun	et	17.1	B2
+3451	ferge	noun	ei	17.1	B2
+3452	drikke	noun	en	17.1	B2
+3453	demokrat	noun	en	17.1	B2
+3454	bemanning	noun	ei	17.1	B2
+3455	invitasjon	noun	en	17.1	B2
+3456	likestilling	noun	ei	17.0	B2
+3457	forretningsmann	noun	en	17.0	B2
+3458	begrenset	adjective		17.0	B2
+3459	dispensasjon	noun	en	17.0	B2
+3460	praktisere	verb		17.0	B2
+3461	forespørsel	noun	en	17.0	B2
+3462	bakover	adverb		17.0	B2
+3463	utbrudd	noun	et	17.0	B2
+3464	skulptur	noun	en	17.0	B2
+3465	massakre	noun	en	17.0	B2
+3466	duo	noun	en	17.0	B2
+3467	balansere	verb		17.0	B2
+3468	henvisning	noun	ei	17.0	B2
+3469	vits	noun	en	17.0	B2
+3470	relevant	adjective		17.0	B2
+3471	desidert	adjective		16.9	B2
+3472	jugoslavisk	adjective		16.9	B2
+3473	utenfra	preposition		16.9	B2
+3474	nybygg	noun	et	16.9	B2
+3475	betraktelig	adjective		16.9	B2
+3476	bortekamp	noun	en	16.9	B2
+3477	ofre	verb		16.9	B2
+3478	islam	noun	en	16.9	B2
+3479	kreditor	noun	en	16.9	B2
+3480	bekreftelse	noun	en	16.9	B2
+3481	fleksibel	adjective		16.9	B2
+3482	nød	noun	ei	16.9	B2
+3483	ritt	noun	et	16.9	B2
+3484	påfølgende	adjective		16.9	B2
+3485	variasjon	noun	en	16.9	B2
+3486	rasisme	noun	en	16.8	B2
+3487	strid	adjective		16.8	B2
+3488	tilfredsstille	verb		16.8	B2
+3489	fullmakt	noun	ei	16.8	B2
+3490	ene	verb		16.8	B2
+3491	morgentime	noun	en	16.8	B2
+3492	kjernefysisk	adjective		16.8	B2
+3493	forlik	noun	et	16.8	B2
+3494	menneskeliv	noun	et	16.8	B2
+3495	infrastruktur	noun	en	16.8	B2
+3496	fastholde	verb		16.8	B2
+3497	omgi	verb		16.8	B2
+3498	lommebok	noun	ei	16.8	B2
+3499	jordbruk	noun	et	16.8	B2
+3500	støte	verb		16.8	B2
+3501	primær	adjective		16.7	B2
+3502	veg	noun	en	16.7	B2
+3503	henlegge	verb		16.7	B2
+3504	stolpe	noun	en	16.7	B2
+3505	arbeidsgruppe	noun	ei	16.7	B2
+3506	spredning	noun	ei	16.7	B2
+3507	komite	noun	en	16.7	B2
+3508	fredspris	noun	en	16.7	B2
+3509	innvending	noun	ei	16.6	B2
+3510	sluttspill	noun	et	16.6	B2
+3511	arkiv	noun	et	16.6	B2
+3512	etterkant	noun	en	16.6	B2
+3513	opprinnelse	noun	en	16.6	B2
+3514	plante	noun	ei	16.6	B2
+3515	overvåking	noun	ei	16.6	B2
+3516	mangelfull	adjective		16.6	B2
+3517	folkelig	adjective		16.6	B2
+3518	minimum	noun	et	16.6	B2
+3519	corner	noun	en	16.6	B2
+3520	helsepersonell	noun	et	16.6	B2
+3521	reflektere	verb		16.5	B2
+3522	politibetjent	noun	en	16.5	B2
+3523	pågående	adjective		16.5	B2
+3524	ruste	verb		16.5	B2
+3525	ambisiøs	adjective		16.5	B2
+3526	følgelig	adverb		16.5	B2
+3527	gitt	interjection		16.5	B2
+3528	nikke	verb		16.5	B2
+3529	republikaner	noun	en	16.5	B2
+3530	anbud	noun	et	16.5	B2
+3531	nøytral	adjective		16.5	B2
+3532	avfyre	verb		16.5	B2
+3533	lønnsomhet	noun	ei	16.5	B2
+3534	oppvekst	noun	en	16.5	B2
+3535	hylle	noun	ei	16.5	B2
+3536	frigjøre	verb		16.5	B2
+3537	orkan	noun	en	16.5	B2
+3538	cupfinale	noun	en	16.5	B2
+3539	opplag	noun	et	16.4	B2
+3540	forresten	adverb		16.4	B2
+3541	kronprinsesse	noun	ei	16.4	B2
+3542	galleri	noun	et	16.4	B2
+3543	forbudt	adjective		16.4	B2
+3544	passiv	adjective		16.4	B2
+3545	vaksine	noun	en	16.4	B2
+3546	forebygge	verb		16.4	B2
+3547	eksempelvis	adverb		16.4	B2
+3548	ulempe	noun	ei	16.4	B2
+3549	trøbbel	noun	et	16.4	B2
+3550	samisk	adjective		16.4	B2
+3551	bagasje	noun	en	16.4	B2
+3552	ulykkessted	noun	et	16.4	B2
+3553	mobbing	noun	ei	16.4	B2
+3554	feile	verb		16.4	B2
+3555	angre	verb		16.3	B2
+3556	pr	noun	en	16.3	B2
+3557	utforming	noun	ei	16.3	B2
+3558	aldersgruppe	noun	ei	16.3	B2
+3559	bru	noun	ei	16.3	B2
+3560	leveranse	noun	en	16.3	B2
+3561	omstilling	noun	ei	16.3	B2
+3562	entusiasme	noun	en	16.3	B2
+3563	trofast	adjective		16.3	B2
+3564	myk	adjective		16.3	B2
+3565	lojal	adjective		16.3	B2
+3566	redningsmannskap	noun	et	16.3	B2
+3567	utvisning	noun	ei	16.3	B2
+3568	nakke	noun	en	16.3	B2
+3569	liknende	adjective		16.3	B2
+3570	oppsummere	verb		16.3	B2
+3571	prise	verb		16.2	B2
+3572	besetning	noun	ei	16.2	B2
+3573	sjefredaktør	noun	en	16.2	B2
+3574	gammeldags	adjective		16.2	B2
+3575	tjener	noun	en	16.2	B2
+3576	mellomrom	noun	et	16.2	B2
+3577	torsk	noun	en	16.2	B2
+3578	drapsmann	noun	en	16.2	B2
+3579	rund	adjective		16.2	B2
+3580	driver	noun	en	16.2	B2
+3581	vennlig	adjective		16.2	B2
+3582	minimal	adjective		16.2	B2
+3583	serierunde	noun	en	16.2	B2
+3584	herredsrett	noun	en	16.1	B2
+3585	radioaktiv	adjective		16.1	B2
+3586	beherske	verb		16.1	B2
+3587	mobilisere	verb		16.1	B2
+3588	innimellom	preposition		16.1	B2
+3589	back	noun	en	16.1	B2
+3590	kapittel	noun	et	16.1	B2
+3591	formidabel	adjective		16.1	B2
+3592	formulering	noun	ei	16.1	B2
+3593	valgresultat	noun	et	16.1	B2
+3594	universitetssykehus	noun	et	16.1	B2
+3595	jubileum	noun	et	16.1	B2
+3596	samspill	noun	et	16.1	B2
+3597	eksklusiv	adjective		16.1	B2
+3598	orientering	noun	ei	16.1	B2
+3599	symptom	noun	et	16.1	B2
+3600	moms	noun	en	16.1	B2
+3601	beordre	verb		16.1	B2
+3602	nabolag	noun	et	16.1	B2
+3603	utbytte	noun	et	16.0	B2
+3604	sige	verb		16.0	B2
+3605	kommunisere	verb		16.0	B2
+3606	innpå	preposition		16.0	B2
+3607	sport	noun	en	16.0	B2
+3608	innspill	noun	et	16.0	B2
+3609	japaner	noun	en	16.0	B2
+3610	klassiker	noun	en	16.0	B2
+3611	flåte	noun	en	16.0	B2
+3612	hovedkontor	noun	et	16.0	B2
+3613	uavhengighet	noun	ei	16.0	B2
+3614	lokal	noun	en	16.0	B2
+3615	etablert	adjective		16.0	B2
+3616	svømme	verb		16.0	B2
+3617	husholdning	noun	ei	16.0	B2
+3618	bønn	noun	ei	16.0	B2
+3619	nerve	noun	en	16.0	B2
+3620	innad	adverb		15.9	B2
+3621	pleier	noun	en	15.9	B2
+3622	tunge	verb		15.9	B2
+3623	republikansk	adjective		15.9	B2
+3624	drivstoff	noun	et	15.9	B2
+3625	innendørs	preposition		15.9	B2
+3626	beklagelig	adjective		15.9	B2
+3627	baby	noun	en	15.9	B2
+3628	geografisk	adjective		15.9	B2
+3629	asyl	noun	et	15.9	B2
+3630	smøre	verb		15.9	B2
+3631	senator	noun	en	15.9	B2
+3632	stillhet	noun	ei	15.9	B2
+3633	utlån	noun	et	15.9	B2
+3634	innbytter	noun	en	15.9	B2
+3635	trailer	noun	en	15.9	B2
+3636	halvere	verb		15.8	B2
+3637	nederlender	noun	en	15.8	B2
+3638	bar	noun	en	15.8	B2
+3639	pust	noun	en	15.8	B2
+3640	ku	noun	ei	15.8	B2
+3641	integrere	verb		15.8	B2
+3642	sekk	noun	en	15.8	B2
+3643	rane	verb		15.8	B2
+3644	reparere	verb		15.8	B2
+3645	mislykkes	verb		15.8	B2
+3646	lettelse	noun	en	15.8	B2
+3647	promille	noun	en	15.8	B2
+3648	port	noun	en	15.8	B2
+3649	kraftverk	noun	et	15.8	B2
+3650	mort	noun	en	15.8	B2
+3651	saksbehandling	noun	ei	15.8	B2
+3652	målsetning	noun	ei	15.8	B2
+3653	dengang	adverb		15.8	B2
+3654	profilere	verb		15.8	B2
+3655	hende	noun	et	15.8	B2
+3656	utpå	preposition		15.8	B2
+3657	undre	verb		15.7	B2
+3658	fotballkamp	noun	en	15.7	B2
+3659	begjære	verb		15.7	B2
+3660	kikke	verb		15.7	B2
+3661	sky	noun	ei	15.7	B2
+3662	sprit	noun	en	15.7	B2
+3663	utebli	verb		15.7	B2
+3664	forestille	verb		15.7	B2
+3665	riksadvokat	noun	en	15.7	B2
+3666	stamme	noun	en	15.7	B2
+3667	ektefelle	noun	en	15.7	B2
+3668	militant	adjective		15.7	B2
+3669	privatperson	noun	en	15.7	B2
+3670	heade	verb		15.7	B2
+3671	konge	noun	en	15.7	B2
+3672	sats	noun	en	15.7	B2
+3673	lukt	noun	ei	15.7	B2
+3674	atskillig	adjective		15.6	B2
+3675	knute	verb		15.6	B2
+3676	søt	adjective		15.6	B2
+3677	duft	noun	en	15.6	B2
+3678	lunsj	noun	en	15.6	B2
+3679	kommentator	noun	en	15.6	B2
+3680	treg	adjective		15.6	B2
+3681	fremtredende	adjective		15.6	B2
+3682	syvende	adjective		15.6	B2
+3683	boikotte	verb		15.6	B2
+3684	stortingsmelding	noun	ei	15.6	B2
+3685	slakte	verb		15.6	B2
+3686	moral	noun	en	15.6	B2
+3687	fengselsstraff	noun	en	15.5	B2
+3688	stifte	verb		15.5	B2
+3689	barndom	noun	en	15.5	B2
+3690	stiller	noun	en	15.5	B2
+3691	gerilja	noun	en	15.5	B2
+3692	erobre	verb		15.5	B2
+3693	glatt	adjective		15.5	B2
+3694	spørsmålstegn	noun	et	15.5	B2
+3695	pusse	verb		15.5	B2
+3696	akter	adverb		15.5	B2
+3697	ankomst	noun	en	15.5	B2
+3698	hjemby	noun	en	15.5	B2
+3699	friidrett	noun	en	15.5	B2
+3700	møbel	noun	et	15.5	B2
+3701	gro	verb		15.5	B2
+3702	misforståelse	noun	en	15.5	B2
+3703	referere	verb		15.4	B2
+3704	rose	verb		15.4	B2
+3705	begrave	verb		15.4	B2
+3706	arbeidsdag	noun	en	15.4	B2
+3707	ole	noun	ei	15.4	B2
+3708	sørafrikansk	adjective		15.4	B2
+3709	behagelig	adjective		15.4	B2
+3710	lisens	noun	en	15.4	B2
+3711	narkoman	adjective		15.4	B2
+3712	aktivist	noun	en	15.4	B2
+3713	fiske	noun	et	15.4	B2
+3714	føring	noun	ei	15.4	B2
+3715	næringsminister	noun	en	15.4	B2
+3716	kortsiktig	adjective		15.4	B2
+3717	ideologisk	adjective		15.4	B2
+3718	omlag	adverb		15.4	B2
+3719	pedagogisk	adjective		15.4	B2
+3720	overtale	verb		15.4	B2
+3721	konstruktiv	adjective		15.3	B2
+3722	flytende	adjective		15.3	B2
+3723	stortingsgruppe	noun	ei	15.3	B2
+3724	rett	adjective		15.3	B2
+3725	redegjøre	verb		15.3	B2
+3726	delegat	noun	en	15.3	B2
+3727	psykologisk	adjective		15.3	B2
+3728	grunneier	noun	en	15.3	B2
+3729	vakt	adjective		15.3	B2
+3730	visstnok	adverb		15.3	B2
+3731	reporter	noun	en	15.3	B2
+3732	tortur	noun	en	15.3	B2
+3733	mystisk	adjective		15.3	B2
+3734	giftig	adjective		15.3	B2
+3735	skala	noun	en	15.2	B2
+3736	motorvei	noun	en	15.2	B2
+3737	kommunistparti	noun	et	15.2	B2
+3738	rekkevidde	noun	ei	15.2	B2
+3739	regulering	noun	ei	15.2	B2
+3740	framstille	verb		15.2	B2
+3741	ilegge	verb		15.2	B2
+3742	fet	adjective		15.2	B2
+3743	rettssal	noun	en	15.2	B2
+3744	polakk	noun	en	15.2	B2
+3745	fortvilet	adjective		15.2	B2
+3746	engelskmann	noun	en	15.2	B2
+3747	avlegge	verb		15.2	B2
+3748	kunngjøring	noun	ei	15.2	B2
+3749	enebolig	noun	en	15.2	B2
+3750	komedie	noun	en	15.2	B2
+3751	stevne	noun	et	15.2	B2
+3752	måltid	noun	et	15.2	B2
+3753	presidentkandidat	noun	en	15.2	B2
+3754	venteliste	noun	ei	15.2	B2
+3755	nedskjæring	noun	ei	15.2	B2
+3756	attentat	noun	et	15.1	B2
+3757	oberst	noun	en	15.1	B2
+3758	operatør	noun	en	15.1	B2
+3759	innvilge	verb		15.1	B2
+3760	dog	adverb		15.1	B2
+3761	storme	verb		15.1	B2
+3762	postkontor	noun	et	15.1	B2
+3763	underkant	noun	en	15.1	B2
+3764	søppel	noun	en	15.1	B2
+3765	rytme	noun	en	15.1	B2
+3766	tildeling	noun	ei	15.1	B2
+3767	lytter	noun	en	15.1	B2
+3768	lekker	adjective		15.1	B2
+3769	plast	noun	en	15.1	B2
+3770	bukse	noun	ei	15.1	B2
+3771	overhode	noun	et	15.1	B2
+3772	prat	noun	en	15.1	B2
+3773	glippe	verb		15.1	B2
+3774	tidvis	adjective		15.0	B2
+3775	insistere	verb		15.0	B2
+3776	lukke	verb		15.0	B2
+3777	gudstjeneste	noun	en	15.0	B2
+3778	blid	adjective		15.0	B2
+3779	meteorolog	noun	en	15.0	B2
+3780	bore	verb		15.0	B2
+3781	bratt	adjective		15.0	B2
+3782	appellere	verb		15.0	B2
+3783	flaks	noun	en	15.0	B2
+3784	opsjon	noun	en	15.0	B2
+3785	kirkelig	adjective		14.9	B2
+3786	tilsette	verb		14.9	B2
+3787	helge	verb		14.9	B2
+3788	rentenivå	noun	et	14.9	B2
+3789	instruktør	noun	en	14.9	B2
+3790	gifte	noun	en	14.9	B2
+3791	løgn	noun	ei	14.9	B2
+3792	jazz	noun	en	14.9	B2
+3793	snø	verb		14.9	B2
+3794	okkupasjon	noun	en	14.9	B2
+3795	redning	noun	ei	14.9	B2
+3796	lekke	verb		14.9	B2
+3797	mindreårig	adjective		14.9	B2
+3798	kjole	noun	en	14.9	B2
+3799	assistent	noun	en	14.9	B2
+3800	tilrettelegge	verb		14.9	B2
+3801	danser	noun	en	14.9	B2
+3802	sympati	noun	en	14.8	B2
+3803	hjemlig	adjective		14.8	B2
+3804	bærer	noun	en	14.8	B2
+3805	utenrikspolitikk	noun	en	14.8	B2
+3806	taktikk	noun	en	14.8	B2
+3807	legendarisk	adjective		14.8	B2
+3808	naiv	adjective		14.8	B2
+3809	volum	noun	et	14.8	B2
+3810	antakelig	adverb		14.8	B2
+3811	trikk	noun	en	14.8	B2
+3812	takke	noun	ei	14.8	B2
+3813	seksjon	noun	en	14.8	B2
+3814	klippe	verb		14.8	B2
+3815	trøste	verb		14.8	B2
+3816	sofa	noun	en	14.8	B2
+3817	montere	verb		14.7	B2
+3818	lokalsamfunn	noun	et	14.7	B2
+3819	dose	noun	en	14.7	B2
+3820	rival	noun	en	14.7	B2
+3821	utkant	noun	en	14.7	B2
+3822	installasjon	noun	en	14.7	B2
+3823	begeistring	noun	ei	14.7	B2
+3824	yrke	noun	en	14.7	B2
+3825	ferdighet	noun	ei	14.7	B2
+3826	lovbrudd	noun	et	14.7	B2
+3827	operativ	adjective		14.7	B2
+3828	utfordrer	noun	en	14.7	B2
+3829	glimt	noun	et	14.7	B2
+3830	mottak	noun	et	14.7	B2
+3831	sentralstyre	noun	et	14.6	B2
+3832	forhåpentligvis	adverb		14.6	B2
+3833	markant	adjective		14.6	B2
+3834	vandre	verb		14.6	B2
+3835	feilaktig	adjective		14.6	B2
+3836	premiere	verb		14.6	B2
+3837	utviklingsland	noun	et	14.6	B2
+3838	opphøre	verb		14.6	B2
+3839	avansere	verb		14.6	B2
+3840	solidaritet	noun	en	14.6	B2
+3841	overskrift	noun	ei	14.6	B2
+3842	stridsvogn	noun	ei	14.5	B2
+3843	partifelle	noun	en	14.5	B2
+3844	ansettelse	noun	en	14.5	B2
+3845	selveste	determiner		14.5	B2
+3846	utøve	verb		14.5	B2
+3847	tilslutning	noun	ei	14.5	B2
+3848	helsetjeneste	noun	en	14.5	B2
+3849	sikring	noun	ei	14.5	B2
+3850	kjølig	adjective		14.5	B2
+3851	onkel	noun	en	14.5	B2
+3852	muntlig	adjective		14.5	B2
+3853	autoritet	noun	en	14.5	B2
+3854	stiv	adjective		14.5	B2
+3855	mishandling	noun	ei	14.5	B2
+3856	klarsignal	noun	et	14.5	B2
+3857	utenlands	adverb		14.5	B2
+3858	berømt	adjective		14.5	B2
+3859	bortebane	noun	en	14.5	B2
+3860	entusiastisk	adjective		14.4	B2
+3861	fortvile	verb		14.4	B2
+3862	husk	noun	en	14.4	B2
+3863	lufthavn	noun	ei	14.4	B2
+3864	rykket	adjective		14.4	B2
+3865	budsjettforslag	noun	et	14.4	B2
+3866	redskap	noun	en	14.4	B2
+3867	skadelig	adjective		14.4	B2
+3868	egyptisk	adjective		14.4	B2
+3869	sigarett	noun	en	14.4	B2
+3870	privatisering	noun	ei	14.4	B2
+3871	forsvarssjef	noun	en	14.4	B2
+3872	sosialminister	noun	en	14.4	B2
+3873	hellige	verb		14.4	B2
+3874	mistenkelig	adjective		14.4	B2
+3875	lei	noun	ei	14.4	B2
+3876	undergrave	verb		14.4	B2
+3877	lyve	verb		14.4	B2
+3878	fotografi	noun	en	14.4	B2
+3879	kokain	noun	en	14.4	B2
+3880	direktiv	noun	et	14.4	B2
+3881	fiskeriminister	noun	en	14.4	B2
+3882	visning	noun	ei	14.4	B2
+3883	dirigent	noun	en	14.4	B2
+3884	enkeltperson	noun	en	14.4	B2
+3885	koffert	noun	en	14.4	B2
+3886	ekte	verb		14.4	B2
+3887	aksjeselskap	noun	et	14.4	B2
+3888	uønsket	adjective		14.4	B2
+3889	junior	noun	en	14.3	B2
+3890	gjengi	verb		14.3	B2
+3891	romantisk	adjective		14.3	B2
+3892	anvende	verb		14.3	B2
+3893	kapre	verb		14.3	B2
+3894	dele	noun	et	14.3	B2
+3895	rigg	noun	en	14.3	B2
+3896	tviler	noun	en	14.3	B2
+3897	kule	verb		14.3	B2
+3898	stempel	noun	et	14.3	B2
+3899	utligne	verb		14.3	B2
+3900	tåre	noun	ei	14.3	B2
+3901	maler	noun	en	14.2	B2
+3902	forhåpentlig	adverb		14.2	B2
+3903	emisjon	noun	en	14.2	B2
+3904	slått	noun	en	14.2	B2
+3905	messe	noun	ei	14.2	B2
+3906	teoretisk	adjective		14.2	B2
+3907	storebror	noun	en	14.2	B2
+3908	ytterst	adjective		14.2	B2
+3909	asiatisk	adjective		14.2	B2
+3910	flagge	verb		14.2	B2
+3911	handlingsplan	noun	en	14.2	B2
+3912	forståelig	adjective		14.2	B2
+3913	installere	verb		14.2	B2
+3914	skilsmisse	noun	en	14.2	B2
+3915	påfallende	adjective		14.2	B2
+3916	muskel	noun	en	14.2	B2
+3917	aksjekurs	noun	en	14.2	B2
+3918	unntatt	preposition		14.2	B2
+3919	vennskap	noun	et	14.2	B2
+3920	trøst	noun	ei	14.2	B2
+3921	straffskyld	noun	ei	14.2	B2
+3922	ønskelig	adjective		14.2	B2
+3923	riste	verb		14.2	B2
+3924	familiemedlem	noun	et	14.2	B2
+3925	tilbakegang	noun	en	14.1	B2
+3926	ferje	noun	ei	14.1	B2
+3927	knappe	verb		14.1	B2
+3928	historiker	noun	en	14.1	B2
+3929	vike	verb		14.1	B2
+3930	overholde	verb		14.1	B2
+3931	sammenbrudd	noun	et	14.1	B2
+3932	kroat	noun	en	14.1	B2
+3933	forsvarsdepartement	noun	et	14.1	B2
+3934	kommunalminister	noun	en	14.1	B2
+3935	glipp	noun	en	14.1	B2
+3936	granat	noun	en	14.1	B2
+3937	sjøl	determiner		14.1	B2
+3938	skjerme	verb		14.1	B2
+3939	leie	noun	en	14.1	B2
+3940	potensial	noun	et	14.1	B2
+3941	utestenge	verb		14.1	B2
+3942	arbeidstager	noun	en	14.0	B2
+3943	farve	noun	en	14.0	B2
+3944	selvangivelse	noun	en	14.0	B2
+3945	rehabilitering	noun	ei	14.0	B2
+3946	annenplass	noun	en	14.0	B2
+3947	verdsette	verb		14.0	B2
+3948	optimist	noun	en	14.0	B2
+3949	kommunistisk	adjective		14.0	B2
+3950	helst	adverb		14.0	B2
+3951	forverre	verb		14.0	B2
+3952	utenkelig	adjective		14.0	B2
+3953	innsatt	adjective		14.0	B2
+3954	opprykk	noun	en	14.0	B2
+3955	skummel	adjective		14.0	B2
+3956	ustabil	adjective		14.0	B2
+3957	bergensk	adjective		14.0	B2
+3958	oppløse	verb		14.0	B2
+3959	brikke	noun	ei	13.9	B2
+3960	angriper	noun	en	13.9	B2
+3961	dødsstraff	noun	en	13.9	B2
+3962	gjeldende	adjective		13.9	B2
+3963	odd	noun	en	13.9	B2
+3964	pressefolk	noun	et	13.9	B2
+3965	lik	noun	et	13.9	B2
+3966	klinikk	noun	en	13.9	B2
+3967	uendret	adjective		13.9	B2
+3968	oppsetning	noun	ei	13.9	B2
+3969	redaksjon	noun	en	13.9	B2
+3970	klimaendring	noun	ei	13.9	B2
+3971	arve	verb		13.9	B2
+3972	nærmest	adverb		13.9	B2
+3973	ap	noun	en	13.9	B2
+3974	skjønn	adjective		13.9	B2
+3975	ekstern	adjective		13.9	B2
+3976	hellig	adjective		13.9	B2
+3977	frokost	noun	en	13.9	B2
+3978	slekt	noun	ei	13.8	B2
+3979	jens	noun	en	13.8	B2
+3980	gullmedalje	noun	en	13.8	B2
+3981	fortau	noun	et	13.8	B2
+3982	hell	noun	et	13.8	B2
+3983	skje	noun	ei	13.8	B2
+3984	tålmodighet	noun	ei	13.8	B2
+3985	restriksjon	noun	en	13.8	B2
+3986	feie	verb		13.8	B2
+3987	herfra	adverb		13.8	B2
+3988	guvernør	noun	en	13.8	B2
+3989	utnyttelse	noun	en	13.8	B2
+3990	føye	verb		13.8	B2
+3991	psykiatri	noun	en	13.8	B2
+3992	dikter	noun	en	13.7	B2
+3993	utspille	verb		13.7	B2
+3994	ake	verb		13.7	B2
+3995	rådhus	noun	et	13.7	B2
+3996	ishockey	noun	en	13.7	B2
+3997	livstruende	adjective		13.7	B2
+3998	vogntog	noun	et	13.7	B2
+3999	kurder	noun	en	13.7	B2
+4000	penge	noun	en	13.7	B2
+4001	faren	adjective		13.7	B2
+4002	leire	noun	ei	13.7	B2
+4003	verktøy	noun	et	13.7	B2
+4004	arbeidsløshet	noun	ei	13.7	B2
+4005	drukne	verb		13.7	B2
+4006	pynte	verb		13.7	B2
+4007	vri	verb		13.7	B2
+4008	katastrofal	adjective		13.7	B2
+4009	avstå	verb		13.7	B2
+4010	belyse	verb		13.7	B2
+4011	boligmarked	noun	et	13.7	B2
+4012	pub	noun	en	13.7	B2
+4013	utendørs	preposition		13.7	B2
+4014	minoritet	noun	en	13.6	B2
+4015	undervise	verb		13.6	B2
+4016	bosette	verb		13.6	B2
+4017	gift	noun	ei	13.6	B2
+4018	fremstilling	noun	ei	13.6	B2
+4019	lenger	adverb		13.6	B2
+4020	fylkesting	noun	et	13.6	B2
+4021	stress	noun	en	13.6	B2
+4022	åndelig	adjective		13.6	B2
+4023	kompensere	verb		13.6	B2
+4024	tykk	adjective		13.6	B2
+4025	diktator	noun	en	13.6	B2
+4026	opposisjonsparti	noun	et	13.6	B2
+4027	trivelig	adjective		13.6	B2
+4028	tilnærmet	adjective		13.6	B2
+4029	asfalt	noun	en	13.6	B2
+4030	besvare	verb		13.6	B2
+4031	vedlikeholde	verb		13.6	B2
+4032	blodprøve	noun	ei	13.6	B2
+4033	bestemor	noun	ei	13.5	B2
+4034	kjeft	noun	en	13.5	B2
+4035	urolighet	noun	ei	13.5	B2
+4036	utseende	noun	et	13.5	B2
+4037	depresjon	noun	en	13.5	B2
+4038	reserve	noun	en	13.5	B2
+4039	nære	adverb		13.5	B2
+4040	frikjenne	verb		13.5	B2
+4041	helhetlig	adjective		13.5	B2
+4042	tie	verb		13.5	B2
+4043	kronikk	noun	en	13.5	B2
+4044	koalisjon	noun	en	13.5	B2
+4045	iføre	verb		13.5	B2
+4046	utsolgt	adjective		13.5	B2
+4047	hustru	noun	ei	13.5	B2
+4048	trio	noun	en	13.5	B2
+4049	sand	noun	en	13.5	B2
+4050	tross	noun	en	13.5	B2
+4051	iraksk	adjective		13.5	B2
+4052	avslappet	adjective		13.4	B2
+4053	sprog	noun	et	13.4	B2
+4054	tråler	noun	en	13.4	B2
+4055	sort	noun	en	13.4	B2
+4056	utelukkende	adverb		13.4	B2
+4057	partiledelse	noun	en	13.4	B2
+4058	skildre	verb		13.4	B2
+4059	stikkord	noun	et	13.4	B2
+4060	innover	preposition		13.4	B2
+4061	gitarist	noun	en	13.4	B2
+4062	fornuft	noun	en	13.4	B2
+4063	sinn	noun	et	13.4	B2
+4064	slenge	verb		13.4	B2
+4065	subsidiere	verb		13.3	B2
+4066	jakke	noun	ei	13.3	B2
+4067	kulturliv	noun	et	13.3	B2
+4068	overse	verb		13.3	B2
+4069	hovedårsak	noun	ei	13.3	B2
+4070	sørover	preposition		13.3	B2
+4071	fikse	verb		13.3	B2
+4072	effektivitet	noun	en	13.3	B2
+4073	syke	noun	en	13.3	B2
+4074	hindring	noun	ei	13.3	B2
+4075	merkbar	adjective		13.3	B2
+4076	forgjeves	adjective		13.3	B2
+4077	bake	verb		13.3	B2
+4078	nærvær	noun	et	13.3	B2
+4079	svi	verb		13.3	B2
+4080	boikott	noun	en	13.3	B2
+4081	ånd	noun	en	13.3	B2
+4082	konstituere	verb		13.3	B2
+4083	industriell	adjective		13.3	B2
+4084	takknemlig	adjective		13.3	B2
+4085	høyreside	noun	ei	13.2	B2
+4086	territorium	noun	et	13.2	B2
+4087	utenrikspolitisk	adjective		13.2	B2
+4088	omtale	noun	en	13.2	B2
+4089	innenriksminister	noun	en	13.2	B2
+4090	sjanseløs	adjective		13.2	B2
+4091	spanjol	noun	en	13.2	B2
+4092	biografi	noun	en	13.2	B2
+4093	renteøkning	noun	ei	13.2	B2
+4094	plante	verb		13.2	B2
+4095	femteplass	noun	en	13.2	B2
+4096	konfrontasjon	noun	en	13.2	B2
+4097	isteden	adverb		13.2	B2
+4098	lovlig	adverb		13.2	B2
+4099	selvstyre	noun	et	13.2	B2
+4100	spørres	verb		13.2	B2
+4101	smitte	noun	en	13.2	B2
+4102	levering	noun	ei	13.1	B2
+4103	inntjening	noun	ei	13.1	B2
+4104	sparebank	noun	en	13.1	B2
+4105	utstede	verb		13.1	B2
+4106	rense	verb		13.1	B2
+4107	omverden	noun	en	13.1	B2
+4108	etterfølger	noun	en	13.1	B2
+4109	forleden	adjective		13.1	B2
+4110	pågang	noun	en	13.1	B2
+4111	femti	number		13.1	B2
+4112	reguleringsplan	noun	en	13.1	B2
+4113	dytte	verb		13.1	B2
+4114	tråkke	verb		13.1	B2
+4115	arrest	noun	en	13.1	B2
+4116	entreprenør	noun	en	13.1	B2
+4117	utbre	verb		13.1	B2
+4118	varetektsfengsel	noun	et	13.1	B2
+4119	lansering	noun	ei	13.1	B2
+4120	tradisjonsrik	adjective		13.1	B2
+4121	aldersgrense	noun	ei	13.1	B2
+4122	brønn	noun	en	13.1	B2
+4123	hoppe	noun	ei	13.1	B2
+4124	legemiddel	noun	et	13.1	B2
+4125	ekspedisjonssjef	noun	en	13.1	B2
+4126	militær	noun	en	13.1	B2
+4127	skuffe	verb		13.1	B2
+4128	dominerende	adjective		13.1	B2
+4129	landbruksminister	noun	en	13.1	B2
+4130	patrulje	noun	en	13.0	B2
+4131	flokk	noun	en	13.0	B2
+4132	skjev	adjective		13.0	B2
+4133	tørke	verb		13.0	B2
+4134	føderal	adjective		13.0	B2
+4135	kunstverk	noun	et	13.0	B2
+4136	halvveis	adjective		13.0	B2
+4137	garasje	noun	en	13.0	B2
+4138	elg	noun	en	13.0	B2
+4139	søk	noun	et	13.0	B2
+4140	visuell	adjective		13.0	B2
+4141	karantene	noun	en	13.0	B2
+4142	kubikkmeter	noun	en	13.0	B2
+4143	verdenscuprenn	noun	et	13.0	B2
+4144	samsvar	noun	et	13.0	B2
+4145	saksøke	verb		13.0	B2
+4146	personell	noun	et	13.0	B2
+4147	format	noun	et	13.0	B2
+4148	østtysk	adjective		13.0	B2
+4149	laboratorium	noun	et	13.0	B2
+4150	sammenhengende	adjective		12.9	B2
+4151	byråkrati	noun	et	12.9	B2
+4152	lokalavis	noun	ei	12.9	B2
+4153	boligområde	noun	et	12.9	B2
+4154	konkurransedyktig	adjective		12.9	B2
+4155	besittelse	noun	en	12.9	B2
+4156	gruppeleder	noun	en	12.9	B2
+4157	bosetting	noun	ei	12.9	B2
+4158	velferd	noun	ei	12.9	B2
+4159	amfetamin	noun	en	12.9	B2
+4160	forestående	adjective		12.9	B2
+4161	bakre	adjective		12.9	B2
+4162	mesterliga	noun	en	12.9	B2
+4163	underlegge	verb		12.9	B2
+4164	konsekvent	adjective		12.9	B2
+4165	bombing	noun	ei	12.9	B2
+4166	rødt	noun	et	12.9	B2
+4167	tom	noun	en	12.9	B2
+4168	tilbakevise	verb		12.8	B2
+4169	bestilling	noun	ei	12.8	B2
+4170	hen	adverb		12.8	B2
+4171	arbeidsforhold	noun	et	12.8	B2
+4172	gedigen	adjective		12.8	B2
+4173	lyde	verb		12.8	B2
+4174	åpner	noun	en	12.8	B2
+4175	frifinne	verb		12.8	B2
+4176	rutinert	adjective		12.8	B2
+4177	noenlunde	adverb		12.8	B2
+4178	yte	verb		12.8	B2
+4179	inspektør	noun	en	12.8	B2
+4180	bestefar	noun	en	12.8	B2
+4181	oppbevare	verb		12.8	B2
+4182	hilsen	noun	en	12.8	B2
+4183	gris	noun	en	12.8	B2
+4184	lår	noun	et	12.8	B2
+4185	husstand	noun	en	12.7	B2
+4186	arkitektur	noun	en	12.7	B2
+4187	lillebror	noun	en	12.7	B2
+4188	rasistisk	adjective		12.7	B2
+4189	indeks	noun	en	12.7	B2
+4190	fasade	noun	en	12.7	B2
+4191	håp	noun	et	12.7	B2
+4192	psykiater	noun	en	12.7	B2
+4193	markedssjef	noun	en	12.7	B2
+4194	overrekke	verb		12.7	B2
+4195	borgermester	noun	en	12.7	B2
+4196	vane	noun	en	12.7	B2
+4197	hjelpeorganisasjon	noun	en	12.7	B2
+4198	komfortabel	adjective		12.7	B2
+4199	rose	noun	ei	12.7	B2
+4200	sjøfolk	noun	et	12.7	B2
+4201	belønne	verb		12.7	B2
+4202	filosofi	noun	en	12.7	B2
+4203	batteri	noun	et	12.7	B2
+4204	innvandring	noun	ei	12.7	B2
+4205	kvart	noun	en	12.6	B2
+4206	livsstil	noun	en	12.6	B2
+4207	tiltrekke	verb		12.6	B2
+4208	sy	verb		12.6	B2
+4209	gjenværende	adjective		12.6	B2
+4210	individ	noun	et	12.6	B2
+4211	kjennetegne	verb		12.6	B2
+4212	kompis	noun	en	12.6	B2
+4213	stabilisere	verb		12.6	B2
+4214	nærmiljø	noun	et	12.6	B2
+4215	taus	adjective		12.6	B2
+4216	ekspertise	noun	en	12.6	B2
+4217	oversende	verb		12.6	B2
+4218	opinion	noun	en	12.6	B2
+4219	millimeter	noun	en	12.6	B2
+4220	auksjon	noun	en	12.6	B2
+4221	oppreisning	noun	ei	12.6	B2
+4222	drivkraft	noun	ei	12.6	B2
+4223	husleie	noun	ei	12.6	B2
+4224	pall	noun	en	12.6	B2
+4225	rasere	verb		12.6	B2
+4226	regjeringssjef	noun	en	12.6	B2
+4227	fyrverkeri	noun	et	12.6	B2
+4228	søsken	noun	et	12.6	B2
+4229	disiplin	noun	en	12.6	B2
+4230	fornyelse	noun	en	12.6	B2
+4231	veiledning	noun	ei	12.6	B2
+4232	uformell	adjective		12.6	B2
+4233	rettferdighet	noun	ei	12.5	B2
+4234	skjul	noun	et	12.5	B2
+4235	glise	verb		12.5	B2
+4236	middels	adjective		12.5	B2
+4237	matchvinner	noun	en	12.5	B2
+4238	råde	verb		12.5	B2
+4239	føre	noun	et	12.5	B2
+4240	forstyrre	verb		12.5	B2
+4241	hate	verb		12.5	B2
+4242	marine	noun	en	12.5	B2
+4243	utdype	verb		12.5	B2
+4244	granskning	noun	ei	12.5	B2
+4245	gjenopprette	verb		12.5	B2
+4246	krype	verb		12.5	B2
+4247	landsbasis	noun	en	12.5	B2
+4248	prislapp	noun	en	12.5	B2
+4249	heretter	adverb		12.5	B2
+4250	dristig	adjective		12.5	B2
+4251	råvare	noun	ei	12.5	B2
+4252	talerstol	noun	en	12.5	B2
+4253	magisk	adjective		12.5	B2
+4254	helvete	noun	et	12.4	B2
+4255	fargerik	adjective		12.4	B2
+4256	mord	noun	et	12.4	B2
+4257	kule	noun	ei	12.4	B2
+4258	løslatelse	noun	en	12.4	B2
+4259	skamme	verb		12.4	B2
+4260	maritim	adjective		12.4	B2
+4261	kokk	noun	en	12.4	B2
+4262	landing	noun	ei	12.4	B2
+4263	rede	verb		12.4	B2
+4264	moské	noun	en	12.4	B2
+4265	eksotisk	adjective		12.4	B2
+4266	etterfølge	verb		12.4	B2
+4267	gjenspeile	verb		12.4	B2
+4268	følsom	adjective		12.4	B2
+4269	indikasjon	noun	en	12.4	B2
+4270	bedrageri	noun	et	12.4	B2
+4271	takk	interjection		12.3	B2
+4272	trygge	verb		12.3	B2
+4273	satellitt	noun	en	12.3	B2
+4274	pensjonere	verb		12.3	B2
+4275	bremse	noun	ei	12.3	B2
+4276	rabatt	noun	en	12.3	B2
+4277	identisk	adjective		12.3	B2
+4278	portrett	noun	et	12.3	B2
+4279	fradrag	noun	et	12.3	B2
+4280	sosialkontor	noun	et	12.3	B2
+4281	anføre	verb		12.3	B2
+4282	dertil	adverb		12.3	B2
+4283	elite	noun	en	12.3	B2
+4284	utviklingshemmet	adjective		12.3	B2
+4285	nysgjerrig	adjective		12.3	B2
+4286	vedgå	verb		12.3	B2
+4287	særskilt	adjective		12.3	B2
+4288	ufattelig	adjective		12.3	B2
+4289	målvakt	noun	ei	12.2	B2
+4290	libanesisk	adjective		12.2	B2
+4291	unntakstilstand	noun	en	12.2	B2
+4292	skli	verb		12.2	B2
+4293	seriestart	noun	en	12.2	B2
+4294	bade	verb		12.2	B2
+4295	røyking	noun	ei	12.2	B2
+4296	klasserom	noun	et	12.2	B2
+4297	byrådsleder	noun	en	12.2	B2
+4298	doping	noun	ei	12.2	B2
+4299	forlengelse	noun	en	12.2	B2
+4300	gyldig	adjective		12.2	B2
+4301	rasende	adverb		12.2	B2
+4302	frekk	adjective		12.2	B2
+4303	smugle	verb		12.2	B2
+4304	klemme	verb		12.2	B2
+4305	tannlege	noun	en	12.2	B2
+4306	bøye	verb		12.2	B2
+4307	tilbaketrekning	noun	ei	12.2	B2
+4308	overlegen	adjective		12.2	B2
+4309	forene	verb		12.2	B2
+4310	soverom	noun	et	12.2	B2
+4311	uaktsom	adjective		12.2	B2
+4312	bygg	noun	en	12.2	B2
+4313	varaordfører	noun	en	12.2	B2
+4314	oppbygging	noun	ei	12.1	B2
+4315	ros	noun	en	12.1	B2
+4316	dansk	noun	en	12.1	B2
+4317	bærekraftig	adjective		12.1	B2
+4318	innehaver	noun	en	12.1	B2
+4319	medikament	noun	et	12.1	B2
+4320	islending	noun	en	12.1	B2
+4321	mangeårig	adjective		12.1	B2
+4322	spilletid	noun	ei	12.1	B2
+4323	kynisk	adjective		12.1	B2
+4324	førsteplass	noun	en	12.1	B2
+4325	anmodning	noun	ei	12.1	B2
+4326	dagblad	noun	et	12.1	B2
+4327	isolasjon	noun	en	12.1	B2
+4328	misbruk	noun	en	12.1	B2
+4329	enke	noun	ei	12.1	B2
+4330	ideologi	noun	en	12.1	B2
+4331	ironisk	adjective		12.1	B2
+4332	samordne	verb		12.1	B2
+4333	bestand	noun	en	12.0	B2
+4334	fortvilelse	noun	en	12.0	B2
+4335	tull	noun	en	12.0	B2
+4336	selvfølge	noun	en	12.0	B2
+4337	legg	noun	en	12.0	B2
+4338	moment	noun	et	12.0	B2
+4339	toppleder	noun	en	12.0	B2
+4340	drosjesjåfør	noun	en	12.0	B2
+4341	pølse	noun	ei	12.0	B2
+4342	argumentasjon	noun	en	12.0	B2
+4343	jagerfly	noun	et	12.0	B2
+4344	registrering	noun	ei	12.0	B2
+4345	nykommer	noun	en	12.0	B2
+4346	steke	verb		12.0	B2
+4347	pianist	noun	en	12.0	B2
+4348	fylkesordfører	noun	en	12.0	B2
+4349	apotek	noun	et	12.0	B2
+4350	tabbe	noun	en	12.0	B2
+4351	regelmessig	adjective		11.9	B2
+4352	privatliv	noun	et	11.9	B2
+4353	grunnlegge	verb		11.9	B2
+4354	skøyte	noun	ei	11.9	B2
+4355	entre	verb		11.9	B2
+4356	varetektsfengsle	verb		11.9	B2
+4357	utstrakt	adjective		11.9	B2
+4358	godkjennelse	noun	en	11.9	B2
+4359	iskald	adjective		11.9	B2
+4360	fornærmet	adjective		11.9	B2
+4361	kanadisk	adjective		11.9	B2
+4362	kull	noun	et	11.9	B2
+4363	ukentlig	adjective		11.9	B2
+4364	trekk	noun	en	11.9	B2
+4365	last	noun	ei	11.9	B2
+4366	sprang	noun	et	11.9	B2
+4367	kupp	noun	et	11.9	B2
+4368	lyn	noun	et	11.9	B2
+4369	femten	number		11.9	B2
+4370	mote	noun	en	11.9	B2
+4371	portugisisk	adjective		11.9	B2
+4372	ombygging	noun	ei	11.9	B2
+4373	absurd	adjective		11.9	B2
+4374	imorgen	adverb		11.9	B2
+4375	huseier	noun	en	11.9	B2
+4376	heie	verb		11.9	B2
+4377	introdusere	verb		11.9	B2
+4378	same	noun	en	11.8	B2
+4379	lokalbefolkning	noun	ei	11.8	B2
+4380	forsterkning	noun	ei	11.8	B2
+4381	gram	noun	et	11.8	B2
+4382	innledning	noun	ei	11.8	B2
+4383	åttende	adjective		11.8	B2
+4384	korridor	noun	en	11.8	B2
+4385	overgå	verb		11.8	B2
+4386	blikk	adverb		11.8	B2
+4387	skilt	noun	et	11.8	B2
+4388	byrå	noun	et	11.8	B2
+4389	utsending	noun	ei	11.8	B2
+4390	optimal	adjective		11.8	B2
+4391	polititjenestemann	noun	en	11.8	B2
+4392	regnestykke	noun	et	11.8	B2
+4393	tappe	verb		11.8	B2
+4394	konfrontere	verb		11.8	B2
+4395	ytterliggående	adjective		11.8	B2
+4396	skinne	verb		11.8	B2
+4397	slappe	verb		11.8	B2
+4398	herske	verb		11.8	B2
+4399	handelsminister	noun	en	11.8	B2
+4400	nødvendighet	noun	ei	11.8	B2
+4401	europeer	noun	en	11.7	B2
+4402	nødhjelp	noun	ei	11.7	B2
+4403	stabel	noun	en	11.7	B2
+4404	forske	verb		11.7	B2
+4405	ryddig	adjective		11.7	B2
+4406	popularitet	noun	en	11.7	B2
+4407	salt	noun	et	11.7	B2
+4408	sørlending	noun	en	11.7	B2
+4409	utside	noun	ei	11.7	B2
+4410	levende	adjective		11.7	B2
+4411	bedyre	verb		11.7	B2
+4412	bremse	verb		11.7	B2
+4413	politibil	noun	en	11.7	B2
+4414	eiendomsskatt	noun	en	11.7	B2
+4415	terroraksjon	noun	en	11.7	B2
+4416	stolthet	noun	ei	11.7	B2
+4417	flaske	verb		11.7	B2
+4418	fysioterapeut	noun	en	11.7	B2
+4419	ekspedisjon	noun	en	11.7	B2
+4420	eple	noun	et	11.7	B2
+4421	motpart	noun	en	11.7	B2
+4422	trone	noun	ei	11.7	B2
+4423	tenker	noun	en	11.7	B2
+4424	istand	adverb		11.7	B2
+4425	diger	adjective		11.7	B2
+4426	journalistikk	noun	en	11.7	B2
+4427	oppvokst	adjective		11.7	B2
+4428	uendelig	adjective		11.7	B2
+4429	flau	adjective		11.6	B2
+4430	rase	noun	en	11.6	B2
+4431	diskriminering	noun	ei	11.6	B2
+4432	jubilant	noun	en	11.6	B2
+4433	beretning	noun	ei	11.6	B2
+4434	innvirkning	noun	ei	11.6	B2
+4435	falle	noun	en	11.6	B2
+4436	forelegge	verb		11.6	B2
+4437	modig	adjective		11.6	B2
+4438	forfalle	verb		11.6	B2
+4439	baltisk	adjective		11.6	B2
+4440	stigning	noun	ei	11.6	B2
+4441	henrettelse	noun	en	11.6	B2
+4442	anslagsvis	adjective		11.6	B2
+4443	livsfarlig	adjective		11.6	B2
+4444	rådighet	noun	ei	11.6	B2
+4445	sprengstoff	noun	et	11.6	B2
+4446	undervurdere	verb		11.6	B2
+4447	østerriker	noun	en	11.6	B2
+4448	nyår	noun	et	11.6	B2
+4449	rangere	verb		11.6	B2
+4450	inni	preposition		11.6	B2
+4451	kommunevalg	noun	et	11.6	B2
+4452	oppklare	verb		11.6	B2
+4453	aksjonere	verb		11.6	B2
+4454	hull	adjective		11.6	B2
+4455	golf	noun	en	11.6	B2
+4456	arv	noun	en	11.6	B2
+4457	gjev	adjective		11.6	B2
+4458	oljeproduksjon	noun	en	11.6	B2
+4459	avtroppende	adjective		11.6	B2
+4460	pott	noun	en	11.6	B2
+4461	tsjekkisk	adjective		11.6	B2
+4462	vakthavende	adjective		11.5	B2
+4463	kake	noun	ei	11.5	B2
+4464	snarlig	adjective		11.5	B2
+4465	begjæring	noun	ei	11.5	B2
+4466	påvirkning	noun	ei	11.5	B2
+4467	dilemma	noun	et	11.5	B2
+4468	tunge	noun	ei	11.5	B2
+4469	røre	noun	en	11.5	B2
+4470	borti	preposition		11.5	B2
+4471	saklig	adjective		11.5	B2
+4472	ovenfor	preposition		11.5	B2
+4473	titusen	noun	et	11.5	B2
+4474	smelle	verb		11.5	B2
+4475	byråkrat	noun	en	11.5	B2
+4476	øyne	verb		11.5	B2
+4477	utløp	noun	et	11.5	B2
+4478	forfall	noun	et	11.5	B2
+4479	sjuende	adjective		11.5	B2
+4480	helsemyndighet	noun	ei	11.5	B2
+4481	avta	verb		11.5	B2
+4482	lovendring	noun	ei	11.5	B2
+4483	relasjon	noun	en	11.5	B2
+4484	krok	noun	en	11.5	B2
+4485	transaksjon	noun	en	11.5	B2
+4486	kongefamilie	noun	en	11.4	B2
+4487	tilkalle	verb		11.4	B2
+4488	aksjekapital	noun	en	11.4	B2
+4489	ovn	noun	en	11.4	B2
+4490	kosthold	noun	et	11.4	B2
+4491	gråt	noun	en	11.4	B2
+4492	fotballbane	noun	en	11.4	B2
+4493	herje	verb		11.4	B2
+4494	justisdepartement	noun	et	11.4	B2
+4495	lovgivning	noun	ei	11.4	B2
+4496	sammensetning	noun	ei	11.4	B2
+4497	bukt	noun	ei	11.4	B2
+4498	stikke	noun	ei	11.4	B2
+4499	landsomfattende	adjective		11.4	B2
+4500	snike	verb		11.4	B2
+4501	kylling	noun	en	11.4	B2
+4502	transportere	verb		11.4	B2
+4503	titte	verb		11.4	B2
+4504	folketrygd	noun	ei	11.4	B2
+4505	justering	noun	ei	11.4	B2
+4506	planlegger	noun	en	11.4	B2
+4507	sulten	adjective		11.4	B2
+4508	kaotisk	adjective		11.4	B2
+4509	sjokolade	noun	en	11.4	B2
+4510	kjører	noun	en	11.4	B2
+4511	bolighus	noun	et	11.4	B2
+4512	svindel	noun	en	11.4	B2
+4513	antydning	noun	ei	11.4	B2
+4514	asylmottak	noun	et	11.4	B2
+4515	tobakk	noun	en	11.4	B2
+4516	vakte	verb		11.3	B2
+4517	haug	noun	en	11.3	B2
+4518	entydig	adjective		11.3	B2
+4519	fakultet	noun	et	11.3	B2
+4520	speile	verb		11.3	B2
+4521	midtveis	adverb		11.3	B2
+4522	doktorgrad	noun	en	11.3	B2
+4523	suspendere	verb		11.3	B2
+4524	omorganisering	noun	ei	11.3	B2
+4525	spontan	adjective		11.3	B2
+4526	bokse	verb		11.3	B2
+4527	gidde	verb		11.3	B2
+4528	rå	verb		11.3	B2
+4529	oppholdstillatelse	noun	en	11.3	B2
+4530	uforståelig	adjective		11.3	B2
+4531	ammunisjon	noun	en	11.3	B2
+4532	slalåm	noun	en	11.3	B2
+4533	teatersjef	noun	en	11.3	B2
+4534	sjøl	adverb		11.3	B2
+4535	prestisje	noun	en	11.3	B2
+4536	fredsbevarende	adjective		11.3	B2
+4537	underskrive	verb		11.3	B2
+4538	tippe	verb		11.3	B2
+4539	matche	verb		11.3	B2
+4540	øy	noun	ei	11.2	B2
+4541	åpningstid	noun	ei	11.2	B2
+4542	hotellrom	noun	et	11.2	B2
+4543	erkjennelse	noun	en	11.2	B2
+4544	hersker	noun	en	11.2	B2
+4545	sogneprest	noun	en	11.2	B2
+4546	nærliggende	adjective		11.2	B2
+4547	godkjenning	noun	ei	11.2	B2
+4548	vending	noun	ei	11.2	B2
+4549	treningsleir	noun	en	11.2	B2
+4550	vesen	noun	et	11.2	B2
+4551	fremsette	verb		11.2	B2
+4552	sprette	verb		11.2	B2
+4553	flittig	adjective		11.2	B2
+4554	abonnent	noun	en	11.2	B2
+4555	akademisk	adjective		11.2	B2
+4556	arbeidsoppgave	noun	ei	11.2	B2
+4557	ideal	noun	et	11.2	B2
+4558	blind	adjective		11.2	B2
+4559	kristelig	adjective		11.2	B2
+4560	forvirring	noun	ei	11.2	B2
+4561	avvikling	noun	ei	11.2	B2
+4562	næringsdrivende	adjective		11.2	B2
+4563	illegal	adjective		11.2	B2
+4564	karakteristikk	noun	en	11.2	B2
+4565	vinke	verb		11.2	B2
+4566	nyttårsaften	noun	en	11.2	B2
+4567	unnskylde	verb		11.1	B2
+4568	nordnorsk	adjective		11.1	B2
+4569	gjenvalg	noun	et	11.1	B2
+4570	kulisse	noun	en	11.1	B2
+4571	trøye	noun	ei	11.1	B2
+4572	diesel	noun	en	11.1	B2
+4573	håndfull	noun	en	11.1	B2
+4574	mane	verb		11.1	B2
+4575	kuling	noun	en	11.1	B2
+4576	innside	noun	ei	11.1	B2
+4577	ungarsk	adjective		11.1	B2
+4578	henrette	verb		11.1	B2
+4579	idrettsutøver	noun	en	11.1	B2
+4580	våken	adjective		11.1	B2
+4581	skjema	noun	et	11.1	B2
+4582	underdirektør	noun	en	11.1	B2
+4583	lufte	verb		11.1	B2
+4584	klargjøre	verb		11.1	B2
+4585	avskjed	noun	en	11.1	B2
+4586	tilnærming	noun	ei	11.1	B2
+4587	liksom	adverb		11.1	B2
+4588	liksom	conjunction		11.1	B2
+4589	utbygger	noun	en	11.1	B2
+4590	feste	noun	et	11.1	B2
+4591	omvendt	adjective		11.1	B2
+4592	urealistisk	adjective		11.0	B2
+4593	arbeidsmiljø	noun	et	11.0	B2
+4594	budsjettere	verb		11.0	B2
+4595	tøffe	verb		11.0	B2
+4596	trille	verb		11.0	B2
+4597	indikere	verb		11.0	B2
+4598	barneskole	noun	en	11.0	B2
+4599	solist	noun	en	11.0	B2
+4600	omhandle	verb		11.0	B2
+4601	fetter	noun	en	11.0	B2
+4602	serieleder	noun	en	11.0	B2
+4603	canadisk	adjective		11.0	B2
+4604	forut	adverb		11.0	B2
+4605	tiltre	verb		11.0	B2
+4606	politistyrke	noun	en	11.0	B2
+4607	singel	noun	en	11.0	B2
+4608	ære	verb		11.0	B2
+4609	kommando	noun	en	11.0	B2
+4610	blomstre	verb		11.0	B2
+4611	gruppering	noun	ei	11.0	B2
+4612	monopol	noun	et	11.0	B2
+4613	skyhøy	adjective		11.0	B2
+4614	overgi	verb		11.0	B2
+4615	takst	noun	en	11.0	B2
+4616	norm	noun	en	11.0	B2
+4617	forsyning	noun	ei	11.0	B2
+4618	førsteamanuensis	noun	en	11.0	B2
+4619	føles	verb		11.0	B2
+4620	ving	noun	en	11.0	B2
+4621	hast	noun	en	11.0	B2
+4622	partisjef	noun	en	11.0	B2
+4623	iblant	preposition		11.0	B2
+4624	frigi	verb		11.0	B2
+4625	nasjonalbudsjett	noun	et	10.9	B2
+4626	spurt	noun	en	10.9	B2
+4627	kiosk	noun	en	10.9	B2
+4628	brekke	verb		10.9	B2
+4629	skattelettelse	noun	en	10.9	B2
+4630	fornybar	adjective		10.9	B2
+4631	jevne	verb		10.9	B2
+4632	dal	noun	en	10.9	B2
+4633	bakfra	adverb		10.9	B2
+4634	opprørt	adjective		10.9	B2
+4635	uttak	noun	et	10.9	B2
+4636	debutant	noun	en	10.9	B2
+4637	hakk	adverb		10.9	B2
+4638	sikkerhetspolitisk	adjective		10.9	B2
+4639	dumpe	verb		10.9	B2
+4640	utbygge	verb		10.9	B2
+4641	uhyre	noun	et	10.9	B2
+4642	prioritet	noun	en	10.9	B2
+4643	opptrapping	noun	ei	10.9	B2
+4644	konvensjonell	adjective		10.9	B2
+4645	svelge	verb		10.9	B2
+4646	veske	noun	ei	10.9	B2
+4647	reservere	verb		10.9	B2
+4648	kabel	noun	en	10.9	B2
+4649	setning	noun	ei	10.9	B2
+4650	skuespill	noun	et	10.9	B2
+4651	paradoks	noun	et	10.9	B2
+4652	skilte	verb		10.9	B2
+4653	engstelig	adjective		10.9	B2
+4654	innrømmelse	noun	en	10.9	B2
+4655	inspeksjon	noun	en	10.9	B2
+4656	slette	verb		10.9	B2
+4657	klode	noun	en	10.8	B2
+4658	hat	noun	et	10.8	B2
+4659	hjel	noun	en	10.8	B2
+4660	splittelse	noun	en	10.8	B2
+4661	fremkomme	verb		10.8	B2
+4662	formulere	verb		10.8	B2
+4663	kartlegging	noun	ei	10.8	B2
+4664	fortjent	adjective		10.8	B2
+4665	trå	verb		10.8	B2
+4666	replikk	noun	en	10.8	B2
+4667	fortsettelse	noun	en	10.8	B2
+4668	frede	verb		10.8	B2
+4669	redningsaksjon	noun	en	10.8	B2
+4670	slitsom	adjective		10.8	B2
+4671	symbolsk	adjective		10.8	B2
+4672	rullebane	noun	en	10.8	B2
+4673	saksomkostning	noun	ei	10.8	B2
+4674	avskaffe	verb		10.8	B2
+4675	hovedflyplass	noun	en	10.8	B2
+4676	arsenal	noun	et	10.7	B2
+4677	forberedt	adjective		10.7	B2
+4678	leteaksjon	noun	en	10.7	B2
+4679	rasjonell	adjective		10.7	B2
+4680	eiendel	noun	en	10.7	B2
+4681	superstjerne	noun	ei	10.7	B2
+4682	målrettet	adjective		10.7	B2
+4683	høyesterettsadvokat	noun	en	10.7	B2
+4684	hjelpemiddel	noun	et	10.7	B2
+4685	fordom	noun	en	10.7	B2
+4686	forhåpning	noun	ei	10.7	B2
+4687	kiste	noun	ei	10.7	B2
+4688	veksle	verb		10.7	B2
+4689	storstilt	adjective		10.7	B2
+4690	flytrafikk	noun	en	10.7	B2
+4691	belage	verb		10.7	B2
+4692	fatt	adverb		10.7	B2
+4693	evakuering	noun	ei	10.7	B2
+4694	heis	noun	en	10.7	B2
+4695	hærverk	noun	et	10.7	B2
+4696	regjeringsstyrke	noun	en	10.7	B2
+4697	forebyggende	adjective		10.6	B2
+4698	fremragende	adjective		10.6	B2
+4699	filmfestival	noun	en	10.6	B2
+4700	landsstyre	noun	et	10.6	B2
+4701	særegen	adjective		10.6	B2
+4702	eksil	noun	et	10.6	B2
+4703	lur	adjective		10.6	B2
+4704	sjanger	noun	en	10.6	B2
+4705	real	adjective		10.6	B2
+4706	målsjanse	noun	en	10.6	B2
+4707	sikkerhetstiltak	noun	et	10.6	B2
+4708	beryktet	adjective		10.6	B2
+4709	boliglån	noun	et	10.6	B2
+4710	drapsforsøk	noun	et	10.6	B2
+4711	sti	noun	en	10.6	B2
+4712	lederskap	noun	et	10.6	B2
+4713	seriegull	noun	et	10.6	B2
+4714	belaste	verb		10.6	B2
+4715	mislike	verb		10.6	B2
+4716	ok	adjective		10.6	B2
+4717	kollektivtrafikk	noun	en	10.6	B2
+4718	rikelig	adjective		10.6	B2
+4719	hatt	noun	en	10.6	B2
+4720	fase	verb		10.6	B2
+4721	gjerde	noun	et	10.6	B2
+4722	seriemester	noun	en	10.6	B2
+4723	idrettslag	noun	et	10.6	B2
+4724	oppmuntre	verb		10.6	B2
+4725	gud	noun	en	10.6	B2
+4726	tjenestegjøre	verb		10.6	B2
+4727	stormakt	noun	ei	10.6	B2
+4728	favør	noun	en	10.6	B2
+4729	trenere	verb		10.6	B2
+4730	bombeangrep	noun	et	10.6	B2
+4731	juledag	noun	en	10.6	B2
+4732	gjenvelge	verb		10.6	B2
+4733	stenge	noun	et	10.6	B2
+4734	tone	verb		10.6	B2
+4735	drøye	verb		10.5	B2
+4736	sult	noun	en	10.5	B2
+4737	myke	verb		10.5	B2
+4738	fyldig	adjective		10.5	B2
+4739	konvensjon	noun	en	10.5	B2
+4740	telefonsamtale	noun	en	10.5	B2
+4741	egenandel	noun	en	10.5	B2
+4742	fengsling	noun	ei	10.5	B2
+4743	kronisk	adjective		10.5	B2
+4744	utforkjøring	noun	ei	10.5	B2
+4745	opptur	noun	en	10.5	B2
+4746	bur	noun	et	10.5	B2
+4747	argentinsk	adjective		10.5	B2
+4748	distribuere	verb		10.5	B2
+4749	tilpasning	noun	ei	10.5	B2
+4750	ujevn	adjective		10.5	B2
+4751	søvn	noun	en	10.5	B2
+4752	brennevin	noun	et	10.5	B2
+4753	påkjenning	noun	ei	10.5	B2
+4754	haste	verb		10.5	B2
+4755	praktfull	adjective		10.5	B2
+4756	blink	noun	en	10.5	B2
+4757	fylkeslege	noun	en	10.5	B2
+4758	strømpris	noun	en	10.5	B2
+4759	springe	verb		10.4	B2
+4760	opposisjonell	adjective		10.4	B2
+4761	forundre	verb		10.4	B2
+4762	brakk	adjective		10.4	B2
+4763	bearbeide	verb		10.4	B2
+4764	oppfølger	noun	en	10.4	B2
+4765	revisor	noun	en	10.4	B2
+4766	vassdrag	noun	et	10.4	B2
+4767	selvstendighet	noun	ei	10.4	B2
+4768	spøk	noun	en	10.4	B2
+4769	vokte	verb		10.4	B2
+4770	forkaste	verb		10.4	B2
+4771	berolige	verb		10.4	B2
+4772	sentrumsparti	noun	et	10.4	B2
+4773	oversettelse	noun	en	10.4	B2
+4774	flyger	noun	en	10.4	B2
+4775	dress	noun	en	10.4	B2
+4776	intim	adjective		10.4	B2
+4777	fartsgrense	noun	ei	10.4	B2
+4778	beliggenhet	noun	ei	10.4	B2
+4779	stresse	verb		10.4	B2
+4780	fjerdedel	noun	en	10.4	B2
+4781	utdeling	noun	ei	10.4	B2
+4782	mellomstor	adjective		10.4	B2
+4783	sjekk	noun	en	10.4	B2
+4784	underskrift	noun	ei	10.4	B2
+4785	marsjere	verb		10.4	B2
+4786	bokstav	noun	en	10.4	B2
+4787	ventelig	adjective		10.4	B2
+4788	avlive	verb		10.3	B2
+4789	fundamental	adjective		10.3	B2
+4790	røst	noun	en	10.3	B2
+4791	skipper	noun	en	10.3	B2
+4792	mobil	adjective		10.3	B2
+4793	overdrive	verb		10.3	B2
+4794	banksjef	noun	en	10.3	B2
+4795	evaluering	noun	ei	10.3	B2
+4796	igangsette	verb		10.3	B2
+4797	dokumentar	noun	en	10.3	B2
+4798	minske	verb		10.3	B2
+4799	bla	verb		10.3	B2
+4800	videreutvikle	verb		10.3	B2
+4801	kreativitet	noun	en	10.3	B2
+4802	driftsinntekt	noun	ei	10.3	B2
+4803	tilbakeslag	noun	et	10.3	B2
+4804	avdelingsleder	noun	en	10.3	B2
+4805	tårn	noun	et	10.3	B2
+4806	kommunalråd	noun	en	10.3	B2
+4807	forelegg	noun	et	10.3	B2
+4808	usannsynlig	adjective		10.3	B2
+4809	overnatting	noun	ei	10.3	B2
+4810	panne	noun	ei	10.3	B2
+4811	iver	noun	en	10.3	B2
+4812	champagne	noun	en	10.3	B2
+4813	havneby	noun	en	10.3	B2
+4814	luftambulanse	noun	en	10.3	B2
+4815	opposisjonsleder	noun	en	10.3	B2
+4816	skjorte	noun	ei	10.3	B2
+4817	spektakulær	adjective		10.3	B2
+4818	tenkning	noun	ei	10.3	B2
+4819	spesialisere	verb		10.3	B2
+4820	hjelm	noun	en	10.3	B2
+4821	paradoksal	adjective		10.3	B2
+4822	null	number		10.3	B2
+4823	dirigere	verb		10.2	B2
+4824	redsel	noun	en	10.2	B2
+4825	syrisk	adjective		10.2	B2
+4826	inneha	verb		10.2	B2
+4827	bebyggelse	noun	en	10.2	B2
+4828	spøke	verb		10.2	B2
+4829	logisk	adjective		10.2	B2
+4830	skoleår	noun	et	10.2	B2
+4831	regissere	verb		10.2	B2
+4832	stamme	verb		10.2	B2
+4833	prisøkning	noun	ei	10.2	B2
+4834	fortone	verb		10.2	B2
+4835	russ	noun	en	10.2	B2
+4836	hevne	verb		10.2	B2
+4837	slagsmål	noun	et	10.2	B2
+4838	maktkamp	noun	en	10.2	B2
+4839	valgkomité	noun	en	10.2	B2
+4840	sjokkere	verb		10.2	B2
+4841	utnevnelse	noun	en	10.2	B2
+4842	ben	adjective		10.2	B2
+4843	toller	noun	en	10.2	B2
+4844	repertoar	noun	et	10.2	B2
+4845	lukte	verb		10.2	B2
+4846	jeger	noun	en	10.2	B2
+4847	statistisk	adjective		10.2	B2
+4848	bompenger	noun	en	10.2	B2
+4849	definisjon	noun	en	10.2	B2
+4850	regnvær	noun	et	10.2	B2
+4851	gren	noun	en	10.1	B2
+4852	nyvalg	noun	et	10.1	B2
+4853	kristendom	noun	en	10.1	B2
+4854	pensjonsalder	noun	en	10.1	B2
+4855	tekniker	noun	en	10.1	B2
+4856	impuls	noun	en	10.1	B2
+4857	barnefamilie	noun	en	10.1	B2
+4858	kulturhus	noun	et	10.1	B2
+4859	potensial	adjective		10.1	B2
+4860	kall	noun	en	10.1	B2
+4861	sivilingeniør	noun	en	10.1	B2
+4862	metall	noun	et	10.1	B2
+4863	medspiller	noun	en	10.1	B2
+4864	container	noun	en	10.1	B2
+4865	match	noun	en	10.1	B2
+4866	bivirkning	noun	ei	10.1	B2
+4867	fremskritt	noun	et	10.1	B2
+4868	stipend	noun	et	10.1	B2
+4869	belønning	noun	ei	10.1	B2
+4870	sild	noun	ei	10.1	B2
+4871	alliere	verb		10.1	B2
+4872	lensmannsbetjent	noun	en	10.1	B2
+4873	samhold	noun	et	10.1	B2
+4874	simpelthen	adverb		10.1	B2
+4875	anmelder	noun	en	10.1	B2
+4876	senterparti	noun	et	10.1	B2
+4877	radiostasjon	noun	en	10.1	B2
+4878	mynt	noun	en	10.1	B2
+4879	foster	noun	et	10.1	B2
+4880	politiførstebetjent	noun	en	10.1	B2
+4881	kast	noun	et	10.0	B2
+4882	flate	verb		10.0	B2
+4883	hjemmefra	adverb		10.0	B2
+4884	skjønnhet	noun	ei	10.0	B2
+4885	referanse	noun	en	10.0	B2
+4886	intelligent	adjective		10.0	B2
+4887	lerret	noun	et	10.0	B2
+4888	statsborgerskap	noun	et	10.0	B2
+4889	forvei	noun	en	10.0	B2
+4890	grøft	noun	ei	10.0	B2
+4891	skolegang	noun	en	10.0	B2
+4892	stål	noun	et	10.0	B2
+4893	kvalifisert	adjective		10.0	B2
+4894	mekling	noun	ei	10.0	B2
+4895	forbipasserende	adjective		10.0	B2
+4896	rumensk	adjective		10.0	B2
+4897	pådriver	noun	en	10.0	B2
+4898	amatør	noun	en	10.0	B2
+4899	overfall	noun	et	10.0	B2
+4900	trass	preposition		10.0	B2
+4901	verbal	adjective		10.0	B2
+4902	lojalitet	noun	en	10.0	B2
+4903	albansk	adjective		10.0	B2
+4904	begripe	verb		10.0	B2
+4905	traktor	noun	en	10.0	B2
+4906	rammebetingelse	noun	en	10.0	B2
+4907	designer	noun	en	10.0	B2
+4908	energidepartement	noun	et	10.0	B2
+4909	nevneverdig	adjective		10.0	B2
+4910	aspekt	noun	et	10.0	B2
+4911	fiasko	noun	en	10.0	B2
+4912	koordinere	verb		10.0	B2
+4913	ankel	noun	en	10.0	B2
+4914	smil	noun	en	10.0	B2
+4915	matematikk	noun	en	10.0	B2
+4916	interiør	noun	et	10.0	B2
+4917	utplassere	verb		10.0	B2
+4918	instruks	noun	en	10.0	B2
+4919	emne	noun	et	10.0	B2
+4920	duke	verb		10.0	B2
+4921	sjeføkonom	noun	en	10.0	B2
+4922	lapp	noun	en	9.9	B2
+4923	supplere	verb		9.9	B2
+4924	krangle	verb		9.9	B2
+4925	galskap	noun	en	9.9	B2
+4926	misforstå	verb		9.9	B2
+4927	lyspunkt	noun	et	9.9	B2
+4928	eksperiment	noun	et	9.9	B2
+4929	velferdsstat	noun	en	9.9	B2
+4930	bevisstløs	adjective		9.9	B2
+4931	tålmodig	adjective		9.9	B2
+4932	meddele	verb		9.9	B2
+4933	overvekt	noun	ei	9.9	B2
+4934	assistanse	noun	en	9.9	B2
+4935	topplag	noun	et	9.9	B2
+4936	filmskaper	noun	en	9.9	B2
+4937	turisme	noun	en	9.9	B2
+4938	forsettlig	adjective		9.9	B2
+4939	østeuropeisk	adjective		9.9	B2
+4940	sosialist	noun	en	9.9	B2
+4941	tilståelse	noun	en	9.9	B2
+4942	forum	noun	et	9.9	B2
+4943	annenhver	determiner		9.9	B2
+4944	samsvare	verb		9.9	B2
+4945	støv	noun	et	9.9	B2
+4946	basseng	noun	et	9.9	B2
+4947	afghaner	noun	en	9.9	B2
+4948	samarbeidsavtale	noun	en	9.8	B2
+4949	skrift	noun	en	9.8	B2
+4950	filial	noun	en	9.8	B2
+4951	reisemål	noun	et	9.8	B2
+4952	landsbygd	noun	ei	9.8	B2
+4953	saksbehandler	noun	en	9.8	B2
+4954	skoleelev	noun	en	9.8	B2
+4955	hjertelig	adjective		9.8	B2
+4956	hundredel	noun	en	9.8	B2
+4957	dernest	adverb		9.8	B2
+4958	revy	noun	en	9.8	B2
+4959	forvandle	verb		9.8	B2
+4960	humre	verb		9.8	B2
+4961	etterretningstjeneste	noun	en	9.8	B2
+4962	skiskyting	noun	ei	9.8	B2
+4963	frodig	adjective		9.8	B2
+4964	befaring	noun	ei	9.8	B2
+4965	plage	noun	ei	9.8	B2
+4966	skipsfart	noun	en	9.8	B2
+4967	konstruksjon	noun	en	9.8	B2
+4968	major	noun	en	9.8	B2
+4969	ingrediens	noun	en	9.8	B2
+4970	forbannet	adjective		9.8	B2
+4971	hval	noun	en	9.8	B2
+4972	forvaring	noun	ei	9.8	B2
+4973	smugling	noun	ei	9.8	B2
+4974	politipatrulje	noun	en	9.8	B2
+4975	novelle	noun	ei	9.8	B2
+4976	kritikkverdig	adjective		9.8	B2
+4977	rettssikkerhet	noun	ei	9.8	B2
+4978	trøkk	noun	et	9.8	B2
+4979	sikkerhetstjeneste	noun	en	9.8	B2
+4980	barnehageplass	noun	en	9.8	B2
+4981	skissere	verb		9.8	B2
+4982	avløse	verb		9.8	B2
+4983	krigføring	noun	ei	9.8	B2
+4984	politiavhør	noun	et	9.8	B2
+4985	overstige	verb		9.7	B2
+4986	munter	adjective		9.7	B2
+4987	beinhard	adjective		9.7	B2
+4988	hensiktsmessig	adjective		9.7	B2
+4989	iraner	noun	en	9.7	B2
+4990	tennis	noun	en	9.7	B2
+4991	ytelse	noun	en	9.7	B2
+4992	oppgitt	adjective		9.7	B2
+4993	kvele	verb		9.7	B2
+4994	nedrykk	noun	et	9.7	B2
+4995	fredsforhandling	noun	ei	9.7	B2
+4996	sveitser	noun	en	9.7	B2
+4997	nordvest	adverb		9.7	B2
+4998	brasilianer	noun	en	9.7	B2
+4999	ho	interjection		9.7	B2
+5000	skildring	noun	ei	9.7	B2
