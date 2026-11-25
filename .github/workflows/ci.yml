@@ -57,6 +57,8 @@ jobs:
         run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- validate content
       - name: Python tests (audio build)
         run: python3 -m unittest discover -s tools/audio
+      - name: Python tests (core word list)
+        run: python3 -m unittest discover -s tools/corelist
       - name: Coverage report
         run: dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage content --summary "$GITHUB_STEP_SUMMARY"
 

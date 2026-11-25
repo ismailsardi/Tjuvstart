@@ -17,6 +17,7 @@ public static class ContentLoader
     public const string PackFileName = "pack.json";
     public const string VocabFolder = "vocab";
     public const string IgnoreFileName = "ignore.json";
+    public const string CoreListFileName = "core-list.tsv";
     public const string TracksFile = "tracks.json";
     public const string AlphabetFile = "alphabet.json";
 
@@ -121,7 +122,8 @@ public static class ContentLoader
             }
         }
 
-        var (cards, ignored) = LoadVocabulary(contentRoot, deckSchema, issues);
+        var (cards, ignored, pendingDecks) = LoadVocabulary(contentRoot, deckSchema, issues);
+        var coreList = LoadCoreList(contentRoot, issues);
 
         // Tracks are optional: a content folder without tracks.json simply has none.
         var tracks = new List<Track>();
@@ -150,6 +152,8 @@ public static class ContentLoader
         return new ContentSet(descriptors, lessons, packs, issues)
         {
             Cards = cards,
+            PendingDecks = pendingDecks,
+            CoreList = coreList,
             IgnoredWords = ignored,
             Tracks = tracks,
             Alphabet = alphabet,
@@ -157,15 +161,16 @@ public static class ContentLoader
     }
 
     /// <summary>Loads decks from <c>vocab/&lt;level&gt;/*.json</c> and the optional ignore list.</summary>
-    private static (List<Card> Cards, HashSet<string> Ignored) LoadVocabulary(
+    private static (List<Card> Cards, HashSet<string> Ignored, List<string> PendingDecks) LoadVocabulary(
         string contentRoot, JsonSchema? deckSchema, List<ValidationIssue> issues)
     {
         var cards = new List<Card>();
         var ignored = new HashSet<string>(StringComparer.Ordinal);
+        var pending = new List<string>();
         var vocabRoot = Path.Combine(contentRoot, VocabFolder);
         if (!Directory.Exists(vocabRoot))
         {
-            return (cards, ignored);
+            return (cards, ignored, pending);
         }
 
         var deckFiles = Directory.EnumerateDirectories(vocabRoot)
@@ -188,6 +193,10 @@ public static class ContentLoader
                     issues.Add(new ValidationIssue(relative, $"Deck level {deck.Level} does not match folder '{folder}'."));
                 }
                 cards.AddRange(deck.Cards.Select(c => new Card(c.Id, deck.Level, c.Nb, c.Forms, relative, c.Example, c.Pos, c.Gender)));
+                if (deck.Review == Lesson.Pending)
+                {
+                    pending.Add(relative);
+                }
             }
         }
 
@@ -205,7 +214,38 @@ public static class ContentLoader
             }
         }
 
-        return (cards, ignored);
+        return (cards, ignored, pending);
+    }
+
+    /// <summary>
+    /// Reads <c>vocab/core-list.tsv</c>: a header line, then rank, lemma, part of speech, gender,
+    /// frequency per million words and level, separated by tabs. Built by <c>tools/corelist</c>.
+    /// </summary>
+    private static List<CoreWord> LoadCoreList(string contentRoot, List<ValidationIssue> issues)
+    {
+        var words = new List<CoreWord>();
+        var path = Path.Combine(contentRoot, VocabFolder, CoreListFileName);
+        if (!File.Exists(path))
+        {
+            return words;
+        }
+
+        var lines = File.ReadAllLines(path);
+        for (var i = 1; i < lines.Length; i++)
+        {
+            if (lines[i].Length == 0)
+            {
+                continue;
+            }
+            var cols = lines[i].Split('\t');
+            if (cols.Length != 6 || !int.TryParse(cols[0], out var rank))
+            {
+                issues.Add(new ValidationIssue(Relative(contentRoot, path), $"Line {i + 1}: expected 6 tab-separated columns starting with a rank."));
+                continue;
+            }
+            words.Add(new CoreWord(rank, cols[1], cols[2], cols[5]));
+        }
+        return words;
     }
 
     private static JsonSchema? LoadSchema(string contentRoot, string fileName, List<ValidationIssue> issues)
@@ -325,7 +365,7 @@ public static class ContentLoader
     private sealed record CardFile(
         string Id, string Nb, List<string> Forms, string? Example, string? Pos, string? Gender);
 
-    private sealed record DeckFile(string Level, List<CardFile> Cards);
+    private sealed record DeckFile(string Level, List<CardFile> Cards, string? Review);
 
     private sealed record IgnoreFile(List<string> Words);
 

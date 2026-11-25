@@ -50,4 +50,20 @@ public sealed class ReviewReportTests : IDisposable
 
         Assert.Contains(issues, i => i.File.EndsWith("lesson-a.json"));
     }
+
+    [Fact]
+    public void Lists_word_decks_that_still_need_a_review()
+    {
+        var deck = """
+            { "level": "A2", "topic": "{0}", "title": "T", {1}
+              "cards": [ { "id": "{0}", "nb": "{0}", "pos": "adverb", "forms": ["{0}"], "example": "Eksempel." } ] }
+            """;
+        _content.Write(Path.Combine(ContentLoader.VocabFolder, "a2", "new.json"), deck.Replace("{0}", "ofte").Replace("{1}", "\"review\": \"pending\","));
+        _content.Write(Path.Combine(ContentLoader.VocabFolder, "a2", "old.json"), deck.Replace("{0}", "alltid").Replace("{1}", ""));
+
+        var content = ContentLoader.Load(_content.Root);
+
+        Assert.Equal([Path.Combine(ContentLoader.VocabFolder, "a2", "new.json")], content.PendingDecks);
+        Assert.Contains("Word decks waiting for review: vocab/a2/new.json.", ReviewReport.ToMarkdown(content));
+    }
 }

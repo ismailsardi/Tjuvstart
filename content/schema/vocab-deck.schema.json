@@ -21,6 +21,10 @@
       "type": "string",
       "minLength": 1
     },
+    "review": {
+      "description": "Native-speaker review of the deck's Norwegian (cards and examples). Decks added from the core word list start as pending.",
+      "enum": ["pending", "approved"]
+    },
     "field": {
       "description": "Set on a 'my job' deck: the line of work it is for.",
       "enum": ["it", "health", "construction", "hospitality"]
