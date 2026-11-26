@@ -5,14 +5,16 @@
       "id": "from-zero",
       "level": "A1",
       "title": "Helt fra start",
-      "summary": "Start from zero: the letters and sounds of Norwegian, saying hello, numbers and prices, the shop, the café and telling the time.",
+      "summary": "Start from zero: the letters and sounds of Norwegian, saying hello and who you are, numbers and prices, the shop, signs in the street, the café and telling the time.",
       "lessons": [
         "a1-alphabet",
         "a1-sounds",
         "a1-hello",
+        "a1-about-me",
         "a1-not-understand",
         "a1-numbers",
         "a1-supermarket",
+        "a1-signs",
         "a1-cafe",
         "a1-days-and-time"
       ]
@@ -53,6 +55,19 @@
       ]
     },
     {
+      "id": "more-everyday",
+      "level": "A2",
+      "title": "Mer av hverdagen",
+      "summary": "More of daily life: emergency numbers and the emergency clinic, sorting rubbish, messages to colleagues, eating out with an allergy and describing a new colleague.",
+      "lessons": [
+        "a2-emergency",
+        "a2-recycling",
+        "a2-work-chat",
+        "a2-restaurant",
+        "a2-new-colleague"
+      ]
+    },
+    {
       "id": "towards-b1",
       "level": "B1",
       "title": "Videre mot B1",
@@ -78,6 +93,20 @@
         "b1-safety",
         "b1-holiday-request",
         "b1-customer-call"
+      ]
+    },
+    {
+      "id": "society-b1",
+      "level": "B1",
+      "title": "Samfunnet rundt deg",
+      "summary": "Norwegian society at B1: the tax return, a parent meeting at school, complaining about a faulty product, a news story about electricity prices, 17 May and the right to roam.",
+      "lessons": [
+        "b1-tax-return",
+        "b1-parents-meeting",
+        "b1-complaint",
+        "b1-news-electricity",
+        "b1-national-day",
+        "b1-right-to-roam"
       ]
     }
   ]

@@ -1,0 +1,56 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A1",
+  "topic": "signs-and-forms",
+  "title": "Skilt og skjema",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "adresse",
+      "nb": "adresse",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["adresse", "adressa", "adressen", "adresser", "adressene"],
+      "example": "Hva er adressen din?"
+    },
+    {
+      "id": "sprak",
+      "nb": "språk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["språk", "språka", "språket", "språkene"],
+      "example": "Hvilke språk snakker du?"
+    },
+    {
+      "id": "utgang",
+      "nb": "utgang",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["utgang", "utgangen", "utganger", "utgangene"],
+      "example": "Utgangen er der borte."
+    },
+    {
+      "id": "royking",
+      "nb": "røyking",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["røyking", "røykinga", "røykingen", "røykinger", "røykingene"],
+      "example": "Røyking er forbudt her."
+    },
+    {
+      "id": "skyve",
+      "nb": "skyve",
+      "pos": "verb",
+      "forms": ["skyve", "skyver", "skjøv", "skjøvet", "skyv"],
+      "example": "Skyv døra."
+    },
+    {
+      "id": "apningstid",
+      "nb": "åpningstid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["åpningstid", "åpningstida", "åpningstiden", "åpningstider", "åpningstidene"],
+      "example": "Hva er åpningstidene?"
+    }
+  ]
+}

@@ -65,7 +65,7 @@ describe('suggested tracks', () => {
 
   it('ends with the B1 tracks, each holding only B1 lessons', () => {
     const b1 = tracks.filter((t) => t.level === 'B1');
-    expect(b1.map((t) => t.id)).toEqual(['towards-b1', 'working-life']);
+    expect(b1.map((t) => t.id)).toEqual(['towards-b1', 'working-life', 'society-b1']);
     for (const track of b1) {
       expect(trackLessons(track).every((l) => l.level === 'B1')).toBe(true);
     }

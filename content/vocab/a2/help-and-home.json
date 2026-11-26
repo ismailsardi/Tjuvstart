@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "A2",
+  "topic": "help-and-home",
+  "title": "Hjelp, hjem og fritid",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "ambulanse",
+      "nb": "ambulanse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ambulanse", "ambulansen", "ambulanser", "ambulansene"],
+      "example": "Ring etter en ambulanse!"
+    },
+    {
+      "id": "brannvesen",
+      "nb": "brannvesen",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["brannvesen", "brannvesena", "brannvesener", "brannvesenet", "brannvesenene"],
+      "example": "Brannvesenet kom fort."
+    },
+    {
+      "id": "livsfarlig",
+      "nb": "livsfarlig",
+      "pos": "adjective",
+      "forms": ["livsfarlig", "livsfarlige"],
+      "example": "Det er ikke livsfarlig."
+    },
+    {
+      "id": "dagtid",
+      "nb": "dagtid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["dagtid", "dagtida", "dagtiden", "dagtider", "dagtidene"],
+      "example": "Legen har åpent på dagtid."
+    },
+    {
+      "id": "dogn",
+      "nb": "døgn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["døgn", "døgna", "døgnet", "døgnene"],
+      "example": "Legevakten er åpen hele døgnet."
+    },
+    {
+      "id": "hvem",
+      "nb": "hvem",
+      "pos": "pronoun",
+      "forms": ["hvem"],
+      "example": "Hvem er det?"
+    },
+    {
+      "id": "skade-verb",
+      "nb": "skade",
+      "pos": "verb",
+      "forms": ["skade", "skada", "skadd", "skadde", "skader", "skadet"],
+      "example": "Han skadet foten."
+    },
+    {
+      "id": "skje-verb",
+      "nb": "skje",
+      "pos": "verb",
+      "forms": ["skje", "skjer", "skjedd", "skjedde"],
+      "example": "Hva har skjedd?"
+    },
+    {
+      "id": "beboer",
+      "nb": "beboer",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["beboer", "beboere", "beboeren", "beboerne"],
+      "example": "Alle beboere må sortere søppel."
+    },
+    {
+      "id": "sortere",
+      "nb": "sortere",
+      "pos": "verb",
+      "forms": ["sortere", "sortert", "sorterer", "sorterte"],
+      "example": "Vi sorterer søppelet."
+    },
+    {
+      "id": "matavfall",
+      "nb": "matavfall",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["matavfall", "matavfalla", "matavfallet", "matavfallene"],
+      "example": "Matavfall skal i grønne poser."
+    },
+    {
+      "id": "gronn",
+      "nb": "grønn",
+      "pos": "adjective",
+      "forms": ["grønn", "grønt", "grønne", "grønnere", "grønnest", "grønneste"],
+      "example": "Jeg har en grønn jakke."
+    },
+    {
+      "id": "plast",
+      "nb": "plast",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["plast", "plasten", "plaster", "plastene"],
+      "example": "Plast skal i blå poser."
+    },
+    {
+      "id": "soppeldunk",
+      "nb": "søppeldunk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["søppeldunk", "søppeldunken", "søppeldunker", "søppeldunkene"],
+      "example": "Søppeldunken står ute."
+    },
+    {
+      "id": "papp",
+      "nb": "papp",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["papp", "pappen", "papper", "pappene"],
+      "example": "Papp og papir går i samme container."
+    },
+    {
+      "id": "papir",
+      "nb": "papir",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["papir", "papira", "papirer", "papiret", "papirene"],
+      "example": "Har du et ark papir?"
+    },
+    {
+      "id": "container",
+      "nb": "container",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["container", "containere", "containeren", "containerne"],
+      "example": "Containeren står ved butikken."
+    },
+    {
+      "id": "glass",
+      "nb": "glass",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["glass", "glassa", "glasset", "glassene"],
+      "example": "Kan jeg få et glass vann?"
+    },
+    {
+      "id": "metall",
+      "nb": "metall",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["metall", "metalla", "metaller", "metallet", "metallene"],
+      "example": "Glass og metall kastes sammen."
+    },
+    {
+      "id": "pant",
+      "nb": "pant",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["pant", "panten", "panter", "pantene"],
+      "example": "Du får pant for flaskene."
+    },
+    {
+      "id": "mobel",
+      "nb": "møbel",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["møbel", "møbla", "møbler", "møblet", "møbelet", "møblene"],
+      "example": "Vi har kjøpt nye møbler."
+    },
+    {
+      "id": "lader",
+      "nb": "lader",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lader", "ladere", "laderen", "laderne"],
+      "example": "Har du en lader til telefonen?"
+    },
+    {
+      "id": "morges",
+      "nb": "morges",
+      "pos": "adverb",
+      "forms": ["morges"],
+      "example": "Jeg så ham i morges."
+    },
+    {
+      "id": "forresten",
+      "nb": "forresten",
+      "pos": "adverb",
+      "forms": ["forresten"],
+      "example": "Forresten, har du tid i morgen?"
+    },
+    {
+      "id": "samtale",
+      "nb": "samtale",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["samtale", "samtalen", "samtaler", "samtalene"],
+      "example": "Jeg er i en samtale nå."
+    },
+    {
+      "id": "moterom",
+      "nb": "møterom",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["møterom", "møteromma", "møterommet", "møterommene"],
+      "example": "Møtet er i møterommet."
+    },
+    {
+      "id": "alkoholfri",
+      "nb": "alkoholfri",
+      "pos": "adjective",
+      "forms": ["alkoholfri", "alkoholfrie", "alkoholfritt"],
+      "example": "Jeg tar en alkoholfri øl."
+    },
+    {
+      "id": "allergisk",
+      "nb": "allergisk",
+      "pos": "adjective",
+      "forms": ["allergisk", "allergiske"],
+      "example": "Er du allergisk mot noe?"
+    },
+    {
+      "id": "nott",
+      "nb": "nøtt",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["nøtt", "nøtta", "nøtten", "nøtter", "nøttene"],
+      "example": "Det er nøtter i kaka."
+    },
+    {
+      "id": "dessert",
+      "nb": "dessert",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["dessert", "desserten", "desserter", "dessertene"],
+      "example": "Hva vil du ha til dessert?"
+    },
+    {
+      "id": "sjokoladekake",
+      "nb": "sjokoladekake",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": [
+        "sjokoladekake",
+        "sjokoladekaka",
+        "sjokoladekaken",
+        "sjokoladekaker",
+        "sjokoladekakene"
+      ],
+      "example": "Sjokoladekaka er god."
+    },
+    {
+      "id": "fiskesuppe",
+      "nb": "fiskesuppe",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["fiskesuppe", "fiskesuppa", "fiskesuppen", "fiskesupper", "fiskesuppene"],
+      "example": "Jeg tar fiskesuppe."
+    },
+    {
+      "id": "vaersagod",
+      "nb": "værsågod",
+      "pos": "interjection",
+      "forms": ["værsågod"],
+      "example": "Værsågod, her er menyen."
+    },
+    {
+      "id": "har-noun",
+      "nb": "hår",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hår", "håra", "håret", "hårene"],
+      "example": "Hun har langt hår."
+    },
+    {
+      "id": "brun",
+      "nb": "brun",
+      "pos": "adjective",
+      "forms": ["brun", "brune", "brunt", "brunere", "brunest", "bruneste"],
+      "example": "Han har brune øyne."
+    },
+    {
+      "id": "ingenior",
+      "nb": "ingeniør",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ingeniør", "ingeniøren", "ingeniører", "ingeniørene"],
+      "example": "Hun jobber som ingeniør."
+    },
+    {
+      "id": "fritid",
+      "nb": "fritid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["fritid", "fritida", "fritiden", "fritider", "fritidene"],
+      "example": "Hva gjør du på fritiden?"
+    },
+    {
+      "id": "gjenbruksstasjon",
+      "nb": "gjenbruksstasjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": [
+        "gjenbruksstasjon",
+        "gjenbruksstasjonen",
+        "gjenbruksstasjoner",
+        "gjenbruksstasjonene"
+      ],
+      "example": "Vi kjører til gjenbruksstasjonen."
+    },
+    {
+      "id": "kortmaskin",
+      "nb": "kortmaskin",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kortmaskin", "kortmaskinen", "kortmaskiner", "kortmaskinene"],
+      "example": "Jeg kommer med kortmaskinen."
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-recycling",
+  "level": "A2",
+  "title": "Kildesortering",
+  "summary": "Read a notice from the housing association about sorting rubbish: food waste, plastic, paper, glass, bottles with a deposit and large items.",
+  "review": "pending",
+  "document": {
+    "kind": "notice",
+    "from": "Styret"
+  },
+  "text": "Kjære beboere,\nHusk å sortere søppelet riktig.\nMatavfall skal i grønne poser, og plast skal i blå poser. Begge posene kan du kaste i den vanlige søppeldunken.\nPapp og papir skal i containeren for papir. Glass og metall leverer du i containeren ved butikken.\nFlasker med pant kan du ta med til butikken. Da får du penger tilbake.\nStore ting, som møbler, må du levere på gjenbruksstasjonen.\nTakk for hjelpen!\nStyret",
+  "items": [
+    {
+      "id": "a2-kilde-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Hvor skal matavfall?",
+      "options": ["I grønne poser", "I blå poser", "I containeren for papir"],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hva gjør du med flasker med pant?",
+      "options": [
+        "Tar dem med til butikken",
+        "Kaster dem i søppeldunken",
+        "Legger dem i blå poser"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hvor leverer du et gammelt bord?",
+      "options": ["På gjenbruksstasjonen", "I søppeldunken", "Ved butikken"],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor kaster du et tomt glass?",
+      "options": ["I containeren for glass og metall", "I en blå pose", "I containeren for papir"],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1000,
+      "prompt": "Matavfall skal i ___ poser. (grønn)",
+      "answers": ["grønne"]
+    },
+    {
+      "id": "a2-kilde-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "difficulty": 950,
+      "prompt": "Flasker med ___ kan du ta med til butikken.",
+      "answers": ["pant"]
+    },
+    {
+      "id": "a2-kilde-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1050,
+      "prompt": "Store ting må du levere ___ gjenbruksstasjonen.",
+      "answers": ["på"]
+    },
+    {
+      "id": "a2-kilde-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Glass og metall", "leverer", "du", "ved butikken"],
+      "answer": "Glass og metall leverer du ved butikken"
+    },
+    {
+      "id": "a2-kilde-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "difficulty": 950,
+      "prompt": "Lag en setning.",
+      "tokens": ["Husk", "å", "sortere", "søppelet"],
+      "answer": "Husk å sortere søppelet"
+    },
+    {
+      "id": "a2-kilde-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når kommer søppelbilen denne uka?",
+      "audio": "Søppelbilen kommer på onsdag denne uka, ikke på tirsdag, fordi tirsdag er en helligdag.",
+      "options": ["På onsdag", "På tirsdag", "På fredag"],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hva ber personen om?",
+      "audio": "Kan du ta med flaskene til butikken i dag? Jeg rekker det ikke.",
+      "options": ["Å ta med flaskene til butikken", "Å kjøpe nye flasker", "Å kaste flaskene"],
+      "answer": 0
+    },
+    {
+      "id": "a2-kilde-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Matavfall skal i grønne poser."
+    }
+  ]
+}

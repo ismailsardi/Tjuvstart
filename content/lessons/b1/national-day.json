@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-national-day",
+  "level": "B1",
+  "title": "17. mai",
+  "summary": "Read about Norway’s national day: the breakfast, the bunad, the children’s parade, the royal family on the balcony and the russ. Then follow a live report and an invitation from a neighbour.",
+  "review": "pending",
+  "text": "17. mai er Norges nasjonaldag. Da feirer vi at Norge fikk sin egen grunnlov i 1814.\nDagen begynner tidlig. Mange spiser frokost med venner og familie, og mange tar på seg bunad eller pene klær. I hele landet går barna i barnetog med flagg og musikk. I Oslo går toget forbi Slottet, der kongefamilien vinker fra balkongen.\nOm ettermiddagen er det leker for barna på skolene, og mange spiser is og pølser. Ungdommene som er ferdige med videregående skole, russen, feirer også. De er lette å se i røde eller blå klær.\nFor mange som har flyttet til Norge, er 17. mai en fin dag for å bli kjent med naboene.",
+  "items": [
+    {
+      "id": "b1-nd-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva feirer man 17. mai?",
+      "options": [
+        "At Norge fikk sin egen grunnlov",
+        "At kongen har bursdag",
+        "At sommeren begynner"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvem går i barnetog?",
+      "options": ["Barna", "Bare russen", "Kongefamilien"],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hvor er kongefamilien?",
+      "options": ["På balkongen på Slottet", "I toget", "På skolene"],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hvem er russen?",
+      "options": ["Ungdommer som er ferdige med videregående", "Lærere fra skolene", "Turister"],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "17. mai ___ over hele landet.",
+      "answers": ["feires", "blir feiret"]
+    },
+    {
+      "id": "b1-nd-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["reflexive"],
+      "difficulty": 1200,
+      "prompt": "Mange tar på ___ bunad.",
+      "answers": ["seg"]
+    },
+    {
+      "id": "b1-nd-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["possessives"],
+      "difficulty": 1300,
+      "prompt": "Norge fikk ___ egen grunnlov i 1814.",
+      "answers": ["sin"]
+    },
+    {
+      "id": "b1-nd-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["relative-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Russen", "er", "ungdommer", "som", "er ferdige", "med skolen"],
+      "answer": "Russen er ungdommer som er ferdige med skolen"
+    },
+    {
+      "id": "b1-nd-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["I Oslo", "går", "toget", "forbi Slottet"],
+      "answer": "I Oslo går toget forbi Slottet"
+    },
+    {
+      "id": "b1-nd-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1200,
+      "prompt": "Når starter barnetoget?",
+      "audio": "Gratulerer med dagen! Her på Karl Johan er det fullt av folk, og sola skinner. Barnetoget starter om ti minutter.",
+      "options": ["Om ti minutter", "Om en time", "Nå"],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hva gjør de etter frokosten?",
+      "audio": "Vi pleier å spise frokost hos naboen klokka åtte, og etterpå går vi og ser på toget. Vil du bli med?",
+      "options": ["Ser på barnetoget", "Går på jobb", "Drar på hytta"],
+      "answer": 0
+    },
+    {
+      "id": "b1-nd-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1100,
+      "prompt": "Skriv det du hører.",
+      "audio": "Gratulerer med dagen!"
+    }
+  ]
+}

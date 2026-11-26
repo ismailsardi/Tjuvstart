@@ -1,0 +1,147 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-right-to-roam",
+  "level": "B1",
+  "title": "Allemannsretten",
+  "summary": "Read about the right to roam: walking and camping in nature, picking berries, and the rules on rubbish and campfires. Practise i and på with places, and seg.",
+  "review": "pending",
+  "text": "I Norge har alle rett til å gå tur i skogen og på fjellet, også når det er privat eiendom. Dette kalles allemannsretten.\nDu kan telte på samme sted i to netter uten å spørre, så lenge du er minst 150 meter fra nærmeste hus eller hytte. Du kan også plukke bær og sopp.\nMen allemannsretten har også regler. Du skal ta med deg søppelet ditt hjem, og du skal ikke forstyrre dyr eller folk som bor der. Fra 15. april til 15. september er det forbudt å tenne bål i eller nær skogen.\nHovedregelen er enkel: Ta hensyn, og la naturen være slik du fant den.",
+  "items": [
+    {
+      "id": "b1-ar-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva er allemannsretten?",
+      "options": ["Retten til å gå tur i naturen", "Retten til å bo gratis", "Retten til å jakte"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hvor lenge kan du telte på samme sted uten å spørre?",
+      "options": ["To netter", "En uke", "En måned"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["numbers"],
+      "difficulty": 1250,
+      "prompt": "Hvor langt fra et hus må teltet stå?",
+      "options": ["Minst 150 meter", "Minst 15 meter", "Minst to kilometer"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1300,
+      "prompt": "Når er det forbudt å tenne bål i skogen?",
+      "options": ["Fra midten av april til midten av september", "Hele vinteren", "Bare i juli"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["reflexive"],
+      "difficulty": 1250,
+      "prompt": "Du skal ta med ___ søppelet ditt hjem.",
+      "answers": ["deg"]
+    },
+    {
+      "id": "b1-ar-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1150,
+      "prompt": "Dette ___ allemannsretten.",
+      "answers": ["kalles", "heter"]
+    },
+    {
+      "id": "b1-ar-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1200,
+      "prompt": "I helgen skal vi gå tur ___ fjellet.",
+      "answers": ["på"]
+    },
+    {
+      "id": "b1-ar-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["La", "naturen", "være", "slik du fant den"],
+      "answer": "La naturen være slik du fant den"
+    },
+    {
+      "id": "b1-ar-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["Det", "er", "forbudt", "å tenne bål", "i skogen"],
+      "answer": "Det er forbudt å tenne bål i skogen"
+    },
+    {
+      "id": "b1-ar-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor kan de ikke telte der?",
+      "audio": "Vi kan ikke sette opp teltet her. Det er for nær huset der borte. Vi går litt lenger inn i skogen.",
+      "options": ["Det er for nær et hus", "Det regner", "Det er forbudt å telte i skogen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1300,
+      "prompt": "Hva ber brannvesenet om?",
+      "audio": "Det er meldt stor skogbrannfare på hele Østlandet. Brannvesenet ber alle om ikke å grille i skogen denne helgen.",
+      "options": ["Ikke å grille i skogen", "Å holde seg inne", "Å reise hjem fra hytta"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ar-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Du kan plukke bær og sopp."
+    }
+  ]
+}
