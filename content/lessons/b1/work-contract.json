@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-work-contract",
+  "level": "B1",
+  "title": "Arbeidsavtalen",
+  "summary": "Read a work contract: a permanent job, the trial period, notice, working hours, overtime, pay day and holiday. Meet the -s passive used in contracts and rules.",
+  "review": "pending",
+  "text": "Arbeidsavtale mellom Nordlys Data AS og Sara Haddad\nStilling: Utvikler, fast stilling, 100 prosent. Første arbeidsdag er 1. september.\nPrøvetid: De første seks månedene er prøvetid. I prøvetiden er oppsigelsestiden én måned. Etter prøvetiden er den tre måneder.\nArbeidstid: 37,5 timer i uka. Du kan selv velge når du begynner, mellom klokka sju og ni. Overtid avtales med nærmeste leder og betales med 40 prosent tillegg.\nLønn: 650 000 kroner i året. Lønnen utbetales den 20. hver måned.\nFerie: Du har rett på fem uker ferie i året, som avtales med lederen din.",
+  "items": [
+    {
+      "id": "b1-ac-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvor lang er prøvetiden?",
+      "options": ["Seks måneder", "Én måned", "Tre måneder"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hvor lang er oppsigelsestiden etter prøvetiden?",
+      "options": ["Tre måneder", "Én måned", "Seks måneder"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1200,
+      "prompt": "Når får Sara lønn?",
+      "options": ["Den 20. hver måned", "Den 1. hver måned", "Én gang i året"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hva skjer hvis Sara jobber overtid?",
+      "options": [
+        "Hun får 40 prosent mer betalt",
+        "Hun får en ekstra uke ferie",
+        "Hun får ikke betalt"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "Lønnen ___ den 20. hver måned.",
+      "answers": ["utbetales", "betales", "blir utbetalt", "blir betalt"]
+    },
+    {
+      "id": "b1-ac-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1200,
+      "prompt": "Du har rett ___ fem uker ferie i året.",
+      "answers": ["på", "til"]
+    },
+    {
+      "id": "b1-ac-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["relative-clause"],
+      "difficulty": 1250,
+      "prompt": "Du har fem uker ferie, ___ avtales med lederen din.",
+      "answers": ["som"]
+    },
+    {
+      "id": "b1-ac-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Overtid", "avtales", "med", "nærmeste leder"],
+      "answer": "Overtid avtales med nærmeste leder"
+    },
+    {
+      "id": "b1-ac-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Etter prøvetiden", "er", "oppsigelsestiden", "tre måneder"],
+      "answer": "Etter prøvetiden er oppsigelsestiden tre måneder"
+    },
+    {
+      "id": "b1-ac-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hva må Sara gjøre innen fredag?",
+      "audio": "Hei Sara, det er Lise fra HR. Vi har sendt deg arbeidsavtalen. Kan du lese den, skrive under og sende den tilbake til oss innen fredag?",
+      "options": [
+        "Skrive under og sende avtalen tilbake",
+        "Begynne i den nye jobben",
+        "Ringe til lederen sin"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Hva må Sara ta med den første dagen?",
+      "audio": "Husk å ta med kontonummeret ditt og skattekortet den første dagen. Ellers kan vi ikke betale ut lønn.",
+      "options": ["Kontonummer og skattekort", "Pass og førerkort", "CV og vitnemål"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ac-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Prøvetiden er seks måneder."
+    }
+  ]
+}

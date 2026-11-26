@@ -457,6 +457,18 @@
       "title": "«Jeg har jobbet der i fire år»",
       "body": "Für etwas, das in der Vergangenheit begonnen hat und noch andauert, nimmt das Norwegische «har» + Partizip mit «i»: «Jeg har bodd i Oslo i to måneder». Auf Deutsch sagst du das im Präsens mit «seit»: «Ich wohne seit zwei Monaten in Oslo».",
       "lessons": ["a2-job-interview", "a2-weather"]
+    },
+    {
+      "id": "s-passive",
+      "title": "«Lønnen utbetales»: das Passiv",
+      "body": "Verträge, Regeln und Aushänge hängen oft -s an das Verb: «Vernesko skal brukes» (Sicherheitsschuhe sind zu tragen), «Lønnen utbetales den 20.» (das Gehalt wird am 20. ausgezahlt). Für ein einzelnes Ereignis in der Vergangenheit nimmt man «ble» + Partizip, wie «wurde»: «Sofaen ble sendt i går».",
+      "lessons": ["b1-work-contract", "b1-payslip", "b1-safety", "b1-customer-call"]
+    },
+    {
+      "id": "skal-kommer-til-aa",
+      "title": "«skal» oder «kommer til å»?",
+      "body": "Das Norwegische hat kein eigenes Futur. «skal» steht für feste Pläne: «Lars skal jobbe hele sommeren». «kommer til å» steht für Erwartungen, wie «werden»: «Det kommer til å regne». Oft reicht wie im Deutschen das Präsens: «Jeg reiser i morgen».",
+      "lessons": ["b1-holiday-request"]
     }
   ],
   "itemNotes": {
@@ -533,7 +545,16 @@
     "a2-inv-05": "«Jeg kommer gjerne» = ich komme gern.",
     "a2-inv-06": "«ha lyst til» = Lust haben auf, etwas gern tun wollen.",
     "a2-inv-08": "«Dessverre» steht vorn, also kommt danach das Verb: Dessverre kan jeg… Wie «Leider kann ich…».",
-    "a2-intv-06": "«har jobbet … i fire år»: hat in der Vergangenheit begonnen und gilt noch. Auf Deutsch: «arbeite seit vier Jahren»."
+    "a2-intv-06": "«har jobbet … i fire år»: hat in der Vergangenheit begonnen und gilt noch. Auf Deutsch: «arbeite seit vier Jahren».",
+    "b1-ac-05": "-s am Verb macht ein Passiv: «utbetales» = wird ausgezahlt. «blir utbetalt» bedeutet dasselbe.",
+    "b1-ac-06": "«rett på» und «rett til» heißen beide «Anspruch auf».",
+    "b1-ls-07": "Nach «Derfor» am Satzanfang kommt sofort das Verb: «Derfor blir…», wie bei «deshalb».",
+    "b1-op-08": "Im «at»-Satz steht «ikke» vor dem Verb: «at det ikke er».",
+    "b1-hms-07": "«føle seg» ist reflexiv, wie «sich fühlen»: jeg føler meg, du føler deg, hun føler seg.",
+    "b1-fe-05": "«kommer til å» + Infinitiv drückt Zukunft aus: «Jeg kommer til å reise» = ich werde reisen. «skal» nimmt man, wenn es fest geplant ist.",
+    "b1-fe-06": "«fra og med … til og med» = vom … bis einschließlich …",
+    "b1-ku-08": "«for tre uker siden» = vor drei Wochen. «for» vor der Zeitangabe, «siden» danach.",
+    "b1-ku-06": "Für ein abgeschlossenes Ereignis: «ble» + Partizip. «Sofaen ble sendt» = das Sofa wurde verschickt."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lies über Saras ersten Tag in einem neuen Job und übe die Wörter und Sätze, die du bei der Arbeit brauchst.",
@@ -567,14 +588,21 @@
     "a2-weather": "Lies Saras Nachricht über ihren ersten Herbst in Oslo, sprich über Wetter und Temperaturen und lerne das Sprichwort über schlechtes Wetter und schlechte Kleidung.",
     "a2-invitation": "Lies eine Einladung zum Abendessen von einer Kollegin und die Antwort und übe, freundlich ja, nein und tut mir leid zu sagen.",
     "a2-hairdresser": "Buch telefonisch einen Haarschnitt: frag, was frei ist, nimm einen anderen Termin an, nenn deinen Namen und versteh die Stornierungsregel.",
-    "a2-job-interview": "Verfolge ein Vorstellungsgespräch in einem Hotel: sprich über deine Erfahrung und Sprachen, sag, warum du den Job willst, und stell deine eigene Frage."
+    "a2-job-interview": "Verfolge ein Vorstellungsgespräch in einem Hotel: sprich über deine Erfahrung und Sprachen, sag, warum du den Job willst, und stell deine eigene Frage.",
+    "b1-work-contract": "Einen Arbeitsvertrag lesen: feste Stelle, Probezeit, Kündigungsfrist, Arbeitszeit, Überstunden, Zahltag und Urlaub. Dazu das Passiv auf -s, das in Verträgen und Regeln steht.",
+    "b1-payslip": "Die Antworten der Personalabteilung auf drei häufige Fragen lesen: wie man die Gehaltsabrechnung liest, warum es im Juni Urlaubsgeld statt Gehalt gibt und warum im Dezember nur halbe Steuer abgezogen wird.",
+    "b1-opinion": "Einer Teamdiskussion über den Umzug in ein Großraumbüro folgen. Lernen, wie man zustimmt, widerspricht, abwägt und einen Vorschlag macht.",
+    "b1-safety": "Einen Aushang der Sicherheitsbeauftragten lesen: Brandübung, Sicherheitsschuhe im Lager, Verletzungen melden. Regeln mit skal und dem Passiv auf -s üben.",
+    "b1-holiday-request": "Eine E-Mail lesen, in der jemand drei Wochen Urlaub im Juli beantragt, und die Antwort. Pläne mit skal und kommer til å üben, Daten mit fra og med.",
+    "b1-customer-call": "Einem Anruf einer Kundin folgen, deren Sofa nicht angekommen ist. Lernen, sich zu entschuldigen, zu erklären, was passiert ist, eine Lösung anzubieten und «vor …» zu sagen."
   },
   "trackSummaries": {
     "first-weeks": "Die Situationen deiner ersten Wochen: der erste Arbeitstag, die Steuerkarte, BankID, die Wohnungssuche, der Arzt und das Mittagessen mit Kollegen.",
     "real-texts": "Echte Arten von Dokumenten, vereinfacht auf dein Niveau: ein Brief von NAV, eine Gebrauchtanzeige, eine Stellenanzeige und ein Aushang der Wohnungsgenossenschaft.",
     "from-zero": "Ganz von vorn: die Buchstaben und Laute des Norwegischen, Begrüßen, Zahlen und Preise, der Laden, das Café und die Uhrzeit.",
     "towards-b1": "Der nächste Schritt: erzählen, was du gemacht hast, an den Vermieter schreiben, ein Sitzungsprotokoll, ein Mitarbeitergespräch, ein Brief von der Kita und ein Nachrichtentext über Ostern.",
-    "everyday-oslo": "Alltagserledigungen und soziales Leben: die Apotheke, ein Paket abholen, Wetter und Kleidung, eine Einladung zum Essen, einen Haarschnitt buchen und ein Vorstellungsgespräch."
+    "everyday-oslo": "Alltagserledigungen und soziales Leben: die Apotheke, ein Paket abholen, Wetter und Kleidung, eine Einladung zum Essen, einen Haarschnitt buchen und ein Vorstellungsgespräch.",
+    "working-life": "Arbeitsleben auf B1: der Vertrag, die Gehaltsabrechnung und das Urlaubsgeld, die eigene Meinung im Meeting, Sicherheitsregeln, Urlaub beantragen und eine unzufriedene Kundin."
   },
   "canDo": {
     "A1-R-01": "Ich erkenne vertraute Wörter, Namen und Zahlen auf Schildern, Etiketten und Preisschildern.",
@@ -3237,6 +3265,156 @@
     },
     "lete": {
       "meaning": "suchen"
+    },
+    "arbeidsavtale": {
+      "meaning": "Arbeitsvertrag"
+    },
+    "arbeidsdag": {
+      "meaning": "Arbeitstag"
+    },
+    "ansatt": {
+      "meaning": "Angestellte(r)"
+    },
+    "provetid": {
+      "meaning": "Probezeit"
+    },
+    "oppsigelsestid": {
+      "meaning": "Kündigungsfrist"
+    },
+    "overtid": {
+      "meaning": "Überstunden"
+    },
+    "tillegg": {
+      "meaning": "Zuschlag"
+    },
+    "utbetale": {
+      "meaning": "auszahlen"
+    },
+    "avtale-verb": {
+      "meaning": "vereinbaren"
+    },
+    "rett": {
+      "meaning": "Recht, Anspruch"
+    },
+    "naermest": {
+      "meaning": "nächste"
+    },
+    "skattetrekk": {
+      "meaning": "Steuerabzug"
+    },
+    "bruttolonn": {
+      "meaning": "Bruttolohn"
+    },
+    "nettolonn": {
+      "meaning": "Nettolohn"
+    },
+    "lonnsslipp": {
+      "meaning": "Gehaltsabrechnung"
+    },
+    "feriepenger": {
+      "meaning": "Urlaubsgeld"
+    },
+    "altsa": {
+      "meaning": "also, das heißt"
+    },
+    "overst": {
+      "meaning": "ganz oben"
+    },
+    "lokale": {
+      "meaning": "Räume, Räumlichkeiten"
+    },
+    "landskap": {
+      "meaning": "Großraumbüro; Landschaft"
+    },
+    "annen": {
+      "meaning": "andere(r)"
+    },
+    "samarbeide": {
+      "meaning": "zusammenarbeiten"
+    },
+    "stoy": {
+      "meaning": "Lärm"
+    },
+    "ro": {
+      "meaning": "Ruhe"
+    },
+    "ide": {
+      "meaning": "Idee"
+    },
+    "booke": {
+      "meaning": "buchen"
+    },
+    "alarm": {
+      "meaning": "Alarm"
+    },
+    "brannovelse": {
+      "meaning": "Brandschutzübung"
+    },
+    "forlate": {
+      "meaning": "verlassen"
+    },
+    "trapp": {
+      "meaning": "Treppe"
+    },
+    "heis": {
+      "meaning": "Aufzug"
+    },
+    "parkeringsplass": {
+      "meaning": "Parkplatz"
+    },
+    "hovedinngang": {
+      "meaning": "Haupteingang"
+    },
+    "lager": {
+      "meaning": "Lager"
+    },
+    "vernesko": {
+      "meaning": "Sicherheitsschuhe"
+    },
+    "skade": {
+      "meaning": "Verletzung, Schaden"
+    },
+    "melde": {
+      "meaning": "melden"
+    },
+    "utrygg": {
+      "meaning": "unsicher"
+    },
+    "verneombud": {
+      "meaning": "Sicherheitsbeauftragte(r)"
+    },
+    "enna": {
+      "meaning": "noch"
+    },
+    "lei": {
+      "meaning": "traurig; leid"
+    },
+    "sofa": {
+      "meaning": "Sofa"
+    },
+    "sannsynligvis": {
+      "meaning": "wahrscheinlich"
+    },
+    "forrige": {
+      "meaning": "letzte, vorige"
+    },
+    "beklage": {
+      "meaning": "bedauern, sich entschuldigen"
+    },
+    "gratis": {
+      "meaning": "kostenlos"
+    },
+    "levering": {
+      "meaning": "Lieferung"
+    },
+    "detalj": {
+      "meaning": "Detail"
+    },
+    "post": {
+      "meaning": "Post"
+    },
+    "ordrenummer": {
+      "meaning": "Bestellnummer"
     }
   }
 }

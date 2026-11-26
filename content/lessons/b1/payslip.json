@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-payslip",
+  "level": "B1",
+  "title": "Lønnsslippen",
+  "summary": "Read the HR answers to three common questions: how to read a payslip, why June brings holiday pay instead of salary, and why December has half tax.",
+  "review": "pending",
+  "text": "Hvordan leser jeg lønnsslippen?\nØverst står bruttolønnen, altså lønnen før skatt. Under ser du skattetrekket, som går rett til staten. Det du får utbetalt, kalles nettolønn.\nHvorfor får jeg ikke vanlig lønn i juni?\nI juni får du feriepenger i stedet for vanlig lønn. Feriepengene er 12 prosent av det du tjente året før. Hvis du begynte i jobben i fjor høst, blir feriepengene derfor lavere enn en vanlig lønn.\nHvorfor betaler jeg mindre skatt i desember?\nI desember betaler de fleste bare halv skatt. Derfor er lønnen i desember høyere enn vanlig.",
+  "items": [
+    {
+      "id": "b1-ls-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva er bruttolønn?",
+      "options": ["Lønnen før skatt", "Lønnen etter skatt", "Feriepengene"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva får du i juni?",
+      "options": ["Feriepenger i stedet for vanlig lønn", "Dobbelt så mye lønn", "Ingen penger"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1350,
+      "prompt": "Hvorfor kan feriepengene bli lave det første året?",
+      "options": [
+        "De regnes av det du tjente året før",
+        "Du har prøvetid",
+        "Skatten er høyere i juni"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor er lønnen høyere i desember?",
+      "options": [
+        "De fleste betaler bare halv skatt",
+        "Alle får bonus",
+        "Man jobber mer i desember"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1150,
+      "prompt": "Lønnen i desember er høyere ___ vanlig.",
+      "answers": ["enn"]
+    },
+    {
+      "id": "b1-ls-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "Det du får utbetalt, ___ nettolønn.",
+      "answers": ["kalles", "heter"]
+    },
+    {
+      "id": "b1-ls-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["conjunctions"],
+      "difficulty": 1300,
+      "prompt": "Hun begynte i jobben i fjor høst. ___ blir feriepengene lavere.",
+      "answers": ["Derfor", "Så"]
+    },
+    {
+      "id": "b1-ls-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Derfor", "er", "lønnen", "høyere", "i desember"],
+      "answer": "Derfor er lønnen høyere i desember"
+    },
+    {
+      "id": "b1-ls-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["Feriepengene", "blir", "lavere", "enn", "en vanlig lønn"],
+      "answer": "Feriepengene blir lavere enn en vanlig lønn"
+    },
+    {
+      "id": "b1-ls-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["numbers"],
+      "difficulty": 1200,
+      "prompt": "Når kommer lønnen for mars?",
+      "audio": "Hei, det er Tom fra lønn. Lønnen for mars kommer dessverre to dager for sent, altså den 22. i stedet for den 20. Beklager det.",
+      "options": ["Den 22.", "Den 20.", "Den 2."],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Når får du betalt for overtid i mai?",
+      "audio": "Overtid som du jobber i mai, blir utbetalt sammen med lønnen i juni.",
+      "options": ["Med lønnen i juni", "Med lønnen i mai", "I desember"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ls-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "I desember betaler vi bare halv skatt."
+    }
+  ]
+}

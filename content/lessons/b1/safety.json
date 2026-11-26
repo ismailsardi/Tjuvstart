@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-safety",
+  "level": "B1",
+  "title": "HMS på jobben",
+  "summary": "Read a notice from the safety representative about a fire drill, safety shoes in the warehouse and reporting injuries. Practise rules written with skal and the -s passive.",
+  "review": "pending",
+  "document": {
+    "kind": "notice",
+    "from": "Verneombudet"
+  },
+  "text": "Til alle ansatte\nNeste tirsdag klokka ti har vi brannøvelse. Når alarmen går, skal alle forlate bygget med en gang. Bruk trappene, ikke heisen. Vi møtes på parkeringsplassen foran hovedinngangen.\nHusk også:\nPå lageret skal vernesko brukes hele tiden.\nAlle skader, også små, skal meldes til nærmeste leder samme dag.\nHvis du føler deg utrygg på jobben, kan du alltid snakke med meg.\nHilsen Per, verneombud",
+  "items": [
+    {
+      "id": "b1-hms-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva skjer neste tirsdag?",
+      "options": ["Brannøvelse", "Fest for de ansatte", "Møte med lederen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvor skal alle møtes?",
+      "options": ["På parkeringsplassen", "I kantina", "Ved heisen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hva gjør du hvis du skader deg litt på jobben?",
+      "options": [
+        "Melder det til lederen samme dag",
+        "Venter til neste møte",
+        "Går hjem uten å si noe"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hva gjør et verneombud?",
+      "options": ["Passer på at de ansatte er trygge", "Bestemmer lønnen", "Slukker branner"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "På lageret skal vernesko ___ hele tiden.",
+      "answers": ["brukes"]
+    },
+    {
+      "id": "b1-hms-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1300,
+      "prompt": "Alle skader skal ___ til nærmeste leder.",
+      "answers": ["meldes", "rapporteres"]
+    },
+    {
+      "id": "b1-hms-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["reflexive"],
+      "difficulty": 1150,
+      "prompt": "Hvis du føler ___ utrygg, kan du snakke med meg.",
+      "answers": ["deg"]
+    },
+    {
+      "id": "b1-hms-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["Når alarmen går,", "skal", "alle", "forlate bygget"],
+      "answer": "Når alarmen går, skal alle forlate bygget"
+    },
+    {
+      "id": "b1-hms-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive", "v2-word-order"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["På lageret", "skal", "vernesko", "brukes"],
+      "answer": "På lageret skal vernesko brukes"
+    },
+    {
+      "id": "b1-hms-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Hva skal du ikke gjøre?",
+      "audio": "Dette er en brannøvelse. Gå rolig ut av bygget. Ikke bruk heisen.",
+      "options": ["Bruke heisen", "Gå ut av bygget", "Gå rolig"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["numbers"],
+      "difficulty": 1300,
+      "prompt": "Hvor lang tid tok det før alle var ute?",
+      "audio": "Øvelsen gikk bra, men det tok åtte minutter før alle var ute. Neste gang må vi klare det på fem.",
+      "options": ["Åtte minutter", "Fem minutter", "Ti minutter"],
+      "answer": 0
+    },
+    {
+      "id": "b1-hms-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Alle skal forlate bygget med en gang."
+    }
+  ]
+}

@@ -376,6 +376,18 @@
       "title": "«Jeg har jobbet der i fire år»",
       "body": "For something that started in the past and is still going on, Norwegian uses «har» + past participle with «i»: «Jeg har bodd i Oslo i to måneder». English would say «for two months».",
       "lessons": ["a2-job-interview", "a2-weather"]
+    },
+    {
+      "id": "s-passive",
+      "title": "«Lønnen utbetales»: the passive",
+      "body": "Contracts, rules and notices often add -s to the verb: «Vernesko skal brukes» (safety shoes are to be worn), «Lønnen utbetales den 20.» (the salary is paid on the 20th). For one event in the past, use «ble» + participle: «Sofaen ble sendt i går».",
+      "lessons": ["b1-work-contract", "b1-payslip", "b1-safety", "b1-customer-call"]
+    },
+    {
+      "id": "skal-kommer-til-aa",
+      "title": "«skal» or «kommer til å»?",
+      "body": "Norwegian has no single future tense. «skal» is for plans that are decided: «Lars skal jobbe hele sommeren». «kommer til å» is for what you expect will happen: «Det kommer til å regne». Often the present tense is enough: «Jeg reiser i morgen».",
+      "lessons": ["b1-holiday-request"]
     }
   ],
   "itemNotes": {
@@ -452,7 +464,16 @@
     "a2-inv-05": "«Jeg kommer gjerne» = I’d love to come.",
     "a2-inv-06": "«ha lyst til» = want to, feel like.",
     "a2-inv-08": "«Dessverre» comes first, so the verb comes next: Dessverre kan jeg…",
-    "a2-intv-06": "«har jobbet … i fire år»: started in the past and still true."
+    "a2-intv-06": "«har jobbet … i fire år»: started in the past and still true.",
+    "b1-ac-05": "-s on the verb makes a passive: «utbetales» = is paid out. «blir utbetalt» means the same.",
+    "b1-ac-06": "«rett på» and «rett til» both mean «a right to».",
+    "b1-ls-07": "After «Derfor» at the start, the verb comes next: «Derfor blir…». After «Så» it is the same in speech.",
+    "b1-op-08": "In an «at» clause, «ikke» comes before the verb: «at det ikke er».",
+    "b1-hms-07": "«føle seg» is reflexive: jeg føler meg, du føler deg, hun føler seg.",
+    "b1-fe-05": "«kommer til å» + infinitive is a prediction or plan: «Jeg kommer til å reise» = I am going to travel. «skal» is used when it is decided.",
+    "b1-fe-06": "«fra og med … til og med» = from … up to and including.",
+    "b1-ku-08": "«for tre uker siden» = three weeks ago. «for» before the time, «siden» after it.",
+    "b1-ku-06": "One finished event in the past: «ble» + participle. «Sofaen ble sendt» = the sofa was sent."
   },
   "canDo": {
     "A1-R-01": "I can recognise familiar words, names and numbers on signs, labels and price tags.",
@@ -3062,12 +3083,163 @@
     },
     "lete": {
       "meaning": "to look for, to search"
+    },
+    "arbeidsavtale": {
+      "meaning": "employment contract"
+    },
+    "arbeidsdag": {
+      "meaning": "working day"
+    },
+    "ansatt": {
+      "meaning": "employee"
+    },
+    "provetid": {
+      "meaning": "trial period"
+    },
+    "oppsigelsestid": {
+      "meaning": "period of notice"
+    },
+    "overtid": {
+      "meaning": "overtime"
+    },
+    "tillegg": {
+      "meaning": "extra pay, supplement"
+    },
+    "utbetale": {
+      "meaning": "pay out"
+    },
+    "avtale-verb": {
+      "meaning": "agree on, arrange"
+    },
+    "rett": {
+      "meaning": "right (to something)"
+    },
+    "naermest": {
+      "meaning": "nearest, closest"
+    },
+    "skattetrekk": {
+      "meaning": "tax deduction"
+    },
+    "bruttolonn": {
+      "meaning": "gross pay"
+    },
+    "nettolonn": {
+      "meaning": "net pay"
+    },
+    "lonnsslipp": {
+      "meaning": "payslip"
+    },
+    "feriepenger": {
+      "meaning": "holiday pay"
+    },
+    "altsa": {
+      "meaning": "that is, so"
+    },
+    "overst": {
+      "meaning": "at the top"
+    },
+    "lokale": {
+      "meaning": "premises"
+    },
+    "landskap": {
+      "meaning": "open-plan office; landscape"
+    },
+    "annen": {
+      "meaning": "other, another"
+    },
+    "samarbeide": {
+      "meaning": "work together"
+    },
+    "stoy": {
+      "meaning": "noise"
+    },
+    "ro": {
+      "meaning": "peace and quiet"
+    },
+    "ide": {
+      "meaning": "idea"
+    },
+    "booke": {
+      "meaning": "book"
+    },
+    "alarm": {
+      "meaning": "alarm"
+    },
+    "brannovelse": {
+      "meaning": "fire drill"
+    },
+    "forlate": {
+      "meaning": "leave"
+    },
+    "trapp": {
+      "meaning": "stairs"
+    },
+    "heis": {
+      "meaning": "lift, elevator"
+    },
+    "parkeringsplass": {
+      "meaning": "car park"
+    },
+    "hovedinngang": {
+      "meaning": "main entrance"
+    },
+    "lager": {
+      "meaning": "warehouse; stock"
+    },
+    "vernesko": {
+      "meaning": "safety shoes"
+    },
+    "skade": {
+      "meaning": "injury, damage"
+    },
+    "melde": {
+      "meaning": "report, notify"
+    },
+    "utrygg": {
+      "meaning": "unsafe, insecure"
+    },
+    "verneombud": {
+      "meaning": "safety representative"
+    },
+    "enna": {
+      "meaning": "yet, still"
+    },
+    "lei": {
+      "meaning": "sorry; tired of"
+    },
+    "sofa": {
+      "meaning": "sofa"
+    },
+    "sannsynligvis": {
+      "meaning": "probably"
+    },
+    "forrige": {
+      "meaning": "last, previous"
+    },
+    "beklage": {
+      "meaning": "apologise, regret"
+    },
+    "gratis": {
+      "meaning": "free (of charge)"
+    },
+    "levering": {
+      "meaning": "delivery"
+    },
+    "detalj": {
+      "meaning": "detail"
+    },
+    "post": {
+      "meaning": "mail, post"
+    },
+    "ordrenummer": {
+      "meaning": "order number"
     }
   },
   "trackSummaries": {
     "from-zero": "Start from zero: the letters and sounds of Norwegian, saying hello, numbers and prices, the shop, the café and telling the time.",
     "towards-b1": "The next step: talking about what you did, writing to your landlord, meeting minutes, a yearly review at work, a kindergarten letter and a news text about Easter.",
-    "everyday-oslo": "Everyday errands and social life: the pharmacy, picking up a parcel, weather and clothes, a dinner invitation, booking a haircut and a job interview."
+    "everyday-oslo": "Everyday errands and social life: the pharmacy, picking up a parcel, weather and clothes, a dinner invitation, booking a haircut and a job interview.",
+    "working-life": "Working life at B1: your contract, the payslip and holiday pay, giving your opinion in a meeting, safety rules, asking for holiday and handling an unhappy customer."
   },
   "lessonSummaries": {
     "a1-alphabet": "Meet the three extra letters æ, ø and å, hear how they differ from a, e and o, and write your first Norwegian words.",
@@ -3089,6 +3261,12 @@
     "a2-weather": "Read Sara’s message about her first Oslo autumn, talk about the weather and temperatures, and learn the saying about bad weather and bad clothes.",
     "a2-invitation": "Read an invitation to dinner from a colleague and the reply, then practise saying yes, no and sorry in a friendly way.",
     "a2-hairdresser": "Book a haircut by phone: ask what is free, accept another time, give your name, and understand the cancellation rule.",
-    "a2-job-interview": "Follow a job interview at a hotel: talk about your experience and languages, say why you want the job, and ask your own question."
+    "a2-job-interview": "Follow a job interview at a hotel: talk about your experience and languages, say why you want the job, and ask your own question.",
+    "b1-work-contract": "Read a work contract: a permanent job, the trial period, notice, working hours, overtime, pay day and holiday. Meet the -s passive used in contracts and rules.",
+    "b1-payslip": "Read the HR answers to three common questions: how to read a payslip, why June brings holiday pay instead of salary, and why December has half tax.",
+    "b1-opinion": "Follow a team discussion about moving to an open-plan office. Learn how to agree, disagree, weigh both sides and make a suggestion.",
+    "b1-safety": "Read a notice from the safety representative about a fire drill, safety shoes in the warehouse and reporting injuries. Practise rules written with skal and the -s passive.",
+    "b1-holiday-request": "Read an email asking the manager for three weeks off in July, and the reply. Practise talking about plans with skal and kommer til å, and dates with fra og med.",
+    "b1-customer-call": "Follow a phone call from a customer whose sofa has not arrived. Learn to apologise, explain what happened and offer a solution, and say how long ago something happened."
   }
 }

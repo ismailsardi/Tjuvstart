@@ -65,6 +65,20 @@
         "b1-kindergarten",
         "b1-easter"
       ]
+    },
+    {
+      "id": "working-life",
+      "level": "B1",
+      "title": "Arbeidslivet",
+      "summary": "Working life at B1: your contract, the payslip and holiday pay, giving your opinion in a meeting, safety rules, asking for holiday and handling an unhappy customer.",
+      "lessons": [
+        "b1-work-contract",
+        "b1-payslip",
+        "b1-opinion",
+        "b1-safety",
+        "b1-holiday-request",
+        "b1-customer-call"
+      ]
     }
   ]
 }

@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "B1",
+  "topic": "working-life",
+  "title": "Arbeidslivet",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "arbeidsavtale",
+      "nb": "arbeidsavtale",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidsavtale", "arbeidsavtalen", "arbeidsavtaler", "arbeidsavtalene"],
+      "example": "Jeg har skrevet under på arbeidsavtalen."
+    },
+    {
+      "id": "arbeidsdag",
+      "nb": "arbeidsdag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidsdag", "arbeidsdagen", "arbeidsdager", "arbeidsdagene"],
+      "example": "Første arbeidsdag er mandag."
+    },
+    {
+      "id": "ansatt",
+      "nb": "ansatt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ansatt", "ansatte", "ansattes"],
+      "example": "Alle ansatte får en e-post."
+    },
+    {
+      "id": "provetid",
+      "nb": "prøvetid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["prøvetid", "prøvetida", "prøvetiden", "prøvetider", "prøvetidene"],
+      "example": "Prøvetiden er seks måneder."
+    },
+    {
+      "id": "oppsigelsestid",
+      "nb": "oppsigelsestid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": [
+        "oppsigelsestid",
+        "oppsigelsestida",
+        "oppsigelsestiden",
+        "oppsigelsestider",
+        "oppsigelsestidene"
+      ],
+      "example": "Oppsigelsestiden er tre måneder."
+    },
+    {
+      "id": "overtid",
+      "nb": "overtid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["overtid", "overtida", "overtiden", "overtider", "overtidene"],
+      "example": "Jeg jobbet overtid i går."
+    },
+    {
+      "id": "tillegg",
+      "nb": "tillegg",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["tillegg", "tillegga", "tillegget", "tilleggene"],
+      "example": "Du får et tillegg for kveldsarbeid."
+    },
+    {
+      "id": "utbetale",
+      "nb": "utbetale",
+      "pos": "verb",
+      "forms": ["utbetale", "utbetalt", "utbetaler", "utbetalte", "utbetales"],
+      "example": "Lønnen blir utbetalt den 20."
+    },
+    {
+      "id": "avtale-verb",
+      "nb": "avtale",
+      "pos": "verb",
+      "forms": ["avtale", "avtala", "avtalt", "avtaler", "avtalte", "avtales"],
+      "example": "Vi må avtale et møte."
+    },
+    {
+      "id": "rett",
+      "nb": "rett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["rett", "retten", "retter", "rettene"],
+      "example": "Du har rett på ferie."
+    },
+    {
+      "id": "naermest",
+      "nb": "nærmest",
+      "pos": "adjective",
+      "forms": ["nærmest", "nærmeste"],
+      "example": "Snakk med nærmeste leder."
+    },
+    {
+      "id": "skattetrekk",
+      "nb": "skattetrekk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skattetrekk", "skattetrekka", "skattetrekket", "skattetrekkene"],
+      "example": "Skattetrekket står på lønnsslippen."
+    },
+    {
+      "id": "bruttolonn",
+      "nb": "bruttolønn",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["bruttolønn", "bruttolønna", "bruttolønnen", "bruttolønner", "bruttolønnene"],
+      "example": "Bruttolønnen er lønnen før skatt."
+    },
+    {
+      "id": "nettolonn",
+      "nb": "nettolønn",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["nettolønn", "nettolønna", "nettolønnen", "nettolønner", "nettolønnene"],
+      "example": "Nettolønnen er det du får utbetalt."
+    },
+    {
+      "id": "lonnsslipp",
+      "nb": "lønnsslipp",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lønnsslipp", "lønnsslippen", "lønnsslipper", "lønnsslippene"],
+      "example": "Lønnsslippen kommer hver måned."
+    },
+    {
+      "id": "feriepenger",
+      "nb": "feriepenger",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["feriepenger", "feriepengene"],
+      "example": "I juni får vi feriepenger."
+    },
+    {
+      "id": "altsa",
+      "nb": "altså",
+      "pos": "adverb",
+      "forms": ["altså"],
+      "example": "Den 22., altså to dager for sent."
+    },
+    {
+      "id": "overst",
+      "nb": "øverst",
+      "pos": "adverb",
+      "forms": ["øverst"],
+      "example": "Navnet ditt står øverst."
+    },
+    {
+      "id": "lokale",
+      "nb": "lokale",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["lokale", "lokala", "lokaler", "lokalet", "lokalene"],
+      "example": "Firmaet flytter til nye lokaler."
+    },
+    {
+      "id": "landskap",
+      "nb": "landskap",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["landskap", "landskapa", "landskaper", "landskapet", "landskapene"],
+      "example": "Vi sitter i åpent landskap."
+    },
+    {
+      "id": "annen",
+      "nb": "annen",
+      "pos": "determiner",
+      "forms": ["annen", "anna", "andre", "annet"],
+      "example": "Jeg vil ha en annen sofa."
+    },
+    {
+      "id": "samarbeide",
+      "nb": "samarbeide",
+      "pos": "verb",
+      "forms": [
+        "samarbeide",
+        "samarbeida",
+        "samarbeidd",
+        "samarbeidde",
+        "samarbeider",
+        "samarbeidet"
+      ],
+      "example": "Vi samarbeider godt i teamet."
+    },
+    {
+      "id": "stoy",
+      "nb": "støy",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["støy", "støyen", "støyer", "støyene"],
+      "example": "Det er mye støy på kontoret."
+    },
+    {
+      "id": "ro",
+      "nb": "ro",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["ro", "roa", "roen", "roer", "roene"],
+      "example": "Jeg trenger ro for å jobbe."
+    },
+    {
+      "id": "ide",
+      "nb": "idé",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["idé", "ideen", "ideer", "idéen", "idéer", "ideene", "idéene"],
+      "example": "Det er en god idé."
+    },
+    {
+      "id": "booke",
+      "nb": "booke",
+      "pos": "verb",
+      "forms": ["booke", "booka", "booker", "booket"],
+      "example": "Jeg booker et møterom."
+    },
+    {
+      "id": "alarm",
+      "nb": "alarm",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["alarm", "alarmen", "alarmer", "alarmene"],
+      "example": "Alarmen går klokka ti."
+    },
+    {
+      "id": "brannovelse",
+      "nb": "brannøvelse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["brannøvelse", "brannøvelsen", "brannøvelser", "brannøvelsene"],
+      "example": "Vi har brannøvelse i dag."
+    },
+    {
+      "id": "forlate",
+      "nb": "forlate",
+      "pos": "verb",
+      "forms": ["forlate", "forlot", "forlatt", "forlater"],
+      "example": "Alle må forlate bygget."
+    },
+    {
+      "id": "trapp",
+      "nb": "trapp",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["trapp", "trappa", "trappen", "trapper", "trappene"],
+      "example": "Bruk trappene, ikke heisen."
+    },
+    {
+      "id": "heis",
+      "nb": "heis",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["heis", "heisen", "heiser", "heisene"],
+      "example": "Heisen er ute av drift."
+    },
+    {
+      "id": "parkeringsplass",
+      "nb": "parkeringsplass",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["parkeringsplass", "parkeringsplassen", "parkeringsplasser", "parkeringsplassene"],
+      "example": "Vi møtes på parkeringsplassen."
+    },
+    {
+      "id": "hovedinngang",
+      "nb": "hovedinngang",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hovedinngang", "hovedinngangen", "hovedinnganger", "hovedinngangene"],
+      "example": "Hovedinngangen er på forsiden."
+    },
+    {
+      "id": "lager",
+      "nb": "lager",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["lager", "lagra", "lagre", "lageret", "lagrene"],
+      "example": "Han jobber på lageret."
+    },
+    {
+      "id": "vernesko",
+      "nb": "vernesko",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vernesko", "verneskoa", "verneskoen", "verneskoene"],
+      "example": "Ta på deg vernesko."
+    },
+    {
+      "id": "skade",
+      "nb": "skade",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skade", "skaden", "skader", "skadene"],
+      "example": "Skaden må meldes."
+    },
+    {
+      "id": "melde",
+      "nb": "melde",
+      "pos": "verb",
+      "forms": ["melde", "meldt", "melder", "meldte", "meldes"],
+      "example": "Du må melde fra til lederen."
+    },
+    {
+      "id": "utrygg",
+      "nb": "utrygg",
+      "pos": "adjective",
+      "forms": ["utrygg", "utrygt", "utrygge"],
+      "example": "Jeg føler meg utrygg."
+    },
+    {
+      "id": "verneombud",
+      "nb": "verneombud",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["verneombud", "verneombuda", "verneombudet", "verneombudene"],
+      "example": "Verneombudet passer på sikkerheten."
+    },
+    {
+      "id": "enna",
+      "nb": "ennå",
+      "pos": "adverb",
+      "forms": ["ennå"],
+      "example": "Sofaen har ikke kommet ennå."
+    },
+    {
+      "id": "lei",
+      "nb": "lei",
+      "pos": "adjective",
+      "forms": ["lei", "leit"],
+      "example": "Det er jeg lei meg for."
+    },
+    {
+      "id": "sofa",
+      "nb": "sofa",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sofa", "sofaen", "sofaer", "sofaene"],
+      "example": "Vi kjøpte en ny sofa."
+    },
+    {
+      "id": "sannsynligvis",
+      "nb": "sannsynligvis",
+      "pos": "adverb",
+      "forms": ["sannsynligvis"],
+      "example": "Den kommer sannsynligvis på torsdag."
+    },
+    {
+      "id": "forrige",
+      "nb": "forrige",
+      "pos": "adjective",
+      "forms": ["forrige"],
+      "example": "Jeg var syk forrige uke."
+    },
+    {
+      "id": "beklage",
+      "nb": "beklage",
+      "pos": "verb",
+      "forms": ["beklage", "beklaga", "beklagd", "beklagde", "beklager", "beklaget"],
+      "example": "Jeg beklager forsinkelsen."
+    },
+    {
+      "id": "gratis",
+      "nb": "gratis",
+      "pos": "adjective",
+      "forms": ["gratis"],
+      "example": "Levering er gratis."
+    },
+    {
+      "id": "levering",
+      "nb": "levering",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["levering", "leveringa", "leveringen", "leveringer", "leveringene"],
+      "example": "Levering tar tre dager."
+    },
+    {
+      "id": "detalj",
+      "nb": "detalj",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["detalj", "detaljen", "detaljer", "detaljene"],
+      "example": "Jeg sender deg alle detaljene."
+    },
+    {
+      "id": "post",
+      "nb": "post",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["post", "posten", "poster", "postene"],
+      "example": "Jeg sjekker e-posten."
+    },
+    {
+      "id": "ordrenummer",
+      "nb": "ordrenummer",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["ordrenummer", "ordrenummeret", "ordrenumre", "ordrenumrene"],
+      "example": "Har du ordrenummeret?"
+    }
+  ]
+}

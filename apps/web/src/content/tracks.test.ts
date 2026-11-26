@@ -63,11 +63,17 @@ describe('suggested tracks', () => {
     expect(suggestedTracks('A2')[0]?.id).toBe('first-weeks');
   });
 
-  it('ends with the track towards B1', () => {
-    const towardsB1 = tracks.find((t) => t.id === 'towards-b1')!;
-    expect(towardsB1.level).toBe('B1');
-    expect(trackLessons(towardsB1).every((l) => l.level === 'B1')).toBe(true);
-    expect(suggestedTracks('A2').at(-1)?.id).toBe('towards-b1');
+  it('ends with the B1 tracks, each holding only B1 lessons', () => {
+    const b1 = tracks.filter((t) => t.level === 'B1');
+    expect(b1.map((t) => t.id)).toEqual(['towards-b1', 'working-life']);
+    for (const track of b1) {
+      expect(trackLessons(track).every((l) => l.level === 'B1')).toBe(true);
+    }
+    expect(
+      suggestedTracks('A2')
+        .slice(-b1.length)
+        .map((t) => t.id),
+    ).toEqual(b1.map((t) => t.id));
   });
 });
 

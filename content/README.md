@@ -15,6 +15,8 @@ schema/                 JSON Schemas for each file type
 
 Every lesson has a `review` status, `pending` or `approved`. New lessons, and lessons with changed Norwegian text, are `pending` until a native speaker has checked them; only approved lessons are meant to ship in the store apps. `coverage` lists the lessons still waiting.
 
+[docs/content-coverage.md](../docs/content-coverage.md) maps the situations and grammar a learner needs at each level to the lessons that cover them, and lists the gaps to write next.
+
 `tracks.json` groups lessons into guided paths. Each track has a `level`: the home screen only suggests A1 tracks to learners whose estimated level is still A1.
 
 ## Items
