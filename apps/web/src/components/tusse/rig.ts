@@ -1,5 +1,7 @@
 import type { TussePose } from '../Tusse';
-import { RIG } from './rigData';
+import type { Outfit } from '../outfits';
+import { GROUPS, hairCutFile, layerFiles, layerUrl, outfitKey, type LayerGroup } from './layers';
+import { PAD, RIG } from './rigData';
 
 /**
  * The rigged Tusse: the same illustrated poses as the stills, animated in WebGL like a cut-out
@@ -11,6 +13,9 @@ import { RIG } from './rigData';
  * The eyes are their own layer: the pupils slide inside the eye whites (looking around, or at the
  * pointer), and an eyelid comes down for blinks.
  *
+ * Clothes are drawn as extra layers on the same mesh (see layers.ts): behind the body, over the
+ * body with its own weights, and over the head as one rigid piece.
+ *
  * Loaded on demand (see Tusse.tsx). It needs WebGL2, for mipmapped textures at any size, so the
  * full-size art stays smooth when drawn small.
  */
@@ -18,6 +23,8 @@ import { RIG } from './rigData';
 export interface TusseRig {
   /** Show a pose and play its little act (thumb pumps, head shake, fist pumps...). */
   setPose(pose: TussePose): void;
+  /** Change clothes. The current pose redresses once the new pieces have loaded. */
+  setOutfit(outfit: Outfit): void;
   /** A tap: a hop, or a stir in its sleep. */
   tap(): void;
   dispose(): void;
@@ -26,8 +33,6 @@ export interface TusseRig {
 /** Art size in rig units. The textures are drawn at twice this. */
 const W = 400;
 const H = 440;
-/** Room around the art for hops and raised arms: the canvas covers 440 × 484 units. */
-export const PAD = { x: 20, y: 40, w: 440, h: 484 } as const;
 /** Grid step of the mesh, in rig units. */
 const STEP = 4;
 const GX = W / STEP;
@@ -183,6 +188,81 @@ function loadPose(base: string, pose: TussePose): Promise<PoseAssets> {
   return p;
 }
 
+// Outfit pieces, shared the same way.
+const layerCache = new Map<string, Promise<HTMLImageElement>>();
+function loadLayer(base: string, file: string): Promise<HTMLImageElement> {
+  const url = layerUrl(base, file);
+  let p = layerCache.get(url);
+  if (!p) {
+    p = loadImage(url);
+    p.catch(() => layerCache.delete(url));
+    layerCache.set(url, p);
+  }
+  return p;
+}
+
+/** One pose's clothes, flattened into one image per group, and the hair a hat hides. */
+type Dressing = Partial<Record<LayerGroup, HTMLCanvasElement>> & { cut?: HTMLImageElement };
+async function loadDressing(base: string, pose: TussePose, outfit: Outfit): Promise<Dressing> {
+  const out: Dressing = {};
+  const cutFile = hairCutFile(outfit, pose);
+  await Promise.all([
+    cutFile &&
+      loadLayer(base, cutFile).then(
+        (img) => void (out.cut = img),
+        // Without the mask a strand of hair may show above the hat, which is better than no hat.
+        () => undefined,
+      ),
+    ...GROUPS.map(async (group) => {
+      const files = layerFiles(outfit, pose, group);
+      if (!files.length) return;
+      // A piece that fails to load is left off rather than holding up the pose.
+      const loaded = await Promise.all(files.map((f) => loadLayer(base, f).catch(() => null)));
+      const imgs = loaded.filter((img): img is HTMLImageElement => !!img);
+      if (!imgs.length) return;
+      const c = document.createElement('canvas');
+      c.width = imgs[0]!.naturalWidth;
+      c.height = imgs[0]!.naturalHeight;
+      const ctx = c.getContext('2d');
+      if (!ctx) throw new Error('No 2D canvas');
+      for (const img of imgs) ctx.drawImage(img, 0, 0);
+      out[group] = c;
+    }),
+  ]);
+  return out;
+}
+
+/** The pose's art with the hair under a hat cut away. */
+function cutArt(art: HTMLImageElement, cut: HTMLImageElement): HTMLCanvasElement {
+  const c = document.createElement('canvas');
+  c.width = art.naturalWidth;
+  c.height = art.naturalHeight;
+  const ctx = c.getContext('2d');
+  if (!ctx) throw new Error('No 2D canvas');
+  ctx.drawImage(art, 0, 0);
+  ctx.globalCompositeOperation = 'destination-out';
+  ctx.drawImage(cut, 0, 0, c.width, c.height);
+  return c;
+}
+
+/**
+ * Bone weights for a layer group: the cape behind only moves with the body, the head pieces only
+ * with the head, and body pieces with everything but the ears (a sleeve follows its arm, a hat
+ * brim shouldn't bend with an ear under it).
+ */
+function groupWeights(a: PoseAssets, group: LayerGroup) {
+  const w1 = new Float32Array(a.w1.length);
+  const w2 = new Float32Array(a.w2.length);
+  if (group === 'body') {
+    w1.set(a.w1);
+    w2.set(a.w2);
+    for (let i = 0; i < w1.length; i += 4) w1[i] = w1[i + 1] = 0;
+  } else if (group === 'head') {
+    for (let i = 0; i < w2.length; i += 3) w2[i] = a.w2[i]!;
+  }
+  return { w1, w2 };
+}
+
 const BONES = [
   'earL',
   'earR',
@@ -201,6 +281,7 @@ export async function createTusseRig(
   canvas: HTMLCanvasElement,
   firstPose: TussePose,
   base: string,
+  firstOutfit: Outfit = {},
 ): Promise<TusseRig> {
   const gl = canvas.getContext('webgl2', {
     premultipliedAlpha: true,
@@ -248,7 +329,7 @@ export async function createTusseRig(
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
   gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint32Array(idx), gl.STATIC_DRAW);
 
-  const texture = (img: HTMLImageElement, premultiply: boolean) => {
+  const texture = (img: TexImageSource, premultiply: boolean) => {
     const t = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, t);
     gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, premultiply);
@@ -260,21 +341,63 @@ export async function createTusseRig(
     gl.generateMipmap(gl.TEXTURE_2D);
     return t;
   };
-  interface GpuPose {
-    art: WebGLTexture | null;
+  interface GpuLayer {
+    tex: WebGLTexture | null;
     w1: WebGLBuffer | null;
     w2: WebGLBuffer | null;
+  }
+  interface GpuPose extends GpuLayer {
     eyes?: [WebGLTexture | null, WebGLTexture | null];
+    /** The clothes this pose is dressed in, and for which outfit. */
+    dressed: string;
+    /** The hair mask the art texture was cut with, if any. */
+    cut?: HTMLImageElement;
+    layers: Partial<Record<LayerGroup, GpuLayer>>;
   }
   const gpu = new Map<TussePose, GpuPose>();
-  const upload = (pose: TussePose, a: PoseAssets) => {
-    if (gpu.has(pose)) return;
-    gpu.set(pose, {
-      art: texture(a.art, true),
-      w1: buffer(a.w1),
-      w2: buffer(a.w2),
-      eyes: a.eyes ? [texture(a.eyes.pupils, false), texture(a.eyes.mask, false)] : undefined,
-    });
+  const dropLayers = (g: GpuPose) => {
+    for (const l of Object.values(g.layers)) {
+      gl.deleteTexture(l.tex);
+      gl.deleteBuffer(l.w1);
+      gl.deleteBuffer(l.w2);
+    }
+    g.layers = {};
+  };
+  const upload = (pose: TussePose, a: PoseAssets, d: Dressing, key: string) => {
+    let g = gpu.get(pose);
+    if (!g) {
+      g = {
+        tex: texture(a.art, true),
+        w1: buffer(a.w1),
+        w2: buffer(a.w2),
+        eyes: a.eyes ? [texture(a.eyes.pupils, false), texture(a.eyes.mask, false)] : undefined,
+        dressed: '',
+        layers: {},
+      };
+      gpu.set(pose, g);
+    }
+    if (g.dressed === key) return;
+    dropLayers(g);
+    if (g.cut !== d.cut) {
+      gl.deleteTexture(g.tex);
+      g.tex = texture(d.cut ? cutArt(a.art, d.cut) : a.art, true);
+      g.cut = d.cut;
+    }
+    for (const group of GROUPS) {
+      const c = d[group];
+      if (!c) continue;
+      const w = groupWeights(a, group);
+      g.layers[group] = { tex: texture(c, true), w1: buffer(w.w1), w2: buffer(w.w2) };
+    }
+    g.dressed = key;
+  };
+  let outfit = firstOutfit;
+  /** A pose with its art, weights and current clothes, ready to upload. */
+  const fetchPose = (p: TussePose) => {
+    const o = outfit;
+    return Promise.all([loadPose(base, p), loadDressing(base, p, o)]).then(
+      ([a, d]) => [a, d, outfitKey(o)] as const,
+    );
   };
 
   const UNIFORMS = [
@@ -292,7 +415,7 @@ export async function createTusseRig(
   gl.enable(gl.BLEND);
   gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
-  upload(firstPose, await loadPose(base, firstPose));
+  upload(firstPose, ...(await fetchPose(firstPose)));
 
   // ---- motion state
   const S: Record<Bone | 'sq' | 'ty' | 'gx' | 'gy', Spring> = {
@@ -539,7 +662,7 @@ export async function createTusseRig(
       if (pointer && t - pointerT < 3 && pose !== 'shrug') {
         const r = canvas.getBoundingClientRect();
         const dx = pointer[0] - (r.left + r.width * 0.42);
-        const dy = pointer[1] - (r.top + r.height * 0.4);
+        const dy = pointer[1] - (r.top + r.height * 0.47);
         const d = Math.hypot(dx, dy) || 1;
         const k = Math.min(1, d / (r.width * 1.2));
         S.gx.t = (dx / d) * k * 7;
@@ -595,11 +718,7 @@ export async function createTusseRig(
       gl!.activeTexture(gl!.TEXTURE2);
       gl!.bindTexture(gl!.TEXTURE_2D, g.eyes[1]);
     }
-    gl!.activeTexture(gl!.TEXTURE0);
-    gl!.bindTexture(gl!.TEXTURE_2D, g.art);
     gl!.uniform4fv(U.fit, R.fit ?? [1, 1, 0, 0]);
-    attr(g.w1, 'w1', 4);
-    attr(g.w2, 'w2', 3);
     const pv = R.piv;
     gl!.uniform2fv(U.pEarL, pv.earL);
     gl!.uniform2fv(U.pEarR, pv.earR);
@@ -612,7 +731,6 @@ export async function createTusseRig(
     gl!.uniform1f(U.sx, 1 - sq * 0.8);
     gl!.uniform1f(U.sy, 1 + sq);
     gl!.uniform1f(U.ty, S.ty.x);
-    gl!.uniform1f(U.eyesOn, eyes ? 1 : 0);
     gl!.uniform1f(U.blink, eyes ? blink : 0);
     const gs = eyes ? (pose === 'rest' || pose === 'wave' ? 1 : 0.8) : 0;
     gl!.uniform2f(U.gaze, S.gx.x * gs, S.gy.x * gs);
@@ -620,36 +738,55 @@ export async function createTusseRig(
       gl!.uniform4fv(U.eyeL, R.eyes[0]);
       gl!.uniform4fv(U.eyeR, R.eyes[1]);
     }
-    gl!.drawElements(gl!.TRIANGLES, idx.length, gl!.UNSIGNED_INT, 0);
+    const draw = (l: GpuLayer, withEyes: boolean) => {
+      gl!.activeTexture(gl!.TEXTURE0);
+      gl!.bindTexture(gl!.TEXTURE_2D, l.tex);
+      attr(l.w1, 'w1', 4);
+      attr(l.w2, 'w2', 3);
+      gl!.uniform1f(U.eyesOn, withEyes ? 1 : 0);
+      gl!.drawElements(gl!.TRIANGLES, idx.length, gl!.UNSIGNED_INT, 0);
+    };
+    if (g.layers.back) draw(g.layers.back, false);
+    draw(g, eyes);
+    if (g.layers.body) draw(g.layers.body, false);
+    if (g.layers.head) draw(g.layers.head, false);
     raf = requestAnimationFrame(frame);
   }
   // The waving pose drops its arm back to the hip between waves.
-  if (firstPose === 'wave')
-    loadPose(base, 'rest').then(
-      (a) => !disposed && upload('rest', a),
+  const preloadRest = () =>
+    fetchPose('rest').then(
+      (r) => !disposed && r[2] === outfitKey(outfit) && upload('rest', ...r),
       () => {},
     );
+  if (firstPose === 'wave') preloadRest();
   raf = requestAnimationFrame(frame);
 
   return {
     setPose(p) {
       wanted = p;
-      if (p === 'wave')
-        loadPose(base, 'rest').then(
-          (a) => !disposed && upload('rest', a),
-          () => {},
-        );
-      if (p === pose && gpu.has(p)) return;
-      loadPose(base, p).then(
-        (a) => {
-          if (disposed || wanted !== p) return;
-          upload(p, a);
-          show(p);
+      if (p === 'wave') preloadRest();
+      if (p === pose && gpu.get(p)?.dressed === outfitKey(outfit)) return;
+      fetchPose(p).then(
+        (r) => {
+          if (disposed || wanted !== p || r[2] !== outfitKey(outfit)) return;
+          const fresh = !gpu.has(p) || p !== pose;
+          upload(p, ...r);
+          if (fresh) show(p);
         },
         () => {
           // Keep the pose on screen; the next change tries again.
         },
       );
+    },
+    setOutfit(o) {
+      if (outfitKey(o) === outfitKey(outfit)) return;
+      outfit = o;
+      // Every pose already on the GPU redresses as soon as its pieces are in.
+      for (const p of gpu.keys())
+        fetchPose(p).then(
+          (r) => !disposed && r[2] === outfitKey(outfit) && upload(p, ...r),
+          () => {},
+        );
     },
     tap() {
       if (pose === 'sleep') acts.sleep();

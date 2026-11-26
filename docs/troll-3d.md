@@ -1,10 +1,10 @@
 # The 3D troll
 
-The troll can be shown in 3D on the big spots (Today and the wardrobe page). It is off by default: the drawn troll (`Tusse.tsx`) stays the one learners see until a professionally made model is in.
+The troll can be shown in 3D on the big spots (Today and the wardrobe page). It is off by default: the illustrated, rigged troll (`Tusse.tsx`) stays the one learners see.
 
 ## Previewing
 
-Add `?troll3d=1` to the address to switch the preview on for that device, and `?troll3d=0` to switch it off. With reduced motion, or without WebGL, the drawn troll is shown either way.
+Add `?troll3d=1` to the address to switch the preview on for that device, and `?troll3d=0` to switch it off. With reduced motion, or without WebGL, the illustrated troll is shown either way.
 
 Until `public/troll/tusse.glb` exists, the preview shows a stand-in built from simple shapes (`src/troll3d/placeholder.ts`). It has no outfits.
 

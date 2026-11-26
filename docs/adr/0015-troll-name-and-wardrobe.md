@@ -14,7 +14,7 @@ Rewards for streaks sit close to what [ADR 0012](0012-motivation-without-points.
 - The learner names the troll as the last onboarding question, with Tusse filled in. The name can be changed later from Me, on the troll's own page (`#/troll`). A blank name falls back to Tusse.
 - The troll has a wardrobe of eight items in six slots (head, eyes, neck, body, feet, back). The learner picks what it wears per slot, or nothing. A slot they never touched wears the latest item earned for it, so new clothes go on by themselves.
 - Items come two ways, and both only add:
-  - by level: the helmet at A2 and the lusekofte at B1, as before;
+  - by level: the helmet at A2 and the lusekofte at B1, as before (the sweater was later restyled as a classic Marius sweater);
   - by streak milestones: a knitted scarf at 3 days, a lue at 7, round glasses at 14, wool slippers at 30, an anorak at 60 and a northern lights cape at 100.
 - Streak items follow the **longest** streak ever (same forgiving rule as the current streak), not the current one. The longest streak and the highest level are also stored on the profile, so a broken streak, a lower rating or a later change of daily goal never takes anything back.
 - New items are announced on the session result, next to the other progress, with a link to change the outfit. Nothing nags: no countdowns, no "you'll lose it" wording.
@@ -23,5 +23,5 @@ Rewards for streaks sit close to what [ADR 0012](0012-motivation-without-points.
 ## Consequences
 
 - The streak gets a reward without becoming a threat, which keeps ADR 0012 intact.
-- All art is inline SVG in `Tusse.tsx`, drawn for one 200 × 220 box. The idle animations pivot on points in that box, so items must not cover the ear and tail roots or the eyes.
-- Adding an item means drawing it, adding it to `ITEMS` in `outfits.ts`, and adding its name and "got" line in the four interface languages.
+- Since the troll moved to illustrated, rigged art, each item is a set of image layers, one per pose, rendered by `tools/troll-outfits` in the same soft 3D style and stacked on the pose (on the still, and in the rig as extra layers that follow the body or the head). The old inline SVG troll is gone.
+- Adding an item means rendering its layers (see `tools/troll-outfits/README.md`), adding it to `ITEMS` in `outfits.ts`, and adding its name and "got" line in the interface languages.

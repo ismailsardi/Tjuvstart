@@ -2,6 +2,12 @@ import type { TussePose } from '../Tusse';
 
 type Point = readonly [number, number];
 
+/**
+ * Room around the 400 × 440 art for hops, raised arms and hats: the rig's canvas covers 440 × 524
+ * units, with the art 20 in from the left and 80 down from the top.
+ */
+export const PAD = { x: 20, y: 80, w: 440, h: 524 } as const;
+
 /** Where each bone turns, in the art's 400 × 440 space. A bone a pose doesn't use sits at 0,0. */
 export interface PoseRig {
   piv: Record<'earL' | 'earR' | 'armA' | 'tail' | 'head' | 'armB' | 'armC', Point>;

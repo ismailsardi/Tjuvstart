@@ -204,7 +204,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           </div>
           <p className="muted">{t('todayIntro')}</p>
         </div>
-        <Troll pose="coffee" rock outfit={troll.outfit} size={72} className="home-tusse" />
+        <Troll pose="coffee" outfit={troll.outfit} size={72} className="home-tusse" />
       </header>
 
       {needsPlacement && (

@@ -18,7 +18,7 @@ describe('earnedItems', () => {
     expect([...earnedItems(profile(1200, 2))]).toEqual([]);
   });
 
-  it('gives the helmet at A2 and the lusekofte at B1, counting the level check', () => {
+  it('gives the helmet at A2 and the sweater at B1, counting the level check', () => {
     expect([...earnedItems(profile(1000, 5))]).toEqual(['helmet']);
     expect([...earnedItems(profile(1200, 5))]).toEqual(['helmet', 'sweater']);
     expect([...earnedItems(profile(1000, 0, { placedAt: 1 }))]).toEqual(['helmet']);
