@@ -204,112 +204,118 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         <Troll pose="coffee" outfit={troll.outfit} size={72} className="home-tusse" />
       </header>
 
-      {needsPlacement && (
-        <section className="hero" aria-labelledby="placement-heading">
-          <h2 id="placement-heading">{t('placementTitle')}</h2>
-          <p className="hero-body">{t('placementCard')}</p>
-          <a className="button" href={placementHref}>
-            {t('start')}
-          </a>
-        </section>
-      )}
-      {lessonFirst ? (
-        <>
-          {nextLesson}
-          {daily}
-        </>
-      ) : (
-        <>
-          {!needsPlacement && daily}
-          {nextLesson}
-        </>
-      )}
-
-      <h2 className="section-title">{t('quickPractice')}</h2>
-      <div className="tiles">
-        {due > 0 ? (
-          <Tile
-            id="review"
-            icon={ICONS.words}
-            title={t('wordReview')}
-            body={t('dueCount', { n: due })}
-            href={deckHref(DUE_DECK)}
-            action={t('start')}
-          />
-        ) : nextDue !== undefined ? (
-          // Cards exist and none is due: say when the next review is, and offer new words.
-          <Tile
-            id="review"
-            icon={ICONS.words}
-            title={t('wordReview')}
-            body={t('reviewCaughtUp', {
-              when: new Intl.RelativeTimeFormat(language, { numeric: 'auto' }).format(
-                Math.max(0, daysUntil(nextDue)),
-                'day',
-              ),
-            })}
-            href={wordsHref}
-            action={t('newWords')}
-          />
-        ) : (
-          // No cards yet: the row is the first step, not an empty review.
-          firstDeck && (
+      {/* Two columns from laptop width: today's plan on the left, practice and level beside it. */}
+      <div className="home-layout">
+        <div className="home-main">
+          {needsPlacement && (
+            <section className="hero" aria-labelledby="placement-heading">
+              <h2 id="placement-heading">{t('placementTitle')}</h2>
+              <p className="hero-body">{t('placementCard')}</p>
+              <a className="button" href={placementHref}>
+                {t('start')}
+              </a>
+            </section>
+          )}
+          {lessonFirst ? (
+            <>
+              {nextLesson}
+              {daily}
+            </>
+          ) : (
+            <>
+              {!needsPlacement && daily}
+              {nextLesson}
+            </>
+          )}
+        </div>
+        <div className="home-side">
+          <h2 className="section-title">{t('quickPractice')}</h2>
+          <div className="tiles">
+            {due > 0 ? (
+              <Tile
+                id="review"
+                icon={ICONS.words}
+                title={t('wordReview')}
+                body={t('dueCount', { n: due })}
+                href={deckHref(DUE_DECK)}
+                action={t('start')}
+              />
+            ) : nextDue !== undefined ? (
+              // Cards exist and none is due: say when the next review is, and offer new words.
+              <Tile
+                id="review"
+                icon={ICONS.words}
+                title={t('wordReview')}
+                body={t('reviewCaughtUp', {
+                  when: new Intl.RelativeTimeFormat(language, { numeric: 'auto' }).format(
+                    Math.max(0, daysUntil(nextDue)),
+                    'day',
+                  ),
+                })}
+                href={wordsHref}
+                action={t('newWords')}
+              />
+            ) : (
+              // No cards yet: the row is the first step, not an empty review.
+              firstDeck && (
+                <Tile
+                  id="review"
+                  icon={ICONS.words}
+                  title={t('firstWordsTitle')}
+                  body={
+                    <>
+                      {t('firstWordsBody')} <span lang="nb">{firstDeck.title}</span>
+                    </>
+                  }
+                  href={deckHref(deckId(firstDeck))}
+                  action={t('start')}
+                />
+              )
+            )}
+            {canPractise && (
+              <Tile
+                id="practice"
+                icon={ICONS.practice}
+                title={t('practiceTitle')}
+                body={t('practiceShort')}
+                href={practiceHref}
+                action={t('start')}
+              />
+            )}
             <Tile
-              id="review"
-              icon={ICONS.words}
-              title={t('firstWordsTitle')}
+              id="listening"
+              icon={ICONS.listening}
+              title={t('listeningTitle')}
               body={
-                <>
-                  {t('firstWordsBody')} <span lang="nb">{firstDeck.title}</span>
-                </>
+                <span data-testid="home-listening-speed">
+                  {t('listeningSpeed', {
+                    percent: Math.round((profile?.listening?.rate ?? DEFAULT_LISTENING_RATE) * 100),
+                  })}
+                </span>
               }
-              href={deckHref(deckId(firstDeck))}
+              href={listeningHref}
               action={t('start')}
             />
-          )
-        )}
-        {canPractise && (
-          <Tile
-            id="practice"
-            icon={ICONS.practice}
-            title={t('practiceTitle')}
-            body={t('practiceShort')}
-            href={practiceHref}
-            action={t('start')}
-          />
-        )}
-        <Tile
-          id="listening"
-          icon={ICONS.listening}
-          title={t('listeningTitle')}
-          body={
-            <span data-testid="home-listening-speed">
-              {t('listeningSpeed', {
-                percent: Math.round((profile?.listening?.rate ?? DEFAULT_LISTENING_RATE) * 100),
-              })}
-            </span>
-          }
-          href={listeningHref}
-          action={t('start')}
-        />
-        <Tile
-          id="ai"
-          icon={ICONS.ai}
-          title={t('aiTitle')}
-          body={t('aiIntroShort')}
-          href={aiHref}
-          action={t('aiTitle')}
-        />
-      </div>
+            <Tile
+              id="ai"
+              icon={ICONS.ai}
+              title={t('aiTitle')}
+              body={t('aiIntroShort')}
+              href={aiHref}
+              action={t('aiTitle')}
+            />
+          </div>
 
-      <section className="home-level" aria-labelledby="level-heading">
-        <h2 id="level-heading">{t('yourLevel')}</h2>
-        {anyEstimate ? (
-          <SkillLevels profile={profile} />
-        ) : (
-          <p className="muted small">{t('levelEmpty', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
-        )}
-      </section>
+          <section className="home-level" aria-labelledby="level-heading">
+            <h2 id="level-heading">{t('yourLevel')}</h2>
+            {anyEstimate ? (
+              <SkillLevels profile={profile} />
+            ) : (
+              <p className="muted small">{t('levelEmpty', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
+            )}
+          </section>
+        </div>
+      </div>
     </>
   );
 }

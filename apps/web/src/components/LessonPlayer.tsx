@@ -159,7 +159,10 @@ export function LessonPlayer({
   }
 
   return (
-    <article className="session" aria-labelledby="lesson-heading">
+    <article
+      className={text && textOffered && textInView ? 'session has-text' : 'session'}
+      aria-labelledby="lesson-heading"
+    >
       <SessionBar
         closeHref={closeHref}
         done={index}
@@ -169,9 +172,9 @@ export function LessonPlayer({
       <h1 id="lesson-heading" className="eyebrow" lang="nb">
         {lesson.title}
       </h1>
-      {text &&
-        textOffered &&
-        (textInView ? (
+      {text && textOffered && textInView && (
+        // From laptop width the text sits in its own column, beside the question.
+        <div className="session-text">
           <ReadingText
             key={text}
             text={text}
@@ -181,7 +184,11 @@ export function LessonPlayer({
             canShadow={!ephemeral}
             level={textLesson?.level ?? lesson.level}
           />
-        ) : (
+        </div>
+      )}
+
+      <div className="session-work">
+        {text && textOffered && !textInView && (
           <details className="text-toggle" data-testid="text-toggle">
             <summary>{t('showText')}</summary>
             <ReadingText
@@ -193,38 +200,39 @@ export function LessonPlayer({
               level={textLesson?.level ?? lesson.level}
             />
           </details>
-        ))}
+        )}
 
-      <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
-        {item.prompt}
-      </h2>
-      {item.hint && (
-        <p className="muted" lang="nb">
-          {item.hint}
-        </p>
-      )}
+        <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
+          {item.prompt}
+        </h2>
+        {item.hint && (
+          <p className="muted" lang="nb">
+            {item.hint}
+          </p>
+        )}
 
-      <ItemView item={item} disabled={feedback !== null} onSubmit={submit} />
+        <ItemView item={item} disabled={feedback !== null} onSubmit={submit} />
 
-      {/* Word help and tips come after the answers: there when wanted, never in the way. */}
-      {((text && textInView) || contrasts.length > 0) && (
-        <div className="word-help">
-          {text && textInView && <Glossaries segments={segments} />}
-          {contrasts.map((contrast) => (
-            <details
-              key={contrast.id}
-              className="tip"
-              lang={contrast.language}
-              dir={contrast.direction}
-            >
-              <summary>
-                {t('tip')}: {contrast.title}
-              </summary>
-              <p>{contrast.body}</p>
-            </details>
-          ))}
-        </div>
-      )}
+        {/* Word help and tips come after the answers: there when wanted, never in the way. */}
+        {((text && textInView) || contrasts.length > 0) && (
+          <div className="word-help">
+            {text && textInView && <Glossaries segments={segments} />}
+            {contrasts.map((contrast) => (
+              <details
+                key={contrast.id}
+                className="tip"
+                lang={contrast.language}
+                dir={contrast.direction}
+              >
+                <summary>
+                  {t('tip')}: {contrast.title}
+                </summary>
+                <p>{contrast.body}</p>
+              </details>
+            ))}
+          </div>
+        )}
+      </div>
 
       {feedback && (
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">

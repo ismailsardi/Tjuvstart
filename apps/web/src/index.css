@@ -447,16 +447,6 @@ h1 + .panel {
   font-weight: 600;
 }
 
-/* Word decks */
-
-.deck-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
-  gap: 0.75rem;
-}
-
 progress {
   width: 100%;
   height: 0.4rem;
@@ -2927,4 +2917,113 @@ button.danger:not(.link) {
 
 .slot-picker .choice.locked {
   color: var(--muted);
+}
+
+/*
+ * Laptop and desktop. Up to 48rem the app is the phone layout. From there the closing buttons
+ * stop stretching, and from 64rem the screens that have more than one thing to show use the
+ * width: Today splits into the plan and the extras, lessons put the text beside the question,
+ * and the lessons page shows its tracks two by two.
+ */
+@media (width >= 48rem) {
+  .hero .button,
+  .lesson-cta,
+  .feedback button,
+  .session-work form > button[type='submit'],
+  .bottom-actions button[type='submit'] {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .bottom-actions {
+    justify-content: flex-end;
+  }
+
+  .week {
+    max-width: 26rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .shell[data-route='home'],
+  .shell[data-route='lessons'],
+  .shell[data-route='lesson'] {
+    max-width: 72rem;
+    padding-inline: 2rem;
+  }
+
+  /* Today: the plan gets the wider column, practice and the level estimate sit beside it. */
+  .home-layout {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .home-side > .section-title:first-child {
+    /* Clears Tusse, who sits at the end of the greeting row above. */
+    margin-top: 2.25rem;
+  }
+
+  /* Lessons: tracks two by two; the open track spans both columns so its steps have room. */
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .track-grid .track.current {
+    grid-column: 1 / -1;
+  }
+
+  .track-grid .track.current + .track {
+    border-top: 1px solid var(--border);
+  }
+
+  .shell[data-route='lessons'] .lessons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+    border-top: 0;
+  }
+
+  .shell[data-route='lessons'] .lessons li {
+    border-top: 1px solid var(--border);
+    border-bottom: 0;
+  }
+
+  /* A lesson with its text: the text on the left, staying in view, the question on the right. */
+  .session {
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
+  .session.has-text {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: 3rem;
+    max-width: none;
+  }
+
+  .session.has-text > .session-bar,
+  .session.has-text > h1 {
+    grid-column: 1 / -1;
+  }
+
+  .session.has-text > .session-text {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+  }
+
+  .session.has-text > .session-work > .prompt {
+    margin-top: 0;
+  }
+
+  .session.has-text > .feedback {
+    grid-column: 2;
+  }
 }

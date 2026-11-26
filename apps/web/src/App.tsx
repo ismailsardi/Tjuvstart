@@ -72,7 +72,11 @@ export function App() {
         !['lesson', 'shadow', 'deck', 'placement', 'practice', 'listening', 'daily'].includes(
           route.name,
         ) && <NavBar route={route} />}
-      <main className="shell" lang={language}>
+      <main
+        className="shell"
+        data-route={needsOnboarding ? 'onboarding' : route.name}
+        lang={language}
+      >
         <Suspense fallback={null}>
           {needsOnboarding ? (
             <Onboarding
