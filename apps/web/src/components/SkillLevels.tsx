@@ -5,8 +5,9 @@ import type { Profile } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
 
 /**
- * The level estimate per skill with how far it is toward the next level, or a meter of the
- * answers still needed for an estimate.
+ * One row per skill, always in the same shape: a headline, a meter and a note. With an
+ * estimate the headline is the level and the meter shows the way to the next one; without, the
+ * headline says how many answers are still needed and the meter counts them.
  */
 export function SkillLevels({ profile }: { profile: Profile | undefined }) {
   const { t } = useI18n();
@@ -16,44 +17,55 @@ export function SkillLevels({ profile }: { profile: Profile | undefined }) {
     const assessed = rating !== undefined && answers >= MIN_ANSWERS_FOR_ESTIMATE;
     return { skill, answers, progress: assessed ? levelProgress(rating) : undefined };
   });
+  const pending = rows.some((row) => !row.progress);
   return (
     <>
       <ul className="skills">
-        {rows.map(({ skill, answers, progress }) => (
-          <li key={skill} data-testid={`skill-${skill}`}>
-            <span lang="nb">{SKILL_NAMES[skill]}</span>
-            {progress ? (
+        {rows.map(({ skill, answers, progress }) => {
+          const missing = MIN_ANSWERS_FOR_ESTIMATE - Math.min(answers, MIN_ANSWERS_FOR_ESTIMATE);
+          return (
+            <li
+              key={skill}
+              className={progress ? undefined : 'pending'}
+              data-testid={`skill-${skill}`}
+            >
+              <span lang="nb">{SKILL_NAMES[skill]}</span>
               <span className="skill-level">
-                <span className="level">{t('estimated', { level: progress.level })}</span>
+                <span className="level">
+                  {progress
+                    ? progress.level
+                    : missing === 1
+                      ? t('needsAnswer')
+                      : t('needsAnswers', { n: missing })}
+                </span>
                 <span
                   className="level-meter"
-                  style={{ '--to': progress.fraction } as CSSProperties}
+                  style={
+                    {
+                      '--to': progress
+                        ? progress.fraction
+                        : (MIN_ANSWERS_FOR_ESTIMATE - missing) / MIN_ANSWERS_FOR_ESTIMATE,
+                    } as CSSProperties
+                  }
                   aria-hidden="true"
                 >
                   <span className="level-meter-fill static" />
                 </span>
-                <span className="muted small">
-                  {progress.next ? t('levelToward', { level: progress.next }) : t('levelTop')}
-                </span>
+                {progress && (
+                  <span className="muted small">
+                    {progress.next ? t('levelToward', { level: progress.next }) : t('levelTop')}
+                  </span>
+                )}
               </span>
-            ) : (
-              <span className="skill-pending">
-                <progress
-                  value={Math.min(answers, MIN_ANSWERS_FOR_ESTIMATE)}
-                  max={MIN_ANSWERS_FOR_ESTIMATE}
-                  aria-hidden="true"
-                />
-                <span className="muted small">
-                  {t('notAssessed', { answers, min: MIN_ANSWERS_FOR_ESTIMATE })}
-                </span>
-              </span>
-            )}
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
-      {rows.some((row) => !row.progress) && (
-        <p className="muted small">{t('skillPendingHint', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
-      )}
+      <p className="muted small">
+        {pending
+          ? t('skillPendingHint', { min: MIN_ANSWERS_FOR_ESTIMATE })
+          : t('skillEstimateHint')}
+      </p>
     </>
   );
 }

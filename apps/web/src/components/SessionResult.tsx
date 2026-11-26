@@ -7,9 +7,19 @@ import { useI18n } from '../i18n/useI18n';
 import { CanDoList } from './CanDoList';
 import { Tusse } from './Tusse';
 import { trollFor, useTroll } from './useTroll';
-import { itemById, type ItemId } from './outfits';
+import { itemById, MASTERY_ANSWERS, type ItemId } from './outfits';
 import { wardrobeHref } from '../routing/useHashRoute';
 import { skillChanges, type ProgressSnapshot, type SkillChange } from './useProgressSnapshot';
+
+/**
+ * What the score line says. A weak result gets a plain, kind line instead of praise, so the
+ * screen never celebrates something the learner knows went badly.
+ */
+function scoreTone(score: number, total: number): 'strong' | 'fair' | 'tough' {
+  const share = total > 0 ? score / total : 0;
+  if (share >= 0.8) return 'strong';
+  return share >= 0.5 ? 'fair' : 'tough';
+}
 
 /** Each step of the reveal starts this long after the one before (see .reveal in CSS). */
 const STEP_MS = 350;
@@ -118,6 +128,7 @@ export function SessionResult({
 }) {
   const { t } = useI18n();
   const troll = useTroll();
+  const tone = scoreTone(score, total);
   const changes = before && after ? skillChanges(before, after) : [];
   const reached =
     before && after
@@ -152,14 +163,27 @@ export function SessionResult({
       style={{ '--cheer': cheerDelay } as CSSProperties}
     >
       <div className="reveal result-tusse" style={step(0)}>
-        <Tusse pose="cheer" outfit={troll.outfit} size={112} className="done-tusse" />
+        <Tusse
+          pose={tone === 'tough' ? 'thumbs' : 'cheer'}
+          outfit={troll.outfit}
+          size={112}
+          className="done-tusse"
+        />
       </div>
       <h1 id="result-heading" ref={headingRef} tabIndex={-1} className="reveal" style={step(0)}>
         {heading}
       </h1>
       <div className="reveal result-score" style={ringStep}>
         <ScoreRing score={score} total={total} />
-        <p>{t('doneBody', { score, total })}</p>
+        <p data-testid="score-line">
+          {t(
+            tone === 'strong' ? 'doneBodyStrong' : tone === 'tough' ? 'doneBodyTough' : 'doneBody',
+            {
+              score,
+              total,
+            },
+          )}
+        </p>
       </div>
       {(bestRun >= 3 || extra) && (
         <div className="reveal result-extras" style={extrasStep}>
@@ -200,7 +224,7 @@ export function SessionResult({
                 <h2 id={`earned-${id}`}>{t(`got_${id}`, { name: trollAfter.name })}</h2>
                 <p className="muted small">
                   {'level' in item.unlock
-                    ? t('earnedForLevel', { level: item.unlock.level })
+                    ? t('earnedForLevel', { level: item.unlock.level, n: MASTERY_ANSWERS })
                     : t('earnedForStreak', { n: item.unlock.streak })}{' '}
                   <a href={wardrobeHref}>{t('changeOutfit')}</a>
                 </p>
