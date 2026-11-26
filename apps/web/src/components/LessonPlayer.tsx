@@ -287,7 +287,11 @@ export function LessonPlayer({
   );
 }
 
-/** The lesson text with familiar words and look-alikes marked. */
+/**
+ * The lesson text. Look-alikes are always marked, since misreading one changes the meaning.
+ * Familiar words carry a class but no tint until the learner opens "Words you probably know",
+ * so the paragraph reads as a text, not a heat map.
+ */
 function ReadingText({
   text,
   segments,
@@ -308,10 +312,14 @@ function ReadingText({
   const body = (
     <p className="reading-text" lang="nb">
       {segments.map((segment, i) =>
-        segment.word ? (
-          <mark key={i} className={segment.word.kind}>
+        segment.word?.kind === 'false-friend' ? (
+          <mark key={i} className="false-friend">
             {segment.text}
           </mark>
+        ) : segment.word ? (
+          <span key={i} className="cognate">
+            {segment.text}
+          </span>
         ) : (
           segment.text
         ),
@@ -359,7 +367,7 @@ function Glossaries({ segments }: { segments: Segment[] }) {
   return (
     <>
       {cognates.length > 0 && (
-        <details className="glossary" aria-label={t('knownWords')}>
+        <details className="glossary glossary-cognates" aria-label={t('knownWords')}>
           <summary>
             <h2>{t('knownWords')}</h2> <span className="muted">({cognates.length})</span>
           </summary>
