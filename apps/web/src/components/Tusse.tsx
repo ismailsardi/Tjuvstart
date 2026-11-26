@@ -1,4 +1,5 @@
-import { useState, type ComponentProps, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ComponentProps, type ReactNode } from 'react';
+import type { TusseRig } from './tusse/rig';
 import type { Outfit } from './outfits';
 
 /**
@@ -648,24 +649,34 @@ export function DrawnTusse({
   );
 }
 
-/** Which illustrated pose each pose shows. The rest pose uses the friendly wave. */
-const ART_FOR_POSE: Record<TussePose, string> = {
-  rest: 'wave',
-  wave: 'wave',
-  thumbs: 'thumbs',
-  shrug: 'shrug',
-  cheer: 'cheer',
-  coffee: 'coffee',
-  sleep: 'sleep',
-};
-
 function artUrl(pose: TussePose): string {
-  return `${import.meta.env.BASE_URL}troll/tusse-${ART_FOR_POSE[pose]}.webp`;
+  return `${import.meta.env.BASE_URL}troll/tusse-${pose}.webp`;
+}
+
+let rigSupport: boolean | undefined;
+/** The rig needs WebGL2 and motion. Checked once. */
+function canRig(): boolean {
+  if (rigSupport === undefined) {
+    try {
+      rigSupport =
+        !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches &&
+        typeof WebGL2RenderingContext !== 'undefined' &&
+        !!document.createElement('canvas').getContext('webgl2');
+    } catch {
+      rigSupport = false;
+    }
+  }
+  return rigSupport;
 }
 
 /**
- * Tusse as the learner sees it: the illustrated troll (rendered stills in public/troll/, one per
- * pose, drawn in the same 200 × 220 box), with a CSS idle bounce and a hop on tap.
+ * Tusse as the learner sees it: the illustrated troll, one rendered pose per state, in the same
+ * 200 × 220 box as the drawing.
+ *
+ * Where the device can, the pose is animated by the rig (tusse/rig.ts, loaded on demand): it
+ * breathes, blinks, looks around and at the pointer, and each pose plays its own act. Until the rig
+ * is ready, and on devices without WebGL2 or with reduced motion, the still is shown with a CSS
+ * idle bounce and a hop on tap.
  *
  * The illustrations have no outfit pieces yet, so while the learner wears any item the drawn troll
  * is shown instead and their earned clothes stay visible. The coffee pose brings its own rock.
@@ -673,7 +684,9 @@ function artUrl(pose: TussePose): string {
 export function Tusse(props: ComponentProps<typeof DrawnTusse>) {
   const { pose = 'rest', outfit = {}, size = 96, idle = true, className } = props;
   const [hopping, setHopping] = useState(false);
+  const [rigged] = useState(() => idle && canRig());
   if (Object.values(outfit).some(Boolean)) return <DrawnTusse {...props} />;
+  if (rigged && idle) return <RiggedTusse pose={pose} size={size} className={className} />;
   return (
     <img
       src={artUrl(pose)}
@@ -698,5 +711,79 @@ export function Tusse(props: ComponentProps<typeof DrawnTusse>) {
         if (e.animationName === 'tusse-hop') setHopping(false);
       }}
     />
+  );
+}
+
+/**
+ * The animated troll. The canvas is larger than the troll's box (room for hops and raised arms)
+ * and centred on it the same way the rig centres the art, so the troll lands exactly where the
+ * still was. The still stays underneath until the first frame is drawn, and for good if the rig
+ * fails to load.
+ */
+function RiggedTusse({
+  pose,
+  size,
+  className,
+}: {
+  pose: TussePose;
+  size: number;
+  className?: string;
+}) {
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const rig = useRef<TusseRig | null>(null);
+  const latest = useRef(pose);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const el = canvas.current;
+    if (!el) return;
+    import('./tusse/rig')
+      .then(({ createTusseRig }) => createTusseRig(el, latest.current, import.meta.env.BASE_URL))
+      .then((r) => {
+        if (cancelled) return r.dispose();
+        rig.current = r;
+        r.setPose(latest.current);
+        setReady(true);
+      })
+      .catch(() => {
+        // The still stays.
+      });
+    return () => {
+      cancelled = true;
+      rig.current?.dispose();
+      rig.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    latest.current = pose;
+    rig.current?.setPose(pose);
+  }, [pose]);
+
+  const height = (size * 220) / 200;
+  // The rig draws its 400 × 440 art inside a 440 × 484 canvas, 20 units in from the left and 40
+  // from the top.
+  const cw = size * 1.1;
+  const ch = height * 1.1;
+  const dpr = Math.min(typeof devicePixelRatio === 'number' ? devicePixelRatio : 1, 2.5);
+  return (
+    <span
+      className={['tusse', 'tusse-rig', `tusse-${pose}`, ready && 'tusse-rig-ready', className]
+        .filter(Boolean)
+        .join(' ')}
+      style={{ width: size, height }}
+      aria-hidden="true"
+      // A tap is only for fun: it changes nothing, so there's no keyboard or screen reader equivalent.
+      onPointerDown={() => rig.current?.tap()}
+    >
+      <img src={artUrl(pose)} alt="" draggable={false} width={size} height={height} />
+      <canvas
+        ref={canvas}
+        width={Math.round(cw * dpr)}
+        height={Math.round(ch * dpr)}
+        style={{ width: cw, height: ch, left: -size * 0.05, top: -height * (40 / 440) }}
+      />
+    </span>
   );
 }
