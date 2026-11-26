@@ -315,6 +315,212 @@
       "gender": "en",
       "forms": ["kortmaskin", "kortmaskinen", "kortmaskiner", "kortmaskinene"],
       "example": "Jeg kommer med kortmaskinen."
+    },
+    {
+      "id": "tann",
+      "nb": "tann",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["tann", "tanna", "tannen", "tenner", "tennene"],
+      "example": "Jeg har vondt i en tann."
+    },
+    {
+      "id": "tannlege",
+      "nb": "tannlege",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tannlege", "tannlegen", "tannleger", "tannlegene"],
+      "example": "Jeg skal til tannlegen i morgen."
+    },
+    {
+      "id": "resepsjonist",
+      "nb": "resepsjonist",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["resepsjonist", "resepsjonisten", "resepsjonister", "resepsjonistene"],
+      "example": "Resepsjonisten svarer i telefonen."
+    },
+    {
+      "id": "hit",
+      "nb": "hit",
+      "pos": "adverb",
+      "forms": ["hit"],
+      "example": "Når flyttet du hit?"
+    },
+    {
+      "id": "kinn",
+      "nb": "kinn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kinn", "kinna", "kinner", "kinnet", "kinnene"],
+      "example": "Kinnet er hovent."
+    },
+    {
+      "id": "hoven",
+      "nb": "hoven",
+      "pos": "adjective",
+      "forms": ["hoven", "hovne", "hovent"],
+      "example": "Foten min er hoven."
+    },
+    {
+      "id": "kvart",
+      "nb": "kvart",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kvart", "kvarten"],
+      "example": "Klokka er kvart over ni."
+    },
+    {
+      "id": "undersokelse",
+      "nb": "undersøkelse",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["undersøkelse", "undersøkelsen", "undersøkelser", "undersøkelsene"],
+      "example": "Undersøkelsen tar en halv time."
+    },
+    {
+      "id": "behandling",
+      "nb": "behandling",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["behandling", "behandlinga", "behandlingen", "behandlinger", "behandlingene"],
+      "example": "Behandlingen koster mye."
+    },
+    {
+      "id": "voksen",
+      "nb": "voksen",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["voksen", "voksne"],
+      "example": "Voksne betaler selv."
+    },
+    {
+      "id": "flytting",
+      "nb": "flytting",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["flytting", "flyttinga", "flyttingen", "flyttinger", "flyttingene"],
+      "example": "Flyttingen gikk bra."
+    },
+    {
+      "id": "flyttemelding",
+      "nb": "flyttemelding",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": [
+        "flyttemelding",
+        "flyttemeldinga",
+        "flyttemeldingen",
+        "flyttemeldinger",
+        "flyttemeldingene"
+      ],
+      "example": "Har du sendt flyttemeldingen?"
+    },
+    {
+      "id": "folkeregister",
+      "nb": "folkeregister",
+      "pos": "noun",
+      "gender": "et",
+      "forms": [
+        "folkeregister",
+        "folkeregistra",
+        "folkeregistre",
+        "folkeregistret",
+        "folkeregisteret",
+        "folkeregistrene"
+      ],
+      "example": "Adressen din står i Folkeregisteret."
+    },
+    {
+      "id": "skilt",
+      "nb": "skilt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skilt", "skilta", "skilter", "skiltet", "skiltene"],
+      "example": "Det står på skiltet."
+    },
+    {
+      "id": "leiekontrakt",
+      "nb": "leiekontrakt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["leiekontrakt", "leiekontrakten", "leiekontrakter", "leiekontraktene"],
+      "example": "Har du skrevet under leiekontrakten?"
+    },
+    {
+      "id": "arbeidsgiver",
+      "nb": "arbeidsgiver",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["arbeidsgiver", "arbeidsgivere", "arbeidsgiveren", "arbeidsgiverne"],
+      "example": "Arbeidsgiveren betaler lønnen."
+    },
+    {
+      "id": "postkasse",
+      "nb": "postkasse",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["postkasse", "postkassa", "postkassen", "postkasser", "postkassene"],
+      "example": "Det ligger et brev i postkassen."
+    },
+    {
+      "id": "abonnement",
+      "nb": "abonnement",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["abonnement", "abonnementa", "abonnementer", "abonnementet", "abonnementene"],
+      "example": "Jeg vil si opp abonnementet."
+    },
+    {
+      "id": "tale",
+      "nb": "tale",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["tale", "talen", "taler", "talene"],
+      "example": "Abonnementet har fri tale."
+    },
+    {
+      "id": "bindingstid",
+      "nb": "bindingstid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["bindingstid", "bindingstida", "bindingstiden", "bindingstider", "bindingstidene"],
+      "example": "Det er ingen bindingstid."
+    },
+    {
+      "id": "bytte",
+      "nb": "bytte",
+      "pos": "verb",
+      "forms": ["bytte", "bytta", "bytter", "byttet"],
+      "example": "Jeg vil bytte abonnement."
+    },
+    {
+      "id": "beholde",
+      "nb": "beholde",
+      "pos": "verb",
+      "forms": ["beholde", "beholdt", "beholder"],
+      "example": "Kan jeg beholde nummeret?"
+    },
+    {
+      "id": "bruksenhetsnummer",
+      "nb": "bruksenhetsnummer",
+      "pos": "noun",
+      "gender": "et",
+      "forms": [
+        "bruksenhetsnummer",
+        "bruksenhetsnummeret",
+        "bruksenhetsnumre",
+        "bruksenhetsnumrene"
+      ],
+      "example": "Bruksenhetsnummeret står på døra."
+    },
+    {
+      "id": "mobilabonnement",
+      "nb": "mobilabonnement",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["mobilabonnement", "mobilabonnementet", "mobilabonnementer", "mobilabonnementene"],
+      "example": "Hvor mye koster mobilabonnementet?"
     }
   ]
 }

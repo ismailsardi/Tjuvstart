@@ -414,6 +414,12 @@
       "title": "stor, stort, store",
       "body": "L’adjectif s’accorde avec le nom : en stor sofa, ei stor seng, et stort hus (-t avec et), store hus (-e au pluriel). Après den, det, de ou un possessif, il prend -e et le nom garde aussi sa terminaison : den store sofaen, det store huset, min nye kollega.",
       "lessons": ["a2-new-colleague", "a2-recycling", "b1-complaint"]
+    },
+    {
+      "id": "definite-ending",
+      "title": "en tann, tanna : la forme définie",
+      "body": "Le norvégien met l’article défini à la fin du nom : en tann → tannen ou tanna, et kort → kortet, tenner → tennene. Avec un adjectif, il faut en plus den ou det devant : den nye adressen, det nye kortet.",
+      "lessons": ["a2-dentist", "a2-phone-plan", "a2-moving-notice"]
     }
   ],
   "itemNotes": {
@@ -510,7 +516,13 @@
     "a2-akutt-01": "113 ambulance, 110 pompiers, 112 police. 116 117, c’est la permanence médicale quand ce n’est pas une urgence vitale.",
     "a2-kilde-05": "L’adjectif prend -e au pluriel : en grønn pose, grønne poser.",
     "a2-rest-05": "On dit « allergisk mot » ; on entend aussi « allergisk for ».",
-    "a1-meg-08": "Pour l’âge, on dit « er » (être), pas « har » : « Jeg er 34 år »."
+    "a1-meg-08": "Pour l’âge, on dit « er » (être), pas « har » : « Jeg er 34 år ».",
+    "a2-tann-06": "Quand on reparle d’une chose déjà nommée, on prend la forme définie : en tann → tanna (ou tannen).",
+    "a2-mob-05": "« abonnement » est un mot en et : et abonnement, abonnementet. Apprends en/ei/et avec chaque nom.",
+    "b1-jb-05": "« glede seg til » = avoir hâte de : jeg gleder meg, vi gleder oss.",
+    "b1-perm-04": "49 semaines : 3 avant la naissance, 15 pour chaque parent et 16 à partager.",
+    "b1-stoy-06": "« si fra » (ou « si ifra ») = prévenir, signaler. Très courant au travail comme à la maison.",
+    "b1-jul-05": "Après « den », « det » ou « de », le superlatif prend -e : den største høytiden."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lisez le récit du premier jour de Sara dans son nouveau travail et entraînez-vous avec les mots et les phrases utiles au travail.",
@@ -563,7 +575,14 @@
     "a2-restaurant": "Suivre un repas au restaurant : la réservation, les boissons, une question sur une allergie, la commande et le partage de l’addition.",
     "a2-new-colleague": "Lire un message de bienvenue pour une nouvelle collègue : son physique, son caractère et ses loisirs. S’entraîner aux terminaisons des adjectifs : stor, stort, store et den nye kollegaen.",
     "a1-about-me": "Lire un formulaire rempli et un petit texte sur Maria : nom, âge, pays, adresse, métier et langues. Puis écrire la même chose sur toi.",
-    "a1-signs": "Lire les panneaux de tous les jours : ouvert et fermé, entrée et sortie, poussez et tirez, toilettes, interdit de fumer, offres et horaires d’ouverture."
+    "a1-signs": "Lire les panneaux de tous les jours : ouvert et fermé, entrée et sortie, poussez et tirez, toilettes, interdit de fumer, offres et horaires d’ouverture.",
+    "a2-dentist": "Prendre rendez-vous chez le dentiste au téléphone : dire où on a mal, trouver un horaire et demander le prix. En Norvège, les adultes paient eux-mêmes le dentiste.",
+    "a2-moving-notice": "Lire comment déclarer un déménagement au registre national : le délai de huit jours, ce qu’il faut, et qui d’autre prévenir de ta nouvelle adresse.",
+    "a2-phone-plan": "Lire une publicité pour un forfait mobile : prix, données, sans engagement, garder son numéro et la nouvelle carte SIM. S’entraîner à en et et, et à la forme définie.",
+    "b1-christmas-party": "Lire l’invitation au repas de Noël du bureau : date et lieu, plats traditionnels, ce que paie l’entreprise, la tenue et le programme après le dîner.",
+    "b1-parental-leave": "Lire comment fonctionne le congé parental : qui y a droit, 49 semaines à plein salaire ou 59 à 80 pour cent, les semaines réservées à chaque parent et quand faire la demande. S’entraîner à parler de projets.",
+    "b1-noise-complaint": "Lire la plainte polie d’une voisine à propos du bruit la nuit, et la réponse. Apprendre à se plaindre sans créer de conflit, puis à s’excuser et à promettre de changer.",
+    "b1-christmas": "Lire un texte sur Noël en Norvège : les lumières dès novembre, le réveillon du 24 comme grand jour, les cloches à cinq heures, ribbe ou pinnekjøtt, l’amande dans le riz au lait et la « romjul »."
   },
   "trackSummaries": {
     "first-weeks": "Les situations de vos premières semaines : le premier jour de travail, la carte d’imposition, BankID, la location, le médecin et le déjeuner avec les collègues.",
@@ -571,9 +590,9 @@
     "from-zero": "Partir de zéro : les lettres et les sons du norvégien, dire bonjour et se présenter, les nombres et les prix, le magasin, les panneaux dans la rue, le café et l’heure.",
     "towards-b1": "L’étape suivante : raconter ce qu’on a fait, écrire à son propriétaire, un compte rendu de réunion, l’entretien annuel, une lettre de la crèche et un texte d’actualité sur Pâques.",
     "everyday-oslo": "Les démarches et la vie sociale au quotidien : la pharmacie, un colis à retirer, la météo et les vêtements, une invitation à dîner, un rendez-vous chez le coiffeur et un entretien d’embauche.",
-    "working-life": "La vie au travail au niveau B1 : le contrat, la fiche de paie et l’indemnité de congés, donner son avis en réunion, les règles de sécurité, demander des congés et gérer un client mécontent.",
-    "society-b1": "La société norvégienne au niveau B1 : la déclaration d’impôts, la réunion de parents, une réclamation pour un produit défectueux, une info sur le prix de l’électricité, le 17 mai et le droit d’accès à la nature.",
-    "more-everyday": "Encore plus de vie quotidienne : numéros d’urgence et permanence médicale, tri des déchets, messages aux collègues, restaurant avec une allergie et description d’une nouvelle collègue."
+    "working-life": "La vie au travail au niveau B1 : le contrat, la fiche de paie et l’indemnité de congés, donner son avis en réunion, les règles de sécurité, demander des congés, gérer un client mécontent et le repas de Noël du bureau.",
+    "society-b1": "La société norvégienne au niveau B1 : la déclaration d’impôts, la réunion de parents, le congé parental, un voisin bruyant, une réclamation, le prix de l’électricité aux infos, le 17 mai, le droit d’accès à la nature et Noël.",
+    "more-everyday": "Encore plus de vie quotidienne : urgences, tri des déchets, messages aux collègues, restaurant avec une allergie, une nouvelle collègue, le dentiste, déclarer un déménagement et un nouveau forfait mobile."
   },
   "canDo": {
     "A1-R-01": "Je peux reconnaître des mots, des noms et des nombres familiers sur des panneaux, des étiquettes et des prix.",
@@ -3668,6 +3687,210 @@
     },
     "kortmaskin": {
       "meaning": "terminal de paiement"
+    },
+    "tann": {
+      "meaning": "dent"
+    },
+    "tannlege": {
+      "meaning": "dentiste"
+    },
+    "resepsjonist": {
+      "meaning": "réceptionniste"
+    },
+    "hit": {
+      "meaning": "ici (vers ici)"
+    },
+    "kinn": {
+      "meaning": "joue"
+    },
+    "hoven": {
+      "meaning": "enflé"
+    },
+    "kvart": {
+      "meaning": "quart"
+    },
+    "undersokelse": {
+      "meaning": "examen"
+    },
+    "behandling": {
+      "meaning": "traitement"
+    },
+    "voksen": {
+      "meaning": "adulte"
+    },
+    "flytting": {
+      "meaning": "déménagement"
+    },
+    "flyttemelding": {
+      "meaning": "déclaration de déménagement"
+    },
+    "folkeregister": {
+      "meaning": "registre national de la population"
+    },
+    "skilt": {
+      "meaning": "panneau"
+    },
+    "leiekontrakt": {
+      "meaning": "bail"
+    },
+    "arbeidsgiver": {
+      "meaning": "employeur"
+    },
+    "postkasse": {
+      "meaning": "boîte aux lettres"
+    },
+    "abonnement": {
+      "meaning": "abonnement"
+    },
+    "tale": {
+      "meaning": "appels ; discours"
+    },
+    "bindingstid": {
+      "meaning": "durée d’engagement"
+    },
+    "bytte": {
+      "meaning": "changer"
+    },
+    "beholde": {
+      "meaning": "garder"
+    },
+    "julebord": {
+      "meaning": "repas de Noël d’entreprise"
+    },
+    "fest": {
+      "meaning": "fête"
+    },
+    "tradisjonell": {
+      "meaning": "traditionnel"
+    },
+    "julemat": {
+      "meaning": "plats de Noël"
+    },
+    "ribbe": {
+      "meaning": "poitrine de porc rôtie"
+    },
+    "pinnekjott": {
+      "meaning": "côtes d’agneau séchées"
+    },
+    "kjott": {
+      "meaning": "viande"
+    },
+    "grei": {
+      "meaning": "correct, bien"
+    },
+    "pynte": {
+      "meaning": "décorer ; se faire beau"
+    },
+    "kleskode": {
+      "meaning": "code vestimentaire"
+    },
+    "quiz": {
+      "meaning": "quiz"
+    },
+    "dans": {
+      "meaning": "danse"
+    },
+    "sosialkomite": {
+      "meaning": "comité des fêtes"
+    },
+    "foreldrepermisjon": {
+      "meaning": "congé parental"
+    },
+    "permisjon": {
+      "meaning": "congé"
+    },
+    "foreldrepenger": {
+      "meaning": "indemnités de congé parental"
+    },
+    "grense": {
+      "meaning": "limite ; frontière"
+    },
+    "ovre": {
+      "meaning": "supérieur"
+    },
+    "rest": {
+      "meaning": "reste"
+    },
+    "fodsel": {
+      "meaning": "naissance, accouchement"
+    },
+    "helst": {
+      "meaning": "de préférence"
+    },
+    "brak": {
+      "meaning": "bruit, tapage"
+    },
+    "sove": {
+      "meaning": "dormir"
+    },
+    "skru": {
+      "meaning": "tourner (le bouton)"
+    },
+    "avslutte": {
+      "meaning": "terminer"
+    },
+    "hoytid": {
+      "meaning": "fête, grande fête"
+    },
+    "henge": {
+      "meaning": "accrocher"
+    },
+    "julelys": {
+      "meaning": "lumières de Noël"
+    },
+    "vindu": {
+      "meaning": "fenêtre"
+    },
+    "julaften": {
+      "meaning": "réveillon de Noël, 24 décembre"
+    },
+    "stenge": {
+      "meaning": "fermer"
+    },
+    "kirkeklokke": {
+      "meaning": "cloche d’église"
+    },
+    "julemiddag": {
+      "meaning": "repas de Noël"
+    },
+    "gave": {
+      "meaning": "cadeau"
+    },
+    "juletre": {
+      "meaning": "sapin de Noël"
+    },
+    "riskrem": {
+      "meaning": "riz au lait à la crème"
+    },
+    "mandel": {
+      "meaning": "amande"
+    },
+    "marsipangris": {
+      "meaning": "cochon en pâte d’amande"
+    },
+    "romjul": {
+      "meaning": "période entre Noël et le Nouvel An"
+    },
+    "nyttar": {
+      "meaning": "Nouvel An"
+    },
+    "man": {
+      "meaning": "on"
+    },
+    "bruksenhetsnummer": {
+      "meaning": "numéro de logement"
+    },
+    "mobilabonnement": {
+      "meaning": "forfait mobile"
+    },
+    "vegetarrett": {
+      "meaning": "plat végétarien"
+    },
+    "siste": {
+      "meaning": "dernier"
+    },
+    "husordensregel": {
+      "meaning": "règlement intérieur"
     }
   }
 }

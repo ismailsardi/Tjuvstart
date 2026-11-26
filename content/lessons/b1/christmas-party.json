@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-christmas-party",
+  "level": "B1",
+  "title": "Julebord",
+  "summary": "Read the invitation to the office Christmas party: date and place, traditional food, what the company pays, the dress code and what happens after dinner.",
+  "review": "pending",
+  "document": {
+    "kind": "letter",
+    "from": "Sosialkomiteen"
+  },
+  "text": "Hei alle sammen!\nDet er snart tid for årets julebord. Vi møtes fredag 6. desember klokka 19 på Restaurant Fjellstua. Det blir tradisjonell julemat: ribbe, pinnekjøtt eller en vegetarrett. Gi beskjed innen 20. november hvis du har allergier eller ikke spiser kjøtt.\nFirmaet betaler maten og to glass drikke. Det er helt greit å drikke alkoholfritt, og vi har god alkoholfri drikke.\nDu kan gjerne pynte deg litt, men det er ingen kleskode. Etter middagen blir det quiz og dans.\nVi gleder oss til å se dere!\nHilsen sosialkomiteen",
+  "items": [
+    {
+      "id": "b1-jb-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva er et julebord?",
+      "options": [
+        "En fest med julemat for kollegaer",
+        "Et møte om budsjettet",
+        "En gave fra sjefen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva må du gjøre innen 20. november?",
+      "options": [
+        "Si fra om allergier eller hvis du ikke spiser kjøtt",
+        "Betale for maten",
+        "Kjøpe en gave til en kollega"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva betaler firmaet?",
+      "options": ["Maten og to glass drikke", "Alt du drikker", "Taxi hjem"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1300,
+      "prompt": "Hva skal du ha på deg?",
+      "options": ["Litt pene klær, men det er ingen kleskode", "Dress og slips", "Arbeidsklær"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["reflexive"],
+      "difficulty": 1200,
+      "prompt": "Vi gleder ___ til å se dere!",
+      "answers": ["oss"]
+    },
+    {
+      "id": "b1-jb-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["future"],
+      "difficulty": 1200,
+      "prompt": "Etter middagen ___ det quiz og dans.",
+      "answers": ["blir"]
+    },
+    {
+      "id": "b1-jb-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1250,
+      "prompt": "Det er helt ___ å drikke alkoholfritt.",
+      "answers": ["greit", "ok", "i orden", "fint"]
+    },
+    {
+      "id": "b1-jb-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause", "ikke-placement"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["Gi beskjed", "hvis", "du", "ikke", "spiser", "kjøtt"],
+      "answer": "Gi beskjed hvis du ikke spiser kjøtt"
+    },
+    {
+      "id": "b1-jb-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Etter middagen", "blir", "det", "quiz og dans"],
+      "answer": "Etter middagen blir det quiz og dans"
+    },
+    {
+      "id": "b1-jb-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor må personen gå tidlig?",
+      "audio": "Takk for invitasjonen! Jeg kommer gjerne, men jeg må gå litt tidlig, for jeg skal hente datteren min klokka elleve.",
+      "options": ["Hun skal hente datteren sin", "Hun er syk", "Hun skal jobbe dagen etter"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hva vil personen drikke?",
+      "audio": "Jeg tar pinnekjøtt, takk. Og så vil jeg gjerne ha en alkoholfri gløgg.",
+      "options": ["Alkoholfri gløgg", "Rødvin", "Øl"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jb-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Vi gleder oss til å se dere."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-phone-plan",
+  "level": "A2",
+  "title": "Nytt mobilabonnement",
+  "summary": "Read an ad for a mobile plan: price, data, no lock-in period, keeping your number and the new SIM card. Practise en and et, and the definite form.",
+  "review": "pending",
+  "document": {
+    "kind": "ad",
+    "from": "Fjordnett"
+  },
+  "text": "Mobilabonnement Fri\nFri tale og SMS i Norge og EU\n20 GB data hver måned\nData du ikke bruker, blir med til neste måned\n349 kroner i måneden\nIngen bindingstid\nDu kan bytte abonnement når du vil, og du kan beholde nummeret ditt når du kommer fra et annet selskap. Det nye SIM-kortet kommer i posten innen tre dager.",
+  "items": [
+    {
+      "id": "a2-mob-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 950,
+      "prompt": "Hva koster abonnementet?",
+      "options": ["349 kroner i måneden", "349 kroner i året", "20 kroner i måneden"],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1000,
+      "prompt": "Hvor mye data får du?",
+      "options": ["20 GB hver måned", "Fri bruk av data", "2 GB hver måned"],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva betyr «ingen bindingstid»?",
+      "options": [
+        "Du kan si opp når du vil",
+        "Du må ha abonnementet i ett år",
+        "Abonnementet er gratis"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hva skjer med data du ikke bruker?",
+      "options": ["Den blir med til neste måned", "Du får penger tilbake", "Den forsvinner"],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["noun-gender"],
+      "difficulty": 1000,
+      "prompt": "Jeg vil ha ___ nytt abonnement.",
+      "answers": ["et"]
+    },
+    {
+      "id": "a2-mob-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["definite-form"],
+      "difficulty": 1100,
+      "prompt": "Jeg har fått et nytt SIM-kort. ___ kom i posten i går.",
+      "answers": ["Kortet", "SIM-kortet", "Det"]
+    },
+    {
+      "id": "a2-mob-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 1000,
+      "prompt": "Kan jeg ___ nummeret mitt?",
+      "answers": ["beholde", "få beholde"]
+    },
+    {
+      "id": "a2-mob-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["modal-verbs", "comparison"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "vil", "bytte", "til", "et billigere abonnement"],
+      "answer": "Jeg vil bytte til et billigere abonnement"
+    },
+    {
+      "id": "a2-mob-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "tokens": ["Det nye", "SIM-kortet", "kommer", "innen", "tre dager"],
+      "answer": "Det nye SIM-kortet kommer innen tre dager"
+    },
+    {
+      "id": "a2-mob-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hva skjer på fredag?",
+      "audio": "Hei, abonnementet ditt er bestilt. Nummeret ditt blir flyttet på fredag. Da virker ikke det gamle SIM-kortet lenger.",
+      "options": ["Nummeret blir flyttet", "Du får en regning", "Abonnementet stopper"],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hva sier meldingen?",
+      "audio": "Du har brukt åtti prosent av dataen din denne måneden.",
+      "options": [
+        "Du har brukt mesteparten av dataen",
+        "Du har ingen data igjen",
+        "Du har fått mer data"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-mob-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil beholde nummeret mitt."
+    }
+  ]
+}

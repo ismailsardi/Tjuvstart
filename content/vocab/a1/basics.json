@@ -309,7 +309,7 @@
       "id": "viktig",
       "nb": "viktig",
       "pos": "adjective",
-      "forms": ["viktig", "viktige"],
+      "forms": ["viktig", "viktige", "viktigst", "viktigste"],
       "example": "Viktig informasjon!"
     },
     {
@@ -819,7 +819,7 @@
       "nb": "lørdag",
       "pos": "noun",
       "gender": "en",
-      "forms": ["lørdag", "lørdagen"],
+      "forms": ["lørdag", "lørdagen", "lørdager"],
       "example": "Vi gikk på ski hele lørdagen."
     },
     {
@@ -975,7 +975,7 @@
       "nb": "år",
       "pos": "noun",
       "gender": "et",
-      "forms": ["år", "året", "årene"],
+      "forms": ["år", "året", "årene", "årets"],
       "example": "Sykkelen er tre år gammel."
     },
     {

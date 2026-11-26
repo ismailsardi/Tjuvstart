@@ -406,6 +406,12 @@
       "title": "stor, stort, store",
       "body": "An adjective changes with the noun: en stor sofa, ei stor seng, et stort hus, store hus. After den, det, de or a possessive it takes -e, and the noun keeps its ending too: den store sofaen, det store huset, min nye kollega.",
       "lessons": ["a2-new-colleague", "a2-recycling", "b1-complaint"]
+    },
+    {
+      "id": "definite-ending",
+      "title": "en tann, tanna: the definite form",
+      "body": "Norwegian puts «the» at the end of the noun: en tann → tannen or tanna, et kort → kortet, tenner → tennene. With an adjective you also need den or det in front: den nye adressen, det nye kortet.",
+      "lessons": ["a2-dentist", "a2-phone-plan", "a2-moving-notice"]
     }
   ],
   "itemNotes": {
@@ -502,7 +508,13 @@
     "a2-akutt-01": "113 ambulance, 110 fire, 112 police. 116 117 is the emergency clinic when it is not life-threatening.",
     "a2-kilde-05": "Adjectives take -e in the plural: en grønn pose, grønne poser.",
     "a2-rest-05": "«allergisk mot» is the standard form; you will also hear «allergisk for».",
-    "a1-meg-08": "Age uses «er»: «Jeg er 34 år» (I am 34)."
+    "a1-meg-08": "Age uses «er»: «Jeg er 34 år» (I am 34).",
+    "a2-tann-06": "The second time you mention something, use the definite form: en tann → tanna (or tannen).",
+    "a2-mob-05": "«abonnement» is an et-word: et abonnement, abonnementet. Learn en/ei/et with each new noun.",
+    "b1-jb-05": "«glede seg til» = look forward to: jeg gleder meg, vi gleder oss.",
+    "b1-perm-04": "49 weeks: 3 before the birth, 15 for each parent, and 16 to share.",
+    "b1-stoy-06": "«si fra» (or «si ifra») = let someone know, speak up. Very common in Norwegian workplaces and homes.",
+    "b1-jul-05": "After «den», «det» or «de», the superlative takes -e: den største høytiden."
   },
   "canDo": {
     "A1-R-01": "I can recognise familiar words, names and numbers on signs, labels and price tags.",
@@ -3604,15 +3616,219 @@
     },
     "kortmaskin": {
       "meaning": "card machine"
+    },
+    "tann": {
+      "meaning": "tooth"
+    },
+    "tannlege": {
+      "meaning": "dentist"
+    },
+    "resepsjonist": {
+      "meaning": "receptionist"
+    },
+    "hit": {
+      "meaning": "here (to this place)"
+    },
+    "kinn": {
+      "meaning": "cheek"
+    },
+    "hoven": {
+      "meaning": "swollen"
+    },
+    "kvart": {
+      "meaning": "quarter"
+    },
+    "undersokelse": {
+      "meaning": "examination, check-up"
+    },
+    "behandling": {
+      "meaning": "treatment"
+    },
+    "voksen": {
+      "meaning": "adult"
+    },
+    "flytting": {
+      "meaning": "move, moving house"
+    },
+    "flyttemelding": {
+      "meaning": "notice of change of address"
+    },
+    "folkeregister": {
+      "meaning": "National Population Register"
+    },
+    "skilt": {
+      "meaning": "sign"
+    },
+    "leiekontrakt": {
+      "meaning": "tenancy agreement"
+    },
+    "arbeidsgiver": {
+      "meaning": "employer"
+    },
+    "postkasse": {
+      "meaning": "letterbox"
+    },
+    "abonnement": {
+      "meaning": "subscription"
+    },
+    "tale": {
+      "meaning": "calls; speech"
+    },
+    "bindingstid": {
+      "meaning": "lock-in period"
+    },
+    "bytte": {
+      "meaning": "change, switch"
+    },
+    "beholde": {
+      "meaning": "keep"
+    },
+    "julebord": {
+      "meaning": "office Christmas party"
+    },
+    "fest": {
+      "meaning": "party"
+    },
+    "tradisjonell": {
+      "meaning": "traditional"
+    },
+    "julemat": {
+      "meaning": "Christmas food"
+    },
+    "ribbe": {
+      "meaning": "roast pork belly"
+    },
+    "pinnekjott": {
+      "meaning": "cured lamb ribs"
+    },
+    "kjott": {
+      "meaning": "meat"
+    },
+    "grei": {
+      "meaning": "fine, OK; easy"
+    },
+    "pynte": {
+      "meaning": "decorate; dress up"
+    },
+    "kleskode": {
+      "meaning": "dress code"
+    },
+    "quiz": {
+      "meaning": "quiz"
+    },
+    "dans": {
+      "meaning": "dance, dancing"
+    },
+    "sosialkomite": {
+      "meaning": "social committee"
+    },
+    "foreldrepermisjon": {
+      "meaning": "parental leave"
+    },
+    "permisjon": {
+      "meaning": "leave (of absence)"
+    },
+    "foreldrepenger": {
+      "meaning": "parental benefit"
+    },
+    "grense": {
+      "meaning": "limit; border"
+    },
+    "ovre": {
+      "meaning": "upper"
+    },
+    "rest": {
+      "meaning": "rest, remainder"
+    },
+    "fodsel": {
+      "meaning": "birth"
+    },
+    "helst": {
+      "meaning": "preferably, rather"
+    },
+    "brak": {
+      "meaning": "noise; trouble"
+    },
+    "sove": {
+      "meaning": "sleep"
+    },
+    "skru": {
+      "meaning": "turn (a knob, a screw)"
+    },
+    "avslutte": {
+      "meaning": "end, finish"
+    },
+    "hoytid": {
+      "meaning": "holiday, festival"
+    },
+    "henge": {
+      "meaning": "hang"
+    },
+    "julelys": {
+      "meaning": "Christmas lights"
+    },
+    "vindu": {
+      "meaning": "window"
+    },
+    "julaften": {
+      "meaning": "Christmas Eve"
+    },
+    "stenge": {
+      "meaning": "close"
+    },
+    "kirkeklokke": {
+      "meaning": "church bell"
+    },
+    "julemiddag": {
+      "meaning": "Christmas dinner"
+    },
+    "gave": {
+      "meaning": "present, gift"
+    },
+    "juletre": {
+      "meaning": "Christmas tree"
+    },
+    "riskrem": {
+      "meaning": "rice cream (cold rice pudding)"
+    },
+    "mandel": {
+      "meaning": "almond"
+    },
+    "marsipangris": {
+      "meaning": "marzipan pig"
+    },
+    "romjul": {
+      "meaning": "days between Christmas and New Year"
+    },
+    "nyttar": {
+      "meaning": "New Year"
+    },
+    "man": {
+      "meaning": "one, you, people (in general)"
+    },
+    "bruksenhetsnummer": {
+      "meaning": "flat number (in the register)"
+    },
+    "mobilabonnement": {
+      "meaning": "mobile plan"
+    },
+    "vegetarrett": {
+      "meaning": "vegetarian dish"
+    },
+    "siste": {
+      "meaning": "last, latest"
+    },
+    "husordensregel": {
+      "meaning": "house rule"
     }
   },
   "trackSummaries": {
     "from-zero": "Start from zero: the letters and sounds of Norwegian, saying hello and who you are, numbers and prices, the shop, signs in the street, the café and telling the time.",
     "towards-b1": "The next step: talking about what you did, writing to your landlord, meeting minutes, a yearly review at work, a kindergarten letter and a news text about Easter.",
     "everyday-oslo": "Everyday errands and social life: the pharmacy, picking up a parcel, weather and clothes, a dinner invitation, booking a haircut and a job interview.",
-    "working-life": "Working life at B1: your contract, the payslip and holiday pay, giving your opinion in a meeting, safety rules, asking for holiday and handling an unhappy customer.",
-    "society-b1": "Norwegian society at B1: the tax return, a parent meeting at school, complaining about a faulty product, a news story about electricity prices, 17 May and the right to roam.",
-    "more-everyday": "More of daily life: emergency numbers and the emergency clinic, sorting rubbish, messages to colleagues, eating out with an allergy and describing a new colleague."
+    "working-life": "Working life at B1: your contract, the payslip and holiday pay, giving your opinion in a meeting, safety rules, asking for holiday, handling an unhappy customer and the office Christmas party.",
+    "society-b1": "Norwegian society at B1: the tax return, a parent meeting, parental leave, a noisy neighbour, a product complaint, electricity prices in the news, 17 May, the right to roam and Christmas.",
+    "more-everyday": "More of daily life: emergency numbers and the emergency clinic, sorting rubbish, messages to colleagues, eating out with an allergy, describing a new colleague, the dentist, reporting a move and a new mobile plan."
   },
   "lessonSummaries": {
     "a1-alphabet": "Meet the three extra letters æ, ø and å, hear how they differ from a, e and o, and write your first Norwegian words.",
@@ -3653,6 +3869,13 @@
     "a2-restaurant": "Follow a restaurant visit: the booking, drinks, asking about an allergy, ordering and splitting the bill.",
     "a2-new-colleague": "Read a welcome message about a new colleague: what she looks like, what she is like and what she does in her free time. Practise adjective endings: stor, stort, store and den nye kollegaen.",
     "a1-about-me": "Read a filled-in form and a short text about Maria: name, age, country, address, job and languages. Then write the same things about yourself.",
-    "a1-signs": "Read the signs you see every day: open and closed, entrance and exit, push and pull, toilet, no smoking, offers and opening hours."
+    "a1-signs": "Read the signs you see every day: open and closed, entrance and exit, push and pull, toilet, no smoking, offers and opening hours.",
+    "a2-dentist": "Book a dentist appointment on the phone: say where it hurts, find a time and ask what it costs. Adults in Norway pay the dentist themselves.",
+    "a2-moving-notice": "Read how to report a move to the National Registry: the eight-day deadline, what you need, and who else to tell about your new address.",
+    "a2-phone-plan": "Read an ad for a mobile plan: price, data, no lock-in period, keeping your number and the new SIM card. Practise en and et, and the definite form.",
+    "b1-christmas-party": "Read the invitation to the office Christmas party: date and place, traditional food, what the company pays, the dress code and what happens after dinner.",
+    "b1-parental-leave": "Read how parental leave works: who qualifies, 49 weeks at full pay or 59 at 80 percent, the weeks reserved for each parent, and when to apply. Practise talking about plans.",
+    "b1-noise-complaint": "Read a neighbour’s polite complaint about late-night noise and the reply. Learn how to complain without starting a conflict, and how to apologise and promise to change.",
+    "b1-christmas": "Read about Christmas in Norway: lights in November, Christmas Eve as the main day, church bells at five, ribbe or pinnekjøtt, the almond in the rice pudding and romjul."
   }
 }
