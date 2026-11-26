@@ -32,6 +32,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 - **Audio and shadowing:** every sentence and word card is recorded at build time with a neural Norwegian voice (Azure AI Speech free tier, with open-source Piper as fallback); learners listen at an adaptive speed, record themselves and compare.
 - **Native-language packs for English and French:** interface, tips, cognates, false friends and grammar contrasts in the learner's language.
 - **Optional AI practice:** role-play, writing feedback and fresh reading texts, called straight from the browser with the learner's own Anthropic key and structured outputs.
+- **iOS app shell:** the same app wrapped with Capacitor, with daily reminders scheduled on the device at the learner's chosen time. They skip days already practised and stop after a quiet week. See [native apps](docs/native.md).
 - **Accessible:** checked against WCAG 2.2 AA with axe-core on every screen in CI, plus keyboard tests and Lighthouse. See [accessibility](docs/accessibility.md).
 - **Zero running cost:** a local-first PWA on GitHub Pages. Progress stays in the browser (IndexedDB) and the app works offline.
 
@@ -46,6 +47,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 
 ```
 apps/web/          React + TypeScript PWA (Vite)
+apps/web/ios/      iOS app: Capacitor shell around the web build
 packages/engine/   Level rating and item selection, pure TypeScript
 content/           Lessons, word decks, tracks and language packs as JSON
 tools/ContentCli/  .NET 10 content validator, run in CI
@@ -79,6 +81,7 @@ Audio is optional for local development: without it, the app uses the browser's 
 - [Product specification](docs/spec.md)
 - [Architecture decision records](docs/adr/)
 - [Accessibility](docs/accessibility.md)
+- [Native apps (iOS)](docs/native.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## License
