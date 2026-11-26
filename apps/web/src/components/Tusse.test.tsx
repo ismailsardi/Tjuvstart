@@ -22,9 +22,9 @@ describe('Tusse', () => {
     expect(img.getAttribute('aria-hidden')).toBe('true');
   });
 
-  it('uses the wave for the rest pose', () => {
+  it('has a still for the rest pose, hands on hips', () => {
     const { container } = render(<Tusse pose="rest" />);
-    expect(art(container).getAttribute('src')).toMatch(/tusse-wave\.webp$/);
+    expect(art(container).getAttribute('src')).toMatch(/tusse-rest\.webp$/);
   });
 
   it('idles, can be kept still, and hops on a tap', () => {

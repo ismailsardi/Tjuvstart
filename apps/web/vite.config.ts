@@ -91,6 +91,7 @@ export default defineConfig({
         // The AI SDK is only useful online, so it is fetched on first use instead of at install.
         // The same goes for the 3D troll (three.js and the model), which only some screens show.
         // The troll's pose stills (troll/*.webp) are small and on most screens, so they are kept.
+        // Its full-size animation art (troll/rig/) is fetched per pose when first shown.
         globPatterns: ['**/*.{js,wasm,css,html}', 'troll/*.webp'],
         globIgnores: ['audio/**', 'assets/sdk-*.js', 'assets/trollScene-*.js', 'troll/*.glb'],
         runtimeCaching: [
@@ -104,6 +105,12 @@ export default defineConfig({
               rangeRequests: true,
               cacheableResponse: { statuses: [0, 200] },
             },
+          },
+          {
+            // The animated troll's art, one pose at a time, kept once fetched.
+            urlPattern: ({ url }) => url.pathname.includes('/troll/rig/'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'troll-rig', cacheableResponse: { statuses: [0, 200] } },
           },
           {
             // The Inter font files are fetched on first use and then kept for offline use.
