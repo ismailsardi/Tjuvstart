@@ -14,7 +14,7 @@ Rewards for streaks sit close to what [ADR 0012](0012-motivation-without-points.
 - The learner names the troll as the last onboarding question, with Tusse filled in. The name can be changed later from Me, on the troll's own page (`#/troll`). A blank name falls back to Tusse.
 - The troll has a wardrobe of eight items in six slots (head, eyes, neck, body, feet, back). The learner picks what it wears per slot, or nothing. A slot they never touched wears the latest item earned for it, so new clothes go on by themselves.
 - Items come two ways, and both only add:
-  - by level: the helmet at A2 and the lusekofte at B1, as before;
+  - by level: the helmet at A2 and the lusekofte at B1, as before (the sweater was later restyled as a classic Marius sweater);
   - by streak milestones: a knitted scarf at 3 days, a lue at 7, round glasses at 14, wool slippers at 30, an anorak at 60 and a northern lights cape at 100.
 - Streak items follow the **longest** streak ever (same forgiving rule as the current streak), not the current one. The longest streak and the highest level are also stored on the profile, so a broken streak, a lower rating or a later change of daily goal never takes anything back.
 - New items are announced on the session result, next to the other progress, with a link to change the outfit. Nothing nags: no countdowns, no "you'll lose it" wording.

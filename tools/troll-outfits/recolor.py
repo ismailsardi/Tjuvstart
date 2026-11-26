@@ -10,6 +10,8 @@ CREAM = hexrgb('#f7efe0')
 ORANGE = hexrgb('#ff7a3d')
 ORANGE_D = hexrgb('#e85f2c')
 AURORA = hexrgb('#8fd4ff')
+# The brand's deep orange stands in for the classic Marius red.
+MARIUS_RED = hexrgb('#e4532c')
 
 
 def poly_mask(shape, polys):
@@ -86,48 +88,91 @@ def bands(m, xx, yy, G, neck):
     return hem, cuff, collar
 
 
-def rose(x, y, size):
-    """An eight-point knitting star (the rose of a lusekofte), 1 inside."""
-    q = np.floor(np.abs(x) / size * 7 + 0.5)
-    r = np.floor(np.abs(y) / size * 7 + 0.5)
-    inside = (q + r <= 6) & ((q <= 2) | (r <= 2) | (np.abs(q - r) <= 1))
-    hole = (q + r <= 1)
-    return inside & ~hole & (q <= 6) & (r <= 6)
+STAR = [
+    '......#......',
+    '.....###.....',
+    '..#..###..#..',
+    '..##.###.##..',
+    '..#########..',
+    '.##.#####.##.',
+    '######.######',
+    '.##.#####.##.',
+    '..#########..',
+    '..##.###.##..',
+    '..#..###..#..',
+    '.....###.....',
+    '......#......',
+]
+STAR_GRID = np.array([[ch == '#' for ch in row] for row in STAR])
+
+
+def marius_star(x, y, stitch):
+    """The eight-point star of a Marius sweater, knitted on a 13 x 13 grid of `stitch` px."""
+    i = np.floor(y / stitch + 6.5).astype(int)
+    j = np.floor(x / stitch + 6.5).astype(int)
+    inside = (i >= 0) & (i < 13) & (j >= 0) & (j < 13)
+    out = np.zeros(x.shape, bool)
+    out[inside] = STAR_GRID[i[inside], j[inside]]
+    return out
 
 
 def sweater(img, P):
+    """A classic Marius sweater: navy body, a wide white chest band of stars between red borders."""
     G = P['garment']
     m, soft, v, s, xx, yy, neck = garment_mask(img, G)
     hem, cuff, collar = bands(m, xx, yy, G, neck)
     sh = shade_of(v, s, m)
     col = np.broadcast_to(NAVY_K, m.shape + (3,)).copy()
-    # yoke with stars, below the collar
     cx = G['neck'][1]
     xx = wrap_x(xx, cx, G.get('R', 260))
-    yoke_top, yoke_h = 20, G.get('yoke', 62)
-    in_yoke = (collar > yoke_top) & (collar < yoke_top + yoke_h)
-    step = yoke_h * 0.82
-    sx = ((xx - cx) % step) - step / 2
-    sy = collar - yoke_top - yoke_h / 2
-    star = rose(sx, sy, yoke_h * 0.42) & in_yoke
-    # dotted borders of the yoke
-    dot = (np.abs(((xx - cx) % 14) - 7) < 2.6)
-    border = ((np.abs(collar - yoke_top - 5) < 2.6) | (np.abs(collar - yoke_top - yoke_h + 5) < 2.6)) & dot
-    # lice: small cream dots in a grid on the rest of the body
-    lx = ((xx - cx) % 30) - 15
-    ly = ((collar) % 30) - 15
-    lx2 = ((xx - cx + 15) % 30) - 15
-    ly2 = ((collar + 15) % 30) - 15
-    lice = ((np.abs(lx) < 2.4) & (np.abs(ly) < 2.4)) | ((np.abs(lx2) < 2.4) & (np.abs(ly2) < 2.4))
-    lice &= collar > yoke_top + yoke_h + 6
-    cream = star | border | lice
-    col[cream] = CREAM
-    # orange accents: collar rib and cuffs, hem
-    rib = (collar < yoke_top) | (cuff < 16) | (hem < 20)
-    col[rib] = ORANGE
-    k = knit(xx, yy)
-    rgb = col * (sh * k)[..., None]
-    rgb = np.where(rib[..., None], rgb * (0.94 + 0.06 * np.cos(xx * 2 * np.pi / 7))[..., None], rgb)
+    k = G.get('yoke', 62) / 62  # pattern scale per pose
+    c = collar / k
+    # Bands from the collar down (in stitches of 3 px at full scale).
+    red_top = (c > 18) & (c < 34)
+    white_line1 = (c >= 34) & (c < 39)
+    star_band = (c >= 39) & (c < 99)
+    white_line2 = (c >= 99) & (c < 104)
+    red_bot = (c >= 104) & (c < 120)
+    # Small white crosses in the red borders.
+    step = 18 * k
+    gx = ((xx - cx) % step) - step / 2
+
+    def crosses(y0):
+        gy = c - y0
+        return ((np.abs(gx) < 1.6 * k) & (np.abs(gy) < 4.8)) | ((np.abs(gx) < 4.8 * k) & (np.abs(gy) < 1.6))
+    col[red_top | red_bot] = MARIUS_RED
+    col[(red_top & crosses(26)) | (red_bot & crosses(112))] = CREAM
+    col[white_line1 | white_line2] = CREAM
+    # The star band: white ground, navy stars, small navy crosses between them.
+    col[star_band] = CREAM
+    sstep = 74 * k
+    sx = ((xx - cx) % sstep) - sstep / 2
+    sy = (c - 69) * k
+    stars = marius_star(sx, sy, 4.3 * k) & star_band
+    bx = ((xx - cx + sstep / 2) % sstep) - sstep / 2
+    small = (((np.abs(bx) < 2.2 * k) & (np.abs(sy) < 6.5 * k)) | ((np.abs(bx) < 6.5 * k) & (np.abs(sy) < 2.2 * k))) & star_band
+    col[stars | small] = NAVY_K
+    # Below the band: navy with a scatter of small white checks.
+    lx = ((xx - cx) % (24 * k)) - 12 * k
+    ly = ((c * k) % (24 * k)) - 12 * k
+    col[(np.abs(lx) < 1.8 * k) & (np.abs(ly) < 1.8 * k) & (c > 128)] = CREAM
+    # Ribbing: navy collar, red and white stripes at the cuffs and hem.
+    def stripes(d):
+        return np.where(((d // 6) % 2) == 0, 1, 0)
+
+    rib = c <= 18
+    col[rib] = NAVY_K
+    cuffs = cuff < 22
+    hems = hem < 24
+    col[cuffs & (stripes(cuff) == 1)] = MARIUS_RED
+    col[cuffs & (stripes(cuff) == 0)] = CREAM
+    col[hems & (hem < 8)] = NAVY_K
+    col[hems & (hem >= 8) & (stripes(hem - 8) == 1)] = MARIUS_RED
+    col[hems & (hem >= 8) & (stripes(hem - 8) == 0)] = CREAM
+    kn = knit(xx, yy)
+    rgb = col * (sh * kn)[..., None]
+    ribbed = rib | cuffs | (hems & (hem < 8))
+    rgb = np.where(ribbed[..., None], rgb * (0.94 + 0.06 * np.cos(xx * 2 * np.pi / 7))[..., None], rgb)
     return pack(rgb, soft)
 
 

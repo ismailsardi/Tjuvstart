@@ -39,6 +39,18 @@ def shadow(layer, base, dy=9, blur=8, strength=0.32):
     return over(layer, out)
 
 
+def with_pupils(pose, base):
+    """The art as the app shows it: the rig art has plain eye whites and draws pupils on top."""
+    pupils = os.path.join(ART, f'{pose}-pupils.webp')
+    if not os.path.exists(pupils):
+        return base
+    pu = np.asarray(Image.open(pupils).convert('RGBA').resize(base.shape[1::-1])).astype(float) / 255
+    em = np.asarray(Image.open(os.path.join(ART, f'{pose}-eyes.png')).convert('RGB').resize(base.shape[1::-1])).astype(float) / 255
+    out = base.copy()
+    out[..., :3] += (pu[..., 3] * em[..., 0])[..., None] * (pu[..., :3] - em[..., 1:2]) * base[..., 3:4]
+    return np.clip(out, 0, 1)
+
+
 def layers_for(pose):
     P = POSES[pose]
     img = Image.open(os.path.join(ART, f'{pose}.webp'))
@@ -94,7 +106,7 @@ def main():
         if args.sheet:
             row = []
             for look in LOOKS:
-                d = over(dress(base, L, look), np.ones_like(base))
+                d = over(dress(with_pupils(pose, base), L, look), np.ones_like(base))
                 row.append(to_image(d).convert('RGB').resize((400, 440), Image.LANCZOS))
             rows.append(row)
         print(pose, 'done', flush=True)
