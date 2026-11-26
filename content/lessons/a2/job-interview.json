@@ -82,7 +82,7 @@
       "descriptors": ["A2-W-02"],
       "difficulty": 1000,
       "prompt": "Jeg liker å ___ mennesker.",
-      "answers": ["møte"]
+      "answers": ["møte", "treffe", "hjelpe", "jobbe med"]
     },
     {
       "id": "a2-intv-08",

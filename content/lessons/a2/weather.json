@@ -77,7 +77,7 @@
       "descriptors": ["A2-W-02"],
       "difficulty": 1000,
       "prompt": "Det er kaldt, så jeg tar på meg en varm ___.",
-      "answers": ["genser", "ullgenser", "jakke"]
+      "answers": ["genser", "ullgenser", "jakke", "lue", "frakk", "dunjakke", "vinterjakke"]
     },
     {
       "id": "a2-vaer-07",

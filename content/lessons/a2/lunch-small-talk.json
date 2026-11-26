@@ -120,7 +120,7 @@
       "difficulty": 900,
       "prompt": "– Vi gikk på ski. – Så ___!",
       "hint": "how nice",
-      "answers": ["fint"]
+      "answers": ["fint", "flott", "hyggelig", "koselig", "gøy", "kult", "bra"]
     },
     {
       "id": "a2-lunch-l1",

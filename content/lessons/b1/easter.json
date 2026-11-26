@@ -89,7 +89,7 @@
       "descriptors": ["B1-W-01"],
       "difficulty": 1250,
       "prompt": "På fjellet kan været ___ fort.",
-      "answers": ["skifte", "endre seg", "forandre seg"]
+      "answers": ["skifte", "endre seg", "forandre seg", "snu"]
     },
     {
       "id": "b1-pk-08",

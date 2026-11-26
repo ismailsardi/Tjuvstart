@@ -72,7 +72,7 @@
       "focus": ["fixed-expressions"],
       "difficulty": 750,
       "prompt": "Hvor mye ___ sykkelen?",
-      "answers": ["koster"]
+      "answers": ["koster", "veier"]
     },
     {
       "id": "a1-num-07",

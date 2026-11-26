@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { getLesson, lessons } from './lessons';
+import { checkAnswer } from './answers';
+import { allItems, getLesson, lessons } from './lessons';
 
 describe('bundled lessons', () => {
   it('includes the A2 sample lesson', () => {
@@ -28,5 +29,23 @@ describe('bundled lessons', () => {
   it('has unique item ids', () => {
     const ids = lessons.flatMap((lesson) => lesson.items.map((item) => item.id));
     expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('gives every gap-fill exactly one blank', () => {
+    const gaps = allItems.filter((item) => item.type === 'gap-fill');
+    expect(gaps.filter((item) => item.prompt.split(/_{2,}/).length !== 2)).toEqual([]);
+  });
+
+  it('accepts other correct ways to fill a gap', () => {
+    const answer = (id: string, value: string) => {
+      const item = allItems.find((i) => i.id === id);
+      if (!item) throw new Error(`Missing item ${id}`);
+      return checkAnswer(item, { kind: 'text', value }).correct;
+    };
+    // «Jeg ___ Sara.»: both «heter» and «er» are good Norwegian.
+    expect(answer('a1-hei-04', 'er')).toBe(true);
+    expect(answer('a1-hei-04', 'Jeg er Sara.')).toBe(true);
+    expect(answer('a2-fdw-08', 'er')).toBe(true);
+    expect(answer('a1-hei-04', 'bor')).toBe(false);
   });
 });

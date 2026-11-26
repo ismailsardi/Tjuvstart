@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  blankAnswer,
   checkAnswer,
   correctAnswer,
   dictationWords,
@@ -47,7 +48,28 @@ describe('normalize', () => {
   });
 });
 
+describe('blankAnswer', () => {
+  it('takes the blank out of a whole typed sentence', () => {
+    expect(blankAnswer('Jeg ___ Sara.', 'Jeg er Sara.')).toBe('er');
+    expect(blankAnswer('___ heter du?', 'Hva heter du')).toBe('hva');
+    expect(blankAnswer('Hvor kommer du ___?', 'hvor kommer du fra?')).toBe('fra');
+    expect(blankAnswer('Dere må svare ___ 10. mai.', 'Dere må svare innen 10. mai')).toBe('innen');
+  });
+
+  it('leaves a short answer, or a sentence that does not fit, as it is', () => {
+    expect(blankAnswer('Jeg ___ Sara.', 'heter')).toBe('heter');
+    expect(blankAnswer('Jeg ___ Sara.', 'Jeg Sara')).toBe('jeg sara');
+    expect(blankAnswer('Jeg ___ Sara.', 'Du heter Sara')).toBe('du heter sara');
+    expect(blankAnswer('Æ, ø, ___', 'å')).toBe('å');
+  });
+});
+
 describe('isCorrect', () => {
+  it('accepts a gap-fill typed as the whole sentence', () => {
+    expect(isCorrect(gap, { kind: 'text', value: 'Jeg bor i Oslo.' })).toBe(true);
+    expect(isCorrect(gap, { kind: 'text', value: 'Jeg jobber i Oslo.' })).toBe(false);
+  });
+
   it('accepts gap-fill answers regardless of case and punctuation', () => {
     expect(isCorrect(gap, { kind: 'text', value: 'Bor.' })).toBe(true);
     expect(isCorrect(gap, { kind: 'text', value: 'bo' })).toBe(false);
@@ -144,6 +166,14 @@ describe('checkAnswer', () => {
       meant: 'hjelper',
     });
     expect(checkAnswer(gap, text('hjelper.'))).toEqual({ correct: true, spelling: 'exact' });
+  });
+
+  it('forgives a slip in a whole typed sentence too', () => {
+    expect(checkAnswer(gap, text('Jeg hjlper med pasientene.'))).toEqual({
+      correct: true,
+      spelling: 'typo',
+      meant: 'hjelper',
+    });
   });
 
   it('does not forgive a different verb form', () => {

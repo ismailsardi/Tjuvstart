@@ -61,7 +61,7 @@
       "focus": ["modal-verbs"],
       "difficulty": 750,
       "prompt": "Jeg vil gjerne ___ en kaffe.",
-      "answers": ["ha"]
+      "answers": ["ha", "kjøpe", "bestille"]
     },
     {
       "id": "a1-cafe-06",

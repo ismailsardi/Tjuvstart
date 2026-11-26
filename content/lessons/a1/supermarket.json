@@ -60,7 +60,7 @@
       "descriptors": ["A1-W-01"],
       "difficulty": 750,
       "prompt": "Trenger du ___?",
-      "answers": ["pose", "en pose"]
+      "answers": ["pose", "en pose", "hjelp", "kvittering", "en kvittering"]
     },
     {
       "id": "a1-shop-06",

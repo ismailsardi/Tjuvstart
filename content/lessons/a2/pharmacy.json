@@ -77,7 +77,7 @@
       "descriptors": ["A2-W-01"],
       "difficulty": 1000,
       "prompt": "Har dere noe som kan ___ mot hoste?",
-      "answers": ["hjelpe"]
+      "answers": ["hjelpe", "virke"]
     },
     {
       "id": "a2-apo-07",

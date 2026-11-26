@@ -87,7 +87,7 @@
       "descriptors": ["A2-W-01"],
       "difficulty": 1100,
       "prompt": "Husk ___: pass eller førerkort.",
-      "answers": ["legitimasjon"]
+      "answers": ["legitimasjon", "ID", "leg"]
     },
     {
       "id": "a2-pak-08",

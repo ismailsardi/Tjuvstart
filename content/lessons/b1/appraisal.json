@@ -64,7 +64,7 @@
       "focus": ["fixed-expressions"],
       "difficulty": 1150,
       "prompt": "Hva ___ du om den nye kantina? Jeg liker den godt.",
-      "answers": ["synes"]
+      "answers": ["synes", "mener", "tenker"]
     },
     {
       "id": "b1-ap-06",
@@ -74,7 +74,7 @@
       "descriptors": ["B1-W-01"],
       "difficulty": 1250,
       "prompt": "Jeg har lært mye, ___ om systemene våre.",
-      "answers": ["særlig", "spesielt"]
+      "answers": ["særlig", "spesielt", "især", "blant annet"]
     },
     {
       "id": "b1-ap-07",
@@ -85,7 +85,7 @@
       "focus": ["conjunctions"],
       "difficulty": 1250,
       "prompt": "Jeg vil bli bedre i norsk, ___ jeg kan ta møtene alene.",
-      "answers": ["slik at", "så"]
+      "answers": ["slik at", "så", "sånn at", "for at"]
     },
     {
       "id": "b1-ap-08",

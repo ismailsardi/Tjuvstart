@@ -49,7 +49,7 @@
       "focus": ["verb-present"],
       "difficulty": 650,
       "prompt": "Jeg ___ Sara.",
-      "answers": ["heter"]
+      "answers": ["heter", "er"]
     },
     {
       "id": "a1-hei-05",

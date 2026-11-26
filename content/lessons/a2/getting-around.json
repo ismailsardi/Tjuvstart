@@ -85,7 +85,7 @@
       "difficulty": 900,
       "prompt": "Jeg tar ___ til jobben hver dag.",
       "hint": "Den går på skinner gjennom byen.",
-      "answers": ["trikken", "trikk"]
+      "answers": ["trikken", "trikk", "t-banen", "banen"]
     },
     {
       "id": "a2-trip-08",
@@ -96,7 +96,7 @@
       "focus": ["question-words"],
       "difficulty": 950,
       "prompt": "Unnskyld, ___ går neste buss til Storo?",
-      "answers": ["når"]
+      "answers": ["når", "hvor"]
     },
     {
       "id": "a2-trip-09",

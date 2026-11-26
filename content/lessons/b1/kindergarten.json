@@ -80,7 +80,7 @@
       "focus": ["time-expressions"],
       "difficulty": 1250,
       "prompt": "Dere må svare ___ 10. mai.",
-      "answers": ["innen", "senest"]
+      "answers": ["innen", "senest", "før"]
     },
     {
       "id": "b1-bh-07",

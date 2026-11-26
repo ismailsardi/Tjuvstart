@@ -72,7 +72,7 @@
       "focus": ["conjunctions"],
       "difficulty": 1150,
       "prompt": "Lanseringen blir utsatt, ___ testene viste flere feil.",
-      "answers": ["fordi"]
+      "answers": ["fordi", "siden", "ettersom", "for"]
     },
     {
       "id": "b1-tm-07",
@@ -83,7 +83,7 @@
       "focus": ["conjunctions"],
       "difficulty": 1250,
       "prompt": "Vi planlegger vaktene nå, ___ alle vet når de skal jobbe.",
-      "answers": ["slik at", "så"]
+      "answers": ["slik at", "så", "sånn at", "for at"]
     },
     {
       "id": "b1-tm-08",
