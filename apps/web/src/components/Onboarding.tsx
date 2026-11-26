@@ -11,8 +11,8 @@ import { DEFAULT_TROLL_NAME, MAX_TROLL_NAME } from './outfits';
 interface Props {
   nativeLanguage?: string;
   knownLanguages?: readonly string[];
-  /** Called after the languages are saved. */
-  onDone?: () => void;
+  /** Called after the languages are saved, with the starting point on the first run. */
+  onDone?: (startingPoint?: StartingPoint) => void;
 }
 
 /**
@@ -61,7 +61,7 @@ function OnboardingForm({
       native,
       known.filter((code) => code !== native),
     );
-    onDone?.();
+    onDone?.(startingPoint ?? undefined);
   }
 
   return (

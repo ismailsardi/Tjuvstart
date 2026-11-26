@@ -19,7 +19,8 @@ export const es: Record<StringKey, string> = {
   levelBeginner: 'Nada todavía',
   levelBeginnerHint: 'Empezar desde cero con el alfabeto y los sonidos.',
   levelSome: 'Ya sé algo',
-  levelSomeHint: 'Hacer primero una prueba de nivel de cinco minutos.',
+  levelSomeHint:
+    'Responder primero a unas preguntas rápidas, para que las lecciones empiecen en tu nivel.',
   alphabet: 'El alfabeto',
   alphabetLink: 'Las 29 letras, con sonido',
   alphabetIntro: 'El noruego tiene 29 letras: las 26 que ya conoces y, al final, æ, ø y å.',
@@ -58,7 +59,7 @@ export const es: Record<StringKey, string> = {
   looksLike: 'parece «{word}», pero significa',
   placementTitle: 'Descubre tu nivel',
   placementCard:
-    'Una prueba de cinco minutos de lectura, comprensión auditiva y escritura, para que las lecciones empiecen en el nivel adecuado.',
+    'Unas preguntas rápidas de lectura, comprensión auditiva y escritura, para que las lecciones empiecen en tu nivel.',
   placementIntro:
     'Hasta {n} preguntas cortas. Se adaptan sobre la marcha: si aciertas, la siguiente es más difícil, y la prueba termina antes en cuanto conoce tu nivel. No te preocupes por los errores, ayudan a estimar tu nivel.',
   placementDone: 'Tu nivel de partida',

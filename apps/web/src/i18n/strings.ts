@@ -21,7 +21,7 @@ const en = {
   levelBeginner: 'None yet',
   levelBeginnerHint: 'Start from zero with the alphabet and the sounds.',
   levelSome: 'Some already',
-  levelSomeHint: 'Take a five-minute level check first.',
+  levelSomeHint: 'Answer a few quick questions first, so lessons start at your level.',
   alphabet: 'The alphabet',
   alphabetLink: 'All 29 letters, with sound',
   alphabetIntro: 'Norwegian has 29 letters: the 26 you already know, then æ, ø and å at the end.',
@@ -59,7 +59,7 @@ const en = {
   looksLike: 'looks like «{word}», but means',
   placementTitle: 'Find your level',
   placementCard:
-    'A five-minute check of your reading, listening and writing, so lessons start at the right level.',
+    'A few quick questions on reading, listening and writing, so lessons start at your level.',
   placementIntro:
     'Up to {n} short questions. They adapt as you go: right answers make the next one harder, and the check stops early once it is sure of your level. Do not worry about mistakes, they help the estimate.',
   placementDone: 'Your starting level',
@@ -356,7 +356,8 @@ const fr: Record<StringKey, string> = {
   levelBeginner: 'Je débute',
   levelBeginnerHint: 'Partir de zéro avec l’alphabet et les sons.',
   levelSome: 'J’ai déjà des bases',
-  levelSomeHint: 'Faire d’abord un test de niveau de cinq minutes.',
+  levelSomeHint:
+    'Répondre d’abord à quelques questions rapides, pour que les leçons commencent à votre niveau.',
   alphabet: 'L’alphabet',
   alphabetLink: 'Les 29 lettres, avec le son',
   alphabetIntro:
@@ -396,7 +397,7 @@ const fr: Record<StringKey, string> = {
   looksLike: 'ressemble à « {word} », mais veut dire',
   placementTitle: 'Trouver votre niveau',
   placementCard:
-    'Un test de cinq minutes en lecture, compréhension orale et écriture, pour que les leçons commencent au bon niveau.',
+    'Quelques questions rapides en lecture, compréhension orale et écriture, pour que les leçons commencent à votre niveau.',
   placementIntro:
     'Jusqu’à {n} questions courtes. Elles s’adaptent : une bonne réponse rend la suivante plus difficile, et le test s’arrête plus tôt dès qu’il connaît votre niveau. Les erreurs ne sont pas graves, elles aident l’estimation.',
   placementDone: 'Votre niveau de départ',

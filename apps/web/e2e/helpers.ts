@@ -52,6 +52,8 @@ export async function chooseLanguages(
   known: string[] = [],
   startingPoint: 'beginner' | 'some' | null = 'some',
   trollName?: string,
+  /** Close the level check that follows «Some already» and go home, as most specs want. */
+  leaveLevelCheck = true,
 ) {
   await page.getByRole('radio', { name: native }).check();
   // Onboarding asks one question per screen.
@@ -71,6 +73,12 @@ export async function chooseLanguages(
       await page.getByRole('textbox', { name: /^(Name|Nom|Nombre)$/ }).fill(trollName);
     }
     await page.getByRole('button', { name: CONTINUE }).click();
+    if (startingPoint === 'some') {
+      // «Some already» goes straight into the first question of the level check.
+      await expect(page.getByRole('progressbar')).toBeVisible();
+      if (!leaveLevelCheck) return;
+      await page.locator('.session-close').click();
+    }
   }
   await expect(page.getByRole('heading', { name: /^Hei ?!$/ })).toBeVisible();
 }

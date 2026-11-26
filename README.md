@@ -22,7 +22,7 @@ _Tjuvstart_ is Norwegian for a false start: getting going before the starting si
 ## What works today
 
 - **32 lessons, 391 exercises (8 at A1, 18 at A2, 6 at B1):** reading, listening, gap-fill, word order and dictation, each tagged with a CEFR level, a difficulty and the grammar points it practises.
-- **Adaptive by design:** a five-minute level check, an Elo-style rating per skill, and practice sessions built from the learner's weak skills and recurring mistakes.
+- **Adaptive by design:** a short adaptive level check, an Elo-style rating per skill, and practice sessions built from the learner's weak skills and recurring mistakes.
 - **Start from zero:** a beginner track for the alphabet with æ, ø and å, the sounds English and French speakers miss, greetings, numbers and prices, the supermarket checkout, the café and telling the time. Learners whose level check lands at A1 start here; everyone else is never sent back to it.
 - **First weeks in Norway:** a guided track of real situations: the tax card, BankID, renting, the doctor, the first workday and lunch small talk. A second track, "Hverdagen i Oslo", covers the pharmacy, parcels, weather and clothes, a dinner invitation, booking a haircut and a job interview.
 - **Real-world texts:** a NAV letter, a Finn.no ad, a job ad and a dugnad notice, simplified to A2 and shown as the documents they are.
