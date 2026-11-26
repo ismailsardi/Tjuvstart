@@ -36,7 +36,7 @@ function renderResult(
         before={before}
         after={after}
       >
-        <a href="#/">Back to home</a>
+        <a href="#/">Back to Today</a>
       </SessionResult>
     </I18nProvider>,
   );
@@ -48,7 +48,7 @@ describe('SessionResult', () => {
   it('shows the score, the run and how far the skill is toward the next level', () => {
     renderResult(snap({ answers: 5, rating: 820 }), snap({ answers: 10, rating: 860 }), 4);
     expect(screen.getByTestId('score-line').textContent).toBe(
-      'You got 3 of 5 right. Your level estimate has been updated.',
+      'You got 3 of 5 right. Your level estimate is up to date.',
     );
     expect(screen.getByTestId('best-run').textContent).toBe('4 right in a row');
     expect(screen.getByTestId('skill-change').textContent).toContain('On the way to A2');

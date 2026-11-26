@@ -5,6 +5,7 @@ import { saveLanguages, saveStartingPoint, saveTrollName } from '../data/progres
 import { I18nProvider } from '../i18n/I18nProvider';
 import { useI18n } from '../i18n/useI18n';
 import { uiLanguageFor } from '../i18n/strings';
+import { Brand } from './Brand';
 import { Tusse } from './Tusse';
 import { DEFAULT_TROLL_NAME, MAX_TROLL_NAME } from './outfits';
 
@@ -14,6 +15,14 @@ interface Props {
   /** Called after the languages are saved, with the starting point on the first run. */
   onDone?: (startingPoint?: StartingPoint) => void;
 }
+
+/** The question each step asks, which is also its heading from step 2 on. */
+const STEP_QUESTIONS = [
+  'nativeQuestion',
+  'knownQuestion',
+  'levelQuestion',
+  'trollNameQuestion',
+] as const;
 
 /**
  * Asks for the learner's languages and, on the first run, how much Norwegian they know.
@@ -66,6 +75,7 @@ function OnboardingForm({
 
   return (
     <form className="onboarding" onSubmit={submit} aria-labelledby="onboarding-heading">
+      <Brand />
       <div className="steps-dots" aria-hidden="true">
         {Array.from({ length: totalSteps }, (_, i) => (
           <span key={i} className={step === i + 1 ? 'active' : undefined} />
@@ -73,8 +83,9 @@ function OnboardingForm({
       </div>
       <p className="visually-hidden">{t('stepOf', { n: step, total: totalSteps })}</p>
       <div className="onboarding-head">
-        <h1 id="onboarding-heading" lang="nb">
-          {t('onboardingTitle')}
+        {/* "Velkommen!" greets once; after that each step's question is the heading. */}
+        <h1 id="onboarding-heading" lang={step === 1 ? 'nb' : undefined}>
+          {step === 1 ? t('onboardingTitle') : t(STEP_QUESTIONS[step - 1] ?? 'nativeQuestion')}
         </h1>
         {step === 1 && <Tusse pose="wave" size={76} className="onboarding-tusse" />}
       </div>
@@ -108,7 +119,7 @@ function OnboardingForm({
         </fieldset>
       ) : step === 4 ? (
         <fieldset className="troll-step">
-          <legend>{t('trollNameQuestion')}</legend>
+          <legend className="visually-hidden">{t('trollNameQuestion')}</legend>
           <Tusse pose="wave" size={132} className="troll-step-tusse" />
           <p className="muted">{t('trollNameIntro')}</p>
           <label htmlFor="onboarding-troll-name">{t('trollNameLabel')}</label>
@@ -128,7 +139,7 @@ function OnboardingForm({
         </fieldset>
       ) : step === 3 ? (
         <fieldset>
-          <legend>{t('levelQuestion')}</legend>
+          <legend className="visually-hidden">{t('levelQuestion')}</legend>
           {(
             [
               ['beginner', 'levelBeginner', 'levelBeginnerHint'],
@@ -152,7 +163,7 @@ function OnboardingForm({
         </fieldset>
       ) : (
         <fieldset>
-          <legend>{t('knownQuestion')}</legend>
+          <legend className="visually-hidden">{t('knownQuestion')}</legend>
           {packs
             .filter((pack) => pack.language !== native)
             .map((pack) => (

@@ -21,6 +21,7 @@ import {
   practiceHref,
   wordsHref,
 } from '../routing/useHashRoute';
+import { Brand } from './Brand';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
@@ -196,6 +197,7 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     <>
       <header className="page-header home-header">
         <div>
+          <Brand phoneOnly />
           <h1>{t('hello')}</h1>
           <p className="muted">{t('todayIntro')}</p>
         </div>

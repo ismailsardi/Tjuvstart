@@ -31,7 +31,7 @@ export const de: Record<StringKey, string> = {
   alphabetHow: 'Drück auf Anhören, um den Buchstaben und dann das Wort zu hören.',
   otherLanguage: 'Eine andere Sprache',
   save: 'Weiter',
-  home: '← Start',
+  home: '← Heute',
   closeSession: 'Schließen',
   stepOf: 'Schritt {n} von {total}',
   decks: 'Stapel',
@@ -59,7 +59,7 @@ export const de: Record<StringKey, string> = {
   doneBodyStrong: '{score} von {total} richtig. Das lief gut.',
   doneBodyTough:
     'Das war schwer: {score} von {total} richtig. Was du verpasst hast, kommt in deinen Übungen wieder.',
-  backHome: 'Zurück zum Start',
+  backHome: 'Zurück zu Heute',
   tapWords: 'Tippe die Wörter in der richtigen Reihenfolge an.',
   missingWord: 'Fehlendes Wort',
   lessonNotFound: 'Lektion nicht gefunden.',

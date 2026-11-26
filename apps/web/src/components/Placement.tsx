@@ -66,7 +66,11 @@ export function Placement({ autoStart = false }: { autoStart?: boolean }) {
         </a>
         <h1 id="placement-heading">{t('placementTitle')}</h1>
         <p>{t('placementIntro', { n: total })}</p>
-        <button type="button" onClick={() => setState(startPlacement(PLACED_SKILLS))}>
+        <button
+          type="button"
+          className="page-action"
+          onClick={() => setState(startPlacement(PLACED_SKILLS))}
+        >
           {t('start')}
         </button>
       </article>
@@ -89,7 +93,7 @@ export function Placement({ autoStart = false }: { autoStart?: boolean }) {
           ))}
         </ul>
         <p className="muted small">{t('placementNote')}</p>
-        <a className="button" href={homeHref}>
+        <a className="button page-action" href={homeHref}>
           {t('backHome')}
         </a>
       </section>

@@ -58,7 +58,7 @@ export function GoalPage() {
         <GoalPicker value={profile.dailyGoal ?? DEFAULT_GOAL} hideLegend />
         <p className="muted small">{t('streakRule')}</p>
       </section>
-      <a className="button" href={homeHref}>
+      <a className="button page-action" href={homeHref}>
         {t('backHome')}
       </a>
     </>

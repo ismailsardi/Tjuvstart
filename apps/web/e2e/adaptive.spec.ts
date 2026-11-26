@@ -17,7 +17,7 @@ test('the level check sets a starting level, then practice targets weak spots', 
   await expect(done).toBeVisible();
   await expect(page.getByTestId('placed-reading')).toContainText(/A1|A2|B1|B2/);
 
-  await page.getByRole('link', { name: 'Back to home' }).click();
+  await page.getByRole('link', { name: 'Back to Today' }).click();
   await expect(page.getByTestId('skill-reading')).toContainText(/^Lesing(A1|A2|B1|B2)/);
   await expect(page.getByRole('region', { name: 'Find your level' })).toHaveCount(0);
 

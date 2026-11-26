@@ -160,6 +160,24 @@ button.secondary,
   outline-offset: 2px;
 }
 
+/* The mark and name where the top bar's wordmark isn't shown. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+@media (width >= 48rem) {
+  .brand.phone-only {
+    display: none;
+  }
+}
+
 /* Navigation: bottom tab bar on phones, top bar from tablet width. */
 
 .tabbar {
@@ -408,9 +426,14 @@ h1 + .panel {
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Lifted from #24497a, which was about 2:1 against the page: 3.2:1 now, still 5.8:1 for white text. */
   .lesson-card.focus {
-    background: #24497a;
+    background: #3366a8;
     box-shadow: none;
+  }
+
+  .lesson-card.focus .muted {
+    color: rgb(255 255 255 / 90%);
   }
 
   .lesson-cta {
@@ -853,7 +876,8 @@ progress::-moz-progress-bar {
   font-size: 0.95rem;
 }
 
-mark.cognate {
+mark.cognate,
+.session:has(.glossary-cognates[open]) .reading-text .cognate {
   background: color-mix(in srgb, var(--good) 22%, transparent);
   color: inherit;
   border-radius: 0.2rem;
@@ -1545,9 +1569,17 @@ button.link {
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Same lift as the focused lesson card; the faded text gets a little more white to keep 4.5:1. */
   .hero {
-    background: #24497a;
+    background: #3366a8;
     box-shadow: none;
+  }
+
+  .hero .hero-body,
+  .hero .muted,
+  .hero .streak .muted,
+  .hero .eyebrow {
+    color: rgb(255 255 255 / 90%);
   }
 
   .hero .button {
@@ -1883,10 +1915,14 @@ button.deck-row {
   font-size: 1.15rem;
 }
 
+.onboarding legend.visually-hidden {
+  margin: 0;
+}
+
 .onboarding .choice {
   gap: 0.9rem;
   min-height: 3.75rem;
-  padding: 0 1rem;
+  padding: 0.85rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -1902,9 +1938,33 @@ button.deck-row {
 }
 
 .onboarding .choice input {
+  flex: none;
   width: 1.3rem;
   height: 1.3rem;
   margin: 0;
+}
+
+/* A drawn radio, so checked and unchecked are the same size in both themes and line up. */
+.onboarding .choice input[type='radio'] {
+  appearance: none;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.onboarding .choice input[type='radio']:checked {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 0.25rem var(--surface);
+  background: var(--accent);
+}
+
+/* With a hint under the label, the radio lines up with the first line, not the middle. */
+.onboarding .choice:has(.choice-hint) {
+  align-items: flex-start;
+}
+
+.onboarding .choice:has(.choice-hint) input {
+  margin-top: 0.1rem;
 }
 
 .bottom-actions {
@@ -2376,6 +2436,20 @@ button.danger:not(.link) {
 .session-result .actions .button {
   width: 100%;
   max-width: 22rem;
+}
+
+/*
+ * The one primary action that ends a page or a step: full width on a phone, capped at the same
+ * 22rem as the result screen's button on wider screens. Every screen type uses this one shape.
+ */
+.page-action {
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.done-screen .page-action {
+  margin-inline: auto;
 }
 
 @keyframes reveal-in {

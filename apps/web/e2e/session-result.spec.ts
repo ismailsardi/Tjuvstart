@@ -25,6 +25,6 @@ test('the end of a lesson reveals the score, a run of right answers and how each
   await expect(reading).toContainText(/On the way to|New level/);
 
   // The actions work while the reveal is still playing.
-  await page.getByRole('link', { name: 'Back to home' }).click();
+  await page.getByRole('link', { name: 'Back to Today' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Hei!' })).toBeVisible();
 });

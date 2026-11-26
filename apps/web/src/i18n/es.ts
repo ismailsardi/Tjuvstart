@@ -31,7 +31,7 @@ export const es: Record<StringKey, string> = {
   alphabetHow: 'Pulsa Escuchar para oír la letra y luego la palabra.',
   otherLanguage: 'Otro idioma',
   save: 'Continuar',
-  home: '← Inicio',
+  home: '← Hoy',
   closeSession: 'Cerrar',
   stepOf: 'Paso {n} de {total}',
   decks: 'Mazos',
@@ -59,7 +59,7 @@ export const es: Record<StringKey, string> = {
   doneBodyStrong: '{score} de {total} aciertos. Te ha ido bien.',
   doneBodyTough:
     'Ha costado: {score} de {total} aciertos. Lo que has fallado volverá en tu práctica.',
-  backHome: 'Volver al inicio',
+  backHome: 'Volver a Hoy',
   tapWords: 'Toca las palabras en el orden correcto.',
   missingWord: 'Palabra que falta',
   lessonNotFound: 'Lección no encontrada.',
