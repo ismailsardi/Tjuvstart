@@ -147,8 +147,8 @@ def nose_of(img, eyes):
 
 
 def glasses(P, img=None):
-    """Round glasses: the lenses frame the eyes, the nose stays in front of the rims, and the
-    bridge rests on top of the nose."""
+    """Round glasses: the lenses frame the eyes, and the nose stays in front of the rims and the
+    bridge, so the frame seems to rest behind its tip."""
     (lx, ly, lrx, lry), (rx_, ry_, rrx, rry) = P['eyes']
     tilt = P['head'][3]
     t = np.radians(tilt)
@@ -188,7 +188,7 @@ def glasses(P, img=None):
 
     def bridge(x, y, z):
         zz = z - zc
-        # a low arch from rim to rim, resting on the top of the nose
+        # a low arch from rim to rim, passing behind the nose
         d = np.minimum(capsule(x, y, zz, (ax_, ay_ - 4, 0), (mx, my, 30), th * 0.85),
                        capsule(x, y, zz, (mx, my, 30), (bx_, by_ - 4, 0), th * 0.85))
         return d, np.zeros_like(d)
@@ -200,11 +200,16 @@ def glasses(P, img=None):
     x1 = max(lx + lrx, rx_ + rrx) + 90
     y0 = min(ly - lry, ry_ - rry) - 80
     y1 = max(ly + lry, ry_ + rry) + 50
-    out = render(rims, color, (x0, y0, x1, y1), zmax=200)
+    def frame(x, y, z):
+        d1, _ = rims(x, y, z)
+        d2, _ = bridge(x, y, z)
+        d = smin(d1, d2, 3)
+        return d, np.zeros_like(d)
+
+    out = render(frame, color, (x0, y0, x1, y1), zmax=200)
     if nose is not None:
         out = out * (1 - nose[..., None])
-    br = render(bridge, color, (x0, y0, x1, y1), zmax=200)
-    return br + out * (1 - br[..., 3:4])
+    return out
 
 
 # ---------------------------------------------------------------- knitted scarf

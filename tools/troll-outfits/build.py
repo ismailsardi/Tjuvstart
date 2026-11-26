@@ -55,14 +55,19 @@ def with_pupils(pose, base):
 
 def hair_of(img):
     """The hair: the highest large navy shape (brows and feet are separate shapes)."""
-    _, navy, *_ = classes(img)
+    skin, navy, h, s, v, al, _ = classes(img)
     lab, n = ndi.label(navy)
     best, best_y = None, 1e9
     for i in range(1, n + 1):
         ys, xs = np.nonzero(lab == i)
         if len(ys) > 3000 and ys.mean() < best_y:
             best, best_y = lab == i, ys.mean()
-    return best
+    if best is None:
+        return None
+    # Its soft outer edge too, which is too light to count as navy: anything next to it that
+    # isn't fur or an orange ear.
+    orange = (h < 40) & (s > 0.3)
+    return best | (ndi.binary_dilation(best, iterations=8) & ~skin & ~orange & (al > 0.01))
 
 
 def hair_cut(P, hair, hat):
@@ -72,8 +77,8 @@ def hair_cut(P, hair, hat):
     H, W = hair.shape
     yy, xx = np.mgrid[0:H, 0:W].astype(float)
     _, v, _ = head_frame(xx, yy, 0, cx, cy, tilt)
-    cut = hair & (hat[..., 3] < 0.6) & (v < 20 * rx / 166)
-    cut = ndi.binary_dilation(cut, iterations=2) & ndi.binary_dilation(hair, iterations=2)
+    cut = hair & (hat[..., 3] < 0.95) & (v < 20 * rx / 166)
+    cut = ndi.binary_dilation(cut, iterations=4) & ndi.binary_dilation(hair, iterations=4)
     return ndi.gaussian_filter(cut.astype(float), 0.7)
 
 
