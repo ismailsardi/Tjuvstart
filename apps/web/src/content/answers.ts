@@ -11,6 +11,25 @@ export function normalize(text: string): string {
     .trim();
 }
 
+/**
+ * The word or words the learner put in the blank. Learners often type the whole sentence
+ * («Jeg heter Sara.» for «Jeg ___ Sara.»), so when the answer repeats the words around the
+ * blank, only the part in between is checked.
+ */
+export function blankAnswer(prompt: string, given: string): string {
+  const value = normalize(given);
+  const parts = normalize(prompt).split(/_{2,}/);
+  if (parts.length !== 2) return value;
+  const before = parts[0]!.trim();
+  const after = parts[1]!.trim();
+  if (!before && !after) return value;
+  const head = before ? `${before} ` : '';
+  const tail = after ? ` ${after}` : '';
+  if (value.length <= head.length + tail.length) return value;
+  if (!value.startsWith(head) || !value.endsWith(tail)) return value;
+  return value.slice(head.length, value.length - tail.length).trim() || value;
+}
+
 export type Response = { kind: 'choice'; index: number } | { kind: 'text'; value: string };
 
 export interface Check {
@@ -35,7 +54,8 @@ export function checkAnswer(item: Item, response: Response): Check {
   }
   if (item.focus?.includes('sounds-spelling')) return { correct: false, spelling: 'wrong' };
   const accepted = item.type === 'gap-fill' ? item.answers : [item.audio];
-  const given = normalize(response.value);
+  const given =
+    item.type === 'gap-fill' ? blankAnswer(item.prompt, response.value) : normalize(response.value);
   const spellings = accepted.map((answer) =>
     compareSpelling(normalize(answer), given, knownWords()),
   );
@@ -54,7 +74,9 @@ export function isCorrect(item: Item, response: Response): boolean {
     case 'gap-fill':
       return (
         response.kind === 'text' &&
-        item.answers.some((answer) => normalize(answer) === normalize(response.value))
+        item.answers.some(
+          (answer) => normalize(answer) === blankAnswer(item.prompt, response.value),
+        )
       );
     case 'word-order':
       return response.kind === 'text' && normalize(response.value) === normalize(item.answer);

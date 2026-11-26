@@ -6,7 +6,7 @@ export type Route =
   | { name: 'words' }
   | { name: 'deck'; deckId: string }
   | { name: 'me' }
-  | { name: 'placement' }
+  | { name: 'placement'; start?: boolean }
   | { name: 'practice' }
   | { name: 'daily' }
   | { name: 'ai' }
@@ -37,6 +37,8 @@ export function parseRoute(hash: string): Route {
       return { name: 'me' };
     case '#/placement':
       return { name: 'placement' };
+    case '#/placement/start':
+      return { name: 'placement', start: true };
     case '#/practice':
       return { name: 'practice' };
     case '#/daily':
@@ -87,6 +89,8 @@ export const lessonHref = (lessonId: string) => `#/lesson/${lessonId}`;
 export const shadowHref = (lessonId: string) => `#/shadow/${lessonId}`;
 export const deckHref = (deckId: string) => `#/words/${deckId}`;
 export const placementHref = '#/placement';
+/** The level check without its intro page, straight from onboarding. */
+export const placementStartHref = '#/placement/start';
 export const practiceHref = '#/practice';
 export const dailyHref = '#/daily';
 export const goalHref = '#/goal';

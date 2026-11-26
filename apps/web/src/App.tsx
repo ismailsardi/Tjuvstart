@@ -10,7 +10,7 @@ import { getProfile } from './data/progress';
 import { I18nProvider } from './i18n/I18nProvider';
 import { useI18n } from './i18n/useI18n';
 import { uiLanguageFor } from './i18n/strings';
-import { homeHref, useHashRoute } from './routing/useHashRoute';
+import { homeHref, placementStartHref, useHashRoute } from './routing/useHashRoute';
 
 // Every screen except Today loads on first visit, so the first paint only needs Today. The
 // service worker precaches these chunks, so they still open offline. The AI screens are never
@@ -79,8 +79,10 @@ export function App() {
               key={route.name}
               nativeLanguage={profile.nativeLanguage}
               knownLanguages={profile.knownLanguages}
-              onDone={() => {
-                window.location.hash = homeHref;
+              onDone={(startingPoint) => {
+                // Learners who know some Norwegian were promised a level check first, so
+                // they go straight into its first question.
+                window.location.hash = startingPoint === 'some' ? placementStartHref : homeHref;
               }}
             />
           ) : (
@@ -112,7 +114,8 @@ function Page({
   if (route.name === 'me') return <Me packs={packs} />;
   if (route.name === 'goal') return <GoalPage />;
   if (route.name === 'troll') return <Wardrobe />;
-  if (route.name === 'placement') return <Placement />;
+  if (route.name === 'placement')
+    return <Placement key={route.start ? 'start' : 'intro'} autoStart={route.start} />;
   if (route.name === 'practice') return <Practice packs={packs} />;
   if (route.name === 'daily') return <DailySession packs={packs} />;
   if (route.name.startsWith('ai')) return aiPage(route, packs);

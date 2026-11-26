@@ -97,7 +97,7 @@
       "focus": ["verb-present"],
       "difficulty": 850,
       "prompt": "Jeg ___ Sara.",
-      "answers": ["heter"]
+      "answers": ["heter", "er"]
     },
     {
       "id": "a2-fdw-09",

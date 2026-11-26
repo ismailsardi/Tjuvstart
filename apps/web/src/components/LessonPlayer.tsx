@@ -124,6 +124,10 @@ export function LessonPlayer({
   // Reading questions need the text in view. Other exercises keep it one tap away, so the
   // question and answers are not pushed below the fold by a text they do not ask about.
   const textInView = practice || item.skill === 'reading';
+  // Listening exercises are about what the learner hears. The lesson text often holds the
+  // very sentence they are asked to write down, so it is not offered at all; the transcript
+  // comes with the feedback instead.
+  const textOffered = item.skill !== 'listening';
   const textLessonId = practice ? (lessonIdForItem(item.id) ?? lesson.id) : lesson.id;
 
   async function submit(response: Response) {
@@ -166,6 +170,7 @@ export function LessonPlayer({
         {lesson.title}
       </h1>
       {text &&
+        textOffered &&
         (textInView ? (
           <ReadingText
             key={text}

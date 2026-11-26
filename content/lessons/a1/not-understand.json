@@ -49,7 +49,7 @@
       "focus": ["ikke-placement"],
       "difficulty": 650,
       "prompt": "Jeg forstår ___.",
-      "answers": ["ikke"]
+      "answers": ["ikke", "det", "deg"]
     },
     {
       "id": "a1-help-05",
@@ -59,7 +59,7 @@
       "descriptors": ["A1-W-01"],
       "difficulty": 850,
       "prompt": "Kan du snakke litt ___?",
-      "answers": ["saktere", "langsommere"]
+      "answers": ["saktere", "langsommere", "tydeligere", "høyere"]
     },
     {
       "id": "a1-help-06",

@@ -71,7 +71,7 @@
       "focus": ["modal-verbs"],
       "difficulty": 950,
       "prompt": "Jeg vil gjerne ___ time.",
-      "answers": ["bestille"]
+      "answers": ["bestille", "ha"]
     },
     {
       "id": "a2-fris-07",

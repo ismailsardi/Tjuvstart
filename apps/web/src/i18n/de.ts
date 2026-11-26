@@ -19,7 +19,8 @@ export const de: Record<StringKey, string> = {
   levelBeginner: 'Noch gar nicht',
   levelBeginnerHint: 'Ganz von vorn anfangen, mit dem Alphabet und den Lauten.',
   levelSome: 'Schon ein bisschen',
-  levelSomeHint: 'Zuerst einen fünfminütigen Einstufungstest machen.',
+  levelSomeHint:
+    'Zuerst ein paar kurze Fragen beantworten, damit die Lektionen auf deinem Niveau beginnen.',
   alphabet: 'Das Alphabet',
   alphabetLink: 'Alle 29 Buchstaben, mit Ton',
   alphabetIntro:
@@ -58,7 +59,7 @@ export const de: Record<StringKey, string> = {
   looksLike: 'sieht aus wie «{word}», bedeutet aber',
   placementTitle: 'Finde dein Niveau',
   placementCard:
-    'Ein fünfminütiger Test für Lesen, Hören und Schreiben, damit die Lektionen auf dem richtigen Niveau beginnen.',
+    'Ein paar kurze Fragen zu Lesen, Hören und Schreiben, damit die Lektionen auf deinem Niveau beginnen.',
   placementIntro:
     'Bis zu {n} kurze Fragen. Sie passen sich an: Richtige Antworten machen die nächste Frage schwerer, und der Test hört früher auf, sobald er dein Niveau kennt. Keine Sorge wegen Fehlern, sie helfen bei der Schätzung.',
   placementDone: 'Dein Startniveau',

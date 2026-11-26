@@ -28,9 +28,13 @@ const PLACED_SKILLS = [...new Set(allItems.map((item) => item.skill))] as Skill[
  * The placement check: adaptive questions, then a starting level per skill. Each skill stops
  * as soon as its estimate is precise enough, so most learners finish well before the maximum.
  */
-export function Placement() {
+export function Placement({ autoStart = false }: { autoStart?: boolean }) {
   const { t } = useI18n();
-  const [state, setState] = useState<PlacementState | null>(null);
+  // Straight from onboarding the check starts at once: the intro page would be a second
+  // «Start» after the learner already chose to take it.
+  const [state, setState] = useState<PlacementState | null>(() =>
+    autoStart ? startPlacement(PLACED_SKILLS) : null,
+  );
   const [feedback, setFeedback] = useState<boolean | null>(null);
   const item = state && feedback === null ? nextPlacementItem(state, allItems) : undefined;
   // The most questions still possible: skills already placed count what they took.

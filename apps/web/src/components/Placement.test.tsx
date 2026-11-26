@@ -1,5 +1,5 @@
 import 'fake-indexeddb/auto';
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import type { GapFillItem } from '../content/types';
@@ -27,6 +27,14 @@ vi.mock('../content/lessons', () => ({
 }));
 
 describe('Placement', () => {
+  it('starts on the first question when it comes straight from onboarding', () => {
+    render(<Placement autoStart />);
+    expect(screen.queryByRole('button', { name: 'Start' })).toBeNull();
+    expect(screen.getByText(`Question 1 of ${PLACEMENT_DEFAULTS.max}`)).toBeTruthy();
+    expect(screen.getByLabelText('Missing word')).toBeTruthy();
+    cleanup();
+  });
+
   it('asks adaptive questions, then shows and saves a starting level', async () => {
     const user = userEvent.setup();
     render(<Placement />);

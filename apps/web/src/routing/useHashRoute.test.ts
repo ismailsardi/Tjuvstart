@@ -16,6 +16,11 @@ describe('parseRoute', () => {
     });
   });
 
+  it('parses the level check, with and without its intro page', () => {
+    expect(parseRoute('#/placement')).toEqual({ name: 'placement' });
+    expect(parseRoute('#/placement/start')).toEqual({ name: 'placement', start: true });
+  });
+
   it('parses tab and deck routes', () => {
     expect(parseRoute('#/words')).toEqual({ name: 'words' });
     expect(parseRoute('#/words/a2-work')).toEqual({ name: 'deck', deckId: 'a2-work' });

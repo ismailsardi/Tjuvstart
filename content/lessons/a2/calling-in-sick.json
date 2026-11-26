@@ -110,7 +110,7 @@
       "focus": ["fixed-expressions"],
       "difficulty": 1150,
       "prompt": "Takk for ___! God bedring.",
-      "answers": ["beskjed", "beskjeden"]
+      "answers": ["beskjed", "beskjeden", "meldingen"]
     },
     {
       "id": "a2-sick-10",

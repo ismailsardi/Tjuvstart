@@ -38,7 +38,7 @@ describe('Onboarding', () => {
     await user.type(name, 'Trollbert');
     await user.click(screen.getByRole('button', { name: 'Continuer' }));
 
-    await vi.waitFor(() => expect(onDone).toHaveBeenCalled());
+    await vi.waitFor(() => expect(onDone).toHaveBeenCalledWith('beginner'));
     const profile = await getProfile();
     expect(profile.nativeLanguage).toBe('fr');
     expect(profile.knownLanguages).toEqual(['en']);
@@ -53,6 +53,6 @@ describe('Onboarding', () => {
 
     await user.click(screen.getByRole('button', { name: 'Continue' }));
     await user.click(screen.getByRole('button', { name: 'Continue' }));
-    await vi.waitFor(() => expect(onDone).toHaveBeenCalled());
+    await vi.waitFor(() => expect(onDone).toHaveBeenCalledWith(undefined));
   });
 });
