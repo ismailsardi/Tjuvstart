@@ -1,15 +1,31 @@
 import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { JOB_FIELDS, decks, deckId, jobDeck, type Deck } from '../content/vocab';
+import { LEVELS } from '@tjuvstart/engine';
+import { overallLevel } from '../content/tracks';
+import {
+  JOB_FIELDS,
+  decks,
+  deckId,
+  jobDeck,
+  recommendedDeck,
+  type Deck,
+  type JobField,
+} from '../content/vocab';
 import { db } from '../data/db';
 import { dueCards, getProfile, saveJobField, wordCounts } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
-import { DUE_DECK, deckHref } from '../routing/useHashRoute';
-import { AlphabetRow } from './AlphabetRow';
+import { DUE_DECK, alphabetHref, deckHref } from '../routing/useHashRoute';
+
+const CHEVRON = (
+  <svg className="chevron" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m9 6 6 6-6 6" />
+  </svg>
+);
 
 /**
- * The Words tab: today's review, the deck for the learner's line of work, then every general
- * deck with how much of it is being learned.
+ * The Words tab. One thing gets the weight: the cards due today when there are any, otherwise
+ * the one deck to learn next. Below that, the deck for the learner's line of work, and every
+ * general deck grouped by level, with only the learner's own level unfolded.
  */
 export function Words() {
   const { t } = useI18n();
@@ -23,36 +39,69 @@ export function Words() {
   const myDeck = field ? jobDeck(field) : undefined;
   // Job decks for other fields stay out of the list; they are one tap away under "Change".
   const general = decks.filter((deck) => deck.field === undefined);
+  const level = profile
+    ? overallLevel(profile.ratings, profile.answers, profile.startingPoint)
+    : 'A2';
+  const next = learning ? recommendedDeck(level, learning) : undefined;
+  const groups = LEVELS.map((at) => ({
+    level: at,
+    decks: general.filter((deck) => deck.level === at),
+  })).filter((group) => group.decks.length > 0);
+  // Fold every level but the learner's own; if that level has no decks, open the nearest below.
+  const openLevel =
+    groups.find((group) => group.level === level)?.level ??
+    groups.filter((group) => LEVELS.indexOf(group.level) < LEVELS.indexOf(level)).at(-1)?.level;
 
-  async function choose(next: (typeof JOB_FIELDS)[number]) {
-    await saveJobField(next);
+  async function choose(option: JobField) {
+    await saveJobField(option);
     setChoosing(false);
   }
 
-  const row = (deck: Deck) => {
-    const studied = deck.cards.filter((card) => learning?.has(card.id)).length;
-    return (
-      <a className="deck-row" href={deckHref(deckId(deck))} data-testid={`deck-${deckId(deck)}`}>
-        <span className="badge">{deck.level}</span>
-        <span className="deck-row-main">
-          <strong lang="nb">{deck.title}</strong>
-          {studied > 0 ? (
-            <span className="deck-row-progress">
-              <progress value={studied} max={deck.cards.length} aria-hidden="true" />
-              <span className="muted small">
-                {t('learningOf', { n: studied, total: deck.cards.length })}
-              </span>
-            </span>
-          ) : (
-            <span className="muted small">{t('deckNotStarted', { total: deck.cards.length })}</span>
-          )}
+  const studiedIn = (deck: Deck) => deck.cards.filter((card) => learning?.has(card.id)).length;
+
+  const deckStatus = (deck: Deck) => {
+    const studied = studiedIn(deck);
+    return studied > 0 ? (
+      <span className="deck-row-progress">
+        <progress value={studied} max={deck.cards.length} aria-hidden="true" />
+        <span className="muted small">
+          {t('learningOf', { n: studied, total: deck.cards.length })}
         </span>
-        <svg className="chevron" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 6 6 6-6 6" />
-        </svg>
-      </a>
+      </span>
+    ) : (
+      <span className="muted small">{t('deckNotStarted', { total: deck.cards.length })}</span>
     );
   };
+
+  /** A deck row. Inside a level group the level is already in the heading, so no badge. */
+  const row = (deck: Deck, showLevel = true) => (
+    <a className="deck-row" href={deckHref(deckId(deck))} data-testid={`deck-${deckId(deck)}`}>
+      {showLevel && <span className="badge">{deck.level}</span>}
+      <span className="deck-row-main">
+        <strong lang="nb">{deck.title}</strong>
+        {deckStatus(deck)}
+      </span>
+      {CHEVRON}
+    </a>
+  );
+
+  const nextDeck = next && (
+    <section className="hero next-deck" aria-labelledby="next-deck-heading" data-testid="next-deck">
+      <p className="eyebrow">{studiedIn(next) > 0 ? t('deckContinue') : t('deckUpNext')}</p>
+      <h2 id="next-deck-heading" lang="nb">
+        {next.title}
+      </h2>
+      <p className="hero-body">
+        <span className="badge">{next.level}</span>{' '}
+        {studiedIn(next) > 0
+          ? t('learningOf', { n: studiedIn(next), total: next.cards.length })
+          : t('deckWords', { total: next.cards.length })}
+      </p>
+      <a className="button" href={deckHref(deckId(next))}>
+        {t('learnTheseWords')}
+      </a>
+    </section>
+  );
 
   return (
     <>
@@ -61,30 +110,32 @@ export function Words() {
         <p className="muted">{t('wordCardsIntro')}</p>
       </header>
 
-      {/* Cards due are the reason to open this page, so they get the weight when there are any. */}
-      <section
-        className={due > 0 ? 'hero due-card' : 'panel due-card'}
-        aria-labelledby="due-heading"
-      >
-        <h2 id="due-heading" className="eyebrow">
-          {t('dueDeck')}
-        </h2>
-        {due > 0 ? (
-          <>
-            <p className="due-count">{t('dueCount', { n: due })}</p>
-            <a className="button" href={deckHref(DUE_DECK)}>
-              {t('reviewNow')}
-            </a>
-          </>
-        ) : (
-          <p className="muted">{t('dueDeckEmpty')}</p>
-        )}
-        {counts && counts.studying > 0 && (
-          <p className="muted small" data-testid="words-known">
-            {t('wordsKnownLine', { known: counts.known, studying: counts.studying })}
-          </p>
-        )}
-      </section>
+      {due > 0 ? (
+        <section className="hero due-card" aria-labelledby="due-heading">
+          <h2 id="due-heading" className="eyebrow">
+            {t('dueDeck')}
+          </h2>
+          <p className="due-count">{t('dueCount', { n: due })}</p>
+          <a className="button" href={deckHref(DUE_DECK)}>
+            {t('reviewNow')}
+          </a>
+          {counts && counts.studying > 0 && (
+            <p className="small" data-testid="words-known">
+              {t('wordsKnownLine', { known: counts.known, studying: counts.studying })}
+            </p>
+          )}
+        </section>
+      ) : (
+        <>
+          {nextDeck}
+          {counts && counts.studying > 0 && (
+            <p className="muted small words-known" data-testid="words-known">
+              {t('dueDeckEmpty')}{' '}
+              {t('wordsKnownLine', { known: counts.known, studying: counts.studying })}
+            </p>
+          )}
+        </>
+      )}
 
       {profile && (
         <section className="my-job" aria-labelledby="my-job-heading">
@@ -104,33 +155,61 @@ export function Words() {
           ) : (
             <>
               <p className="muted">{t('myJobIntro')}</p>
-              <div className="chips" role="group" aria-label={t('myJob')}>
+              <ul className="deck-list job-list" aria-label={t('myJob')}>
                 {JOB_FIELDS.map((option) => (
-                  <button
-                    key={option}
-                    type="button"
-                    className="chip"
-                    aria-pressed={option === field}
-                    onClick={() => void choose(option)}
-                  >
-                    {t(`field_${option}`)}
-                  </button>
+                  <li key={option}>
+                    <button
+                      type="button"
+                      className="deck-row"
+                      aria-pressed={option === field}
+                      onClick={() => void choose(option)}
+                    >
+                      <span className="deck-row-main">
+                        <strong>{t(`field_${option}`)}</strong>
+                        <span className="muted small">
+                          {t('deckWords', { total: jobDeck(option)?.cards.length ?? 0 })}
+                        </span>
+                      </span>
+                      {CHEVRON}
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </>
           )}
         </section>
       )}
 
-      <h2 className="section-title">{t('decks')}</h2>
-      <ul className="deck-list">
-        <li>
-          <AlphabetRow />
-        </li>
-        {general.map((deck) => (
-          <li key={deckId(deck)}>{row(deck)}</li>
-        ))}
-      </ul>
+      <div className="section-head">
+        <h2 className="section-title">{t('decks')}</h2>
+        <a href={alphabetHref}>{t('alphabet')}</a>
+      </div>
+      <div className="deck-groups">
+        {groups.map((group) => {
+          const started = group.decks.filter((deck) => studiedIn(deck) > 0).length;
+          return (
+            <details
+              key={group.level}
+              className="deck-group"
+              open={group.level === openLevel}
+              data-testid={`deck-group-${group.level}`}
+            >
+              <summary>
+                <span className="badge">{group.level}</span>
+                <span>{t('deckGroupCount', { n: group.decks.length })}</span>
+                {started > 0 && (
+                  <span className="muted small">{t('deckGroupStarted', { n: started })}</span>
+                )}
+              </summary>
+              <ul className="deck-list">
+                {group.decks.map((deck) => (
+                  <li key={deckId(deck)}>{row(deck, false)}</li>
+                ))}
+              </ul>
+            </details>
+          );
+        })}
+      </div>
     </>
   );
 }

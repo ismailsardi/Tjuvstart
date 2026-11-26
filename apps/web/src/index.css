@@ -997,7 +997,7 @@ mark.false-friend {
 
 .chip {
   padding: 0.25rem 0.7rem;
-  border-radius: 999px;
+  border-radius: var(--control-radius);
   font-size: 0.85rem;
   font-weight: 600;
   background: var(--accent-soft);
@@ -1498,28 +1498,6 @@ button.link {
   gap: 1rem;
 }
 
-.streak-badge {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  height: 2.25rem;
-  padding: 0 0.8rem;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  font-weight: 700;
-}
-
-.streak-badge svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: none;
-  stroke: var(--warm);
-  stroke-width: 2;
-  stroke-linejoin: round;
-}
-
 .hero {
   display: grid;
   gap: 0.9rem;
@@ -1733,15 +1711,81 @@ button.link {
   stroke-linejoin: round;
 }
 
-.my-job .chips {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
-  scrollbar-width: none;
+.hero .eyebrow {
+  margin: 0;
+  color: rgb(255 255 255 / 85%);
 }
 
-.my-job button.chip {
-  flex: none;
+.hero .badge {
+  color: #fff;
+}
+
+.next-deck .hero-body {
+  margin: -0.4rem 0 0;
+}
+
+.words-known {
+  margin: -0.75rem 0 1.5rem;
+}
+
+/* Deck rows that are buttons, such as the job choices, look like the linked ones. */
+button.deck-row {
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.job-list button[aria-pressed='true'] {
+  background: var(--accent-soft);
+}
+
+/* Decks fold by level; only the learner's own level starts open. */
+.deck-groups {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.deck-group > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0 0.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.deck-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.deck-group > summary::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-inline-start: auto;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 150ms ease-out;
+}
+
+.deck-group[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+.deck-group .deck-list {
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deck-group > summary::after {
+    transition: none;
+  }
 }
 
 /* Listening: a big play button with the slower replay and speed beside it */
@@ -1786,16 +1830,21 @@ button.link {
   font-size: 0.9rem;
 }
 
-.speed-badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.5rem;
-  padding: 0 0.9rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 0.875rem;
-  font-weight: 600;
+.speed-note {
+  font-variant-numeric: tabular-nums;
+}
+
+.mistake-list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+}
+
+.mistake-list li + li {
+  margin-top: 0.25rem;
+}
+
+.stats-empty {
+  margin: 0 0 1rem;
 }
 
 /* Onboarding: one question per screen, big choices, the button under the thumb */
@@ -1993,12 +2042,6 @@ button.danger:not(.link) {
   }
 }
 
-.home-greeting {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
 .home-header {
   align-items: flex-end;
   margin-bottom: -0.35rem;
@@ -2134,21 +2177,6 @@ button.danger:not(.link) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-/* Skill rows waiting for an estimate */
-
-.skill-pending {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.6rem;
-  max-width: 14rem;
-}
-
-.skill-pending progress {
-  flex: 1;
 }
 
 /* A short explanation under an onboarding answer. */
@@ -2660,12 +2688,13 @@ button.danger:not(.link) {
   flex: none;
 }
 
-/* Answers still needed for an estimate: quieter than the level meter, so the two don't read alike. */
-.skill-pending progress::-webkit-progress-value {
-  background: var(--muted);
+/* A skill still waiting for an estimate: same shape as the others, in quieter colours. */
+.skills .pending .level {
+  font-weight: 500;
+  color: var(--muted);
 }
 
-.skill-pending progress::-moz-progress-bar {
+.skills .pending .level-meter-fill {
   background: var(--muted);
 }
 

@@ -1,4 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks';
+import { MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
+import { db } from '../data/db';
 import type { LanguagePack } from '../content/packs';
 import { trackedDescriptors } from '../content/descriptors';
 import {
@@ -13,6 +15,7 @@ import { useI18n } from '../i18n/useI18n';
 import {
   aiHref,
   languagesHref,
+  lessonsHref,
   placementHref,
   wardrobeHref,
   wordsHref,
@@ -36,6 +39,10 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   const canDo = useLiveQuery(() => canDoProgress());
   const words = useLiveQuery(() => wordCounts());
   const troll = useTroll();
+  const hasAnswers = useLiveQuery(async () => (await db.attempts.count()) > 0);
+  const anyEstimate =
+    profile !== undefined &&
+    Object.values(profile.answers).some((n) => n >= MIN_ANSWERS_FOR_ESTIMATE);
   const canDoReached = canDo ? [...canDo.values()].filter((s) => s === 'can-do').length : 0;
   // Only statements that some exercise checks, grouped by level.
   const levels = [...new Set(trackedDescriptors.map((d) => d.level))];
@@ -44,24 +51,39 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
   return (
     <>
       <h1>{t('profile')}</h1>
-      <ul className="stats" data-testid="stats">
-        <li>
-          <span className="stat-value">{words?.known ?? 0}</span>
-          <span className="stat-label">{t('statWordsKnown')}</span>
-        </li>
-        <li>
-          <span className="stat-value">{canDoReached}</span>
-          <span className="stat-label">{t('statCanDo')}</span>
-        </li>
-        <li data-testid="shadowed">
-          <span className="stat-value">{shadowed}</span>
-          <span className="stat-label">{t('statSpoken')}</span>
-        </li>
-      </ul>
+      {hasAnswers || shadowed > 0 || (words?.studying ?? 0) > 0 ? (
+        <ul className="stats" data-testid="stats">
+          <li>
+            <span className="stat-value">{words?.known ?? 0}</span>
+            <span className="stat-label">{t('statWordsKnown')}</span>
+          </li>
+          <li>
+            <span className="stat-value">{canDoReached}</span>
+            <span className="stat-label">{t('statCanDo')}</span>
+          </li>
+          <li data-testid="shadowed">
+            <span className="stat-value">{shadowed}</span>
+            <span className="stat-label">{t('statSpoken')}</span>
+          </li>
+        </ul>
+      ) : (
+        // Three zeros say nothing to a new learner; say what will fill them instead.
+        hasAnswers === false && (
+          <p className="muted stats-empty" data-testid="stats">
+            {t('statsEmpty')} <a href={lessonsHref}>{t('statsEmptyLink')}</a>
+          </p>
+        )
+      )}
       <section className="panel" aria-labelledby="me-level">
         <h2 id="me-level">{t('yourLevel')}</h2>
-        <SkillLevels profile={profile} />
-        <a href={placementHref}>{t('redoPlacement')}</a>
+        {anyEstimate ? (
+          <SkillLevels profile={profile} />
+        ) : (
+          <p className="muted small">{t('levelEmpty', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
+        )}
+        <a href={placementHref}>
+          {profile?.placedAt !== undefined ? t('redoPlacement') : t('takePlacement')}
+        </a>
       </section>
       <section className="panel me-troll" aria-labelledby="me-troll">
         <Tusse pose="rest" outfit={troll.outfit} size={64} />
@@ -98,17 +120,19 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           })}
         </section>
       )}
-      <section className="panel" aria-labelledby="me-mistakes">
-        <h2 id="me-mistakes">{t('recurringMistakes')}</h2>
-        <MistakeList focus={memory?.recurring ?? []} />
-      </section>
+      {hasAnswers && (
+        <section className="panel" aria-labelledby="me-mistakes">
+          <h2 id="me-mistakes">{t('recurringMistakes')}</h2>
+          <MistakeList focus={memory?.recurring ?? []} />
+        </section>
+      )}
       <section className="panel" aria-label={t('languages', { languages: '' })}>
         <p data-testid="languages">
           {t('languages', { languages: languageNames })} · <a href={languagesHref}>{t('change')}</a>
         </p>
         <p data-testid="job-field">
-          {t('myJob')}: {profile?.jobField ? t(`field_${profile.jobField}`) : '–'} ·{' '}
-          <a href={wordsHref}>{t('change')}</a>
+          {t('myJob')}: {profile?.jobField ? t(`field_${profile.jobField}`) : t('jobNotChosen')} ·{' '}
+          <a href={wordsHref}>{profile?.jobField ? t('change') : t('choose')}</a>
         </p>
       </section>
       <SyncPanel />

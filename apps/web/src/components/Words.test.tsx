@@ -19,7 +19,7 @@ describe('Words', () => {
 
     const health = deckId(jobDeck('health')!);
     const it_ = deckId(jobDeck('it')!);
-    await user.click(await screen.findByRole('button', { name: 'Health and care' }));
+    await user.click(await screen.findByRole('button', { name: /^Health and care/ }));
 
     expect(await screen.findByTestId(`deck-${health}`)).toBeTruthy();
     expect(screen.queryByTestId(`deck-${it_}`)).toBeNull();
@@ -27,7 +27,7 @@ describe('Words', () => {
 
     // "Change" brings the choices back.
     await user.click(screen.getByRole('button', { name: 'Change' }));
-    await user.click(screen.getByRole('button', { name: 'IT and software' }));
+    await user.click(screen.getByRole('button', { name: /^IT and software/ }));
     expect(await screen.findByTestId(`deck-${it_}`)).toBeTruthy();
     expect(screen.queryByTestId(`deck-${health}`)).toBeNull();
   });
