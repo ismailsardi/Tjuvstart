@@ -102,6 +102,29 @@ describe('LessonPlayer layout', () => {
     expect(container.querySelector('.glossary')).toBeNull();
   });
 
+  it('does not offer the text on a dictation, since it holds the answer', async () => {
+    const real = getLesson('a2-calling-in-sick');
+    if (!real) throw new Error('Sample lesson missing');
+    const dictation = real.items.find((item) => item.type === 'dictation');
+    if (!dictation?.audio || !real.text?.includes(dictation.audio.replace(/[.!?]$/, ''))) {
+      throw new Error('Expected a dictation whose sentence is in the lesson text');
+    }
+    const { container } = render(
+      <LessonPlayer lesson={{ ...real, id: 'listening-lesson', items: [dictation] }} />,
+    );
+    expect(screen.queryByTestId('text-toggle')).toBeNull();
+    expect(container.querySelector('.reading-text')).toBeNull();
+  });
+
+  it('accepts the whole sentence typed into a gap', async () => {
+    const user = userEvent.setup();
+    render(<LessonPlayer lesson={{ ...lesson, id: 'sentence-lesson' }} />);
+
+    await user.type(screen.getByLabelText('Missing word'), 'Jeg bor i Oslo.');
+    await user.click(screen.getByRole('button', { name: 'Check' }));
+    expect((await screen.findByRole('status')).className).toContain('good');
+  });
+
   it('repeats a wrong typed answer in the feedback', async () => {
     const user = userEvent.setup();
     render(<LessonPlayer lesson={{ ...lesson, id: 'given-lesson' }} />);
