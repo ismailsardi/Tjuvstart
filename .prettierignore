@@ -4,3 +4,6 @@ coverage
 playwright-report
 test-results
 tools
+# Native projects: Xcode writes these files in its own style
+apps/web/ios
+apps/web/android
