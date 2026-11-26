@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type AnimationEvent } from 'react';
 import type { TusseRig } from './tusse/rig';
 import type { Outfit } from './outfits';
-import { layerFiles, layerUrl, outfitKey } from './tusse/layers';
+import { hatStillFile, layerFiles, layerUrl, outfitKey } from './tusse/layers';
 import { PAD, RIG } from './tusse/rigData';
 
 /**
@@ -112,9 +112,19 @@ function Still({
   const back = layerFiles(outfit, pose, 'back');
   const front = [...layerFiles(outfit, pose, 'body'), ...layerFiles(outfit, pose, 'head')];
   const base = import.meta.env.BASE_URL;
+  // Under a hat, a copy of the still without the hair that would poke through it.
+  const hatStill = hatStillFile(outfit, pose);
   const img = (
     <img
-      src={artUrl(pose)}
+      src={hatStill ? layerUrl(base, hatStill) : artUrl(pose)}
+      onError={
+        hatStill
+          ? (e) => {
+              const el = e.currentTarget;
+              if (!el.src.endsWith(artUrl(pose))) el.src = artUrl(pose);
+            }
+          : undefined
+      }
       alt=""
       aria-hidden="true"
       draggable={false}

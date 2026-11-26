@@ -24,7 +24,7 @@ def head_frame(x, y, z, cx, cy, tilt):
 def lue(P):
     cx, cy, rx, tilt = P['head']
     k = rx / 166
-    ry, rz = 165 * k, 128 * k
+    ry, rz = 132 * k, 128 * k
 
     def sdf(x, y, z):
         u, v, w = head_frame(x, y, z, cx, cy, tilt)
@@ -38,8 +38,8 @@ def lue(P):
         q2 = np.abs(v + 2 * k) - 22 * k
         band = length(np.maximum(q1, 0), np.maximum(q2, 0)) + np.minimum(np.maximum(q1, q2), 0) - 12 * k
         band = band - 2.2 * k * (0.5 + 0.5 * np.cos(th * 40))
-        py = -ry - 8 * k
-        pr = length(u, v - py, w) - 44 * k
+        py = -ry + 10 * k  # the pompom sits snug in the crown
+        pr = length(u, v - py, w) - 38 * k
         pr = pr - 3.0 * k * (np.sin(u * 0.18 / k + 1) * np.sin(v * 0.18 / k) * np.sin(w * 0.18 / k + 2))
         d = smin(dome, band, 5 * k)
         mat = np.where(band < dome, 1, 0)
@@ -122,47 +122,75 @@ def helmet(P):
 
 
 # ---------------------------------------------------------------- round glasses
-def glasses(P):
+def nose_of(img, eyes):
+    """The nose between and below the eyes: a soft mask and the top centre point."""
+    from masks import hsv
+    from scipy import ndimage as ndi
+    h, s, v, al, _ = hsv(img)
+    (lx, ly, lrx, lry), (rx_, ry_, rrx, rry) = eyes
+    H, W = h.shape
+    yy, xx = np.mgrid[0:H, 0:W]
+    region = (xx > min(lx, rx_) - 40) & (xx < max(lx, rx_) + 40) \
+        & (yy > min(ly - lry, ry_ - rry)) & (yy < max(ly + lry, ry_ + rry) + 50)
+    orange = ((h < 32) | (h > 350)) & (s > 0.45) & (v > 0.55) & (al > 0.5) & region
+    lab, n = ndi.label(orange)
+    if not n:
+        return np.zeros((H, W)), None
+    sizes = ndi.sum(orange, lab, range(1, n + 1))
+    m = lab == 1 + int(np.argmax(sizes))
+    m = ndi.binary_closing(m, iterations=3)
+    m = ndi.binary_fill_holes(m)
+    ys, xs = np.nonzero(m)
+    top = ys.min()
+    cx = xs[ys < top + 12].mean()
+    return ndi.gaussian_filter(m.astype(float), 0.8), (cx, top)
+
+
+def glasses(P, img=None):
+    """Round glasses: the lenses frame the eyes, the nose stays in front of the rims, and the
+    bridge rests on top of the nose."""
     (lx, ly, lrx, lry), (rx_, ry_, rrx, rry) = P['eyes']
     tilt = P['head'][3]
     t = np.radians(tilt)
+    c, s = np.cos(t), np.sin(t)
     pad = 14
     th = 7.5
+    nose, top = nose_of(img, P['eyes']) if img is not None else (None, None)
 
     def ring(x, y, z, cx, cy, ax, ay):
         dx, dy = x - cx, y - cy
-        c, s = np.cos(t), np.sin(t)
         u, v = dx * c + dy * s, -dx * s + dy * c
-        # elliptical ring of tube radius th, in the z=0 plane
         a, b = ax + pad, ay + pad
         q = length(u / a, v / b)
         dr = (q - 1) * min(a, b)
         return length(dr, z) - th
 
     zc = 60
+    # inner and outer rim points
+    ax_, ay_ = lx + (lrx + pad) * c, ly + (lrx + pad) * s
+    bx_, by_ = rx_ - (rrx + pad) * c, ry_ - (rrx + pad) * s
+    ox1, oy1 = lx - (lrx + pad) * c, ly - (lrx + pad) * s
+    ox2, oy2 = rx_ + (rrx + pad) * c, ry_ + (rrx + pad) * s
 
-    def sdf(x, y, z):
+    def rims(x, y, z):
         zz = z - zc
         d1 = ring(x, y, zz, lx, ly, lrx, lry)
         d2 = ring(x, y, zz, rx_, ry_, rrx, rry)
-        # bridge: arc between inner edges, above the nose
-        c, s = np.cos(t), np.sin(t)
-        ax_ = lx + (lrx + pad) * c
-        ay_ = ly + (lrx + pad) * s
-        bx_ = rx_ - (rrx + pad) * c
-        by_ = ry_ - (rrx + pad) * s
-        mx, my = (ax_ + bx_) / 2 + 0 * s, (ay_ + by_) / 2 - 20
-        br = np.minimum(capsule(x, y, zz, (ax_, ay_ - 8, 0), (mx, my, 4), th * 0.85),
-                        capsule(x, y, zz, (mx, my, 4), (bx_, by_ - 8, 0), th * 0.85))
-        # arms: from outer edges back toward the ears
-        ox1 = lx - (lrx + pad) * c
-        oy1 = ly - (lrx + pad) * s
-        ox2 = rx_ + (rrx + pad) * c
-        oy2 = ry_ + (rrx + pad) * s
         a1 = capsule(x, y, zz, (ox1, oy1 - 6, 0), (ox1 - 26, oy1 - 10, -60), th * 0.7)
         a2 = capsule(x, y, zz, (ox2, oy2 - 6, 0), (ox2 + 26, oy2 - 10, -60), th * 0.7)
-        d = np.minimum(np.minimum(d1, d2), smin(br, np.minimum(a1, a2), 3))
-        d = smin(d, np.minimum(d1, d2), 4)
+        d = smin(np.minimum(d1, d2), np.minimum(a1, a2), 3)
+        return d, np.zeros_like(d)
+
+    if top is not None:
+        mx, my = top[0], top[1] + 6
+    else:
+        mx, my = (ax_ + bx_) / 2, (ay_ + by_) / 2 - 20
+
+    def bridge(x, y, z):
+        zz = z - zc
+        # a low arch from rim to rim, resting on the top of the nose
+        d = np.minimum(capsule(x, y, zz, (ax_, ay_ - 4, 0), (mx, my, 30), th * 0.85),
+                       capsule(x, y, zz, (mx, my, 30), (bx_, by_ - 4, 0), th * 0.85))
         return d, np.zeros_like(d)
 
     def color(m, *_):
@@ -170,9 +198,13 @@ def glasses(P):
 
     x0 = min(lx - lrx, rx_ - rrx) - 90
     x1 = max(lx + lrx, rx_ + rrx) + 90
-    y0 = min(ly - lry, ry_ - ry_ * 0 - rry) - 80
+    y0 = min(ly - lry, ry_ - rry) - 80
     y1 = max(ly + lry, ry_ + rry) + 50
-    return render(sdf, color, (x0, y0, x1, y1), zmax=200)
+    out = render(rims, color, (x0, y0, x1, y1), zmax=200)
+    if nose is not None:
+        out = out * (1 - nose[..., None])
+    br = render(bridge, color, (x0, y0, x1, y1), zmax=200)
+    return br + out * (1 - br[..., 3:4])
 
 
 # ---------------------------------------------------------------- knitted scarf

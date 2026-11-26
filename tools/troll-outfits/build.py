@@ -20,7 +20,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sdf import over, to_image, from_image  # noqa: E402
 import items  # noqa: E402
 import recolor  # noqa: E402
-from poses import POSES  # noqa: E402
+from poses import FIT, POSES  # noqa: E402
+from masks import classes  # noqa: E402
+from items import head_frame  # noqa: E402
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 ART = os.path.join(ROOT, 'apps', 'web', 'public', 'troll', 'rig')
@@ -51,6 +53,59 @@ def with_pupils(pose, base):
     return np.clip(out, 0, 1)
 
 
+def hair_of(img):
+    """The hair: the highest large navy shape (brows and feet are separate shapes)."""
+    _, navy, *_ = classes(img)
+    lab, n = ndi.label(navy)
+    best, best_y = None, 1e9
+    for i in range(1, n + 1):
+        ys, xs = np.nonzero(lab == i)
+        if len(ys) > 3000 and ys.mean() < best_y:
+            best, best_y = lab == i, ys.mean()
+    return best
+
+
+def hair_cut(P, hair, hat):
+    """Hair that would stick out above and around a hat: cut from the art while it is worn.
+    Hair below the brim stays, peeking out like it would."""
+    cx, cy, rx, tilt = P['head']
+    H, W = hair.shape
+    yy, xx = np.mgrid[0:H, 0:W].astype(float)
+    _, v, _ = head_frame(xx, yy, 0, cx, cy, tilt)
+    cut = hair & (hat[..., 3] < 0.6) & (v < 20 * rx / 166)
+    cut = ndi.binary_dilation(cut, iterations=2) & ndi.binary_dilation(hair, iterations=2)
+    return ndi.gaussian_filter(cut.astype(float), 0.7)
+
+
+def to_still(mask, pose):
+    """A mask in the rig art's space, moved to the still's (scaled for rest and wave, 400 x 440)."""
+    img = Image.fromarray((mask * 255).astype(np.uint8))
+    if pose in FIT:
+        sx, sy, cx, tx = FIT[pose]
+        K = 2
+        img = img.transform(img.size, Image.AFFINE,
+                            (1 / sx, 0, cx * K - tx * K / sx, 0, 1 / sy, 425 * K - 425 * K / sy),
+                            Image.BICUBIC)
+    return np.asarray(img.resize((400, 440), Image.LANCZOS)).astype(float) / 255
+
+
+def save_hat_extras(pose, P, img, hats, out):
+    """For each hat, the hair to cut (rig) and the still without that hair."""
+    hair = hair_of(img)
+    if hair is None:
+        return
+    still = Image.open(os.path.join(ART, '..', f'tusse-{pose}.webp')).convert('RGBA')
+    for name, hat in hats.items():
+        cut = hair_cut(P, hair, hat)
+        m = np.zeros(cut.shape + (4,), np.uint8)
+        m[..., 3] = (cut * 255).round().astype(np.uint8)
+        Image.fromarray(m, 'RGBA').save(os.path.join(out, f'{pose}-{name}-cut.png'), optimize=True)
+        s = np.asarray(still).astype(float)
+        s[..., 3] *= 1 - to_still(cut, pose)
+        Image.fromarray(s.round().astype(np.uint8), 'RGBA').save(
+            os.path.join(out, f'{pose}-{name}-still.webp'), 'WEBP', quality=90, method=6)
+
+
 def layers_for(pose):
     P = POSES[pose]
     img = Image.open(os.path.join(ART, f'{pose}.webp'))
@@ -58,7 +113,7 @@ def layers_for(pose):
     L = {
         'lue': shadow(items.lue(P), base),
         'helmet': shadow(items.helmet(P), base),
-        'glasses': shadow(items.glasses(P), base, dy=6, blur=4, strength=0.25),
+        'glasses': shadow(items.glasses(P, img), base, dy=6, blur=4, strength=0.25),
     }
     if P['scarf']:
         # The back of the scarf only shows where the body doesn't cover it.
@@ -100,13 +155,20 @@ def main():
     rows = []
     for pose in args.poses.split(','):
         base, L = layers_for(pose)
+        save_hat_extras(pose, POSES[pose], Image.open(os.path.join(ART, f'{pose}.webp')),
+                        {k: L[k] for k in ('lue', 'helmet')}, args.out)
         for k, v in L.items():
             to_image(v).save(os.path.join(args.out, f'{pose}-{k}.webp'), 'WEBP',
                              quality=88, alpha_quality=90, method=6)
         if args.sheet:
             row = []
+            hair = hair_of(Image.open(os.path.join(ART, f'{pose}.webp')))
             for look in LOOKS:
-                d = over(dress(with_pupils(pose, base), L, look), np.ones_like(base))
+                b0 = with_pupils(pose, base)
+                hat = next((h for h in ('lue', 'helmet') if h in look), None)
+                if hat and hair is not None:
+                    b0 = b0 * (1 - hair_cut(POSES[pose], hair, L[hat]))[..., None]
+                d = over(dress(b0, L, look), np.ones_like(base))
                 row.append(to_image(d).convert('RGB').resize((400, 440), Image.LANCZOS))
             rows.append(row)
         print(pose, 'done', flush=True)

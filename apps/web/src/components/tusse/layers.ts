@@ -38,6 +38,25 @@ export function layerFiles(outfit: Outfit, pose: TussePose, group: LayerGroup): 
     .map((item) => `${pose}-${item}${group === 'back' ? '-back' : ''}.webp`);
 }
 
+/** Hats, which hide the hair: while one is worn, the hair that would poke through is cut away. */
+const HATS: readonly ItemId[] = ['lue', 'helmet'];
+
+function hatOf(outfit: Outfit): ItemId | undefined {
+  return HATS.find((hat) => SLOTS.some((slot) => outfit[slot] === hat));
+}
+
+/** The mask of hair to cut from the rig's art under the hat worn, if any. */
+export function hairCutFile(outfit: Outfit, pose: TussePose): string | undefined {
+  const hat = hatOf(outfit);
+  return hat && `${pose}-${hat}-cut.png`;
+}
+
+/** The still with that hair already cut, if a hat is worn. */
+export function hatStillFile(outfit: Outfit, pose: TussePose): string | undefined {
+  const hat = hatOf(outfit);
+  return hat && `${pose}-${hat}-still.webp`;
+}
+
 export function layerUrl(base: string, file: string): string {
   return `${base}troll/rig/outfit/${file}`;
 }

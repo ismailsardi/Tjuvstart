@@ -1,6 +1,6 @@
 import type { TussePose } from '../Tusse';
 import type { Outfit } from '../outfits';
-import { GROUPS, layerFiles, layerUrl, outfitKey, type LayerGroup } from './layers';
+import { GROUPS, hairCutFile, layerFiles, layerUrl, outfitKey, type LayerGroup } from './layers';
 import { PAD, RIG } from './rigData';
 
 /**
@@ -201,12 +201,19 @@ function loadLayer(base: string, file: string): Promise<HTMLImageElement> {
   return p;
 }
 
-/** One pose's clothes, flattened into one image per group. */
-type Dressing = Partial<Record<LayerGroup, HTMLCanvasElement>>;
+/** One pose's clothes, flattened into one image per group, and the hair a hat hides. */
+type Dressing = Partial<Record<LayerGroup, HTMLCanvasElement>> & { cut?: HTMLImageElement };
 async function loadDressing(base: string, pose: TussePose, outfit: Outfit): Promise<Dressing> {
   const out: Dressing = {};
-  await Promise.all(
-    GROUPS.map(async (group) => {
+  const cutFile = hairCutFile(outfit, pose);
+  await Promise.all([
+    cutFile &&
+      loadLayer(base, cutFile).then(
+        (img) => void (out.cut = img),
+        // Without the mask a strand of hair may show above the hat, which is better than no hat.
+        () => undefined,
+      ),
+    ...GROUPS.map(async (group) => {
       const files = layerFiles(outfit, pose, group);
       if (!files.length) return;
       // A piece that fails to load is left off rather than holding up the pose.
@@ -221,8 +228,21 @@ async function loadDressing(base: string, pose: TussePose, outfit: Outfit): Prom
       for (const img of imgs) ctx.drawImage(img, 0, 0);
       out[group] = c;
     }),
-  );
+  ]);
   return out;
+}
+
+/** The pose's art with the hair under a hat cut away. */
+function cutArt(art: HTMLImageElement, cut: HTMLImageElement): HTMLCanvasElement {
+  const c = document.createElement('canvas');
+  c.width = art.naturalWidth;
+  c.height = art.naturalHeight;
+  const ctx = c.getContext('2d');
+  if (!ctx) throw new Error('No 2D canvas');
+  ctx.drawImage(art, 0, 0);
+  ctx.globalCompositeOperation = 'destination-out';
+  ctx.drawImage(cut, 0, 0, c.width, c.height);
+  return c;
 }
 
 /**
@@ -330,6 +350,8 @@ export async function createTusseRig(
     eyes?: [WebGLTexture | null, WebGLTexture | null];
     /** The clothes this pose is dressed in, and for which outfit. */
     dressed: string;
+    /** The hair mask the art texture was cut with, if any. */
+    cut?: HTMLImageElement;
     layers: Partial<Record<LayerGroup, GpuLayer>>;
   }
   const gpu = new Map<TussePose, GpuPose>();
@@ -356,6 +378,11 @@ export async function createTusseRig(
     }
     if (g.dressed === key) return;
     dropLayers(g);
+    if (g.cut !== d.cut) {
+      gl.deleteTexture(g.tex);
+      g.tex = texture(d.cut ? cutArt(a.art, d.cut) : a.art, true);
+      g.cut = d.cut;
+    }
     for (const group of GROUPS) {
       const c = d[group];
       if (!c) continue;

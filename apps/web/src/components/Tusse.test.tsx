@@ -59,11 +59,20 @@ describe('Tusse dressed', () => {
     const box = dressed(container);
     expect(box.classList).toContain('tusse-art');
     expect(box.getAttribute('aria-hidden')).toBe('true');
+    // Under the hat, the still without the hair that would poke through it.
     expect(box.querySelector('img:not(.tusse-layer)')!.getAttribute('src')).toMatch(
-      /tusse-thumbs\.webp$/,
+      /outfit\/thumbs-lue-still\.webp$/,
     );
     // Body pieces first, the hat on top.
     expect(layers(container)).toEqual(['thumbs-scarf.webp', 'thumbs-lue.webp']);
+  });
+
+  it('falls back to the plain still if the hat copy is missing', () => {
+    const { container } = render(<Tusse pose="cheer" outfit={{ head: 'helmet' }} />);
+    const base = dressed(container).querySelector('img:not(.tusse-layer)') as HTMLImageElement;
+    expect(base.getAttribute('src')).toMatch(/cheer-helmet-still\.webp$/);
+    fireEvent.error(base);
+    expect(base.getAttribute('src')).toMatch(/tusse-cheer\.webp$/);
   });
 
   it('hangs the cape behind the body', () => {
