@@ -337,4 +337,28 @@ export const es: Record<StringKey, string> = {
   earnedForLevel: 'Una de tus destrezas ha llegado a {level}.',
   earnedForStreak: 'Por una racha de {n} días. Es tuya para siempre.',
   trackShowLessons: 'Las {n} lecciones',
+  reminderTitle: 'Recordatorio diario',
+  reminderIntro:
+    'Una notificación al día, a la hora que elijas. Los días en que ya hayas practicado se omiten.',
+  reminderOn: 'Recordarme practicar',
+  reminderTime: 'Hora',
+  reminderBlocked:
+    'Las notificaciones están desactivadas para Tjuvstart. Puedes activarlas en Ajustes › Tjuvstart › Notificaciones.',
+  reminderOfferTitle: '¿Un recordatorio mañana?',
+  reminderOfferBody:
+    'Tjuvstart puede recordártelo a las {time} los días en que aún no hayas practicado.',
+  reminderOfferYes: 'Recordármelo a las {time}',
+  reminderOfferNo: 'Ahora no',
+  reminderSet:
+    'Listo. Recibirás un recordatorio a las {time} los días en que no hayas practicado. Puedes cambiarlo en Meta diaria.',
+  reminderStreak: 'Tu racha de {n} días te espera. Unos minutos hoy bastan para mantenerla.',
+  reminderStreakFirst: 'Ayer fue el primer día. Practica hoy y ya serán dos.',
+  reminderStreakAtRisk:
+    'Ayer no practicaste, así que hoy cuenta. Unos minutos bastan para mantener tu racha.',
+  reminderKeep: 'Mantén tu racha. La práctica de hoy solo lleva unos minutos.',
+  reminderStart0: '¿Cinco minutos de noruego? La sesión de hoy está lista.',
+  reminderStart1: '{name} ha preparado café. Las palabras de hoy te esperan.',
+  reminderStart2: 'Poco y a menudo es lo que funciona. La práctica de hoy está lista.',
+  reminderLast:
+    'Este es el último recordatorio por ahora. {name} estará aquí cuando quieras retomar el noruego.',
 };

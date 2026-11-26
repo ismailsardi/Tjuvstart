@@ -340,4 +340,28 @@ export const de: Record<StringKey, string> = {
   earnedForLevel: 'Eine deiner Fertigkeiten hat {level} erreicht.',
   earnedForStreak: 'Für eine Serie von {n} Tagen. Das bleibt deins.',
   trackShowLessons: 'Die {n} Lektionen',
+  reminderTitle: 'Tägliche Erinnerung',
+  reminderIntro:
+    'Eine Mitteilung am Tag, zu der Uhrzeit, die du wählst. Tage, an denen du schon geübt hast, werden übersprungen.',
+  reminderOn: 'Ans Üben erinnern',
+  reminderTime: 'Uhrzeit',
+  reminderBlocked:
+    'Mitteilungen sind für Tjuvstart ausgeschaltet. Du kannst sie unter Einstellungen › Tjuvstart › Mitteilungen einschalten.',
+  reminderOfferTitle: 'Morgen eine kleine Erinnerung?',
+  reminderOfferBody:
+    'Tjuvstart kann dich um {time} erinnern, an Tagen, an denen du noch nicht geübt hast.',
+  reminderOfferYes: 'Um {time} erinnern',
+  reminderOfferNo: 'Jetzt nicht',
+  reminderSet:
+    'Erledigt. Du bekommst um {time} eine Erinnerung, wenn du an dem Tag noch nicht geübt hast. Ändern kannst du das unter Tagesziel.',
+  reminderStreak: 'Deine {n}-Tage-Serie wartet. Ein paar Minuten heute halten sie am Laufen.',
+  reminderStreakFirst: 'Gestern war Tag eins. Übe heute, dann sind es zwei.',
+  reminderStreakAtRisk:
+    'Gestern hast du ausgesetzt, also zählt heute. Ein paar Minuten retten deine Serie.',
+  reminderKeep: 'Halte deine Serie am Laufen. Die Übung für heute dauert nur ein paar Minuten.',
+  reminderStart0: 'Fünf Minuten Norwegisch? Die Übung für heute ist bereit.',
+  reminderStart1: '{name} hat Kaffee gekocht. Die Wörter für heute warten auf dich.',
+  reminderStart2: 'Wenig, aber regelmäßig: So klappt es. Die Übung für heute ist bereit.',
+  reminderLast:
+    'Das ist vorerst die letzte Erinnerung. {name} ist da, wann immer du mit Norwegisch weitermachen willst.',
 };
