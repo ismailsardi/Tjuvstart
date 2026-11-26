@@ -210,7 +210,15 @@
         "fixed-expressions",
         "sounds-spelling",
         "numbers",
-        "verb-past"
+        "verb-past",
+        "adjective-agreement",
+        "possessives",
+        "comparison",
+        "reflexive",
+        "passive",
+        "future",
+        "relative-clause",
+        "prepositions"
       ]
     }
   }
