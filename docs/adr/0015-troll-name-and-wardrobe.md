@@ -23,5 +23,5 @@ Rewards for streaks sit close to what [ADR 0012](0012-motivation-without-points.
 ## Consequences
 
 - The streak gets a reward without becoming a threat, which keeps ADR 0012 intact.
-- All art is inline SVG in `Tusse.tsx`, drawn for one 200 × 220 box. The idle animations pivot on points in that box, so items must not cover the ear and tail roots or the eyes.
-- Adding an item means drawing it, adding it to `ITEMS` in `outfits.ts`, and adding its name and "got" line in the four interface languages.
+- Since the troll moved to illustrated, rigged art, each item is a set of image layers, one per pose, rendered by `tools/troll-outfits` in the same soft 3D style and stacked on the pose (on the still, and in the rig as extra layers that follow the body or the head). The old inline SVG troll is gone.
+- Adding an item means rendering its layers (see `tools/troll-outfits/README.md`), adding it to `ITEMS` in `outfits.ts`, and adding its name and "got" line in the interface languages.

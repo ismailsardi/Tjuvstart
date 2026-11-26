@@ -1,12 +1,8 @@
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { DrawnTusse, Tusse } from './Tusse';
+import { Tusse } from './Tusse';
 
 afterEach(cleanup);
-
-function svg(container: HTMLElement) {
-  return container.querySelector('svg.tusse') as SVGSVGElement;
-}
 
 describe('Tusse', () => {
   const art = (container: HTMLElement) =>
@@ -36,47 +32,65 @@ describe('Tusse', () => {
     expect(art(container).classList).not.toContain('tusse-idle');
   });
 
-  it('switches to the drawn troll while the learner wears an outfit item', () => {
-    const { container } = render(<Tusse pose="wave" outfit={{ neck: 'scarf' }} />);
-    expect(art(container)).toBeNull();
-    expect(container.querySelector('svg.tusse')).not.toBeNull();
-  });
-});
-
-describe('DrawnTusse idle movements', () => {
-  it('idles by default and can be kept still', () => {
-    const { container, rerender } = render(<DrawnTusse />);
-    expect(svg(container).classList).toContain('tusse-idle');
-    rerender(<DrawnTusse idle={false} />);
-    expect(svg(container).classList).not.toContain('tusse-idle');
-  });
-
-  it('stays hidden from assistive technology', () => {
-    const { container } = render(<DrawnTusse pose="coffee" />);
-    expect(svg(container).getAttribute('aria-hidden')).toBe('true');
-  });
-
-  it('hops on a tap and settles when the hop ends', () => {
-    const { container } = render(<DrawnTusse />);
-    fireEvent.pointerDown(svg(container));
-    expect(svg(container).classList).toContain('tusse-hopping');
-
+  it('settles after a hop ends', () => {
+    const { container } = render(<Tusse />);
+    fireEvent.pointerDown(art(container));
     // jsdom has no AnimationEvent, so React listens for the prefixed name there.
     const end = new Event('webkitAnimationEnd', { bubbles: true });
     Object.assign(end, { animationName: 'tusse-hop' });
     act(() => {
-      svg(container).dispatchEvent(end);
+      art(container).dispatchEvent(end);
     });
-    expect(svg(container).classList).not.toContain('tusse-hopping');
+    expect(art(container).classList).not.toContain('tusse-hopping');
+  });
+});
+
+describe('Tusse dressed', () => {
+  const dressed = (container: HTMLElement) =>
+    container.querySelector('.tusse-dressed') as HTMLElement;
+  const layers = (container: HTMLElement) =>
+    [...container.querySelectorAll('img.tusse-layer')].map((img) =>
+      img.getAttribute('src')!.replace(/^.*\/outfit\//, ''),
+    );
+
+  it('stacks the outfit pieces over the illustrated pose instead of switching to a drawing', () => {
+    const { container } = render(<Tusse pose="thumbs" outfit={{ neck: 'scarf', head: 'lue' }} />);
+    expect(container.querySelector('svg')).toBeNull();
+    const box = dressed(container);
+    expect(box.classList).toContain('tusse-art');
+    expect(box.getAttribute('aria-hidden')).toBe('true');
+    expect(box.querySelector('img:not(.tusse-layer)')!.getAttribute('src')).toMatch(
+      /tusse-thumbs\.webp$/,
+    );
+    // Body pieces first, the hat on top.
+    expect(layers(container)).toEqual(['thumbs-scarf.webp', 'thumbs-lue.webp']);
   });
 
-  it('closes its eyes happily on a coffee sip, and only with coffee', () => {
-    const coffee = render(<DrawnTusse pose="coffee" />);
-    expect(coffee.container.querySelector('.tusse-sip-happy')).not.toBeNull();
-    expect(coffee.container.querySelector('.tusse-cup')).not.toBeNull();
+  it('hangs the cape behind the body', () => {
+    const { container } = render(<Tusse pose="cheer" outfit={{ back: 'cape', eyes: 'glasses' }} />);
+    const imgs = [...dressed(container).querySelectorAll('img')].map((img) =>
+      img.getAttribute('src')!.replace(/^.*\//, ''),
+    );
+    expect(imgs).toEqual([
+      'cheer-cape-back.webp',
+      'tusse-cheer.webp',
+      'cheer-cape.webp',
+      'cheer-glasses.webp',
+    ]);
+  });
+
+  it('tucks the scarf away while asleep and uses the cape as a blanket', () => {
+    const { container } = render(<Tusse pose="sleep" outfit={{ neck: 'scarf', back: 'cape' }} />);
+    expect(layers(container)).toEqual(['sleep-cape.webp']);
+  });
+
+  it('scales the pieces like the rig does for the wider rest pose', () => {
+    const { container } = render(<Tusse pose="rest" outfit={{ feet: 'slippers' }} />);
+    const layer = container.querySelector('img.tusse-layer') as HTMLImageElement;
+    expect(layer.style.transform).toMatch(/scale\(0\.86, 1\.035\)/);
     cleanup();
-    const rest = render(<DrawnTusse pose="rest" />);
-    expect(rest.container.querySelector('.tusse-sip-happy')).toBeNull();
-    expect(rest.container.querySelector('.tusse-eyes')).not.toBeNull();
+    const thumbs = render(<Tusse pose="thumbs" outfit={{ feet: 'slippers' }} />);
+    const plain = thumbs.container.querySelector('img.tusse-layer') as HTMLImageElement;
+    expect(plain.style.transform).toBe('');
   });
 });
