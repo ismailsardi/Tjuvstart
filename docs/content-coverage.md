@@ -37,7 +37,8 @@ dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage conte
 | Health and safety rules (HMS), fire drill, reporting injuries | B1    | `b1-safety`            | covered |
 | Asking for holiday, out-of-office reply                       | B1    | `b1-holiday-request`   | covered |
 | Handling a customer on the phone                              | B1    | `b1-customer-call`     | covered |
-| Christmas party and other workplace traditions                | B1    |                        | **gap** |
+| Losing your job: notice and unemployment benefit              | B1    |                        | **gap** |
+| Christmas party and other workplace traditions                | B1    | `b1-christmas-party`   | covered |
 
 ### Public services and paperwork
 
@@ -49,23 +50,24 @@ dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage conte
 | GP appointment                                       | A2    | `a2-doctor`          | covered |
 | Pharmacy                                             | A2    | `a2-pharmacy`        | covered |
 | Emergencies: 113 and the emergency clinic (legevakt) | A2    | `a2-emergency`       | covered |
-| Dentist                                              | A2    |                      | **gap** |
-| Reporting a move to the National Registry            | A2    |                      | **gap** |
+| Dentist                                              | A2    | `a2-dentist`         | covered |
+| Reporting a move to the National Registry            | A2    | `a2-moving-notice`   | covered |
 | Kindergarten place                                   | B1    | `b1-kindergarten`    | covered |
 | Tax return (skattemeldingen)                         | B1    | `b1-tax-return`      | covered |
 | Parent meeting at school                             | B1    | `b1-parents-meeting` | covered |
-| Parental leave                                       | B1    |                      | **gap** |
+| Parental leave                                       | B1    | `b1-parental-leave`  | covered |
+| Exchanging a foreign driving licence                 | B1    |                      | **gap** |
 
 ### Home
 
-| Situation                               | Level | Lessons             | Status  |
-| --------------------------------------- | ----- | ------------------- | ------- |
-| Renting a flat                          | A2    | `a2-renting-a-flat` | covered |
-| Housing association notice, dugnad      | A2    | `a2-dugnad`         | covered |
-| Sorting rubbish and recycling           | A2    | `a2-recycling`      | covered |
-| Mobile and broadband subscription       | A2    |                     | **gap** |
-| Writing to the landlord about a problem | B1    | `b1-landlord-email` | covered |
-| A neighbour complains about noise       | B1    |                     | **gap** |
+| Situation                               | Level | Lessons              | Status  |
+| --------------------------------------- | ----- | -------------------- | ------- |
+| Renting a flat                          | A2    | `a2-renting-a-flat`  | covered |
+| Housing association notice, dugnad      | A2    | `a2-dugnad`          | covered |
+| Sorting rubbish and recycling           | A2    | `a2-recycling`       | covered |
+| Mobile subscription                     | A2    | `a2-phone-plan`      | covered |
+| Writing to the landlord about a problem | B1    | `b1-landlord-email`  | covered |
+| A neighbour complains about noise       | B1    | `b1-noise-complaint` | covered |
 
 ### Everyday life
 
@@ -93,7 +95,7 @@ dotnet run --project tools/ContentCli/src/Tjuvstart.ContentCli -- coverage conte
 | 17 May, the national day                             | B1    | `b1-national-day`                  | covered |
 | Outdoor life and the right to roam (allemannsretten) | B1    | `b1-right-to-roam`                 | covered |
 | Following a short news item                          | B1    | `b1-news-electricity`, `b1-easter` | covered |
-| Christmas traditions                                 | B1    |                                    | **gap** |
+| Christmas traditions                                 | B1    | `b1-christmas`                     | covered |
 
 ## 2. Grammar
 
@@ -102,30 +104,30 @@ Each item can carry `focus` tags. The app counts repeated mistakes per tag and b
 | Grammar point                                        | Level | `focus` tag           | Items |
 | ---------------------------------------------------- | ----- | --------------------- | ----: |
 | Sounds and spelling (æ, ø, å, long and short vowels) | A1    | `sounds-spelling`     |    24 |
-| Numbers and prices                                   | A1    | `numbers`             |    26 |
+| Numbers and prices                                   | A1    | `numbers`             |    29 |
 | Question words                                       | A1    | `question-words`      |     9 |
 | Present tense                                        | A1–A2 | `verb-present`        |    13 |
-| Verb in second place                                 | A1–B1 | `v2-word-order`       |    36 |
-| Where «ikke» goes                                    | A1–B1 | `ikke-placement`      |    15 |
-| Modal verb + infinitive                              | A1–A2 | `modal-verbs`         |    15 |
-| Time and dates                                       | A1–B1 | `time-expressions`    |    65 |
-| Fixed expressions                                    | A1–B1 | `fixed-expressions`   |    36 |
-| Prepositions (i, på, til, fra)                       | A1–B1 | `prepositions`        |     8 |
-| en / ei / et                                         | A2    | `noun-gender`         |     1 |
-| Definite form                                        | A2    | `definite-form`       |     3 |
+| Verb in second place                                 | A1–B1 | `v2-word-order`       |    41 |
+| Where «ikke» goes                                    | A1–B1 | `ikke-placement`      |    16 |
+| Modal verb + infinitive                              | A1–A2 | `modal-verbs`         |    18 |
+| Time and dates                                       | A1–B1 | `time-expressions`    |    71 |
+| Fixed expressions                                    | A1–B1 | `fixed-expressions`   |    40 |
+| Prepositions (i, på, til, fra)                       | A1–B1 | `prepositions`        |     9 |
+| en / ei / et                                         | A2    | `noun-gender`         |     2 |
+| Definite form                                        | A2    | `definite-form`       |     6 |
 | Object pronouns                                      | A2    | `object-pronouns`     |     5 |
-| Adjective endings (stor, stort, store, den store)    | A2    | `adjective-agreement` |     7 |
-| Possessives (min, mitt, mine, sin)                   | A2–B1 | `possessives`         |     5 |
+| Adjective endings (stor, stort, store, den store)    | A2    | `adjective-agreement` |     8 |
+| Possessives (min, mitt, mine, sin)                   | A2–B1 | `possessives`         |     6 |
 | og, men, så, fordi, derfor                           | A2–B1 | `conjunctions`        |    11 |
-| Word order after at, fordi, hvis, når                | A2–B1 | `subordinate-clause`  |    18 |
-| Past tense and present perfect                       | A2–B1 | `verb-past`           |    12 |
-| Comparing (større, størst, så … som)                 | A2–B1 | `comparison`          |     7 |
-| Reflexive verbs (seg)                                | B1    | `reflexive`           |     4 |
-| Future (skal, kommer til å)                          | B1    | `future`              |     2 |
-| Relative clauses with «som»                          | B1    | `relative-clause`     |     5 |
-| Passive (-s, ble + participle)                       | B1    | `passive`             |    10 |
+| Word order after at, fordi, hvis, når                | A2–B1 | `subordinate-clause`  |    22 |
+| Past tense and present perfect                       | A2–B1 | `verb-past`           |    15 |
+| Comparing (større, størst, så … som)                 | A2–B1 | `comparison`          |     9 |
+| Reflexive verbs (seg)                                | B1    | `reflexive`           |     5 |
+| Future (skal, kommer til å)                          | B1    | `future`              |     7 |
+| Relative clauses with «som»                          | B1    | `relative-clause`     |     6 |
+| Passive (-s, ble + participle)                       | B1    | `passive`             |    12 |
 
-Still thin: gender and the definite form, which every lesson uses but few items test directly, and the future. These are the next grammar points to write items for.
+Still thin: gender (en/ei/et) and the definite form. Every lesson relies on them, but only a few items test them directly.
 
 ## 3. Can-do statements
 
