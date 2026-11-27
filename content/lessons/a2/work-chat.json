@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-work-chat",
+  "level": "A2",
+  "title": "Meldinger på jobben",
+  "summary": "Read a team chat: a lost charger, a meeting that has moved, someone running late and a coffee break. Practise short, friendly messages to colleagues.",
+  "review": "pending",
+  "text": "Lina: Hei! Er det noen som har sett laderen min? Jeg tror jeg glemte den i møterommet i går.\nJonas: Jeg så en svart lader på bordet der i morges. Den ligger der sikkert fortsatt.\nLina: Takk! Forresten, møtet med kunden er flyttet til klokka to.\nMehmet: Ok, takk for beskjed. Jeg kommer litt sent, for jeg sitter i en annen samtale til ti over to.\nLina: Ikke noe problem. Jeg sender deg et referat etterpå.\nJonas: Noen som vil ha kaffe? Jeg går til kantina nå.",
+  "items": [
+    {
+      "id": "a2-chat-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 950,
+      "prompt": "Hva har Lina mistet?",
+      "options": ["Laderen sin", "Telefonen sin", "Nøklene sine"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1000,
+      "prompt": "Hvor tror Jonas at laderen er?",
+      "options": ["I møterommet", "I kantina", "Hjemme hos Lina"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "focus": ["time-expressions"],
+      "difficulty": 950,
+      "prompt": "Når er møtet med kunden nå?",
+      "options": ["Klokka to", "Klokka ti", "Ti over to"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-03"],
+      "difficulty": 1050,
+      "prompt": "Hvorfor kommer Mehmet sent?",
+      "options": ["Han er i en annen samtale", "Han er syk", "Han kjøper kaffe"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Ok, takk for ___.",
+      "answers": ["beskjed", "beskjeden", "info", "infoen"]
+    },
+    {
+      "id": "a2-chat-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["possessives"],
+      "difficulty": 1000,
+      "prompt": "Er det noen som har sett laderen ___?",
+      "answers": ["min"]
+    },
+    {
+      "id": "a2-chat-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Ikke noe ___.",
+      "answers": ["problem"]
+    },
+    {
+      "id": "a2-chat-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["object-pronouns"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "sender", "deg", "et referat", "etterpå"],
+      "answer": "Jeg sender deg et referat etterpå"
+    },
+    {
+      "id": "a2-chat-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg tror", "jeg", "glemte", "den", "i møterommet"],
+      "answer": "Jeg tror jeg glemte den i møterommet"
+    },
+    {
+      "id": "a2-chat-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Hva skjer klokka to?",
+      "audio": "Hei alle sammen, bare en rask beskjed: Det er kake i kantina klokka to i dag.",
+      "options": ["Det er kake i kantina", "Det er møte med kunden", "Kantina stenger"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hva vil Jonas?",
+      "audio": "Hei, det er Jonas. Jeg sitter fast i trafikken og er der om tjue minutter. Kan dere starte møtet uten meg?",
+      "options": ["At de starter møtet uten ham", "At de flytter møtet", "At noen henter ham"],
+      "answer": 0
+    },
+    {
+      "id": "a2-chat-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Møtet er flyttet til klokka to."
+    }
+  ]
+}

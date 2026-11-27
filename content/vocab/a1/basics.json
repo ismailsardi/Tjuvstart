@@ -64,7 +64,7 @@
       "id": "en",
       "nb": "en",
       "pos": "determiner",
-      "forms": ["en", "én"],
+      "forms": ["en", "én", "ene"],
       "example": "Jeg har en jobb."
     },
     {
@@ -309,7 +309,7 @@
       "id": "viktig",
       "nb": "viktig",
       "pos": "adjective",
-      "forms": ["viktig", "viktige"],
+      "forms": ["viktig", "viktige", "viktigst", "viktigste"],
       "example": "Viktig informasjon!"
     },
     {
@@ -333,7 +333,7 @@
       "nb": "måned",
       "pos": "noun",
       "gender": "en",
-      "forms": ["måned", "måneden", "måneder", "måneders"],
+      "forms": ["måned", "måneden", "måneder", "måneders", "månedene"],
       "example": "Husleien er 14 500 kroner i måneden."
     },
     {
@@ -490,7 +490,7 @@
       "id": "komme",
       "nb": "komme",
       "pos": "verb",
-      "forms": ["komme", "kommer", "kom"],
+      "forms": ["komme", "kommer", "kom", "kommet"],
       "example": "Jeg kommer ikke på jobb i dag."
     },
     {
@@ -646,7 +646,7 @@
       "id": "mange",
       "nb": "mange",
       "pos": "determiner",
-      "forms": ["mange"],
+      "forms": ["mange", "fleste"],
       "example": "Mange ting i Norge krever BankID."
     },
     {
@@ -819,7 +819,7 @@
       "nb": "lørdag",
       "pos": "noun",
       "gender": "en",
-      "forms": ["lørdag", "lørdagen"],
+      "forms": ["lørdag", "lørdagen", "lørdager"],
       "example": "Vi gikk på ski hele lørdagen."
     },
     {
@@ -938,7 +938,7 @@
       "id": "liten",
       "nb": "liten",
       "pos": "adjective",
-      "forms": ["liten", "lite", "lille", "små"],
+      "forms": ["liten", "lite", "lille", "små", "mindre"],
       "example": "Vi er et lite firma."
     },
     {
@@ -975,7 +975,7 @@
       "nb": "år",
       "pos": "noun",
       "gender": "et",
-      "forms": ["år", "året", "årene"],
+      "forms": ["år", "året", "årene", "årets"],
       "example": "Sykkelen er tre år gammel."
     },
     {
@@ -990,7 +990,7 @@
       "nb": "pris",
       "pos": "noun",
       "gender": "en",
-      "forms": ["pris", "prisen", "priser"],
+      "forms": ["pris", "prisen", "priser", "prisene"],
       "example": "Prisen er ikke fast."
     },
     {

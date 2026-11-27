@@ -21,7 +21,7 @@ import {
   type Grade,
   type Streak,
 } from '@tjuvstart/engine';
-import { bestLevel, cleanTrollName, type ItemId, type Slot } from '../components/outfits';
+import { cleanTrollName, masteredLevel, type ItemId, type Slot } from '../components/outfits';
 import { guessChance } from '../content/answers';
 import { DEFAULT_GOAL, GOAL_SIZES, type GoalSize } from './daily';
 import { getItem } from '../content/lessons';
@@ -157,14 +157,14 @@ export async function saveOutfitSlot(
 }
 
 /**
- * Remembers the longest streak and the highest level reached so far, so clothes earned with them
+ * Remembers the longest streak and the highest level held so far, so clothes earned with them
  * stay earned after a break or a dip in a rating. Writes only when one of them went up.
  */
 export async function rememberBests(db: TjuvstartDb = defaultDb): Promise<void> {
   const { longest } = await dailyProgress(Date.now(), db);
   await db.transaction('rw', db.profiles, async () => {
     const profile = await getProfile(db);
-    const level = bestLevel(profile);
+    const level = masteredLevel(profile);
     const higherLevel =
       level !== undefined &&
       (profile.bestLevel === undefined ||

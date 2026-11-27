@@ -53,7 +53,7 @@ export interface Profile extends SyncFields {
   outfit?: Partial<Record<Slot, ItemId | 'none'>>;
   /** Longest streak reached so far. Clothes earned by streaks follow it, so they are never lost. */
   bestStreak?: number;
-  /** Highest level reached so far in any skill, for the same reason. */
+  /** Highest level held so far in any skill (see masteredLevel), for the same reason. */
   bestLevel?: Level;
   createdAt: number;
 }

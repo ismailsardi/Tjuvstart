@@ -5,14 +5,16 @@
       "id": "from-zero",
       "level": "A1",
       "title": "Helt fra start",
-      "summary": "Start from zero: the letters and sounds of Norwegian, saying hello, numbers and prices, the shop, the café and telling the time.",
+      "summary": "Start from zero: the letters and sounds of Norwegian, saying hello and who you are, numbers and prices, the shop, signs in the street, the café and telling the time.",
       "lessons": [
         "a1-alphabet",
         "a1-sounds",
         "a1-hello",
+        "a1-about-me",
         "a1-not-understand",
         "a1-numbers",
         "a1-supermarket",
+        "a1-signs",
         "a1-cafe",
         "a1-days-and-time"
       ]
@@ -53,6 +55,22 @@
       ]
     },
     {
+      "id": "more-everyday",
+      "level": "A2",
+      "title": "Mer av hverdagen",
+      "summary": "More of daily life: emergency numbers and the emergency clinic, sorting rubbish, messages to colleagues, eating out with an allergy, describing a new colleague, the dentist, reporting a move and a new mobile plan.",
+      "lessons": [
+        "a2-emergency",
+        "a2-recycling",
+        "a2-work-chat",
+        "a2-restaurant",
+        "a2-new-colleague",
+        "a2-dentist",
+        "a2-moving-notice",
+        "a2-phone-plan"
+      ]
+    },
+    {
       "id": "towards-b1",
       "level": "B1",
       "title": "Videre mot B1",
@@ -64,6 +82,38 @@
         "b1-appraisal",
         "b1-kindergarten",
         "b1-easter"
+      ]
+    },
+    {
+      "id": "working-life",
+      "level": "B1",
+      "title": "Arbeidslivet",
+      "summary": "Working life at B1: your contract, the payslip and holiday pay, giving your opinion in a meeting, safety rules, asking for holiday, handling an unhappy customer and the office Christmas party.",
+      "lessons": [
+        "b1-work-contract",
+        "b1-payslip",
+        "b1-opinion",
+        "b1-safety",
+        "b1-holiday-request",
+        "b1-customer-call",
+        "b1-christmas-party"
+      ]
+    },
+    {
+      "id": "society-b1",
+      "level": "B1",
+      "title": "Samfunnet rundt deg",
+      "summary": "Norwegian society at B1: the tax return, a parent meeting, parental leave, a noisy neighbour, a product complaint, electricity prices in the news, 17 May, the right to roam and Christmas.",
+      "lessons": [
+        "b1-tax-return",
+        "b1-parents-meeting",
+        "b1-parental-leave",
+        "b1-noise-complaint",
+        "b1-complaint",
+        "b1-news-electricity",
+        "b1-national-day",
+        "b1-right-to-roam",
+        "b1-christmas"
       ]
     }
   ]

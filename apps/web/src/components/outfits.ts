@@ -1,4 +1,4 @@
-import { LEVELS, MIN_ANSWERS_FOR_ESTIMATE, ratingToLevel, type Level } from '@tjuvstart/engine';
+import { LEVEL_BASE, LEVELS, ratingToLevel, type Level } from '@tjuvstart/engine';
 import { SKILLS } from '../content/types';
 import type { Profile } from '../data/db';
 
@@ -54,28 +54,37 @@ export function cleanTrollName(raw: string): string {
 }
 
 /**
- * The learner's best estimated level in any skill, or undefined before any estimate. A skill
- * counts once it has enough answers, or after the level check.
+ * Answers a skill needs before its level counts as held for the wardrobe. The level shown on
+ * Today appears after five answers and can still swing a whole band; twenty answers, with the
+ * rating at or above the middle of the band, is a level the learner has shown more than once.
  */
-export function bestLevel(profile: Profile | undefined): Level | undefined {
+export const MASTERY_ANSWERS = 20;
+
+/**
+ * The highest level the learner holds in any skill, or undefined before any. A skill holds a
+ * level once it has MASTERY_ANSWERS answers and its rating has reached the middle of that
+ * level's band. A level check on its own is not enough: it estimates, it doesn't show mastery.
+ */
+export function masteredLevel(profile: Profile | undefined): Level | undefined {
   if (!profile) return undefined;
   let best = -1;
   for (const skill of SKILLS) {
     const rating = profile.ratings[skill];
-    const estimated =
-      rating !== undefined &&
-      ((profile.answers[skill] ?? 0) >= MIN_ANSWERS_FOR_ESTIMATE || profile.placedAt !== undefined);
-    if (estimated) best = Math.max(best, LEVELS.indexOf(ratingToLevel(rating)));
+    if (rating === undefined || (profile.answers[skill] ?? 0) < MASTERY_ANSWERS) continue;
+    const level = ratingToLevel(rating);
+    // Inside the lower half of a band, the level below is the one held.
+    const held = rating >= LEVEL_BASE[level] ? level : LEVELS[LEVELS.indexOf(level) - 1];
+    if (held) best = Math.max(best, LEVELS.indexOf(held));
   }
   return best < 0 ? undefined : LEVELS[best];
 }
 
 /**
- * Which items are earned. Level items follow the best level ever recorded as well as the current
+ * Which items are earned. Level items follow the highest level ever held as well as the current
  * one, and streak items the longest streak ever, so a dip never takes anything back.
  */
 export function earnedItems(profile: Profile | undefined, longestStreak = 0): Set<ItemId> {
-  const level = bestLevel(profile);
+  const level = masteredLevel(profile);
   const levelIndex = Math.max(
     level ? LEVELS.indexOf(level) : -1,
     profile?.bestLevel ? LEVELS.indexOf(profile.bestLevel) : -1,

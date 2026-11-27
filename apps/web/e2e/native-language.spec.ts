@@ -13,10 +13,16 @@ test('a French speaker gets a French interface, French tips and highlighted cogn
     .getByRole('region', { name: /^(Next lesson|Prochaine leçon)$/ })
     .getByRole('link', { name: /Første dag på jobben/ })
     .click();
-  await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();
-  await expect(
-    page.getByRole('heading', { name: 'Mots que vous connaissez probablement' }),
-  ).toBeVisible();
+  const cognate = page.locator('.reading-text .cognate', { hasText: 'prosjekt' });
+  await expect(cognate).toBeVisible();
+  const tint = () => cognate.evaluate((el) => getComputedStyle(el).backgroundColor);
+  const heading = page.getByRole('heading', { name: 'Mots que vous connaissez probablement' });
+  await expect(heading).toBeVisible();
+  // Familiar words are tinted only while their list is open; look-alikes always are.
+  expect(await tint()).toBe('rgba(0, 0, 0, 0)');
+  await heading.click();
+  await expect.poll(tint).not.toBe('rgba(0, 0, 0, 0)');
+  await heading.click();
 
   await page.getByRole('button', { name: 'Utvikler', exact: true }).click();
   await page.getByRole('button', { name: 'Continuer' }).click();

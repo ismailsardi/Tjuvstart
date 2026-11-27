@@ -13,7 +13,7 @@ test('a Spanish speaker gets a Spanish interface, Spanish tips and highlighted c
     .getByRole('region', { name: 'Siguiente lección' })
     .getByRole('link', { name: /Første dag på jobben/ })
     .click();
-  await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();
+  await expect(page.locator('.reading-text .cognate', { hasText: 'prosjekt' })).toBeVisible();
   await expect(
     page.getByRole('heading', { name: 'Palabras que probablemente conoces' }),
   ).toBeVisible();

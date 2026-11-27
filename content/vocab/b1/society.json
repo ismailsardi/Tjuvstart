@@ -1,0 +1,897 @@
+{
+  "$schema": "../../schema/vocab-deck.schema.json",
+  "level": "B1",
+  "topic": "society",
+  "title": "Samfunnet",
+  "review": "pending",
+  "cards": [
+    {
+      "id": "skattemelding",
+      "nb": "skattemelding",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": [
+        "skattemelding",
+        "skattemeldinga",
+        "skattemeldingen",
+        "skattemeldinger",
+        "skattemeldingene"
+      ],
+      "example": "Har du sjekket skattemeldingen?"
+    },
+    {
+      "id": "skatteoppgjor",
+      "nb": "skatteoppgjør",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["skatteoppgjør", "skatteoppgjøra", "skatteoppgjøret", "skatteoppgjørene"],
+      "example": "Skatteoppgjøret kommer i juni."
+    },
+    {
+      "id": "restskatt",
+      "nb": "restskatt",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["restskatt", "restskatten", "restskatter", "restskattene"],
+      "example": "Jeg må betale restskatt."
+    },
+    {
+      "id": "fradrag",
+      "nb": "fradrag",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["fradrag", "fradraga", "fradraget", "fradragene"],
+      "example": "Du kan få fradrag for barnehage."
+    },
+    {
+      "id": "opplysning",
+      "nb": "opplysning",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["opplysning", "opplysninga", "opplysningen", "opplysninger", "opplysningene"],
+      "example": "Skattemeldingen har opplysninger om lønnen din."
+    },
+    {
+      "id": "lan",
+      "nb": "lån",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["lån", "låna", "lånet", "lånene"],
+      "example": "Vi har lån i banken."
+    },
+    {
+      "id": "stemme",
+      "nb": "stemme",
+      "pos": "verb",
+      "forms": ["stemme", "stemt", "stemte", "stemmer", "stemmet"],
+      "example": "Stemmer det?"
+    },
+    {
+      "id": "penger",
+      "nb": "penger",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["penger", "pengene"],
+      "example": "Jeg får penger tilbake."
+    },
+    {
+      "id": "foreldremote",
+      "nb": "foreldremøte",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["foreldremøte", "foreldremøta", "foreldremøter", "foreldremøtet", "foreldremøtene"],
+      "example": "Foreldremøtet er på torsdag."
+    },
+    {
+      "id": "klasserom",
+      "nb": "klasserom",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["klasserom", "klasseromma", "klasserommet", "klasserommene"],
+      "example": "Vi møtes i klasserommet."
+    },
+    {
+      "id": "lekse",
+      "nb": "lekse",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["lekse", "leksa", "leksen", "lekser", "leksene"],
+      "example": "Har du gjort leksene?"
+    },
+    {
+      "id": "friminutt",
+      "nb": "friminutt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["friminutt", "friminutta", "friminutter", "friminuttet", "friminuttene"],
+      "example": "Barna leker ute i friminuttet."
+    },
+    {
+      "id": "uansett",
+      "nb": "uansett",
+      "pos": "adverb",
+      "forms": ["uansett"],
+      "example": "Vi går ut uansett vær."
+    },
+    {
+      "id": "kontaktlaerer",
+      "nb": "kontaktlærer",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kontaktlærer", "kontaktlærere", "kontaktlæreren", "kontaktlærerne"],
+      "example": "Kontaktlæreren heter Anne."
+    },
+    {
+      "id": "seg",
+      "nb": "seg",
+      "pos": "pronoun",
+      "forms": ["seg"],
+      "example": "Hun tar med seg matpakke."
+    },
+    {
+      "id": "hodetelefon",
+      "nb": "hodetelefon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hodetelefon", "hodetelefonen", "hodetelefoner", "hodetelefonene"],
+      "example": "Hodetelefonene mine er ødelagt."
+    },
+    {
+      "id": "reklamere",
+      "nb": "reklamere",
+      "pos": "verb",
+      "forms": ["reklamere", "reklamert", "reklamerer", "reklamerte"],
+      "example": "Du kan reklamere i to år."
+    },
+    {
+      "id": "reparere",
+      "nb": "reparere",
+      "pos": "verb",
+      "forms": ["reparere", "reparert", "reparerer", "reparerte"],
+      "example": "Kan dere reparere den?"
+    },
+    {
+      "id": "minst",
+      "nb": "minst",
+      "pos": "adverb",
+      "forms": ["minst"],
+      "example": "Du har rett til å reklamere i minst to år."
+    },
+    {
+      "id": "strompris",
+      "nb": "strømpris",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["strømpris", "strømprisen", "strømpriser", "strømprisene"],
+      "example": "Strømprisen er høy i vinter."
+    },
+    {
+      "id": "dobbelt",
+      "nb": "dobbelt",
+      "pos": "adverb",
+      "forms": ["dobbelt"],
+      "example": "Prisen er dobbelt så høy."
+    },
+    {
+      "id": "vind",
+      "nb": "vind",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vind", "vinden", "vinder", "vindene"],
+      "example": "Det er mye vind i dag."
+    },
+    {
+      "id": "ekspert",
+      "nb": "ekspert",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ekspert", "eksperten", "eksperter", "ekspertene"],
+      "example": "Eksperter gir gode råd."
+    },
+    {
+      "id": "rad",
+      "nb": "råd",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["råd", "rådet", "rådene"],
+      "example": "Kan du gi meg et råd?"
+    },
+    {
+      "id": "senke",
+      "nb": "senke",
+      "pos": "verb",
+      "forms": ["senke", "senka", "senker", "senket", "senk"],
+      "example": "Senk temperaturen om natta."
+    },
+    {
+      "id": "temperatur",
+      "nb": "temperatur",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["temperatur", "temperaturen", "temperaturer", "temperaturene"],
+      "example": "Temperaturen er tjue grader."
+    },
+    {
+      "id": "dusje",
+      "nb": "dusje",
+      "pos": "verb",
+      "forms": ["dusje", "dusja", "dusjer", "dusjet", "dusj"],
+      "example": "Jeg dusjer om morgenen."
+    },
+    {
+      "id": "kort-adjective",
+      "nb": "kort",
+      "pos": "adjective",
+      "forms": ["kort", "korte", "kortere", "kortest", "korteste"],
+      "example": "Dusj kortere for å spare strøm."
+    },
+    {
+      "id": "billig",
+      "nb": "billig",
+      "pos": "adjective",
+      "forms": ["billig", "billige", "billigst", "billigere", "billigste"],
+      "example": "Det er billigst om natta."
+    },
+    {
+      "id": "nord",
+      "nb": "nord",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["nord"],
+      "example": "I nord er det kaldere."
+    },
+    {
+      "id": "sor",
+      "nb": "sør",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["sør"],
+      "example": "Huset ligger mot sør."
+    },
+    {
+      "id": "nasjonaldag",
+      "nb": "nasjonaldag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nasjonaldag", "nasjonaldagen", "nasjonaldager", "nasjonaldagene"],
+      "example": "17. mai er Norges nasjonaldag."
+    },
+    {
+      "id": "grunnlov",
+      "nb": "grunnlov",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["grunnlov", "grunnloven", "grunnlover", "grunnlovene"],
+      "example": "Grunnloven er fra 1814."
+    },
+    {
+      "id": "frokost",
+      "nb": "frokost",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["frokost", "frokosten", "frokoster", "frokostene"],
+      "example": "Vi spiser frokost klokka sju."
+    },
+    {
+      "id": "bunad",
+      "nb": "bunad",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["bunad", "bunaden", "bunader", "bunadene"],
+      "example": "Hun har på seg bunad."
+    },
+    {
+      "id": "barnetog",
+      "nb": "barnetog",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["barnetog", "barnetoga", "barnetoget", "barnetogene"],
+      "example": "Barnetoget går forbi Slottet."
+    },
+    {
+      "id": "flagg",
+      "nb": "flagg",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["flagg", "flagga", "flagget", "flaggene"],
+      "example": "Barna har flagg i hånda."
+    },
+    {
+      "id": "tog",
+      "nb": "tog",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["tog", "toga", "toget", "togene"],
+      "example": "Toget går klokka ti."
+    },
+    {
+      "id": "forbi",
+      "nb": "forbi",
+      "pos": "preposition",
+      "forms": ["forbi"],
+      "example": "Vi går forbi butikken."
+    },
+    {
+      "id": "slott",
+      "nb": "slott",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["slott", "slotta", "slottet", "slottene"],
+      "example": "Slottet ligger i Oslo sentrum."
+    },
+    {
+      "id": "kongefamilie",
+      "nb": "kongefamilie",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kongefamilie", "kongefamilien", "kongefamilier", "kongefamiliene"],
+      "example": "Kongefamilien vinker fra balkongen."
+    },
+    {
+      "id": "vinke",
+      "nb": "vinke",
+      "pos": "verb",
+      "forms": ["vinke", "vinka", "vinker", "vinket"],
+      "example": "Hun vinker til oss."
+    },
+    {
+      "id": "balkong",
+      "nb": "balkong",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["balkong", "balkongen", "balkonger", "balkongene"],
+      "example": "Leiligheten har balkong."
+    },
+    {
+      "id": "lek",
+      "nb": "lek",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["lek", "leken", "leker", "lekene"],
+      "example": "Barna har det gøy med leker."
+    },
+    {
+      "id": "is",
+      "nb": "is",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["is", "isen", "iser", "isene"],
+      "example": "Vil du ha en is?"
+    },
+    {
+      "id": "ungdom",
+      "nb": "ungdom",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["ungdom", "ungdommen", "ungdommer", "ungdommene"],
+      "example": "Ungdommene feirer 17. mai."
+    },
+    {
+      "id": "videregaende",
+      "nb": "videregående",
+      "pos": "adjective",
+      "forms": ["videregående"],
+      "example": "Hun går på videregående skole."
+    },
+    {
+      "id": "russ",
+      "nb": "russ",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["russ", "russen"],
+      "example": "Russen har på seg røde klær."
+    },
+    {
+      "id": "rod",
+      "nb": "rød",
+      "pos": "adjective",
+      "forms": ["rød", "røde", "rødt", "rødere", "rødest", "rødeste"],
+      "example": "Hun har en rød jakke."
+    },
+    {
+      "id": "bla",
+      "nb": "blå",
+      "pos": "adjective",
+      "forms": ["blå", "blåe", "blått", "blåere", "blåest", "blåeste"],
+      "example": "Himmelen er blå."
+    },
+    {
+      "id": "skog",
+      "nb": "skog",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["skog", "skogen", "skoger", "skogene"],
+      "example": "Vi går tur i skogen."
+    },
+    {
+      "id": "eiendom",
+      "nb": "eiendom",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["eiendom", "eiendommen", "eiendommer", "eiendommene"],
+      "example": "Det er privat eiendom."
+    },
+    {
+      "id": "telte",
+      "nb": "telte",
+      "pos": "verb",
+      "forms": ["telte", "telta", "telter", "teltet"],
+      "example": "Vi telter ved vannet."
+    },
+    {
+      "id": "plukke",
+      "nb": "plukke",
+      "pos": "verb",
+      "forms": ["plukke", "plukka", "plukker", "plukket"],
+      "example": "Vi plukker blåbær."
+    },
+    {
+      "id": "sopp",
+      "nb": "sopp",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["sopp", "soppen", "sopper", "soppene"],
+      "example": "Vi plukker sopp i skogen."
+    },
+    {
+      "id": "regel",
+      "nb": "regel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["regel", "regler", "regelen", "reglene"],
+      "example": "Det er viktige regler."
+    },
+    {
+      "id": "forstyrre",
+      "nb": "forstyrre",
+      "pos": "verb",
+      "forms": ["forstyrre", "forstyrra", "forstyrrer", "forstyrret"],
+      "example": "Ikke forstyrr meg nå."
+    },
+    {
+      "id": "forbudt",
+      "nb": "forbudt",
+      "pos": "adjective",
+      "forms": ["forbudt", "forbudte"],
+      "example": "Det er forbudt å røyke her."
+    },
+    {
+      "id": "tenne",
+      "nb": "tenne",
+      "pos": "verb",
+      "forms": ["tenne", "tent", "tente", "tenner"],
+      "example": "Kan du tenne lyset?"
+    },
+    {
+      "id": "bal",
+      "nb": "bål",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bål", "båla", "bålet", "bålene"],
+      "example": "Vi satt rundt bålet."
+    },
+    {
+      "id": "naer",
+      "nb": "nær",
+      "pos": "preposition",
+      "forms": ["nær"],
+      "example": "Vi bor nær skogen."
+    },
+    {
+      "id": "hensyn",
+      "nb": "hensyn",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["hensyn", "hensyna", "hensynet", "hensynene"],
+      "example": "Ta hensyn til andre."
+    },
+    {
+      "id": "natur",
+      "nb": "natur",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["natur", "naturen", "naturer", "naturene"],
+      "example": "Norge har vakker natur."
+    },
+    {
+      "id": "hovedregel",
+      "nb": "hovedregel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["hovedregel", "hovedregler", "hovedregelen", "hovedreglene"],
+      "example": "Hovedregelen er enkel."
+    },
+    {
+      "id": "all",
+      "nb": "all",
+      "pos": "determiner",
+      "forms": ["all", "alt"],
+      "example": "Alt er klart."
+    },
+    {
+      "id": "drikkeflaske",
+      "nb": "drikkeflaske",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["drikkeflaske", "drikkeflaska", "drikkeflasken", "drikkeflasker", "drikkeflaskene"],
+      "example": "Husk drikkeflaska!"
+    },
+    {
+      "id": "nettbutikk",
+      "nb": "nettbutikk",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["nettbutikk", "nettbutikken", "nettbutikker", "nettbutikkene"],
+      "example": "Jeg kjøpte den i en nettbutikk."
+    },
+    {
+      "id": "allemannsrett",
+      "nb": "allemannsrett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["allemannsrett", "allemannsretten"],
+      "example": "Allemannsretten gjelder for alle."
+    },
+    {
+      "id": "forbrukerkjopslov",
+      "nb": "forbrukerkjøpslov",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["forbrukerkjøpslov", "forbrukerkjøpsloven"],
+      "example": "Forbrukerkjøpsloven gir deg rett til å reklamere."
+    },
+    {
+      "id": "julebord",
+      "nb": "julebord",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["julebord", "juleborda", "juleborder", "julebordet", "julebordene"],
+      "example": "Vi har julebord på fredag."
+    },
+    {
+      "id": "fest",
+      "nb": "fest",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fest", "festen", "fester", "festene"],
+      "example": "Det var en fin fest."
+    },
+    {
+      "id": "tradisjonell",
+      "nb": "tradisjonell",
+      "pos": "adjective",
+      "forms": ["tradisjonell", "tradisjonelt", "tradisjonelle"],
+      "example": "Vi spiser tradisjonell julemat."
+    },
+    {
+      "id": "julemat",
+      "nb": "julemat",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["julemat", "julematen", "julemater", "julematene"],
+      "example": "Ribbe er norsk julemat."
+    },
+    {
+      "id": "ribbe",
+      "nb": "ribbe",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["ribbe", "ribba", "ribben", "ribber", "ribbene"],
+      "example": "Vi spiser ribbe på julaften."
+    },
+    {
+      "id": "pinnekjott",
+      "nb": "pinnekjøtt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["pinnekjøtt", "pinnekjøtta", "pinnekjøttet", "pinnekjøttene"],
+      "example": "Pinnekjøtt er vanlig på Vestlandet."
+    },
+    {
+      "id": "kjott",
+      "nb": "kjøtt",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["kjøtt", "kjøtta", "kjøttet", "kjøttene"],
+      "example": "Jeg spiser ikke kjøtt."
+    },
+    {
+      "id": "grei",
+      "nb": "grei",
+      "pos": "adjective",
+      "forms": ["grei", "greie", "greit", "greiere", "greiest", "greieste"],
+      "example": "Det er helt greit."
+    },
+    {
+      "id": "pynte",
+      "nb": "pynte",
+      "pos": "verb",
+      "forms": ["pynte", "pynta", "pynter", "pyntet"],
+      "example": "Vi pynter juletreet."
+    },
+    {
+      "id": "kleskode",
+      "nb": "kleskode",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["kleskode", "kleskoden", "kleskoder", "kleskodene"],
+      "example": "Er det kleskode?"
+    },
+    {
+      "id": "quiz",
+      "nb": "quiz",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["quiz", "quizen", "quizer", "quizene"],
+      "example": "Vi har quiz etter middagen."
+    },
+    {
+      "id": "dans",
+      "nb": "dans",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["dans", "dansen", "danser", "dansene"],
+      "example": "Etterpå blir det dans."
+    },
+    {
+      "id": "sosialkomite",
+      "nb": "sosialkomité",
+      "pos": "noun",
+      "gender": "en",
+      "forms": [
+        "sosialkomité",
+        "sosialkomiteen",
+        "sosialkomiteer",
+        "sosialkomitéen",
+        "sosialkomitéer",
+        "sosialkomiteene",
+        "sosialkomitéene"
+      ],
+      "example": "Sosialkomiteen planlegger festen."
+    },
+    {
+      "id": "foreldrepermisjon",
+      "nb": "foreldrepermisjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": [
+        "foreldrepermisjon",
+        "foreldrepermisjonen",
+        "foreldrepermisjoner",
+        "foreldrepermisjonene"
+      ],
+      "example": "Hun har foreldrepermisjon."
+    },
+    {
+      "id": "permisjon",
+      "nb": "permisjon",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["permisjon", "permisjonen", "permisjoner", "permisjonene"],
+      "example": "Jeg har permisjon i et år."
+    },
+    {
+      "id": "foreldrepenger",
+      "nb": "foreldrepenger",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["foreldrepenger", "foreldrepengene"],
+      "example": "NAV betaler foreldrepenger."
+    },
+    {
+      "id": "grense",
+      "nb": "grense",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["grense", "grensa", "grensen", "grenser", "grensene"],
+      "example": "Det er en øvre grense."
+    },
+    {
+      "id": "ovre",
+      "nb": "øvre",
+      "pos": "adjective",
+      "forms": ["øvre", "øverste"],
+      "example": "Det er en øvre grense."
+    },
+    {
+      "id": "rest",
+      "nb": "rest",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["rest", "resten", "rester", "restene"],
+      "example": "Resten kan dere dele."
+    },
+    {
+      "id": "fodsel",
+      "nb": "fødsel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["fødsel", "fødsler", "fødselen", "fødslene"],
+      "example": "Fødselen gikk bra."
+    },
+    {
+      "id": "helst",
+      "nb": "helst",
+      "pos": "adverb",
+      "forms": ["helst"],
+      "example": "Jeg vil helst jobbe hjemme."
+    },
+    {
+      "id": "brak",
+      "nb": "bråk",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["bråk", "bråka", "bråket", "bråkene"],
+      "example": "Det er mye bråk fra naboen."
+    },
+    {
+      "id": "sove",
+      "nb": "sove",
+      "pos": "verb",
+      "forms": ["sove", "sov", "sover", "sovet"],
+      "example": "Jeg sover dårlig."
+    },
+    {
+      "id": "skru",
+      "nb": "skru",
+      "pos": "verb",
+      "forms": ["skru", "skrur", "skrudd", "skrudde"],
+      "example": "Kan du skru ned musikken?"
+    },
+    {
+      "id": "avslutte",
+      "nb": "avslutte",
+      "pos": "verb",
+      "forms": ["avslutte", "avslutta", "avslutter", "avsluttet"],
+      "example": "Vi avslutter møtet nå."
+    },
+    {
+      "id": "hoytid",
+      "nb": "høytid",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["høytid", "høytida", "høytiden", "høytider", "høytidene"],
+      "example": "Julen er en høytid."
+    },
+    {
+      "id": "henge",
+      "nb": "henge",
+      "pos": "verb",
+      "forms": ["henge", "hang", "hengt", "henger"],
+      "example": "Vi henger opp julelys."
+    },
+    {
+      "id": "julelys",
+      "nb": "julelys",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["julelys", "julelysa", "julelyset", "julelysene"],
+      "example": "Vi har julelys i vinduet."
+    },
+    {
+      "id": "vindu",
+      "nb": "vindu",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["vindu", "vindua", "vinduer", "vinduet", "vinduene"],
+      "example": "Kan du åpne vinduet?"
+    },
+    {
+      "id": "julaften",
+      "nb": "julaften",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["julaften", "julaftenen", "julaftener", "julaftenene"],
+      "example": "Vi feirer julaften hjemme."
+    },
+    {
+      "id": "stenge",
+      "nb": "stenge",
+      "pos": "verb",
+      "forms": ["stenge", "stenger", "stengte"],
+      "example": "Butikken stenger klokka seks."
+    },
+    {
+      "id": "kirkeklokke",
+      "nb": "kirkeklokke",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["kirkeklokke", "kirkeklokka", "kirkeklokken", "kirkeklokker", "kirkeklokkene"],
+      "example": "Kirkeklokkene ringer."
+    },
+    {
+      "id": "julemiddag",
+      "nb": "julemiddag",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["julemiddag", "julemiddagen", "julemiddager", "julemiddagene"],
+      "example": "Julemiddagen er klar."
+    },
+    {
+      "id": "gave",
+      "nb": "gave",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["gave", "gava", "gaven", "gaver", "gavene"],
+      "example": "Takk for gaven!"
+    },
+    {
+      "id": "juletre",
+      "nb": "juletre",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["juletre", "juletrea", "juletrær", "juletreet", "juletrærne"],
+      "example": "Gavene ligger under juletreet."
+    },
+    {
+      "id": "riskrem",
+      "nb": "riskrem",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["riskrem", "riskremen", "riskremer", "riskremene"],
+      "example": "Vi spiser riskrem til dessert."
+    },
+    {
+      "id": "mandel",
+      "nb": "mandel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["mandel", "mandler", "mandelen", "mandlene"],
+      "example": "Hvem fikk mandelen?"
+    },
+    {
+      "id": "marsipangris",
+      "nb": "marsipangris",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["marsipangris", "marsipangrisen", "marsipangriser", "marsipangrisene"],
+      "example": "Hun vant en marsipangris."
+    },
+    {
+      "id": "romjul",
+      "nb": "romjul",
+      "pos": "noun",
+      "gender": "ei",
+      "forms": ["romjul", "romjula", "romjulen", "romjuler", "romjulene"],
+      "example": "Mange tar fri i romjula."
+    },
+    {
+      "id": "nyttar",
+      "nb": "nyttår",
+      "pos": "noun",
+      "gender": "et",
+      "forms": ["nyttår", "nyttåra", "nyttåret", "nyttårene"],
+      "example": "Godt nytt år! Vi feirer nyttår i Oslo."
+    },
+    {
+      "id": "man",
+      "nb": "man",
+      "pos": "pronoun",
+      "forms": ["man"],
+      "example": "Man kan ikke røyke her."
+    },
+    {
+      "id": "vegetarrett",
+      "nb": "vegetarrett",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["vegetarrett", "vegetarretten", "vegetarretter", "vegetarrettene"],
+      "example": "Jeg tar vegetarretten."
+    },
+    {
+      "id": "siste",
+      "nb": "siste",
+      "pos": "adjective",
+      "forms": ["siste"],
+      "example": "Jeg har jobbet her de siste to årene."
+    },
+    {
+      "id": "husordensregel",
+      "nb": "husordensregel",
+      "pos": "noun",
+      "gender": "en",
+      "forms": ["husordensregel", "husordensregelen", "husordensregler", "husordensreglene"],
+      "example": "Les husordensreglene."
+    }
+  ]
+}

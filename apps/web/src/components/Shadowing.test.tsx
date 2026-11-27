@@ -35,7 +35,7 @@ describe('Shadowing', () => {
 
     expect(screen.getByText('Sentence 1 of 2')).toBeTruthy();
     expect(screen.getByTestId('shadow-line').textContent).toBe('Jeg heter Sara.');
-    expect(screen.getByRole('status').textContent).toMatch(/not available/);
+    expect(screen.getByRole('status').textContent).toMatch(/can’t record/);
 
     await user.click(screen.getByRole('button', { name: 'Listen' }));
     expect(speech.speak).toHaveBeenCalledWith('Jeg heter Sara.', { rate: 1 });

@@ -21,6 +21,14 @@ export const FOCUS_POINTS = [
   'sounds-spelling',
   'numbers',
   'verb-past',
+  'adjective-agreement',
+  'possessives',
+  'comparison',
+  'reflexive',
+  'passive',
+  'future',
+  'relative-clause',
+  'prepositions',
 ] as const;
 export type FocusPoint = (typeof FOCUS_POINTS)[number];
 

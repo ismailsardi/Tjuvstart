@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-christmas",
+  "level": "B1",
+  "title": "Jul i Norge",
+  "summary": "Read about Christmas in Norway: lights in November, Christmas Eve as the main day, church bells at five, ribbe or pinnekjøtt, the almond in the rice pudding and romjul.",
+  "review": "pending",
+  "text": "Julen er den største høytiden i Norge. Allerede i november henger mange opp julelys i vinduene, og mange arbeidsplasser har julebord.\nDen viktigste dagen er julaften, 24. desember. Butikkene stenger tidlig, og mange går i kirken om ettermiddagen. Klokka fem ringer kirkeklokkene julen inn. Så spiser familien julemiddag. På Østlandet spiser de fleste ribbe, mens mange på Vestlandet spiser pinnekjøtt. Etter middagen åpner man gavene under juletreet.\nMange spiser riskrem til dessert. Den som finner mandelen, får en marsipangris.\nDagene mellom jul og nyttår kalles romjula. Da tar mange fri og besøker familie og venner.",
+  "items": [
+    {
+      "id": "b1-jul-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva er den viktigste dagen i julen?",
+      "options": ["Julaften, 24. desember", "Første juledag", "Nyttårsaften"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hva spiser mange på Vestlandet?",
+      "options": ["Pinnekjøtt", "Ribbe", "Fiskesuppe"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hva får den som finner mandelen?",
+      "options": ["En marsipangris", "En ekstra gave", "Fri fra oppvasken"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1300,
+      "prompt": "Hva er romjula?",
+      "options": ["Dagene mellom jul og nyttår", "Julaften om kvelden", "Ukene før jul"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1200,
+      "prompt": "Julen er den ___ høytiden i Norge. (stor)",
+      "answers": ["største"]
+    },
+    {
+      "id": "b1-jul-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["relative-clause"],
+      "difficulty": 1250,
+      "prompt": "Den ___ finner mandelen, får en marsipangris.",
+      "answers": ["som"]
+    },
+    {
+      "id": "b1-jul-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1200,
+      "prompt": "Dagene mellom jul og nyttår ___ romjula.",
+      "answers": ["kalles", "heter"]
+    },
+    {
+      "id": "b1-jul-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["På Østlandet", "spiser", "de fleste", "ribbe"],
+      "answer": "På Østlandet spiser de fleste ribbe"
+    },
+    {
+      "id": "b1-jul-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Etter middagen", "åpner", "man", "gavene"],
+      "answer": "Etter middagen åpner man gavene"
+    },
+    {
+      "id": "b1-jul-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1300,
+      "prompt": "Hva er blant de mest populære gavene?",
+      "audio": "Julehandelen er i gang, og det er fullt i butikkene. Bøker og klær er blant de mest populære gavene.",
+      "options": ["Bøker og klær", "Mobiltelefoner", "Leker"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1200,
+      "prompt": "Når spiser de julemiddag?",
+      "audio": "Vil du feire julaften med oss? Vi spiser klokka seks, og etterpå åpner vi gavene. Du trenger ikke å ta med noe.",
+      "options": ["Klokka seks", "Klokka fem", "Klokka sju"],
+      "answer": 0
+    },
+    {
+      "id": "b1-jul-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "God jul og godt nytt år!"
+    }
+  ]
+}

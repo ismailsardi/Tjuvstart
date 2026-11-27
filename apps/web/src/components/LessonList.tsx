@@ -82,9 +82,11 @@ export function LessonList({ packs = [] }: { packs?: readonly LanguagePack[] }) 
       <div className="deck-list">
         <AlphabetRow />
       </div>
-      {tracks.map((track) => (
-        <TrackPath key={track.id} track={track} packs={packs} open={track.id === current?.id} />
-      ))}
+      <div className="track-grid">
+        {tracks.map((track) => (
+          <TrackPath key={track.id} track={track} packs={packs} open={track.id === current?.id} />
+        ))}
+      </div>
       {others.length > 0 && <h2>{t('moreLessons')}</h2>}
       {levels.map((level) => (
         <section key={level} aria-label={level}>

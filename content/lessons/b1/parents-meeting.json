@@ -1,0 +1,162 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-parents-meeting",
+  "level": "B1",
+  "title": "Foreldremøte",
+  "summary": "Read a teacher’s letter inviting parents to a meeting: the plans for the autumn, what children bring every day, and what to do when your child is ill. Practise seg, sin and som.",
+  "review": "pending",
+  "document": {
+    "kind": "letter",
+    "from": "Anne, kontaktlærer"
+  },
+  "text": "Kjære foreldre i 3B,\nVelkommen til foreldremøte torsdag 12. september klokka 18 i klasserommet. Vi skal snakke om planene for høsten, leksene og turen til Bygdøy i oktober.\nHusk at barna må ha med seg matpakke, drikkeflaske og klær som passer til været hver dag. Elevene er ute i friminuttene uansett vær.\nBarn som er syke, skal være hjemme. Gi beskjed til skolen før klokka åtte samme dag.\nDet er fint om alle kommer. Kan du ikke komme, kan du sende meg en melding på forhånd.\nHilsen Anne, kontaktlærer",
+  "items": [
+    {
+      "id": "b1-fm-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva skal de snakke om på møtet?",
+      "options": [
+        "Planene for høsten, leksene og en tur",
+        "Lønnen til lærerne",
+        "En ny skolebygning"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hva må barna ha med seg hver dag?",
+      "options": [
+        "Matpakke, drikkeflaske og riktige klær",
+        "Penger til lunsj",
+        "Bøker fra biblioteket"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hva gjør du hvis barnet ditt er sykt?",
+      "options": [
+        "Gir beskjed til skolen før klokka åtte",
+        "Sender barnet på skolen likevel",
+        "Ringer læreren om kvelden"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1300,
+      "prompt": "Hva betyr «uansett vær»?",
+      "options": ["Også når det regner eller er kaldt", "Bare når det er sol", "Aldri om vinteren"],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["reflexive"],
+      "difficulty": 1250,
+      "prompt": "Barna må ha med ___ matpakke.",
+      "answers": ["seg"]
+    },
+    {
+      "id": "b1-fm-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["relative-clause"],
+      "difficulty": 1200,
+      "prompt": "Barn ___ er syke, skal være hjemme.",
+      "answers": ["som"]
+    },
+    {
+      "id": "b1-fm-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["possessives"],
+      "difficulty": 1350,
+      "prompt": "Emil glemte matpakken ___ i dag.",
+      "answers": ["sin"]
+    },
+    {
+      "id": "b1-fm-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["relative-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Hun har", "klær", "som", "passer til", "været"],
+      "answer": "Hun har klær som passer til været"
+    },
+    {
+      "id": "b1-fm-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1350,
+      "prompt": "Lag en setning.",
+      "tokens": ["Kan du ikke komme,", "kan du", "sende", "en melding"],
+      "answer": "Kan du ikke komme, kan du sende en melding"
+    },
+    {
+      "id": "b1-fm-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor blir turen flyttet?",
+      "audio": "Hei, det er Anne. Turen til Bygdøy blir flyttet til neste uke, fordi det er meldt mye regn på torsdag.",
+      "options": ["Det er meldt mye regn", "Bussen kommer ikke", "Læreren er syk"],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor er skolen stengt på fredag?",
+      "audio": "Husk at skolen er stengt på fredag. Da har lærerne planleggingsdag, og SFO er også stengt.",
+      "options": ["Lærerne har planleggingsdag", "Det er en helligdag", "Skolen skal males"],
+      "answer": 0
+    },
+    {
+      "id": "b1-fm-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Barn som er syke, skal være hjemme."
+    }
+  ]
+}

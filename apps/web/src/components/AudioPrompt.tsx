@@ -32,7 +32,7 @@ export function AudioPrompt({ text }: { text: string }) {
             essential
           />
         )}
-        <span className="speed-badge" data-testid="listening-speed">
+        <span className="speed-note muted small" data-testid="listening-speed">
           {t('listeningSpeed', { percent: Math.round(rate * 100) })}
         </span>
       </div>

@@ -1,0 +1,153 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-parental-leave",
+  "level": "B1",
+  "title": "Foreldrepermisjon",
+  "summary": "Read how parental leave works: who qualifies, 49 weeks at full pay or 59 at 80 percent, the weeks reserved for each parent, and when to apply. Practise talking about plans.",
+  "review": "pending",
+  "text": "Når du får barn i Norge, har du rett til foreldrepermisjon. Hvis begge foreldrene har jobbet minst seks av de siste ti månedene, kan familien til sammen få 49 uker med full lønn eller 59 uker med 80 prosent lønn. Pengene kalles foreldrepenger, og de betales av NAV. Hvis du tjener mye, er det en øvre grense for hvor mye NAV betaler.\nHver av foreldrene har 15 uker som bare den forelderen kan ta. Mor tar også ut tre uker før fødselen. Resten kan foreldrene dele som de vil.\nDu søker om foreldrepenger på nav.no, helst fire uker før permisjonen starter. Husk også å si fra til arbeidsgiveren din i god tid.",
+  "items": [
+    {
+      "id": "b1-perm-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["numbers"],
+      "difficulty": 1150,
+      "prompt": "Hvor lenge kan familien få permisjon med full lønn?",
+      "options": ["49 uker", "59 uker", "15 uker"],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hvem betaler foreldrepengene?",
+      "options": ["NAV", "Arbeidsgiveren", "Kommunen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hva må foreldrene ha gjort for å få foreldrepenger?",
+      "options": [
+        "Jobbet minst seks av de siste ti månedene",
+        "Bodd i Norge i fem år",
+        "Betalt ekstra skatt"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["numbers"],
+      "difficulty": 1400,
+      "prompt": "Hvor mange av de 49 ukene kan foreldrene dele som de vil?",
+      "options": ["16 uker", "15 uker", "49 uker"],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1250,
+      "prompt": "Foreldrepengene ___ av NAV.",
+      "answers": ["betales", "blir betalt", "utbetales", "blir utbetalt"]
+    },
+    {
+      "id": "b1-perm-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["future"],
+      "difficulty": 1200,
+      "prompt": "Jeg ___ ta permisjon fra januar.",
+      "answers": ["skal", "vil"]
+    },
+    {
+      "id": "b1-perm-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["future"],
+      "difficulty": 1300,
+      "prompt": "Jeg kommer ___ å være hjemme i ti uker.",
+      "answers": ["til"]
+    },
+    {
+      "id": "b1-perm-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["modal-verbs"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Du", "bør", "søke", "fire uker", "før permisjonen starter"],
+      "answer": "Du bør søke fire uker før permisjonen starter"
+    },
+    {
+      "id": "b1-perm-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1350,
+      "prompt": "Lag en setning.",
+      "tokens": ["Hvis du tjener mye,", "er", "det", "en øvre grense"],
+      "answer": "Hvis du tjener mye, er det en øvre grense"
+    },
+    {
+      "id": "b1-perm-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Hvem tar over oppgavene?",
+      "audio": "Jeg skal ha permisjon fra mars til august, så Sara tar over oppgavene mine mens jeg er borte.",
+      "options": ["Sara", "Lederen", "Ingen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["future"],
+      "difficulty": 1300,
+      "prompt": "Hvordan skal hun jobbe når hun kommer tilbake?",
+      "audio": "Jeg kommer tilbake i oktober, men jeg kommer til å jobbe deltid de første månedene.",
+      "options": ["Deltid de første månedene", "Fulltid med en gang", "Hjemmefra hele tiden"],
+      "answer": 0
+    },
+    {
+      "id": "b1-perm-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg skal ta foreldrepermisjon."
+    }
+  ]
+}

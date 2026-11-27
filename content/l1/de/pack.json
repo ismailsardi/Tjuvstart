@@ -457,6 +457,42 @@
       "title": "«Jeg har jobbet der i fire år»",
       "body": "Für etwas, das in der Vergangenheit begonnen hat und noch andauert, nimmt das Norwegische «har» + Partizip mit «i»: «Jeg har bodd i Oslo i to måneder». Auf Deutsch sagst du das im Präsens mit «seit»: «Ich wohne seit zwei Monaten in Oslo».",
       "lessons": ["a2-job-interview", "a2-weather"]
+    },
+    {
+      "id": "s-passive",
+      "title": "«Lønnen utbetales»: das Passiv",
+      "body": "Verträge, Regeln und Aushänge hängen oft -s an das Verb: «Vernesko skal brukes» (Sicherheitsschuhe sind zu tragen), «Lønnen utbetales den 20.» (das Gehalt wird am 20. ausgezahlt). Für ein einzelnes Ereignis in der Vergangenheit nimmt man «ble» + Partizip, wie «wurde»: «Sofaen ble sendt i går».",
+      "lessons": ["b1-work-contract", "b1-payslip", "b1-safety", "b1-customer-call"]
+    },
+    {
+      "id": "skal-kommer-til-aa",
+      "title": "«skal» oder «kommer til å»?",
+      "body": "Das Norwegische hat kein eigenes Futur. «skal» steht für feste Pläne: «Lars skal jobbe hele sommeren». «kommer til å» steht für Erwartungen, wie «werden»: «Det kommer til å regne». Oft reicht wie im Deutschen das Präsens: «Jeg reiser i morgen».",
+      "lessons": ["b1-holiday-request"]
+    },
+    {
+      "id": "sin-or-hans",
+      "title": "«sin» oder «hans»?",
+      "body": "«sein» und «ihr» haben im Norwegischen zwei Formen. «sin» (sitt, sine) bezieht sich auf das Subjekt desselben Satzes: «Emil glemte matpakken sin» = seine eigene Brotdose. «hans» und «hennes» meinen jemand anderen: «Emil tok matpakken hans» = die des anderen Jungen.",
+      "lessons": ["b1-parents-meeting", "b1-national-day"]
+    },
+    {
+      "id": "reflexive-seg",
+      "title": "«ta med seg», «føle seg»: Verben mit seg",
+      "body": "Viele Alltagsverben haben ein Reflexivpronomen, manchmal wo das Deutsche keins hat: «ta på seg» (anziehen), «ha med seg» (dabeihaben), «føle seg» (sich fühlen), «glede seg» (sich freuen). Das Pronomen richtet sich nach dem Subjekt: jeg tar med meg, du tar med deg, han/hun/de tar med seg, vi tar med oss.",
+      "lessons": ["b1-parents-meeting", "b1-national-day", "b1-right-to-roam", "b1-safety"]
+    },
+    {
+      "id": "adjective-endings",
+      "title": "stor, stort, store",
+      "body": "Das Adjektiv richtet sich nach dem Nomen: en stor sofa, ei stor seng, et stort hus (-t bei et), store hus (-e im Plural). Nach den, det, de oder einem Possessiv steht -e, und das Nomen behält seine Endung: den store sofaen, det store huset, min nye kollega.",
+      "lessons": ["a2-new-colleague", "a2-recycling", "b1-complaint"]
+    },
+    {
+      "id": "definite-ending",
+      "title": "en tann, tanna: die bestimmte Form",
+      "body": "Das Norwegische hängt den bestimmten Artikel ans Nomen: en tann → tannen oder tanna, et kort → kortet, tenner → tennene. Mit Adjektiv kommt zusätzlich den oder det davor: den nye adressen, det nye kortet.",
+      "lessons": ["a2-dentist", "a2-phone-plan", "a2-moving-notice"]
     }
   ],
   "itemNotes": {
@@ -533,7 +569,33 @@
     "a2-inv-05": "«Jeg kommer gjerne» = ich komme gern.",
     "a2-inv-06": "«ha lyst til» = Lust haben auf, etwas gern tun wollen.",
     "a2-inv-08": "«Dessverre» steht vorn, also kommt danach das Verb: Dessverre kan jeg… Wie «Leider kann ich…».",
-    "a2-intv-06": "«har jobbet … i fire år»: hat in der Vergangenheit begonnen und gilt noch. Auf Deutsch: «arbeite seit vier Jahren»."
+    "a2-intv-06": "«har jobbet … i fire år»: hat in der Vergangenheit begonnen und gilt noch. Auf Deutsch: «arbeite seit vier Jahren».",
+    "b1-ac-05": "-s am Verb macht ein Passiv: «utbetales» = wird ausgezahlt. «blir utbetalt» bedeutet dasselbe.",
+    "b1-ac-06": "«rett på» und «rett til» heißen beide «Anspruch auf».",
+    "b1-ls-07": "Nach «Derfor» am Satzanfang kommt sofort das Verb: «Derfor blir…», wie bei «deshalb».",
+    "b1-op-08": "Im «at»-Satz steht «ikke» vor dem Verb: «at det ikke er».",
+    "b1-hms-07": "«føle seg» ist reflexiv, wie «sich fühlen»: jeg føler meg, du føler deg, hun føler seg.",
+    "b1-fe-05": "«kommer til å» + Infinitiv drückt Zukunft aus: «Jeg kommer til å reise» = ich werde reisen. «skal» nimmt man, wenn es fest geplant ist.",
+    "b1-fe-06": "«fra og med … til og med» = vom … bis einschließlich …",
+    "b1-ku-08": "«for tre uker siden» = vor drei Wochen. «for» vor der Zeitangabe, «siden» danach.",
+    "b1-ku-06": "Für ein abgeschlossenes Ereignis: «ble» + Partizip. «Sofaen ble sendt» = das Sofa wurde verschickt.",
+    "b1-sm-08": "Ein Satz mit dem Verb vorn («Har du…») wirkt wie «hvis», genau wie im Deutschen: «Hast du zu viel bezahlt, bekommst du…».",
+    "b1-fm-07": "«sin» bezieht sich auf das Subjekt desselben Satzes: «Emil glemte matpakken sin» (seine eigene). «matpakken hans» wäre die eines anderen Jungen.",
+    "b1-fm-05": "«ha med seg» = mitbringen, dabeihaben: jeg har med meg, du har med deg, de har med seg.",
+    "b1-rk-06": "Adjektive bekommen -t bei et-Wörtern: en ny sofa, et nytt par, nye hodetelefoner.",
+    "b1-st-05": "«så … som» = so … wie: «dobbelt så høy som» = doppelt so hoch wie. Nach einem Komparativ steht «enn» (als): «lavere enn».",
+    "b1-nd-05": "«feires» = wird gefeiert. Das Passiv auf -s ist üblich, wenn es egal ist, wer handelt.",
+    "b1-ar-07": "Man sagt «i skogen» (im Wald), aber «på fjellet» (in den Bergen), «på hytta», «på landet». Lerne die Präposition mit dem Ort.",
+    "a2-akutt-01": "113 Rettungsdienst, 110 Feuerwehr, 112 Polizei. 116 117 ist die Notfallpraxis, wenn es nicht lebensgefährlich ist.",
+    "a2-kilde-05": "Im Plural bekommen Adjektive -e: en grønn pose, grønne poser.",
+    "a2-rest-05": "Standard ist «allergisk mot» (allergisch gegen); man hört auch «allergisk for».",
+    "a1-meg-08": "Beim Alter steht «er», wie im Deutschen: «Jeg er 34 år».",
+    "a2-tann-06": "Beim zweiten Erwähnen steht die bestimmte Form, angehängt ans Wort: en tann → tanna (oder tannen).",
+    "a2-mob-05": "«abonnement» ist ein et-Wort: et abonnement, abonnementet. Lerne en/ei/et mit jedem Nomen, wie der/die/das.",
+    "b1-jb-05": "«glede seg til» = sich freuen auf: jeg gleder meg, vi gleder oss.",
+    "b1-perm-04": "49 Wochen: 3 vor der Geburt, 15 für jeden Elternteil und 16 zum Aufteilen.",
+    "b1-stoy-06": "«si fra» (oder «si ifra») = Bescheid sagen, etwas ansprechen. Sehr häufig, bei der Arbeit wie zu Hause.",
+    "b1-jul-05": "Nach «den», «det» oder «de» bekommt der Superlativ -e: den største høytiden."
   },
   "lessonSummaries": {
     "a2-first-day-at-work": "Lies über Saras ersten Tag in einem neuen Job und übe die Wörter und Sätze, die du bei der Arbeit brauchst.",
@@ -567,14 +629,43 @@
     "a2-weather": "Lies Saras Nachricht über ihren ersten Herbst in Oslo, sprich über Wetter und Temperaturen und lerne das Sprichwort über schlechtes Wetter und schlechte Kleidung.",
     "a2-invitation": "Lies eine Einladung zum Abendessen von einer Kollegin und die Antwort und übe, freundlich ja, nein und tut mir leid zu sagen.",
     "a2-hairdresser": "Buch telefonisch einen Haarschnitt: frag, was frei ist, nimm einen anderen Termin an, nenn deinen Namen und versteh die Stornierungsregel.",
-    "a2-job-interview": "Verfolge ein Vorstellungsgespräch in einem Hotel: sprich über deine Erfahrung und Sprachen, sag, warum du den Job willst, und stell deine eigene Frage."
+    "a2-job-interview": "Verfolge ein Vorstellungsgespräch in einem Hotel: sprich über deine Erfahrung und Sprachen, sag, warum du den Job willst, und stell deine eigene Frage.",
+    "b1-work-contract": "Einen Arbeitsvertrag lesen: feste Stelle, Probezeit, Kündigungsfrist, Arbeitszeit, Überstunden, Zahltag und Urlaub. Dazu das Passiv auf -s, das in Verträgen und Regeln steht.",
+    "b1-payslip": "Die Antworten der Personalabteilung auf drei häufige Fragen lesen: wie man die Gehaltsabrechnung liest, warum es im Juni Urlaubsgeld statt Gehalt gibt und warum im Dezember nur halbe Steuer abgezogen wird.",
+    "b1-opinion": "Einer Teamdiskussion über den Umzug in ein Großraumbüro folgen. Lernen, wie man zustimmt, widerspricht, abwägt und einen Vorschlag macht.",
+    "b1-safety": "Einen Aushang der Sicherheitsbeauftragten lesen: Brandübung, Sicherheitsschuhe im Lager, Verletzungen melden. Regeln mit skal und dem Passiv auf -s üben.",
+    "b1-holiday-request": "Eine E-Mail lesen, in der jemand drei Wochen Urlaub im Juli beantragt, und die Antwort. Pläne mit skal und kommer til å üben, Daten mit fra og med.",
+    "b1-customer-call": "Einem Anruf einer Kundin folgen, deren Sofa nicht angekommen ist. Lernen, sich zu entschuldigen, zu erklären, was passiert ist, eine Lösung anzubieten und «vor …» zu sagen.",
+    "b1-tax-return": "Einen Leitfaden zur jährlichen Steuererklärung lesen: wo man sie findet, was man prüft, welche Abzüge man selbst einträgt, die Frist und den Steuerbescheid im Juni.",
+    "b1-parents-meeting": "Den Brief einer Lehrerin lesen, die zum Elternabend einlädt: Pläne für den Herbst, was die Kinder jeden Tag mitbringen und was man tut, wenn das Kind krank ist. seg, sin und som üben.",
+    "b1-complaint": "Eine Reklamations-E-Mail zu Kopfhörern lesen, die nach zwei Monaten kaputtgingen: das Problem, deine Rechte als Verbraucher und was du vom Geschäft verlangst.",
+    "b1-news-electricity": "Eine kurze Nachricht über steigende Strompreise und Spartipps lesen, dann einem Wetterbericht und einer Schlagzeile folgen. Vergleichen üben: dyrere, dobbelt så høy som, billigst.",
+    "b1-national-day": "Über den Nationalfeiertag lesen: das Frühstück, die Bunad, den Kinderumzug, die Königsfamilie auf dem Balkon und die Russ. Dann einem Livebericht und der Einladung eines Nachbarn folgen.",
+    "b1-right-to-roam": "Über das Jedermannsrecht lesen: wandern und zelten, Beeren pflücken und die Regeln zu Müll und Lagerfeuer. i und på bei Orten üben, dazu seg.",
+    "a2-emergency": "Die Notrufnummern lernen (113, 110, 112), was man am Telefon sagt und wann man die Notfallpraxis (legevakt) statt des Hausarztes anruft.",
+    "a2-recycling": "Einen Aushang der Wohnungsgenossenschaft zur Mülltrennung lesen: Essensreste, Plastik, Papier, Glas, Pfandflaschen und Sperrmüll.",
+    "a2-work-chat": "Einen Team-Chat lesen: ein verlorenes Ladegerät, ein verschobenes Meeting, jemand verspätet sich, eine Kaffeepause. Kurze, freundliche Nachrichten an Kollegen üben.",
+    "a2-restaurant": "Einem Restaurantbesuch folgen: die Reservierung, Getränke, die Frage nach einer Allergie, die Bestellung und getrennt bezahlen.",
+    "a2-new-colleague": "Eine Willkommensnachricht über eine neue Kollegin lesen: wie sie aussieht, wie sie ist und was sie in der Freizeit macht. Adjektivendungen üben: stor, stort, store und den nye kollegaen.",
+    "a1-about-me": "Ein ausgefülltes Formular und einen kurzen Text über Maria lesen: Name, Alter, Land, Adresse, Beruf und Sprachen. Dann dasselbe über dich schreiben.",
+    "a1-signs": "Die Schilder von jeden Tag lesen: geöffnet und geschlossen, Eingang und Ausgang, drücken und ziehen, Toilette, Rauchen verboten, Angebote und Öffnungszeiten.",
+    "a2-dentist": "Telefonisch einen Zahnarzttermin machen: sagen, wo es wehtut, eine Uhrzeit finden und nach dem Preis fragen. Erwachsene zahlen den Zahnarzt in Norwegen selbst.",
+    "a2-moving-notice": "Lesen, wie man einen Umzug beim Melderegister meldet: die Frist von acht Tagen, was man braucht und wem man die neue Adresse sonst noch sagt.",
+    "a2-phone-plan": "Eine Anzeige für einen Handyvertrag lesen: Preis, Daten, keine Mindestlaufzeit, Nummer behalten und die neue SIM-Karte. en und et sowie die bestimmte Form üben.",
+    "b1-christmas-party": "Die Einladung zur Weihnachtsfeier der Firma lesen: Datum und Ort, traditionelles Essen, was die Firma bezahlt, die Kleiderordnung und was nach dem Essen passiert.",
+    "b1-parental-leave": "Lesen, wie die Elternzeit funktioniert: wer Anspruch hat, 49 Wochen mit vollem Lohn oder 59 mit 80 Prozent, die Wochen für jeden Elternteil und wann man beantragt. Über Pläne sprechen üben.",
+    "b1-noise-complaint": "Die höfliche Beschwerde einer Nachbarin über nächtlichen Lärm und die Antwort lesen. Lernen, sich zu beschweren, ohne Streit anzufangen, und sich zu entschuldigen.",
+    "b1-christmas": "Über Weihnachten in Norwegen lesen: Lichter schon im November, Heiligabend als wichtigster Tag, Glocken um fünf, Ribbe oder Pinnekjøtt, die Mandel im Milchreis und die «Romjul»."
   },
   "trackSummaries": {
     "first-weeks": "Die Situationen deiner ersten Wochen: der erste Arbeitstag, die Steuerkarte, BankID, die Wohnungssuche, der Arzt und das Mittagessen mit Kollegen.",
     "real-texts": "Echte Arten von Dokumenten, vereinfacht auf dein Niveau: ein Brief von NAV, eine Gebrauchtanzeige, eine Stellenanzeige und ein Aushang der Wohnungsgenossenschaft.",
-    "from-zero": "Ganz von vorn: die Buchstaben und Laute des Norwegischen, Begrüßen, Zahlen und Preise, der Laden, das Café und die Uhrzeit.",
+    "from-zero": "Bei null anfangen: Buchstaben und Laute des Norwegischen, Hallo sagen und sich vorstellen, Zahlen und Preise, der Laden, Schilder in der Stadt, das Café und die Uhrzeit.",
     "towards-b1": "Der nächste Schritt: erzählen, was du gemacht hast, an den Vermieter schreiben, ein Sitzungsprotokoll, ein Mitarbeitergespräch, ein Brief von der Kita und ein Nachrichtentext über Ostern.",
-    "everyday-oslo": "Alltagserledigungen und soziales Leben: die Apotheke, ein Paket abholen, Wetter und Kleidung, eine Einladung zum Essen, einen Haarschnitt buchen und ein Vorstellungsgespräch."
+    "everyday-oslo": "Alltagserledigungen und soziales Leben: die Apotheke, ein Paket abholen, Wetter und Kleidung, eine Einladung zum Essen, einen Haarschnitt buchen und ein Vorstellungsgespräch.",
+    "working-life": "Arbeitsleben auf B1: der Vertrag, die Gehaltsabrechnung und das Urlaubsgeld, die eigene Meinung im Meeting, Sicherheitsregeln, Urlaub beantragen, eine unzufriedene Kundin und die Weihnachtsfeier.",
+    "society-b1": "Die norwegische Gesellschaft auf B1: die Steuererklärung, der Elternabend, die Elternzeit, laute Nachbarn, eine Reklamation, Strompreise in den Nachrichten, der 17. Mai, das Jedermannsrecht und Weihnachten.",
+    "more-everyday": "Mehr Alltag: Notruf und Notfallpraxis, Mülltrennung, Nachrichten an Kollegen, Essen gehen mit Allergie, eine neue Kollegin, der Zahnarzt, einen Umzug melden und ein neuer Handyvertrag."
   },
   "canDo": {
     "A1-R-01": "Ich erkenne vertraute Wörter, Namen und Zahlen auf Schildern, Etiketten und Preisschildern.",
@@ -3237,6 +3328,702 @@
     },
     "lete": {
       "meaning": "suchen"
+    },
+    "arbeidsavtale": {
+      "meaning": "Arbeitsvertrag"
+    },
+    "arbeidsdag": {
+      "meaning": "Arbeitstag"
+    },
+    "ansatt": {
+      "meaning": "Angestellte(r)"
+    },
+    "provetid": {
+      "meaning": "Probezeit"
+    },
+    "oppsigelsestid": {
+      "meaning": "Kündigungsfrist"
+    },
+    "overtid": {
+      "meaning": "Überstunden"
+    },
+    "tillegg": {
+      "meaning": "Zuschlag"
+    },
+    "utbetale": {
+      "meaning": "auszahlen"
+    },
+    "avtale-verb": {
+      "meaning": "vereinbaren"
+    },
+    "rett": {
+      "meaning": "Recht, Anspruch"
+    },
+    "naermest": {
+      "meaning": "nächste"
+    },
+    "skattetrekk": {
+      "meaning": "Steuerabzug"
+    },
+    "bruttolonn": {
+      "meaning": "Bruttolohn"
+    },
+    "nettolonn": {
+      "meaning": "Nettolohn"
+    },
+    "lonnsslipp": {
+      "meaning": "Gehaltsabrechnung"
+    },
+    "feriepenger": {
+      "meaning": "Urlaubsgeld"
+    },
+    "altsa": {
+      "meaning": "also, das heißt"
+    },
+    "overst": {
+      "meaning": "ganz oben"
+    },
+    "lokale": {
+      "meaning": "Räume, Räumlichkeiten"
+    },
+    "landskap": {
+      "meaning": "Großraumbüro; Landschaft"
+    },
+    "annen": {
+      "meaning": "andere(r)"
+    },
+    "samarbeide": {
+      "meaning": "zusammenarbeiten"
+    },
+    "stoy": {
+      "meaning": "Lärm"
+    },
+    "ro": {
+      "meaning": "Ruhe"
+    },
+    "ide": {
+      "meaning": "Idee"
+    },
+    "booke": {
+      "meaning": "buchen"
+    },
+    "alarm": {
+      "meaning": "Alarm"
+    },
+    "brannovelse": {
+      "meaning": "Brandschutzübung"
+    },
+    "forlate": {
+      "meaning": "verlassen"
+    },
+    "trapp": {
+      "meaning": "Treppe"
+    },
+    "heis": {
+      "meaning": "Aufzug"
+    },
+    "parkeringsplass": {
+      "meaning": "Parkplatz"
+    },
+    "hovedinngang": {
+      "meaning": "Haupteingang"
+    },
+    "lager": {
+      "meaning": "Lager"
+    },
+    "vernesko": {
+      "meaning": "Sicherheitsschuhe"
+    },
+    "skade": {
+      "meaning": "Verletzung, Schaden"
+    },
+    "melde": {
+      "meaning": "melden"
+    },
+    "utrygg": {
+      "meaning": "unsicher"
+    },
+    "verneombud": {
+      "meaning": "Sicherheitsbeauftragte(r)"
+    },
+    "enna": {
+      "meaning": "noch"
+    },
+    "lei": {
+      "meaning": "traurig; leid"
+    },
+    "sofa": {
+      "meaning": "Sofa"
+    },
+    "sannsynligvis": {
+      "meaning": "wahrscheinlich"
+    },
+    "forrige": {
+      "meaning": "letzte, vorige"
+    },
+    "beklage": {
+      "meaning": "bedauern, sich entschuldigen"
+    },
+    "gratis": {
+      "meaning": "kostenlos"
+    },
+    "levering": {
+      "meaning": "Lieferung"
+    },
+    "detalj": {
+      "meaning": "Detail"
+    },
+    "post": {
+      "meaning": "Post"
+    },
+    "ordrenummer": {
+      "meaning": "Bestellnummer"
+    },
+    "skattemelding": {
+      "meaning": "Steuererklärung"
+    },
+    "skatteoppgjor": {
+      "meaning": "Steuerbescheid"
+    },
+    "restskatt": {
+      "meaning": "Steuernachzahlung"
+    },
+    "fradrag": {
+      "meaning": "Abzug"
+    },
+    "opplysning": {
+      "meaning": "Angabe, Auskunft"
+    },
+    "lan": {
+      "meaning": "Darlehen, Kredit"
+    },
+    "stemme": {
+      "meaning": "stimmen"
+    },
+    "penger": {
+      "meaning": "Geld"
+    },
+    "foreldremote": {
+      "meaning": "Elternabend"
+    },
+    "klasserom": {
+      "meaning": "Klassenzimmer"
+    },
+    "lekse": {
+      "meaning": "Hausaufgabe"
+    },
+    "friminutt": {
+      "meaning": "Pause (Schule)"
+    },
+    "uansett": {
+      "meaning": "egal, auf jeden Fall"
+    },
+    "kontaktlaerer": {
+      "meaning": "Klassenlehrer(in)"
+    },
+    "seg": {
+      "meaning": "sich"
+    },
+    "hodetelefon": {
+      "meaning": "Kopfhörer"
+    },
+    "reklamere": {
+      "meaning": "reklamieren"
+    },
+    "reparere": {
+      "meaning": "reparieren"
+    },
+    "minst": {
+      "meaning": "mindestens"
+    },
+    "strompris": {
+      "meaning": "Strompreis"
+    },
+    "dobbelt": {
+      "meaning": "doppelt"
+    },
+    "vind": {
+      "meaning": "Wind"
+    },
+    "ekspert": {
+      "meaning": "Experte"
+    },
+    "rad": {
+      "meaning": "Rat"
+    },
+    "senke": {
+      "meaning": "senken"
+    },
+    "temperatur": {
+      "meaning": "Temperatur"
+    },
+    "dusje": {
+      "meaning": "duschen"
+    },
+    "kort-adjective": {
+      "meaning": "kurz"
+    },
+    "billig": {
+      "meaning": "billig"
+    },
+    "nord": {
+      "meaning": "Norden"
+    },
+    "sor": {
+      "meaning": "Süden"
+    },
+    "nasjonaldag": {
+      "meaning": "Nationalfeiertag"
+    },
+    "grunnlov": {
+      "meaning": "Verfassung"
+    },
+    "frokost": {
+      "meaning": "Frühstück"
+    },
+    "bunad": {
+      "meaning": "Bunad, Tracht"
+    },
+    "barnetog": {
+      "meaning": "Kinderumzug"
+    },
+    "flagg": {
+      "meaning": "Flagge"
+    },
+    "tog": {
+      "meaning": "Zug; Umzug"
+    },
+    "forbi": {
+      "meaning": "vorbei an"
+    },
+    "slott": {
+      "meaning": "Schloss"
+    },
+    "kongefamilie": {
+      "meaning": "Königsfamilie"
+    },
+    "vinke": {
+      "meaning": "winken"
+    },
+    "balkong": {
+      "meaning": "Balkon"
+    },
+    "lek": {
+      "meaning": "Spiel; Spielzeug"
+    },
+    "is": {
+      "meaning": "Eis"
+    },
+    "ungdom": {
+      "meaning": "Jugendliche(r)"
+    },
+    "videregaende": {
+      "meaning": "weiterführend (Oberstufe)"
+    },
+    "russ": {
+      "meaning": "Russ, feiernde Abiturienten"
+    },
+    "rod": {
+      "meaning": "rot"
+    },
+    "bla": {
+      "meaning": "blau"
+    },
+    "skog": {
+      "meaning": "Wald"
+    },
+    "eiendom": {
+      "meaning": "Grundstück, Eigentum"
+    },
+    "telte": {
+      "meaning": "zelten"
+    },
+    "plukke": {
+      "meaning": "pflücken"
+    },
+    "sopp": {
+      "meaning": "Pilz"
+    },
+    "regel": {
+      "meaning": "Regel"
+    },
+    "forstyrre": {
+      "meaning": "stören"
+    },
+    "forbudt": {
+      "meaning": "verboten"
+    },
+    "tenne": {
+      "meaning": "anzünden"
+    },
+    "bal": {
+      "meaning": "Lagerfeuer"
+    },
+    "naer": {
+      "meaning": "nahe, in der Nähe"
+    },
+    "hensyn": {
+      "meaning": "Rücksicht"
+    },
+    "natur": {
+      "meaning": "Natur"
+    },
+    "hovedregel": {
+      "meaning": "Grundregel"
+    },
+    "all": {
+      "meaning": "alle(s)"
+    },
+    "drikkeflaske": {
+      "meaning": "Trinkflasche"
+    },
+    "nettbutikk": {
+      "meaning": "Onlineshop"
+    },
+    "allemannsrett": {
+      "meaning": "Jedermannsrecht"
+    },
+    "forbrukerkjopslov": {
+      "meaning": "Verbraucherkaufgesetz"
+    },
+    "adresse": {
+      "meaning": "Adresse"
+    },
+    "sprak": {
+      "meaning": "Sprache"
+    },
+    "utgang": {
+      "meaning": "Ausgang"
+    },
+    "royking": {
+      "meaning": "Rauchen"
+    },
+    "skyve": {
+      "meaning": "schieben, drücken"
+    },
+    "apningstid": {
+      "meaning": "Öffnungszeiten"
+    },
+    "ambulanse": {
+      "meaning": "Krankenwagen"
+    },
+    "brannvesen": {
+      "meaning": "Feuerwehr"
+    },
+    "livsfarlig": {
+      "meaning": "lebensgefährlich"
+    },
+    "dagtid": {
+      "meaning": "Tageszeit, tagsüber"
+    },
+    "dogn": {
+      "meaning": "Tag und Nacht, 24 Stunden"
+    },
+    "hvem": {
+      "meaning": "wer"
+    },
+    "skade-verb": {
+      "meaning": "verletzen"
+    },
+    "skje-verb": {
+      "meaning": "passieren"
+    },
+    "beboer": {
+      "meaning": "Bewohner"
+    },
+    "sortere": {
+      "meaning": "sortieren, trennen"
+    },
+    "matavfall": {
+      "meaning": "Essensreste, Biomüll"
+    },
+    "gronn": {
+      "meaning": "grün"
+    },
+    "plast": {
+      "meaning": "Plastik"
+    },
+    "soppeldunk": {
+      "meaning": "Mülltonne"
+    },
+    "papp": {
+      "meaning": "Pappe"
+    },
+    "papir": {
+      "meaning": "Papier"
+    },
+    "container": {
+      "meaning": "Container"
+    },
+    "glass": {
+      "meaning": "Glas"
+    },
+    "metall": {
+      "meaning": "Metall"
+    },
+    "pant": {
+      "meaning": "Pfand"
+    },
+    "mobel": {
+      "meaning": "Möbel"
+    },
+    "lader": {
+      "meaning": "Ladegerät"
+    },
+    "morges": {
+      "meaning": "(i morges) heute Morgen"
+    },
+    "forresten": {
+      "meaning": "übrigens"
+    },
+    "samtale": {
+      "meaning": "Gespräch"
+    },
+    "moterom": {
+      "meaning": "Besprechungsraum"
+    },
+    "alkoholfri": {
+      "meaning": "alkoholfrei"
+    },
+    "allergisk": {
+      "meaning": "allergisch"
+    },
+    "nott": {
+      "meaning": "Nuss"
+    },
+    "dessert": {
+      "meaning": "Nachtisch"
+    },
+    "sjokoladekake": {
+      "meaning": "Schokoladenkuchen"
+    },
+    "fiskesuppe": {
+      "meaning": "Fischsuppe"
+    },
+    "vaersagod": {
+      "meaning": "bitte schön"
+    },
+    "brun": {
+      "meaning": "braun"
+    },
+    "ingenior": {
+      "meaning": "Ingenieur"
+    },
+    "fritid": {
+      "meaning": "Freizeit"
+    },
+    "har-noun": {
+      "meaning": "Haare"
+    },
+    "gjenbruksstasjon": {
+      "meaning": "Wertstoffhof"
+    },
+    "kortmaskin": {
+      "meaning": "Kartenlesegerät"
+    },
+    "tann": {
+      "meaning": "Zahn"
+    },
+    "tannlege": {
+      "meaning": "Zahnarzt"
+    },
+    "resepsjonist": {
+      "meaning": "Empfangsmitarbeiter(in)"
+    },
+    "hit": {
+      "meaning": "hierher"
+    },
+    "kinn": {
+      "meaning": "Wange"
+    },
+    "hoven": {
+      "meaning": "geschwollen"
+    },
+    "kvart": {
+      "meaning": "Viertel"
+    },
+    "undersokelse": {
+      "meaning": "Untersuchung"
+    },
+    "behandling": {
+      "meaning": "Behandlung"
+    },
+    "voksen": {
+      "meaning": "Erwachsene(r)"
+    },
+    "flytting": {
+      "meaning": "Umzug"
+    },
+    "flyttemelding": {
+      "meaning": "Ummeldung"
+    },
+    "folkeregister": {
+      "meaning": "Melderegister"
+    },
+    "skilt": {
+      "meaning": "Schild"
+    },
+    "leiekontrakt": {
+      "meaning": "Mietvertrag"
+    },
+    "arbeidsgiver": {
+      "meaning": "Arbeitgeber"
+    },
+    "postkasse": {
+      "meaning": "Briefkasten"
+    },
+    "abonnement": {
+      "meaning": "Abonnement, Vertrag"
+    },
+    "tale": {
+      "meaning": "Telefonie; Rede"
+    },
+    "bindingstid": {
+      "meaning": "Mindestlaufzeit"
+    },
+    "bytte": {
+      "meaning": "wechseln"
+    },
+    "beholde": {
+      "meaning": "behalten"
+    },
+    "julebord": {
+      "meaning": "Weihnachtsfeier"
+    },
+    "fest": {
+      "meaning": "Fest, Party"
+    },
+    "tradisjonell": {
+      "meaning": "traditionell"
+    },
+    "julemat": {
+      "meaning": "Weihnachtsessen"
+    },
+    "ribbe": {
+      "meaning": "Schweinerippe"
+    },
+    "pinnekjott": {
+      "meaning": "gepökelte Lammrippen"
+    },
+    "kjott": {
+      "meaning": "Fleisch"
+    },
+    "grei": {
+      "meaning": "in Ordnung"
+    },
+    "pynte": {
+      "meaning": "schmücken; sich schick machen"
+    },
+    "kleskode": {
+      "meaning": "Kleiderordnung"
+    },
+    "quiz": {
+      "meaning": "Quiz"
+    },
+    "dans": {
+      "meaning": "Tanz"
+    },
+    "sosialkomite": {
+      "meaning": "Festkomitee"
+    },
+    "foreldrepermisjon": {
+      "meaning": "Elternzeit"
+    },
+    "permisjon": {
+      "meaning": "Freistellung, Urlaub"
+    },
+    "foreldrepenger": {
+      "meaning": "Elterngeld"
+    },
+    "grense": {
+      "meaning": "Grenze"
+    },
+    "ovre": {
+      "meaning": "obere"
+    },
+    "rest": {
+      "meaning": "Rest"
+    },
+    "fodsel": {
+      "meaning": "Geburt"
+    },
+    "helst": {
+      "meaning": "am liebsten"
+    },
+    "brak": {
+      "meaning": "Lärm; Ärger"
+    },
+    "sove": {
+      "meaning": "schlafen"
+    },
+    "skru": {
+      "meaning": "drehen"
+    },
+    "avslutte": {
+      "meaning": "beenden"
+    },
+    "hoytid": {
+      "meaning": "Feiertag, Fest"
+    },
+    "henge": {
+      "meaning": "hängen"
+    },
+    "julelys": {
+      "meaning": "Weihnachtsbeleuchtung"
+    },
+    "vindu": {
+      "meaning": "Fenster"
+    },
+    "julaften": {
+      "meaning": "Heiligabend"
+    },
+    "stenge": {
+      "meaning": "schließen"
+    },
+    "kirkeklokke": {
+      "meaning": "Kirchenglocke"
+    },
+    "julemiddag": {
+      "meaning": "Weihnachtsessen"
+    },
+    "gave": {
+      "meaning": "Geschenk"
+    },
+    "juletre": {
+      "meaning": "Weihnachtsbaum"
+    },
+    "riskrem": {
+      "meaning": "Reiscreme"
+    },
+    "mandel": {
+      "meaning": "Mandel"
+    },
+    "marsipangris": {
+      "meaning": "Marzipanschwein"
+    },
+    "romjul": {
+      "meaning": "Zeit zwischen den Jahren"
+    },
+    "nyttar": {
+      "meaning": "Neujahr, Silvester"
+    },
+    "man": {
+      "meaning": "man"
+    },
+    "bruksenhetsnummer": {
+      "meaning": "Wohnungsnummer"
+    },
+    "mobilabonnement": {
+      "meaning": "Handyvertrag"
+    },
+    "vegetarrett": {
+      "meaning": "vegetarisches Gericht"
+    },
+    "siste": {
+      "meaning": "letzte"
+    },
+    "husordensregel": {
+      "meaning": "Hausordnung"
     }
   }
 }

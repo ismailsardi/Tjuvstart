@@ -1,0 +1,147 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-news-electricity",
+  "level": "B1",
+  "title": "Nyheter: strømprisen",
+  "summary": "Read a short news article about rising electricity prices and tips for saving power, then follow a weather forecast and a news headline. Practise comparing: dyrere, dobbelt så høy som, billigst.",
+  "review": "pending",
+  "text": "Strømprisen stiger igjen\nStrømmen i Sør-Norge blir dyrere denne vinteren. I januar var prisen nesten dobbelt så høy som året før. Det er særlig kaldt vær og lite vind i Europa som gjør strømmen dyrere.\nI Nord-Norge er prisene mye lavere enn i sør.\nEksperter gir disse rådene: Senk temperaturen inne med én eller to grader, dusj kortere, og bruk vaskemaskinen om natta, når strømmen ofte er billigst.",
+  "items": [
+    {
+      "id": "b1-st-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva handler nyheten om?",
+      "options": ["At strømmen blir dyrere", "At det kommer mer snø", "At staten selger strøm"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor blir strømmen dyrere?",
+      "options": ["Kaldt vær og lite vind i Europa", "Nye skatter", "For mange elbiler"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["comparison"],
+      "difficulty": 1200,
+      "prompt": "Hvor er prisene lavest?",
+      "options": ["I Nord-Norge", "I Sør-Norge", "I hele Europa"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1250,
+      "prompt": "Når er strømmen ofte billigst?",
+      "options": ["Om natta", "Om morgenen", "Midt på dagen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1250,
+      "prompt": "Prisen var dobbelt så høy ___ året før.",
+      "answers": ["som"]
+    },
+    {
+      "id": "b1-st-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1150,
+      "prompt": "I nord er prisene lavere ___ i sør.",
+      "answers": ["enn"]
+    },
+    {
+      "id": "b1-st-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1300,
+      "prompt": "Om natta er strømmen ofte ___.",
+      "answers": ["billigst", "billigere"]
+    },
+    {
+      "id": "b1-st-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["comparison"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["Strømmen", "blir", "dyrere", "denne vinteren"],
+      "answer": "Strømmen blir dyrere denne vinteren"
+    },
+    {
+      "id": "b1-st-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Om natta", "er", "strømmen", "billigst"],
+      "answer": "Om natta er strømmen billigst"
+    },
+    {
+      "id": "b1-st-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1250,
+      "prompt": "Hvordan blir været i morgen?",
+      "audio": "Og så til været. I morgen blir det kaldt i hele landet, med ned mot minus tjue grader i innlandet. Det blir lite vind.",
+      "options": ["Kaldt og lite vind", "Mildt og mye vind", "Regn i hele landet"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1300,
+      "prompt": "Hvem skal få mer støtte?",
+      "audio": "Regjeringen vil gi mer strømstøtte til familier med lav inntekt. Forslaget skal behandles i Stortinget neste uke.",
+      "options": ["Familier med lav inntekt", "Alle bedrifter", "Studenter"],
+      "answer": 0
+    },
+    {
+      "id": "b1-st-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-02"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Strømmen blir dyrere denne vinteren."
+    }
+  ]
+}

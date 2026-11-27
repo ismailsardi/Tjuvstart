@@ -20,7 +20,7 @@ test('a learner picks a daily goal and Today shows it with the last seven days',
   // Reminders need the iOS app; the browser shows no switch for them.
   await expect(page.getByTestId('reminder-settings')).toHaveCount(0);
   await page.getByRole('radio', { name: /Light/ }).check();
-  await page.getByRole('link', { name: 'Back to home' }).click();
+  await page.getByRole('link', { name: 'Back to Today' }).click();
 
   await expect(streak).toContainText('0 of 5 done today');
   await expect(streak).toContainText('Do 5 things today to start a streak.');

@@ -164,8 +164,13 @@ describe('LessonPlayer with language packs', () => {
       </I18nProvider>,
     );
 
+    const familiar = [...container.querySelectorAll('.reading-text .cognate')].map(
+      (m) => m.textContent,
+    );
+    expect(familiar).toContain('prosjekt');
+    // Only look-alikes are <mark>ed; familiar words wait for their list to be opened.
     const marked = [...container.querySelectorAll('.reading-text mark')].map((m) => m.textContent);
-    expect(marked).toContain('prosjekt');
+    expect(marked).not.toContain('prosjekt');
     expect(
       screen.getByRole('heading', { name: 'Mots que vous connaissez probablement' }),
     ).toBeTruthy();

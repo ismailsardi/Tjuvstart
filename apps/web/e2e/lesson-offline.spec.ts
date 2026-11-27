@@ -29,9 +29,9 @@ test('sample lesson works offline and updates the level estimate', async ({ page
   }
 
   await page.getByRole('link', { name: 'Close' }).click();
-  await expect(page.getByTestId('skill-reading')).toContainText('(estimated)');
+  await expect(page.getByTestId('skill-reading')).toContainText(/^Lesing(A1|A2|B1|B2)/);
 
   // Progress is stored on the device and survives a reload.
   await page.reload();
-  await expect(page.getByTestId('skill-reading')).toContainText('(estimated)');
+  await expect(page.getByTestId('skill-reading')).toContainText(/^Lesing(A1|A2|B1|B2)/);
 });

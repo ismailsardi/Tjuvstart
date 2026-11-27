@@ -60,7 +60,7 @@ export function GoalPage() {
         <p className="muted small">{t('streakRule')}</p>
         <ReminderSettings />
       </section>
-      <a className="button" href={homeHref}>
+      <a className="button page-action" href={homeHref}>
         {t('backHome')}
       </a>
     </>

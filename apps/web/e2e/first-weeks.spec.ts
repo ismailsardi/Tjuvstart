@@ -16,7 +16,7 @@ test('the first-weeks track shows progress and suggests the next scenario', asyn
   for (let n = 0; n < total; n++) await answerAnything(page);
   await expect(page.getByRole('heading', { name: 'Ferdig!' })).toBeVisible();
 
-  await page.getByRole('link', { name: 'Retour à l’accueil' }).click();
+  await page.getByRole('link', { name: 'Retour à Aujourd’hui' }).click();
   await expect(next).toContainText('1 sur 6 terminées');
   await expect(next).toContainText('Skattekortet');
 

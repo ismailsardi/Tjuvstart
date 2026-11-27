@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-opinion",
+  "level": "B1",
+  "title": "Hva mener dere?",
+  "summary": "Follow a team discussion about moving to an open-plan office. Learn how to agree, disagree, weigh both sides and make a suggestion.",
+  "review": "pending",
+  "text": "Lederen: Vi flytter til nye lokaler i høst. Der blir det åpent landskap i stedet for egne kontorer. Hva mener dere?\nOmar: Jeg synes det er en god idé, fordi vi snakker mer sammen når vi sitter i samme rom.\nNina: Jeg er ikke helt enig. På den ene siden blir det lettere å samarbeide. På den andre siden blir det mer støy, og jeg trenger ro når jeg skriver kode.\nSara: Jeg forstår hva du mener, Nina. Kanskje vi kan ha noen stille rom som alle kan booke?\nLederen: Det er et godt forslag. Det tar jeg med meg videre.",
+  "items": [
+    {
+      "id": "b1-op-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hva skal skje i høst?",
+      "options": [
+        "De flytter til nye lokaler",
+        "Omar slutter i jobben",
+        "Alle skal jobbe hjemmefra"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor liker Omar åpent landskap?",
+      "options": ["De snakker mer sammen", "Det er billigere", "Det er mindre støy"],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hva er Nina redd for?",
+      "options": ["At det blir for mye støy", "At hun må jobbe mer", "At hun ikke får egen pc"],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1200,
+      "prompt": "Hva foreslår Sara?",
+      "options": [
+        "Stille rom som alle kan booke",
+        "Egne kontorer til alle",
+        "At Nina jobber hjemme"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Jeg er ikke helt ___.",
+      "answers": ["enig"]
+    },
+    {
+      "id": "b1-op-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["conjunctions"],
+      "difficulty": 1200,
+      "prompt": "Jeg synes det er bra, ___ vi snakker mer sammen.",
+      "answers": ["fordi", "siden", "ettersom", "for"]
+    },
+    {
+      "id": "b1-op-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1250,
+      "prompt": "På den ene siden er det lettere. På den ___ siden blir det mer støy.",
+      "answers": ["andre"]
+    },
+    {
+      "id": "b1-op-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["subordinate-clause", "ikke-placement"],
+      "difficulty": 1350,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg synes", "at", "det", "ikke", "er", "en god idé"],
+      "answer": "Jeg synes at det ikke er en god idé"
+    },
+    {
+      "id": "b1-op-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg forstår", "hva", "du", "mener"],
+      "answer": "Jeg forstår hva du mener"
+    },
+    {
+      "id": "b1-op-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Hva mener personen?",
+      "audio": "Jeg skjønner poenget ditt, men jeg tror ikke det fungerer for oss. Vi har mange telefonmøter, og da blir det fort mye bråk i et åpent landskap.",
+      "options": [
+        "Åpent landskap passer dårlig for dem",
+        "Åpent landskap er en god idé",
+        "De trenger flere telefonmøter"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Er personen for eller mot forslaget?",
+      "audio": "Personlig er jeg for forslaget. Det koster lite, og alle får mer frihet.",
+      "options": ["For", "Mot", "Hun har ikke bestemt seg"],
+      "answer": 0
+    },
+    {
+      "id": "b1-op-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Det er et godt forslag."
+    }
+  ]
+}

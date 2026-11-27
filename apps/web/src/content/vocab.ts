@@ -92,3 +92,39 @@ export function cardsInText(text: string): string[] {
   );
   return [...new Set(ids)];
 }
+
+/**
+ * Where a new learner starts at each level: the first everyday words at A1, the words for the
+ * job at A2 and B1, since the learners are adults moving for work.
+ */
+const STARTER_TOPIC: Readonly<Record<Level, string>> = {
+  A1: 'first-words',
+  A2: 'work',
+  B1: 'work',
+  B2: 'work',
+};
+
+/**
+ * The one deck to suggest next, for a learner at `level` who already studies the cards in
+ * `learning`. A deck already started and not finished comes first, then the starter deck for the
+ * level, then the next unfinished deck at the level, then the levels above. Undefined once every
+ * general deck from the level up is fully in the learner's cards.
+ */
+export function recommendedDeck(
+  level: Level,
+  learning: ReadonlySet<string>,
+  all: readonly Deck[] = decks,
+): Deck | undefined {
+  const general = all.filter((deck) => deck.field === undefined);
+  const studied = (deck: Deck) => deck.cards.filter((card) => learning.has(card.id)).length;
+  const unfinished = (deck: Deck) => studied(deck) < deck.cards.length;
+  const levels = general.map((deck) => deck.level).filter((l, i, list) => list.indexOf(l) === i);
+  const from = levels.indexOf(level) < 0 ? 0 : levels.indexOf(level);
+  for (const at of levels.slice(from)) {
+    const here = general.filter((deck) => deck.level === at && unfinished(deck));
+    const started = here.find((deck) => studied(deck) > 0);
+    const pick = started ?? here.find((deck) => deck.topic === STARTER_TOPIC[at]) ?? here[0];
+    if (pick) return pick;
+  }
+  return undefined;
+}
