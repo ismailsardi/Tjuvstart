@@ -1,0 +1,160 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-moving-notice",
+  "level": "A2",
+  "title": "Flyttemelding",
+  "summary": "Read how to report a move to the National Registry: the eight-day deadline, what you need, and who else to tell about your new address.",
+  "review": "pending",
+  "text": "Når du flytter, må du melde flytting til Folkeregisteret. Det må du gjøre senest åtte dager etter at du har flyttet. Du sender flyttemeldingen på skatteetaten.no og logger inn med BankID.\nDu trenger den nye adressen og datoen da du flyttet. Bor du i en leilighet, må du også ha bruksenhetsnummeret. Det står ofte på et lite skilt på døra eller i leiekontrakten.\nHusk også å gi beskjed til arbeidsgiveren din, banken og fastlegen. Sett navnet ditt på postkassen, ellers får du ikke posten din.",
+  "items": [
+    {
+      "id": "a2-flytt-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når må du sende flyttemeldingen?",
+      "options": [
+        "Senest åtte dager etter at du har flyttet",
+        "Før du flytter",
+        "Innen tre måneder"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 950,
+      "prompt": "Hvor sender du flyttemeldingen?",
+      "options": ["På skatteetaten.no", "Hos politiet", "På postkontoret"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-02"],
+      "difficulty": 1050,
+      "prompt": "Hvor finner du bruksenhetsnummeret?",
+      "options": [
+        "På et lite skilt på døra eller i leiekontrakten",
+        "På skattekortet",
+        "Hos fastlegen"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1000,
+      "prompt": "Hvorfor skal du sette navnet ditt på postkassen?",
+      "options": [
+        "Ellers får du ikke posten din",
+        "Naboen vil vite hvem du er",
+        "Det står i leiekontrakten"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["definite-form"],
+      "difficulty": 1050,
+      "prompt": "Jeg har flyttet. Den nye ___ min er Kirkeveien 12.",
+      "answers": ["adressen", "adressa"]
+    },
+    {
+      "id": "a2-flytt-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["possessives"],
+      "difficulty": 1000,
+      "prompt": "Husk å gi beskjed til banken ___.",
+      "answers": ["din"]
+    },
+    {
+      "id": "a2-flytt-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1050,
+      "prompt": "Det må du gjøre senest åtte dager etter ___ du har flyttet.",
+      "answers": ["at"]
+    },
+    {
+      "id": "a2-flytt-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "tokens": ["Bor du", "i en leilighet,", "må du", "ha", "bruksenhetsnummeret"],
+      "answer": "Bor du i en leilighet, må du ha bruksenhetsnummeret"
+    },
+    {
+      "id": "a2-flytt-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "har", "flyttet", "til", "en ny leilighet"],
+      "answer": "Jeg har flyttet til en ny leilighet"
+    },
+    {
+      "id": "a2-flytt-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Fra når gjelder den nye adressen?",
+      "audio": "Vi har fått flyttemeldingen din. Den nye adressen din gjelder fra første mars.",
+      "options": ["Fra første mars", "Fra i dag", "Fra første mai"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hva vil Lise ha?",
+      "audio": "Hei, det er Lise fra HR. Har du flyttet? Et brev til deg kom i retur, så kan du sende meg den nye adressen din?",
+      "options": ["Den nye adressen", "Et nytt kontonummer", "Skattekortet"],
+      "answer": 0
+    },
+    {
+      "id": "a2-flytt-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har flyttet til en ny leilighet."
+    }
+  ]
+}

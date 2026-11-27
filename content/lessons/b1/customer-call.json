@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-customer-call",
+  "level": "B1",
+  "title": "En kunde klager",
+  "summary": "Follow a phone call from a customer whose sofa has not arrived. Learn to apologise, explain what happened and offer a solution, and say how long ago something happened.",
+  "review": "pending",
+  "text": "Kunde: Hei, jeg heter Eva Berg. Jeg bestilte en sofa hos dere for tre uker siden, men den har ikke kommet ennå.\nAnsatt: Det er jeg lei meg for å høre. Har du ordrenummeret?\nKunde: Ja, det er 4471.\nAnsatt: Takk. Jeg ser at sofaen ble sendt fra lageret i går, så den kommer sannsynligvis på torsdag.\nKunde: Det er bra, men jeg tok fri fra jobben forrige uke for å vente på den.\nAnsatt: Det beklager jeg virkelig. Vi gir deg gratis levering, og jeg sender deg en e-post med alle detaljene i dag.\nKunde: Tusen takk, det setter jeg pris på.",
+  "items": [
+    {
+      "id": "b1-ku-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1100,
+      "prompt": "Hvorfor ringer Eva?",
+      "options": [
+        "Sofaen hun bestilte, har ikke kommet",
+        "Sofaen er ødelagt",
+        "Hun vil bestille en sofa"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Når kommer sofaen sannsynligvis?",
+      "options": ["På torsdag", "I dag", "Om tre uker"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1300,
+      "prompt": "Hvorfor er Eva ekstra irritert?",
+      "options": [
+        "Hun tok fri fra jobben for å vente",
+        "Sofaen har feil farge",
+        "Hun har ikke fått noe ordrenummer"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-01"],
+      "difficulty": 1150,
+      "prompt": "Hva får Eva fordi sofaen kom for sent?",
+      "options": ["Gratis levering", "En ny sofa", "Pengene tilbake"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1200,
+      "prompt": "Det er jeg lei meg ___ å høre.",
+      "answers": ["for"]
+    },
+    {
+      "id": "b1-ku-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["passive"],
+      "difficulty": 1300,
+      "prompt": "Sofaen ___ sendt fra lageret i går.",
+      "answers": ["ble"]
+    },
+    {
+      "id": "b1-ku-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1200,
+      "prompt": "Tusen takk, det setter jeg ___ på.",
+      "answers": ["pris"]
+    },
+    {
+      "id": "b1-ku-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "bestilte", "en sofa", "for tre uker siden"],
+      "answer": "Jeg bestilte en sofa for tre uker siden"
+    },
+    {
+      "id": "b1-ku-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-01"],
+      "focus": ["object-pronouns"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "sender", "deg", "en e-post", "i dag"],
+      "answer": "Jeg sender deg en e-post i dag"
+    },
+    {
+      "id": "b1-ku-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Hva tilbyr den ansatte?",
+      "audio": "Jeg har sjekket saken din. Dessverre er sofaen utsolgt, så vi kan ikke levere før i mars. Vil du heller ha pengene tilbake?",
+      "options": ["Pengene tilbake", "En annen sofa gratis", "Levering i morgen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["numbers"],
+      "difficulty": 1150,
+      "prompt": "Hvilket nummer er du i køen?",
+      "audio": "Du har ringt kundeservice. Alle våre medarbeidere er opptatt. Du er nummer tre i køen.",
+      "options": ["Tre", "To", "Tretten"],
+      "answer": 0
+    },
+    {
+      "id": "b1-ku-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Det beklager jeg virkelig."
+    }
+  ]
+}

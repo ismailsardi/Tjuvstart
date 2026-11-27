@@ -1,0 +1,164 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-holiday-request",
+  "level": "B1",
+  "title": "Ferie i juli",
+  "summary": "Read an email asking the manager for three weeks off in July, and the reply. Practise talking about plans with skal and kommer til å, and dates with fra og med.",
+  "review": "pending",
+  "text": "Hei Kristin,\nJeg vil gjerne søke om ferie fra og med 7. juli til og med 25. juli. Jeg kommer til å reise til Spania for å besøke familien min.\nJeg vet at mange tar ferie i juli, så jeg har snakket med Lars. Han skal jobbe hele sommeren og kan ta over kundene mine mens jeg er borte.\nSi gjerne fra om det passer.\nHilsen Marco\n\nHei Marco,\nDet passer fint. Husk å legge inn ferien i systemet og å sette på automatisk svar på e-posten før du drar.\nGod tur!\nKristin",
+  "items": [
+    {
+      "id": "b1-fe-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1150,
+      "prompt": "Hvor lenge vil Marco ha ferie?",
+      "options": ["Omtrent tre uker", "To uker", "Hele sommeren"],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1200,
+      "prompt": "Hvorfor har Marco snakket med Lars?",
+      "options": [
+        "Lars kan ta over kundene hans",
+        "Lars skal også til Spania",
+        "Lars er lederen hans"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva svarer Kristin?",
+      "options": [
+        "At ferien passer fint",
+        "At han må ta ferie i august",
+        "At han må snakke med HR"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1300,
+      "prompt": "Hva må Marco gjøre før han drar?",
+      "options": [
+        "Legge inn ferien og sette på automatisk svar",
+        "Kjøpe flybillett til Lars",
+        "Skrive et referat"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["future"],
+      "difficulty": 1200,
+      "prompt": "Jeg ___ til å reise til Spania.",
+      "answers": ["kommer"]
+    },
+    {
+      "id": "b1-fe-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1250,
+      "prompt": "Jeg har ferie fra og med 7. juli til og ___ 25. juli.",
+      "answers": ["med"]
+    },
+    {
+      "id": "b1-fe-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["possessives"],
+      "difficulty": 1200,
+      "prompt": "Lars kan ta over kundene ___ mens jeg er borte.",
+      "answers": ["mine"]
+    },
+    {
+      "id": "b1-fe-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["future"],
+      "difficulty": 1150,
+      "prompt": "Lag en setning.",
+      "tokens": ["Lars", "skal", "jobbe", "hele sommeren"],
+      "answer": "Lars skal jobbe hele sommeren"
+    },
+    {
+      "id": "b1-fe-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg vet", "at", "mange", "tar ferie", "i juli"],
+      "answer": "Jeg vet at mange tar ferie i juli"
+    },
+    {
+      "id": "b1-fe-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hva ber Kristin om?",
+      "audio": "Hei Marco, Kristin her. Jeg glemte å si at vi har et viktig kundemøte den fjerde juli. Kan du være med på det før du drar?",
+      "options": [
+        "At Marco er med på et møte før ferien",
+        "At Marco flytter ferien",
+        "At Marco ringer kunden fra Spania"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1250,
+      "prompt": "Når er Marco tilbake på jobb?",
+      "audio": "Takk for e-posten. Jeg har ferie og er tilbake på jobb mandag tjueåttende juli. Til da kan du kontakte Lars.",
+      "options": ["Mandag 28. juli", "Fredag 25. juli", "Mandag 7. juli"],
+      "answer": 0
+    },
+    {
+      "id": "b1-fe-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil gjerne søke om ferie."
+    }
+  ]
+}

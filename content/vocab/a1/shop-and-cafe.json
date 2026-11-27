@@ -70,7 +70,7 @@
       "id": "betale",
       "nb": "betale",
       "pos": "verb",
-      "forms": ["betale", "betaler", "betalte", "betalt"],
+      "forms": ["betale", "betaler", "betalte", "betalt", "betales"],
       "example": "Kan jeg betale med Vipps?"
     },
     {
@@ -109,7 +109,7 @@
       "id": "stor",
       "nb": "stor",
       "pos": "adjective",
-      "forms": ["stor", "stort", "store"],
+      "forms": ["stor", "stort", "store", "større", "størst", "største"],
       "example": "En stor kaffe, takk."
     },
     {

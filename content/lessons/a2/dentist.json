@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-dentist",
+  "level": "A2",
+  "title": "Hos tannlegen",
+  "summary": "Book a dentist appointment on the phone: say where it hurts, find a time and ask what it costs. Adults in Norway pay the dentist themselves.",
+  "review": "pending",
+  "text": "Resepsjonist: Tannlegesenteret, god morgen.\nPasient: Hei, jeg heter Tomasz. Jeg har vondt i en tann, og jeg vil gjerne bestille time.\nResepsjonist: Er det første gang du er hos oss?\nPasient: Ja, jeg har nettopp flyttet hit.\nResepsjonist: Har du feber, eller er kinnet hovent?\nPasient: Nei, men det gjør vondt når jeg drikker noe kaldt.\nResepsjonist: Vi har en ledig time i morgen klokka kvart over ni. Passer det?\nPasient: Ja, det passer fint. Hva koster det?\nResepsjonist: En vanlig undersøkelse koster rundt tusen kroner. Hvis du trenger mer behandling, får du prisen før vi begynner. Voksne betaler tannlegen selv.",
+  "items": [
+    {
+      "id": "a2-tann-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hvorfor ringer Tomasz?",
+      "options": [
+        "Han har vondt i en tann",
+        "Han vil bytte tannlege",
+        "Han skal betale en regning"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1000,
+      "prompt": "Når gjør det vondt?",
+      "options": ["Når han drikker noe kaldt", "Hele tiden", "Når han sover"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Når får han time?",
+      "options": [
+        "I morgen klokka kvart over ni",
+        "I dag klokka ni",
+        "I morgen klokka kvart på ni"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1050,
+      "prompt": "Hvem betaler tannlegen?",
+      "options": ["Voksne betaler selv", "NAV betaler alt", "Arbeidsgiveren betaler"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1000,
+      "prompt": "Jeg har vondt ___ en tann.",
+      "answers": ["i"]
+    },
+    {
+      "id": "a2-tann-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["definite-form"],
+      "difficulty": 1100,
+      "prompt": "Jeg har vondt i en tann. ___ er helt bak i munnen.",
+      "answers": ["Tanna", "Tannen", "Den"]
+    },
+    {
+      "id": "a2-tann-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Jeg vil gjerne bestille ___.",
+      "answers": ["time", "en time"]
+    },
+    {
+      "id": "a2-tann-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Det", "gjør", "vondt", "når jeg drikker", "noe kaldt"],
+      "answer": "Det gjør vondt når jeg drikker noe kaldt"
+    },
+    {
+      "id": "a2-tann-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "har", "nettopp", "flyttet", "hit"],
+      "answer": "Jeg har nettopp flyttet hit"
+    },
+    {
+      "id": "a2-tann-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-02"],
+      "difficulty": 1000,
+      "prompt": "Hva er meldingen?",
+      "audio": "Hei, dette er en påminnelse fra Tannlegesenteret. Du har time i morgen klokka kvart over ni. Gi beskjed hvis du ikke kan komme.",
+      "options": ["En påminnelse om timen", "En regning", "Et tilbud om tannbleking"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hva må du ikke gjøre de neste to timene?",
+      "audio": "Nå er du ferdig. Du må ikke spise eller drikke noe varmt de neste to timene.",
+      "options": ["Spise eller drikke noe varmt", "Pusse tennene", "Gå på jobb"],
+      "answer": 0
+    },
+    {
+      "id": "a2-tann-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg har vondt i en tann."
+    }
+  ]
+}

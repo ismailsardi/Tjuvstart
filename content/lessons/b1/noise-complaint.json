@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-noise-complaint",
+  "level": "B1",
+  "title": "Bråk fra naboen",
+  "summary": "Read a neighbour’s polite complaint about late-night noise and the reply. Learn how to complain without starting a conflict, and how to apologise and promise to change.",
+  "review": "pending",
+  "text": "Hei! Jeg bor i leiligheten under deg. Jeg vil bare si fra at det har vært mye bråk fra leiligheten din de siste helgene, ofte etter midnatt. Jeg begynner tidlig på jobb, også på lørdager, og jeg sover dårlig når det er musikk og høye stemmer.\nI husordensreglene står det at det skal være ro etter klokka 23. Kan du ta hensyn til det?\nHilsen Ingrid i 2. etasje\n\nHei Ingrid! Takk for at du sa fra, og beklager! Jeg visste ikke at det hørtes så godt. Vi skal skru ned musikken og avslutte festene før klokka 23. Si gjerne fra direkte hvis det skjer igjen.\nHilsen Kofi",
+  "items": [
+    {
+      "id": "b1-stoy-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hvorfor skriver Ingrid?",
+      "options": ["Det har vært mye bråk fra naboen", "Hun vil låne noe", "Hun skal flytte"],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 1200,
+      "prompt": "Når har det vært bråk?",
+      "options": ["I helgene, ofte etter midnatt", "Hver morgen", "Midt på dagen"],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hva står det i husordensreglene?",
+      "options": [
+        "At det skal være ro etter klokka 23",
+        "At det er forbudt med fester",
+        "At alle må vaske trappa"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hva lover Kofi?",
+      "options": [
+        "Å skru ned musikken og avslutte før klokka 23",
+        "Å flytte",
+        "Å betale for nye ørepropper"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1250,
+      "prompt": "Jeg ___ ikke at det hørtes så godt.",
+      "answers": ["visste"]
+    },
+    {
+      "id": "b1-stoy-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Takk for at du sa ___.",
+      "answers": ["fra", "ifra"]
+    },
+    {
+      "id": "b1-stoy-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1150,
+      "prompt": "Vi skal skru ___ musikken.",
+      "answers": ["ned"]
+    },
+    {
+      "id": "b1-stoy-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1300,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "sover", "dårlig", "når", "det", "er", "musikk"],
+      "answer": "Jeg sover dårlig når det er musikk"
+    },
+    {
+      "id": "b1-stoy-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["future"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Vi", "skal", "avslutte", "festene", "før klokka 23"],
+      "answer": "Vi skal avslutte festene før klokka 23"
+    },
+    {
+      "id": "b1-stoy-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Hva sier Kofi?",
+      "audio": "Hei, det er Kofi fra tredje etasje. Vi skal ha en liten fest på lørdag for å feire bursdagen min. Det kan bli litt bråk, men vi slutter før elleve.",
+      "options": [
+        "Han har fest på lørdag og slutter før elleve",
+        "Han inviterer naboene på middag",
+        "Han klager på bråk"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hvorfor ringer styret?",
+      "audio": "Hei, jeg ringer fra styret i borettslaget. Vi har fått en klage på bråk fra leiligheten din. Har du tid til å snakke om det?",
+      "options": ["De har fått en klage på bråk", "De vil invitere til dugnad", "Husleien går opp"],
+      "answer": 0
+    },
+    {
+      "id": "b1-stoy-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1200,
+      "prompt": "Skriv det du hører.",
+      "audio": "Det skal være ro etter klokka elleve."
+    }
+  ]
+}

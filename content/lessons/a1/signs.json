@@ -1,0 +1,145 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-signs",
+  "level": "A1",
+  "title": "Skilt i byen",
+  "summary": "Read the signs you see every day: open and closed, entrance and exit, push and pull, toilet, no smoking, offers and opening hours.",
+  "review": "pending",
+  "text": "Åpent\nStengt\nInngang\nUtgang\nTrekk\nSkyv\nToalett\nRøyking forbudt\nTilbud: 2 for 50 kr\nÅpningstider: mandag til fredag 8–20, lørdag 9–18, søndag stengt",
+  "items": [
+    {
+      "id": "a1-skilt-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "difficulty": 700,
+      "prompt": "Det står «Stengt» på døra. Kan du gå inn?",
+      "options": ["Nei", "Ja", "Bare på lørdag"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "difficulty": 750,
+      "prompt": "Du vil gå ut. Hvilket skilt ser du etter?",
+      "options": ["Utgang", "Inngang", "Toalett"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "difficulty": 850,
+      "prompt": "Det står «Skyv» på døra. Hva gjør du?",
+      "options": ["Skyver døra", "Trekker døra", "Ringer på"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "focus": ["numbers", "time-expressions"],
+      "difficulty": 800,
+      "prompt": "Når er butikken åpen på lørdag?",
+      "options": ["Fra 9 til 18", "Fra 8 til 20", "Den er stengt"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-05",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "difficulty": 750,
+      "prompt": "Er butikken åpen på søndag?",
+      "options": ["Nei", "Ja", "Bare om morgenen"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-06",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-01"],
+      "difficulty": 850,
+      "prompt": "Hva betyr «Røyking forbudt»?",
+      "options": ["Du kan ikke røyke her", "Du kan kjøpe sigaretter her", "Du kan røyke her"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "difficulty": 750,
+      "prompt": "Butikken er ___ på søndag.",
+      "answers": ["stengt"]
+    },
+    {
+      "id": "a1-skilt-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "focus": ["question-words"],
+      "difficulty": 700,
+      "prompt": "Unnskyld, hvor er ___?",
+      "answers": ["toalettet", "toalett", "do", "doen", "utgangen", "inngangen"]
+    },
+    {
+      "id": "a1-skilt-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-01"],
+      "difficulty": 800,
+      "prompt": "Lag en setning.",
+      "tokens": ["Butikken", "er", "stengt", "på søndag"],
+      "answer": "Butikken er stengt på søndag"
+    },
+    {
+      "id": "a1-skilt-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 750,
+      "prompt": "Hva spør personen om?",
+      "audio": "Unnskyld, hvor er utgangen?",
+      "options": ["Utgangen", "Toalettet", "Prisen"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-02"],
+      "focus": ["time-expressions"],
+      "difficulty": 850,
+      "prompt": "Når stenger butikken?",
+      "audio": "Hei alle sammen. Vi stenger om ti minutter.",
+      "options": ["Om ti minutter", "Klokka ti", "I morgen"],
+      "answer": 0
+    },
+    {
+      "id": "a1-skilt-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-01"],
+      "difficulty": 700,
+      "prompt": "Skriv det du hører.",
+      "audio": "Butikken er stengt."
+    }
+  ]
+}

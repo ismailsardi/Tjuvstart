@@ -1,0 +1,152 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-restaurant",
+  "level": "A2",
+  "title": "På restaurant",
+  "summary": "Follow a restaurant visit: the booking, drinks, asking about an allergy, ordering and splitting the bill.",
+  "review": "pending",
+  "text": "Servitør: Hei, velkommen! Har dere bestilt bord?\nGjest: Ja, et bord til to på navnet Ali.\nServitør: Værsågod, her er menyen. Vil dere ha noe å drikke?\nGjest: Ja, et glass vann og en alkoholfri øl, takk. Og jeg har et spørsmål: Jeg er allergisk mot nøtter. Er det nøtter i desserten?\nServitør: Det er nøtter i sjokoladekaken, men isen er uten nøtter.\nGjest: Da tar jeg fiskesuppe, og is til dessert.\nServitør: Fint. Jeg sier fra til kokken om allergien din.\nGjest: Kan vi få regningen? Vi vil gjerne dele.\nServitør: Selvfølgelig. Jeg kommer med kortmaskinen.",
+  "items": [
+    {
+      "id": "a2-rest-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["numbers"],
+      "difficulty": 900,
+      "prompt": "Hvor mange personer er de?",
+      "options": ["To", "Tre", "Fire"],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hva er gjesten allergisk mot?",
+      "options": ["Nøtter", "Fisk", "Melk"],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1050,
+      "prompt": "Hvorfor tar gjesten is og ikke sjokoladekake?",
+      "options": [
+        "Det er nøtter i sjokoladekaken",
+        "Isen er billigere",
+        "Sjokoladekaken er ferdig"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1000,
+      "prompt": "Hvordan vil de betale?",
+      "options": ["De vil dele regningen", "Med kontanter", "En betaler alt"],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1050,
+      "prompt": "Jeg er allergisk ___ nøtter.",
+      "answers": ["mot", "for"]
+    },
+    {
+      "id": "a2-rest-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 950,
+      "prompt": "Kan vi få ___, takk?",
+      "answers": ["regningen"]
+    },
+    {
+      "id": "a2-rest-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-01"],
+      "focus": ["prepositions"],
+      "difficulty": 1000,
+      "prompt": "Er det nøtter ___ desserten?",
+      "answers": ["i"]
+    },
+    {
+      "id": "a2-rest-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["modal-verbs"],
+      "difficulty": 950,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "vil", "gjerne", "ha", "fiskesuppe"],
+      "answer": "Jeg vil gjerne ha fiskesuppe"
+    },
+    {
+      "id": "a2-rest-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 1050,
+      "prompt": "Lag en setning.",
+      "tokens": ["Til dessert", "tar", "jeg", "is"],
+      "answer": "Til dessert tar jeg is"
+    },
+    {
+      "id": "a2-rest-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Hva sier servitøren?",
+      "audio": "Beklager, vi har ikke ledige bord akkurat nå. Dere kan vente i baren. Det tar omtrent tjue minutter.",
+      "options": ["De må vente omtrent tjue minutter", "Restauranten er stengt", "Bordet er klart"],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["numbers"],
+      "difficulty": 1000,
+      "prompt": "Hva koster dagens rett?",
+      "audio": "Dagens rett er laks med poteter og grønnsaker. Den koster to hundre og nittini kroner.",
+      "options": ["299 kroner", "199 kroner", "290 kroner"],
+      "answer": 0
+    },
+    {
+      "id": "a2-rest-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 950,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg er allergisk mot nøtter."
+    }
+  ]
+}

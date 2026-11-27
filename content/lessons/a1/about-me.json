@@ -1,0 +1,145 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a1-about-me",
+  "level": "A1",
+  "title": "Om meg",
+  "summary": "Read a filled-in form and a short text about Maria: name, age, country, address, job and languages. Then write the same things about yourself.",
+  "review": "pending",
+  "text": "Navn: Maria Lopez\nAlder: 34 år\nLand: Spania\nAdresse: Kirkeveien 12, Oslo\nJobb: sykepleier\nSpråk: spansk, engelsk og litt norsk\nHei! Jeg heter Maria. Jeg er 34 år og kommer fra Spania. Nå bor jeg i Oslo. Jeg er sykepleier og jobber på et sykehus. Jeg snakker spansk og engelsk, og jeg lærer norsk.",
+  "items": [
+    {
+      "id": "a1-meg-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 650,
+      "prompt": "Hvor kommer Maria fra?",
+      "options": ["Spania", "Norge", "Italia"],
+      "answer": 0
+    },
+    {
+      "id": "a1-meg-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "focus": ["numbers"],
+      "difficulty": 700,
+      "prompt": "Hvor gammel er Maria?",
+      "options": ["34 år", "43 år", "24 år"],
+      "answer": 0
+    },
+    {
+      "id": "a1-meg-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 700,
+      "prompt": "Hva jobber Maria som?",
+      "options": ["Sykepleier", "Lærer", "Lege"],
+      "answer": 0
+    },
+    {
+      "id": "a1-meg-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A1",
+      "descriptors": ["A1-R-02"],
+      "difficulty": 750,
+      "prompt": "Hvilke språk snakker Maria?",
+      "options": ["Spansk, engelsk og litt norsk", "Bare spansk", "Fransk og norsk"],
+      "answer": 0
+    },
+    {
+      "id": "a1-meg-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 650,
+      "prompt": "Jeg ___ Maria.",
+      "answers": ["heter"]
+    },
+    {
+      "id": "a1-meg-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["prepositions"],
+      "difficulty": 700,
+      "prompt": "Jeg kommer ___ Spania.",
+      "answers": ["fra"]
+    },
+    {
+      "id": "a1-meg-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["prepositions"],
+      "difficulty": 700,
+      "prompt": "Jeg bor ___ Oslo.",
+      "answers": ["i"]
+    },
+    {
+      "id": "a1-meg-08",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["verb-present"],
+      "difficulty": 800,
+      "prompt": "Jeg ___ 34 år.",
+      "answers": ["er"]
+    },
+    {
+      "id": "a1-meg-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "difficulty": 750,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "jobber", "på", "et sykehus"],
+      "answer": "Jeg jobber på et sykehus"
+    },
+    {
+      "id": "a1-meg-10",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A1",
+      "descriptors": ["A1-W-02"],
+      "focus": ["v2-word-order"],
+      "difficulty": 850,
+      "prompt": "Lag en setning.",
+      "tokens": ["Nå", "bor", "jeg", "i Oslo"],
+      "answer": "Nå bor jeg i Oslo"
+    },
+    {
+      "id": "a1-meg-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-03"],
+      "difficulty": 750,
+      "prompt": "Hva svarer du?",
+      "audio": "Hva heter du, og hvor kommer du fra?",
+      "options": ["Jeg heter Maria og kommer fra Spania", "Jeg er 34 år", "Jeg bor i Kirkeveien"],
+      "answer": 0
+    },
+    {
+      "id": "a1-meg-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A1",
+      "descriptors": ["A1-L-01"],
+      "difficulty": 750,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg kommer fra Spania."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "a2-new-colleague",
+  "level": "A2",
+  "title": "Den nye kollegaen",
+  "summary": "Read a welcome message about a new colleague: what she looks like, what she is like and what she does in her free time. Practise adjective endings: stor, stort, store and den nye kollegaen.",
+  "review": "pending",
+  "text": "Vi har fått en ny kollega! Hun heter Elif og kommer fra Tyrkia. Hun er høy og har langt, mørkt hår og store, brune øyne.\nElif er en hyggelig og rolig person. Hun jobber som ingeniør og har mye erfaring. Hun har en liten datter på fire år og et stort hus på Nordstrand.\nPå fritiden liker hun å gå lange turer i skogen og lage god mat.\nDen nye kollegaen vår begynner på mandag. Vi tar en kaffe sammen klokka ti for å si velkommen.",
+  "items": [
+    {
+      "id": "a2-koll-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 900,
+      "prompt": "Hvor kommer Elif fra?",
+      "options": ["Tyrkia", "Norge", "Hellas"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 1000,
+      "prompt": "Hvordan ser Elif ut?",
+      "options": ["Høy, med langt, mørkt hår", "Liten, med kort, lyst hår", "Høy, med blå øyne"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "difficulty": 950,
+      "prompt": "Hva liker Elif å gjøre på fritiden?",
+      "options": ["Gå turer og lage mat", "Spille fotball", "Se på TV"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "A2",
+      "descriptors": ["A2-R-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 950,
+      "prompt": "Når begynner Elif?",
+      "options": ["På mandag", "I dag", "Neste måned"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1000,
+      "prompt": "Hun har et ___ hus. (stor)",
+      "answers": ["stort"]
+    },
+    {
+      "id": "a2-koll-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1050,
+      "prompt": "Hun har ___ øyne. (brun)",
+      "answers": ["brune"]
+    },
+    {
+      "id": "a2-koll-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1100,
+      "prompt": "Den ___ kollegaen begynner på mandag. (ny)",
+      "answers": ["nye"]
+    },
+    {
+      "id": "a2-koll-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1000,
+      "prompt": "Lag en setning.",
+      "tokens": ["Hun", "har", "en", "liten", "datter"],
+      "answer": "Hun har en liten datter"
+    },
+    {
+      "id": "a2-koll-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "A2",
+      "descriptors": ["A2-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1100,
+      "prompt": "Lag en setning.",
+      "tokens": ["Den", "nye", "kollegaen", "heter", "Elif"],
+      "answer": "Den nye kollegaen heter Elif"
+    },
+    {
+      "id": "a2-koll-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "focus": ["time-expressions"],
+      "difficulty": 1000,
+      "prompt": "Hvor lenge har Elif bodd i Norge?",
+      "audio": "Hei, jeg heter Elif. Jeg har bodd i Norge i tre år, og før det bodde jeg i Tyskland.",
+      "options": ["Tre år", "Ett år", "Ti år"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1050,
+      "prompt": "Hvordan kjenner du igjen Pål?",
+      "audio": "Kollegaen min Pål er han med rød genser og briller. Han sitter ved vinduet.",
+      "options": ["Rød genser og briller", "Blå jakke og lue", "Han er høy og har skjegg"],
+      "answer": 0
+    },
+    {
+      "id": "a2-koll-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "A2",
+      "descriptors": ["A2-L-01"],
+      "difficulty": 1000,
+      "prompt": "Skriv det du hører.",
+      "audio": "Hun har langt, mørkt hår."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/lesson.schema.json",
+  "id": "b1-complaint",
+  "level": "B1",
+  "title": "Reklamasjon",
+  "summary": "Read an email complaining about headphones that broke after two months: what went wrong, your rights as a consumer and what you ask the shop to do.",
+  "review": "pending",
+  "text": "Hei,\nJeg kjøpte et par hodetelefoner i nettbutikken deres 3. februar. Etter bare to måneder sluttet den venstre siden å virke. Jeg har ikke mistet dem eller brukt dem på feil måte.\nIfølge forbrukerkjøpsloven har jeg rett til å reklamere i minst to år. Jeg ønsker derfor at dere reparerer hodetelefonene eller sender meg et nytt par. Hvis det ikke er mulig, vil jeg ha pengene tilbake.\nJeg legger ved kvitteringen og et bilde av produktet.\nMed vennlig hilsen\nDaniel Costa",
+  "items": [
+    {
+      "id": "b1-rk-01",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1100,
+      "prompt": "Hva er problemet?",
+      "options": ["Den venstre siden virker ikke", "Hodetelefonene kom aldri", "De var for dyre"],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-02",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hvor lenge har man rett til å reklamere?",
+      "options": ["Minst to år", "To måneder", "Ett år"],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-03",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1250,
+      "prompt": "Hva vil Daniel helst?",
+      "options": [
+        "At de reparerer dem eller sender et nytt par",
+        "Pengene tilbake med en gang",
+        "Rabatt på neste kjøp"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-04",
+      "type": "multiple-choice",
+      "skill": "reading",
+      "level": "B1",
+      "descriptors": ["B1-R-02"],
+      "difficulty": 1150,
+      "prompt": "Hva sender Daniel med e-posten?",
+      "options": ["Kvitteringen og et bilde", "Hodetelefonene", "Et brev fra en advokat"],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-05",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["verb-past"],
+      "difficulty": 1250,
+      "prompt": "Etter to måneder ___ den venstre siden å virke.",
+      "answers": ["sluttet", "slutta"]
+    },
+    {
+      "id": "b1-rk-06",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["adjective-agreement"],
+      "difficulty": 1250,
+      "prompt": "Kan dere sende meg et ___ par?",
+      "answers": ["nytt", "annet"]
+    },
+    {
+      "id": "b1-rk-07",
+      "type": "gap-fill",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["fixed-expressions"],
+      "difficulty": 1200,
+      "prompt": "Jeg legger ___ kvitteringen.",
+      "answers": ["ved"]
+    },
+    {
+      "id": "b1-rk-08",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["ikke-placement", "object-pronouns"],
+      "difficulty": 1200,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg", "har", "ikke", "mistet", "dem"],
+      "answer": "Jeg har ikke mistet dem"
+    },
+    {
+      "id": "b1-rk-09",
+      "type": "word-order",
+      "skill": "writing",
+      "level": "B1",
+      "descriptors": ["B1-W-02"],
+      "focus": ["subordinate-clause"],
+      "difficulty": 1250,
+      "prompt": "Lag en setning.",
+      "tokens": ["Jeg ønsker", "at", "dere", "reparerer", "dem"],
+      "answer": "Jeg ønsker at dere reparerer dem"
+    },
+    {
+      "id": "b1-rk-10",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1250,
+      "prompt": "Hva skjer når butikken har fått hodetelefonene?",
+      "audio": "Takk for e-posten din. Vi sender deg en ferdig betalt returlapp. Når vi har fått hodetelefonene, sender vi deg et nytt par i løpet av en uke.",
+      "options": [
+        "De sender et nytt par innen en uke",
+        "De reparerer dem på en måned",
+        "De gir pengene tilbake"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-11",
+      "type": "multiple-choice",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1300,
+      "prompt": "Hvorfor sier butikken nei?",
+      "audio": "Dessverre kan vi ikke godta reklamasjonen, fordi hodetelefonene har fått vannskade.",
+      "options": [
+        "Hodetelefonene har fått vannskade",
+        "Det har gått for lang tid",
+        "Kvitteringen mangler"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "b1-rk-12",
+      "type": "dictation",
+      "skill": "listening",
+      "level": "B1",
+      "descriptors": ["B1-L-01"],
+      "difficulty": 1150,
+      "prompt": "Skriv det du hører.",
+      "audio": "Jeg vil ha pengene tilbake."
+    }
+  ]
+}
