@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { DEFAULT_LISTENING_RATE, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
+import { DAY_MS, DEFAULT_LISTENING_RATE, MIN_ANSWERS_FOR_ESTIMATE } from '@tjuvstart/engine';
 import { lessons } from '../content/lessons';
+import { deckId, recommendedDeck } from '../content/vocab';
 import { nextInTrack, overallLevel, suggestedTracks, trackLessons } from '../content/tracks';
 import type { LanguagePack } from '../content/packs';
 import { DAILY_CARDS, DAILY_ITEMS } from '../data/daily';
@@ -20,6 +21,7 @@ import {
   practiceHref,
   wordsHref,
 } from '../routing/useHashRoute';
+import { Brand } from './Brand';
 import { LessonCard } from './LessonList';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
@@ -48,10 +50,13 @@ const ICONS = {
     </>
   ),
   ai: <path d="M20.5 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 20.5 12z" />,
-  streak: (
-    <path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5.5 1-8.5z" />
-  ),
 };
+
+/** Whole days from today until `at`, by the learner's own calendar. */
+function daysUntil(at: number, now = Date.now()): number {
+  const midnight = (ms: number) => new Date(ms).setHours(0, 0, 0, 0);
+  return Math.round((midnight(at) - midnight(now)) / DAY_MS);
+}
 
 /** A quick-practice row. The whole row is the link's hit area. */
 function Tile({
@@ -88,12 +93,14 @@ function Tile({
 
 /** Today: one clear next step, the next lesson in context, quick practice and the level estimate. */
 export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const profile = useLiveQuery(() => getProfile());
   const completed = useLiveQuery(
     async () => new Set(await db.completions.toCollection().primaryKeys()),
   );
   const due = useLiveQuery(() => dueCards().then((cards) => cards.length)) ?? 0;
+  const learning = useLiveQuery(async () => new Set(await db.cards.toCollection().primaryKeys()));
+  const nextDue = useLiveQuery(async () => (await db.cards.orderBy('due').first())?.due);
   const progress = useLiveQuery(() => dailyProgress());
   const hasAnswers = useLiveQuery(async () => (await db.attempts.count()) > 0);
   // Practice needs something to go on: answers in lessons, or a finished level check.
@@ -123,8 +130,8 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
         (lesson) => !completed.has(lesson.id) && (level === 'A1' || lesson.level !== 'A1'),
       ))
     : undefined;
-  const streakDays = progress?.streak.days ?? 0;
   const troll = useTroll();
+  const firstDeck = learning ? recommendedDeck(level, learning) : undefined;
   const trackSteps = currentTrack ? trackLessons(currentTrack) : [];
   const trackDone = trackSteps.filter((lesson) => completed?.has(lesson.id)).length;
 
@@ -190,96 +197,125 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     <>
       <header className="page-header home-header">
         <div>
-          <div className="home-greeting">
-            <h1>{t('hello')}</h1>
-            {streakDays > 0 && (
-              <span className="streak-badge" title={t('streakBadge', { n: streakDays })}>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  {ICONS.streak}
-                </svg>
-                <span aria-hidden="true">{streakDays}</span>
-                <span className="visually-hidden">{t('streakBadge', { n: streakDays })}</span>
-              </span>
-            )}
-          </div>
+          <Brand phoneOnly />
+          <h1>{t('hello')}</h1>
           <p className="muted">{t('todayIntro')}</p>
         </div>
         <Troll pose="coffee" outfit={troll.outfit} size={72} className="home-tusse" />
       </header>
 
-      {needsPlacement && (
-        <section className="hero" aria-labelledby="placement-heading">
-          <h2 id="placement-heading">{t('placementTitle')}</h2>
-          <p className="hero-body">{t('placementCard')}</p>
-          <a className="button" href={placementHref}>
-            {t('start')}
-          </a>
-        </section>
-      )}
-      {lessonFirst ? (
-        <>
-          {nextLesson}
-          {daily}
-        </>
-      ) : (
-        <>
-          {!needsPlacement && daily}
-          {nextLesson}
-        </>
-      )}
+      {/* Two columns from laptop width: today's plan on the left, practice and level beside it. */}
+      <div className="home-layout">
+        <div className="home-main">
+          {needsPlacement && (
+            <section className="hero" aria-labelledby="placement-heading">
+              <h2 id="placement-heading">{t('placementTitle')}</h2>
+              <p className="hero-body">{t('placementCard')}</p>
+              <a className="button" href={placementHref}>
+                {t('start')}
+              </a>
+            </section>
+          )}
+          {lessonFirst ? (
+            <>
+              {nextLesson}
+              {daily}
+            </>
+          ) : (
+            <>
+              {!needsPlacement && daily}
+              {nextLesson}
+            </>
+          )}
+        </div>
+        <div className="home-side">
+          <h2 className="section-title">{t('quickPractice')}</h2>
+          <div className="tiles">
+            {due > 0 ? (
+              <Tile
+                id="review"
+                icon={ICONS.words}
+                title={t('wordReview')}
+                body={t('dueCount', { n: due })}
+                href={deckHref(DUE_DECK)}
+                action={t('start')}
+              />
+            ) : nextDue !== undefined ? (
+              // Cards exist and none is due: say when the next review is, and offer new words.
+              <Tile
+                id="review"
+                icon={ICONS.words}
+                title={t('wordReview')}
+                body={t('reviewCaughtUp', {
+                  when: new Intl.RelativeTimeFormat(language, { numeric: 'auto' }).format(
+                    Math.max(0, daysUntil(nextDue)),
+                    'day',
+                  ),
+                })}
+                href={wordsHref}
+                action={t('newWords')}
+              />
+            ) : (
+              // No cards yet: the row is the first step, not an empty review.
+              firstDeck && (
+                <Tile
+                  id="review"
+                  icon={ICONS.words}
+                  title={t('firstWordsTitle')}
+                  body={
+                    <>
+                      {t('firstWordsBody')} <span lang="nb">{firstDeck.title}</span>
+                    </>
+                  }
+                  href={deckHref(deckId(firstDeck))}
+                  action={t('start')}
+                />
+              )
+            )}
+            {canPractise && (
+              <Tile
+                id="practice"
+                icon={ICONS.practice}
+                title={t('practiceTitle')}
+                body={t('practiceShort')}
+                href={practiceHref}
+                action={t('start')}
+              />
+            )}
+            <Tile
+              id="listening"
+              icon={ICONS.listening}
+              title={t('listeningTitle')}
+              body={
+                <span data-testid="home-listening-speed">
+                  {t('listeningSpeed', {
+                    percent: Math.round((profile?.listening?.rate ?? DEFAULT_LISTENING_RATE) * 100),
+                  })}
+                </span>
+              }
+              href={listeningHref}
+              action={t('start')}
+            />
+            <Tile
+              id="ai"
+              icon={ICONS.ai}
+              title={t('aiTitle')}
+              body={t('aiIntroShort')}
+              href={aiHref}
+              action={t('aiTitle')}
+            />
+          </div>
 
-      <h2 className="section-title">{t('quickPractice')}</h2>
-      <div className="tiles">
-        <Tile
-          id="review"
-          icon={ICONS.words}
-          title={t('wordReview')}
-          body={due > 0 ? t('dueCount', { n: due }) : t('nothingDue')}
-          href={due > 0 ? deckHref(DUE_DECK) : wordsHref}
-          action={due > 0 ? t('start') : t('navWords')}
-        />
-        {canPractise && (
-          <Tile
-            id="practice"
-            icon={ICONS.practice}
-            title={t('practiceTitle')}
-            body={t('practiceShort')}
-            href={practiceHref}
-            action={t('start')}
-          />
-        )}
-        <Tile
-          id="listening"
-          icon={ICONS.listening}
-          title={t('listeningTitle')}
-          body={
-            <span data-testid="home-listening-speed">
-              {t('listeningSpeed', {
-                percent: Math.round((profile?.listening?.rate ?? DEFAULT_LISTENING_RATE) * 100),
-              })}
-            </span>
-          }
-          href={listeningHref}
-          action={t('start')}
-        />
-        <Tile
-          id="ai"
-          icon={ICONS.ai}
-          title={t('aiTitle')}
-          body={t('aiIntroShort')}
-          href={aiHref}
-          action={t('aiTitle')}
-        />
+          <section className="home-level" aria-labelledby="level-heading">
+            <h2 id="level-heading">{t('yourLevel')}</h2>
+            {anyEstimate ? (
+              <SkillLevels profile={profile} />
+            ) : (
+              <p className="muted small">{t('levelEmpty', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
+            )}
+          </section>
+        </div>
       </div>
-
-      <section className="home-level" aria-labelledby="level-heading">
-        <h2 id="level-heading">{t('yourLevel')}</h2>
-        {anyEstimate ? (
-          <SkillLevels profile={profile} />
-        ) : (
-          <p className="muted small">{t('levelEmpty', { min: MIN_ANSWERS_FOR_ESTIMATE })}</p>
-        )}
-      </section>
     </>
   );
 }

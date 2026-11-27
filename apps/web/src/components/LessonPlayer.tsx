@@ -159,7 +159,10 @@ export function LessonPlayer({
   }
 
   return (
-    <article className="session" aria-labelledby="lesson-heading">
+    <article
+      className={text && textOffered && textInView ? 'session has-text' : 'session'}
+      aria-labelledby="lesson-heading"
+    >
       <SessionBar
         closeHref={closeHref}
         done={index}
@@ -169,9 +172,9 @@ export function LessonPlayer({
       <h1 id="lesson-heading" className="eyebrow" lang="nb">
         {lesson.title}
       </h1>
-      {text &&
-        textOffered &&
-        (textInView ? (
+      {text && textOffered && textInView && (
+        // From laptop width the text sits in its own column, beside the question.
+        <div className="session-text">
           <ReadingText
             key={text}
             text={text}
@@ -181,7 +184,11 @@ export function LessonPlayer({
             canShadow={!ephemeral}
             level={textLesson?.level ?? lesson.level}
           />
-        ) : (
+        </div>
+      )}
+
+      <div className="session-work">
+        {text && textOffered && !textInView && (
           <details className="text-toggle" data-testid="text-toggle">
             <summary>{t('showText')}</summary>
             <ReadingText
@@ -193,38 +200,39 @@ export function LessonPlayer({
               level={textLesson?.level ?? lesson.level}
             />
           </details>
-        ))}
+        )}
 
-      <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
-        {item.prompt}
-      </h2>
-      {item.hint && (
-        <p className="muted" lang="nb">
-          {item.hint}
-        </p>
-      )}
+        <h2 className="prompt" lang="nb" ref={promptRef} tabIndex={-1}>
+          {item.prompt}
+        </h2>
+        {item.hint && (
+          <p className="muted" lang="nb">
+            {item.hint}
+          </p>
+        )}
 
-      <ItemView item={item} disabled={feedback !== null} onSubmit={submit} />
+        <ItemView item={item} disabled={feedback !== null} onSubmit={submit} />
 
-      {/* Word help and tips come after the answers: there when wanted, never in the way. */}
-      {((text && textInView) || contrasts.length > 0) && (
-        <div className="word-help">
-          {text && textInView && <Glossaries segments={segments} />}
-          {contrasts.map((contrast) => (
-            <details
-              key={contrast.id}
-              className="tip"
-              lang={contrast.language}
-              dir={contrast.direction}
-            >
-              <summary>
-                {t('tip')}: {contrast.title}
-              </summary>
-              <p>{contrast.body}</p>
-            </details>
-          ))}
-        </div>
-      )}
+        {/* Word help and tips come after the answers: there when wanted, never in the way. */}
+        {((text && textInView) || contrasts.length > 0) && (
+          <div className="word-help">
+            {text && textInView && <Glossaries segments={segments} />}
+            {contrasts.map((contrast) => (
+              <details
+                key={contrast.id}
+                className="tip"
+                lang={contrast.language}
+                dir={contrast.direction}
+              >
+                <summary>
+                  {t('tip')}: {contrast.title}
+                </summary>
+                <p>{contrast.body}</p>
+              </details>
+            ))}
+          </div>
+        )}
+      </div>
 
       {feedback && (
         <div className={feedback.correct ? 'feedback good' : 'feedback bad'} role="status">
@@ -287,7 +295,11 @@ export function LessonPlayer({
   );
 }
 
-/** The lesson text with familiar words and look-alikes marked. */
+/**
+ * The lesson text. Look-alikes are always marked, since misreading one changes the meaning.
+ * Familiar words carry a class but no tint until the learner opens "Words you probably know",
+ * so the paragraph reads as a text, not a heat map.
+ */
 function ReadingText({
   text,
   segments,
@@ -308,10 +320,14 @@ function ReadingText({
   const body = (
     <p className="reading-text" lang="nb">
       {segments.map((segment, i) =>
-        segment.word ? (
-          <mark key={i} className={segment.word.kind}>
+        segment.word?.kind === 'false-friend' ? (
+          <mark key={i} className="false-friend">
             {segment.text}
           </mark>
+        ) : segment.word ? (
+          <span key={i} className="cognate">
+            {segment.text}
+          </span>
         ) : (
           segment.text
         ),
@@ -359,7 +375,7 @@ function Glossaries({ segments }: { segments: Segment[] }) {
   return (
     <>
       {cognates.length > 0 && (
-        <details className="glossary" aria-label={t('knownWords')}>
+        <details className="glossary glossary-cognates" aria-label={t('knownWords')}>
           <summary>
             <h2>{t('knownWords')}</h2> <span className="muted">({cognates.length})</span>
           </summary>

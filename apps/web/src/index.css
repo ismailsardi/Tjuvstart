@@ -160,6 +160,24 @@ button.secondary,
   outline-offset: 2px;
 }
 
+/* The mark and name where the top bar's wordmark isn't shown. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+@media (width >= 48rem) {
+  .brand.phone-only {
+    display: none;
+  }
+}
+
 /* Navigation: bottom tab bar on phones, top bar from tablet width. */
 
 .tabbar {
@@ -408,9 +426,14 @@ h1 + .panel {
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Lifted from #24497a, which was about 2:1 against the page: 3.2:1 now, still 5.8:1 for white text. */
   .lesson-card.focus {
-    background: #24497a;
+    background: #3366a8;
     box-shadow: none;
+  }
+
+  .lesson-card.focus .muted {
+    color: rgb(255 255 255 / 90%);
   }
 
   .lesson-cta {
@@ -422,16 +445,6 @@ h1 + .panel {
   color: var(--good);
   font-size: 0.9rem;
   font-weight: 600;
-}
-
-/* Word decks */
-
-.deck-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
-  gap: 0.75rem;
 }
 
 progress {
@@ -853,7 +866,8 @@ progress::-moz-progress-bar {
   font-size: 0.95rem;
 }
 
-mark.cognate {
+mark.cognate,
+.session:has(.glossary-cognates[open]) .reading-text .cognate {
   background: color-mix(in srgb, var(--good) 22%, transparent);
   color: inherit;
   border-radius: 0.2rem;
@@ -997,7 +1011,7 @@ mark.false-friend {
 
 .chip {
   padding: 0.25rem 0.7rem;
-  border-radius: 999px;
+  border-radius: var(--control-radius);
   font-size: 0.85rem;
   font-weight: 600;
   background: var(--accent-soft);
@@ -1498,28 +1512,6 @@ button.link {
   gap: 1rem;
 }
 
-.streak-badge {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  height: 2.25rem;
-  padding: 0 0.8rem;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  font-weight: 700;
-}
-
-.streak-badge svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: none;
-  stroke: var(--warm);
-  stroke-width: 2;
-  stroke-linejoin: round;
-}
-
 .hero {
   display: grid;
   gap: 0.9rem;
@@ -1567,9 +1559,17 @@ button.link {
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Same lift as the focused lesson card; the faded text gets a little more white to keep 4.5:1. */
   .hero {
-    background: #24497a;
+    background: #3366a8;
     box-shadow: none;
+  }
+
+  .hero .hero-body,
+  .hero .muted,
+  .hero .streak .muted,
+  .hero .eyebrow {
+    color: rgb(255 255 255 / 90%);
   }
 
   .hero .button {
@@ -1733,15 +1733,81 @@ button.link {
   stroke-linejoin: round;
 }
 
-.my-job .chips {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
-  scrollbar-width: none;
+.hero .eyebrow {
+  margin: 0;
+  color: rgb(255 255 255 / 85%);
 }
 
-.my-job button.chip {
-  flex: none;
+.hero .badge {
+  color: #fff;
+}
+
+.next-deck .hero-body {
+  margin: -0.4rem 0 0;
+}
+
+.words-known {
+  margin: -0.75rem 0 1.5rem;
+}
+
+/* Deck rows that are buttons, such as the job choices, look like the linked ones. */
+button.deck-row {
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.job-list button[aria-pressed='true'] {
+  background: var(--accent-soft);
+}
+
+/* Decks fold by level; only the learner's own level starts open. */
+.deck-groups {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.deck-group > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0 0.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.deck-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.deck-group > summary::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-inline-start: auto;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 150ms ease-out;
+}
+
+.deck-group[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+.deck-group .deck-list {
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deck-group > summary::after {
+    transition: none;
+  }
 }
 
 /* Listening: a big play button with the slower replay and speed beside it */
@@ -1786,16 +1852,21 @@ button.link {
   font-size: 0.9rem;
 }
 
-.speed-badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.5rem;
-  padding: 0 0.9rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 0.875rem;
-  font-weight: 600;
+.speed-note {
+  font-variant-numeric: tabular-nums;
+}
+
+.mistake-list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+}
+
+.mistake-list li + li {
+  margin-top: 0.25rem;
+}
+
+.stats-empty {
+  margin: 0 0 1rem;
 }
 
 /* Onboarding: one question per screen, big choices, the button under the thumb */
@@ -1834,10 +1905,14 @@ button.link {
   font-size: 1.15rem;
 }
 
+.onboarding legend.visually-hidden {
+  margin: 0;
+}
+
 .onboarding .choice {
   gap: 0.9rem;
   min-height: 3.75rem;
-  padding: 0 1rem;
+  padding: 0.85rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -1853,9 +1928,33 @@ button.link {
 }
 
 .onboarding .choice input {
+  flex: none;
   width: 1.3rem;
   height: 1.3rem;
   margin: 0;
+}
+
+/* A drawn radio, so checked and unchecked are the same size in both themes and line up. */
+.onboarding .choice input[type='radio'] {
+  appearance: none;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.onboarding .choice input[type='radio']:checked {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 0.25rem var(--surface);
+  background: var(--accent);
+}
+
+/* With a hint under the label, the radio lines up with the first line, not the middle. */
+.onboarding .choice:has(.choice-hint) {
+  align-items: flex-start;
+}
+
+.onboarding .choice:has(.choice-hint) input {
+  margin-top: 0.1rem;
 }
 
 .bottom-actions {
@@ -1993,12 +2092,6 @@ button.danger:not(.link) {
   }
 }
 
-.home-greeting {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
 .home-header {
   align-items: flex-end;
   margin-bottom: -0.35rem;
@@ -2134,21 +2227,6 @@ button.danger:not(.link) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-/* Skill rows waiting for an estimate */
-
-.skill-pending {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.6rem;
-  max-width: 14rem;
-}
-
-.skill-pending progress {
-  flex: 1;
 }
 
 /* A short explanation under an onboarding answer. */
@@ -2348,6 +2426,20 @@ button.danger:not(.link) {
 .session-result .actions .button {
   width: 100%;
   max-width: 22rem;
+}
+
+/*
+ * The one primary action that ends a page or a step: full width on a phone, capped at the same
+ * 22rem as the result screen's button on wider screens. Every screen type uses this one shape.
+ */
+.page-action {
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.done-screen .page-action {
+  margin-inline: auto;
 }
 
 @keyframes reveal-in {
@@ -2660,12 +2752,13 @@ button.danger:not(.link) {
   flex: none;
 }
 
-/* Answers still needed for an estimate: quieter than the level meter, so the two don't read alike. */
-.skill-pending progress::-webkit-progress-value {
-  background: var(--muted);
+/* A skill still waiting for an estimate: same shape as the others, in quieter colours. */
+.skills .pending .level {
+  font-weight: 500;
+  color: var(--muted);
 }
 
-.skill-pending progress::-moz-progress-bar {
+.skills .pending .level-meter-fill {
   background: var(--muted);
 }
 
@@ -2824,4 +2917,113 @@ button.danger:not(.link) {
 
 .slot-picker .choice.locked {
   color: var(--muted);
+}
+
+/*
+ * Laptop and desktop. Up to 48rem the app is the phone layout. From there the closing buttons
+ * stop stretching, and from 64rem the screens that have more than one thing to show use the
+ * width: Today splits into the plan and the extras, lessons put the text beside the question,
+ * and the lessons page shows its tracks two by two.
+ */
+@media (width >= 48rem) {
+  .hero .button,
+  .lesson-cta,
+  .feedback button,
+  .session-work form > button[type='submit'],
+  .bottom-actions button[type='submit'] {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .bottom-actions {
+    justify-content: flex-end;
+  }
+
+  .week {
+    max-width: 26rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .shell[data-route='home'],
+  .shell[data-route='lessons'],
+  .shell[data-route='lesson'] {
+    max-width: 72rem;
+    padding-inline: 2rem;
+  }
+
+  /* Today: the plan gets the wider column, practice and the level estimate sit beside it. */
+  .home-layout {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .home-side > .section-title:first-child {
+    /* Clears Tusse, who sits at the end of the greeting row above. */
+    margin-top: 2.25rem;
+  }
+
+  /* Lessons: tracks two by two; the open track spans both columns so its steps have room. */
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .track-grid .track.current {
+    grid-column: 1 / -1;
+  }
+
+  .track-grid .track.current + .track {
+    border-top: 1px solid var(--border);
+  }
+
+  .shell[data-route='lessons'] .lessons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+    border-top: 0;
+  }
+
+  .shell[data-route='lessons'] .lessons li {
+    border-top: 1px solid var(--border);
+    border-bottom: 0;
+  }
+
+  /* A lesson with its text: the text on the left, staying in view, the question on the right. */
+  .session {
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
+  .session.has-text {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    column-gap: 3rem;
+    max-width: none;
+  }
+
+  .session.has-text > .session-bar,
+  .session.has-text > h1 {
+    grid-column: 1 / -1;
+  }
+
+  .session.has-text > .session-text {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
+  }
+
+  .session.has-text > .session-work > .prompt {
+    margin-top: 0;
+  }
+
+  .session.has-text > .feedback {
+    grid-column: 2;
+  }
 }

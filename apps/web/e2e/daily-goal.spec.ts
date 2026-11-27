@@ -18,7 +18,7 @@ test('a learner picks a daily goal and Today shows it with the last seven days',
   await expect(page.getByRole('heading', { level: 1, name: 'Daily goal' })).toBeFocused();
   await expect(page.getByRole('radio', { name: /Regular/ })).toBeChecked();
   await page.getByRole('radio', { name: /Light/ }).check();
-  await page.getByRole('link', { name: 'Back to home' }).click();
+  await page.getByRole('link', { name: 'Back to Today' }).click();
 
   await expect(streak).toContainText('0 of 5 done today');
   await expect(streak).toContainText('Do 5 things today to start a streak.');

@@ -13,7 +13,7 @@ test('a German speaker gets a German interface, German tips and highlighted cogn
     .getByRole('region', { name: 'Nächste Lektion' })
     .getByRole('link', { name: /Første dag på jobben/ })
     .click();
-  await expect(page.locator('.reading-text mark.cognate', { hasText: 'prosjekt' })).toBeVisible();
+  await expect(page.locator('.reading-text .cognate', { hasText: 'prosjekt' })).toBeVisible();
   await expect(
     page.getByRole('heading', { name: 'Wörter, die du wahrscheinlich kennst' }),
   ).toBeVisible();

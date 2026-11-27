@@ -18,10 +18,21 @@ describe('earnedItems', () => {
     expect([...earnedItems(profile(1200, 2))]).toEqual([]);
   });
 
-  it('gives the helmet at A2 and the sweater at B1, counting the level check', () => {
-    expect([...earnedItems(profile(1000, 5))]).toEqual(['helmet']);
-    expect([...earnedItems(profile(1200, 5))]).toEqual(['helmet', 'sweater']);
-    expect([...earnedItems(profile(1000, 0, { placedAt: 1 }))]).toEqual(['helmet']);
+  it('gives the helmet once A2 is held and the sweater once B1 is held', () => {
+    expect([...earnedItems(profile(1000, 20))]).toEqual(['helmet']);
+    expect([...earnedItems(profile(1250, 30))]).toEqual(['helmet', 'sweater']);
+  });
+
+  it('does not reward a first estimate or a level check on its own', () => {
+    // Five answers give Today a level, but one lucky run can swing it a whole band.
+    expect([...earnedItems(profile(1000, 5))]).toEqual([]);
+    expect([...earnedItems(profile(1000, 5, { placedAt: 1 }))]).toEqual([]);
+  });
+
+  it('counts the lower half of a band as the level below', () => {
+    // 950 is inside the A2 band but under its middle, so A2 is not held yet.
+    expect([...earnedItems(profile(950, 40))]).toEqual([]);
+    expect([...earnedItems(profile(1150, 40))]).toEqual(['helmet']);
   });
 
   it('gives streak items at 3, 7, 14, 30, 60 and 100 days', () => {
@@ -43,12 +54,12 @@ describe('earnedItems', () => {
 
 describe('outfitFor', () => {
   it('wears the latest item earned for each slot by default', () => {
-    const p = profile(1000, 5);
+    const p = profile(1000, 20);
     expect(outfitFor(p, earnedItems(p, 7))).toEqual({ head: 'helmet', neck: 'scarf' });
   });
 
   it('follows the learner’s choices, including an empty slot', () => {
-    const p = profile(1000, 5, { outfit: { head: 'lue', neck: 'none' } });
+    const p = profile(1000, 20, { outfit: { head: 'lue', neck: 'none' } });
     expect(outfitFor(p, earnedItems(p, 7))).toEqual({ head: 'lue' });
   });
 
