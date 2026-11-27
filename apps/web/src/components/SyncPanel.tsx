@@ -4,6 +4,7 @@ import { db as defaultDb, type TjuvstartDb } from '../data/db';
 import { useI18n } from '../i18n/useI18n';
 import type { SyncApiClient } from '../sync/api';
 import { GOOGLE_CLIENT_ID, syncClient, syncNow } from '../sync/background';
+import { isNativeApp } from '../native/platform';
 import { renderGoogleButton } from '../sync/google';
 
 interface SyncPanelProps {
@@ -12,6 +13,11 @@ interface SyncPanelProps {
   db?: TjuvstartDb;
   /** Renders the sign-in button; replaced in tests so they don't load Google's script. */
   renderButton?: typeof renderGoogleButton;
+  /**
+   * Google's web sign-in does not run inside the iOS app's web view, so the panel stays hidden
+   * there until native sign-in lands (docs/native.md).
+   */
+  native?: boolean;
 }
 
 /**
@@ -23,6 +29,7 @@ export function SyncPanel({
   googleClientId = GOOGLE_CLIENT_ID,
   db = defaultDb,
   renderButton = renderGoogleButton,
+  native = isNativeApp(),
 }: SyncPanelProps) {
   const { t, language } = useI18n();
   const state = useLiveQuery(async () => (await db.syncState.get('sync')) ?? null, [db]);
@@ -36,7 +43,7 @@ export function SyncPanel({
   const googleUnavailable = t('syncGoogleUnavailable');
 
   useEffect(() => {
-    if (!api || !googleClientId || !loaded || signedIn || !buttonRef.current) return;
+    if (native || !api || !googleClientId || !loaded || signedIn || !buttonRef.current) return;
     buttonRef.current.replaceChildren();
     renderButton(buttonRef.current, googleClientId, language, (idToken) => {
       setError(undefined);
@@ -48,6 +55,7 @@ export function SyncPanel({
         .finally(() => setBusy(false));
     }).catch(() => setError(googleUnavailable));
   }, [
+    native,
     api,
     googleClientId,
     loaded,
@@ -59,7 +67,7 @@ export function SyncPanel({
     googleUnavailable,
   ]);
 
-  if (!api || !googleClientId || state === undefined) return null;
+  if (native || !api || !googleClientId || state === undefined) return null;
 
   async function run(work: () => Promise<void>) {
     setError(undefined);

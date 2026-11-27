@@ -34,7 +34,7 @@ Adults who move to Norway for work usually need to reach B1 or B2 quickly, both 
 
 - Nynorsk. The app teaches bokmål only.
 - Exam drilling. The format of Norskprøven is used to measure level, not as the curriculum.
-- Native mobile apps. The PWA is installable on phones; a store wrapper may come later.
+- Separate native codebases. The iOS app is the same web app in a Capacitor shell ([ADR 0016](adr/0016-ios-app-as-a-capacitor-shell.md), [native apps](native.md)).
 - Teacher or classroom features.
 
 ## 4. Target users

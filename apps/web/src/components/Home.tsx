@@ -23,6 +23,7 @@ import {
 } from '../routing/useHashRoute';
 import { Brand } from './Brand';
 import { LessonCard } from './LessonList';
+import { ReminderOffer } from './ReminderSettings';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
 import { Troll } from '../troll3d/Troll';
@@ -156,6 +157,9 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
     </section>
   );
 
+  // The first day the goal is met is when a reminder is easiest to see the point of.
+  const reminderOffer = goalMet && <ReminderOffer />;
+
   const nextLesson = completed && (
     <section
       className={lessonFirst ? 'next-lesson focus' : 'next-lesson'}
@@ -220,10 +224,12 @@ export function Home({ packs = [] }: { packs?: readonly LanguagePack[] }) {
             <>
               {nextLesson}
               {daily}
+              {reminderOffer}
             </>
           ) : (
             <>
               {!needsPlacement && daily}
+              {!needsPlacement && reminderOffer}
               {nextLesson}
             </>
           )}

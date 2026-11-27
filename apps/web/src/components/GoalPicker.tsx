@@ -3,6 +3,7 @@ import { DEFAULT_GOAL, GOAL_SIZES, type GoalSize } from '../data/daily';
 import { getProfile, saveDailyGoal } from '../data/progress';
 import { useI18n } from '../i18n/useI18n';
 import { homeHref } from '../routing/useHashRoute';
+import { ReminderSettings } from './ReminderSettings';
 
 const HINTS = {
   light: 'goal_lightHint',
@@ -57,6 +58,7 @@ export function GoalPage() {
       <section className="panel">
         <GoalPicker value={profile.dailyGoal ?? DEFAULT_GOAL} hideLegend />
         <p className="muted small">{t('streakRule')}</p>
+        <ReminderSettings />
       </section>
       <a className="button page-action" href={homeHref}>
         {t('backHome')}

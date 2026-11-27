@@ -10,6 +10,7 @@ import { getProfile } from './data/progress';
 import { I18nProvider } from './i18n/I18nProvider';
 import { useI18n } from './i18n/useI18n';
 import { uiLanguageFor } from './i18n/strings';
+import { isNativeApp } from './native/platform';
 import { homeHref, placementStartHref, useHashRoute } from './routing/useHashRoute';
 
 // Every screen except Today loads on first visit, so the first paint only needs Today. The
@@ -48,6 +49,10 @@ const AiHub = lazy(() => import('./components/AiHub').then((m) => ({ default: m.
 const AiReading = lazy(() =>
   import('./components/AiReading').then((m) => ({ default: m.AiReading })),
 );
+// Reminders exist in the iOS app only, so the web build never loads their code.
+const ReminderScheduler = lazy(() =>
+  import('./reminders/ReminderScheduler').then((m) => ({ default: m.ReminderScheduler })),
+);
 const RolePlay = lazy(() => import('./components/RolePlay').then((m) => ({ default: m.RolePlay })));
 const WritingTaskView = lazy(() =>
   import('./components/WritingTaskView').then((m) => ({ default: m.WritingTaskView })),
@@ -67,7 +72,14 @@ export function App() {
 
   return (
     <I18nProvider language={language}>
-      <UpdatePrompt />
+      {/* The app updates through the App Store, so only the web build offers a reload. */}
+      {isNativeApp() ? (
+        <Suspense fallback={null}>
+          <ReminderScheduler />
+        </Suspense>
+      ) : (
+        <UpdatePrompt />
+      )}
       {!needsOnboarding &&
         !['lesson', 'shadow', 'deck', 'placement', 'practice', 'listening', 'daily'].includes(
           route.name,

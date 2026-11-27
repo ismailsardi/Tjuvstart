@@ -5,7 +5,18 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['**/dist', '**/coverage', '**/playwright-report', '**/test-results', 'tools'] },
+  {
+    ignores: [
+      '**/dist',
+      '**/coverage',
+      '**/playwright-report',
+      '**/test-results',
+      'tools',
+      // The native projects hold a copy of the built web app.
+      'apps/web/ios',
+      'apps/web/android',
+    ],
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],

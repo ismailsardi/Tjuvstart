@@ -109,6 +109,25 @@ export interface AiSettings {
   model: string;
 }
 
+/** A time of day, in the device's own time zone. */
+export interface TimeOfDay {
+  hour: number;
+  minute: number;
+}
+
+/**
+ * Settings that belong to this device rather than the learner, so they are never synced: a
+ * reminder at 07:30 on the phone should not follow the learner to their laptop. One row with
+ * id 'device'.
+ */
+export interface DeviceSettings {
+  id: 'device';
+  /** The daily practice reminder (iOS app only). Unset until the learner turns it on. */
+  reminder?: TimeOfDay & { enabled: boolean };
+  /** The learner answered the one-time offer to turn reminders on. */
+  reminderOfferAnswered?: boolean;
+}
+
 /** Where sync left off, and the signed-in session. One row with id 'sync'. */
 export interface SyncState {
   id: 'sync';
@@ -150,6 +169,7 @@ export class TjuvstartDb extends Dexie {
   shadowing!: EntityTable<ShadowingAttempt, 'id'>;
   aiSettings!: EntityTable<AiSettings, 'id'>;
   syncState!: EntityTable<SyncState, 'id'>;
+  device!: EntityTable<DeviceSettings, 'id'>;
 
   constructor(name = 'tjuvstart') {
     super(name);
@@ -191,6 +211,9 @@ export class TjuvstartDb extends Dexie {
             });
         }
       });
+    this.version(6).stores({
+      device: 'id',
+    });
     this.trackChanges();
   }
 

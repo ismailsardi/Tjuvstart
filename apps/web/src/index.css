@@ -67,7 +67,10 @@ body {
 .shell {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 1.5rem 1rem calc(var(--tabbar-height) + 2rem + env(safe-area-inset-bottom));
+  /* In the iOS app the page runs edge to edge, under the status bar and the home indicator. */
+  padding: calc(1.5rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right))
+    calc(var(--tabbar-height) + 2rem + env(safe-area-inset-bottom))
+    calc(1rem + env(safe-area-inset-left));
 }
 
 h1,
@@ -241,7 +244,7 @@ button.secondary,
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: env(safe-area-inset-top) 1rem 0;
   }
 
   .tabbar .wordmark {
@@ -279,7 +282,7 @@ button.secondary,
   }
 
   .shell {
-    padding: 5.5rem 1.5rem 3rem;
+    padding: calc(5.5rem + env(safe-area-inset-top)) 1.5rem 3rem;
   }
 }
 
@@ -2660,6 +2663,61 @@ button.danger:not(.link) {
 
 .goal-picker > p {
   margin: 0.25rem 0 0.5rem;
+}
+
+.reminder-settings {
+  border: 0;
+  margin: 1.5rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.reminder-settings legend {
+  float: left;
+  width: 100%;
+  font-weight: 700;
+  padding: 0;
+}
+
+.reminder-settings > p {
+  clear: both;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.reminder-time {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+}
+
+.reminder-time input {
+  font: inherit;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--control-radius);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.reminder-time input:disabled {
+  opacity: 0.55;
+}
+
+/* The one-time offer on Today sits under the day's status, as quiet as it. */
+.reminder-offer {
+  margin: 1.25rem 0 0;
+}
+
+.reminder-offer h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.reminder-offer .button-row {
+  align-items: center;
+  gap: 1rem;
+  margin: 0.75rem 0 0;
 }
 
 @keyframes goal-pulse {

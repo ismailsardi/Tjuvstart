@@ -17,6 +17,8 @@ test('a learner picks a daily goal and Today shows it with the last seven days',
   await page.getByRole('link', { name: 'Change goal' }).click();
   await expect(page.getByRole('heading', { level: 1, name: 'Daily goal' })).toBeFocused();
   await expect(page.getByRole('radio', { name: /Regular/ })).toBeChecked();
+  // Reminders need the iOS app; the browser shows no switch for them.
+  await expect(page.getByTestId('reminder-settings')).toHaveCount(0);
   await page.getByRole('radio', { name: /Light/ }).check();
   await page.getByRole('link', { name: 'Back to Today' }).click();
 

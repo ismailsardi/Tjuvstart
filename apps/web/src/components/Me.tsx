@@ -24,6 +24,7 @@ import { AiSettingsForm } from './AiSettingsForm';
 import { CanDoList } from './CanDoList';
 import { GoalPicker } from './GoalPicker';
 import { MistakeList } from './MistakeList';
+import { ReminderSettings } from './ReminderSettings';
 import { SkillLevels } from './SkillLevels';
 import { StreakLine } from './StreakLine';
 import { SyncPanel } from './SyncPanel';
@@ -99,6 +100,7 @@ export function Me({ packs = [] }: { packs?: readonly LanguagePack[] }) {
           <StreakLine progress={progress} />
           <p className="muted small">{t('streakRule')}</p>
           <GoalPicker value={progress.goalSize} />
+          <ReminderSettings />
         </section>
       )}
       {canDo && (

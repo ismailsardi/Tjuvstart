@@ -361,6 +361,28 @@ const en = {
   earnedForLevel: 'One of your skills has held {level} over {n} answers.',
   earnedForStreak: 'For a {n}-day streak. It stays yours.',
   trackShowLessons: 'The {n} lessons',
+  reminderTitle: 'Daily reminder',
+  reminderIntro:
+    "One notification a day, at the time you pick. Days you've already practised are skipped.",
+  reminderOn: 'Remind me to practise',
+  reminderTime: 'Time',
+  reminderBlocked:
+    'Notifications are off for Tjuvstart. You can turn them on in Settings › Tjuvstart › Notifications.',
+  reminderOfferTitle: 'A nudge tomorrow?',
+  reminderOfferBody: "Tjuvstart can remind you at {time} on days you haven't practised yet.",
+  reminderOfferYes: 'Remind me at {time}',
+  reminderOfferNo: 'Not now',
+  reminderSet:
+    "Done. You'll get a reminder at {time} on days you haven't practised. You can change it under Daily goal.",
+  reminderStreak: 'Your {n}-day streak is waiting. A few minutes today keeps it going.',
+  reminderStreakFirst: 'Yesterday was day one. Practise today and make it two.',
+  reminderStreakAtRisk: 'You missed yesterday, so today counts. A few minutes keeps your streak.',
+  reminderKeep: "Keep your streak going. Today's practice takes a few minutes.",
+  reminderStart0: "Five minutes of Norwegian? Today's session is ready.",
+  reminderStart1: "{name} has made coffee. Today's words are ready when you are.",
+  reminderStart2: "Little and often is what works. Today's practice is ready.",
+  reminderLast:
+    "That's the last reminder for now. {name} will be here whenever you want to pick Norwegian back up.",
 } as const;
 
 export type StringKey = keyof typeof en;
@@ -733,6 +755,31 @@ const fr: Record<StringKey, string> = {
   earnedForLevel: 'Une de vos compétences tient le niveau {level} sur {n} réponses.',
   earnedForStreak: 'Pour une série de {n} jours. Elle reste à vous.',
   trackShowLessons: 'Les {n} leçons',
+  reminderTitle: 'Rappel quotidien',
+  reminderIntro:
+    'Une notification par jour, à l’heure de votre choix. Les jours où vous avez déjà pratiqué sont sautés.',
+  reminderOn: 'Me rappeler de pratiquer',
+  reminderTime: 'Heure',
+  reminderBlocked:
+    'Les notifications sont désactivées pour Tjuvstart. Vous pouvez les activer dans Réglages › Tjuvstart › Notifications.',
+  reminderOfferTitle: 'Un petit rappel demain ?',
+  reminderOfferBody:
+    'Tjuvstart peut vous le rappeler à {time} les jours où vous n’avez pas encore pratiqué.',
+  reminderOfferYes: 'Me le rappeler à {time}',
+  reminderOfferNo: 'Pas maintenant',
+  reminderSet:
+    'C’est noté. Vous recevrez un rappel à {time} les jours où vous n’avez pas pratiqué. Vous pouvez le modifier dans Objectif quotidien.',
+  reminderStreak:
+    'Votre série de {n} jours vous attend. Quelques minutes aujourd’hui suffisent pour la garder.',
+  reminderStreakFirst: 'Hier, c’était le premier jour. Pratiquez aujourd’hui pour en faire deux.',
+  reminderStreakAtRisk:
+    'Vous avez manqué hier, alors aujourd’hui compte. Quelques minutes suffisent pour garder votre série.',
+  reminderKeep: 'Gardez votre série. La pratique du jour ne prend que quelques minutes.',
+  reminderStart0: 'Cinq minutes de norvégien ? La séance du jour est prête.',
+  reminderStart1: '{name} a fait du café. Les mots du jour vous attendent.',
+  reminderStart2: 'Un peu chaque jour, c’est ce qui marche. La pratique du jour est prête.',
+  reminderLast:
+    'C’est le dernier rappel pour l’instant. {name} sera là quand vous voudrez reprendre le norvégien.',
 };
 
 const dictionaries: Record<UiLanguage, Record<StringKey, string>> = { en, fr, de, es };
